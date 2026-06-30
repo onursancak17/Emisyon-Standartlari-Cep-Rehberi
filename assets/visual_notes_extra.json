@@ -1,74 +1,1234 @@
 [
   {
-    "standards": ["CARB Method 426"],
-    "title": "Siyanür örnekleme treni",
-    "caption": "CARB Method 426 için NaOH alkali absorban hattı, kaçak testi, absorban pH kontrolü ve breakthrough değerlendirmesi birlikte takip edilmelidir.",
-    "imageAsset": "assets/visuals/1000064893.jpg"
+    "standards": [
+      "EPA Method 5",
+      "TS EN 13284-1",
+      "TS ISO 9096",
+      "EPA Method 17"
+    ],
+    "title": "ISDL / MID formülü ve hedef hacim",
+    "caption": "Toz ölçümlerinde laboratuvar tayin limiti, ELD ve hedef örnekleme hacmi birlikte planlanmalıdır.",
+    "imageAsset": "assets/visuals/1000064732.jpg"
   },
   {
-    "standards": ["CARB Method 426"],
-    "title": "Siyanür NaOH absorban hattı",
-    "caption": "Siyanür ölçümünde absorban pH'ı, NaOH hacmi, saha blankı ve taşıma şartı sonucu doğrudan etkiler.",
-    "imageAsset": "assets/visuals/1000064894.jpg"
+    "standards": [
+      "EPA Method 5",
+      "TS EN 13284-1",
+      "TS ISO 9096",
+      "EPA Method 17"
+    ],
+    "title": "ISDL örnekleme süresi hesabı",
+    "caption": "Minimum hacim sahada süre planına çevrilirken debi, nokta sayısı ve izokinetik koşullar dikkate alınır.",
+    "imageAsset": "assets/visuals/1000064734.jpg"
   },
   {
-    "standards": ["CARB Method 425"],
-    "title": "Krom+6 numune alma treni",
-    "caption": "Cr(VI) ölçümünde pH, tür dönüşümü, metal kontaminasyonu ve blank kontrolü kritik saha şartıdır.",
-    "imageAsset": "assets/visuals/1000064901.jpg"
+    "standards": [
+      "EPA Method 5",
+      "TS EN 13284-1",
+      "TS ISO 9096",
+      "EPA Method 17"
+    ],
+    "title": "EPA temel ISDL yaklaşımı",
+    "caption": "Raporlanabilir minimum seviye için boş değer, cihaz/analiz belirsizliği ve örnekleme hacmi birlikte değerlendirilir.",
+    "imageAsset": "assets/visuals/1000064735.jpg"
   },
   {
-    "standards": ["EPA CTM 027"],
-    "title": "Amonyak CTM-027 tren şeması",
-    "caption": "Amonyak örneklemesinde asidik absorban, debi, köpürme/sıçrama ve yoğuşma kontrolü birlikte izlenmelidir.",
-    "imageAsset": "assets/visuals/1000064908.jpg"
+    "standards": [
+      "EPA Method 5",
+      "TS EN 13284-1",
+      "TS ISO 9096",
+      "EPA Method 17"
+    ],
+    "title": "ISDL sonucunu iyileştirme yolları",
+    "caption": "Daha düşük raporlama limiti için örnekleme hacmi, blank kontrolü ve laboratuvar hassasiyeti birlikte yönetilir.",
+    "imageAsset": "assets/visuals/1000064736.jpg"
   },
   {
-    "standards": ["SCAQMD Method 207.1"],
-    "title": "Amonyak Greenburg-Smith / mini bubbler yaklaşımı",
-    "caption": "Bubbler tipi ve debi seçimi amonyak absorpsiyon verimini doğrudan etkiler; aşırı debi sonucu düşürebilir.",
-    "imageAsset": "assets/visuals/1000064909.jpg"
+    "standards": [
+      "EPA Method 5",
+      "TS EN 13284-1",
+      "TS ISO 9096",
+      "EPA Method 17"
+    ],
+    "title": "Partikül metotlarında ISDL birimleri",
+    "caption": "mg, m³, Nm³ ve mg/Nm³ ilişkisi yanlış kurulursa limit değerlendirmesi hatalı olur.",
+    "imageAsset": "assets/visuals/1000064737.jpg"
   },
   {
-    "standards": ["EPA Method 4"],
+    "standards": [
+      "EPA Method 5",
+      "TS EN 13284-1",
+      "TS ISO 9096",
+      "EPA Method 17"
+    ],
+    "title": "Partikül kütle ve baca algılama limiti",
+    "caption": "Tartım farkı, kör filtre ve hacim hesabı birlikte değerlendirilmeden düşük toz sonucu savunulamaz.",
+    "imageAsset": "assets/visuals/1000064738.jpg"
+  },
+  {
+    "standards": [
+      "CARB Method 426"
+    ],
+    "title": "Siyanür minimum hacim / ISDL",
+    "caption": "Siyanür gibi özel parametrelerde absorban hacmi, örnekleme hacmi ve tayin limiti beraber planlanır.",
+    "imageAsset": "assets/visuals/1000064739.jpg"
+  },
+  {
+    "standards": [
+      "EPA Method 5",
+      "TS EN 13284-1",
+      "TS ISO 9096",
+      "EPA Method 17"
+    ],
+    "title": "ELV/10 hedef hacim yaklaşımı",
+    "caption": "Sahada hedef tayin sınırı çoğu zaman limitin 1/10'u kabul edilerek örnekleme hacmi buna göre büyütülür.",
+    "imageAsset": "assets/visuals/1000064740.jpg"
+  },
+  {
+    "standards": [
+      "EPA Method 5",
+      "TS EN 13284-1",
+      "TS ISO 9096",
+      "EPA Method 17"
+    ],
+    "title": "Gerçek hacme göre ISDL kontrolü",
+    "caption": "Sahada alınan gerçek hacim hedef hacmin altında kalırsa raporlanabilirlik ve belirsizlik yeniden değerlendirilir.",
+    "imageAsset": "assets/visuals/1000064741.jpg"
+  },
+  {
+    "standards": [
+      "TS EN 12341 / EPA 40 CFR 50-53"
+    ],
+    "title": "İmisyon minimum kütle ve akış notu",
+    "caption": "PM10/PM2.5 imisyon çalışmalarında filtre kütlesi, süre, debi ve blank birlikte kontrol edilir.",
+    "imageAsset": "assets/visuals/1000064742.jpg"
+  },
+  {
+    "standards": [
+      "CARB Method 426",
+      "EPA CTM 027",
+      "SCAQMD Method 207.1"
+    ],
+    "title": "Absorban kapasitesi kontrolü",
+    "caption": "Absorbanlı metotlarda toplam çekiş hacmi kapasiteyi aşarsa breakthrough ve düşük sonuç riski oluşur.",
+    "imageAsset": "assets/visuals/1000064743.jpg"
+  },
+  {
+    "standards": [
+      "EPA Method 5",
+      "TS EN 13284-1",
+      "TS ISO 9096",
+      "EPA Method 17"
+    ],
+    "title": "Baca gazında toz tayini standartları",
+    "caption": "Toz ölçümünde EPA 5, TS EN 13284-1, TS ISO 9096 ve EPA 17 kullanım alanları karıştırılmamalıdır.",
+    "imageAsset": "assets/visuals/1000064744.jpg"
+  },
+  {
+    "standards": [
+      "EPA Method 5",
+      "TS EN 13284-1",
+      "TS ISO 9096",
+      "EPA Method 17"
+    ],
+    "title": "Toz numune noktası ve prensip",
+    "caption": "Temsili nokta seçimi, izokinetik çekiş ve filtre yönetimi toz sonucunun temelidir.",
+    "imageAsset": "assets/visuals/1000064745.jpg"
+  },
+  {
+    "standards": [
+      "EPA Method 2 / TS EN ISO 16911 / TS ISO 10780",
+      "TS EN 15259 / EPA Method 1",
+      "EPA Method 5",
+      "TS EN 13284-1",
+      "TS ISO 9096",
+      "EPA Method 17"
+    ],
+    "title": "Akım profili kontrolü",
+    "caption": "Akım profili bozuksa hız ve izokinetik hesaplar doğrudan etkilenir.",
+    "imageAsset": "assets/visuals/1000064746.jpg"
+  },
+  {
+    "standards": [
+      "EPA Method 2 / TS EN ISO 16911 / TS ISO 10780",
+      "TS EN 15259 / EPA Method 1",
+      "EPA Method 5",
+      "TS EN 13284-1",
+      "TS ISO 9096",
+      "EPA Method 17"
+    ],
+    "title": "Akım bozulması örnekleri",
+    "caption": "Dirsek, fan, daralma/genişleme ve klape etkisi ölçüm düzleminin temsil gücünü düşürür.",
+    "imageAsset": "assets/visuals/1000064747.jpg"
+  },
+  {
+    "standards": [
+      "EPA Method 5",
+      "TS EN 13284-1",
+      "TS ISO 9096",
+      "EPA Method 17"
+    ],
+    "title": "İzokinetik prensip",
+    "caption": "Nozul giriş hızı baca gazı hızına yaklaştırılarak partikül fraksiyonunun temsili alınır.",
+    "imageAsset": "assets/visuals/1000064748.jpg"
+  },
+  {
+    "standards": [
+      "EPA Method 5",
+      "TS EN 13284-1",
+      "TS ISO 9096",
+      "EPA Method 17"
+    ],
+    "title": "İzokinetik hata etkisi",
+    "caption": "Aşırı veya düşük çekiş, iri partikül fraksiyonunda sistematik hataya neden olabilir.",
+    "imageAsset": "assets/visuals/1000064749.jpg"
+  },
+  {
+    "standards": [
+      "EPA Method 5",
+      "TS EN 13284-1",
+      "TS ISO 9096",
+      "EPA Method 17"
+    ],
+    "title": "In-stack filtre düzeni",
+    "caption": "In-stack filtrede filtrenin baca içinde sıcaklık ve erişim şartları dikkatle kontrol edilir.",
+    "imageAsset": "assets/visuals/1000064750.jpg"
+  },
+  {
+    "standards": [
+      "EPA Method 5",
+      "TS EN 13284-1",
+      "TS ISO 9096",
+      "EPA Method 17"
+    ],
+    "title": "Out-stack filtre düzeni",
+    "caption": "Out-stack filtrede ısıtmalı prob/hat ve filtre sıcaklığı yoğuşmayı önleyecek şekilde korunmalıdır.",
+    "imageAsset": "assets/visuals/1000064751.jpg"
+  },
+  {
+    "standards": [
+      "EPA Method 5",
+      "TS EN 13284-1",
+      "TS ISO 9096",
+      "EPA Method 17"
+    ],
+    "title": "Filtre şartı ve filtre yönetimi",
+    "caption": "Filtre şartlandırma, tartım, taşıma ve saha blankı toz sonucunun güvenilirliği için kritiktir.",
+    "imageAsset": "assets/visuals/1000064752.jpg"
+  },
+  {
+    "standards": [
+      "EPA Method 5",
+      "TS EN 13284-1",
+      "TS ISO 9096",
+      "EPA Method 17"
+    ],
+    "title": "Nozul seçimi",
+    "caption": "Nozul çapı baca hızı ve hedef debiyle uyumlu seçilmezse izokinetik oran tutturulamaz.",
+    "imageAsset": "assets/visuals/1000064753.jpg"
+  },
+  {
+    "standards": [
+      "EPA Method 5",
+      "TS EN 13284-1",
+      "TS ISO 9096",
+      "EPA Method 17"
+    ],
+    "title": "Nozul tipleri",
+    "caption": "Nozul geometrisi ve keskin kenar durumu partikül çekişini etkiler.",
+    "imageAsset": "assets/visuals/1000064754.jpg"
+  },
+  {
+    "standards": [
+      "EPA Method 5",
+      "TS EN 13284-1",
+      "TS ISO 9096",
+      "EPA Method 17"
+    ],
+    "title": "Prob kontrolü",
+    "caption": "Prob, liner, ısıtma ve bağlantılar kaçak ve yoğuşma açısından ölçüm öncesi kontrol edilmelidir.",
+    "imageAsset": "assets/visuals/1000064756.jpg"
+  },
+  {
+    "standards": [
+      "EPA Method 5",
+      "TS EN 13284-1",
+      "TS ISO 9096",
+      "EPA Method 17"
+    ],
+    "title": "Filtre tutucu kontrolü",
+    "caption": "Filtre tutucu kaçak, sıcaklık ve montaj yönü açısından ölçüm öncesi doğrulanmalıdır.",
+    "imageAsset": "assets/visuals/1000064757.jpg"
+  },
+  {
+    "standards": [
+      "EPA Method 5",
+      "TS EN 13284-1",
+      "TS ISO 9096",
+      "EPA Method 17"
+    ],
+    "title": "İmpinger nem hattı",
+    "caption": "Toz treninde impinger dizilimi ve silika jel nem/yoğuşma takibi için kullanılır.",
+    "imageAsset": "assets/visuals/1000064758.jpg"
+  },
+  {
+    "standards": [
+      "EPA Method 5",
+      "TS EN 13284-1",
+      "TS ISO 9096",
+      "EPA Method 17"
+    ],
+    "title": "Pompa ve kuru gaz sayacı",
+    "caption": "DGM, vakum, sıcaklık ve süre kayıtları hesaplanmış hacmin temel girdileridir.",
+    "imageAsset": "assets/visuals/1000064759.jpg"
+  },
+  {
+    "standards": [
+      "EPA Method 2 / TS EN ISO 16911 / TS ISO 10780",
+      "TS EN 15259 / EPA Method 1",
+      "EPA Method 5",
+      "TS EN 13284-1",
+      "TS ISO 9096",
+      "EPA Method 17"
+    ],
+    "title": "Pitot sensörü ve hız verisi",
+    "caption": "S-tip Pitot hız verisi izokinetik debi ayarının saha temelidir.",
+    "imageAsset": "assets/visuals/1000064760.jpg"
+  },
+  {
+    "standards": [
+      "EPA Method 5",
+      "TS EN 13284-1",
+      "TS ISO 9096",
+      "EPA Method 17"
+    ],
+    "title": "Kaçak testi",
+    "caption": "Ön ve son kaçak testi yapılmadan izokinetik ölçüm sonucu savunulamaz.",
+    "imageAsset": "assets/visuals/1000064761.jpg"
+  },
+  {
+    "standards": [
+      "EPA Method 5",
+      "TS EN 13284-1",
+      "TS ISO 9096",
+      "EPA Method 17"
+    ],
+    "title": "İzokinetik kabul kriteri",
+    "caption": "İzokinetik oran kabul aralığı dışında ise sonuç ve sapma raporda açık değerlendirilmelidir.",
+    "imageAsset": "assets/visuals/1000064762.jpg"
+  },
+  {
+    "standards": [
+      "EPA Method 5",
+      "TS EN 13284-1",
+      "TS ISO 9096",
+      "EPA Method 17"
+    ],
+    "title": "Akış açısı kontrolü",
+    "caption": "Yüksek akış açısı hız ölçümü ve izokinetik numune almayı güvenilmez hale getirebilir.",
+    "imageAsset": "assets/visuals/1000064763.jpg"
+  },
+  {
+    "standards": [
+      "EPA Method 5",
+      "TS EN 13284-1",
+      "TS ISO 9096",
+      "EPA Method 17"
+    ],
+    "title": "Yatay kanal ölçüm riski",
+    "caption": "Yatay kanallarda birikim, nem ve stratifikasyon riski ölçüm planında dikkate alınmalıdır.",
+    "imageAsset": "assets/visuals/1000064764.jpg"
+  },
+  {
+    "standards": [
+      "EPA Method 5",
+      "TS EN 13284-1",
+      "TS ISO 9096",
+      "EPA Method 17"
+    ],
+    "title": "Yatay kanal ikinci kontrol",
+    "caption": "Yatay veya düşük hızlı kanallarda nokta erişimi ve tortu etkisi ayrıca raporlanmalıdır.",
+    "imageAsset": "assets/visuals/1000064765.jpg"
+  },
+  {
+    "standards": [
+      "TS ISO 11338 / ilgili PAH saha uygulamaları"
+    ],
+    "title": "PAH örnekleme genel akışı",
+    "caption": "PAH ölçümünde filtre, adsorban, kondens ve yıkama fraksiyonları saha zincirinin parçasıdır.",
+    "imageAsset": "assets/visuals/1000064766.jpg"
+  },
+  {
+    "standards": [
+      "TS ISO 11338 / ilgili PAH saha uygulamaları"
+    ],
+    "title": "PAH adsorban ve numune hattı",
+    "caption": "PAH çalışmalarında adsorban, filtre, kondens ve yıkama fraksiyonları ışık/sıcaklık/kontaminasyondan korunmalıdır.",
+    "imageAsset": "assets/visuals/1000064767.jpg"
+  },
+  {
+    "standards": [
+      "TS ISO 11338 / ilgili PAH saha uygulamaları"
+    ],
+    "title": "PAH fraksiyon yönetimi",
+    "caption": "PAH geri kazanımında hangi fraksiyonun hangi kaba alınacağı ölçüm öncesi netleştirilmelidir.",
+    "imageAsset": "assets/visuals/1000064768.jpg"
+  },
+  {
+    "standards": [
+      "TS ISO 11338 / ilgili PAH saha uygulamaları"
+    ],
+    "title": "PAH Metot A",
+    "caption": "Metot A yaklaşımı seçildiyse filtre/adsorban düzeni ve izokinetiklik şartı plana uygun kurulmalıdır.",
+    "imageAsset": "assets/visuals/1000064769.jpg"
+  },
+  {
+    "standards": [
+      "TS ISO 11338 / ilgili PAH saha uygulamaları"
+    ],
+    "title": "PAH Metot B",
+    "caption": "Metot B yaklaşımı kullanıldığında adsorban kapasitesi ve sıcaklık kontrolü özellikle izlenir.",
+    "imageAsset": "assets/visuals/1000064770.jpg"
+  },
+  {
+    "standards": [
+      "TS ISO 11338 / ilgili PAH saha uygulamaları"
+    ],
+    "title": "PAH saha hazırlığı",
+    "caption": "PAH numuneleri güneş, sıcaklık ve organik kontaminasyondan korunmalıdır.",
+    "imageAsset": "assets/visuals/1000064771.jpg"
+  },
+  {
+    "standards": [
+      "TS ISO 11338 / ilgili PAH saha uygulamaları"
+    ],
+    "title": "PAH Metot C",
+    "caption": "Metot C yaklaşımında faz ayrımı ve fraksiyon etiketleme hatasız yapılmalıdır.",
+    "imageAsset": "assets/visuals/1000064772.jpg"
+  },
+  {
+    "standards": [
+      "TS ISO 11338 / ilgili PAH saha uygulamaları"
+    ],
+    "title": "PAH numune geri kazanımı",
+    "caption": "Filtre, adsorban ve yıkama çözücüleri eksiksiz alınmadığında toplam PAH düşük çıkar.",
+    "imageAsset": "assets/visuals/1000064773.jpg"
+  },
+  {
+    "standards": [
+      "TS ISO 11338 / ilgili PAH saha uygulamaları"
+    ],
+    "title": "PAH adsorban koruması",
+    "caption": "Adsorbanın ıslanması, aşırı ısınması veya ışığa maruz kalması sonuç kalitesini bozar.",
+    "imageAsset": "assets/visuals/1000064774.jpg"
+  },
+  {
+    "standards": [
+      "TS ISO 11338 / ilgili PAH saha uygulamaları"
+    ],
+    "title": "PAH blank ve taşıma",
+    "caption": "Blank adsorban ve soğuk/karanlık taşıma düşük seviyeli PAH çalışmaları için zorunlu saha kontrolüdür.",
+    "imageAsset": "assets/visuals/1000064775.jpg"
+  },
+  {
+    "standards": [
+      "TS EN 1948-1"
+    ],
+    "title": "PCDD/DF numune alma genel düzeni",
+    "caption": "Dioksin-furan ölçümünde izokinetiklik, temizlik, blank ve soğuk/karanlık taşıma birlikte kontrol edilir.",
+    "imageAsset": "assets/visuals/1000064776.jpg"
+  },
+  {
+    "standards": [
+      "TS EN 1948-1"
+    ],
+    "title": "PCDD/DF adsorban düzeni",
+    "caption": "XAD-2 ve filtre fraksiyonları kontaminasyondan korunarak kurulmalıdır.",
+    "imageAsset": "assets/visuals/1000064777.jpg"
+  },
+  {
+    "standards": [
+      "TS EN 1948-1"
+    ],
+    "title": "PCDD/DF XAD-2 koruma",
+    "caption": "PCDD/DF örneklemesinde XAD-2 kanal oluşumu, ışık koruması, temiz cam malzeme ve blank kontrolü kritik önemdedir.",
+    "imageAsset": "assets/visuals/1000064778.jpg"
+  },
+  {
+    "standards": [
+      "TS EN 1948-1"
+    ],
+    "title": "PCDD/DF fraksiyon ayrımı",
+    "caption": "Filtre, adsorban, kondens ve yıkama fraksiyonları karıştırılmadan etiketlenmelidir.",
+    "imageAsset": "assets/visuals/1000064779.jpg"
+  },
+  {
+    "standards": [
+      "TS EN 1948-1"
+    ],
+    "title": "PCDD/DF saha temizliği",
+    "caption": "Cam malzeme ve kapların temizliği çok düşük konsantrasyonlarda sonucu belirleyebilir.",
+    "imageAsset": "assets/visuals/1000064780.jpg"
+  },
+  {
+    "standards": [
+      "TS EN 1948-1"
+    ],
+    "title": "PCDD/DF ölçüm planı",
+    "caption": "Minimum hacim, süre ve proses temsiliyeti laboratuvarla ölçüm öncesi netleştirilir.",
+    "imageAsset": "assets/visuals/1000064781.jpg"
+  },
+  {
+    "standards": [
+      "TS EN 1948-1"
+    ],
+    "title": "EN 1948 XAD-2 uyarısı",
+    "caption": "XAD-2'nin ıslanması, aşırı ısınması veya yanlış saklanması geçersizlik riski yaratır.",
+    "imageAsset": "assets/visuals/1000064782.jpg"
+  },
+  {
+    "standards": [
+      "TS EN 1948-1"
+    ],
+    "title": "PCDD/DF laboratuvar zinciri",
+    "caption": "Numune teslim zinciri ve blanklar raporda izlenebilir olmalıdır.",
+    "imageAsset": "assets/visuals/1000064783.jpg"
+  },
+  {
+    "standards": [
+      "TS EN 1948-1"
+    ],
+    "title": "EN 1948 XAD-2 koruma",
+    "caption": "XAD-2 ışık ve sıcaklık etkisinden korunmalı, adsorban yatağı bozulmamalıdır.",
+    "imageAsset": "assets/visuals/1000064784.jpg"
+  },
+  {
+    "standards": [
+      "TS EN 1948-1"
+    ],
+    "title": "PCDD/DF son kontrol",
+    "caption": "Ölçüm sonunda tüm fraksiyonlar, blanklar, sıcaklıklar ve hacim kayıtları birlikte kontrol edilir.",
+    "imageAsset": "assets/visuals/1000064785.jpg"
+  },
+  {
+    "standards": [
+      "EPA Method 2 / TS EN ISO 16911 / TS ISO 10780"
+    ],
+    "title": "Hız/debi ölçüm genel şeması",
+    "caption": "Hız ve debi ölçümü tüm izokinetik metotların temel saha girdisidir.",
+    "imageAsset": "assets/visuals/1000064786.jpg"
+  },
+  {
+    "standards": [
+      "EPA Method 2 / TS EN ISO 16911 / TS ISO 10780"
+    ],
+    "title": "Pitot bağlantı kontrolü",
+    "caption": "Pitot pozitif/negatif hatları, sıfır kontrolü ve kaçak testi ölçüm öncesi doğrulanır.",
+    "imageAsset": "assets/visuals/1000064787.jpg"
+  },
+  {
+    "standards": [
+      "EPA Method 2 / TS EN ISO 16911 / TS ISO 10780"
+    ],
+    "title": "L tipi Pitot",
+    "caption": "L tipi Pitot kullanımında prob hizası ve kalibrasyon katsayısı doğru uygulanmalıdır.",
+    "imageAsset": "assets/visuals/1000064788.jpg"
+  },
+  {
+    "standards": [
+      "EPA Method 2 / TS EN ISO 16911 / TS ISO 10780"
+    ],
+    "title": "S tipi Pitot",
+    "caption": "S-tip Pitot yönü ve katsayısı hatalıysa baca hızı ve debisi yanlış hesaplanır.",
+    "imageAsset": "assets/visuals/1000064789.jpg"
+  },
+  {
+    "standards": [
+      "EPA Method 2 / TS EN ISO 16911 / TS ISO 10780"
+    ],
+    "title": "Diferansiyel basınç ölçümü",
+    "caption": "ΔP okumaları kararlı değilse nokta tekrar edilmeli ve proses/akış notu alınmalıdır.",
+    "imageAsset": "assets/visuals/1000064790.jpg"
+  },
+  {
+    "standards": [
+      "EPA Method 2 / TS EN ISO 16911 / TS ISO 10780"
+    ],
+    "title": "Hız hesabı saha girdileri",
+    "caption": "Sıcaklık, basınç, nem ve Pitot katsayısı hız hesabında birlikte kullanılır.",
+    "imageAsset": "assets/visuals/1000064791.jpg"
+  },
+  {
+    "standards": [
+      "EPA Method 2 / TS EN ISO 16911 / TS ISO 10780"
+    ],
+    "title": "Pitot hız/debi ölçüm kontrolü",
+    "caption": "Pitot fark basıncı, manometre sıfırı, prob hizası ve karekök ortalama yaklaşımı debi hesabının temelidir.",
+    "imageAsset": "assets/visuals/1000064792.jpg"
+  },
+  {
+    "standards": [
+      "EPA Method 2 / TS EN ISO 16911 / TS ISO 10780",
+      "TS EN 15259 / EPA Method 1"
+    ],
+    "title": "EPA Method 1 nokta sayısı ve hız düzlemi",
+    "caption": "Ölçüm noktası sayısı ve hız numune düzlemi ölçüm planının ilk teknik kontrolüdür.",
+    "imageAsset": "assets/visuals/1000064793.jpg"
+  },
+  {
+    "standards": [
+      "EPA Method 2 / TS EN ISO 16911 / TS ISO 10780"
+    ],
+    "title": "Hız profil taraması",
+    "caption": "Her traverse noktasındaki hız dağılımı ölçüm düzleminin temsil gücünü gösterir.",
+    "imageAsset": "assets/visuals/1000064794.jpg"
+  },
+  {
+    "standards": [
+      "EPA Method 2 / TS EN ISO 16911 / TS ISO 10780"
+    ],
+    "title": "Debi hesap kontrolü",
+    "caption": "Baca alanı, ortalama hız, basınç ve sıcaklık bazları raporda açık yazılmalıdır.",
+    "imageAsset": "assets/visuals/1000064795.jpg"
+  },
+  {
+    "standards": [
+      "EPA Method 2 / TS EN ISO 16911 / TS ISO 10780"
+    ],
+    "title": "Pitot saha hataları",
+    "caption": "Ters bağlantı, sıfır kayması ve hat kaçağı hız sonucunu doğrudan bozar.",
+    "imageAsset": "assets/visuals/1000064796.jpg"
+  },
+  {
+    "standards": [
+      "EPA Method 2 / TS EN ISO 16911 / TS ISO 10780"
+    ],
+    "title": "Akış açısı ve hizalama",
+    "caption": "Prob akış yönüne hizalanmadan alınan ΔP eksenel hızı doğru temsil etmeyebilir.",
+    "imageAsset": "assets/visuals/1000064797.jpg"
+  },
+  {
+    "standards": [
+      "EPA Method 2 / TS EN ISO 16911 / TS ISO 10780"
+    ],
+    "title": "Karekök ortalama yaklaşımı",
+    "caption": "Pitot ΔP ortalaması aritmetik değil, karekök ortalama mantığıyla değerlendirilmelidir.",
+    "imageAsset": "assets/visuals/1000064798.jpg"
+  },
+  {
+    "standards": [
+      "EPA Method 2 / TS EN ISO 16911 / TS ISO 10780"
+    ],
+    "title": "Hız/debi son kontrol",
+    "caption": "Debi yaş/kuru ve işletme/normal şart bazları karıştırılmadan raporlanmalıdır.",
+    "imageAsset": "assets/visuals/1000064799.jpg"
+  },
+  {
+    "standards": [
+      "EPA Method 4"
+    ],
+    "title": "EPA Method 4 nem tayini genel akışı",
+    "caption": "Nem tayini Bws hesabı için impinger/silika jel ağırlıkları ve kuru gaz hacmi birlikte kullanılır.",
+    "imageAsset": "assets/visuals/1000064800.jpg"
+  },
+  {
+    "standards": [
+      "EPA Method 4"
+    ],
     "title": "EPA Method 4 impinger dizilimi",
     "caption": "Nem tayininde su impingerleri, boş impinger ve silika jel hattı ilk-son ağırlıklarla birlikte kaydedilir.",
     "imageAsset": "assets/visuals/1000064801.jpg"
   },
   {
-    "standards": ["EPA Method 29", "TS EN 14385"],
+    "standards": [
+      "EPA Method 4"
+    ],
+    "title": "EPA4 impinger ağırlık kontrolü",
+    "caption": "İlk-son ağırlık farkları kaybolursa su buharı hacmi ve nem hesabı savunulamaz.",
+    "imageAsset": "assets/visuals/1000064802.jpg"
+  },
+  {
+    "standards": [
+      "EPA Method 4"
+    ],
+    "title": "EPA4 silika jel kontrolü",
+    "caption": "Silika jel doygunluğu ve çıkış sıcaklığı nem sonucunu etkiler.",
+    "imageAsset": "assets/visuals/1000064803.jpg"
+  },
+  {
+    "standards": [
+      "EPA Method 4"
+    ],
+    "title": "EPA4 sabit debi notu",
+    "caption": "Nem tayini debisi ve toplam hacim yeterli tutulmalı, kaçak kontrolü yapılmalıdır.",
+    "imageAsset": "assets/visuals/1000064804.jpg"
+  },
+  {
+    "standards": [
+      "EPA Method 4"
+    ],
+    "title": "EPA4 hesap zinciri",
+    "caption": "Vw, Vm(std) ve Bws hesapları aynı bazda ve doğru birimle yapılmalıdır.",
+    "imageAsset": "assets/visuals/1000064805.jpg"
+  },
+  {
+    "standards": [
+      "EPA Method 4"
+    ],
+    "title": "EPA4 saha kabul kontrolü",
+    "caption": "Soğutma, kaçak, silika jel ve DGM kayıtları ölçüm sonunda birlikte kontrol edilir.",
+    "imageAsset": "assets/visuals/1000064806.jpg"
+  },
+  {
+    "standards": [
+      "TS EN 15259 / EPA Method 1"
+    ],
+    "title": "EPA Method 1 ölçüm düzlemi H1/H2",
+    "caption": "Bozucu etkilere uzaklık ölçüm düzlemi seçiminde ilk kontrol kriteridir.",
+    "imageAsset": "assets/visuals/1000064807.jpg"
+  },
+  {
+    "standards": [
+      "TS EN 15259 / EPA Method 1"
+    ],
+    "title": "TS EN 15259 / EPA1 H1-H2 mesafeleri",
+    "caption": "Ölçüm düzlemi mesafeleri uygun değilse sapma gerekçesi ve temsil değerlendirmesi raporda yazılmalıdır.",
+    "imageAsset": "assets/visuals/1000064808.jpg"
+  },
+  {
+    "standards": [
+      "TS EN 15259 / EPA Method 1"
+    ],
+    "title": "Dairesel baca nokta yerleşimi",
+    "caption": "Dairesel bacalarda nokta mesafeleri duvardan uzaklık tablosuna göre hesaplanır.",
+    "imageAsset": "assets/visuals/1000064809.jpg"
+  },
+  {
+    "standards": [
+      "TS EN 15259 / EPA Method 1"
+    ],
+    "title": "Dairesel nokta yerleşimi ikinci örnek",
+    "caption": "Porttan tüm noktalara erişim ve duvar mesafeleri sahada fiziksel olarak doğrulanmalıdır.",
+    "imageAsset": "assets/visuals/1000064810.jpg"
+  },
+  {
+    "standards": [
+      "TS EN 15259 / EPA Method 1"
+    ],
+    "title": "Traverse noktası duvardan uzaklık tablosu",
+    "caption": "EPA Method 1 nokta mesafeleri yanlış alınırsa tüm numune temsil kabiliyeti bozulur.",
+    "imageAsset": "assets/visuals/1000064811.jpg"
+  },
+  {
+    "standards": [
+      "TS EN 15259 / EPA Method 1"
+    ],
+    "title": "Ölçüm düzlemi saha fotoğrafı",
+    "caption": "Port, platform, prob erişimi ve bozucu etki mesafeleri ölçüm öncesi fotoğraf/krokiyle doğrulanır.",
+    "imageAsset": "assets/visuals/1000064812.jpg"
+  },
+  {
+    "standards": [
+      "TS EN 15259 / EPA Method 1"
+    ],
+    "title": "Port ve traverse saha kontrolü",
+    "caption": "Tek portla tüm noktalara ulaşılamıyorsa ölçüm sapması raporda açık belirtilmelidir.",
+    "imageAsset": "assets/visuals/1000064813.jpg"
+  },
+  {
+    "standards": [
+      "TS EN 15259 / EPA Method 1"
+    ],
+    "title": "EPA1 matris genişletme",
+    "caption": "Dikdörtgen/kare kesitlerde nokta matrisi kesit alanını temsil edecek şekilde genişletilir.",
+    "imageAsset": "assets/visuals/1000064814.jpg"
+  },
+  {
+    "standards": [
+      "TS EN 15259 / EPA Method 1"
+    ],
+    "title": "Ölçüm yeri uygunsuzluk örneği",
+    "caption": "Fan, dirsek veya daralma sonrası ölçüm düzlemi seçimi sonuç güvenilirliğini etkiler.",
+    "imageAsset": "assets/visuals/1000064815.jpg"
+  },
+  {
+    "standards": [
+      "TS EN 15259 / EPA Method 1"
+    ],
+    "title": "Baca kesiti ve port kontrolü",
+    "caption": "Kesit ölçüsü, port yönü ve port çapı ölçüm planı başlamadan doğrulanmalıdır.",
+    "imageAsset": "assets/visuals/1000064816.jpg"
+  },
+  {
+    "standards": [
+      "TS EN 15259 / EPA Method 1"
+    ],
+    "title": "Traverse planı saha kaydı",
+    "caption": "Nokta sayısı, nokta mesafeleri ve port bilgisi saha formuna eksiksiz yazılmalıdır.",
+    "imageAsset": "assets/visuals/1000064817.jpg"
+  },
+  {
+    "standards": [
+      "TS EN 15259 / EPA Method 1"
+    ],
+    "title": "Akış açısı ve ölçüm düzlemi ilişkisi",
+    "caption": "Yüksek akış açısı varsa hız/debi ve izokinetik hesaplar ayrıca değerlendirilir.",
+    "imageAsset": "assets/visuals/1000064818.jpg"
+  },
+  {
+    "standards": [
+      "TS EN 12619 / TSE CEN/TS 13649"
+    ],
+    "title": "VOC yöntem seçim ağacı",
+    "caption": "TOC mu spesifik VOC mi ölçüleceği hedef kirletici ve mevzuat ihtiyacına göre seçilir.",
+    "imageAsset": "assets/visuals/1000064824.jpg"
+  },
+  {
+    "standards": [
+      "TS EN 12619 / TSE CEN/TS 13649"
+    ],
+    "title": "VOC ekipman örnekleri",
+    "caption": "Adsorban tüp, pompa, debi kalibrasyonu ve taşıma körü VOC saha zincirinin temelidir.",
+    "imageAsset": "assets/visuals/1000064825.jpg"
+  },
+  {
+    "standards": [
+      "TS EN 12619 / TSE CEN/TS 13649"
+    ],
+    "title": "VOC uçuculuk ve yöntem seçimi",
+    "caption": "Bileşik uçuculuğu, adsorban kapasitesi ve breakthrough riski yöntem seçimini etkiler.",
+    "imageAsset": "assets/visuals/1000064827.jpg"
+  },
+  {
+    "standards": [
+      "TS EN 12619 / TSE CEN/TS 13649"
+    ],
+    "title": "VOC numune alma treni",
+    "caption": "Adsorban tüp yönü, debi, süre ve toplam hacim sahada birlikte kaydedilir.",
+    "imageAsset": "assets/visuals/1000064835.jpg"
+  },
+  {
+    "standards": [
+      "TS EN 12619 / TSE CEN/TS 13649"
+    ],
+    "title": "Adsorban tüp örnekleri",
+    "caption": "Tüp tipi hedef VOC grubuna göre seçilir; tüp yönü ve kapatma disiplini kritiktir.",
+    "imageAsset": "assets/visuals/1000064841.jpg"
+  },
+  {
+    "standards": [
+      "TS EN 12619 / TSE CEN/TS 13649"
+    ],
+    "title": "Adsorban/çözücü tablo kontrolü",
+    "caption": "Laboratuvarın istediği adsorban ve çözücü eşleşmesi ölçüm öncesi doğrulanmalıdır.",
+    "imageAsset": "assets/visuals/1000064842.jpg"
+  },
+  {
+    "standards": [
+      "TS EN 12619 / TSE CEN/TS 13649"
+    ],
+    "title": "Formaldehit EPA323 saha notu",
+    "caption": "Formaldehit örneklemesinde hedef yöntem, absorban ve saklama koşulu ölçüm öncesi netleştirilir.",
+    "imageAsset": "assets/visuals/1000064844.jpg"
+  },
+  {
+    "standards": [
+      "TS EN 12619 / TSE CEN/TS 13649"
+    ],
+    "title": "EPA323 formaldehit notu",
+    "caption": "Formaldehit sahada reaktif/absorban stabilitesi ve blank kontrolüyle değerlendirilmelidir.",
+    "imageAsset": "assets/visuals/1000064848.jpg"
+  },
+  {
+    "standards": [
+      "TS EN 12619 / TSE CEN/TS 13649"
+    ],
+    "title": "EPA316 formaldehit notu",
+    "caption": "Formaldehit hattında yoğuşma, numune kaybı ve reaktif stabilitesi kontrol edilir.",
+    "imageAsset": "assets/visuals/1000064850.jpg"
+  },
+  {
+    "standards": [
+      "TS EN 12619 / TSE CEN/TS 13649"
+    ],
+    "title": "EPA316 formaldehit tren düzeni",
+    "caption": "Formaldehit treninde fraksiyonlar ve yıkama adımları laboratuvar talimatına göre yönetilir.",
+    "imageAsset": "assets/visuals/1000064851.jpg"
+  },
+  {
+    "standards": [
+      "EPA Method 29",
+      "TS EN 14385"
+    ],
     "title": "Metal örnekleme treni ve kontaminasyon kontrolü",
     "caption": "Metal çalışmalarında tren temizliği, fraksiyon ayrımı, blank ve yıkama adımları düşük seviyelerde sonucun savunulabilirliği için kritiktir.",
     "imageAsset": "assets/visuals/1000064854.jpg"
   },
   {
-    "standards": ["TS EN 1911", "EPA Method 26A"],
+    "standards": [
+      "EPA Method 29",
+      "TS EN 14385"
+    ],
+    "title": "EPA29 metal tren şeması",
+    "caption": "EPA Method 29'da filtre, prob yıkaması ve impinger fraksiyonları toplam metal hesabının parçalarıdır.",
+    "imageAsset": "assets/visuals/1000064855.jpg"
+  },
+  {
+    "standards": [
+      "EPA Method 29",
+      "TS EN 14385"
+    ],
+    "title": "EN14385 yan akış metal düzeni",
+    "caption": "Yan akışlı metal düzeninde ana/yan akış oranı ve izokinetik temsil ayrıca kontrol edilir.",
+    "imageAsset": "assets/visuals/1000064856.jpg"
+  },
+  {
+    "standards": [
+      "EPA Method 29",
+      "TS EN 14385"
+    ],
+    "title": "EN14385 metal yanakış kontrolü",
+    "caption": "Yan akış oranı değişirse örnek temsil kabiliyeti ve hesap zinciri etkilenir.",
+    "imageAsset": "assets/visuals/1000064858.jpg"
+  },
+  {
+    "standards": [
+      "EPA Method 29",
+      "TS EN 14385"
+    ],
+    "title": "EPA29 geri kazanım tablosu",
+    "caption": "Numune geri kazanımında her fraksiyon doğru kaba alınmalı ve etiketlenmelidir.",
+    "imageAsset": "assets/visuals/1000064859.jpg"
+  },
+  {
+    "standards": [
+      "EPA Method 29",
+      "TS EN 14385"
+    ],
+    "title": "EPA29 blank/yıkama tablosu",
+    "caption": "Asit yıkama, reaktif blankı ve ekipman blankı düşük metal seviyelerinde kritik kontroldür.",
+    "imageAsset": "assets/visuals/1000064860.jpg"
+  },
+  {
+    "standards": [
+      "EPA Method 29",
+      "TS EN 14385"
+    ],
+    "title": "Metal blank kontrolü",
+    "caption": "Blank zinciri olmadan düşük konsantrasyonlu metal sonuçları savunulamaz.",
+    "imageAsset": "assets/visuals/1000064861.jpg"
+  },
+  {
+    "standards": [
+      "TS EN 1911",
+      "EPA Method 26A"
+    ],
+    "title": "Halojen ekipman ve reaktif listesi",
+    "caption": "HCl/HF/halojen ölçümlerinde absorban türü, impinger sırası ve fraksiyon ayrımı ölçüm öncesi netleşmelidir.",
+    "imageAsset": "assets/visuals/1000064865.jpg"
+  },
+  {
+    "standards": [
+      "EPA Method 26A"
+    ],
+    "title": "EPA26 halojen sabit akış notu",
+    "caption": "Asit gazı ölçümlerinde sabit akış yaklaşımı hedef bileşik ve damlacık etkisine göre değerlendirilir.",
+    "imageAsset": "assets/visuals/1000064866.jpg"
+  },
+  {
+    "standards": [
+      "EPA Method 26A"
+    ],
+    "title": "EPA26A halojen treni",
+    "caption": "EPA26A treninde filtre, absorban impingerleri ve soğutma düzeni doğru sırayla kurulmalıdır.",
+    "imageAsset": "assets/visuals/1000064867.jpg"
+  },
+  {
+    "standards": [
+      "EPA Method 26A"
+    ],
+    "title": "EPA26A halojen tren şeması",
+    "caption": "Asit gazı ve halojen ölçümlerinde prob/filtre sıcaklığı, absorban soğutması ve breakthrough kontrol edilir.",
+    "imageAsset": "assets/visuals/1000064868.jpg"
+  },
+  {
+    "standards": [
+      "EPA Method 26A"
+    ],
+    "title": "EPA26A geri kazanım",
+    "caption": "Halojen fraksiyonları karıştırılmadan ayrı kaplara alınmalı ve numune etiketi açık yazılmalıdır.",
+    "imageAsset": "assets/visuals/1000064869.jpg"
+  },
+  {
+    "standards": [
+      "TS EN 1911",
+      "EPA Method 26A"
+    ],
     "title": "HCl / halojen örnekleme hattı",
     "caption": "Asit gazı ve halojen ölçümlerinde prob/filtre sıcaklığı, absorban soğutması, kabarcık teması ve breakthrough kontrol edilmelidir.",
     "imageAsset": "assets/visuals/1000064871.jpg"
   },
   {
-    "standards": ["TS ISO 12039"],
+    "standards": [
+      "TS EN 1911"
+    ],
+    "title": "EN1911 HCl sabit akış",
+    "caption": "HCl ölçümünde sabit akış yaklaşımı, hedef gaz fazı ve absorban verimine göre uygulanır.",
+    "imageAsset": "assets/visuals/1000064872.jpg"
+  },
+  {
+    "standards": [
+      "TS EN 1911"
+    ],
+    "title": "EN1911 HCl izokinetik",
+    "caption": "Damlacık veya partikül etkisi varsa HCl için izokinetik yaklaşım ayrıca değerlendirilmelidir.",
+    "imageAsset": "assets/visuals/1000064873.jpg"
+  },
+  {
+    "standards": [
+      "TS EN 1911"
+    ],
+    "title": "EN1911 HCl yan akış",
+    "caption": "Yan akış düzeninde oran, debi ve absorban teması saha boyunca izlenmelidir.",
+    "imageAsset": "assets/visuals/1000064874.jpg"
+  },
+  {
+    "standards": [
+      "TS EN 1911"
+    ],
+    "title": "EN1911 HCl geri kazanım",
+    "caption": "HCl numunesinde absorban ve yıkama fraksiyonları eksiksiz alınmalıdır.",
+    "imageAsset": "assets/visuals/1000064875.jpg"
+  },
+  {
+    "standards": [
+      "TS EN 1911"
+    ],
+    "title": "EN1911 analiz yöntemleri",
+    "caption": "HCl analiz yöntemi laboratuvarla uyumlu olmalı; saha fraksiyonları buna göre etiketlenmelidir.",
+    "imageAsset": "assets/visuals/1000064876.jpg"
+  },
+  {
+    "standards": [
+      "EPA Method 26A"
+    ],
+    "title": "ISO15713 flor ölçüm notu",
+    "caption": "Flor/florür ölçümünde filtre, absorban ve blank kontrolü düşük seviyelerde kritiktir.",
+    "imageAsset": "assets/visuals/1000064878.jpg"
+  },
+  {
+    "standards": [
+      "EPA Method 26A"
+    ],
+    "title": "Flor ISO15713 tren düzeni",
+    "caption": "Flor örnekleme hattında absorban, filtre ve yıkama fraksiyonları talimata göre yönetilir.",
+    "imageAsset": "assets/visuals/1000064879.jpg"
+  },
+  {
+    "standards": [
+      "EPA Method 26A"
+    ],
+    "title": "Flor geri kazanım ve blank",
+    "caption": "Flor ölçümünde blank, saf su/reaktif kalitesi ve kap temizliği rapor güvenilirliğini belirler.",
+    "imageAsset": "assets/visuals/1000064881.jpg"
+  },
+  {
+    "standards": [
+      "TS 2341 / TS 2342 / SKHKKY Ek-2"
+    ],
+    "title": "İmisyon çöken toz",
+    "caption": "Çöken toz ölçümünde kap yerleşimi, süre, çevresel etkiler ve aylık saha disiplini birlikte takip edilir.",
+    "imageAsset": "assets/visuals/1000064882.jpg"
+  },
+  {
+    "standards": [
+      "TS EN 12341 / EPA 40 CFR 50-53"
+    ],
+    "title": "İmisyon PM10 saha şartları",
+    "caption": "PM10/PM2.5 ölçümünde 24 saatlik süre, filtre yönetimi, debi ve ortam şartları birlikte kontrol edilir.",
+    "imageAsset": "assets/visuals/1000064883.jpg"
+  },
+  {
+    "standards": [
+      "TS 2341 / TS 2342 / SKHKKY Ek-2"
+    ],
+    "title": "İmisyon pasif tüp ve çöken toz",
+    "caption": "Pasif/çöken toz yerleşiminde yükseklik, engel ve lokal kaynak etkileri sahada not edilmelidir.",
+    "imageAsset": "assets/visuals/1000064884.jpg"
+  },
+  {
+    "standards": [
+      "TS EN 12341 / EPA 40 CFR 50-53"
+    ],
+    "title": "Pasif difüzyon tüpü",
+    "caption": "Pasif tüp uygulamalarında kör tüp, maruziyet süresi ve taşıma koşulu temel saha kontrolüdür.",
+    "imageAsset": "assets/visuals/1000064885.jpg"
+  },
+  {
+    "standards": [
+      "TS EN 12341 / EPA 40 CFR 50-53"
+    ],
+    "title": "Radyal pasif tüp örneği",
+    "caption": "Pasif örneklemede tüp tipi, yerleşim yüksekliği ve maruziyet süresi rapora açık yazılır.",
+    "imageAsset": "assets/visuals/1000064886.jpg"
+  },
+  {
+    "standards": [
+      "TS ISO 12039 / TS EN 14789 / TS EN 14792 / TS EN 15058"
+    ],
     "title": "Yanma gazı ve referans O2 düzeltmesi",
     "caption": "O2/CO2 ölçümü SO2, NOx ve CO sonuçlarının referans oksijene düzeltilmesi için temel girdidir.",
     "imageAsset": "assets/visuals/1000064887.jpg"
   },
   {
-    "standards": ["PAH / ISO 11338-1"],
-    "title": "PAH adsorban ve numune alma hattı",
-    "caption": "PAH çalışmalarında adsorban, filtre, kondens ve yıkama fraksiyonları ışık/sıcaklık/kontaminasyondan korunmalıdır.",
-    "imageAsset": "assets/visuals/1000064767.jpg"
+    "standards": [
+      "TS ISO 12039 / TS EN 14789 / TS EN 14792 / TS EN 15058"
+    ],
+    "title": "Yanma gazı ölçümleri neden yapılır?",
+    "caption": "Yanma gazı ölçümleri limit kontrolü, yanma verimi ve referans O2 düzeltmesi için kullanılır.",
+    "imageAsset": "assets/visuals/1000064888.jpg"
   },
   {
-    "standards": ["TS EN 1948-1"],
-    "title": "PCDD/DF XAD-2 koruma ve fraksiyon yönetimi",
-    "caption": "PCDD/DF örneklemesinde XAD-2 kanal oluşumu, ışık koruması, temiz cam malzeme ve blank kontrolü kritik önemdedir.",
-    "imageAsset": "assets/visuals/1000064778.jpg"
+    "standards": [
+      "TS ISO 12039 / TS EN 14789 / TS EN 14792 / TS EN 15058"
+    ],
+    "title": "Yanma gazı ölçüm şeması",
+    "caption": "Gaz analizöründe prob, filtre, nem tutma ve hat bütünlüğü stabil okuma için önemlidir.",
+    "imageAsset": "assets/visuals/1000064889.jpg"
   },
   {
-    "standards": ["EPA Method 2", "TS ISO 10780", "TS EN ISO 16911"],
-    "title": "Pitot hız/debi ölçüm kontrolü",
-    "caption": "Pitot fark basıncı, manometre sıfırı, prob hizası ve karekök ortalama yaklaşımı debi hesabının temelidir.",
-    "imageAsset": "assets/visuals/1000064792.jpg"
+    "standards": [
+      "TS ISO 12039 / TS EN 14789 / TS EN 14792 / TS EN 15058"
+    ],
+    "title": "Yanma gazı saha fotoğrafları",
+    "caption": "MRU/Nova benzeri cihazlarda stabilizasyon, kaçak ve kalibrasyon kontrolü limit değerlendirmesi öncesi yapılır.",
+    "imageAsset": "assets/visuals/1000064890.jpg"
+  },
+  {
+    "standards": [
+      "CARB Method 426"
+    ],
+    "title": "Siyanür örnekleme treni",
+    "caption": "CARB Method 426 için NaOH alkali absorban hattı, kaçak testi, absorban pH kontrolü ve breakthrough değerlendirmesi birlikte takip edilmelidir.",
+    "imageAsset": "assets/visuals/1000064893.jpg"
+  },
+  {
+    "standards": [
+      "CARB Method 426"
+    ],
+    "title": "Siyanür NaOH absorban hattı",
+    "caption": "Siyanür ölçümünde absorban pH'ı, NaOH hacmi, saha blankı ve taşıma şartı sonucu doğrudan etkiler.",
+    "imageAsset": "assets/visuals/1000064894.jpg"
+  },
+  {
+    "standards": [
+      "CARB Method 426"
+    ],
+    "title": "Siyanür geri kazanım",
+    "caption": "Siyanür absorban fraksiyonları pH korunarak doğru kaplara alınmalı ve hızlı teslim edilmelidir.",
+    "imageAsset": "assets/visuals/1000064895.jpg"
+  },
+  {
+    "standards": [
+      "CARB Method 426"
+    ],
+    "title": "Siyanür yıkama ve silika jel",
+    "caption": "Yıkama fraksiyonları, silika jel ve absorban kapları karıştırılmadan etiketlenmelidir.",
+    "imageAsset": "assets/visuals/1000064896.jpg"
+  },
+  {
+    "standards": [
+      "CARB Method 425"
+    ],
+    "title": "Krom+6 numune alma treni",
+    "caption": "Cr(VI) ölçümünde pH, tür dönüşümü, metal kontaminasyonu ve blank kontrolü kritik saha şartıdır.",
+    "imageAsset": "assets/visuals/1000064901.jpg"
+  },
+  {
+    "standards": [
+      "CARB Method 425"
+    ],
+    "title": "Cr(VI) prob ve absorber",
+    "caption": "Cr(VI) prob/absorber hattında kontaminasyon ve tür dönüşümü riski ölçüm öncesi azaltılır.",
+    "imageAsset": "assets/visuals/1000064902.jpg"
+  },
+  {
+    "standards": [
+      "CARB Method 425"
+    ],
+    "title": "Cr(VI) tren şeması",
+    "caption": "Altı değerlikli krom ölçümünde pH ve saklama şartı sonuç güvenilirliğinin ana kontrolüdür.",
+    "imageAsset": "assets/visuals/1000064903.jpg"
+  },
+  {
+    "standards": [
+      "CARB Method 425"
+    ],
+    "title": "Cr(VI) analiz akışı",
+    "caption": "Numune alma, pH koruma, taşıma ve analiz adımları kopuk olmamalıdır.",
+    "imageAsset": "assets/visuals/1000064904.jpg"
+  },
+  {
+    "standards": [
+      "CARB Method 425"
+    ],
+    "title": "Cr(VI) geri kazanım",
+    "caption": "Geri kazanımda fraksiyon ayrımı ve blank zinciri düşük Cr(VI) seviyelerinde kritiktir.",
+    "imageAsset": "assets/visuals/1000064905.jpg"
+  },
+  {
+    "standards": [
+      "CARB Method 425"
+    ],
+    "title": "Cr(VI) numune/analiz bağlantısı",
+    "caption": "Saha numunesinin laboratuvar analizine uygun pH, kap ve süre şartında taşınması gerekir.",
+    "imageAsset": "assets/visuals/1000064906.jpg"
+  },
+  {
+    "standards": [
+      "EPA CTM 027"
+    ],
+    "title": "CTM027 amonyak genel notu",
+    "caption": "Amonyak ölçümünde asidik absorban, yoğuşma, debi ve breakthrough birlikte izlenir.",
+    "imageAsset": "assets/visuals/1000064907.jpg"
+  },
+  {
+    "standards": [
+      "EPA CTM 027"
+    ],
+    "title": "Amonyak CTM-027 tren şeması",
+    "caption": "Amonyak örneklemesinde asidik absorban, debi, köpürme/sıçrama ve yoğuşma kontrolü birlikte izlenmelidir.",
+    "imageAsset": "assets/visuals/1000064908.jpg"
+  },
+  {
+    "standards": [
+      "SCAQMD Method 207.1"
+    ],
+    "title": "Amonyak Greenburg-Smith yaklaşımı",
+    "caption": "Bubbler tipi ve debi seçimi amonyak absorpsiyon verimini doğrudan etkiler; aşırı debi sonucu düşürebilir.",
+    "imageAsset": "assets/visuals/1000064909.jpg"
+  },
+  {
+    "standards": [
+      "SCAQMD Method 207.1"
+    ],
+    "title": "Amonyak mini bubbler yaklaşımı",
+    "caption": "Mini bubbler düzeninde düşük debi, yeterli hacim ve absorban verimi birlikte değerlendirilir.",
+    "imageAsset": "assets/visuals/1000064910.jpg"
+  },
+  {
+    "standards": [
+      "EPA Method 5",
+      "TS EN 13284-1",
+      "TS ISO 9096",
+      "EPA Method 17",
+      "CARB Method 426",
+      "CARB Method 425",
+      "EPA CTM 027",
+      "SCAQMD Method 207.1"
+    ],
+    "title": "MID / ISDL örnekleri",
+    "caption": "Özel parametrelerde hedef tayin limiti ve minimum hacim saha süresine çevrilerek kontrol edilir.",
+    "imageAsset": "assets/visuals/1000064911.jpg"
   }
 ]
