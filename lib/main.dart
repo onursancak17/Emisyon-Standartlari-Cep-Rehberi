@@ -71,6 +71,7 @@ class _StandardsHomePageState extends State<StandardsHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: const _AppDrawer(),
       appBar: AppBar(
         title: const Text('Emisyon / İmisyon Cep Rehberi'),
         centerTitle: false,
@@ -143,7 +144,7 @@ class _StandardsHomePageState extends State<StandardsHomePage> {
                       const SizedBox(width: 6),
                       Expanded(
                         child: Text(
-                          'Tamamen offline çalışır • Ek standart ve görsel paket desteği aktif',
+                          'Tamamen offline çalışır • Ek standart, görsel ve program sayfaları aktif',
                           style: Theme.of(context).textTheme.bodySmall,
                         ),
                       ),
@@ -164,6 +165,60 @@ class _StandardsHomePageState extends State<StandardsHomePage> {
               ],
             );
           },
+        ),
+      ),
+    );
+  }
+}
+
+class _AppDrawer extends StatelessWidget {
+  const _AppDrawer();
+
+  @override
+  Widget build(BuildContext context) {
+    return Drawer(
+      child: SafeArea(
+        child: ListView(
+          children: [
+            DrawerHeader(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Icon(Icons.offline_bolt, color: Theme.of(context).colorScheme.primary, size: 34),
+                  const SizedBox(height: 10),
+                  Text('Offline APK Programı', style: Theme.of(context).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.w800)),
+                  const SizedBox(height: 4),
+                  const Text('Streamlit rehber mantığının telefona gömülü Flutter karşılığı'),
+                ],
+              ),
+            ),
+            ListTile(
+              leading: const Icon(Icons.menu_book),
+              title: const Text('Standartlar Rehberi'),
+              subtitle: const Text('Arama, kategori ve detay ekranları'),
+              onTap: () => Navigator.pop(context),
+            ),
+            ListTile(
+              leading: const Icon(Icons.dashboard_customize),
+              title: const Text('Tam Program Sayfaları'),
+              subtitle: const Text('Görsel arşiv, rapor, kontrol ve sorun giderme'),
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.of(context).push(MaterialPageRoute(builder: (_) => const ProgramPagesIndexPage()));
+              },
+            ),
+            const Divider(),
+            ListTile(
+              leading: const Icon(Icons.info_outline),
+              title: const Text('Offline test'),
+              subtitle: const Text('Telefonu uçak moduna alıp APK içinde kontrol et'),
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.of(context).push(MaterialPageRoute(builder: (_) => const OfflineTestPage()));
+              },
+            ),
+          ],
         ),
       ),
     );
@@ -292,6 +347,179 @@ class StandardDetailPage extends StatelessWidget {
   }
 }
 
+class ProgramPagesIndexPage extends StatefulWidget {
+  const ProgramPagesIndexPage({super.key});
+
+  @override
+  State<ProgramPagesIndexPage> createState() => _ProgramPagesIndexPageState();
+}
+
+class _ProgramPagesIndexPageState extends State<ProgramPagesIndexPage> {
+  late final Future<List<ProgramPageItem>> _itemsFuture;
+  String _selectedCategory = 'Tümü';
+
+  @override
+  void initState() {
+    super.initState();
+    _itemsFuture = ProgramPagesRepository.loadItems();
+  }
+
+  List<String> _categories(List<ProgramPageItem> items) {
+    final categories = <String>{'Tümü'};
+    for (final item in items) {
+      categories.add(item.category);
+    }
+    return categories.toList();
+  }
+
+  List<ProgramPageItem> _filter(List<ProgramPageItem> items) {
+    return items.where((item) => _selectedCategory == 'Tümü' || item.category == _selectedCategory).toList();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text('Tam Program Sayfaları')),
+      body: SafeArea(
+        child: FutureBuilder<List<ProgramPageItem>>(
+          future: _itemsFuture,
+          builder: (context, snapshot) {
+            if (snapshot.connectionState == ConnectionState.waiting) {
+              return const Center(child: CircularProgressIndicator());
+            }
+            if (snapshot.hasError) {
+              return Center(child: Padding(padding: const EdgeInsets.all(24), child: Text('Program sayfaları okunamadı: ${snapshot.error}')));
+            }
+            final items = snapshot.data ?? const <ProgramPageItem>[];
+            final categories = _categories(items);
+            final filtered = _filter(items);
+            return Column(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(16, 12, 16, 8),
+                  child: Card(
+                    elevation: 0,
+                    color: Theme.of(context).colorScheme.secondaryContainer,
+                    child: const Padding(
+                      padding: EdgeInsets.all(14),
+                      child: Text('Bu bölüm, Streamlit tarafında hazırlanan tam görsel/standart program mantığının offline APK karşılığıdır.'),
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: 52,
+                  child: ListView.separated(
+                    padding: const EdgeInsets.symmetric(horizontal: 16),
+                    scrollDirection: Axis.horizontal,
+                    itemCount: categories.length,
+                    separatorBuilder: (_, __) => const SizedBox(width: 8),
+                    itemBuilder: (context, index) {
+                      final category = categories[index];
+                      return ChoiceChip(
+                        label: Text(category),
+                        selected: _selectedCategory == category,
+                        onSelected: (_) => setState(() => _selectedCategory = category),
+                      );
+                    },
+                  ),
+                ),
+                Expanded(
+                  child: ListView.separated(
+                    padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
+                    itemCount: filtered.length,
+                    separatorBuilder: (_, __) => const SizedBox(height: 10),
+                    itemBuilder: (context, index) => ProgramPageCard(item: filtered[index]),
+                  ),
+                ),
+              ],
+            );
+          },
+        ),
+      ),
+    );
+  }
+}
+
+class ProgramPageCard extends StatelessWidget {
+  const ProgramPageCard({super.key, required this.item});
+
+  final ProgramPageItem item;
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      elevation: 1,
+      clipBehavior: Clip.antiAlias,
+      child: InkWell(
+        onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => ProgramPageDetailPage(item: item))),
+        child: Padding(
+          padding: const EdgeInsets.all(14),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                children: [
+                  Expanded(child: Text(item.title, style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w800))),
+                  const Icon(Icons.chevron_right),
+                ],
+              ),
+              const SizedBox(height: 6),
+              _MiniChip(label: item.category),
+              const SizedBox(height: 10),
+              Text(item.summary),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class ProgramPageDetailPage extends StatelessWidget {
+  const ProgramPageDetailPage({super.key, required this.item});
+
+  final ProgramPageItem item;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text(item.title)),
+      body: ListView(
+        padding: const EdgeInsets.fromLTRB(16, 12, 16, 24),
+        children: [
+          Text(item.title, style: Theme.of(context).textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.w800)),
+          const SizedBox(height: 8),
+          _MiniChip(label: item.category),
+          const SizedBox(height: 12),
+          Text(item.summary),
+          const SizedBox(height: 16),
+          for (final section in item.sections) _InfoBlock(title: section.title, body: section.body),
+        ],
+      ),
+    );
+  }
+}
+
+class OfflineTestPage extends StatelessWidget {
+  const OfflineTestPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text('Offline APK Testi')),
+      body: ListView(
+        padding: const EdgeInsets.all(16),
+        children: const [
+          _InfoBlock(title: 'Test 1', body: 'Telefonu uçak moduna al. Uygulama açılıyorsa APK offline çalışıyor demektir.'),
+          _InfoBlock(title: 'Test 2', body: 'Standartlar Rehberi ekranında arama yap. Sonuçlar geliyorsa JSON verileri APK içine gömülmüştür.'),
+          _InfoBlock(title: 'Test 3', body: 'Görsel eğitim notu olan bir standarda gir. Görsel görünüyorsa assets/visuals içeriği APK içine gömülmüştür.'),
+          _InfoBlock(title: 'Test 4', body: 'Görsel yerine eksik dosya uyarısı çıkarsa ilgili JPG dosyası assets/visuals klasörüne yüklenmemiştir.'),
+        ],
+      ),
+    );
+  }
+}
+
 class _VisualNotesBlock extends StatelessWidget {
   const _VisualNotesBlock({required this.notes});
 
@@ -313,10 +541,7 @@ class _VisualNotesBlock extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
-                    'Görsel eğitim notu',
-                    style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w800),
-                  ),
+                  Text('Görsel eğitim notu', style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w800)),
                   const SizedBox(height: 8),
                   Text(note.title, style: Theme.of(context).textTheme.titleSmall?.copyWith(fontWeight: FontWeight.w700)),
                   const SizedBox(height: 10),
@@ -387,10 +612,7 @@ class _MissingVisualBox extends StatelessWidget {
         borderRadius: BorderRadius.circular(12),
         color: Theme.of(context).colorScheme.errorContainer,
       ),
-      child: Text(
-        'Görsel APK içinde bulunamadı. Dosya yolu: $path',
-        style: Theme.of(context).textTheme.bodySmall,
-      ),
+      child: Text('Görsel APK içinde bulunamadı. Dosya yolu: $path', style: Theme.of(context).textTheme.bodySmall),
     );
   }
 }
@@ -467,20 +689,9 @@ class _MiniChip extends StatelessWidget {
 }
 
 class StandardsRepository {
-  static const _standardAssetFiles = <String>[
-    'assets/standards.json',
-    'assets/standards_extra.json',
-  ];
-
-  static const _educationAssetFiles = <String>[
-    'assets/education_notes.json',
-    'assets/education_notes_extra.json',
-  ];
-
-  static const _visualAssetFiles = <String>[
-    'assets/visual_notes.json',
-    'assets/visual_notes_extra.json',
-  ];
+  static const _standardAssetFiles = <String>['assets/standards.json', 'assets/standards_extra.json'];
+  static const _educationAssetFiles = <String>['assets/education_notes.json', 'assets/education_notes_extra.json'];
+  static const _visualAssetFiles = <String>['assets/visual_notes.json', 'assets/visual_notes_extra.json'];
 
   static Future<List<StandardItem>> loadItems() async {
     final decoded = <dynamic>[];
@@ -551,6 +762,19 @@ class StandardsRepository {
   }
 }
 
+class ProgramPagesRepository {
+  static Future<List<ProgramPageItem>> loadItems() async {
+    try {
+      final raw = await rootBundle.loadString('assets/program_pages_extra.json');
+      final decoded = jsonDecode(raw);
+      if (decoded is! List<dynamic>) return const <ProgramPageItem>[];
+      return decoded.whereType<Map<String, dynamic>>().map(ProgramPageItem.fromJson).toList();
+    } catch (_) {
+      return const <ProgramPageItem>[];
+    }
+  }
+}
+
 class StandardItem {
   const StandardItem({
     required this.title,
@@ -610,11 +834,7 @@ class StandardItem {
         ...visualNotes.map((note) => '${note.title} ${note.caption}'),
       ].join(' ')).toLowerCase();
 
-  factory StandardItem.fromJson(
-    Map<String, dynamic> json, {
-    List<String> educationNotes = const <String>[],
-    List<VisualNote> visualNotes = const <VisualNote>[],
-  }) {
+  factory StandardItem.fromJson(Map<String, dynamic> json, {List<String> educationNotes = const <String>[], List<VisualNote> visualNotes = const <VisualNote>[]}) {
     return StandardItem(
       title: json['title'] as String? ?? '',
       code: json['code'] as String? ?? '',
@@ -643,12 +863,7 @@ class StandardItem {
 }
 
 class VisualNote {
-  const VisualNote({
-    required this.title,
-    required this.caption,
-    required this.imageBase64,
-    required this.imageAsset,
-  });
+  const VisualNote({required this.title, required this.caption, required this.imageBase64, required this.imageAsset});
 
   final String title;
   final String caption;
@@ -662,6 +877,40 @@ class VisualNote {
       imageBase64: json['imageBase64'] as String? ?? '',
       imageAsset: json['imageAsset'] as String? ?? '',
     );
+  }
+}
+
+class ProgramPageItem {
+  const ProgramPageItem({required this.id, required this.title, required this.category, required this.summary, required this.sections});
+
+  final String id;
+  final String title;
+  final String category;
+  final String summary;
+  final List<ProgramPageSection> sections;
+
+  factory ProgramPageItem.fromJson(Map<String, dynamic> json) {
+    final rawSections = json['sections'];
+    return ProgramPageItem(
+      id: json['id'] as String? ?? '',
+      title: json['title'] as String? ?? '',
+      category: json['category'] as String? ?? '',
+      summary: json['summary'] as String? ?? '',
+      sections: rawSections is List
+          ? rawSections.whereType<Map<String, dynamic>>().map(ProgramPageSection.fromJson).toList()
+          : const <ProgramPageSection>[],
+    );
+  }
+}
+
+class ProgramPageSection {
+  const ProgramPageSection({required this.title, required this.body});
+
+  final String title;
+  final String body;
+
+  factory ProgramPageSection.fromJson(Map<String, dynamic> json) {
+    return ProgramPageSection(title: json['title'] as String? ?? '', body: json['body'] as String? ?? '');
   }
 }
 
