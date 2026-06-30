@@ -1,0 +1,155 @@
+{
+  "TS EN 15259 / EPA Method 1": [
+    "Ölçüm yerinde en kritik konu, numunenin bacayı temsil etmesidir. Eğitim dokümanındaki yaklaşımda port seçimi sadece erişilebilirlik değil; akışın düzgünlüğü, bozucu etkiler, girdap ve negatif akım açısından değerlendirilir.",
+    "Baca eksenine göre gaz akış açısı EN/ISO yaklaşımında 15°'den, EPA yaklaşımında 20°'den küçük olmalıdır. Bu sınır aşılırsa hız ölçümü, izokinetik hesap ve kirletici numune alma güvenilirliği azalır.",
+    "Ölçüm düzleminde negatif akım olmamalıdır. Pitot tüp için hız basıncı en az 5 Pa üzerinde olmalı; en yüksek/en düşük mevzi gaz hızı oranı 3:1'den küçük olmalıdır.",
+    "Her port ve traverse noktası için sahada fotoğraf, kroki, baca kesiti, port derinliği ve bozucu etki mesafesi kaydı tutulmalıdır.",
+    "Bozucu etkiye yakın yerde ölçüm zorunlu kalıyorsa bu durum raporda sapma/temsil notu olarak yazılmalıdır; sessizce normal ölçüm gibi gösterilmemelidir."
+  ],
+  "EPA Method 2 / TS EN ISO 16911 / TS ISO 10780": [
+    "Hız/debi ölçümlerinde TS ISO 10780, EPA Method 2 ve TS EN ISO 16911-1 ana referanslardır. Ortalama hız ve kesit alanı yardımıyla hacimsel debi hesaplanır.",
+    "Boru/baca şartlarındaki hacimsel debi qV = V x A mantığıyla hesaplanır. V boru koşullarındaki ortalama hız, A ölçüm düzlemindeki kesit alanıdır.",
+    "Standart referans şartlara dönüşümde sıcaklık ve mutlak basınç düzeltmesi uygulanır. Türkiye raporlamasında m³/h, Nm³/h, m³/dk ve L/dk birimleri kullanılmalıdır.",
+    "Her hız ölçme noktasındaki mutlak sıcaklık, kesit ortalamasından %5'ten fazla sapmamalıdır. Daha büyük fark tabakalı akış veya karışım problemi gösterebilir.",
+    "Pitot hortumlarının ters bağlanması, manometre sıfırının alınmaması ve statik basınç bilgisinin eksik yazılması debi hesabını doğrudan bozar."
+  ],
+  "EPA Method 5": [
+    "Toz tayininde prensip, bacadan izokinetik koşullarda partikül maddelerin alınarak filtre üzerinde toplanması ve çekilen hacim içindeki partikül kütlesinin belirlenmesidir.",
+    "Numune alma süresi belirlenirken önce hedef numune alma hacmi hesaplanmalı, cihazın en iyi çalıştığı çekiş debisi seçilmeli ve bu debiye uygun nozül belirlenmelidir.",
+    "Süre hesabı pratik olarak ts = V / Q mantığıyla yapılır. Burada ts dakika, V örnekleme hacmi litre, Q örnekleme debisi L/dk olarak kullanılır.",
+    "Nozül gaz akışını engellememeli; nozül ucundan itibaren en az bir iç çap uzunluğunda veya en az 10 mm boyunca sabit iç çapa sahip olmalıdır. Hangisi büyükse o şart aranır.",
+    "Nozül delik çapındaki değişimler 30°'den küçük konik açıyla düzgünleştirilmeli; nozül dirseklerden en az 30 mm uzakta olmalıdır.",
+    "EPA Method 5 için eğitim notunda tavsiye edilen nozül çapı 6,4 mm, minimum nozül çapı 3,2 mm olarak verilmiştir. Güncel resmi metot ve laboratuvar talimatı ile doğrulanmalıdır.",
+    "Filtre şartlandırmasında eğitim notu etüv sıcaklığını 105 °C, etüv bekleme süresini 2–3 saat, desikatör bekleme süresini 2 saatten fazla olarak verir. Laboratuvar prosedürü esas alınmalıdır.",
+    "Nozül seçimi, baca hızı, örnekleme cihazı performansı ve hedef örnekleme hacmi birlikte değerlendirilmelidir. Çok düşük veya çok yüksek debilerde cihaz hedef izokinetik çekişi sağlayamayabilir."
+  ],
+  "TS EN 13284-1": [
+    "TS EN 13284-1 düşük derişimli toz ölçümünde blank, filtre şartlandırma ve yeterli hacim çok önemlidir. Düşük tozda kısa süreli çekiş savunulabilir sonuç üretmeyebilir.",
+    "Eğitim notlarında tavsiye edilen nozül çapı 8 mm, son revizyon notunda 10 mm; minimum nozül çapı 6 mm olarak belirtilmiştir. Güncel resmi standart ve laboratuvar talimatı ile doğrulanmalıdır.",
+    "Filtre şartlandırma eğitim notunda etüv sıcaklığı 180 °C, numune alma sonrası 160 °C, etüv bekleme süresi 1 saatten fazla, desikatör bekleme süresi 4–12 saat olarak verilmiştir.",
+    "Akış açısı 15° sınırını aşmamalı, negatif akım olmamalı, hız basıncı 5 Pa üzerinde olmalı ve en yüksek/en düşük yerel hız oranı 3:1'den küçük olmalıdır.",
+    "İzokinetik oran gerçek örnekleme akışının gerekli numune akışına oranı olarak takip edilir. Sapma varsa numune alma debisi sahada ayarlanmalıdır.",
+    "Saha körü ve taşıma körü, düşük kütleli ölçümlerde sonucu yorumlamak için kritik önemdedir."
+  ],
+  "TS ISO 9096": [
+    "TS ISO 9096 yüksek konsantrasyonlu toz ölçümlerinde filtre aşırı yüklenmesi, vakum artışı ve numune kaybı riski daha yüksektir.",
+    "Eğitim notlarında TS ISO 9096 için tavsiye edilen nozül çapı 8 mm, minimum nozül çapı 4 mm olarak verilmiştir. Güncel resmi standartla doğrulanmalıdır.",
+    "Filtre şartlandırma eğitim notunda etüv sıcaklığı 180 °C, numune alma sonrası 160 °C, etüv bekleme süresi 1 saatten fazla, desikatör bekleme süresi 8–12 saat olarak verilmiştir.",
+    "Yüksek tozlu bacada gereğinden uzun çekiş filtre tıkanması ve izokinetiklik kaybına neden olabilir. Hedef hacim proses ve beklenen yükle birlikte seçilmelidir.",
+    "Nozül ve prob ucunda biriken toz numune geri almanın parçasıdır. Port içi birikinti yanlışlıkla numuneye katılmamalıdır."
+  ],
+  "EPA Method 17": [
+    "EPA Method 17 in-stack filtreli partikül ölçümünde filtre baca içinde olduğundan filtre hasarı, sıcaklık etkisi ve çıkarma sırasında partikül kaybı saha riskidir.",
+    "Eğitim notlarında EPA Method 17 için tavsiye edilen nozül çapı 6,4 mm, minimum nozül çapı 3,2 mm olarak verilmiştir. Güncel metotla doğrulanmalıdır.",
+    "Filtre şartlandırmasında eğitim notu etüv sıcaklığını 105 °C, etüv bekleme süresini 2–3 saat, desikatör bekleme süresini 2 saatten fazla olarak verir.",
+    "Nozül sabit çap şartı, dirsek mesafesi, akışa hizası ve seçilen çapın cihaz debi aralığına uygunluğu mutlaka kontrol edilmelidir.",
+    "In-stack filtre tutucu tam oturmazsa bypass akış oluşur ve sonuç düşük çıkar."
+  ],
+  "EPA Method 4": [
+    "Nem tayininde ilk iki impingere 100'er mL saf su konur ve her ikisi 0,5 g hassasiyetindeki teraziyle tartılır. 3. impinger boş bırakılır. 4. impingere yaklaşık 200–300 g silika jel konur ve ağırlığı kaydedilir.",
+    "Prob ve filtre tutucu 120 °C civarında ısıtılır. Örnekleme boyunca silika jel çıkış sıcaklığının 20 °C'yi geçmemesi için buz takviyesi yapılır.",
+    "İmpinger haznesinin yaklaşık 4 °C sıcaklıkta tutulması eğitim dokümanında saha kontrol notu olarak yer alır.",
+    "Nem tayininde eğitim dokümanı en az 600 L örnek toplanması bilgisini verir. Uygulanacak hedef hacim resmi metot ve kurum talimatı ile doğrulanmalıdır.",
+    "Silika jel çıkış sıcaklığı yükselirse veya silika jel doygunlaşırsa su buharı tutulmadan geçebilir ve Bws düşük hesaplanabilir.",
+    "DGM hacmi, sayaç sıcaklığı, vakum, atmosfer basıncı ve baca basıncı yazılmadan kuru hacim ve nem hesabı savunulamaz."
+  ],
+  "TS ISO 12039 / TS EN 14789 / TS EN 14792 / TS EN 15058": [
+    "Yanma gazı ölçümlerinde cihaz stabilizasyonu ve T90 süresi beklenmeden alınan değerler doğrudan raporlanmamalıdır.",
+    "O2 yüksek görünüyorsa önce kaçak, seyrelme, port çevresi hava girişi ve numune hattı bağlantıları kontrol edilmelidir.",
+    "Referans O2 düzeltmesi yapılırken yakıt türü, mevzuat limiti, ölçülen O2 ve kuru/yaş baz bilgisi aynı mantıkta kullanılmalıdır.",
+    "CO, NOx ve SO2 sensörleri aralık aşımına girebilir. Aralık aşımı varsa sonuç sayısal ölçüm gibi değil, cihaz sınırı/uyarı durumu olarak değerlendirilmelidir.",
+    "Nem tutucu, filtre veya hortum kirliyse gaz bileşenleri özellikle SO2 ve NOx yönünden etkilenebilir. Ölçüm öncesi hat kontrolü yapılmalıdır."
+  ],
+  "TS EN 1911": [
+    "TS EN 1911 eğitim notunda HCl tayin aralığı 1 mg/m³ ile 5000 mg/m³ olarak verilmiştir.",
+    "HCl tayininde filtre absorban değildir; amacı partikülün absorban kaba kaçmasını önlemektir.",
+    "TS EN 1911'de sabit akış, izokinetik ve yan akışlı izokinetik olmak üzere üç numune alma yaklaşımı bulunur.",
+    "Sabit akış numune alımında debi 2–3 L/dk aralığında olmalıdır. Yan akışlı izokinetik uygulamada absorbanlardan geçen yan akış ikinci pompa ile 2–3 L/dk aralığında tutulur.",
+    "Sabit akışta ilk iki impingere 40 mL veya 100 mL klorürsüz saf su konulabilir, 3. impinger boş bırakılır. Bizim saha uygulamamızda 100 + 100 mL klorürsüz saf su temel değer kabul edilir.",
+    "İzokinetik HCl örneklemede ilk iki impingere 100 mL klorürsüz saf su konulur ve 3. impinger boş bırakılır.",
+    "Prob ve filtre tutucu baca gazı çiğlenme noktasının en az 20 °C üzerinde tutulmalıdır. Absorban impingerlerde gaz sıcaklığı 20 °C'nin altına düşürülmelidir.",
+    "HCl geri kazanımında her absorber ayrı kaba alınmalı; impingerlar saf suyla durulanarak ilgili kaba eklenmeli; filtre sonrası impingerlara kadar olan parçalar saf suyla durulanarak ilk impinger kabına eklenmelidir.",
+    "İkinci impingerde bulunan miktar toplam miktarın %5'inden fazlaysa absorpsiyon verimi düşük kabul edilir ve işlem tekrarlanmalıdır."
+  ],
+  "EPA Method 26A": [
+    "EPA 26A'da ilk iki impingere 100'er mL 0,1 N H2SO4; sonraki iki impingere 100'er mL 0,1 N NaOH konulur. Son impingere silika jel konulur.",
+    "Baca gazı yüksek nem içeriyorsa ilk impingerin önüne ek bir impinger konur ve bu kaba 50 mL 0,1 N H2SO4 eklenir.",
+    "EPA 26A'da prob ve filtre tutucu 120 °C'nin üzerine ısıtılmalıdır. Teflon yüksek sıcaklıkta dayanıksız olduğundan 210 °C üzerindeki baca gazlarında teflon kullanılmamalıdır.",
+    "Geri kazanımda H2SO4 impingerleri hacim ölçülerek veya tartılarak ayrı kaba, NaOH impingerleri ayrı kaba alınır.",
+    "NaOH fraksiyonuna örneklenen hacim ve beklenen halojen konsantrasyonu başına 25 mg sodyum tiyosülfat eklenmesi eğitim notunda yer alır.",
+    "Silika jel tartılarak ayrı kaba aktarılır. Absorban ve silika jel miktarlarının tayini nem tayini için de kullanılır."
+  ],
+  "EPA Method 29": [
+    "Metal örneklemede prob ve filtre tutucu cam veya kuvars malzemeden; ara bağlantılar cam, kuvars veya teflon malzemeden olmalıdır. Contalar teflon olmalı, metal kontaminasyonu önlenmelidir.",
+    "Metal tayinlerinde kuvars fiber filtre tavsiye edilir. Filtre her hedef metal için 1,3 µg/inç²'den daha az metal içermelidir. Sertifika yoksa filtre serisinden bir filtre analiz edilmelidir.",
+    "HNO3/H2O2 ve KMnO4/H2SO4 reaktifleri her hedef metalden 2 ng/mL'den daha az içermelidir. Saf su en az tip 2 sınıfı olmalı ve her hedef metalden 1 ng/mL'den daha az içermelidir.",
+    "Genel olarak dört impinger yeterlidir; cıva örneklenecekse 5. ve 6. impingerlar seri sisteme ilave edilmelidir. 3. impinger standart uçlu Greenburg Smith tipinde olmalıdır.",
+    "EPA 29 geri kazanımında filtre 1 nolu kaba alınır. Filtre tutucuda toz varsa metal olmayan fırça ile 1 nolu kaba aktarılır.",
+    "Metal tayiniyle birlikte toz tayini varsa filtreye kadar olan kısım aseton ile yıkanır ve 2 nolu kaba alınır.",
+    "Prob, bağlantılar ve filtre tutucunun ön bölümü 100 mL 0,1 N HNO3 ile yıkanarak 3 nolu kaba aktarılır.",
+    "Filtre tutucu ve ilk 3 impinger 100 mL 0,1 N HNO3 ile yıkanarak 4 nolu kaba aktarılır.",
+    "Cıva örneklemesinde ilk iki impinger 100 mL 0,1 N HNO3 ile 5A kabına; 4. ve 5. impingerlar 100 mL KMnO4 çözeltisiyle 5B kabına aktarılır.",
+    "EPA 29 saha tanıkları ayrıntılı tutulmalıdır: aseton tanığı, 0,1 N HNO3 tanığı, saf su tanığı, HNO3/H2O2 tanığı, KMnO4/H2SO4 tanığı, 8 N HCl tanığı ve boş filtre tanığı."
+  ],
+  "TS EN 14385": [
+    "EN 14385 numune alma kuralları için TS EN 13284-1'e yönlendirir. İzokinetik numune alımı veya yan akışlı izokinetik numune alımı uygulanabilir.",
+    "Yan akışlı numune alma yapılırsa ana akış ile yan akış arasındaki akış oranı sabit tutulmalıdır; kabul edilen sapma ±%10'dur.",
+    "Absorpsiyon verimi için son impingerde belirlenen miktar toplam miktarın %10'undan küçük olmalıdır.",
+    "Filtre petri kabına alınır. Gazla temas eden yüzeyler absorpsiyon çözeltisiyle yıkanır ve son impinger hariç impinger çözeltileriyle birleştirilir.",
+    "Son impinger ayrı polietilen kaba alınır. Amaç analiz sonrası absorpsiyon verimini hesaplamaktır.",
+    "Tanık numuneler numune alımının kontrolü için analiz edilir fakat deney sonucu olarak kullanılmaz. Numune düzeneğinden baca gazı geçirilmeden bir tanık numune alınmalıdır."
+  ],
+  "TS EN 12619 / TSE CEN/TS 13649": [
+    "VOC tayininde yaygın iki yaklaşım TSE CEN/TS 13649 ve EPA Method 18 olarak verilmiştir. TSE CEN/TS 13649 aktif karbon üzerine numune alma ve gaz kromatografi ile kimyasal analiz mantığını kapsar.",
+    "Ölçülü hacimdeki gazda bulunan organik bileşikler seçilen adsorbana adsorbe edilebilir olmalıdır. Ölçmeye girişim yapabilecek partikül madde uzaklaştırılmalıdır.",
+    "Numune hattı mümkün olduğunca kısa olmalı, su yoğuşması önlenmeli ve her numune ölçümünden önce kaçak kontrolü yapılmalıdır.",
+    "Sorbent borusu emniyet tabakasındaki münferit organik bileşik miktarı, ana adsorplayıcı tabakadaki miktarın %5'ini geçmemelidir. Aşarsa breakthrough/kapasite aşımı şüphesi oluşur.",
+    "VOC metot seçiminde analitin uçuculuğu, polarite/suda çözünürlük durumu ve reaktivitesi değerlendirilmelidir.",
+    "100 mg aktif karbon tüpü için toplam örnekleme hacmi 10–50 L aralığında, hacimsel akış hızı 0,1–0,5 L/dk aralığında olmalıdır.",
+    "VOC süre hesabı hedef örnekleme hacmi / seçilen debi mantığıyla yapılır. 10–50 L hedef hacim ve 0,1–0,5 L/dk debi için süre yaklaşık 20–500 dakika aralığında planlanabilir.",
+    "Adsorbandan geçen baca gazı sıcaklığı adsorpsiyon süresince 40 °C'yi geçmemelidir. Yoğuşma, nem ve sorbent kapasitesi birlikte değerlendirilmelidir.",
+    "Formaldehit için EPA 323 sabit akış ve spektrofotometri; EPA 316 izokinetik numune alma ve kolorimetrik spektrofotometri mantığıyla kullanılır. Her iki yöntemde absorban olarak saf su kullanılır.",
+    "EPA 323'te 20 mL hacimli 3 adet cam cüce impinger kullanılır: 1. impinger boş, 2. impinger 20 mL saf su, 3. impinger silika jel.",
+    "EPA 316'da ilk iki impingere 100'er mL saf su konur, 3. impinger boş bırakılır, son impingere 200–300 g silika jel konur. Çekiş debisi 28 L/dk'yı geçmeyecek şekilde nozül seçilmelidir."
+  ],
+  "TS ISO 11338 / ilgili PAH saha uygulamaları": [
+    "PAH numune alma için ISO 11338-1, ön işlem/analiz için ISO 11338-2 ve EPA 8100 eğitim dokümanında referans olarak verilmiştir.",
+    "PAH için Metot A seyreltme, Metot B ısıtılmış filtre/kondenser/adsorber ve Metot C soğutulmuş prob/adsorber olmak üzere üç numune alma yaklaşımı vardır.",
+    "PAH numune alma TS ISO 9096 veya TS EN 13284-1'e göre izokinetik yapılmalıdır.",
+    "Baca gazıyla temas eden prob, filtre tutucu, nozül, XAD-2 şişesi, bağlantılar ve kondenser cam, kuvars veya titanyum olmalıdır.",
+    "Katı adsorban olarak XAD-2 reçine, PU köpük veya Propak PS kullanılabilir. XAD-2 gaz hızı en fazla 34 cm/s, PU köpükte en fazla 30 cm/s olmalıdır.",
+    "Metot A'da örnekleme debisi 2–8 m³/h aralığında olmalı; analiz için 8–10 m³ numune toplamak yeterli görülmüştür. Bu yaklaşık 1–5 saatlik planlamaya denk gelebilir.",
+    "Metot B'de numune gazı 20 °C altına soğutulur ve numune debisi 1–6 m³/h aralığında olmalıdır.",
+    "Metot C'de numune 40 °C altına soğutulur ve numune debisi 0,5–2 m³/h aralığında olmalıdır.",
+    "PAH numuneleri karanlık ortamda -7 °C'de saklanmalı; ışıktan korunmak için alüminyum folyo kullanılabilir. Numuneler tercihen 24 saat içinde, en geç 1 hafta içinde ekstrakte edilmelidir."
+  ],
+  "TS EN 1948-1": [
+    "PCDD/PCDF numune alma TS EN 1948-1'e göre yapılır. TS EN 1948-2 ekstraksiyon/temizleme, TS EN 1948-3 analiz aşamasını kapsar.",
+    "TS EN 1948-1 yaklaşık 0,1 ng I-TEQ/m³ düzeyindeki nokta kaynak emisyonlarını ölçmek için geliştirilmiştir.",
+    "Kullanıcı Metot A seyreltme, Metot B ısıtılmış filtre/kondenser/adsorber veya Metot C soğutulmuş prob/adsorber yöntemlerinden birini seçebilir. Metot B ülkemizde yetkili laboratuvarlarda yaygın kullanılan düzendir.",
+    "Prob, filtre tutucu, nozül, XAD-2 şişesi, bağlantı elemanları ve kondenser gibi baca gazıyla temas eden tüm parçalar cam, kuvars veya titanyum malzemeden olmalıdır.",
+    "Metot B'de filtre tutucu ve prob sıcaklığı 125 °C'nin altında, fakat çiğlenme noktasının en az 10 °C üzerinde olmalıdır. Numune gazı 20 °C'nin altına soğutulmalıdır.",
+    "TS EN 1948-1 için numune almada en uzun süre 8 saattir. XAD-2 reçineden geçecek gaz hızı 34 cm/s'yi geçmemelidir.",
+    "3 cm çapında XAD-2 şişesi kullanılıyorsa 34 cm/s sınırı için XAD-2 şişesinden geçen debi en fazla yaklaşık 14,4 L/dk olabilir.",
+    "Her örnek alımından sonra prob temizlenmeli; probun çalkalandığı çözeltiler diğer numunelere analiz için eklenmelidir.",
+    "Filtre cam petri kabına alınmalı ve petri kabının etrafı teflon bantla sızdırmaz şekilde sarılmalıdır.",
+    "XAD-2 şişeleri ve çözücü şişeleri soğutucuda dik taşınmalı; XAD-2 şişeleri alüminyum folyo ile ışıktan korunmalıdır.",
+    "Örneklemeden önce 13C12 etiketli standartlar eklenmelidir. Bu standartlar verim hesabı için kritiktir.",
+    "Kullanılan adsorbanlardan birer set tanık numune olarak alınarak analiz edilmelidir. Tanık numune değeri aynı numune hacmi için limit değerin %10'unu aşmamalıdır."
+  ],
+  "TS EN 12341 / EPA 40 CFR 50-53": [
+    "PM10/PM2.5 ortam havası ölçümlerinde filtre ön/son tartım, şartlandırma ortamı, saha blankı ve cihaz hata kayıtları sonuç güvenilirliğini doğrudan etkiler.",
+    "Ölçüm süresi genel günlük değerlendirmelerde 24 saattir. Daha kısa veya farklı süreler özel çalışma planı olarak raporda açıkça belirtilmelidir.",
+    "Cihaz debisi, kullanılan PM10/PM2.5 başlığa ve cihazın referans/ortam şart debi modeline uygun olmalıdır. Qref ve Qamb karıştırılmamalıdır.",
+    "Filtre yüzeyine elle temas edilmemeli, filtre kaseti kenar kaçaklarına izin vermeyecek şekilde oturtulmalıdır.",
+    "Cihaz başlığı böcek, su girişi, tıkanma ve iri partikül açısından ölçüm sonu kontrol edilmelidir.",
+    "Elektrik kesintisi, debi arızası, yağış, aşırı tozlanma ve cihaz alarmı sahada olay notu olarak yazılmalıdır."
+  ],
+  "TS 2341 / TS 2342 / SKHKKY Ek-2 saha yaklaşımı": [
+    "Çöken toz ölçümü pasif ölçüm olduğundan debi yoktur; ölçüm alan, süre ve toplanan kütle üzerinden değerlendirilir.",
+    "Tesis içi ve tesis dışı cihazlar net ayrılmalı, koordinat ve fotoğraf kaydı alınmalıdır.",
+    "Bir aylık bekleme süresi boyunca devrilme, taşma, dış müdahale, yaprak/böcek/kuş pisliği ve yakın çevrede geçici toz kaynağı gibi olaylar saha formuna yazılmalıdır.",
+    "Kap devrilmiş, taşmış veya dış kontaminasyon almışsa sonuç geçerliliği mutlaka sorgulanmalıdır.",
+    "Başlangıç ve bitiş tarih-saatleri yuvarlanmadan yazılmalı; gün sayısı raporda açık gösterilmelidir."
+  ]
+}
