@@ -1,8 +1,29 @@
 # Emisyon / İmisyon Standartları Cep Rehberi
 
-Bu proje, emisyon ve imisyon saha ölçüm personeli için hazırlanmış offline Android cep rehberi uygulamasıdır.
+Bu proje, emisyon ve imisyon saha ölçüm personeli için hazırlanmış **tam Türkçe**, offline Android cep rehberi uygulamasıdır.
 
 Ana emisyon hesaplama programından tamamen bağımsızdır. Bu repo sadece mobil standartlar rehberi içindir.
+
+## Proje yönü
+
+Bu uygulama kısa standart özeti olmayacak. Amaç, sahadaki ölçüm personelinin telefondan açıp adım adım kullanabileceği ayrıntılı bir Türkçe saha rehberi oluşturmaktır.
+
+Her standartta mümkün olduğunca şu bilgiler bulunur:
+
+- Ölçüm amacı
+- Kullanım alanı
+- Ölçüm süresi
+- Debi / hacim yaklaşımı
+- Cihaz ve ekipman listesi
+- Çözelti / absorban / impinger bilgileri
+- Filtre, nozül, prob ve hat hazırlığı
+- Saha adımları
+- Kaçak testi
+- Kritik teknik kontroller
+- Kabul / ret kriterleri
+- Numune geri alma ve saklama notları
+- Raporlama notları
+- Sık yapılan saha hataları
 
 ## İlk sürümde olanlar
 
@@ -10,29 +31,28 @@ Ana emisyon hesaplama programından tamamen bağımsızdır. Bu repo sadece mobi
 - Standart arama ekranı
 - Kategori filtreleme
 - Emisyon / imisyon ayrımı
-- Sahacı odaklı rehber alanları:
-  - Amaç
-  - Ölçüm süresi
-  - Debi / hacim notu
-  - Cihaz / ekipman
-  - Çözelti / absorban
-  - Saha adımları
-  - Kritik teknik kontroller
-  - Kabul / ret kriterleri
-  - Raporlama notları
-  - Sık yapılan saha hataları
+- Ayrıntılı standart detay sayfası
+- Tam Türkçe saha rehberi içerikleri
 
-## İlk veri tabanındaki başlıklar
+## Genişletilmiş ilk veri tabanındaki başlıklar
 
-- TS EN 13284-1 Partikül Madde
-- TS ISO 9096 Yüksek Konsantrasyon Partikül Madde
-- TS EN 15259 / EPA Method 1 Ölçüm Düzlemi ve Traverse
-- EPA Method 4 Nem Tayini
-- TS EN 1911 / EPA 26A HCl
-- EPA Method 29 / TS EN 14385 Ağır Metal
-- TS ISO 12039 / TS EN 14789 / TS EN 14792 / TS EN 15058 Yanma Gazları
-- TS 12341 / EPA 40 CFR 50-53 PM10 İmisyon
-- TS 2341 / TS 2342 Çöken Toz
+- TS EN 15259 / EPA Method 1 - Ölçüm düzlemi, port ve traverse
+- EPA Method 2 / TS EN ISO 16911 / TS ISO 10780 - Hız ve debi
+- EPA Method 5 - Partikül madde
+- TS EN 13284-1 - Düşük derişimli partikül madde
+- TS ISO 9096 - Yüksek konsantrasyon partikül madde
+- EPA Method 17 - In-stack filtreli partikül madde
+- EPA Method 4 - Nem tayini
+- TS ISO 12039 / TS EN 14789 / TS EN 14792 / TS EN 15058 - Yanma gazları
+- TS EN 1911 - HCl
+- EPA Method 26A - HCl/HF ve halojenler
+- EPA Method 29 - Ağır metal
+- TS EN 14385 - Ağır metal
+- TS EN 12619 / TSE CEN/TS 13649 - TOC/VOC
+- TS ISO 11338 / PAH saha uygulamaları
+- TS EN 1948-1 - PCDD/F dioksin-furan
+- TS EN 12341 / EPA 40 CFR 50-53 - PM10/PM2.5 imisyon
+- TS 2341 / TS 2342 / SKHKKY Ek-2 - Çöken toz
 
 ## APK nasıl alınır?
 
@@ -53,4 +73,4 @@ Standart içerikleri `assets/standards.json` dosyasında tutulur. Yeni standart 
 
 ## Önemli not
 
-Bu uygulama resmi standardın yerine geçmez. Sahada hızlı kontrol ve hatırlatma rehberi olarak kullanılır. Resmi raporlama ve denetim işlerinde yürürlükteki standart, mevzuat ve laboratuvar talimatı esas alınmalıdır.
+Bu uygulama sahada hızlı kontrol ve eğitim amaçlı Türkçe rehberdir. Resmi raporlama ve denetim işlerinde yürürlükteki standart, mevzuat ve laboratuvar talimatı esas alınmalıdır.
