@@ -1,0 +1,130 @@
+[
+  {
+    "id": "full_apk_migration_notice",
+    "title": "Tam Offline APK Programı",
+    "category": "Sistem",
+    "summary": "Streamlit tarafında hazırlanan tam standart ve görsel rehber mantığının WebView olmadan Flutter APK içine taşınması için ana kontrol sayfasıdır.",
+    "sections": [
+      {
+        "title": "Hedef",
+        "body": "Bu APK, internet veya Streamlit sunucusu gerektirmeden telefonda çalışacak tam offline standartlar ve görsel saha rehberi olacaktır. Streamlit kodu Android içinde çalıştırılmayacak; aynı sayfa mantığı Flutter ekranlarına taşınacaktır."
+      },
+      {
+        "title": "Taşınacak Streamlit bölümleri",
+        "body": "Standart detay sayfaları, görsel eğitim notları, ham görsel arşivi, görsel işleme raporu, bilinçli arşiv raporu, final kontrol özeti, sistem sağlık kontrolü ve sorun giderme rehberi APK içinde karşılık bulacaktır."
+      },
+      {
+        "title": "Offline çalışma kuralı",
+        "body": "Tüm veri JSON dosyalarından, tüm görseller assets/visuals klasöründen okunur. APK kurulduktan sonra sahada internet bağlantısı gerekmez."
+      }
+    ]
+  },
+  {
+    "id": "visual_archive",
+    "title": "Ham Görsel Arşivi",
+    "category": "Görsel Sistem",
+    "summary": "Streamlit Ham Görsel Arşivi sayfasının APK karşılığıdır. Tüm saha/eğitim görselleri assets/visuals klasöründen yönetilir.",
+    "sections": [
+      {
+        "title": "Amaç",
+        "body": "Yüklenen tüm ham görsellerin unutulmaması, dosya adı bozulmadan korunması ve gerektiğinde standartlara bağlanması için arşiv ekranı mantığıdır."
+      },
+      {
+        "title": "Doğru klasör",
+        "body": "Görseller doğrudan assets/visuals/ klasörüne yüklenir. İç içe klasör yapılmaz. Örnek doğru yol: assets/visuals/1000064893.jpg"
+      },
+      {
+        "title": "APK davranışı",
+        "body": "Görsel notunda imageAsset tanımlıysa APK görseli cihazın içinden açar. Dosya eksikse uygulama çökmez; ilgili ekranda eksik görsel uyarısı gösterir."
+      }
+    ]
+  },
+  {
+    "id": "visual_processing_report",
+    "title": "Görsel İşleme ve Yerleşim Raporu",
+    "category": "Görsel Sistem",
+    "summary": "Hangi görselin aktif görsel, metin işlendi veya arşiv sınıfında olduğunu takip etmek için APK içi rapor mantığıdır.",
+    "sections": [
+      {
+        "title": "Aktif görsel",
+        "body": "Şema, tren, impinger, formül, karar ağacı veya sahacıya doğrudan değer veren görseller standart detay ekranlarında görünür."
+      },
+      {
+        "title": "Metin işlendi",
+        "body": "Görselin ana değeri yazı veya açıklama ise bilgi eğitim notlarına ve standart saha akışına metin olarak işlenir. Görsel ham arşivde tutulabilir."
+      },
+      {
+        "title": "Bilinçli arşiv",
+        "body": "Tekrar, ara slayt veya daha net başka görselle temsil edilen görseller silinmez; ileride kontrol için arşivde kalır."
+      }
+    ]
+  },
+  {
+    "id": "conscious_archive",
+    "title": "Bilinçli Arşiv Raporu",
+    "category": "Görsel Sistem",
+    "summary": "Aktif yapılmayan görsellerin neden arşivde bırakıldığını açıklayan APK içi rapor mantığıdır.",
+    "sections": [
+      {
+        "title": "Neden aktif yapılmaz?",
+        "body": "Her görsel standart ekranını kalabalıklaştırmak zorunda değildir. Tekrar eden veya metinle daha temiz anlatılan görseller bilinçli arşivde bırakılır."
+      },
+      {
+        "title": "Saha faydası",
+        "body": "Bu yaklaşım telefonda hızlı kullanım sağlar; sadece gerçekten işe yarayan görseller standart ekranlarında görünür."
+      }
+    ]
+  },
+  {
+    "id": "final_control",
+    "title": "Görsel Final Kontrol Özeti",
+    "category": "Kontrol",
+    "summary": "Görsel entegrasyonun genel durumunu ve APK içindeki kontrol sırasını açıklayan final kontrol panelidir.",
+    "sections": [
+      {
+        "title": "Kontrol sırası",
+        "body": "Önce görsellerin assets/visuals içinde olduğuna bakılır. Sonra visual_notes_extra.json bağlantıları kontrol edilir. Ardından GitHub Actions build çıktısı incelenir."
+      },
+      {
+        "title": "Başarılı durum",
+        "body": "Standart listesi açılıyor, detay sayfasında eğitim notları ve görseller görünüyor, APK uçak modunda çalışıyorsa offline port başarılıdır."
+      }
+    ]
+  },
+  {
+    "id": "system_health",
+    "title": "APK Sistem Sağlık Kontrolü",
+    "category": "Kontrol",
+    "summary": "JSON, Flutter asset ve görsel yolu sorunlarını yakalamak için kullanılan APK/GitHub Actions kontrol mantığıdır.",
+    "sections": [
+      {
+        "title": "Build öncesi kontrol",
+        "body": "scripts/validate_assets.py dosyası standart JSON dosyalarını, eğitim notlarını, görsel notlarını ve imageAsset yollarını kontrol eder."
+      },
+      {
+        "title": "Eksik görsel davranışı",
+        "body": "Eksik görseller build'i şimdilik durdurmaz; uyarı verir. Görsel yüklendiğinde bir sonraki APK build içinde offline olarak gömülür."
+      }
+    ]
+  },
+  {
+    "id": "troubleshooting",
+    "title": "APK Sorun Giderme Rehberi",
+    "category": "Kontrol",
+    "summary": "Görseller veya standartlar telefonda görünmüyorsa uygulanacak pratik kontrol adımlarıdır.",
+    "sections": [
+      {
+        "title": "Görsel görünmüyorsa",
+        "body": "Dosya adının değişmediğini, görselin assets/visuals içinde olduğunu ve visual_notes_extra.json içinde aynı yolun yazıldığını kontrol et."
+      },
+      {
+        "title": "APK eski görünüyorsa",
+        "body": "GitHub Actions son başarılı artifact indirilmeli ve telefondaki eski APK kaldırılıp yeni APK kurulmalıdır."
+      },
+      {
+        "title": "Offline test",
+        "body": "Telefonu uçak moduna al. APK açılıp standart ve görseller görünüyorsa uygulama gerçek offline çalışıyor demektir."
+      }
+    ]
+  }
+]
