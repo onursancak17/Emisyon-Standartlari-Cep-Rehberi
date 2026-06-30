@@ -142,7 +142,7 @@ class _StandardsHomePageState extends State<StandardsHomePage> {
                       const SizedBox(width: 6),
                       Expanded(
                         child: Text(
-                          'Offline çalışır • Birimler TR saha kullanımına çevrilir',
+                          'Offline çalışır • Eğitim PDF ayrıntıları eklendi',
                           style: Theme.of(context).textTheme.bodySmall,
                         ),
                       ),
@@ -218,6 +218,19 @@ class StandardCard extends StatelessWidget {
               ),
               const SizedBox(height: 10),
               Text(TurkishUnitText.normalize(item.purpose), maxLines: 3, overflow: TextOverflow.ellipsis),
+              if (item.educationNotes.isNotEmpty) ...[
+                const SizedBox(height: 8),
+                Row(
+                  children: [
+                    Icon(Icons.school, size: 16, color: Theme.of(context).colorScheme.primary),
+                    const SizedBox(width: 5),
+                    Text(
+                      '${item.educationNotes.length} eğitim notu',
+                      style: Theme.of(context).textTheme.labelMedium,
+                    ),
+                  ],
+                ),
+              ],
             ],
           ),
         ),
@@ -254,6 +267,7 @@ class StandardDetailPage extends StatelessWidget {
           ),
           const SizedBox(height: 16),
           const _UnitInfoBlock(),
+          _InfoBlock(title: 'Eğitim dokümanı ayrıntıları', body: _numbered(item.educationNotes)),
           _InfoBlock(title: 'Amaç', body: item.purpose),
           _InfoBlock(title: 'Ölçüm süresi', body: item.duration),
           _InfoBlock(title: 'Debi / hacim notu', body: item.flowRate),
@@ -359,7 +373,25 @@ class StandardsRepository {
   static Future<List<StandardItem>> loadItems() async {
     final raw = await rootBundle.loadString('assets/standards.json');
     final decoded = jsonDecode(raw) as List<dynamic>;
-    return decoded.map((item) => StandardItem.fromJson(item as Map<String, dynamic>)).toList();
+    final notesByCode = await _loadEducationNotes();
+
+    return decoded.map((item) {
+      final json = item as Map<String, dynamic>;
+      final code = json['code'] as String? ?? '';
+      final title = json['title'] as String? ?? '';
+      final notes = notesByCode[code] ?? notesByCode[title] ?? const <String>[];
+      return StandardItem.fromJson(json, educationNotes: notes);
+    }).toList();
+  }
+
+  static Future<Map<String, List<String>>> _loadEducationNotes() async {
+    try {
+      final raw = await rootBundle.loadString('assets/education_notes.json');
+      final decoded = jsonDecode(raw) as Map<String, dynamic>;
+      return decoded.map((key, value) => MapEntry(key, StandardItem.listFromDynamic(value)));
+    } catch (_) {
+      return const <String, List<String>>{};
+    }
   }
 }
 
@@ -380,6 +412,7 @@ class StandardItem {
     required this.acceptance,
     required this.reporting,
     required this.mistakes,
+    required this.educationNotes,
   });
 
   final String title;
@@ -397,6 +430,7 @@ class StandardItem {
   final List<String> acceptance;
   final List<String> reporting;
   final List<String> mistakes;
+  final List<String> educationNotes;
 
   String get searchText => TurkishUnitText.normalize([
         title,
@@ -414,29 +448,31 @@ class StandardItem {
         ...acceptance,
         ...reporting,
         ...mistakes,
+        ...educationNotes,
       ].join(' ')).toLowerCase();
 
-  factory StandardItem.fromJson(Map<String, dynamic> json) {
+  factory StandardItem.fromJson(Map<String, dynamic> json, {List<String> educationNotes = const <String>[]}) {
     return StandardItem(
       title: json['title'] as String? ?? '',
       code: json['code'] as String? ?? '',
       category: json['category'] as String? ?? '',
       subgroup: json['subgroup'] as String? ?? '',
-      keywords: _list(json['keywords']),
+      keywords: listFromDynamic(json['keywords']),
       purpose: json['purpose'] as String? ?? '',
       duration: json['duration'] as String? ?? '',
       flowRate: json['flowRate'] as String? ?? '',
-      equipment: _list(json['equipment']),
-      reagents: _list(json['reagents']),
-      fieldSteps: _list(json['fieldSteps']),
-      criticalControls: _list(json['criticalControls']),
-      acceptance: _list(json['acceptance']),
-      reporting: _list(json['reporting']),
-      mistakes: _list(json['mistakes']),
+      equipment: listFromDynamic(json['equipment']),
+      reagents: listFromDynamic(json['reagents']),
+      fieldSteps: listFromDynamic(json['fieldSteps']),
+      criticalControls: listFromDynamic(json['criticalControls']),
+      acceptance: listFromDynamic(json['acceptance']),
+      reporting: listFromDynamic(json['reporting']),
+      mistakes: listFromDynamic(json['mistakes']),
+      educationNotes: educationNotes,
     );
   }
 
-  static List<String> _list(dynamic value) {
+  static List<String> listFromDynamic(dynamic value) {
     if (value is! List) return const <String>[];
     return value.map((item) => item.toString()).toList();
   }
@@ -450,7 +486,6 @@ class TurkishUnitText {
 
     var value = input;
 
-    // EPA dokümanlarından gelen yaygın Amerikan hacim/debi ifadeleri.
     value = value.replaceAll(
       RegExp(r'0[,.]60\s*scm\s*/\s*21\s*scf', caseSensitive: false),
       '0,60 Nm³',
@@ -480,7 +515,6 @@ class TurkishUnitText {
       '0,00057 m³/dk',
     );
 
-    // Genel birim Türkçeleştirme ve üst indis düzeltmeleri.
     value = value.replaceAll(RegExp(r'\bscm\b', caseSensitive: false), 'Nm³');
     value = value.replaceAll(RegExp(r'\bscf\b', caseSensitive: false), 'standart ft³ (Türkiye karşılığı: Nm³)');
     value = value.replaceAll(RegExp(r'\bcfm\b', caseSensitive: false), 'ft³/dk (Türkiye karşılığı: m³/dk veya L/dk)');
