@@ -1,0 +1,51 @@
+{
+  "EPA Method 29": [
+    "Metal örneklemelerinde en büyük saha riski düşük konsantrasyonlarda kontaminasyondur; nozul, prob, filtre, impinger, kap ve reaktif blankları ölçümden önce ayrı planlanmalıdır.",
+    "Ön yüzeyde partikül/metalik yük tutulurken gaz fazı metaller impinger çözeltilerinde tutulabilir; fraksiyonların karıştırılıp karıştırılmayacağı metot/laboratuvar talimatına göre yapılır.",
+    "Yanlış yıkama fraksiyonu, kırılan cam malzeme, eksik blank veya metal kontaminasyonu sonucu güvenilirliğini bozar."
+  ],
+  "TS EN 14385": [
+    "Metal örneklemesinde izokinetiklik, filtre sıcaklığı, impinger seviyesi, buz banyosu ve DGM kayıtları birlikte takip edilir.",
+    "Yan akışlı metal örneklemesinde ana akış ve yan akış oranı sabit tutulmalı; oran değişimi temsil edilebilirliği etkiler.",
+    "Reaktif, kap ve saha blankı düşük metal seviyelerinde sonucu savunmak için kritik kontroldür."
+  ],
+  "TS EN 1911": [
+    "HCl ölçümünde prob ve filtre hattı yoğuşma noktasının üzerinde tutulmalı; absorban impinger hattı hedef bileşiği verimli tutacak şekilde soğutulmalıdır.",
+    "Sabit akış ve izokinetik HCl yaklaşımları birbirinin yerine körlemesine kullanılmaz; damlacık/partikül etkisi varsa yöntem seçimi yeniden değerlendirilir.",
+    "İkinci absorban kabında yüksek miktar bulunması breakthrough veya absorpsiyon verimi problemi gösterebilir."
+  ],
+  "EPA Method 26A": [
+    "Halojen/asit gazı çalışmalarında filtre hedef absorban değildir; partikülün absorban çözeltiye taşınmasını önlemek ve gaz fazı ayrımını korumak için kullanılır.",
+    "Absorban impingerlerinde kabarcık teması, soğutma, sıçrama ve seviye kaybı düzenli kontrol edilir.",
+    "Geri kazanımda fraksiyonlar laboratuvar talimatına göre ayrı etiketlenmelidir."
+  ],
+  "EPA Method 8": [
+    "EPA Method 8'de H2SO4 ve SO2 fraksiyonlarının ayrımı saha geri kazanımında bozulmamalıdır; IPA ve H2O2/su fraksiyonları ayrı takip edilir.",
+    "Sülfürik asit sisi/SO2 ölçümünde prob, filtre ve impinger sıcaklıkları, yoğuşma ve damlacık taşınımı saha planında birlikte değerlendirilir.",
+    "IPA blankı, H2O2/su blankı ve kap/yıkama blankı ayrı tutulmalıdır."
+  ],
+  "EPA Method 13A": [
+    "Flor/florür örneklemesinde cam elyaf filtre ve saf su blankı düşük tayin sınırlarında kritik hale gelir.",
+    "Filtre, prob/hat yıkaması ve absorban fraksiyonlarının nasıl birleştirileceği laboratuvar talimatına göre açıkça etiketlenmelidir."
+  ],
+  "TS ISO 12039": [
+    "Yanma gazı ölçümlerinde O2/CO2 yalnızca yardımcı parametre değildir; SO2, NOx ve CO değerlerinin referans oksijene düzeltilmesinde temel girdidir.",
+    "Stabil okuma alınmadan limit değerlendirmesi yapılmamalıdır; O2, CO2, CO, NOx ve SO2 değerlerinin proses kararlılığıyla uyumlu olduğu kontrol edilir.",
+    "Referans O2 düzeltmesi yapılacaksa ölçülen O2 değeri, kuru/ıslak baz bilgisi ve mevzuattaki referans O2 birlikte kaydedilir."
+  ],
+  "EPA Method 4": [
+    "Nem tayininde ilk iki impingerde su, üçüncü impingerde boş kap ve son kapta silika jel hattı sahada dikkatle takip edilir.",
+    "İmpinger ve silika jel ilk-son ağırlıkları Bws hesabının temelidir; tartım kayıtları kaybolursa nem hesabı savunulamaz.",
+    "Yetersiz soğutma, silika jel doyumu, kaçak veya hat içinde yoğuşma nem sonucunu bozar."
+  ],
+  "PAH / ISO 11338-1": [
+    "PAH örneklemesinde XAD-2 veya uygun adsorban ışık, sıcaklık ve kontaminasyondan korunmalıdır.",
+    "Metot A/B/C seçimi baca şartı, hedef PAH grubu, partikül yükü ve laboratuvar talimatıyla uyumlu yapılmalıdır.",
+    "Filtre, adsorban, kondens ve yıkama fraksiyonlarının karıştırılma/ayrı tutulma kararı metot talimatına göre verilmelidir."
+  ],
+  "TS EN 1948-1": [
+    "PCDD/DF ölçümlerinde XAD-2 kartuşta kanal oluşmaması, adsorbanın ışık ve sıcaklıktan korunması kritik saha kontrolüdür.",
+    "Filtre, adsorban, kondens ve yıkama fraksiyonları metot talimatına göre ayrı yönetilmelidir.",
+    "Blank, temiz cam malzeme ve çapraz kontaminasyon kontrolü PCDD/DF çalışmalarında zorunlu kabul edilmelidir."
+  ]
+}
