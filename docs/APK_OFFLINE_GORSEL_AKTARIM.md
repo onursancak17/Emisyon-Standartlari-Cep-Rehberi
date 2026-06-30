@@ -2,6 +2,12 @@
 
 Bu repo, telefona kurulacak **tamamen offline Android APK** üretmek içindir. Streamlit/WebView mantığı kullanılmaz.
 
+Telefonda görünecek uygulama adı:
+
+```text
+Emisyon İmisyon Ölçüm Standartları
+```
+
 ## Doğru repo
 
 ```text
@@ -30,6 +36,12 @@ Görsel notları şu dosyada tanımlanır:
 
 ```text
 assets/visual_notes_extra.json
+```
+
+Görsel arşivi / aktif-bilinçli arşiv-kontrol bekliyor sınıflandırması şu dosyada tutulur:
+
+```text
+assets/visual_manifest_extra.json
 ```
 
 Örnek kayıt:
@@ -68,6 +80,8 @@ Bu script:
 - JSON dosyaları okunuyor mu?
 - Ek standart dosyaları doğru mu?
 - Görsel notlarında tanımlı `imageAsset` dosyaları var mı?
+- Görsel manifest kayıtları doğru mu?
+- `assets/visuals/` içindeki JPG sayısı kaç?
 - Eğitim notu anahtarları standartlarda karşılık buluyor mu?
 - Standart kodlarında çakışma var mı?
 
@@ -81,8 +95,8 @@ Eksik görseller şu aşamada **uyarı** sayılır; build'i durdurmaz. Çünkü 
 2. **Actions** sekmesine gir.
 3. **Build Android APK** workflow'unu aç.
 4. En son başarılı run'ı seç.
-5. **Artifacts** bölümünden `emisyon-standartlari-cep-rehberi-apk` paketini indir.
-6. ZIP içindeki APK dosyasını telefona kur.
+5. **Artifacts** bölümünden `emisyon-imisyon-olcum-standartlari-apk` paketini indir.
+6. ZIP içindeki `emisyon-imisyon-olcum-standartlari.apk` dosyasını telefona kur.
 
 ## Kritik not
 
