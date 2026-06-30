@@ -20,3 +20,4 @@ flutter:
   assets:
     - assets/standards.json
     - assets/education_notes.json
+    - assets/visual_notes.json
