@@ -25,6 +25,18 @@ Her standartta mümkün olduğunca şu bilgiler bulunur:
 - Raporlama notları
 - Sık yapılan saha hataları
 
+## Birim dili
+
+Uygulama Türkiye saha kullanımına göre hazırlanır. Amerikan/İngiliz kaynaklı birimler ekranda Türk saha birimlerine çevrilmiş olarak gösterilir.
+
+Örnek dönüşümler:
+
+- `scm` yerine `Nm³`
+- `21 scf` yerine yaklaşık `0,60 Nm³`
+- `0,75 cfm` yerine yaklaşık `21 L/dk` veya `0,021 m³/dk`
+- `0,020 cfm` yerine yaklaşık `0,57 L/dk` veya `0,00057 m³/dk`
+- `m3` yerine `m³`
+
 ## İlk sürümde olanlar
 
 - Offline çalışan Flutter Android uygulaması
@@ -33,6 +45,7 @@ Her standartta mümkün olduğunca şu bilgiler bulunur:
 - Emisyon / imisyon ayrımı
 - Ayrıntılı standart detay sayfası
 - Tam Türkçe saha rehberi içerikleri
+- Türkiye saha kullanımına uygun birim gösterimi
 
 ## Genişletilmiş ilk veri tabanındaki başlıklar
 
