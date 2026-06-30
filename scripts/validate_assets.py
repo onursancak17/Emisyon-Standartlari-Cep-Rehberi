@@ -45,6 +45,10 @@ def load_json(path: Path) -> Any:
         raise SystemExit(f"HATA: JSON okunamadı: {path.relative_to(ROOT)} -> {exc}")
 
 
+def rel(path: Path) -> str:
+    return str(path.relative_to(ROOT)).replace("\\", "/")
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--strict-images", action="store_true", help="Eksik imageAsset dosyalarında hata ver.")
@@ -52,6 +56,9 @@ def main() -> int:
 
     errors: list[str] = []
     warnings: list[str] = []
+
+    visual_asset_files = sorted(rel(path) for path in (ROOT / "assets" / "visuals").glob("*.jpg"))
+    visual_asset_set = set(visual_asset_files)
 
     standards: list[dict[str, Any]] = []
     for path in STANDARD_FILES:
@@ -108,8 +115,7 @@ def main() -> int:
             image_base64 = str(entry.get("imageBase64", "")).strip()
             if image_asset:
                 visual_note_assets.add(image_asset)
-                asset_path = ROOT / image_asset
-                if not asset_path.exists():
+                if image_asset not in visual_asset_set and not (ROOT / image_asset).exists():
                     missing_assets.append(image_asset)
             elif not image_base64:
                 warnings.append(f"Görsel kaydında imageAsset veya imageBase64 yok: {entry.get('title', '<başlıksız>')}")
@@ -132,6 +138,7 @@ def main() -> int:
 
     manifest_items: list[dict[str, Any]] = []
     manifest_missing_assets: list[str] = []
+    manifest_assets: set[str] = set()
     for path in VISUAL_MANIFEST_FILES:
         data = load_json(path)
         if not isinstance(data, list):
@@ -148,8 +155,10 @@ def main() -> int:
                 errors.append("Manifest içinde filename boş kayıt var.")
             if not image_asset:
                 errors.append(f"Manifest içinde imageAsset boş: {filename}")
-            elif not (ROOT / image_asset).exists():
-                manifest_missing_assets.append(image_asset)
+            else:
+                manifest_assets.add(image_asset)
+                if image_asset not in visual_asset_set and not (ROOT / image_asset).exists():
+                    manifest_missing_assets.append(image_asset)
             status = str(entry.get("status", "")).strip()
             if status not in {"aktif_gorsel", "metin_islendi", "bilincli_arsiv", "kontrol_bekliyor"}:
                 warnings.append(f"Manifest status kontrol edilmeli: {filename} -> {status}")
@@ -164,13 +173,24 @@ def main() -> int:
         else:
             warnings.append(msg)
 
+    unlisted_assets = sorted(visual_asset_set - manifest_assets)
+    unused_note_assets = sorted(visual_asset_set - visual_note_assets)
+
     print("--- Offline APK asset kontrolü ---")
     print(f"Standart sayısı: {len(standards)}")
     print(f"Eğitim notu anahtarı: {len(education_map)}")
-    print(f"Görsel notu sayısı: {visual_count}")
+    print(f"Standart detay görsel notu sayısı: {visual_count}")
     print(f"Görsel manifest kaydı: {len(manifest_items)}")
+    print(f"assets/visuals JPG sayısı: {len(visual_asset_files)}")
+    print(f"Manifestte olmayan JPG: {len(unlisted_assets)}")
+    print(f"Standart detayına bağlanmamış JPG: {len(unused_note_assets)}")
     print(f"Program sayfası sayısı: {len(program_pages)}")
     print(f"Eksik görsel asset: {len(missing_assets)}")
+
+    if unlisted_assets:
+        print("\nBİLGİ: Manifestte olmayan JPG dosyaları APK içinde otomatik 'Kontrol bekliyor' olarak listelenir.")
+        for asset in unlisted_assets[:30]:
+            print(f"- {asset}")
 
     if warnings:
         print("\nUYARILAR:")
