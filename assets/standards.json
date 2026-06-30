@@ -1,155 +1,961 @@
 [
   {
-    "title": "Partikül Madde Gravimetrik Ölçüm",
-    "code": "TS EN 13284-1",
-    "category": "Emisyon",
-    "subgroup": "Partikül Madde",
-    "keywords": ["PM", "toz", "gravimetrik", "izokinetik", "filtre", "baca"],
-    "purpose": "Sabit kaynak bacalarında düşük ve orta konsantrasyonlu partikül madde emisyonunun izokinetik numune alma ve gravimetrik tartım ile belirlenmesi için saha rehberi.",
-    "duration": "Ölçüm süresi proses şartı, beklenen konsantrasyon, filtre yükü ve laboratuvar talimatına göre seçilir. Sahada genel hedef; temsili numune, yeterli filtre yükü ve kabul edilebilir izokinetiklik oranını sağlamaktır.",
-    "flowRate": "Debi nozül çapı, baca hızı, baca sıcaklığı, basınç ve nem durumuna göre izokinetik olarak ayarlanır. Debi sabit seçilmez; saha boyunca izokinetik takip edilir.",
-    "equipment": ["Isıtmalı prob ve uygun nozül seti", "Filtre tutucu ve şartlandırılmış filtre", "S-tip Pitot ve diferansiyel basınç ölçer", "Gaz sayacı / DGM", "Sıcaklık, basınç ve nem ölçüm ekipmanı"],
-    "reagents": ["Partikül madde için temel numune filtre üzerindedir.", "Nem veya ek kirletici birlikte alınacaksa ilgili metoda göre impinger ve çözelti kullanılır."],
-    "fieldSteps": ["Ölçüm düzlemini ve portları kontrol et.", "Baca çapı veya kesit ölçülerine göre traverse noktalarını belirle.", "Pitot kaçak ve sıfır kontrollerini yap.", "Filtreyi saha kayıtlarına uygun şekilde tak ve filtre no bilgisini kaydet.", "Nozül çapını baca hızına göre seç.", "Her noktada izokinetik debiyi takip ederek numune al.", "Ölçüm sonunda kaçak testini tekrarla ve filtreyi güvenli şekilde kapat."],
-    "criticalControls": ["İzokinetiklik oranı laboratuvar talimatında verilen kabul aralığında olmalıdır.", "Prob ve filtre hattında yoğuşma oluşmamalıdır.", "DGM hacmi, sayaç sıcaklığı ve sayaç vakumu eksiksiz kaydedilmelidir.", "Baca gazı sıcaklığı, statik basınç ve atmosfer basıncı rapora aktarılmalıdır."],
-    "acceptance": ["Kaçak testi kabul sınırını aşmamalıdır.", "Traverse noktaları standarda uygun seçilmelidir.", "Filtre hasarlı, ıslak veya kontamine olmamalıdır.", "Proses kararlı değilse ölçüm temsil kabiliyeti tartışmalıdır."],
-    "reporting": ["Ham DGM hacmi, standart hacim, kuru gaz hacmi, filtre ilk-son tartımı ve konsantrasyon hesapları rapora girilir.", "Ölçüm şartları, port bilgisi, nokta sayısı ve izokinetiklik değerlendirmesi yazılır."],
-    "mistakes": ["Sabit debiyle izokinetik ölçüm yapmaya çalışmak", "Nozül çapını baca hızına göre yeniden değerlendirmemek", "Kaçak testini sadece ölçüm başında yapmak", "Filtreyi sahada açıkta bekletmek"]
-  },
-  {
-    "title": "Yüksek Konsantrasyon Partikül Madde Ölçümü",
-    "code": "TS ISO 9096",
-    "category": "Emisyon",
-    "subgroup": "Partikül Madde",
-    "keywords": ["yüksek toz", "PM", "izokinetik", "filtre", "baca"],
-    "purpose": "Yüksek partikül madde konsantrasyonlu bacalarda izokinetik örnekleme ve gravimetrik analiz için saha uygulama rehberi.",
-    "duration": "Ölçüm süresi filtre yüklenmesi, beklenen konsantrasyon ve proses kararlılığı dikkate alınarak belirlenir. Filtre aşırı yüklenmeyecek, ancak tartım için yeterli madde toplanacak şekilde planlanır.",
-    "flowRate": "Debi baca hızına göre izokinetik tutulur. Yüksek tozlu bacalarda nozül seçimi ve filtre yükü daha kritik hale gelir.",
-    "equipment": ["Uygun nozül ve prob", "Yüksek toz yüküne uygun filtre tutucu", "S-tip Pitot", "DGM / sayaç sistemi", "Sıcaklık ve basınç ölçer"],
-    "reagents": ["Temel örnek filtrede tutulur.", "Ek nem tayini yapılacaksa EPA 4 veya ilgili nem metoduna göre impinger hazırlanır."],
-    "fieldSteps": ["Prosesin kararlı çalıştığını doğrula.", "Ölçüm noktalarını belirle ve port erişimini kontrol et.", "Nozül ve filtreyi beklenen yük durumuna göre seç.", "İzokinetik debiyi her noktada takip et.", "Filtre yüklenmesini sahada gözlemle; tıkanma belirtisi varsa kayda geçir.", "Ölçüm sonunda kaçak testi ve numune güvenliğini tamamla."],
-    "criticalControls": ["Filtre aşırı yüklenirse ölçüm güvenilirliği düşer.", "Nozül ağzı baca akışına doğru hizalanmalıdır.", "Düşük hız ve türbülans bölgeleri raporda ayrıca değerlendirilmelidir."],
-    "acceptance": ["Numune alma hattında kaçak olmamalıdır.", "Filtre bütünlüğü korunmalıdır.", "Ölçüm noktaları ve süreleri temsili olmalıdır."],
-    "reporting": ["Filtre yükü, çekilen hacim, baca şartları ve izokinetiklik bilgisi net yazılır.", "Aşırı toz yükü, tıkanma veya proses dalgalanması varsa açıklama eklenir."],
-    "mistakes": ["Yüksek tozlu bacada uzun süreyle filtreyi tıkamak", "Nozül ağzını akışa tam çevirmemek", "Port içi birikintileri numuneye karıştırmak"]
-  },
-  {
-    "title": "Ölçüm Düzlemi, Port ve Traverse Planlama",
+    "title": "Ölçüm Düzlemi, Port Seçimi ve Traverse Planı",
     "code": "TS EN 15259 / EPA Method 1",
     "category": "Emisyon",
-    "subgroup": "Planlama",
-    "keywords": ["ölçüm düzlemi", "traverse", "port", "bozucu etki", "akış açısı", "nokta sayısı"],
-    "purpose": "Baca emisyon ölçümlerinde ölçüm düzlemi seçimi, port yerleşimi, traverse noktaları ve temsili ölçüm şartlarının kontrolü için saha rehberi.",
-    "duration": "Bu bölüm numune alma süresi değil, ölçüm öncesi planlama kontrolüdür. Numune alma süresi kirletici metoduna göre ayrıca belirlenir.",
-    "flowRate": "Debi bilgisi kirletici metoduna bağlıdır. Bu aşamada baca kesiti, hız profili ve akış uygunluğu değerlendirilir.",
-    "equipment": ["Şerit metre / lazer metre", "Baca kesit ölçüm ekipmanı", "Pitot tüpü", "Açı değerlendirmesi için uygun prob hizalama kontrolü", "Saha krokisi ve port kayıt formu"],
-    "reagents": ["Çözelti kullanılmaz."],
-    "fieldSteps": ["Baca şekli ve kesit ölçülerini belirle.", "Dirsek, fan, klape, daralma, genişleme ve benzeri bozucu etkileri tespit et.", "Uygun ölçüm düzlemini seç.", "Port sayısı ve port erişimini kontrol et.", "Dairesel veya dikdörtgen kesite göre nokta yerleşimini hesapla.", "Hız profili ve akış açısı açısından uygunsuzlukları kaydet."],
-    "criticalControls": ["Bozucu etkilere yakın ölçüm düzlemi temsiliyet sorununa yol açar.", "Portlar probun tüm noktalara ulaşmasına izin vermelidir.", "Akış açısı yüksekse izokinetik ve hız ölçümü güvenilirliği düşer."],
-    "acceptance": ["Ölçüm düzlemi standarda uygun veya gerekçeli olarak seçilmelidir.", "Traverse noktalarına fiziksel erişim sağlanmalıdır.", "Port çapı prob ve nozül için yeterli olmalıdır."],
-    "reporting": ["Baca kesiti, port sayısı, ölçüm düzlemi mesafeleri, nokta sayısı ve uygunsuzluklar rapora yazılır.", "Zorunlu sapmalar varsa açık gerekçe belirtilir."],
-    "mistakes": ["Sadece kolay erişilen porttan ölçüm yapmak", "Bozucu etki mesafelerini kontrol etmemek", "Dikdörtgen bacada nokta dağılımını eksik almak"]
+    "subgroup": "Hız / Debi / Traverse",
+    "keywords": ["ölçüm düzlemi", "traverse", "port", "nokta", "bozucu etki", "dirsek", "fan", "akış açısı", "girdap"],
+    "purpose": "Baca emisyon ölçümlerinde doğru ölçüm düzlemini seçmek, portları kontrol etmek, nokta sayısını belirlemek ve numunenin bacayı temsil etmesini sağlamak için kullanılan saha rehberidir. Partikül, metal, HCl, VOC, yanma gazı ve debi ölçümlerinin tamamında ölçüm yeri seçimi ilk kritik adımdır.",
+    "duration": "Bu standart doğrudan numune alma süresi vermez; ölçüm öncesi saha uygunluğu ve traverse planını belirler. Numune alma süresi ölçülecek kirletici standardına göre belirlenir. Ancak tüm ölçümlerde porttan porta ve noktadan noktaya eşit veya metoda uygun süre dağılımı korunmalıdır.",
+    "flowRate": "Debi bu standartta belirlenmez. Debi; baca hızı, nozül çapı, numune alma metodu ve izokinetik hesaplara göre ilgili kirletici standardında belirlenir. Bu aşamada esas amaç hız profilinin, türbülansın ve akış açısının ölçüme uygun olup olmadığını kontrol etmektir.",
+    "equipment": [
+      "Şerit metre veya lazer metre ile baca çapı/kesit ölçümü yapılır.",
+      "S-tip Pitot veya uygun hız ölçüm probu ile hız profili kontrol edilir.",
+      "Diferansiyel basınç ölçer, sıcaklık probu, port derinliği kontrol çubuğu ve saha krokisi gerekir.",
+      "Port çapı prob, nozül, filtre tutucu ve ısıtmalı hattın geçişine izin verecek büyüklükte olmalıdır.",
+      "Dairesel bacalarda çap, dikdörtgen bacalarda kenar uzunlukları ve hidrolik çap bilgisi kayıt altına alınır."
+    ],
+    "reagents": ["Çözelti veya absorban kullanılmaz. Bu bölüm tamamen ölçüm yeri ve geometri kontrolüdür."],
+    "fieldSteps": [
+      "Ölçüm yapılacak bacayı yerinde gör; portların fiziksel erişimini, platform güvenliğini ve probun tüm noktalara ulaşma durumunu kontrol et.",
+      "Fan, dirsek, klape, siklon, torbalı filtre çıkışı, daralma, genişleme, baca ağzı, taze hava girişi gibi bozucu etkilerin ölçüm düzlemine uzaklığını yaz.",
+      "Baca kesitini belirle: dairesel, kare, dikdörtgen veya düzensiz kesit olarak sınıflandır.",
+      "Dairesel bacada çapı, dikdörtgen bacada iki kenarı ölç ve alan hesabını kontrol et.",
+      "Port sayısı ve portların birbirine açısını kontrol et. Tek port varsa tüm noktalara erişim mümkün mü mutlaka değerlendir.",
+      "Traverse nokta sayısını kesit büyüklüğü ve standardın nokta yerleşim kuralına göre belirle.",
+      "Her noktanın baca duvarından mesafesini hesapla ve saha formuna yaz.",
+      "İlk hız taraması yaparak çok düşük hız, ters akış, sıfıra yakın hız, aşırı türbülans veya yüksek akış açısı olup olmadığını kontrol et.",
+      "Port çevresinde dış hava emişi varsa ölçüm sırasında port çevresini kapatmak için izolasyon hazırlığı yap.",
+      "Uygunsuzluk varsa fotoğraf, kroki ve açıklama ile kayıt altına al; raporda temsil kabiliyeti notu düş."
+    ],
+    "criticalControls": [
+      "Bozucu etkiye çok yakın ölçüm düzlemi tüm sonuçları tartışmalı hale getirir.",
+      "Porttan tüm traverse noktalarına ulaşılamıyorsa eksik nokta ile ölçüm yapılmış sayılır; bu durum raporda açık yazılmalıdır.",
+      "Baca duvarına çok yakın noktada prob duvara çarptırılmamalı, birikmiş toz numuneye dahil edilmemelidir.",
+      "Akış açısı yüksekse Pitot hız ölçümü ve izokinetik hesap güvenilirliği düşer.",
+      "Dairesel ve dikdörtgen bacalarda nokta yerleşim mantığı karıştırılmamalıdır.",
+      "Ölçüm düzlemi seçimi yanma gazı gibi basit görünen ölçümlerde bile önemlidir; ölü bölge veya seyrelme bölgesinde ölçüm yapılmamalıdır."
+    ],
+    "acceptance": [
+      "Ölçüm düzlemi mümkün olduğunca türbülans ve bozucu etkilerden uzak seçilmelidir.",
+      "Port çapı, port sayısı, platform ve prob erişimi ölçüme izin vermelidir.",
+      "Nokta sayısı ve nokta mesafeleri standarda uygun veya gerekçeli olmalıdır.",
+      "Aşırı girdap, ters akış veya fiziksel erişim sorunu varsa ölçüm kabul edilebilirliği ayrıca değerlendirilmelidir."
+    ],
+    "reporting": [
+      "Baca kesiti, ölçüm düzlemi, port sayısı, port yönleri, nokta sayısı ve nokta mesafeleri rapora yazılır.",
+      "Bozucu etkilerden önce/sonra mesafe bilgisi ve varsa uygunsuzluk fotoğrafı eklenir.",
+      "Standarda tam uyulamayan durumlarda sapma gerekçesi açık ve savunulabilir şekilde belirtilir."
+    ],
+    "mistakes": [
+      "Sadece kolay erişilen porttan ölçüm yapmak.",
+      "Baca çapını tahmini almak ve nokta mesafesini yanlış hesaplamak.",
+      "Dirsek veya fan çıkışına çok yakın noktada ölçüm yapıp bunu raporda belirtmemek.",
+      "Dikdörtgen bacada nokta dağılımını dairesel baca gibi hesaplamak.",
+      "Porttan içeri giren probun gerçekten tüm noktalara ulaşıp ulaşmadığını kontrol etmemek."
+    ]
   },
   {
-    "title": "Nem Tayini",
+    "title": "Baca Gazı Hız ve Debi Ölçümü",
+    "code": "EPA Method 2 / TS EN ISO 16911 / TS ISO 10780",
+    "category": "Emisyon",
+    "subgroup": "Hız / Debi / Traverse",
+    "keywords": ["Pitot", "S-tip", "hız", "debi", "baca debisi", "statik basınç", "dinamik basınç", "akış açısı"],
+    "purpose": "Baca gazı hızını, hacimsel debiyi ve izokinetik numune alma hesaplarında kullanılacak temel akış verilerini belirlemek için kullanılan saha rehberidir. Partikül, metal ve diğer izokinetik metotlarda hız ölçümü doğrudan numune debisini belirler.",
+    "duration": "Hız taraması, ölçüm öncesi ve gerektiğinde ölçüm sırasında yapılır. Her traverse noktasında kararlı okuma alınacak kadar beklenir. Debi değişken proseslerde tek ön ölçüm yetmeyebilir; ölçüm boyunca periyodik kontrol gerekebilir.",
+    "flowRate": "Bu bölümde numune çekiş debisi değil, baca gazı hızı ve debisi belirlenir. Pitot ΔP, baca sıcaklığı, statik basınç, nem ve gaz molekül ağırlığı kullanılarak hız ve debi hesaplanır.",
+    "equipment": [
+      "S-tip Pitot tüpü veya metoda uygun hız probu.",
+      "Diferansiyel basınç ölçer veya manometre.",
+      "Baca gazı sıcaklık probu.",
+      "Barometre veya atmosfer basıncı kaydı.",
+      "Statik basınç ölçüm düzeni.",
+      "Pitot katsayısı ve kalibrasyon bilgisi."
+    ],
+    "reagents": ["Çözelti kullanılmaz. Ölçüm tamamen fiziksel hız, basınç ve sıcaklık ölçümüdür."],
+    "fieldSteps": [
+      "Pitot tüpünün uçlarının açık, temiz ve hasarsız olduğunu kontrol et.",
+      "Pozitif ve negatif hatları doğru bağla; ters bağlantı negatif veya anlamsız ΔP verir.",
+      "Manometre sıfırını ve cihazın seviyesini kontrol et.",
+      "Her traverse noktasına girerken probun yönünü gaz akışına uygun tut.",
+      "Her noktada hız basıncı, baca sıcaklığı ve gerekirse statik basıncı kaydet.",
+      "Çok düşük ΔP, ters akış veya dalgalı okuma varsa noktayı işaretle ve tekrar kontrol et.",
+      "Ölçüm bitiminde pitot hat kaçak testini yap.",
+      "Debi hesabında baca alanını, mutlak basıncı, sıcaklığı, nemi ve gaz yoğunluğunu doğru kullan."
+    ],
+    "criticalControls": [
+      "Pitot hat kaçağı hız değerini doğrudan bozar.",
+      "Manometre sıfırı kaymışsa tüm nokta hızları hatalı olur.",
+      "Gaz sıcaklığı ve mutlak basınç debi hesabının ayrılmaz parçasıdır.",
+      "Yüksek nemli veya sıcak bacalarda gaz yoğunluğu varsayımı dikkatli yapılmalıdır.",
+      "Akış açısı fazla ise ölçülen hız, gerçek eksenel hızı temsil etmeyebilir."
+    ],
+    "acceptance": [
+      "Pitot ve basınç hatları kaçaksız olmalıdır.",
+      "Okumalar fiziksel olarak tutarlı olmalıdır; negatif, sıfır veya aşırı dalgalı değerler açıklanmalıdır.",
+      "Baca alanı ve nokta yerleşimi doğru belirlenmiş olmalıdır.",
+      "Proses kararlılığı ölçüm boyunca makul seviyede korunmalıdır."
+    ],
+    "reporting": [
+      "Her nokta için ΔP, sıcaklık, hız, ortalama hız ve toplam debi rapora aktarılır.",
+      "Debi yaş/kuru, işletme şartı/normal şart gibi hangi bazda verildiyse açık yazılır.",
+      "Pitot katsayısı, baca alanı, basınç ve sıcaklık düzeltmeleri belirtilir."
+    ],
+    "mistakes": [
+      "Pitot hortumlarını ters bağlamak.",
+      "Manometre sıfırı almadan ölçüme başlamak.",
+      "Baca alanını yanlış hesaplamak.",
+      "Statik basıncı atmosfer basıncı yerine yanlış kullanmak.",
+      "Debi hesabında °C değerini Kelvin'e çevirmeyi unutmak."
+    ]
+  },
+  {
+    "title": "EPA Method 5 Partikül Madde Ölçümü",
+    "code": "EPA Method 5",
+    "category": "Emisyon",
+    "subgroup": "Toz / Partikül",
+    "keywords": ["partikül", "toz", "EPA 5", "izokinetik", "nozül", "filtre", "asetone wash", "silika jel", "DGM"],
+    "purpose": "Sabit kaynak bacalarında partikül madde emisyonunun izokinetik numune alma, ısıtılmış filtre ve numune geri alma yıkamalarıyla gravimetrik olarak belirlenmesi için ayrıntılı saha rehberidir.",
+    "duration": "Her traverse noktasında süre eşit dağıtılır ve nokta başı süre en az 2 dakika olacak şekilde planlanır. Toplam süre; beklenen toz seviyesi, yeterli kütle toplanması, filtre yüklenmesi, mevzuat şartı ve laboratuvar tayin limiti dikkate alınarak seçilir.",
+    "flowRate": "Çekiş debisi sabit değildir; her noktada baca hızına göre izokinetik ayarlanır. İzokinetik oran normalde %90–110 aralığında hedeflenir. DGM hacmi, sayaç sıcaklığı, sayaç vakumu, orifis ΔH ve süre her noktada kayıt edilir.",
+    "equipment": [
+      "Keskin kenarlı ve kalibre edilmiş nozül seti.",
+      "Isıtmalı prob ve uygun prob liner.",
+      "S-tip Pitot, diferansiyel basınç ölçer ve sıcaklık probu.",
+      "Isıtılmış filtre tutucu ve cam fiber filtre.",
+      "4 impingerli nem tutma grubu ve buz banyosu.",
+      "Kuru gaz sayacı/DGM, orifis, vakum pompası ve sıcaklık sensörleri.",
+      "Aseton yıkama şişesi, fırça, numune kapları, petri kabı, pens, etiket ve saha formu."
+    ],
+    "reagents": [
+      "1. impinger: 100 mL saf/deiyonize su.",
+      "2. impinger: 100 mL saf/deiyonize su.",
+      "3. impinger: boş bırakılır.",
+      "4. impinger: 200–300 g ön tartımı yapılmış silika jel.",
+      "Nozül, prob liner, bağlantılar ve filtre tutucu ön yarısı numune geri almada asetonda yıkanır.",
+      "Kullanılan asetondan yaklaşık 200 mL asetone blank alınır."
+    ],
+    "fieldSteps": [
+      "Ölçüm yeri ve traverse noktalarını Method 1 veya ilgili standarda göre belirle.",
+      "Baca hız ön ölçümünü yap ve uygun nozül çapını seç.",
+      "Filtreleri ışığa tutarak yırtık, delik ve kusur açısından kontrol et; filtre numarasını yaz.",
+      "Silika jel ön tartımını ve impinger başlangıç hacimlerini kayıt et.",
+      "Filtre ve prob ısıtmasını hedef sıcaklığa getir; filtre sıcaklığını 120 ±14 °C civarında tut.",
+      "Ölçüm öncesi kaçak testini yap; ölçüm sonu kaçak testinin zorunlu olduğunu unutma.",
+      "Nozülü ilk noktaya gaz akışına bakacak şekilde yerleştir; pompayı çalıştır ve izokinetik debiyi ayarla.",
+      "Her noktada DGM, orifis ΔH, baca ΔP, vakum, sıcaklıklar ve süreyi yaz.",
+      "İmpinger buz banyosunu ve silika jel çıkış sıcaklığını takip et; çıkış 20 °C altında tutulmalıdır.",
+      "Ölçüm sonunda DGM son değerlerini al, pompayı durdur, probu çıkar ve son kaçak testini yap.",
+      "Numune geri almada filtreyi Container 1'e, ön hat asetone wash fraksiyonunu Container 2'ye, silika jeli Container 3'e al.",
+      "İlk üç impingerdeki suyu nem hesabı için tart veya hacimsel kayıt et."
+    ],
+    "criticalControls": [
+      "Toplam 4 impinger düzeni ve 100 mL + 100 mL + boş + 200–300 g silika jel sırası karıştırılmamalıdır.",
+      "Filtre sıcaklığı düşük kalırsa nem ve yarı uçucu bileşen davranışı sonucu etkileyebilir.",
+      "Kaçak sınırı ortalama örnekleme debisinin %4'ü veya 0,00057 m3/dk değerinden küçük olanıdır.",
+      "Nozül gaz akışına tam bakmalıdır; açılı duruş izokinetikliği bozar.",
+      "Port çevresinden dış hava emişi olursa hem hacim hem konsantrasyon hatalı çıkar.",
+      "Aseton yıkama kalıntısı toplam partikül kütlesinin parçasıdır; atlanamaz.",
+      "Asetone blank düzeltmesi olmadan yıkama kalıntısı güvenilir değerlendirilemez."
+    ],
+    "acceptance": [
+      "Son kaçak testi kabul sınırında olmalıdır.",
+      "İzokinetik oran kabul aralığında olmalıdır.",
+      "Filtre yırtık, ıslak, kontamine veya by-pass olmuş olmamalıdır.",
+      "Nozül, prob yıkaması, filtre ve silika jel fraksiyonları eksiksiz teslim edilmelidir.",
+      "Pitot hatları kaçak testinden geçmelidir; aksi halde hız ve izokinetik hesaplar tartışmalı olur."
+    ],
+    "reporting": [
+      "Nozül çapı, nokta sayısı, nokta süreleri, DGM ilk/son hacimleri, sıcaklıklar, vakum, orifis ΔH ve baca ΔP yazılır.",
+      "Filtre kütlesi, asetone wash kalıntısı, blank düzeltmesi ve toplam partikül kütlesi ayrı gösterilir.",
+      "Standart kuru hacim, nem, izokinetiklik ve konsantrasyon hesapları rapora aktarılır.",
+      "Uygunsuzluk, filtre sıcaklığı sapması, yüksek vakum, filtre yüklenmesi veya proses dalgalanması varsa açıklanır."
+    ],
+    "mistakes": [
+      "Sabit debiyle izokinetik ölçüm yapmaya çalışmak.",
+      "Asetone wash almamak veya yıkama kabını yanlış etiketlemek.",
+      "Silika jel ön/son tartımını karıştırmak.",
+      "Nozül çapını ön hız ölçümüne göre seçmemek.",
+      "Ölçüm sonunda kaçak testi yapmadan sistemi sökmek.",
+      "Filtreyi çıkarırken partikül kekini dökmek veya filtreyi açıkta bekletmek."
+    ]
+  },
+  {
+    "title": "TS EN 13284-1 Düşük Derişimli Partikül Madde Ölçümü",
+    "code": "TS EN 13284-1",
+    "category": "Emisyon",
+    "subgroup": "Toz / Partikül",
+    "keywords": ["TS EN 13284-1", "düşük toz", "partikül", "izokinetik", "filtre", "saha körü", "gravimetrik"],
+    "purpose": "Düşük derişimli partikül madde emisyonlarının izokinetik numune alma ve gravimetrik tartım ile belirlenmesi için kullanılan Avrupa standardına uygun saha rehberidir.",
+    "duration": "Ölçüm süresi; yeterli filtre kütlesi toplanacak, filtre aşırı yüklenmeyecek ve tesis çalışma şartları temsil edilecek şekilde belirlenir. Düşük konsantrasyonlarda daha uzun süre veya daha yüksek toplam hacim gerekebilir.",
+    "flowRate": "Debi baca hızına göre izokinetik ayarlanır. Sabit çekiş yerine her nokta için hesaplanan izokinetik debi takip edilir. DGM hacmi, sıcaklık, basınç ve nem düzeltmeleriyle standart kuru hacme çevrilir.",
+    "equipment": [
+      "İzokinetik örnekleme probu ve uygun nozül seti.",
+      "Filtre tutucu ve şartlandırılmış filtre.",
+      "S-tip Pitot ve sıcaklık probu.",
+      "DGM veya hacim ölçer sistemi.",
+      "Kaçak testi için uygun kapama ve vakum düzeni.",
+      "Filtre taşıma kabı, pens, etiket ve saha formu."
+    ],
+    "reagents": [
+      "Temel numune filtrededir; partikül filtreden gravimetrik olarak belirlenir.",
+      "Yıkama veya ek fraksiyon gerekiyorsa laboratuvar talimatındaki çözücü ve kap düzeni uygulanır.",
+      "Saha körü/şahit filtre planlanmalıdır."
+    ],
+    "fieldSteps": [
+      "Ölçüm düzlemini ve traverse noktalarını belirle.",
+      "Filtreyi tartım/şartlandırma kaydına uygun şekilde tak ve filtre numarasını yaz.",
+      "Nozül çapını baca hızına göre seç.",
+      "Ölçüm öncesi kaçak ve sistem bütünlük kontrolü yap.",
+      "Her noktada izokinetik debiyi ayarla ve süreleri eşit/planlı uygula.",
+      "Filtre yüklenmesini ve vakum artışını takip et.",
+      "Ölçüm sonunda son kaçak testini yap.",
+      "Filtreyi petri kabına al, saha körü ile birlikte laboratuvara teslim et."
+    ],
+    "criticalControls": [
+      "Düşük derişimde blank ve saha körü etkisi sonucu ciddi etkileyebilir.",
+      "Filtre kenarından by-pass kaçak sonucu düşük gösterir.",
+      "İzokinetik oran ve toplam hacim raporda savunulabilir olmalıdır.",
+      "Filtre tartımı için şartlandırma, nem ve elektrostatik etkiler kontrol edilmelidir.",
+      "Proses kararsızlığı düşük derişimli ölçümlerde belirsizliği artırır."
+    ],
+    "acceptance": [
+      "Kaçak testi kabul edilebilir olmalıdır.",
+      "Filtre bütünlüğü korunmalı, yırtık veya kontaminasyon olmamalıdır.",
+      "Yeterli kütle ve hacim alınmış olmalıdır.",
+      "İzokinetik oran laboratuvar/standart kabul aralığında kalmalıdır."
+    ],
+    "reporting": [
+      "Filtre ilk-son tartımı, saha körü, toplam hacim, kuru standart hacim ve konsantrasyon açık gösterilir.",
+      "Nokta sayısı, ölçüm süresi, baca şartları ve izokinetiklik değerlendirmesi yazılır.",
+      "Tespit limiti veya düşük kütle durumu varsa rapora not düşülür."
+    ],
+    "mistakes": [
+      "Saha körünü unutmak.",
+      "Düşük tozlu bacada çok kısa süre çekiş yapmak.",
+      "Filtreyi çıplak elle tutmak.",
+      "Filtreyi nemli ortamda açıkta bekletmek.",
+      "Kaçak testini önemsiz görmek."
+    ]
+  },
+  {
+    "title": "TS ISO 9096 Yüksek Konsantrasyon Partikül Madde Ölçümü",
+    "code": "TS ISO 9096",
+    "category": "Emisyon",
+    "subgroup": "Toz / Partikül",
+    "keywords": ["TS ISO 9096", "yüksek toz", "partikül", "filtre yüklenmesi", "izokinetik"],
+    "purpose": "Yüksek toz yüküne sahip bacalarda partikül madde konsantrasyonunun izokinetik numune alma ve gravimetrik yöntemle belirlenmesi için saha rehberidir.",
+    "duration": "Süre filtre aşırı yüklenmeyecek ama yeterli numune alınacak şekilde seçilir. Yüksek konsantrasyonda uzun çekiş filtre tıkanması ve vakum artışına neden olabilir. Ölçüm planında filtre kapasitesi ve beklenen toz seviyesi dikkate alınmalıdır.",
+    "flowRate": "Debi baca hızına göre izokinetik ayarlanır. Yüksek toz yükünde vakum hızlı artabileceği için debi kararlılığı ve filtre yüklenmesi sürekli takip edilir.",
+    "equipment": [
+      "Yüksek toz yüküne uygun nozül ve prob.",
+      "Filtre tutucu ve uygun filtre malzemesi.",
+      "S-tip Pitot, sıcaklık probu ve diferansiyel basınç ölçer.",
+      "DGM, vakum pompası ve debi ayar düzeni.",
+      "Numune geri alma için temiz kaplar ve fırçalama ekipmanı."
+    ],
+    "reagents": [
+      "Temel partikül filtrededir.",
+      "Ön hat yıkaması gerekiyorsa laboratuvar talimatındaki çözücü kullanılır.",
+      "Nem veya ek kirletici birlikte alınacaksa ilgili metodun impinger düzeni ayrıca uygulanır."
+    ],
+    "fieldSteps": [
+      "Prosesin yüksek tozlu çalıştığını ve ölçüm sırasında kararlı olduğunu teyit et.",
+      "Baca hız ön ölçümünü yap ve nozül çapını seç.",
+      "Filtreyi beklenen toz yüküne göre hazırla.",
+      "Her noktada izokinetik debiyi ayarla.",
+      "Vakum artışı, filtre tıkanması ve debi düşüşünü sürekli izle.",
+      "Aşırı tıkanma varsa ölçümü güvenli şekilde durdurup kayıt altına al.",
+      "Ölçüm sonunda filtre ve ön hat fraksiyonlarını dikkatli geri al."
+    ],
+    "criticalControls": [
+      "Filtre aşırı yüklenirse debi düşer, izokinetiklik bozulur ve numune kaybı riski artar.",
+      "Nozül ağzında biriken toz geri alma sırasında numunenin parçası olarak değerlendirilmelidir.",
+      "Port içindeki birikintiler kazara numuneye karıştırılmamalıdır.",
+      "Yüksek tozlu bacalarda probu bacadan çıkarırken toz dökülmesi ve numune kaybına dikkat edilir."
+    ],
+    "acceptance": [
+      "İzokinetik oran kabul edilebilir aralıkta olmalıdır.",
+      "Filtre tıkanması sonucu numune alma kontrolsüz hale gelmemelidir.",
+      "Numune geri alma eksiksiz yapılmalıdır.",
+      "Kaçak testi ve hız ölçümü geçerli olmalıdır."
+    ],
+    "reporting": [
+      "Filtre yüklenmesi, vakum artışı, ölçüm süresi ve varsa erken durdurma gerekçesi yazılır.",
+      "Toplam kütle, toplam kuru hacim ve izokinetiklik değerlendirmesi açık gösterilir."
+    ],
+    "mistakes": [
+      "Yüksek tozlu bacada gereğinden uzun süre çekiş yaparak filtreyi tıkamak.",
+      "Vakum artışını kaydetmemek.",
+      "Prob ucundaki tozu kaybetmek.",
+      "Düşük konsantrasyon standardı mantığıyla aynı süreyi uygulamak."
+    ]
+  },
+  {
+    "title": "EPA Method 17 In-Stack Filtre ile Partikül Madde",
+    "code": "EPA Method 17",
+    "category": "Emisyon",
+    "subgroup": "Toz / Partikül",
+    "keywords": ["EPA 17", "in-stack", "filtre", "partikül", "izokinetik", "baca içi filtre"],
+    "purpose": "Partikül maddenin baca içinde yer alan filtrede tutulduğu in-stack filtreli izokinetik örnekleme yöntemine yönelik saha rehberidir. Özellikle filtre sıcaklığı ve baca şartlarının dışarıdaki ısıtmalı filtre sisteminden farklı ele alındığı uygulamalarda kullanılır.",
+    "duration": "Süre her traverse noktasına eşit dağıtılır ve yeterli kütle toplanacak şekilde planlanır. Filtre baca içinde olduğu için filtre yüklenmesi ve prob yerleşimi dikkatle takip edilir.",
+    "flowRate": "Numune debisi izokinetik şartı sağlayacak şekilde ayarlanır. Baca hızı ve sıcaklığı her noktada dikkate alınır.",
+    "equipment": [
+      "Baca içine yerleştirilen filtre tutucu.",
+      "Uygun nozül ve prob.",
+      "S-tip Pitot ve sıcaklık probu.",
+      "DGM, pompa, orifis ve basınç ölçüm düzeni.",
+      "Filtre taşıma kabı, pens ve temiz geri alma alanı."
+    ],
+    "reagents": [
+      "Temel numune baca içi filtrede toplanır.",
+      "Geri alma yıkaması veya ek fraksiyon laboratuvar talimatına göre uygulanır."
+    ],
+    "fieldSteps": [
+      "Baca şartlarının in-stack filtre uygulamasına uygun olduğunu kontrol et.",
+      "Filtre tutucunun baca içinde sağlam durduğunu ve gaz by-pass yapmadığını kontrol et.",
+      "Nozülü akışa doğru hizala ve izokinetik çekişi başlat.",
+      "Her noktada DGM, sıcaklık, ΔP, vakum ve süre kayıtlarını al.",
+      "Filtre tutucuyu bacadan çıkarırken partikül kaybı olmamasına dikkat et.",
+      "Filtreyi temiz alanda kapat ve etiketle."
+    ],
+    "criticalControls": [
+      "Filtre baca içinde olduğu için fiziksel hasar, yüksek sıcaklık ve partikül dökülmesi riski vardır.",
+      "By-pass akış veya filtre kenar kaçağı sonucu düşük sonuç verir.",
+      "Baca içinden çıkarma sırasında filtredeki partikül kaybedilmemelidir.",
+      "Uygun olmayan baca sıcaklığı veya nem şartı metot seçimini etkileyebilir."
+    ],
+    "acceptance": [
+      "Filtre bütünlüğü korunmalıdır.",
+      "İzokinetik oran uygun olmalıdır.",
+      "Kaçak testi ve DGM kayıtları eksiksiz olmalıdır."
+    ],
+    "reporting": [
+      "In-stack filtre kullanıldığı açık yazılır.",
+      "Filtre konumu, baca sıcaklığı, süre, hacim ve izokinetiklik rapora aktarılır."
+    ],
+    "mistakes": [
+      "Filtreyi bacadan çıkarırken partikül dökmek.",
+      "Filtre tutucuyu tam oturtmamak.",
+      "EPA 5 ile EPA 17 geri alma farklarını karıştırmak."
+    ]
+  },
+  {
+    "title": "EPA Method 4 Baca Gazı Nem Tayini",
     "code": "EPA Method 4",
     "category": "Emisyon",
     "subgroup": "Nem",
-    "keywords": ["nem", "Bws", "impinger", "silika jel", "DGM", "yoğuşma"],
-    "purpose": "Baca gazındaki su buharı oranının impinger ve silika jel ağırlık artışı üzerinden belirlenmesi için saha rehberi.",
-    "duration": "Ölçüm süresi baca şartı ve gerekli numune hacmine göre seçilir. Sıcak bacalarda, özellikle 180 °C ve üzeri şartlarda nem tayini sonuçların kuru baza çevrilmesi için kritik kabul edilir.",
-    "flowRate": "Saha uygulamasında sabit ve kontrollü çekiş tercih edilir. DGM hacmi, sayaç sıcaklığı, sayaç vakumu ve atmosfer basıncı eksiksiz kaydedilir.",
-    "equipment": ["Isıtmalı prob", "İmpinger seti", "Buz banyosu", "Silika jel kabı", "DGM / kuru gaz sayacı", "Terazi kayıtları için saha formu"],
-    "reagents": ["İmpingerlerde metoda ve laboratuvar talimatına göre saf su kullanılır.", "Son impinger veya kurutucu bölümde silika jel kullanılır.", "İlk-son ağırlıklar ayrı ayrı kaydedilir."],
-    "fieldSteps": ["İmpinger ve silika jel ilk ağırlıklarını kaydet.", "Buz banyosunu hazırla.", "Sistemi kaçak testinden geçir.", "Belirlenen süre boyunca kontrollü çekiş yap.", "Ölçüm sırasında buz banyosu ve yoğuşma durumunu izle.", "Ölçüm sonunda son ağırlıkları kaydet ve DGM değerlerini yaz."],
-    "criticalControls": ["İmpinger bağlantı sırası karıştırılmamalıdır.", "Silika jel renk ve doygunluk durumu izlenmelidir.", "DGM vakumu ve sayaç sıcaklığı hacim düzeltmesi için gereklidir."],
-    "acceptance": ["Kaçak testi kabul sınırını aşmamalıdır.", "Ağırlık kayıtları tutarlı olmalıdır.", "İmpinger taşması veya numune kaybı varsa ölçüm geçersiz değerlendirilebilir."],
-    "reporting": ["İmpinger su artışı, silika jel artışı, Vw, Vm(std), Bws ve kuru hacim hesapları rapora aktarılır.", "Sıcak baca ve kuru baza dönüşüm gerekçesi yazılır."],
-    "mistakes": ["İlk-son ağırlıkları aynı kap için eşleştirmemek", "Buz banyosunu yetersiz tutmak", "Silika jel doygunluğunu fark etmemek", "Sayaç vakumu düzeltmesini atlamak"]
+    "keywords": ["nem", "Bws", "EPA 4", "impinger", "silika jel", "DGM", "kuru hacim", "ıslak baz"],
+    "purpose": "Baca gazındaki su buharı hacim oranını belirlemek, ölçüm hacmini kuru baza çevirmek ve izokinetik hesaplarda kullanılacak nem değerini üretmek için ayrıntılı saha rehberidir.",
+    "duration": "Referans nem tayininde yeterli gaz hacmi çekilmelidir. Pratik hedef olarak en az yaklaşık 0,60 scm / 21 scf hacim yaklaşımı kullanılır. Yaklaşık nem uygulamalarında daha düşük hacim kullanılabilir; ölçüm planı ve raporda uygulama tipi açık belirtilmelidir.",
+    "flowRate": "Tipik çekiş hızı 0,75 cfm / yaklaşık 0,021 m3/dk değerini aşmayacak şekilde kontrollü tutulur. Yaklaşık nem uygulamasında 2 L/dk civarı çekiş ve yaklaşık 30 L toplam hacim pratikte kullanılabilir. Kesin uygulama laboratuvar talimatı ve ölçüm planına göre yapılır.",
+    "equipment": [
+      "Prob ve gerekirse ısıtmalı hat.",
+      "İmpinger seti ve buz banyosu.",
+      "Silika jel impingeri veya kurutucu bölümü.",
+      "DGM/kuru gaz sayacı, pompa, vakum ve sıcaklık ölçer.",
+      "Barometre ve saha tartım/kayıt formu.",
+      "İmpinger ve silika jel ilk-son tartımı için uygun kaplar."
+    ],
+    "reagents": [
+      "1. impinger: 100 mL saf/deiyonize su.",
+      "2. impinger: 100 mL saf/deiyonize su.",
+      "3. impinger: boş bırakılır.",
+      "4. impinger: 200–300 g silika jel.",
+      "Yaklaşık nem uygulamasında iki midget impingere 5'er mL su ve ardından silika jel kullanılabilir; bu uygulama raporda açık yazılır."
+    ],
+    "fieldSteps": [
+      "İmpingerlere başlangıç su miktarlarını koy ve her kabın ilk ağırlık/hacim kaydını al.",
+      "Silika jel kütlesini ölçüm öncesi tart ve kabını etiketle.",
+      "İmpingerleri doğru sırayla bağla ve buz banyosuna yerleştir.",
+      "DGM ilk değeri, sayaç sıcaklığı, atmosfer basıncı, baca basıncı ve baca sıcaklığını yaz.",
+      "Kaçak testini yap; bağlantı açılırsa ara kaçak testi gerektiğini unutma.",
+      "Pompayı çalıştır ve hedef debiye ayarla.",
+      "Ölçüm boyunca debi, vakum, DGM, sıcaklık, buz banyosu ve impinger taşma riskini takip et.",
+      "Ölçüm sonunda DGM son değerini, ortalama sıcaklıkları, vakumu ve süreyi yaz.",
+      "İmpingerlerdeki su artışını ve silika jel kütle artışını belirle.",
+      "Bws hesabı için tüm verileri forma işle."
+    ],
+    "criticalControls": [
+      "İmpinger çıkış ve silika jel çıkış sıcaklığı düşük tutulmalıdır; 20 °C altında hedeflenir.",
+      "Silika jel doygunluğa ulaşırsa nem tutma kapasitesi düşer.",
+      "İmpinger taşması veya hatta geri kaçma ölçümü geçersiz hale getirebilir.",
+      "DGM sıcaklık ve basınç düzeltmeleri yapılmadan nem yüzdesi güvenilir hesaplanmaz.",
+      "İlk-son tartım kaplarının karışması doğrudan yanlış Bws verir.",
+      "Baca sıcaklığı 180 °C ve üzerindeyse kuru baz dönüşümleri için nem değeri özellikle kritik hale gelir."
+    ],
+    "acceptance": [
+      "Kaçak testi uygun olmalıdır.",
+      "İmpingerlerde sıvı kaybı veya taşma olmamalıdır.",
+      "Silika jel tamamen doygun hale gelmemelidir.",
+      "DGM, sıcaklık, basınç ve vakum kayıtları eksiksiz olmalıdır.",
+      "Ağırlık/hacim kayıtları tutarlı ve izlenebilir olmalıdır."
+    ],
+    "reporting": [
+      "İmpinger su artışı, silika jel artışı, DGM hacmi, sayaç sıcaklığı, basınçlar ve Bws değeri yazılır.",
+      "Kuru/ıslak baz dönüşümünde kullanılan nem değeri açık gösterilir.",
+      "Yaklaşık nem mi, referans nem mi uygulandığı raporda belirtilir."
+    ],
+    "mistakes": [
+      "Buz banyosunu ölçüm boyunca takip etmemek.",
+      "Silika jel ön tartımını unutmak.",
+      "İmpinger sırasını karıştırmak.",
+      "DGM vakum/sıcaklık düzeltmesini atlamak.",
+      "Toplanan kondenzatı hesaba dahil edip etmeyeceğini kayıt altına almamak."
+    ]
   },
   {
-    "title": "HCl Ölçümü",
-    "code": "TS EN 1911 / EPA 26A",
-    "category": "Emisyon",
-    "subgroup": "Asidik Gazlar",
-    "keywords": ["HCl", "hidrojen klorür", "halojen", "impinger", "saf su", "2-3 L/dk"],
-    "purpose": "Baca gazında hidrojen klorür tayini için absorpsiyonlu numune alma saha rehberi.",
-    "duration": "Ölçüm süresi proses, beklenen konsantrasyon ve laboratuvar talimatına göre belirlenir. Yeterli numune hacmi sağlanmalı ve absorban kapasitesi aşılmamalıdır.",
-    "flowRate": "Sahada yaygın uygulama debisi yaklaşık 2-3 L/dk aralığındadır. Kesin debi laboratuvar metot talimatına göre uygulanmalıdır.",
-    "equipment": ["Isıtmalı prob ve hat", "İmpinger seti", "Buz banyosu", "Gaz sayacı / debimetre", "Numune şişeleri ve kör numune ekipmanı"],
-    "reagents": ["Saf su absorban olarak kullanılır.", "Saha uygulama notu: 1. ve 2. impingere 100 mL + 100 mL saf su konulabilir; laboratuvar talimatı esas alınır.", "Kör numune için aynı kalitede saf su hazırlanır."],
-    "fieldSteps": ["Isıtmalı hattı yoğuşma olmayacak şekilde hazırla.", "İmpingerlere belirtilen hacimde absorban koy.", "Kaçak testini yap.", "Belirlenen debide numune al.", "Buz banyosunu ölçüm boyunca soğuk tut.", "Numuneleri etiketle ve laboratuvar teslim zincirine uygun sakla."],
-    "criticalControls": ["Hat içinde yoğuşma veya asit kaybı olmamalıdır.", "İmpinger sırası ve hacimleri karıştırılmamalıdır.", "Kör numune mutlaka sahaya eşlik etmelidir."],
-    "acceptance": ["Debi kararlı olmalıdır.", "Kaçak testi uygun olmalıdır.", "Absorban taşması veya numune kaybı olmamalıdır."],
-    "reporting": ["Debi, süre, toplam hacim, absorban hacmi, impinger sayısı ve kör numune bilgisi yazılır.", "Sonuç kuru/yaş baz ve referans O2 düzeltmesi gerektiriyorsa açık belirtilir."],
-    "mistakes": ["Hattı soğuk bırakıp HCl kaybına sebep olmak", "Kör numuneyi unutmak", "İmpinger hacimlerini yazmamak"]
-  },
-  {
-    "title": "Ağır Metal Ölçümü",
-    "code": "EPA Method 29 / TS EN 14385",
-    "category": "Emisyon",
-    "subgroup": "Ağır Metal",
-    "keywords": ["ağır metal", "EPA 29", "metaller", "HNO3", "H2O2", "KMnO4", "impinger"],
-    "purpose": "Baca gazında partikül ve gaz fazı ağır metallerin örneklenmesi için saha rehberi.",
-    "duration": "Ölçüm süresi hedef metaller, beklenen konsantrasyon ve gerekli tayin limitine göre belirlenir. Yeterli toplam hacim alınmalı, reaktif kapasitesi aşılmamalıdır.",
-    "flowRate": "Partikül faz için izokinetik örnekleme esastır. Gaz fazı absorpsiyon bölümü metoda uygun debi ve sıcaklık kontrolüyle çalıştırılır.",
-    "equipment": ["İzokinetik prob ve nozül", "Filtre tutucu", "İmpinger seti", "Buz banyosu", "Metal kontaminasyonunu azaltacak numune kapları", "DGM"],
-    "reagents": ["Metoda göre nitrik asit/hidrojen peroksit çözeltileri kullanılabilir.", "Cıva fraksiyonu için metoda göre potasyum permanganatlı absorban düzeni kullanılabilir.", "Kesin hacim ve oranlar laboratuvarın onaylı metod talimatından alınmalıdır."],
-    "fieldSteps": ["Tüm cam malzeme ve numune kaplarının temizliğini kontrol et.", "Filtre ve impinger setini metoda uygun sırayla kur.", "Kaçak testini yap.", "İzokinetik şartlarda örnekleme yap.", "Ölçüm sonunda prob yıkamalarını ve saha blanklarını talimata göre hazırla.", "Numuneleri asitli ortam ve zincir teslim kurallarına göre paketle."],
-    "criticalControls": ["Metal ölçümünde kontaminasyon en büyük risklerden biridir.", "Prob yıkamaları numunenin parçası olabilir; atılmamalıdır.", "Cıva için kullanılan reaktiflerin rengi ve stabilitesi izlenmelidir."],
-    "acceptance": ["Kaçak testi uygun olmalıdır.", "Filtre, prob yıkaması ve impinger numuneleri eksiksiz olmalıdır.", "Blank numuneler hazırlanmalıdır."],
-    "reporting": ["Filtre, yıkama ve absorban fraksiyonları ayrı ayrı belirtilir.", "Toplam hacim, izokinetiklik, reaktifler ve saklama koşulları yazılır."],
-    "mistakes": ["Prob yıkamasını unutmak", "Metal kontaminasyonuna açık kap kullanmak", "Cıva absorbanını ışık/sıcaklık etkisine açık bırakmak"]
-  },
-  {
-    "title": "Yanma Gazı Ölçümleri ve Referans O2 Düzeltmesi",
+    "title": "TS ISO 12039 ve Yanma Gazı Ölçümleri",
     "code": "TS ISO 12039 / TS EN 14789 / TS EN 14792 / TS EN 15058",
     "category": "Emisyon",
-    "subgroup": "Yanma Gazları",
-    "keywords": ["O2", "CO", "NOx", "SO2", "MRU", "Nova", "referans oksijen", "yanma gazı"],
-    "purpose": "Baca gazında O2, CO2, CO, NOx ve SO2 gibi yanma gazlarının ölçümü ve referans oksijen düzeltmesine saha yaklaşımı.",
-    "duration": "Ölçüm süresi mevzuat, proses kararlılığı ve cihaz tepkisine göre belirlenir. Cihaz T90 ve stabilizasyon süresi dikkate alınmadan anlık değer raporlanmamalıdır.",
-    "flowRate": "Analizör pompa debisi cihazın kendi çalışma debisidir. Numune hattı sızdırmaz, filtreli ve yoğuşma kontrolü yapılmış olmalıdır.",
-    "equipment": ["MRU Nova veya eşdeğer baca gazı analizörü", "Isıtmalı veya yoğuşma kontrollü numune hattı", "Partikül/nem tutucu filtre", "Kalibrasyon gazları ve sıfır gazı", "O2, CO, NOx, SO2 sensörleri"],
-    "reagents": ["Çözelti kullanılmaz.", "Cihaz bakımında filtre, nem tutucu ve kalibrasyon gazları kontrol edilir."],
-    "fieldSteps": ["Cihaz sıfır ve span kontrollerini yap.", "Prob ve hattı baca şartına uygun hazırla.", "Numune hattında yoğuşma olmadığını kontrol et.", "Cihazı baca gazına bağla ve stabilizasyonu bekle.", "O2, CO, NOx, SO2 ve CO2 değerlerini kararlı periyotlarla kaydet.", "Yakıt türüne ve mevzuata göre referans O2 düzeltmesini uygula."],
-    "criticalControls": ["Yüksek O2 kaçak veya seyreltme göstergesi olabilir.", "CO sensörü yüksek konsantrasyonda korunmalıdır.", "Referans O2 düzeltmesinde ölçülen O2 ve referans O2 doğru seçilmelidir."],
-    "acceptance": ["Cihaz kalibrasyon ve doğrulama kayıtları uygun olmalıdır.", "Ölçüm süresince değerler prosesle uyumlu olmalıdır.", "Sensör aralığı aşımı varsa sonuç geçerli kabul edilmemelidir."],
-    "reporting": ["Ham ppm veya mg/m3 değerleri, O2 değeri, kuru/yaş baz bilgisi ve referans O2 düzeltmesi ayrı yazılır.", "Yakıt türü ve limit maddesi açık belirtilir."],
-    "mistakes": ["Cihaz stabil olmadan değer almak", "Referans O2 değerini yanlış seçmek", "Nem/yoğuşma filtresini dolu halde kullanmak", "ppm-mg/m3 dönüşümünde gaz türünü karıştırmak"]
+    "subgroup": "Gaz Analiz / Yanma Gazları",
+    "keywords": ["O2", "CO", "CO2", "NOx", "SO2", "MRU", "Nova", "referans oksijen", "ppm", "mg/m3", "T90"],
+    "purpose": "Baca gazında O2, CO2, CO, NOx ve SO2 gibi yanma gazlarının analizör ile ölçülmesi, cihaz stabilizasyonu, doğrulama kontrolleri ve referans O2 düzeltmesi için saha rehberidir.",
+    "duration": "Ölçüm süresi cihazın T90 süresi, gaz hattı stabilizasyonu, proses kararlılığı ve mevzuat gereğine göre belirlenir. Cihaz bacaya takılır takılmaz alınan anlık değer raporlanmaz; kararlı periyotlar izlenir.",
+    "flowRate": "Gaz analizörünün kendi pompa debisi kullanılır. Numune hattı sızdırmaz, partikülden korunmuş ve yoğuşma kontrolü yapılmış olmalıdır. Debi düşüklüğü, filtre tıkanıklığı veya kondenzat sensör cevabını etkiler.",
+    "equipment": [
+      "MRU Nova veya eşdeğer baca gazı analizörü.",
+      "Uygun prob, numune hattı ve filtre grubu.",
+      "Nem tutucu veya yoğuşma kontrol düzeni.",
+      "Sıfır gazı ve span/doğrulama gazları.",
+      "O2, CO, NOx, SO2 ve CO2 sensör aralık bilgileri.",
+      "Cihaz bataryası, yazıcı/veri kaydı ve kalibrasyon sertifikaları."
+    ],
+    "reagents": [
+      "Kimyasal absorban kullanılmaz.",
+      "Cihaz bakımında filtre, kondenzat kabı, hortum ve kalibrasyon gazları kontrol edilir."
+    ],
+    "fieldSteps": [
+      "Cihazı temiz havada aç ve sıfır ayarının tamamlanmasını bekle.",
+      "Kalibrasyon/doğrulama gazı gerekiyorsa ölçüm öncesi kontrol yap.",
+      "Prob ve hattı baca sıcaklığına, nemine ve kir yüküne göre hazırla.",
+      "Bacaya bağlantı yaptıktan sonra değerlerin stabil olmasını bekle.",
+      "O2, CO, NOx, SO2 ve CO2 değerlerini belirli aralıklarla kaydet.",
+      "CO yüksekse sensör aralığını aşma ve sensör koruma modlarını dikkate al.",
+      "Yakıt türüne göre referans O2 değerini belirle ve hesapta ham O2 değerini doğru kullan.",
+      "Ölçüm sonunda temiz hava ile cihazı purge et ve sensörlerin normale dönmesini bekle."
+    ],
+    "criticalControls": [
+      "Yüksek O2 değeri kaçak, seyrelme veya yanlış örnekleme noktası göstergesi olabilir.",
+      "Kondenzat hattı veya dolu filtre SO2/NOx/CO ölçümünü bozabilir.",
+      "T90 süresi beklenmeden alınan değer sahayı temsil etmez.",
+      "ppm-mg/m3 dönüşümünde gazın molekül ağırlığı ve normal şart baz bilgisi doğru seçilmelidir.",
+      "Referans O2 düzeltmesinde ölçülen O2, referans O2 ve limit mevzuatı uyumlu olmalıdır.",
+      "CO çok yüksekse cihaz aralığı aşılabilir; aralık aşımı raporlanabilir sonuç değildir."
+    ],
+    "acceptance": [
+      "Cihaz kalibrasyon ve doğrulama kayıtları uygun olmalıdır.",
+      "Sensör aralık aşımı olmamalıdır veya sonuç geçersiz/alt-üst sınır olarak değerlendirilmelidir.",
+      "Ölçüm periyodu proses çalışmasını temsil etmelidir.",
+      "Numune hattında kaçak ve yoğuşma olmamalıdır."
+    ],
+    "reporting": [
+      "Ham değerler, düzeltilmiş değerler, O2 yüzdesi, referans O2, kuru/yaş baz ve ppm/mg/m3 dönüşüm bilgisi yazılır.",
+      "Yakıt türü, proses yükü ve ölçüm sırasında cihaz uyarısı varsa rapora eklenir.",
+      "Cihaz marka/model, seri no, kalibrasyon tarihi ve ölçüm periyodu belirtilir."
+    ],
+    "mistakes": [
+      "Cihaz stabil olmadan değer almak.",
+      "Referans O2 değerini yanlış seçmek.",
+      "Yüksek O2 kaçak uyarısını görmezden gelmek.",
+      "CO sensörünü yüksek konsantrasyonda korumasız bırakmak.",
+      "ppm değerini gaz türüne bakmadan mg/m3'e çevirmek."
+    ]
   },
   {
-    "title": "PM10 İmisyon Ölçümü",
-    "code": "TS 12341 / EPA 40 CFR 50-53",
+    "title": "TS EN 1911 HCl Ölçümü",
+    "code": "TS EN 1911",
+    "category": "Emisyon",
+    "subgroup": "Asit Gazları / Halojenler",
+    "keywords": ["HCl", "hidrojen klorür", "TS EN 1911", "impinger", "saf su", "2-3 L/dk", "halojen"],
+    "purpose": "Baca gazında hidrojen klorür derişiminin absorpsiyon çözeltisi ile numune alınarak belirlenmesi için saha rehberidir. Hat sıcaklığı, yoğuşma kontrolü, absorban hacmi ve kör numune bu ölçümde kritik öneme sahiptir.",
+    "duration": "Süre beklenen HCl konsantrasyonu, absorban kapasitesi, limit seviyesi ve laboratuvar tayin limitine göre belirlenir. Yeterli toplam hacim alınmalı, ancak absorban kapasitesi aşılmamalıdır.",
+    "flowRate": "Sahada yaygın uygulama debisi yaklaşık 2–3 L/dk aralığındadır. Kesin debi laboratuvar metot talimatına ve kullanılan ekipmana göre uygulanmalıdır.",
+    "equipment": [
+      "Isıtmalı prob veya yoğuşma kontrolü sağlanmış numune hattı.",
+      "İmpinger seti ve buz banyosu.",
+      "Gaz sayacı veya debi/hacim ölçer.",
+      "Numune şişeleri, kör numune şişesi ve etiketler.",
+      "Sızdırmaz hortum bağlantıları ve kaçak testi düzeni."
+    ],
+    "reagents": [
+      "Absorban olarak saf/deiyonize su kullanılır.",
+      "Saha uygulama notu: 1. ve 2. impingere 100 mL + 100 mL saf su konulabilir; kurum/laboratuvar talimatı esas alınır.",
+      "Kör numune aynı su ve kap zincirini temsil edecek şekilde hazırlanır."
+    ],
+    "fieldSteps": [
+      "İmpingerleri temiz ve numuneye uygun kaplarla hazırla.",
+      "1. ve 2. impingere belirtilen hacimde saf su koy ve hacimleri saha formuna yaz.",
+      "Hat ısıtması veya yoğuşma kontrolünü ölçüm başlamadan önce çalıştır.",
+      "Kaçak testini yap ve bağlantıları sıkılaştır.",
+      "Ölçümü hedef debide başlat; debiyi ve toplam hacmi kayıt et.",
+      "Buz banyosunu soğuk tut; impinger taşmasını ve geri kaçmayı izle.",
+      "Ölçüm sonunda numuneleri birleştirme/ayrı tutma kuralını laboratuvar talimatına göre uygula.",
+      "Şişeleri HCl, nokta, tarih, debi, süre ve operatör bilgisiyle etiketle."
+    ],
+    "criticalControls": [
+      "HCl suda kolay tutulur; hat içinde erken yoğuşma olursa numune kaybı ve düşük sonuç oluşabilir.",
+      "İmpinger hacimleri ve sırası karıştırılmamalıdır.",
+      "Kör numune olmadan düşük seviyeli HCl ölçümü savunulamaz olabilir.",
+      "Absorban taşması veya hortum kopması ölçümü geçersiz kılabilir.",
+      "Numune şişeleri asit gazlarına uygun ve temiz olmalıdır."
+    ],
+    "acceptance": [
+      "Kaçak testi uygun olmalıdır.",
+      "Debi ölçüm boyunca kararlı kalmalıdır.",
+      "Absorban kaybı, taşma veya kontaminasyon olmamalıdır.",
+      "Kör numune ve numune etiketleri eksiksiz olmalıdır."
+    ],
+    "reporting": [
+      "Debi, süre, toplam hacim, impinger sayısı, absorban türü ve hacmi yazılır.",
+      "Sonuç kuru/yaş baz ve referans O2 düzeltmesi gerektiriyorsa açık belirtilir.",
+      "Kör numune sonucu ve varsa blank düzeltmesi raporda gösterilir."
+    ],
+    "mistakes": [
+      "Hattı soğuk bırakıp HCl'nin hatta yoğuşmasına neden olmak.",
+      "100 mL + 100 mL gibi impinger hacimlerini kayıt etmemek.",
+      "Kör numuneyi sahaya götürmemek.",
+      "Numune şişesini yanlış kirletici adıyla etiketlemek."
+    ]
+  },
+  {
+    "title": "EPA Method 26A HCl/HF ve Halojenler",
+    "code": "EPA Method 26A",
+    "category": "Emisyon",
+    "subgroup": "Asit Gazları / Halojenler",
+    "keywords": ["EPA 26A", "HCl", "HF", "halojen", "klor", "flor", "impinger", "asit gazı"],
+    "purpose": "Baca gazında hidrojen halojenürler ve halojenlerin uygun impinger çözeltilerinde tutulması için kullanılan saha rehberidir. HCl/HF gibi asit gazları ile klor gibi halojen türlerinin ayrımı için impinger dizilimi önemlidir.",
+    "duration": "Süre beklenen konsantrasyon ve absorban kapasitesine göre belirlenir. Yeterli hacim alınmalı, reaktiflerin tutma kapasitesi aşılmamalıdır.",
+    "flowRate": "Debi laboratuvar talimatına göre sabit ve kontrollü tutulur. Hızlı çekiş absorpsiyon verimini düşürebilir; düşük çekiş ise tayin limiti için yetersiz hacim oluşturabilir.",
+    "equipment": [
+      "Isıtmalı prob ve numune hattı.",
+      "Partikül filtresi gerekiyorsa uygun filtre bölümü.",
+      "Çoklu impinger seti ve buz banyosu.",
+      "DGM/debimetre, pompa ve kaçak testi düzeni.",
+      "Asit ve oksitleyici reaktiflere uygun numune kapları."
+    ],
+    "reagents": [
+      "Metot uygulamasına göre asidik gazlar ve halojenler için farklı absorban çözeltileri kullanılır.",
+      "HCl/HF tutulumu için uygun sulu absorbanlar, halojen türleri için oksitleyici/uygun absorban düzeni laboratuvar talimatıyla hazırlanır.",
+      "Çözelti hacimleri, reaktif derişimleri ve kap sayısı sahaya çıkmadan önce netleştirilmelidir."
+    ],
+    "fieldSteps": [
+      "Hangi parametrelerin istenildiğini netleştir: HCl, HF, Cl2 veya kombine halojenler.",
+      "İmpinger dizilimini parametreye göre hazırla ve her kabı numaralandır.",
+      "Reaktiflerin son kullanma/uygunluk ve hacim kontrollerini yap.",
+      "Hat ısıtmasını başlat ve kaçak testini yap.",
+      "Debiyi hedef değere ayarla ve toplam hacmi takip et.",
+      "Ölçüm boyunca buz banyosu, renk değişimi, taşma ve bağlantı güvenliğini izle.",
+      "Ölçüm sonunda her impinger fraksiyonunu doğru şişeye al ve kontaminasyondan koru."
+    ],
+    "criticalControls": [
+      "İmpinger sırası yanlışsa HCl/HF ve halojen fraksiyonları karışır.",
+      "Reaktif derişimi ve hacmi laboratuvar talimatına uygun değilse sonuç savunulamaz.",
+      "Hat yoğuşması veya sıcaklık kontrolsüzlüğü asit gazı kaybına yol açar.",
+      "Blank numuneler reaktif ve saha kontaminasyonunu değerlendirmek için önemlidir."
+    ],
+    "acceptance": [
+      "Kaçak testi uygun olmalıdır.",
+      "Reaktifler doğru sırada ve yeterli hacimde olmalıdır.",
+      "Debi ve toplam hacim kayıtları eksiksiz olmalıdır.",
+      "Numune kapları doğru fraksiyon adıyla etiketlenmelidir."
+    ],
+    "reporting": [
+      "Her fraksiyonun impinger numarası, reaktif türü, hacmi, çekilen hacim ve ölçüm süresi yazılır.",
+      "Hangi halojen/halojenür parametrelerinin raporlandığı açık belirtilir."
+    ],
+    "mistakes": [
+      "HCl ölçümü ile EPA 26A halojen fraksiyonlarını aynı sanmak.",
+      "İmpingerleri yanlış sıraya bağlamak.",
+      "Reaktif hacimlerini sahada yazmamak.",
+      "Fraksiyonları laboratuvarda ayırt edilemeyecek şekilde etiketlemek."
+    ]
+  },
+  {
+    "title": "EPA Method 29 Ağır Metal Ölçümü",
+    "code": "EPA Method 29",
+    "category": "Emisyon",
+    "subgroup": "Metaller",
+    "keywords": ["EPA 29", "ağır metal", "metal", "cıva", "HNO3", "H2O2", "KMnO4", "filtre", "impinger"],
+    "purpose": "Baca gazında partikül faz ve gaz fazı metallerin izokinetik numune alma, filtre, prob yıkamaları ve reaktif impinger fraksiyonları ile belirlenmesi için ayrıntılı saha rehberidir.",
+    "duration": "Süre hedef metaller, beklenen konsantrasyon, tayin limiti ve absorban kapasitesine göre belirlenir. Metal ölçümlerinde yeterli hacim almak önemlidir; ancak reaktif kapasitesi ve numune bütünlüğü korunmalıdır.",
+    "flowRate": "Partikül faz için izokinetik çekiş esastır. Debi baca hızına göre ayarlanır. Gaz fazı metaller ve cıva fraksiyonu için impinger tutma verimi korunacak şekilde sıcaklık ve debi kontrol edilir.",
+    "equipment": [
+      "İzokinetik prob, nozül ve filtre tutucu.",
+      "Asit yıkamaya uygun cam malzeme ve metal kontaminasyonunu azaltan ekipman.",
+      "Çoklu impinger seti ve buz banyosu.",
+      "DGM, orifis, vakum pompası ve sıcaklık/basınç sensörleri.",
+      "Temiz numune kapları, asit dayanımlı etiketler, saha blank kapları.",
+      "Prob yıkama şişeleri ve laboratuvarın istediği asit yıkama düzeni."
+    ],
+    "reagents": [
+      "Metot uygulamasına göre nitrik asit/hidrojen peroksit çözeltileri metal fraksiyonları için kullanılır.",
+      "Cıva tutulumu için potasyum permanganatlı asidik absorban düzeni kullanılabilir.",
+      "Prob/nozül yıkamaları ve filtre fraksiyonları numunenin parçasıdır.",
+      "Kesin reaktif derişimi ve hacimler laboratuvarın onaylı talimatından alınmalıdır."
+    ],
+    "fieldSteps": [
+      "Hedef metal listesini ve raporlama limitlerini ölçüm öncesi netleştir.",
+      "Tüm cam malzeme ve kapların metal kontaminasyonuna karşı temiz olduğunu kontrol et.",
+      "Filtreyi ve impinger reaktiflerini doğru sırayla kur.",
+      "Kaçak testini yap ve izokinetik ölçümü başlat.",
+      "Her noktada DGM, sıcaklık, basınç, ΔP, vakum ve süre kayıtlarını al.",
+      "İmpingerlerin renk değişimi, taşma, reaktif kaybı ve buz banyosu durumunu izle.",
+      "Ölçüm sonunda filtre, prob yıkaması, ön/arka yarı yıkamaları ve impinger fraksiyonlarını doğru kaplara al.",
+      "Saha blanklarını ve reaktif blanklarını numunelerle birlikte etiketle."
+    ],
+    "criticalControls": [
+      "Metal ölçümünde kontaminasyon en büyük saha riskidir.",
+      "Prob ve nozül yıkamaları atılırsa toplam metal sonucu eksik çıkar.",
+      "Cıva fraksiyonu reaktifleri ışık, renk değişimi ve stabilite açısından izlenmelidir.",
+      "Numune kaplarının malzemesi ve asit dayanımı uygunsuzsa sonuç etkilenebilir.",
+      "İzokinetiklik sadece partikül madde için değil, partikül faz metal için de kritiktir."
+    ],
+    "acceptance": [
+      "Kaçak testi uygun olmalıdır.",
+      "Filtre, prob yıkaması, impinger fraksiyonları ve blank numuneler eksiksiz olmalıdır.",
+      "Reaktif kaybı, taşma veya yanlış fraksiyon karışması olmamalıdır.",
+      "İzokinetik oran kabul aralığında olmalıdır."
+    ],
+    "reporting": [
+      "Filtre, prob yıkaması, impinger fraksiyonları ve blanklar ayrı ayrı listelenir.",
+      "Toplam örnekleme hacmi, izokinetiklik, reaktifler, saklama koşulları ve hedef metal listesi rapora yazılır.",
+      "Cıva ve diğer metaller için fraksiyon toplamı ve birim dönüşümleri açık gösterilir."
+    ],
+    "mistakes": [
+      "Prob yıkamasını unutmak veya yanlış kaba almak.",
+      "Metal numunesini uygunsuz plastik/metal temaslı kapta saklamak.",
+      "Cıva reaktifinin renk değişimini dikkate almamak.",
+      "Blank numuneyi hazırlamamak.",
+      "Ağır metal ölçümünü normal toz ölçümü gibi sadece filtreyle bitirmek."
+    ]
+  },
+  {
+    "title": "TS EN 14385 Ağır Metal Ölçümü",
+    "code": "TS EN 14385",
+    "category": "Emisyon",
+    "subgroup": "Metaller",
+    "keywords": ["TS EN 14385", "ağır metal", "metaller", "izokinetik", "filtre", "absorban"],
+    "purpose": "Sabit kaynak emisyonlarında As, Cd, Cr, Co, Cu, Mn, Ni, Pb, Sb, Tl, V gibi metallerin izokinetik numune alma ve laboratuvar analizi için saha rehberidir.",
+    "duration": "Ölçüm süresi hedef tayin limitine, beklenen metal seviyesine ve yeterli toplam hacme göre planlanır. Düşük metal konsantrasyonlarında uzun süre/hacim gerekebilir.",
+    "flowRate": "Partikül faz metaller için izokinetik numune alma uygulanır. Debi her traverse noktasında baca hızına göre ayarlanır.",
+    "equipment": [
+      "İzokinetik örnekleme sistemi.",
+      "Metal analizine uygun filtre ve prob/hat malzemesi.",
+      "İmpinger ve absorban sistemi.",
+      "DGM, sıcaklık, basınç ve vakum kayıt düzeni.",
+      "Kontaminasyonu önleyecek temiz numune kapları ve blank düzeni."
+    ],
+    "reagents": [
+      "Metoda ve laboratuvar talimatına göre asidik absorbanlar ve yıkama çözeltileri kullanılır.",
+      "Blank numuneler aynı reaktif ve kap zincirini temsil etmelidir.",
+      "Kesin hacim ve derişim laboratuvar talimatından alınmalıdır."
+    ],
+    "fieldSteps": [
+      "Hedef metal listesi ve istenen raporlama limitlerini belirle.",
+      "Temiz ekipman ve asit yıkanmış kapları sahaya hazırla.",
+      "Filtre, prob ve impinger sistemini doğru sırada kur.",
+      "Ön kaçak testini yap ve izokinetik numune al.",
+      "Ölçüm boyunca debi, sıcaklık, basınç, vakum ve impinger durumunu takip et.",
+      "Numune geri almada filtre, yıkama ve absorban fraksiyonlarını eksiksiz ayır.",
+      "Blank ve taşıma şahitlerini etiketle."
+    ],
+    "criticalControls": [
+      "Kontaminasyon düşük seviyeli metal ölçümlerinde sonucu büyütebilir.",
+      "Prob yıkamaları toplam metale dahil olabilir; prosedüre göre eksiksiz alınmalıdır.",
+      "Numune kapları yanlış seçilirse metal adsorpsiyonu veya kontaminasyon olabilir.",
+      "İzokinetik oran ve toplam hacim raporda savunulabilir olmalıdır."
+    ],
+    "acceptance": [
+      "Fraksiyonlar eksiksiz ve doğru etiketli olmalıdır.",
+      "Kaçak testi ve izokinetik şartlar uygun olmalıdır.",
+      "Blanklar hazırlanmalıdır.",
+      "Reaktif kaybı veya numune taşması olmamalıdır."
+    ],
+    "reporting": [
+      "Her metal için sonuç, toplam hacim, blank düzeltmesi ve birim dönüşümü belirtilir.",
+      "Saha fraksiyonları ve saklama koşulları rapor ekinde izlenebilir olmalıdır."
+    ],
+    "mistakes": [
+      "Metal ölçümünde temiz kap disiplinini gevşetmek.",
+      "Prob yıkamasını eksik yapmak.",
+      "Blankları numune gibi taşımamak.",
+      "Hedef metal listesini laboratuvarla netleştirmeden sahaya çıkmak."
+    ]
+  },
+  {
+    "title": "TOC / VOC Ölçümü",
+    "code": "TS EN 12619 / TSE CEN/TS 13649",
+    "category": "Emisyon",
+    "subgroup": "Organikler / VOC / TOC",
+    "keywords": ["TOC", "VOC", "FID", "aktif karbon", "adsorban", "organik", "TS EN 12619", "CEN TS 13649"],
+    "purpose": "Toplam organik karbonun FID ile sürekli/yarı sürekli ölçümü ve belirli VOC bileşiklerinin adsorban tüp veya uygun numune alma düzeniyle belirlenmesi için saha rehberidir.",
+    "duration": "TOC ölçümünde cihaz stabilizasyonu ve proses temsiliyeti dikkate alınır. VOC tüp numunesinde süre ve debi adsorban kapasitesi, beklenen konsantrasyon ve laboratuvar tayin limitine göre belirlenir.",
+    "flowRate": "FID analizörü kendi numune debisiyle çalışır. Adsorban tüp numunesinde debi düşük ve kontrollü tutulur; breakthrough riski nedeniyle toplam hacim adsorban kapasitesini aşmamalıdır.",
+    "equipment": [
+      "FID prensipli TOC analizörü veya VOC numune alma pompası.",
+      "Isıtmalı hat ve partikül filtresi.",
+      "Adsorban tüpler, tüp kırma/kapama ekipmanı ve debi kalibratörü.",
+      "Kalibrasyon gazları, yakıt gazı/hidrojen veya cihazın gerektirdiği gazlar.",
+      "Kör tüp ve taşıma kabı."
+    ],
+    "reagents": [
+      "TOC/FID ölçümünde kimyasal absorban kullanılmaz; kalibrasyon gazları kullanılır.",
+      "VOC tüp numunesinde uygun adsorban malzeme kullanılır.",
+      "Kör tüp, saha ve taşıma kontaminasyonunu kontrol eder."
+    ],
+    "fieldSteps": [
+      "Ölçüm amacını belirle: toplam TOC mi, spesifik VOC bileşikleri mi?",
+      "FID cihazında sıfır/span kontrolünü yap ve hat sıcaklığını sabitle.",
+      "VOC tüplerinde akış yönünü kontrol et ve başlangıç debisini kalibre et.",
+      "Numune süresi boyunca debi, sıcaklık ve proses şartlarını izle.",
+      "Adsorban kapasitesi aşılmadan numuneyi bitir.",
+      "Tüpleri kapat, yön ve süre bilgisiyle etiketle, laboratuvar koşullarına uygun sakla."
+    ],
+    "criticalControls": [
+      "FID hattında yoğuşma organik kaybına neden olabilir.",
+      "Adsorban tüpte breakthrough olursa sonuç düşük çıkar.",
+      "Tüp yönü ters takılırsa numune geçersiz olabilir.",
+      "Kalibrasyon gazı ve cihaz cevabı kayıt altına alınmalıdır.",
+      "VOC numuneleri sıcaklık ve taşıma koşullarından etkilenebilir."
+    ],
+    "acceptance": [
+      "Cihaz doğrulaması kabul edilebilir olmalıdır.",
+      "Tüp debisi başlangıç ve bitişte uygun aralıkta kalmalıdır.",
+      "Tüp kırık, açık veya yanlış etiketli olmamalıdır.",
+      "Kör tüp hazırlanmalıdır."
+    ],
+    "reporting": [
+      "TOC için ham/düzeltilmiş değer, cihaz kalibrasyonu, ölçüm periyodu ve referans O2 düzeltmesi gerekiyorsa belirtilir.",
+      "VOC için tüp no, debi, süre, toplam hacim, adsorban türü ve saklama koşulu yazılır."
+    ],
+    "mistakes": [
+      "TOC ile spesifik VOC analizini aynı şey sanmak.",
+      "Adsorban tüp yönünü ters takmak.",
+      "Tüp toplam hacmini kapasiteye göre kontrol etmemek.",
+      "FID hattında yoğuşmayı önlememek."
+    ]
+  },
+  {
+    "title": "PAH Ölçümü",
+    "code": "TS ISO 11338 / ilgili PAH saha uygulamaları",
+    "category": "Emisyon",
+    "subgroup": "Organikler / VOC / PAH",
+    "keywords": ["PAH", "PAH metot", "XAD", "PUF", "organik", "izokinetik", "yarı uçucu"],
+    "purpose": "Baca gazında polisiklik aromatik hidrokarbonların partikül ve gaz fazı birlikte değerlendirilerek numune alınması için saha rehberidir. PAH ölçümünde sıcaklık, ışık, adsorban ve numune geri alma disiplini çok kritiktir.",
+    "duration": "Süre beklenen PAH seviyesi, tayin limiti, adsorban kapasitesi ve proses şartına göre belirlenir. Düşük konsantrasyonda uzun hacim gerekebilir; ancak adsorban breakthrough ve numune stabilitesi dikkate alınır.",
+    "flowRate": "Uygulamaya göre izokinetik veya kontrollü numune alma yaklaşımı kullanılır. Toplam hacim, adsorban kapasitesi ve laboratuvar gereklilikleriyle uyumlu olmalıdır.",
+    "equipment": [
+      "Isıtmalı prob ve filtre bölümü.",
+      "Gaz fazı PAH için XAD/PUF gibi adsorban tutucu düzen.",
+      "DGM, pompa, sıcaklık ve basınç ölçer.",
+      "Işıktan koruyan numune kapları ve soğuk taşıma düzeni.",
+      "Organik çözücüyle geri alma ekipmanı."
+    ],
+    "reagents": [
+      "Adsorban malzeme laboratuvar tarafından şartlandırılmış olmalıdır.",
+      "Numune geri alma için laboratuvar talimatındaki organik çözücüler kullanılır.",
+      "Blank adsorban ve saha blankı mutlaka planlanmalıdır."
+    ],
+    "fieldSteps": [
+      "PAH hedef bileşik listesini ve numune alma metot tipini netleştir.",
+      "Filtre ve adsorbanı doğru sırayla kur.",
+      "Sistem kaçak testini yap.",
+      "Sıcaklıkları kontrol ederek numune al; yarı uçucu kayıp riskini takip et.",
+      "Adsorbanın aşırı ısınmasını, ıslanmasını ve ışık etkisini önle.",
+      "Numune sonunda filtre, adsorban ve yıkama fraksiyonlarını ayrı ve doğru etiketli kaplara al.",
+      "Numuneleri soğuk ve karanlık koşullarda laboratuvara gönder."
+    ],
+    "criticalControls": [
+      "PAH bileşikleri ışık ve sıcaklıktan etkilenebilir.",
+      "Filtre/adsorban sırası ve sıcaklığı yanlışsa faz dağılımı değişir.",
+      "Blank numune olmadan kontaminasyon değerlendirilemez.",
+      "Organik çözücü yıkamaları numunenin parçası olabilir; eksik yapılmamalıdır."
+    ],
+    "acceptance": [
+      "Adsorban hasarsız ve doğru saklanmış olmalıdır.",
+      "Kaçak testi uygun olmalıdır.",
+      "Blanklar ve numune fraksiyonları eksiksiz olmalıdır.",
+      "Soğuk/karanlık taşıma koşulu korunmalıdır."
+    ],
+    "reporting": [
+      "Filtre, adsorban ve yıkama fraksiyonları ayrı belirtilir.",
+      "Toplam hacim, sıcaklıklar, saklama koşulu ve blanklar rapora yazılır."
+    ],
+    "mistakes": [
+      "PAH numunesini güneşte veya sıcak araçta bekletmek.",
+      "Adsorbanı yanlış yönde bağlamak.",
+      "Blank adsorban hazırlamamak.",
+      "Geri alma yıkamalarını eksik yapmak."
+    ]
+  },
+  {
+    "title": "PCDD/F Dioksin-Furan Numune Alma",
+    "code": "TS EN 1948-1",
+    "category": "Emisyon",
+    "subgroup": "Dioksin / Furan",
+    "keywords": ["dioksin", "furan", "PCDD", "PCDF", "TS EN 1948", "XAD", "izokinetik", "ultra iz"],
+    "purpose": "Baca gazında PCDD/F numunesinin izokinetik ve kontaminasyondan korunmuş şekilde alınması için saha rehberidir. Çok düşük konsantrasyonlar nedeniyle temizlik, blank, süre, hacim ve numune saklama zinciri en kritik konulardır.",
+    "duration": "Ölçüm süresi genellikle uzun planlanır ve gerekli toplam hacim/tayin limiti hedeflenir. Prosesin temsili çalışması ve laboratuvarın minimum hacim şartı ölçüm planında netleştirilmelidir.",
+    "flowRate": "Numune alma izokinetik yaklaşımla yürütülür. Debi baca hızına göre ayarlanır ve toplam hacim dikkatle kayıt edilir.",
+    "equipment": [
+      "İzokinetik prob, nozül ve filtre bölümü.",
+      "XAD veya metoda uygun adsorban modülü.",
+      "Soğutma ve sıcaklık kontrol düzeni.",
+      "DGM, pompa, orifis, sıcaklık ve basınç ölçer.",
+      "Ön temizlenmiş cam malzeme, folyo/kapak ve soğuk taşıma kabı."
+    ],
+    "reagents": [
+      "Adsorban ve filtre laboratuvar tarafından hazırlanmış ve blank kontrolü yapılmış olmalıdır.",
+      "Numune geri alma çözücüleri ve yıkama kapları laboratuvar talimatına göre hazırlanır.",
+      "Saha blankı ve ekipman blankı kritik öneme sahiptir."
+    ],
+    "fieldSteps": [
+      "Laboratuvarla minimum hacim, süre, adsorban tipi ve blank düzenini netleştir.",
+      "Ekipmanı kontaminasyondan koruyarak kur; çıplak elle temas ve kirli yüzeylerden kaçın.",
+      "Kaçak testini yap ve izokinetik numune almaya başla.",
+      "Sıcaklık, debi, hacim, vakum ve proses bilgilerini düzenli kaydet.",
+      "Adsorban ve filtre sıcaklıklarını metot yaklaşımına uygun takip et.",
+      "Numune sonunda filtre, adsorban ve yıkama fraksiyonlarını doğru kaplara al.",
+      "Numuneyi karanlık, soğuk ve zincir teslim kurallarına uygun şekilde gönder."
+    ],
+    "criticalControls": [
+      "Dioksin/furan ölçümünde kontaminasyon sonucu tamamen bozabilir.",
+      "Blanklar olmadan düşük konsantrasyonlu sonuçların savunulması zordur.",
+      "Adsorbanın ıslanması, aşırı ısınması veya yanlış saklanması geçersizlik riski oluşturur.",
+      "Numune fraksiyonları asla karıştırılmamalıdır."
+    ],
+    "acceptance": [
+      "Minimum hacim ve süre şartları sağlanmalıdır.",
+      "Kaçak testi ve izokinetiklik uygun olmalıdır.",
+      "Blank ve numune fraksiyonları eksiksiz olmalıdır.",
+      "Saklama ve taşıma koşulları korunmalıdır."
+    ],
+    "reporting": [
+      "Toplam hacim, süre, izokinetiklik, sıcaklıklar, blanklar ve numune fraksiyonları ayrıntılı raporlanır.",
+      "Proses koşulu ve sapmalar özellikle yazılır."
+    ],
+    "mistakes": [
+      "Numune kaplarına çıplak elle veya kirli yüzeyle temas etmek.",
+      "Blank hazırlamamak.",
+      "Adsorbanı sıcak veya güneş altında bekletmek.",
+      "Minimum hacim hedefini netleştirmeden ölçüme başlamak."
+    ]
+  },
+  {
+    "title": "PM10 / PM2.5 Ortam Havası Ölçümü",
+    "code": "TS EN 12341 / EPA 40 CFR 50-53",
     "category": "İmisyon",
-    "subgroup": "PM10",
-    "keywords": ["PM10", "imisyon", "sabit akış", "Techora", "MEFE", "Qref", "Qamb"],
-    "purpose": "Ortam havasında PM10 kütle konsantrasyonunun sabit akışlı cihazlarla filtre üzerinden belirlenmesi için saha rehberi.",
-    "duration": "Standart uygulamada 24 saatlik örnekleme esastır. Denetim veya özel çalışma planında farklı süre varsa raporda açıkça belirtilmelidir.",
-    "flowRate": "Cihaz tipine göre referans veya ortam şartı debisi kullanılır. Qref/Qamb, ortam sıcaklığı ve basınç bilgileri tutarlı olmalıdır.",
-    "equipment": ["PM10 başlık", "Sabit akışlı örnekleyici", "Şartlandırılmış filtre", "Debi kontrol sistemi", "Ortam sıcaklık ve basınç sensörü", "Saha elektrik ve güvenlik ekipmanı"],
-    "reagents": ["Çözelti kullanılmaz.", "Filtreler şartlandırma ve tartım prosedürüne göre hazırlanır."],
-    "fieldSteps": ["Cihaz konumunu engellerden ve lokal kaynaklardan etkilenmeyecek şekilde seç.", "Filtreyi tak ve filtre no bilgisini kaydet.", "Başlangıç debi, sıcaklık ve basınç değerlerini kontrol et.", "Örneklemeyi başlat ve süre boyunca enerji/akış kesintilerini izle.", "Ölçüm sonunda toplam hacim, ortalama debi ve hata kayıtlarını al.", "Filtreyi taşıma kabına al ve laboratuvara teslim et."],
-    "criticalControls": ["PM10 başlık temiz ve doğru takılı olmalıdır.", "Filtre yırtılmamalı veya ıslanmamalıdır.", "Debi sapması ve elektrik kesintisi raporda değerlendirilmelidir."],
-    "acceptance": ["Örnekleme süresi ve debi sapması metot kabul şartlarına uygun olmalıdır.", "Filtre bütünlüğü korunmalıdır.", "Cihaz hata kaydı varsa sonuç değerlendirilmeden önce incelenmelidir."],
-    "reporting": ["Başlangıç-bitiş zamanı, toplam hacim, debi, sıcaklık, basınç ve filtre tartım farkı rapora girilir.", "Qref/Qamb ve nm3 dönüşümleri cihaz tipine göre açık yazılır."],
-    "mistakes": ["Qref ve Qamb değerlerini karıştırmak", "Filtre no ve yön bilgisini yazmamak", "Cihaz iç basınç modelini cihaz tipine göre ayırmamak"]
+    "subgroup": "PM10 / PM2.5",
+    "keywords": ["PM10", "PM2.5", "imisyon", "ortam havası", "sabit akış", "Techora", "MEFE", "Qref", "Qamb", "filtre"],
+    "purpose": "Ortam havasında PM10 veya PM2.5 kütle konsantrasyonunun filtre üzerinde gravimetrik yöntemle belirlenmesi için saha rehberidir. Cihaz kurulumu, filtre yönetimi, debi/hacim kayıtları ve 24 saatlik örnekleme disiplini bu bölümün temelidir.",
+    "duration": "Günlük imisyon ölçümlerinde tipik ve temel yaklaşım 24 saatlik numune almadır. Özel çalışma planında farklı süre varsa başlangıç-bitiş saatleri ve gerekçesi raporda açık belirtilmelidir.",
+    "flowRate": "Cihaz ve başlık tipine göre referans debi veya ortam şartı debisi kullanılır. Qref/Qamb ayrımı, ortam sıcaklığı, ortam basıncı ve cihaz iç basınç modeli doğru değerlendirilmelidir.",
+    "equipment": [
+      "PM10 veya PM2.5 seçici giriş başlığı.",
+      "Sabit/kontrollü akışlı ortam havası örnekleyici.",
+      "Ön tartımı yapılmış ve şartlandırılmış filtre.",
+      "Filtre kaseti, pens ve taşıma kabı.",
+      "Debi kalibrasyon/ doğrulama ekipmanı.",
+      "Ortam sıcaklık, basınç ve gerekirse nem sensörleri.",
+      "Elektrik beslemesi, güvenlik kilidi ve saha konum kayıt ekipmanı."
+    ],
+    "reagents": [
+      "Çözelti veya absorban kullanılmaz.",
+      "Kritik malzeme filtre, filtre kaseti ve saha blank filtresidir.",
+      "Filtreler laboratuvarda şartlandırılır, ön tartımı yapılır ve etiketlenir."
+    ],
+    "fieldSteps": [
+      "Ölçüm noktasını lokal toz kaynakları, duvar, ağaç, egzoz, klima çıkışı ve engellerden etkilenmeyecek şekilde seç.",
+      "Cihazı devrilmeyecek, su almayacak ve güvenli çalışacak şekilde yerleştir.",
+      "PM10/PM2.5 başlığını temiz ve doğru yönde tak.",
+      "Filtreyi pensle yerleştir; filtre yüzeyine elle dokunma.",
+      "Başlangıç tarih-saat, filtre no, cihaz no, debi, sıcaklık ve basınç bilgilerini yaz.",
+      "Cihazı çalıştır ve ilk dakikalarda debi/hata durumunu kontrol et.",
+      "Ölçüm süresince elektrik kesintisi, yağış, cihaz alarmı, debi sapması ve çevresel olayları kaydet.",
+      "Bitişte toplam hacim, ortalama debi, bitiş zamanı ve hata kayıtlarını al.",
+      "Filtreyi taşıma kabına al, kapat ve laboratuvara şartlarına uygun teslim et."
+    ],
+    "criticalControls": [
+      "PM başlığı kirli veya yanlış takılıysa kesme çapı ve sonuç etkilenir.",
+      "Filtre kenar kaçağı sonucu düşük değer verir.",
+      "Qref ve Qamb karıştırılırsa hacim hesabı hatalı olur.",
+      "Filtre ıslanması, yırtılması veya böcek/iri partikül girişi sonucu bozabilir.",
+      "Cihaz iç basınç modeli cihaz markasına göre değişebilir; Techora/MEFE ayrımı yapılmalıdır.",
+      "Saha blank filtresi taşıma ve işlem kontaminasyonunu kontrol eder."
+    ],
+    "acceptance": [
+      "Örnekleme süresi ve debi sapması kabul aralığında olmalıdır.",
+      "Filtre bütünlüğü korunmalıdır.",
+      "Cihaz hata kaydı veya enerji kesintisi sonucu ölçümü temsil dışı bırakmamalıdır.",
+      "Konum ve çevre koşulları ölçüm amacına uygun olmalıdır."
+    ],
+    "reporting": [
+      "Başlangıç-bitiş tarih/saat, cihaz no, filtre no, toplam hacim, debi, sıcaklık, basınç ve filtre tartım farkı yazılır.",
+      "Qref/Qamb ve normal/ortam şart hacim dönüşümü cihaz tipine göre açık belirtilir.",
+      "Saha olayları, kesinti, alarm ve meteorolojik notlar rapora eklenir."
+    ],
+    "mistakes": [
+      "Qref ile Qamb değerlerini karıştırmak.",
+      "Filtreyi ters/yanlış yerleştirmek.",
+      "Başlangıç ve bitiş saatlerini yuvarlamak veya yazmamak.",
+      "Cihaz hata kaydını kontrol etmeden sonuç kabul etmek.",
+      "PM10 başlığını temizlemeden kullanmak."
+    ]
   },
   {
     "title": "Çöken Toz İmisyon Ölçümü",
-    "code": "TS 2341 / TS 2342 ve SKHKKY Ek-2 saha yaklaşımı",
+    "code": "TS 2341 / TS 2342 / SKHKKY Ek-2 saha yaklaşımı",
     "category": "İmisyon",
     "subgroup": "Çöken Toz",
-    "keywords": ["çöken toz", "imisyon", "aylık", "tesis içi", "tesis dışı", "Ek-2"],
-    "purpose": "Çöken toz miktarının belirli saha noktalarında uzun süreli toplama kabı ile izlenmesi için saha rehberi.",
-    "duration": "Yaygın uygulama 1 ay saha bekletmedir. Başlangıç ve bitiş tarih-saatleri net kaydedilmelidir.",
-    "flowRate": "Aktif çekiş debisi yoktur. Toplama kabı/pasif sistem alan ve süre üzerinden değerlendirilir.",
-    "equipment": ["Çöken toz toplama kabı veya cihazı", "Direk/stand", "Etiket ve saha formu", "Meteorolojik gözlem notları", "Güvenlik ve çevre koruma ekipmanı"],
-    "reagents": ["Laboratuvar talimatına göre kap hazırlığı yapılır.", "Saha kabına dış kontaminasyon gelmemesi için kapak ve taşıma düzeni kullanılır."],
-    "fieldSteps": ["Tesis içi ve tesis dışı noktaları çalışma planına göre seç.", "Cihazları devrilmeyecek ve müdahaleye açık olmayacak şekilde yerleştir.", "Başlangıç tarih-saat, koordinat ve çevre açıklamasını yaz.", "Aylık süre boyunca cihaz güvenliğini periyodik kontrol et.", "Bitişte kabı kapat, etiketle ve laboratuvara teslim et."],
-    "criticalControls": ["Yakın çevrede geçici toz kaynağı varsa not alınmalıdır.", "Kap devrilmesi, su taşması veya dış müdahale sonucu geçersiz kılabilir.", "Tesis içi/dışı nokta seçimi mevzuat değerlendirmesini etkiler."],
-    "acceptance": ["Bekleme süresi ve cihaz bütünlüğü korunmalıdır.", "Konum bilgisi ve saha fotoğrafı kayıt altına alınmalıdır.", "Kap kaybı, devrilme veya kontaminasyon varsa sonuç şüphelidir."],
-    "reporting": ["Başlangıç-bitiş tarihleri, nokta adı, koordinat, tesis içi/dışı ayrımı ve gözlem notları yazılır.", "Sonuçlar mevzuat ekindeki değerlendirme yaklaşımına göre yorumlanır."],
-    "mistakes": ["Tesis içi ve dışı noktaları karıştırmak", "Başlangıç saatini yazmamak", "Cihazın devrilmesini fark etmeden geçerli saymak"]
+    "keywords": ["çöken toz", "depozisyon", "imisyon", "tesis içi", "tesis dışı", "aylık", "Ek-2"],
+    "purpose": "Tesis çevresinde belirli noktalara yerleştirilen pasif toplama kaplarıyla çöken toz miktarının belirlenmesi için saha rehberidir. Tesis içi/dışı ayrımı, nokta seçimi ve bir aylık süre disiplinli şekilde yürütülmelidir.",
+    "duration": "Yaygın saha uygulaması 1 ay bekletmedir. Başlangıç ve bitiş tarih/saatleri net yazılır. Süre eksik veya fazla ise raporda gün sayısı ve gerekçesi açık belirtilir.",
+    "flowRate": "Aktif çekiş debisi yoktur. Ölçüm pasif toplama alanı ve maruziyet süresi üzerinden değerlendirilir.",
+    "equipment": [
+      "Çöken toz toplama kabı veya standarda uygun toplama cihazı.",
+      "Direk/stand ve sabitleme ekipmanı.",
+      "Etiket, saha formu, koordinat kaydı ve fotoğraf ekipmanı.",
+      "Taşıma kapakları ve kontaminasyon önleyici malzeme.",
+      "Gerekirse yağış/rüzgar ve çevre gözlem notları."
+    ],
+    "reagents": [
+      "Laboratuvar talimatına göre kap hazırlığı yapılır.",
+      "Toplama kabı sahaya temiz, kapalı ve etiketli götürülür.",
+      "Kör/şahit kap uygulaması gerekiyorsa aynı taşıma zinciriyle hazırlanır."
+    ],
+    "fieldSteps": [
+      "Tesis içi ve tesis dışı noktaları ölçüm planına göre belirle.",
+      "Her nokta için koordinat, yön, yükseklik, çevredeki toz kaynakları ve engelleri kaydet.",
+      "Cihazı devrilmeyecek, müdahaleye açık olmayacak ve temsil kabiliyeti yüksek olacak şekilde yerleştir.",
+      "Başlangıç tarih/saatini, kap numarasını ve fotoğrafını kaydet.",
+      "Aylık süre boyunca cihaz güvenliği, devrilme, taşma, dış müdahale ve olağan dışı olayları kontrol et.",
+      "Bitişte kapları kapat, etiketle ve laboratuvara teslim et.",
+      "Yağış, yaprak, böcek, kuş pisliği veya dış kontaminasyon varsa not düş."
+    ],
+    "criticalControls": [
+      "Kap devrilirse veya dış müdahale olursa sonuç geçersiz olabilir.",
+      "Tesis içi ve dışı noktalar karıştırılırsa mevzuat değerlendirmesi hatalı olur.",
+      "Yakın çevrede geçici inşaat, yol çalışması veya toz kaynağı varsa mutlaka kayıt edilir.",
+      "Kap ağzının kapanması, su taşması veya yabancı madde girişi sonucu etkiler."
+    ],
+    "acceptance": [
+      "Bekleme süresi ve cihaz bütünlüğü korunmalıdır.",
+      "Kap numarası, nokta adı, koordinat ve tarih/saat eksiksiz olmalıdır.",
+      "Devrilme, taşma veya kontaminasyon yoksa ölçüm kabul edilebilirliği daha güçlüdür.",
+      "Nokta seçimi ölçüm amacını temsil etmelidir."
+    ],
+    "reporting": [
+      "Her nokta için tesis içi/dışı bilgisi, koordinat, başlangıç-bitiş tarihi, bekleme süresi ve çevre gözlemleri yazılır.",
+      "Sonuçlar mevzuat ekindeki değerlendirme yaklaşımına göre yorumlanır.",
+      "Fotoğraflar ve saha kontrol notları rapora eklenir."
+    ],
+    "mistakes": [
+      "Tesis içi ve tesis dışı cihazları karıştırmak.",
+      "Başlangıç saatini yazmamak.",
+      "Kap devrilmesini fark etmeden geçerli saymak.",
+      "Nokta koordinatını ve fotoğrafını almamak.",
+      "Bir ay bekleme süresini net hesaplamamak."
+    ]
   }
 ]
