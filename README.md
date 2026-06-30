@@ -22,8 +22,17 @@ Her standartta mümkün olduğunca şu bilgiler bulunur:
 - Kritik teknik kontroller
 - Kabul / ret kriterleri
 - Numune geri alma ve saklama notları
+- Ölçüm talimatı kontrol adımları
 - Raporlama notları
 - Sık yapılan saha hataları
+
+## Kaynak işleme mantığı
+
+Cep rehberi üç katmanla büyütülür:
+
+1. Standart kaynakları: resmi metot ve standart mantığı
+2. Eğitim dokümanları: sahacıya yönelik açıklamalar ve örnekler
+3. Ölçüm talimatları: sahaya çıkmadan önce, ölçüm sırasında ve ölçüm sonunda yapılacak pratik kontrol adımları
 
 ## Birim dili
 
@@ -45,6 +54,8 @@ Uygulama Türkiye saha kullanımına göre hazırlanır. Amerikan/İngiliz kayna
 - Emisyon / imisyon ayrımı
 - Ayrıntılı standart detay sayfası
 - Tam Türkçe saha rehberi içerikleri
+- Eğitim PDF ayrıntıları
+- Ölçüm talimatı kontrol notları
 - Türkiye saha kullanımına uygun birim gösterimi
 
 ## Genişletilmiş ilk veri tabanındaki başlıklar
@@ -82,7 +93,7 @@ Detaylı telefon talimatı için:
 
 ## İçerik nasıl genişletilir?
 
-Standart içerikleri `assets/standards.json` dosyasında tutulur. Yeni standart eklemek için aynı JSON yapısında yeni kayıt eklemek yeterlidir.
+Standart içerikleri `assets/standards.json` dosyasında tutulur. Eğitim ve ölçüm talimatı notları `assets/education_notes.json` dosyasında tutulur.
 
 ## Önemli not
 
