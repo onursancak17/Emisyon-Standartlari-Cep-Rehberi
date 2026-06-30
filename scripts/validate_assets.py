@@ -2,7 +2,7 @@
 """Offline APK asset kontrolü.
 
 Bu script GitHub Actions içinde JSON dosyalarının okunabildiğini, standart kodlarının,
-program sayfalarının ve görsel asset yollarının doğru olup olmadığını kontrol eder.
+program sayfalarının, görsel manifestinin ve görsel asset yollarının doğru olup olmadığını kontrol eder.
 Eksik görseller varsayılan olarak uyarıdır; çünkü görsel dosyaları sonradan yüklenebilir.
 """
 
@@ -30,6 +30,9 @@ VISUAL_FILES = [
 ]
 PROGRAM_PAGE_FILES = [
     ROOT / "assets" / "program_pages_extra.json",
+]
+VISUAL_MANIFEST_FILES = [
+    ROOT / "assets" / "visual_manifest_extra.json",
 ]
 
 
@@ -84,6 +87,7 @@ def main() -> int:
 
     visual_count = 0
     missing_assets: list[str] = []
+    visual_note_assets: set[str] = set()
     for path in VISUAL_FILES:
         data = load_json(path)
         if not isinstance(data, list):
@@ -103,18 +107,12 @@ def main() -> int:
             image_asset = str(entry.get("imageAsset", "")).strip()
             image_base64 = str(entry.get("imageBase64", "")).strip()
             if image_asset:
+                visual_note_assets.add(image_asset)
                 asset_path = ROOT / image_asset
                 if not asset_path.exists():
                     missing_assets.append(image_asset)
             elif not image_base64:
                 warnings.append(f"Görsel kaydında imageAsset veya imageBase64 yok: {entry.get('title', '<başlıksız>')}")
-
-    if missing_assets:
-        msg = "Eksik imageAsset dosyaları: " + ", ".join(missing_assets[:30])
-        if args.strict_images:
-            errors.append(msg)
-        else:
-            warnings.append(msg)
 
     program_pages: list[dict[str, Any]] = []
     for path in PROGRAM_PAGE_FILES:
@@ -132,10 +130,45 @@ def main() -> int:
             if not isinstance(entry.get("sections", []), list):
                 errors.append(f"Program sayfası sections liste olmalı: {entry.get('title', '<başlıksız>')}")
 
+    manifest_items: list[dict[str, Any]] = []
+    manifest_missing_assets: list[str] = []
+    for path in VISUAL_MANIFEST_FILES:
+        data = load_json(path)
+        if not isinstance(data, list):
+            errors.append(f"{path.relative_to(ROOT)} liste olmalı.")
+            continue
+        for entry in data:
+            if not isinstance(entry, dict):
+                warnings.append(f"{path.relative_to(ROOT)} içinde manifest kaydı dict değil.")
+                continue
+            manifest_items.append(entry)
+            filename = str(entry.get("filename", "")).strip()
+            image_asset = str(entry.get("imageAsset", "")).strip()
+            if not filename:
+                errors.append("Manifest içinde filename boş kayıt var.")
+            if not image_asset:
+                errors.append(f"Manifest içinde imageAsset boş: {filename}")
+            elif not (ROOT / image_asset).exists():
+                manifest_missing_assets.append(image_asset)
+            status = str(entry.get("status", "")).strip()
+            if status not in {"aktif_gorsel", "metin_islendi", "bilincli_arsiv", "kontrol_bekliyor"}:
+                warnings.append(f"Manifest status kontrol edilmeli: {filename} -> {status}")
+
+    if manifest_missing_assets:
+        warnings.append("Manifestte eksik görsel asset var: " + ", ".join(manifest_missing_assets[:30]))
+
+    if missing_assets:
+        msg = "Eksik imageAsset dosyaları: " + ", ".join(missing_assets[:30])
+        if args.strict_images:
+            errors.append(msg)
+        else:
+            warnings.append(msg)
+
     print("--- Offline APK asset kontrolü ---")
     print(f"Standart sayısı: {len(standards)}")
     print(f"Eğitim notu anahtarı: {len(education_map)}")
     print(f"Görsel notu sayısı: {visual_count}")
+    print(f"Görsel manifest kaydı: {len(manifest_items)}")
     print(f"Program sayfası sayısı: {len(program_pages)}")
     print(f"Eksik görsel asset: {len(missing_assets)}")
 
