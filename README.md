@@ -58,6 +58,17 @@ Uygulama Türkiye saha kullanımına göre hazırlanır. Amerikan/İngiliz kayna
 - Ölçüm talimatı kontrol notları
 - Türkiye saha kullanımına uygun birim gösterimi
 
+## Ek veri paketleri
+
+Uygulama artık ana veri dosyalarına ek olarak ekstra offline veri paketlerini de okur:
+
+- `assets/standards_extra.json`
+- `assets/education_notes_extra.json`
+- `assets/visual_notes_extra.json`
+- `assets/visuals/`
+
+Bu yapı sayesinde yeni standart kartları, eğitim notları ve görseller ana uygulama kodu bozulmadan APK içine gömülebilir.
+
 ## Genişletilmiş ilk veri tabanındaki başlıklar
 
 - TS EN 15259 / EPA Method 1 - Ölçüm düzlemi, port ve traverse
@@ -77,6 +88,42 @@ Uygulama Türkiye saha kullanımına göre hazırlanır. Amerikan/İngiliz kayna
 - TS EN 1948-1 - PCDD/F dioksin-furan
 - TS EN 12341 / EPA 40 CFR 50-53 - PM10/PM2.5 imisyon
 - TS 2341 / TS 2342 / SKHKKY Ek-2 - Çöken toz
+- CARB Method 426 - Siyanür
+- CARB Method 425 - Krom+6 / Cr(VI)
+- EPA CTM 027 - Amonyak
+- SCAQMD Method 207.1 - Amonyak
+
+## Offline görsel mantığı
+
+Görseller internetten çekilmez. APK içine gömülür.
+
+Görsellerin doğru klasörü:
+
+```text
+assets/visuals/
+```
+
+Görsel bağlantıları:
+
+```text
+assets/visual_notes_extra.json
+```
+
+Detaylı rehber:
+
+```text
+docs/APK_OFFLINE_GORSEL_AKTARIM.md
+```
+
+## Otomatik kontrol
+
+GitHub Actions APK build öncesi şu script çalışır:
+
+```text
+scripts/validate_assets.py
+```
+
+Bu script JSON dosyalarını, standart anahtarlarını ve görsel asset yollarını kontrol eder. Eksik görseller şimdilik uyarıdır; build'i durdurmaz.
 
 ## APK nasıl alınır?
 
@@ -85,7 +132,7 @@ Uygulama Türkiye saha kullanımına göre hazırlanır. Amerikan/İngiliz kayna
 3. **Build Android APK** workflow'unu seç.
 4. En son başarılı çalışmayı aç.
 5. Sayfanın altındaki **Artifacts** bölümünden `emisyon-standartlari-cep-rehberi-apk` dosyasını indir.
-6. ZIP içinden `app-release.apk` dosyasını çıkarıp Android telefona kur.
+6. ZIP içinden `app-release.apk` veya `emisyon-standartlari-cep-rehberi.apk` dosyasını çıkarıp Android telefona kur.
 
 Detaylı telefon talimatı için:
 
@@ -93,7 +140,7 @@ Detaylı telefon talimatı için:
 
 ## İçerik nasıl genişletilir?
 
-Standart içerikleri `assets/standards.json` dosyasında tutulur. Eğitim ve ölçüm talimatı notları `assets/education_notes.json` dosyasında tutulur.
+Standart içerikleri `assets/standards.json` ve `assets/standards_extra.json` dosyalarında tutulur. Eğitim notları `assets/education_notes.json` ve `assets/education_notes_extra.json` dosyalarında tutulur. Görsel notları `assets/visual_notes.json` ve `assets/visual_notes_extra.json` dosyalarında tutulur.
 
 ## Önemli not
 
