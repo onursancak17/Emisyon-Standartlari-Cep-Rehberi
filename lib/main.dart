@@ -200,6 +200,15 @@ class _AppDrawer extends StatelessWidget {
               onTap: () => Navigator.pop(context),
             ),
             ListTile(
+              leading: const Icon(Icons.photo_library_outlined),
+              title: const Text('Görsel Arşivi'),
+              subtitle: const Text('Aktif görsel, bilinçli arşiv ve kontrol listesi'),
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.of(context).push(MaterialPageRoute(builder: (_) => const VisualManifestIndexPage()));
+              },
+            ),
+            ListTile(
               leading: const Icon(Icons.dashboard_customize),
               title: const Text('Tam Program Sayfaları'),
               subtitle: const Text('Görsel arşiv, rapor, kontrol ve sorun giderme'),
@@ -344,6 +353,171 @@ class StandardDetailPage extends StatelessWidget {
 
   String _numbered(List<String> values) {
     return values.asMap().entries.map((entry) => '${entry.key + 1}. ${entry.value}').join('\n');
+  }
+}
+
+class VisualManifestIndexPage extends StatefulWidget {
+  const VisualManifestIndexPage({super.key});
+
+  @override
+  State<VisualManifestIndexPage> createState() => _VisualManifestIndexPageState();
+}
+
+class _VisualManifestIndexPageState extends State<VisualManifestIndexPage> {
+  late final Future<List<VisualManifestItem>> _itemsFuture;
+  String _selectedStatus = 'Tümü';
+
+  @override
+  void initState() {
+    super.initState();
+    _itemsFuture = VisualManifestRepository.loadItems();
+  }
+
+  List<String> _statuses(List<VisualManifestItem> items) {
+    final statuses = <String>{'Tümü'};
+    for (final item in items) {
+      statuses.add(item.statusLabel);
+    }
+    return statuses.toList();
+  }
+
+  List<VisualManifestItem> _filter(List<VisualManifestItem> items) {
+    return items.where((item) => _selectedStatus == 'Tümü' || item.statusLabel == _selectedStatus).toList();
+  }
+
+  int _countStatus(List<VisualManifestItem> items, String status) {
+    return items.where((item) => item.status == status).length;
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: const Text('Görsel Arşivi')),
+      body: SafeArea(
+        child: FutureBuilder<List<VisualManifestItem>>(
+          future: _itemsFuture,
+          builder: (context, snapshot) {
+            if (snapshot.connectionState == ConnectionState.waiting) {
+              return const Center(child: CircularProgressIndicator());
+            }
+            if (snapshot.hasError) {
+              return Center(child: Padding(padding: const EdgeInsets.all(24), child: Text('Görsel arşivi okunamadı: ${snapshot.error}')));
+            }
+            final items = snapshot.data ?? const <VisualManifestItem>[];
+            final filtered = _filter(items);
+            final statuses = _statuses(items);
+
+            return Column(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(16, 12, 16, 8),
+                  child: Card(
+                    elevation: 0,
+                    color: Theme.of(context).colorScheme.secondaryContainer,
+                    child: Padding(
+                      padding: const EdgeInsets.all(14),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text('Offline görsel manifesti', style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w800)),
+                          const SizedBox(height: 8),
+                          Text('Toplam ${items.length} kayıt • Aktif ${_countStatus(items, 'aktif_gorsel')} • Bilinçli arşiv ${_countStatus(items, 'bilincli_arsiv')} • Kontrol ${_countStatus(items, 'kontrol_bekliyor')}'),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: 52,
+                  child: ListView.separated(
+                    padding: const EdgeInsets.symmetric(horizontal: 16),
+                    scrollDirection: Axis.horizontal,
+                    itemCount: statuses.length,
+                    separatorBuilder: (_, __) => const SizedBox(width: 8),
+                    itemBuilder: (context, index) {
+                      final status = statuses[index];
+                      return ChoiceChip(
+                        label: Text(status),
+                        selected: _selectedStatus == status,
+                        onSelected: (_) => setState(() => _selectedStatus = status),
+                      );
+                    },
+                  ),
+                ),
+                Expanded(
+                  child: filtered.isEmpty
+                      ? const Center(child: Text('Bu filtrede görsel kaydı yok.'))
+                      : ListView.separated(
+                          padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
+                          itemCount: filtered.length,
+                          separatorBuilder: (_, __) => const SizedBox(height: 10),
+                          itemBuilder: (context, index) => VisualManifestCard(item: filtered[index]),
+                        ),
+                ),
+              ],
+            );
+          },
+        ),
+      ),
+    );
+  }
+}
+
+class VisualManifestCard extends StatelessWidget {
+  const VisualManifestCard({super.key, required this.item});
+
+  final VisualManifestItem item;
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      elevation: 1,
+      clipBehavior: Clip.antiAlias,
+      child: Padding(
+        padding: const EdgeInsets.all(12),
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            ClipRRect(
+              borderRadius: BorderRadius.circular(10),
+              child: Image.asset(
+                item.imageAsset,
+                width: 84,
+                height: 84,
+                fit: BoxFit.cover,
+                errorBuilder: (context, error, stackTrace) => Container(
+                  width: 84,
+                  height: 84,
+                  alignment: Alignment.center,
+                  color: Theme.of(context).colorScheme.errorContainer,
+                  child: const Icon(Icons.broken_image_outlined),
+                ),
+              ),
+            ),
+            const SizedBox(width: 12),
+            Expanded(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(item.filename, style: Theme.of(context).textTheme.titleSmall?.copyWith(fontWeight: FontWeight.w800)),
+                  const SizedBox(height: 6),
+                  Wrap(
+                    spacing: 6,
+                    runSpacing: 6,
+                    children: [
+                      _MiniChip(label: item.statusLabel),
+                      _MiniChip(label: item.topic),
+                    ],
+                  ),
+                  const SizedBox(height: 8),
+                  Text(item.note, maxLines: 4, overflow: TextOverflow.ellipsis),
+                ],
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }
 
@@ -762,6 +936,19 @@ class StandardsRepository {
   }
 }
 
+class VisualManifestRepository {
+  static Future<List<VisualManifestItem>> loadItems() async {
+    try {
+      final raw = await rootBundle.loadString('assets/visual_manifest_extra.json');
+      final decoded = jsonDecode(raw);
+      if (decoded is! List<dynamic>) return const <VisualManifestItem>[];
+      return decoded.whereType<Map<String, dynamic>>().map(VisualManifestItem.fromJson).toList();
+    } catch (_) {
+      return const <VisualManifestItem>[];
+    }
+  }
+}
+
 class ProgramPagesRepository {
   static Future<List<ProgramPageItem>> loadItems() async {
     try {
@@ -876,6 +1063,28 @@ class VisualNote {
       caption: json['caption'] as String? ?? '',
       imageBase64: json['imageBase64'] as String? ?? '',
       imageAsset: json['imageAsset'] as String? ?? '',
+    );
+  }
+}
+
+class VisualManifestItem {
+  const VisualManifestItem({required this.filename, required this.imageAsset, required this.status, required this.statusLabel, required this.topic, required this.note});
+
+  final String filename;
+  final String imageAsset;
+  final String status;
+  final String statusLabel;
+  final String topic;
+  final String note;
+
+  factory VisualManifestItem.fromJson(Map<String, dynamic> json) {
+    return VisualManifestItem(
+      filename: json['filename'] as String? ?? '',
+      imageAsset: json['imageAsset'] as String? ?? '',
+      status: json['status'] as String? ?? '',
+      statusLabel: json['statusLabel'] as String? ?? '',
+      topic: json['topic'] as String? ?? '',
+      note: json['note'] as String? ?? '',
     );
   }
 }
