@@ -1,0 +1,55 @@
+name: Build Android APK
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build-apk:
+    name: Build release APK
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Set up Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+
+      - name: Generate Android platform files
+        run: |
+          mkdir -p /tmp/standards_backup
+          cp pubspec.yaml /tmp/standards_backup/pubspec.yaml
+          cp -r lib /tmp/standards_backup/lib
+          cp -r assets /tmp/standards_backup/assets
+          flutter create . --platforms=android --project-name emisyon_standartlari_cep_rehberi --org com.onursancak
+          rm -rf lib assets
+          cp -r /tmp/standards_backup/lib ./lib
+          cp -r /tmp/standards_backup/assets ./assets
+          cp /tmp/standards_backup/pubspec.yaml ./pubspec.yaml
+
+      - name: Install dependencies
+        run: flutter pub get
+
+      - name: Analyze project
+        run: flutter analyze
+
+      - name: Build APK
+        run: flutter build apk --release
+
+      - name: Upload APK artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: emisyon-standartlari-cep-rehberi-apk
+          path: build/app/outputs/flutter-apk/app-release.apk
+          if-no-files-found: error
