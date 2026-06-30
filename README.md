@@ -1,6 +1,12 @@
-# Emisyon / İmisyon Standartları Cep Rehberi
+# Emisyon İmisyon Ölçüm Standartları
 
 Bu proje, emisyon ve imisyon saha ölçüm personeli için hazırlanmış **tam Türkçe**, offline Android cep rehberi uygulamasıdır.
+
+Android telefonda görünecek APK uygulama adı:
+
+```text
+Emisyon İmisyon Ölçüm Standartları
+```
 
 Ana emisyon hesaplama programından tamamen bağımsızdır. Bu repo sadece mobil standartlar rehberi içindir.
 
@@ -57,6 +63,8 @@ Uygulama Türkiye saha kullanımına göre hazırlanır. Amerikan/İngiliz kayna
 - Eğitim PDF ayrıntıları
 - Ölçüm talimatı kontrol notları
 - Türkiye saha kullanımına uygun birim gösterimi
+- Offline görsel arşivi
+- Otomatik ham görsel keşfi
 
 ## Ek veri paketleri
 
@@ -65,9 +73,11 @@ Uygulama artık ana veri dosyalarına ek olarak ekstra offline veri paketlerini 
 - `assets/standards_extra.json`
 - `assets/education_notes_extra.json`
 - `assets/visual_notes_extra.json`
+- `assets/visual_manifest_extra.json`
+- `assets/program_pages_extra.json`
 - `assets/visuals/`
 
-Bu yapı sayesinde yeni standart kartları, eğitim notları ve görseller ana uygulama kodu bozulmadan APK içine gömülebilir.
+Bu yapı sayesinde yeni standart kartları, eğitim notları, görseller, görsel arşivi ve program sayfaları ana uygulama kodu bozulmadan APK içine gömülebilir.
 
 ## Genişletilmiş ilk veri tabanındaki başlıklar
 
@@ -109,6 +119,12 @@ Görsel bağlantıları:
 assets/visual_notes_extra.json
 ```
 
+Görsel arşiv / manifest dosyası:
+
+```text
+assets/visual_manifest_extra.json
+```
+
 Detaylı rehber:
 
 ```text
@@ -123,7 +139,7 @@ GitHub Actions APK build öncesi şu script çalışır:
 scripts/validate_assets.py
 ```
 
-Bu script JSON dosyalarını, standart anahtarlarını ve görsel asset yollarını kontrol eder. Eksik görseller şimdilik uyarıdır; build'i durdurmaz.
+Bu script JSON dosyalarını, standart anahtarlarını, görsel asset yollarını, görsel manifestini ve assets/visuals içindeki JPG sayısını kontrol eder. Eksik görseller şimdilik uyarıdır; build'i durdurmaz.
 
 ## APK nasıl alınır?
 
@@ -131,8 +147,8 @@ Bu script JSON dosyalarını, standart anahtarlarını ve görsel asset yolları
 2. Üst menüden **Actions** sekmesine gir.
 3. **Build Android APK** workflow'unu seç.
 4. En son başarılı çalışmayı aç.
-5. Sayfanın altındaki **Artifacts** bölümünden `emisyon-standartlari-cep-rehberi-apk` dosyasını indir.
-6. ZIP içinden `app-release.apk` veya `emisyon-standartlari-cep-rehberi.apk` dosyasını çıkarıp Android telefona kur.
+5. Sayfanın altındaki **Artifacts** bölümünden `emisyon-imisyon-olcum-standartlari-apk` dosyasını indir.
+6. ZIP içinden `emisyon-imisyon-olcum-standartlari.apk` dosyasını çıkarıp Android telefona kur.
 
 Detaylı telefon talimatı için:
 
@@ -140,7 +156,7 @@ Detaylı telefon talimatı için:
 
 ## İçerik nasıl genişletilir?
 
-Standart içerikleri `assets/standards.json` ve `assets/standards_extra.json` dosyalarında tutulur. Eğitim notları `assets/education_notes.json` ve `assets/education_notes_extra.json` dosyalarında tutulur. Görsel notları `assets/visual_notes.json` ve `assets/visual_notes_extra.json` dosyalarında tutulur.
+Standart içerikleri `assets/standards.json` ve `assets/standards_extra.json` dosyalarında tutulur. Eğitim notları `assets/education_notes.json` ve `assets/education_notes_extra.json` dosyalarında tutulur. Görsel notları `assets/visual_notes.json` ve `assets/visual_notes_extra.json` dosyalarında tutulur. Görsel arşiv sınıflandırması `assets/visual_manifest_extra.json` dosyasında tutulur.
 
 ## Önemli not
 
