@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:typed_data';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -142,7 +143,7 @@ class _StandardsHomePageState extends State<StandardsHomePage> {
                       const SizedBox(width: 6),
                       Expanded(
                         child: Text(
-                          'Offline çalışır • Görsel eğitim notları eklendi',
+                          'Tamamen offline çalışır • Ek standart ve görsel paket desteği aktif',
                           style: Theme.of(context).textTheme.bodySmall,
                         ),
                       ),
@@ -319,14 +320,7 @@ class _VisualNotesBlock extends StatelessWidget {
                   const SizedBox(height: 8),
                   Text(note.title, style: Theme.of(context).textTheme.titleSmall?.copyWith(fontWeight: FontWeight.w700)),
                   const SizedBox(height: 10),
-                  ClipRRect(
-                    borderRadius: BorderRadius.circular(12),
-                    child: Image.memory(
-                      base64Decode(note.imageBase64),
-                      fit: BoxFit.contain,
-                      width: double.infinity,
-                    ),
-                  ),
+                  _VisualImage(note: note),
                   const SizedBox(height: 10),
                   Text(TurkishUnitText.normalize(note.caption)),
                 ],
@@ -334,6 +328,69 @@ class _VisualNotesBlock extends StatelessWidget {
             ),
           ),
       ],
+    );
+  }
+}
+
+class _VisualImage extends StatelessWidget {
+  const _VisualImage({required this.note});
+
+  final VisualNote note;
+
+  @override
+  Widget build(BuildContext context) {
+    if (note.imageAsset.trim().isNotEmpty) {
+      return ClipRRect(
+        borderRadius: BorderRadius.circular(12),
+        child: Image.asset(
+          note.imageAsset,
+          fit: BoxFit.contain,
+          width: double.infinity,
+          errorBuilder: (context, error, stackTrace) => _MissingVisualBox(path: note.imageAsset),
+        ),
+      );
+    }
+
+    if (note.imageBase64.trim().isNotEmpty) {
+      final bytes = _tryDecodeBase64(note.imageBase64);
+      if (bytes != null) {
+        return ClipRRect(
+          borderRadius: BorderRadius.circular(12),
+          child: Image.memory(bytes, fit: BoxFit.contain, width: double.infinity),
+        );
+      }
+    }
+
+    return const _MissingVisualBox(path: 'Görsel verisi yok');
+  }
+
+  Uint8List? _tryDecodeBase64(String value) {
+    try {
+      return base64Decode(value);
+    } catch (_) {
+      return null;
+    }
+  }
+}
+
+class _MissingVisualBox extends StatelessWidget {
+  const _MissingVisualBox({required this.path});
+
+  final String path;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: double.infinity,
+      padding: const EdgeInsets.all(14),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(12),
+        color: Theme.of(context).colorScheme.errorContainer,
+      ),
+      child: Text(
+        'Görsel APK içinde bulunamadı. Dosya yolu: $path',
+        style: Theme.of(context).textTheme.bodySmall,
+      ),
     );
   }
 }
@@ -410,9 +467,27 @@ class _MiniChip extends StatelessWidget {
 }
 
 class StandardsRepository {
+  static const _standardAssetFiles = <String>[
+    'assets/standards.json',
+    'assets/standards_extra.json',
+  ];
+
+  static const _educationAssetFiles = <String>[
+    'assets/education_notes.json',
+    'assets/education_notes_extra.json',
+  ];
+
+  static const _visualAssetFiles = <String>[
+    'assets/visual_notes.json',
+    'assets/visual_notes_extra.json',
+  ];
+
   static Future<List<StandardItem>> loadItems() async {
-    final raw = await rootBundle.loadString('assets/standards.json');
-    final decoded = jsonDecode(raw) as List<dynamic>;
+    final decoded = <dynamic>[];
+    for (final path in _standardAssetFiles) {
+      decoded.addAll(await _loadListAsset(path));
+    }
+
     final notesByCode = await _loadEducationNotes();
     final visualsByCode = await _loadVisualNotes();
 
@@ -426,21 +501,43 @@ class StandardsRepository {
     }).toList();
   }
 
-  static Future<Map<String, List<String>>> _loadEducationNotes() async {
+  static Future<List<dynamic>> _loadListAsset(String path) async {
     try {
-      final raw = await rootBundle.loadString('assets/education_notes.json');
-      final decoded = jsonDecode(raw) as Map<String, dynamic>;
-      return decoded.map((key, value) => MapEntry(key, StandardItem.listFromDynamic(value)));
+      final raw = await rootBundle.loadString(path);
+      final decoded = jsonDecode(raw);
+      if (decoded is List<dynamic>) return decoded;
+      return const <dynamic>[];
     } catch (_) {
-      return const <String, List<String>>{};
+      return const <dynamic>[];
     }
   }
 
-  static Future<Map<String, List<VisualNote>>> _loadVisualNotes() async {
+  static Future<Map<String, dynamic>> _loadMapAsset(String path) async {
     try {
-      final raw = await rootBundle.loadString('assets/visual_notes.json');
-      final decoded = jsonDecode(raw) as List<dynamic>;
-      final result = <String, List<VisualNote>>{};
+      final raw = await rootBundle.loadString(path);
+      final decoded = jsonDecode(raw);
+      if (decoded is Map<String, dynamic>) return decoded;
+      return const <String, dynamic>{};
+    } catch (_) {
+      return const <String, dynamic>{};
+    }
+  }
+
+  static Future<Map<String, List<String>>> _loadEducationNotes() async {
+    final result = <String, List<String>>{};
+    for (final path in _educationAssetFiles) {
+      final decoded = await _loadMapAsset(path);
+      for (final entry in decoded.entries) {
+        result.putIfAbsent(entry.key, () => <String>[]).addAll(StandardItem.listFromDynamic(entry.value));
+      }
+    }
+    return result;
+  }
+
+  static Future<Map<String, List<VisualNote>>> _loadVisualNotes() async {
+    final result = <String, List<VisualNote>>{};
+    for (final path in _visualAssetFiles) {
+      final decoded = await _loadListAsset(path);
       for (final entry in decoded) {
         final map = entry as Map<String, dynamic>;
         final standards = StandardItem.listFromDynamic(map['standards']);
@@ -449,10 +546,8 @@ class StandardsRepository {
           result.putIfAbsent(standard, () => <VisualNote>[]).add(note);
         }
       }
-      return result;
-    } catch (_) {
-      return const <String, List<VisualNote>>{};
     }
+    return result;
   }
 }
 
@@ -548,17 +643,24 @@ class StandardItem {
 }
 
 class VisualNote {
-  const VisualNote({required this.title, required this.caption, required this.imageBase64});
+  const VisualNote({
+    required this.title,
+    required this.caption,
+    required this.imageBase64,
+    required this.imageAsset,
+  });
 
   final String title;
   final String caption;
   final String imageBase64;
+  final String imageAsset;
 
   factory VisualNote.fromJson(Map<String, dynamic> json) {
     return VisualNote(
       title: json['title'] as String? ?? '',
       caption: json['caption'] as String? ?? '',
       imageBase64: json['imageBase64'] as String? ?? '',
+      imageAsset: json['imageAsset'] as String? ?? '',
     );
   }
 }
