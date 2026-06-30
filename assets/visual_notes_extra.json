@@ -1,0 +1,74 @@
+[
+  {
+    "standards": ["CARB Method 426"],
+    "title": "Siyanür örnekleme treni",
+    "caption": "CARB Method 426 için NaOH alkali absorban hattı, kaçak testi, absorban pH kontrolü ve breakthrough değerlendirmesi birlikte takip edilmelidir.",
+    "imageAsset": "assets/visuals/1000064893.jpg"
+  },
+  {
+    "standards": ["CARB Method 426"],
+    "title": "Siyanür NaOH absorban hattı",
+    "caption": "Siyanür ölçümünde absorban pH'ı, NaOH hacmi, saha blankı ve taşıma şartı sonucu doğrudan etkiler.",
+    "imageAsset": "assets/visuals/1000064894.jpg"
+  },
+  {
+    "standards": ["CARB Method 425"],
+    "title": "Krom+6 numune alma treni",
+    "caption": "Cr(VI) ölçümünde pH, tür dönüşümü, metal kontaminasyonu ve blank kontrolü kritik saha şartıdır.",
+    "imageAsset": "assets/visuals/1000064901.jpg"
+  },
+  {
+    "standards": ["EPA CTM 027"],
+    "title": "Amonyak CTM-027 tren şeması",
+    "caption": "Amonyak örneklemesinde asidik absorban, debi, köpürme/sıçrama ve yoğuşma kontrolü birlikte izlenmelidir.",
+    "imageAsset": "assets/visuals/1000064908.jpg"
+  },
+  {
+    "standards": ["SCAQMD Method 207.1"],
+    "title": "Amonyak Greenburg-Smith / mini bubbler yaklaşımı",
+    "caption": "Bubbler tipi ve debi seçimi amonyak absorpsiyon verimini doğrudan etkiler; aşırı debi sonucu düşürebilir.",
+    "imageAsset": "assets/visuals/1000064909.jpg"
+  },
+  {
+    "standards": ["EPA Method 4"],
+    "title": "EPA Method 4 impinger dizilimi",
+    "caption": "Nem tayininde su impingerleri, boş impinger ve silika jel hattı ilk-son ağırlıklarla birlikte kaydedilir.",
+    "imageAsset": "assets/visuals/1000064801.jpg"
+  },
+  {
+    "standards": ["EPA Method 29", "TS EN 14385"],
+    "title": "Metal örnekleme treni ve kontaminasyon kontrolü",
+    "caption": "Metal çalışmalarında tren temizliği, fraksiyon ayrımı, blank ve yıkama adımları düşük seviyelerde sonucun savunulabilirliği için kritiktir.",
+    "imageAsset": "assets/visuals/1000064854.jpg"
+  },
+  {
+    "standards": ["TS EN 1911", "EPA Method 26A"],
+    "title": "HCl / halojen örnekleme hattı",
+    "caption": "Asit gazı ve halojen ölçümlerinde prob/filtre sıcaklığı, absorban soğutması, kabarcık teması ve breakthrough kontrol edilmelidir.",
+    "imageAsset": "assets/visuals/1000064871.jpg"
+  },
+  {
+    "standards": ["TS ISO 12039"],
+    "title": "Yanma gazı ve referans O2 düzeltmesi",
+    "caption": "O2/CO2 ölçümü SO2, NOx ve CO sonuçlarının referans oksijene düzeltilmesi için temel girdidir.",
+    "imageAsset": "assets/visuals/1000064887.jpg"
+  },
+  {
+    "standards": ["PAH / ISO 11338-1"],
+    "title": "PAH adsorban ve numune alma hattı",
+    "caption": "PAH çalışmalarında adsorban, filtre, kondens ve yıkama fraksiyonları ışık/sıcaklık/kontaminasyondan korunmalıdır.",
+    "imageAsset": "assets/visuals/1000064767.jpg"
+  },
+  {
+    "standards": ["TS EN 1948-1"],
+    "title": "PCDD/DF XAD-2 koruma ve fraksiyon yönetimi",
+    "caption": "PCDD/DF örneklemesinde XAD-2 kanal oluşumu, ışık koruması, temiz cam malzeme ve blank kontrolü kritik önemdedir.",
+    "imageAsset": "assets/visuals/1000064778.jpg"
+  },
+  {
+    "standards": ["EPA Method 2", "TS ISO 10780", "TS EN ISO 16911"],
+    "title": "Pitot hız/debi ölçüm kontrolü",
+    "caption": "Pitot fark basıncı, manometre sıfırı, prob hizası ve karekök ortalama yaklaşımı debi hesabının temelidir.",
+    "imageAsset": "assets/visuals/1000064792.jpg"
+  }
+]
