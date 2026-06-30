@@ -1,7 +1,7 @@
 name: emisyon_standartlari_cep_rehberi
 description: Emisyon ve imisyon olcum standartlari icin offline cep rehberi.
 publish_to: 'none'
-version: 0.1.0+1
+version: 0.2.0+2
 
 environment:
   sdk: '>=3.3.0 <4.0.0'
@@ -19,5 +19,9 @@ flutter:
   uses-material-design: true
   assets:
     - assets/standards.json
+    - assets/standards_extra.json
     - assets/education_notes.json
+    - assets/education_notes_extra.json
     - assets/visual_notes.json
+    - assets/visual_notes_extra.json
+    - assets/visuals/
