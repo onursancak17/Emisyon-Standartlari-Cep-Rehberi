@@ -43,6 +43,20 @@ jobs:
           cp -r assets /tmp/mobile_build/assets
           cp pubspec.yaml /tmp/mobile_build/pubspec.yaml
 
+      - name: Set Android app display name
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+
+          app_name = "Emisyon İmisyon Ölçüm Standartları"
+          manifest_path = Path("/tmp/mobile_build/android/app/src/main/AndroidManifest.xml")
+          text = manifest_path.read_text(encoding="utf-8")
+          text = text.replace('android:label="emisyon_standartlari_cep_rehberi"', f'android:label="{app_name}"')
+          text = text.replace('android:label="emisyon_standartlari_cep_rehberi"', f'android:label="{app_name}"')
+          manifest_path.write_text(text, encoding="utf-8")
+          print(f"Android app label set to: {app_name}")
+          PY
+
       - name: Install dependencies
         working-directory: /tmp/mobile_build
         run: flutter pub get
@@ -58,11 +72,11 @@ jobs:
       - name: Copy APK to repository workspace
         run: |
           mkdir -p build-output
-          cp /tmp/mobile_build/build/app/outputs/flutter-apk/app-release.apk build-output/emisyon-standartlari-cep-rehberi.apk
+          cp /tmp/mobile_build/build/app/outputs/flutter-apk/app-release.apk build-output/emisyon-imisyon-olcum-standartlari.apk
 
       - name: Upload APK artifact
         uses: actions/upload-artifact@v4
         with:
-          name: emisyon-standartlari-cep-rehberi-apk
-          path: build-output/emisyon-standartlari-cep-rehberi.apk
+          name: emisyon-imisyon-olcum-standartlari-apk
+          path: build-output/emisyon-imisyon-olcum-standartlari.apk
           if-no-files-found: error
