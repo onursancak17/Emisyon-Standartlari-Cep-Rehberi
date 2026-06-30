@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Offline APK asset kontrolü.
 
-Bu script GitHub Actions içinde JSON dosyalarının okunabildiğini, standart kodlarının
-çakışmadığını ve görsel asset yollarının repo içinde bulunup bulunmadığını kontrol eder.
+Bu script GitHub Actions içinde JSON dosyalarının okunabildiğini, standart kodlarının,
+program sayfalarının ve görsel asset yollarının doğru olup olmadığını kontrol eder.
 Eksik görseller varsayılan olarak uyarıdır; çünkü görsel dosyaları sonradan yüklenebilir.
 """
 
@@ -28,6 +28,9 @@ VISUAL_FILES = [
     ROOT / "assets" / "visual_notes.json",
     ROOT / "assets" / "visual_notes_extra.json",
 ]
+PROGRAM_PAGE_FILES = [
+    ROOT / "assets" / "program_pages_extra.json",
+]
 
 
 def load_json(path: Path) -> Any:
@@ -37,14 +40,6 @@ def load_json(path: Path) -> Any:
         raise SystemExit(f"HATA: Dosya bulunamadı: {path.relative_to(ROOT)}")
     except json.JSONDecodeError as exc:
         raise SystemExit(f"HATA: JSON okunamadı: {path.relative_to(ROOT)} -> {exc}")
-
-
-def as_list(value: Any) -> list[Any]:
-    return value if isinstance(value, list) else []
-
-
-def as_map(value: Any) -> dict[str, Any]:
-    return value if isinstance(value, dict) else {}
 
 
 def main() -> int:
@@ -121,10 +116,27 @@ def main() -> int:
         else:
             warnings.append(msg)
 
+    program_pages: list[dict[str, Any]] = []
+    for path in PROGRAM_PAGE_FILES:
+        data = load_json(path)
+        if not isinstance(data, list):
+            errors.append(f"{path.relative_to(ROOT)} liste olmalı.")
+            continue
+        for entry in data:
+            if not isinstance(entry, dict):
+                warnings.append(f"{path.relative_to(ROOT)} içinde program sayfası dict değil.")
+                continue
+            program_pages.append(entry)
+            if not str(entry.get("title", "")).strip():
+                errors.append(f"Program sayfası title boş: {entry.get('id', '<idsiz>')}")
+            if not isinstance(entry.get("sections", []), list):
+                errors.append(f"Program sayfası sections liste olmalı: {entry.get('title', '<başlıksız>')}")
+
     print("--- Offline APK asset kontrolü ---")
     print(f"Standart sayısı: {len(standards)}")
     print(f"Eğitim notu anahtarı: {len(education_map)}")
     print(f"Görsel notu sayısı: {visual_count}")
+    print(f"Program sayfası sayısı: {len(program_pages)}")
     print(f"Eksik görsel asset: {len(missing_assets)}")
 
     if warnings:
