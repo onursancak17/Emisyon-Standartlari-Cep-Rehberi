@@ -142,7 +142,7 @@ class _StandardsHomePageState extends State<StandardsHomePage> {
                       const SizedBox(width: 6),
                       Expanded(
                         child: Text(
-                          'Offline çalışır • Eğitim PDF ayrıntıları eklendi',
+                          'Offline çalışır • Görsel eğitim notları eklendi',
                           style: Theme.of(context).textTheme.bodySmall,
                         ),
                       ),
@@ -157,10 +157,7 @@ class _StandardsHomePageState extends State<StandardsHomePage> {
                           padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
                           itemCount: filteredItems.length,
                           separatorBuilder: (_, __) => const SizedBox(height: 10),
-                          itemBuilder: (context, index) {
-                            final item = filteredItems[index];
-                            return StandardCard(item: item);
-                          },
+                          itemBuilder: (context, index) => StandardCard(item: filteredItems[index]),
                         ),
                 ),
               ],
@@ -183,11 +180,9 @@ class StandardCard extends StatelessWidget {
       elevation: 1,
       clipBehavior: Clip.antiAlias,
       child: InkWell(
-        onTap: () {
-          Navigator.of(context).push(
-            MaterialPageRoute(builder: (_) => StandardDetailPage(item: item)),
-          );
-        },
+        onTap: () => Navigator.of(context).push(
+          MaterialPageRoute(builder: (_) => StandardDetailPage(item: item)),
+        ),
         child: Padding(
           padding: const EdgeInsets.all(14),
           child: Column(
@@ -218,15 +213,17 @@ class StandardCard extends StatelessWidget {
               ),
               const SizedBox(height: 10),
               Text(TurkishUnitText.normalize(item.purpose), maxLines: 3, overflow: TextOverflow.ellipsis),
-              if (item.educationNotes.isNotEmpty) ...[
+              if (item.educationNotes.isNotEmpty || item.visualNotes.isNotEmpty) ...[
                 const SizedBox(height: 8),
                 Row(
                   children: [
                     Icon(Icons.school, size: 16, color: Theme.of(context).colorScheme.primary),
                     const SizedBox(width: 5),
-                    Text(
-                      '${item.educationNotes.length} eğitim notu',
-                      style: Theme.of(context).textTheme.labelMedium,
+                    Expanded(
+                      child: Text(
+                        '${item.educationNotes.length} eğitim notu • ${item.visualNotes.length} görsel',
+                        style: Theme.of(context).textTheme.labelMedium,
+                      ),
                     ),
                   ],
                 ),
@@ -267,6 +264,7 @@ class StandardDetailPage extends StatelessWidget {
           ),
           const SizedBox(height: 16),
           const _UnitInfoBlock(),
+          _VisualNotesBlock(notes: item.visualNotes),
           _InfoBlock(title: 'Eğitim dokümanı ayrıntıları', body: _numbered(item.educationNotes)),
           _InfoBlock(title: 'Amaç', body: item.purpose),
           _InfoBlock(title: 'Ölçüm süresi', body: item.duration),
@@ -293,6 +291,53 @@ class StandardDetailPage extends StatelessWidget {
   }
 }
 
+class _VisualNotesBlock extends StatelessWidget {
+  const _VisualNotesBlock({required this.notes});
+
+  final List<VisualNote> notes;
+
+  @override
+  Widget build(BuildContext context) {
+    if (notes.isEmpty) return const SizedBox.shrink();
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        for (final note in notes)
+          Card(
+            elevation: 0,
+            color: Theme.of(context).colorScheme.tertiaryContainer,
+            margin: const EdgeInsets.only(bottom: 12),
+            child: Padding(
+              padding: const EdgeInsets.all(14),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Görsel eğitim notu',
+                    style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w800),
+                  ),
+                  const SizedBox(height: 8),
+                  Text(note.title, style: Theme.of(context).textTheme.titleSmall?.copyWith(fontWeight: FontWeight.w700)),
+                  const SizedBox(height: 10),
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(12),
+                    child: Image.memory(
+                      base64Decode(note.imageBase64),
+                      fit: BoxFit.contain,
+                      width: double.infinity,
+                    ),
+                  ),
+                  const SizedBox(height: 10),
+                  Text(TurkishUnitText.normalize(note.caption)),
+                ],
+              ),
+            ),
+          ),
+      ],
+    );
+  }
+}
+
 class _UnitInfoBlock extends StatelessWidget {
   const _UnitInfoBlock();
 
@@ -307,14 +352,9 @@ class _UnitInfoBlock extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              'Birim notu',
-              style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w800),
-            ),
+            Text('Birim notu', style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w800)),
             const SizedBox(height: 8),
-            const Text(
-              'Bu rehberde Amerikan kaynaklı scf/scm/cfm ifadeleri Türkiye saha kullanımına çevrilmiş olarak gösterilir: Nm³, m³/dk ve L/dk esas alınır.',
-            ),
+            const Text('Bu rehberde Amerikan kaynaklı scf/scm/cfm ifadeleri Türkiye saha kullanımına çevrilmiş olarak gösterilir: Nm³, m³/dk ve L/dk esas alınır.'),
           ],
         ),
       ),
@@ -374,13 +414,15 @@ class StandardsRepository {
     final raw = await rootBundle.loadString('assets/standards.json');
     final decoded = jsonDecode(raw) as List<dynamic>;
     final notesByCode = await _loadEducationNotes();
+    final visualsByCode = await _loadVisualNotes();
 
     return decoded.map((item) {
       final json = item as Map<String, dynamic>;
       final code = json['code'] as String? ?? '';
       final title = json['title'] as String? ?? '';
       final notes = notesByCode[code] ?? notesByCode[title] ?? const <String>[];
-      return StandardItem.fromJson(json, educationNotes: notes);
+      final visuals = visualsByCode[code] ?? visualsByCode[title] ?? const <VisualNote>[];
+      return StandardItem.fromJson(json, educationNotes: notes, visualNotes: visuals);
     }).toList();
   }
 
@@ -391,6 +433,25 @@ class StandardsRepository {
       return decoded.map((key, value) => MapEntry(key, StandardItem.listFromDynamic(value)));
     } catch (_) {
       return const <String, List<String>>{};
+    }
+  }
+
+  static Future<Map<String, List<VisualNote>>> _loadVisualNotes() async {
+    try {
+      final raw = await rootBundle.loadString('assets/visual_notes.json');
+      final decoded = jsonDecode(raw) as List<dynamic>;
+      final result = <String, List<VisualNote>>{};
+      for (final entry in decoded) {
+        final map = entry as Map<String, dynamic>;
+        final standards = StandardItem.listFromDynamic(map['standards']);
+        final note = VisualNote.fromJson(map);
+        for (final standard in standards) {
+          result.putIfAbsent(standard, () => <VisualNote>[]).add(note);
+        }
+      }
+      return result;
+    } catch (_) {
+      return const <String, List<VisualNote>>{};
     }
   }
 }
@@ -413,6 +474,7 @@ class StandardItem {
     required this.reporting,
     required this.mistakes,
     required this.educationNotes,
+    required this.visualNotes,
   });
 
   final String title;
@@ -431,6 +493,7 @@ class StandardItem {
   final List<String> reporting;
   final List<String> mistakes;
   final List<String> educationNotes;
+  final List<VisualNote> visualNotes;
 
   String get searchText => TurkishUnitText.normalize([
         title,
@@ -449,9 +512,14 @@ class StandardItem {
         ...reporting,
         ...mistakes,
         ...educationNotes,
+        ...visualNotes.map((note) => '${note.title} ${note.caption}'),
       ].join(' ')).toLowerCase();
 
-  factory StandardItem.fromJson(Map<String, dynamic> json, {List<String> educationNotes = const <String>[]}) {
+  factory StandardItem.fromJson(
+    Map<String, dynamic> json, {
+    List<String> educationNotes = const <String>[],
+    List<VisualNote> visualNotes = const <VisualNote>[],
+  }) {
     return StandardItem(
       title: json['title'] as String? ?? '',
       code: json['code'] as String? ?? '',
@@ -469,6 +537,7 @@ class StandardItem {
       reporting: listFromDynamic(json['reporting']),
       mistakes: listFromDynamic(json['mistakes']),
       educationNotes: educationNotes,
+      visualNotes: visualNotes,
     );
   }
 
@@ -478,50 +547,41 @@ class StandardItem {
   }
 }
 
+class VisualNote {
+  const VisualNote({required this.title, required this.caption, required this.imageBase64});
+
+  final String title;
+  final String caption;
+  final String imageBase64;
+
+  factory VisualNote.fromJson(Map<String, dynamic> json) {
+    return VisualNote(
+      title: json['title'] as String? ?? '',
+      caption: json['caption'] as String? ?? '',
+      imageBase64: json['imageBase64'] as String? ?? '',
+    );
+  }
+}
+
 class TurkishUnitText {
   const TurkishUnitText._();
 
   static String normalize(String input) {
     if (input.isEmpty) return input;
-
     var value = input;
-
-    value = value.replaceAll(
-      RegExp(r'0[,.]60\s*scm\s*/\s*21\s*scf', caseSensitive: false),
-      '0,60 Nm³',
-    );
-    value = value.replaceAll(
-      RegExp(r'21\s*scf', caseSensitive: false),
-      '0,60 Nm³',
-    );
-    value = value.replaceAll(
-      RegExp(r'0[,.]75\s*cfm\s*/\s*(yaklaşık\s*)?0[,.]021\s*m3\s*/\s*dk', caseSensitive: false),
-      'yaklaşık 21 L/dk (0,021 m³/dk)',
-    );
-    value = value.replaceAll(
-      RegExp(r'0[,.]021\s*m3\s*/\s*dk', caseSensitive: false),
-      '0,021 m³/dk (yaklaşık 21 L/dk)',
-    );
-    value = value.replaceAll(
-      RegExp(r'0[,.]00057\s*m3\s*/\s*dk\s*/\s*0[,.]020\s*cfm', caseSensitive: false),
-      '0,00057 m³/dk (yaklaşık 0,57 L/dk)',
-    );
-    value = value.replaceAll(
-      RegExp(r'0[,.]020\s*cfm', caseSensitive: false),
-      '0,57 L/dk (0,00057 m³/dk)',
-    );
-    value = value.replaceAll(
-      RegExp(r'0[,.]00057\s*m3\s*/\s*dk', caseSensitive: false),
-      '0,00057 m³/dk',
-    );
-
+    value = value.replaceAll(RegExp(r'0[,.]60\s*scm\s*/\s*21\s*scf', caseSensitive: false), '0,60 Nm³');
+    value = value.replaceAll(RegExp(r'21\s*scf', caseSensitive: false), '0,60 Nm³');
+    value = value.replaceAll(RegExp(r'0[,.]75\s*cfm\s*/\s*(yaklaşık\s*)?0[,.]021\s*m3\s*/\s*dk', caseSensitive: false), 'yaklaşık 21 L/dk (0,021 m³/dk)');
+    value = value.replaceAll(RegExp(r'0[,.]021\s*m3\s*/\s*dk', caseSensitive: false), '0,021 m³/dk (yaklaşık 21 L/dk)');
+    value = value.replaceAll(RegExp(r'0[,.]00057\s*m3\s*/\s*dk\s*/\s*0[,.]020\s*cfm', caseSensitive: false), '0,00057 m³/dk (yaklaşık 0,57 L/dk)');
+    value = value.replaceAll(RegExp(r'0[,.]020\s*cfm', caseSensitive: false), '0,57 L/dk (0,00057 m³/dk)');
+    value = value.replaceAll(RegExp(r'0[,.]00057\s*m3\s*/\s*dk', caseSensitive: false), '0,00057 m³/dk');
     value = value.replaceAll(RegExp(r'\bscm\b', caseSensitive: false), 'Nm³');
     value = value.replaceAll(RegExp(r'\bscf\b', caseSensitive: false), 'standart ft³ (Türkiye karşılığı: Nm³)');
     value = value.replaceAll(RegExp(r'\bcfm\b', caseSensitive: false), 'ft³/dk (Türkiye karşılığı: m³/dk veya L/dk)');
     value = value.replaceAll(RegExp(r'\bm3\s*/\s*dk\b', caseSensitive: false), 'm³/dk');
     value = value.replaceAll(RegExp(r'\bm3\b', caseSensitive: false), 'm³');
     value = value.replaceAll(RegExp(r'\bm2\b', caseSensitive: false), 'm²');
-
     return value;
   }
 }
