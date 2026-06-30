@@ -202,7 +202,7 @@ class _AppDrawer extends StatelessWidget {
             ListTile(
               leading: const Icon(Icons.photo_library_outlined),
               title: const Text('Görsel Arşivi'),
-              subtitle: const Text('Aktif görsel, bilinçli arşiv ve kontrol listesi'),
+              subtitle: const Text('Aktif görsel, bilinçli arşiv ve otomatik ham görseller'),
               onTap: () {
                 Navigator.pop(context);
                 Navigator.of(context).push(MaterialPageRoute(builder: (_) => const VisualManifestIndexPage()));
@@ -687,7 +687,7 @@ class OfflineTestPage extends StatelessWidget {
           _InfoBlock(title: 'Test 1', body: 'Telefonu uçak moduna al. Uygulama açılıyorsa APK offline çalışıyor demektir.'),
           _InfoBlock(title: 'Test 2', body: 'Standartlar Rehberi ekranında arama yap. Sonuçlar geliyorsa JSON verileri APK içine gömülmüştür.'),
           _InfoBlock(title: 'Test 3', body: 'Görsel eğitim notu olan bir standarda gir. Görsel görünüyorsa assets/visuals içeriği APK içine gömülmüştür.'),
-          _InfoBlock(title: 'Test 4', body: 'Görsel yerine eksik dosya uyarısı çıkarsa ilgili JPG dosyası assets/visuals klasörüne yüklenmemiştir.'),
+          _InfoBlock(title: 'Test 4', body: 'Görsel Arşivi ekranını aç. Yüklenen tüm ham JPG dosyaları listeleniyorsa otomatik görsel keşfi çalışıyor demektir.'),
         ],
       ),
     );
@@ -938,14 +938,63 @@ class StandardsRepository {
 
 class VisualManifestRepository {
   static Future<List<VisualManifestItem>> loadItems() async {
+    final byAsset = <String, VisualManifestItem>{};
+
     try {
       final raw = await rootBundle.loadString('assets/visual_manifest_extra.json');
       final decoded = jsonDecode(raw);
-      if (decoded is! List<dynamic>) return const <VisualManifestItem>[];
-      return decoded.whereType<Map<String, dynamic>>().map(VisualManifestItem.fromJson).toList();
+      if (decoded is List<dynamic>) {
+        for (final entry in decoded.whereType<Map<String, dynamic>>()) {
+          final item = VisualManifestItem.fromJson(entry);
+          if (item.imageAsset.trim().isNotEmpty) {
+            byAsset[item.imageAsset] = item;
+          }
+        }
+      }
     } catch (_) {
-      return const <VisualManifestItem>[];
+      // Manifest dosyası okunamazsa ham görseller AssetManifest üzerinden yine listelenir.
     }
+
+    final discoveredAssets = await _discoverVisualAssets();
+    for (final assetPath in discoveredAssets) {
+      byAsset.putIfAbsent(
+        assetPath,
+        () => VisualManifestItem(
+          filename: _filenameFromPath(assetPath),
+          imageAsset: assetPath,
+          status: 'kontrol_bekliyor',
+          statusLabel: 'Kontrol bekliyor',
+          topic: 'Ham görsel',
+          note: 'assets/visuals içinde bulundu; henüz aktif görsel, metin işlendi veya bilinçli arşiv sınıfına ayrılmadı.',
+        ),
+      );
+    }
+
+    final items = byAsset.values.toList();
+    items.sort((a, b) => a.filename.compareTo(b.filename));
+    return items;
+  }
+
+  static Future<List<String>> _discoverVisualAssets() async {
+    try {
+      final raw = await rootBundle.loadString('AssetManifest.json');
+      final decoded = jsonDecode(raw);
+      if (decoded is Map<String, dynamic>) {
+        final paths = decoded.keys
+            .where((key) => key.startsWith('assets/visuals/') && key.toLowerCase().endsWith('.jpg'))
+            .toList();
+        paths.sort();
+        return paths;
+      }
+    } catch (_) {
+      // Bazı Flutter sürümlerinde AssetManifest okunamazsa sadece manuel manifest kullanılır.
+    }
+    return const <String>[];
+  }
+
+  static String _filenameFromPath(String path) {
+    final parts = path.split('/');
+    return parts.isEmpty ? path : parts.last;
   }
 }
 
