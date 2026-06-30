@@ -58,7 +58,7 @@ class _StandardsHomePageState extends State<StandardsHomePage> {
   }
 
   List<StandardItem> _filter(List<StandardItem> items) {
-    final normalizedQuery = _query.toLowerCase().trim();
+    final normalizedQuery = TurkishUnitText.normalize(_query).toLowerCase().trim();
     return items.where((item) {
       final categoryMatches = _selectedCategory == 'Tümü' || item.category == _selectedCategory;
       if (!categoryMatches) return false;
@@ -142,7 +142,7 @@ class _StandardsHomePageState extends State<StandardsHomePage> {
                       const SizedBox(width: 6),
                       Expanded(
                         child: Text(
-                          'Offline çalışır • İlk sürüm saha kontrol rehberi',
+                          'Offline çalışır • Birimler TR saha kullanımına çevrilir',
                           style: Theme.of(context).textTheme.bodySmall,
                         ),
                       ),
@@ -217,7 +217,7 @@ class StandardCard extends StatelessWidget {
                 ],
               ),
               const SizedBox(height: 10),
-              Text(item.purpose, maxLines: 3, overflow: TextOverflow.ellipsis),
+              Text(TurkishUnitText.normalize(item.purpose), maxLines: 3, overflow: TextOverflow.ellipsis),
             ],
           ),
         ),
@@ -253,6 +253,7 @@ class StandardDetailPage extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 16),
+          const _UnitInfoBlock(),
           _InfoBlock(title: 'Amaç', body: item.purpose),
           _InfoBlock(title: 'Ölçüm süresi', body: item.duration),
           _InfoBlock(title: 'Debi / hacim notu', body: item.flowRate),
@@ -278,6 +279,35 @@ class StandardDetailPage extends StatelessWidget {
   }
 }
 
+class _UnitInfoBlock extends StatelessWidget {
+  const _UnitInfoBlock();
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      elevation: 0,
+      color: Theme.of(context).colorScheme.secondaryContainer,
+      margin: const EdgeInsets.only(bottom: 12),
+      child: Padding(
+        padding: const EdgeInsets.all(14),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              'Birim notu',
+              style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w800),
+            ),
+            const SizedBox(height: 8),
+            const Text(
+              'Bu rehberde Amerikan kaynaklı scf/scm/cfm ifadeleri Türkiye saha kullanımına çevrilmiş olarak gösterilir: Nm³, m³/dk ve L/dk esas alınır.',
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
 class _InfoBlock extends StatelessWidget {
   const _InfoBlock({required this.title, required this.body});
 
@@ -286,7 +316,8 @@ class _InfoBlock extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    if (body.trim().isEmpty) return const SizedBox.shrink();
+    final displayBody = TurkishUnitText.normalize(body);
+    if (displayBody.trim().isEmpty) return const SizedBox.shrink();
     return Card(
       elevation: 0,
       color: Theme.of(context).colorScheme.surfaceContainerHighest,
@@ -298,7 +329,7 @@ class _InfoBlock extends StatelessWidget {
           children: [
             Text(title, style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w800)),
             const SizedBox(height: 8),
-            Text(body),
+            Text(displayBody),
           ],
         ),
       ),
@@ -319,7 +350,7 @@ class _MiniChip extends StatelessWidget {
         color: Theme.of(context).colorScheme.primaryContainer,
         borderRadius: BorderRadius.circular(999),
       ),
-      child: Text(label, style: Theme.of(context).textTheme.labelSmall),
+      child: Text(TurkishUnitText.normalize(label), style: Theme.of(context).textTheme.labelSmall),
     );
   }
 }
@@ -367,7 +398,7 @@ class StandardItem {
   final List<String> reporting;
   final List<String> mistakes;
 
-  String get searchText => [
+  String get searchText => TurkishUnitText.normalize([
         title,
         code,
         category,
@@ -383,7 +414,7 @@ class StandardItem {
         ...acceptance,
         ...reporting,
         ...mistakes,
-      ].join(' ').toLowerCase();
+      ].join(' ')).toLowerCase();
 
   factory StandardItem.fromJson(Map<String, dynamic> json) {
     return StandardItem(
@@ -408,5 +439,55 @@ class StandardItem {
   static List<String> _list(dynamic value) {
     if (value is! List) return const <String>[];
     return value.map((item) => item.toString()).toList();
+  }
+}
+
+class TurkishUnitText {
+  const TurkishUnitText._();
+
+  static String normalize(String input) {
+    if (input.isEmpty) return input;
+
+    var value = input;
+
+    // EPA dokümanlarından gelen yaygın Amerikan hacim/debi ifadeleri.
+    value = value.replaceAll(
+      RegExp(r'0[,.]60\s*scm\s*/\s*21\s*scf', caseSensitive: false),
+      '0,60 Nm³',
+    );
+    value = value.replaceAll(
+      RegExp(r'21\s*scf', caseSensitive: false),
+      '0,60 Nm³',
+    );
+    value = value.replaceAll(
+      RegExp(r'0[,.]75\s*cfm\s*/\s*(yaklaşık\s*)?0[,.]021\s*m3\s*/\s*dk', caseSensitive: false),
+      'yaklaşık 21 L/dk (0,021 m³/dk)',
+    );
+    value = value.replaceAll(
+      RegExp(r'0[,.]021\s*m3\s*/\s*dk', caseSensitive: false),
+      '0,021 m³/dk (yaklaşık 21 L/dk)',
+    );
+    value = value.replaceAll(
+      RegExp(r'0[,.]00057\s*m3\s*/\s*dk\s*/\s*0[,.]020\s*cfm', caseSensitive: false),
+      '0,00057 m³/dk (yaklaşık 0,57 L/dk)',
+    );
+    value = value.replaceAll(
+      RegExp(r'0[,.]020\s*cfm', caseSensitive: false),
+      '0,57 L/dk (0,00057 m³/dk)',
+    );
+    value = value.replaceAll(
+      RegExp(r'0[,.]00057\s*m3\s*/\s*dk', caseSensitive: false),
+      '0,00057 m³/dk',
+    );
+
+    // Genel birim Türkçeleştirme ve üst indis düzeltmeleri.
+    value = value.replaceAll(RegExp(r'\bscm\b', caseSensitive: false), 'Nm³');
+    value = value.replaceAll(RegExp(r'\bscf\b', caseSensitive: false), 'standart ft³ (Türkiye karşılığı: Nm³)');
+    value = value.replaceAll(RegExp(r'\bcfm\b', caseSensitive: false), 'ft³/dk (Türkiye karşılığı: m³/dk veya L/dk)');
+    value = value.replaceAll(RegExp(r'\bm3\s*/\s*dk\b', caseSensitive: false), 'm³/dk');
+    value = value.replaceAll(RegExp(r'\bm3\b', caseSensitive: false), 'm³');
+    value = value.replaceAll(RegExp(r'\bm2\b', caseSensitive: false), 'm²');
+
+    return value;
   }
 }
