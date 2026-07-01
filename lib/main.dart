@@ -15,7 +15,7 @@ class StandardsApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Standartlar Cep Rehberi',
+      title: 'Emisyon İmisyon Ölçüm Standartları',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF145DA0)),
         useMaterial3: true,
@@ -71,9 +71,8 @@ class _StandardsHomePageState extends State<StandardsHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: const _AppDrawer(),
       appBar: AppBar(
-        title: const Text('Emisyon / İmisyon Cep Rehberi'),
+        title: const Text('Emisyon İmisyon Ölçüm Standartları'),
         centerTitle: false,
       ),
       body: SafeArea(
@@ -144,7 +143,7 @@ class _StandardsHomePageState extends State<StandardsHomePage> {
                       const SizedBox(width: 6),
                       Expanded(
                         child: Text(
-                          'Tamamen offline çalışır • Ek standart, görsel ve program sayfaları aktif',
+                          'Tamamen offline • Sahacı odaklı profesyonel standart rehberi',
                           style: Theme.of(context).textTheme.bodySmall,
                         ),
                       ),
@@ -171,69 +170,6 @@ class _StandardsHomePageState extends State<StandardsHomePage> {
   }
 }
 
-class _AppDrawer extends StatelessWidget {
-  const _AppDrawer();
-
-  @override
-  Widget build(BuildContext context) {
-    return Drawer(
-      child: SafeArea(
-        child: ListView(
-          children: [
-            DrawerHeader(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  Icon(Icons.offline_bolt, color: Theme.of(context).colorScheme.primary, size: 34),
-                  const SizedBox(height: 10),
-                  Text('Offline APK Programı', style: Theme.of(context).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.w800)),
-                  const SizedBox(height: 4),
-                  const Text('Streamlit rehber mantığının telefona gömülü Flutter karşılığı'),
-                ],
-              ),
-            ),
-            ListTile(
-              leading: const Icon(Icons.menu_book),
-              title: const Text('Standartlar Rehberi'),
-              subtitle: const Text('Arama, kategori ve detay ekranları'),
-              onTap: () => Navigator.pop(context),
-            ),
-            ListTile(
-              leading: const Icon(Icons.photo_library_outlined),
-              title: const Text('Görsel Arşivi'),
-              subtitle: const Text('Aktif görsel, bilinçli arşiv ve otomatik ham görseller'),
-              onTap: () {
-                Navigator.pop(context);
-                Navigator.of(context).push(MaterialPageRoute(builder: (_) => const VisualManifestIndexPage()));
-              },
-            ),
-            ListTile(
-              leading: const Icon(Icons.dashboard_customize),
-              title: const Text('Tam Program Sayfaları'),
-              subtitle: const Text('Görsel arşiv, rapor, kontrol ve sorun giderme'),
-              onTap: () {
-                Navigator.pop(context);
-                Navigator.of(context).push(MaterialPageRoute(builder: (_) => const ProgramPagesIndexPage()));
-              },
-            ),
-            const Divider(),
-            ListTile(
-              leading: const Icon(Icons.info_outline),
-              title: const Text('Offline test'),
-              subtitle: const Text('Telefonu uçak moduna alıp APK içinde kontrol et'),
-              onTap: () {
-                Navigator.pop(context);
-                Navigator.of(context).push(MaterialPageRoute(builder: (_) => const OfflineTestPage()));
-              },
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
-
 class StandardCard extends StatelessWidget {
   const StandardCard({super.key, required this.item});
 
@@ -245,9 +181,7 @@ class StandardCard extends StatelessWidget {
       elevation: 1,
       clipBehavior: Clip.antiAlias,
       child: InkWell(
-        onTap: () => Navigator.of(context).push(
-          MaterialPageRoute(builder: (_) => StandardDetailPage(item: item)),
-        ),
+        onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => StandardDetailPage(item: item))),
         child: Padding(
           padding: const EdgeInsets.all(14),
           child: Column(
@@ -257,10 +191,7 @@ class StandardCard extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Expanded(
-                    child: Text(
-                      item.title,
-                      style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w700),
-                    ),
+                    child: Text(item.title, style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w800)),
                   ),
                   const SizedBox(width: 8),
                   const Icon(Icons.chevron_right),
@@ -270,15 +201,11 @@ class StandardCard extends StatelessWidget {
               Wrap(
                 spacing: 6,
                 runSpacing: 6,
-                children: [
-                  _MiniChip(label: item.code),
-                  _MiniChip(label: item.category),
-                  _MiniChip(label: item.subgroup),
-                ],
+                children: [_MiniChip(label: item.code), _MiniChip(label: item.category), _MiniChip(label: item.subgroup)],
               ),
               const SizedBox(height: 10),
               Text(TurkishUnitText.normalize(item.purpose), maxLines: 3, overflow: TextOverflow.ellipsis),
-              if (item.educationNotes.isNotEmpty || item.visualNotes.isNotEmpty) ...[
+              if (item.visualNotes.isNotEmpty || item.educationNotes.isNotEmpty) ...[
                 const SizedBox(height: 8),
                 Row(
                   children: [
@@ -286,7 +213,7 @@ class StandardCard extends StatelessWidget {
                     const SizedBox(width: 5),
                     Expanded(
                       child: Text(
-                        '${item.educationNotes.length} eğitim notu • ${item.visualNotes.length} görsel',
+                        '${item.educationNotes.length} eğitim notu • ${item.visualNotes.length} seçilmiş görsel',
                         style: Theme.of(context).textTheme.labelMedium,
                       ),
                     ),
@@ -306,40 +233,50 @@ class StandardDetailPage extends StatelessWidget {
 
   final StandardItem item;
 
+  List<VisualNote> _notes(String placement) {
+    return item.visualNotes.where((note) => note.placement == placement).toList();
+  }
+
+  List<VisualNote> get _unplacedNotes {
+    const known = <String>{'purpose', 'quality', 'flowRate', 'equipment', 'fieldSteps', 'criticalControls', 'acceptance', 'reporting'};
+    return item.visualNotes.where((note) => !known.contains(note.placement)).toList();
+  }
+
   @override
   Widget build(BuildContext context) {
+    final purposeNotes = [..._notes('purpose'), ..._notes('quality')];
     return Scaffold(
       appBar: AppBar(title: Text(item.code)),
       body: ListView(
         padding: const EdgeInsets.fromLTRB(16, 12, 16, 24),
         children: [
-          Text(
-            item.title,
-            style: Theme.of(context).textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.w800),
-          ),
+          Text(item.title, style: Theme.of(context).textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.w800)),
           const SizedBox(height: 8),
           Wrap(
             spacing: 8,
             runSpacing: 8,
-            children: [
-              _MiniChip(label: item.category),
-              _MiniChip(label: item.subgroup),
-              _MiniChip(label: item.code),
-            ],
+            children: [_MiniChip(label: item.category), _MiniChip(label: item.subgroup), _MiniChip(label: item.code)],
           ),
           const SizedBox(height: 16),
           const _UnitInfoBlock(),
-          _VisualNotesBlock(notes: item.visualNotes),
-          _InfoBlock(title: 'Eğitim dokümanı ayrıntıları', body: _numbered(item.educationNotes)),
-          _InfoBlock(title: 'Amaç', body: item.purpose),
+          _InfoBlock(title: 'Amaç / kullanım alanı', body: item.purpose),
+          _VisualNotesBlock(notes: purposeNotes),
           _InfoBlock(title: 'Ölçüm süresi', body: item.duration),
           _InfoBlock(title: 'Debi / hacim notu', body: item.flowRate),
+          _VisualNotesBlock(notes: _notes('flowRate')),
           _InfoBlock(title: 'Cihaz / ekipman', body: item.equipment.join('\n')),
+          _VisualNotesBlock(notes: _notes('equipment')),
           _InfoBlock(title: 'Çözelti / absorban', body: item.reagents.join('\n')),
           _InfoBlock(title: 'Saha adımları', body: _numbered(item.fieldSteps)),
+          _VisualNotesBlock(notes: _notes('fieldSteps')),
           _InfoBlock(title: 'Kritik teknik kontroller', body: item.criticalControls.join('\n')),
+          _VisualNotesBlock(notes: _notes('criticalControls')),
           _InfoBlock(title: 'Kabul / ret kriterleri', body: item.acceptance.join('\n')),
+          _VisualNotesBlock(notes: _notes('acceptance')),
           _InfoBlock(title: 'Raporlama notları', body: item.reporting.join('\n')),
+          _VisualNotesBlock(notes: _notes('reporting')),
+          _InfoBlock(title: 'Eğitim dokümanı ayrıntıları', body: _numbered(item.educationNotes)),
+          _VisualNotesBlock(notes: _unplacedNotes),
           _InfoBlock(title: 'Sık yapılan saha hataları', body: item.mistakes.join('\n')),
           const SizedBox(height: 12),
           Text(
@@ -353,344 +290,6 @@ class StandardDetailPage extends StatelessWidget {
 
   String _numbered(List<String> values) {
     return values.asMap().entries.map((entry) => '${entry.key + 1}. ${entry.value}').join('\n');
-  }
-}
-
-class VisualManifestIndexPage extends StatefulWidget {
-  const VisualManifestIndexPage({super.key});
-
-  @override
-  State<VisualManifestIndexPage> createState() => _VisualManifestIndexPageState();
-}
-
-class _VisualManifestIndexPageState extends State<VisualManifestIndexPage> {
-  late final Future<List<VisualManifestItem>> _itemsFuture;
-  String _selectedStatus = 'Tümü';
-
-  @override
-  void initState() {
-    super.initState();
-    _itemsFuture = VisualManifestRepository.loadItems();
-  }
-
-  List<String> _statuses(List<VisualManifestItem> items) {
-    final statuses = <String>{'Tümü'};
-    for (final item in items) {
-      statuses.add(item.statusLabel);
-    }
-    return statuses.toList();
-  }
-
-  List<VisualManifestItem> _filter(List<VisualManifestItem> items) {
-    return items.where((item) => _selectedStatus == 'Tümü' || item.statusLabel == _selectedStatus).toList();
-  }
-
-  int _countStatus(List<VisualManifestItem> items, String status) {
-    return items.where((item) => item.status == status).length;
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text('Görsel Arşivi')),
-      body: SafeArea(
-        child: FutureBuilder<List<VisualManifestItem>>(
-          future: _itemsFuture,
-          builder: (context, snapshot) {
-            if (snapshot.connectionState == ConnectionState.waiting) {
-              return const Center(child: CircularProgressIndicator());
-            }
-            if (snapshot.hasError) {
-              return Center(child: Padding(padding: const EdgeInsets.all(24), child: Text('Görsel arşivi okunamadı: ${snapshot.error}')));
-            }
-            final items = snapshot.data ?? const <VisualManifestItem>[];
-            final filtered = _filter(items);
-            final statuses = _statuses(items);
-
-            return Column(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(16, 12, 16, 8),
-                  child: Card(
-                    elevation: 0,
-                    color: Theme.of(context).colorScheme.secondaryContainer,
-                    child: Padding(
-                      padding: const EdgeInsets.all(14),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text('Offline görsel manifesti', style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w800)),
-                          const SizedBox(height: 8),
-                          Text('Toplam ${items.length} kayıt • Aktif ${_countStatus(items, 'aktif_gorsel')} • Bilinçli arşiv ${_countStatus(items, 'bilincli_arsiv')} • Kontrol ${_countStatus(items, 'kontrol_bekliyor')}'),
-                        ],
-                      ),
-                    ),
-                  ),
-                ),
-                SizedBox(
-                  height: 52,
-                  child: ListView.separated(
-                    padding: const EdgeInsets.symmetric(horizontal: 16),
-                    scrollDirection: Axis.horizontal,
-                    itemCount: statuses.length,
-                    separatorBuilder: (_, __) => const SizedBox(width: 8),
-                    itemBuilder: (context, index) {
-                      final status = statuses[index];
-                      return ChoiceChip(
-                        label: Text(status),
-                        selected: _selectedStatus == status,
-                        onSelected: (_) => setState(() => _selectedStatus = status),
-                      );
-                    },
-                  ),
-                ),
-                Expanded(
-                  child: filtered.isEmpty
-                      ? const Center(child: Text('Bu filtrede görsel kaydı yok.'))
-                      : ListView.separated(
-                          padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
-                          itemCount: filtered.length,
-                          separatorBuilder: (_, __) => const SizedBox(height: 10),
-                          itemBuilder: (context, index) => VisualManifestCard(item: filtered[index]),
-                        ),
-                ),
-              ],
-            );
-          },
-        ),
-      ),
-    );
-  }
-}
-
-class VisualManifestCard extends StatelessWidget {
-  const VisualManifestCard({super.key, required this.item});
-
-  final VisualManifestItem item;
-
-  @override
-  Widget build(BuildContext context) {
-    return Card(
-      elevation: 1,
-      clipBehavior: Clip.antiAlias,
-      child: Padding(
-        padding: const EdgeInsets.all(12),
-        child: Row(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            ClipRRect(
-              borderRadius: BorderRadius.circular(10),
-              child: Image.asset(
-                item.imageAsset,
-                width: 84,
-                height: 84,
-                fit: BoxFit.cover,
-                errorBuilder: (context, error, stackTrace) => Container(
-                  width: 84,
-                  height: 84,
-                  alignment: Alignment.center,
-                  color: Theme.of(context).colorScheme.errorContainer,
-                  child: const Icon(Icons.broken_image_outlined),
-                ),
-              ),
-            ),
-            const SizedBox(width: 12),
-            Expanded(
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(item.filename, style: Theme.of(context).textTheme.titleSmall?.copyWith(fontWeight: FontWeight.w800)),
-                  const SizedBox(height: 6),
-                  Wrap(
-                    spacing: 6,
-                    runSpacing: 6,
-                    children: [
-                      _MiniChip(label: item.statusLabel),
-                      _MiniChip(label: item.topic),
-                    ],
-                  ),
-                  const SizedBox(height: 8),
-                  Text(item.note, maxLines: 4, overflow: TextOverflow.ellipsis),
-                ],
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-}
-
-class ProgramPagesIndexPage extends StatefulWidget {
-  const ProgramPagesIndexPage({super.key});
-
-  @override
-  State<ProgramPagesIndexPage> createState() => _ProgramPagesIndexPageState();
-}
-
-class _ProgramPagesIndexPageState extends State<ProgramPagesIndexPage> {
-  late final Future<List<ProgramPageItem>> _itemsFuture;
-  String _selectedCategory = 'Tümü';
-
-  @override
-  void initState() {
-    super.initState();
-    _itemsFuture = ProgramPagesRepository.loadItems();
-  }
-
-  List<String> _categories(List<ProgramPageItem> items) {
-    final categories = <String>{'Tümü'};
-    for (final item in items) {
-      categories.add(item.category);
-    }
-    return categories.toList();
-  }
-
-  List<ProgramPageItem> _filter(List<ProgramPageItem> items) {
-    return items.where((item) => _selectedCategory == 'Tümü' || item.category == _selectedCategory).toList();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text('Tam Program Sayfaları')),
-      body: SafeArea(
-        child: FutureBuilder<List<ProgramPageItem>>(
-          future: _itemsFuture,
-          builder: (context, snapshot) {
-            if (snapshot.connectionState == ConnectionState.waiting) {
-              return const Center(child: CircularProgressIndicator());
-            }
-            if (snapshot.hasError) {
-              return Center(child: Padding(padding: const EdgeInsets.all(24), child: Text('Program sayfaları okunamadı: ${snapshot.error}')));
-            }
-            final items = snapshot.data ?? const <ProgramPageItem>[];
-            final categories = _categories(items);
-            final filtered = _filter(items);
-            return Column(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(16, 12, 16, 8),
-                  child: Card(
-                    elevation: 0,
-                    color: Theme.of(context).colorScheme.secondaryContainer,
-                    child: const Padding(
-                      padding: EdgeInsets.all(14),
-                      child: Text('Bu bölüm, Streamlit tarafında hazırlanan tam görsel/standart program mantığının offline APK karşılığıdır.'),
-                    ),
-                  ),
-                ),
-                SizedBox(
-                  height: 52,
-                  child: ListView.separated(
-                    padding: const EdgeInsets.symmetric(horizontal: 16),
-                    scrollDirection: Axis.horizontal,
-                    itemCount: categories.length,
-                    separatorBuilder: (_, __) => const SizedBox(width: 8),
-                    itemBuilder: (context, index) {
-                      final category = categories[index];
-                      return ChoiceChip(
-                        label: Text(category),
-                        selected: _selectedCategory == category,
-                        onSelected: (_) => setState(() => _selectedCategory = category),
-                      );
-                    },
-                  ),
-                ),
-                Expanded(
-                  child: ListView.separated(
-                    padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
-                    itemCount: filtered.length,
-                    separatorBuilder: (_, __) => const SizedBox(height: 10),
-                    itemBuilder: (context, index) => ProgramPageCard(item: filtered[index]),
-                  ),
-                ),
-              ],
-            );
-          },
-        ),
-      ),
-    );
-  }
-}
-
-class ProgramPageCard extends StatelessWidget {
-  const ProgramPageCard({super.key, required this.item});
-
-  final ProgramPageItem item;
-
-  @override
-  Widget build(BuildContext context) {
-    return Card(
-      elevation: 1,
-      clipBehavior: Clip.antiAlias,
-      child: InkWell(
-        onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => ProgramPageDetailPage(item: item))),
-        child: Padding(
-          padding: const EdgeInsets.all(14),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Row(
-                children: [
-                  Expanded(child: Text(item.title, style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w800))),
-                  const Icon(Icons.chevron_right),
-                ],
-              ),
-              const SizedBox(height: 6),
-              _MiniChip(label: item.category),
-              const SizedBox(height: 10),
-              Text(item.summary),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-}
-
-class ProgramPageDetailPage extends StatelessWidget {
-  const ProgramPageDetailPage({super.key, required this.item});
-
-  final ProgramPageItem item;
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: Text(item.title)),
-      body: ListView(
-        padding: const EdgeInsets.fromLTRB(16, 12, 16, 24),
-        children: [
-          Text(item.title, style: Theme.of(context).textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.w800)),
-          const SizedBox(height: 8),
-          _MiniChip(label: item.category),
-          const SizedBox(height: 12),
-          Text(item.summary),
-          const SizedBox(height: 16),
-          for (final section in item.sections) _InfoBlock(title: section.title, body: section.body),
-        ],
-      ),
-    );
-  }
-}
-
-class OfflineTestPage extends StatelessWidget {
-  const OfflineTestPage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text('Offline APK Testi')),
-      body: ListView(
-        padding: const EdgeInsets.all(16),
-        children: const [
-          _InfoBlock(title: 'Test 1', body: 'Telefonu uçak moduna al. Uygulama açılıyorsa APK offline çalışıyor demektir.'),
-          _InfoBlock(title: 'Test 2', body: 'Standartlar Rehberi ekranında arama yap. Sonuçlar geliyorsa JSON verileri APK içine gömülmüştür.'),
-          _InfoBlock(title: 'Test 3', body: 'Görsel eğitim notu olan bir standarda gir. Görsel görünüyorsa assets/visuals içeriği APK içine gömülmüştür.'),
-          _InfoBlock(title: 'Test 4', body: 'Görsel Arşivi ekranını aç. Yüklenen tüm ham JPG dosyaları listeleniyorsa otomatik görsel keşfi çalışıyor demektir.'),
-        ],
-      ),
-    );
   }
 }
 
@@ -708,20 +307,26 @@ class _VisualNotesBlock extends StatelessWidget {
         for (final note in notes)
           Card(
             elevation: 0,
-            color: Theme.of(context).colorScheme.tertiaryContainer,
+            color: Theme.of(context).colorScheme.tertiaryContainer.withAlpha(120),
             margin: const EdgeInsets.only(bottom: 12),
             child: Padding(
               padding: const EdgeInsets.all(14),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text('Görsel eğitim notu', style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w800)),
-                  const SizedBox(height: 8),
-                  Text(note.title, style: Theme.of(context).textTheme.titleSmall?.copyWith(fontWeight: FontWeight.w700)),
+                  Row(
+                    children: [
+                      Icon(Icons.image_search, size: 18, color: Theme.of(context).colorScheme.primary),
+                      const SizedBox(width: 6),
+                      Expanded(child: Text(note.title, style: Theme.of(context).textTheme.titleSmall?.copyWith(fontWeight: FontWeight.w800))),
+                    ],
+                  ),
                   const SizedBox(height: 10),
                   _VisualImage(note: note),
-                  const SizedBox(height: 10),
+                  const SizedBox(height: 8),
                   Text(TurkishUnitText.normalize(note.caption)),
+                  const SizedBox(height: 4),
+                  Text('Görseli büyütmek için çift dokun.', style: Theme.of(context).textTheme.bodySmall),
                 ],
               ),
             ),
@@ -738,29 +343,32 @@ class _VisualImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final imageWidget = _buildImage(context);
+    return GestureDetector(
+      onTap: () => _open(context),
+      onDoubleTap: () => _open(context),
+      child: ClipRRect(borderRadius: BorderRadius.circular(12), child: imageWidget),
+    );
+  }
+
+  Widget _buildImage(BuildContext context) {
     if (note.imageAsset.trim().isNotEmpty) {
-      return ClipRRect(
-        borderRadius: BorderRadius.circular(12),
-        child: Image.asset(
-          note.imageAsset,
-          fit: BoxFit.contain,
-          width: double.infinity,
-          errorBuilder: (context, error, stackTrace) => _MissingVisualBox(path: note.imageAsset),
-        ),
+      return Image.asset(
+        note.imageAsset,
+        fit: BoxFit.contain,
+        width: double.infinity,
+        errorBuilder: (context, error, stackTrace) => _MissingVisualBox(path: note.imageAsset),
       );
     }
-
     if (note.imageBase64.trim().isNotEmpty) {
       final bytes = _tryDecodeBase64(note.imageBase64);
-      if (bytes != null) {
-        return ClipRRect(
-          borderRadius: BorderRadius.circular(12),
-          child: Image.memory(bytes, fit: BoxFit.contain, width: double.infinity),
-        );
-      }
+      if (bytes != null) return Image.memory(bytes, fit: BoxFit.contain, width: double.infinity);
     }
-
     return const _MissingVisualBox(path: 'Görsel verisi yok');
+  }
+
+  void _open(BuildContext context) {
+    Navigator.of(context).push(MaterialPageRoute(builder: (_) => ImageViewerPage(note: note)));
   }
 
   Uint8List? _tryDecodeBase64(String value) {
@@ -769,6 +377,57 @@ class _VisualImage extends StatelessWidget {
     } catch (_) {
       return null;
     }
+  }
+}
+
+class ImageViewerPage extends StatelessWidget {
+  const ImageViewerPage({super.key, required this.note});
+
+  final VisualNote note;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.black,
+      appBar: AppBar(
+        backgroundColor: Colors.black,
+        foregroundColor: Colors.white,
+        title: Text(note.title, maxLines: 1, overflow: TextOverflow.ellipsis),
+      ),
+      body: SafeArea(
+        child: Column(
+          children: [
+            Expanded(
+              child: InteractiveViewer(
+                minScale: 0.8,
+                maxScale: 6,
+                child: Center(child: _viewerImage()),
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(12),
+              child: Text(
+                TurkishUnitText.normalize(note.caption),
+                style: const TextStyle(color: Colors.white70),
+                textAlign: TextAlign.center,
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _viewerImage() {
+    if (note.imageAsset.trim().isNotEmpty) return Image.asset(note.imageAsset, fit: BoxFit.contain);
+    if (note.imageBase64.trim().isNotEmpty) {
+      try {
+        return Image.memory(base64Decode(note.imageBase64), fit: BoxFit.contain);
+      } catch (_) {
+        return const Text('Görsel açılamadı.', style: TextStyle(color: Colors.white));
+      }
+    }
+    return const Text('Görsel yok.', style: TextStyle(color: Colors.white));
   }
 }
 
@@ -782,10 +441,7 @@ class _MissingVisualBox extends StatelessWidget {
     return Container(
       width: double.infinity,
       padding: const EdgeInsets.all(14),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(12),
-        color: Theme.of(context).colorScheme.errorContainer,
-      ),
+      decoration: BoxDecoration(borderRadius: BorderRadius.circular(12), color: Theme.of(context).colorScheme.errorContainer),
       child: Text('Görsel APK içinde bulunamadı. Dosya yolu: $path', style: Theme.of(context).textTheme.bodySmall),
     );
   }
@@ -800,16 +456,9 @@ class _UnitInfoBlock extends StatelessWidget {
       elevation: 0,
       color: Theme.of(context).colorScheme.secondaryContainer,
       margin: const EdgeInsets.only(bottom: 12),
-      child: Padding(
-        padding: const EdgeInsets.all(14),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text('Birim notu', style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w800)),
-            const SizedBox(height: 8),
-            const Text('Bu rehberde Amerikan kaynaklı scf/scm/cfm ifadeleri Türkiye saha kullanımına çevrilmiş olarak gösterilir: Nm³, m³/dk ve L/dk esas alınır.'),
-          ],
-        ),
+      child: const Padding(
+        padding: EdgeInsets.all(14),
+        child: Text('Birim notu: Amerikan kaynaklı scf/scm/cfm ifadeleri Türkiye saha kullanımına uygun Nm³, m³/dk ve L/dk karşılıklarıyla değerlendirilir.'),
       ),
     );
   }
@@ -853,10 +502,7 @@ class _MiniChip extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 9, vertical: 5),
-      decoration: BoxDecoration(
-        color: Theme.of(context).colorScheme.primaryContainer,
-        borderRadius: BorderRadius.circular(999),
-      ),
+      decoration: BoxDecoration(color: Theme.of(context).colorScheme.primaryContainer, borderRadius: BorderRadius.circular(999)),
       child: Text(TurkishUnitText.normalize(label), style: Theme.of(context).textTheme.labelSmall),
     );
   }
@@ -876,7 +522,7 @@ class StandardsRepository {
     final notesByCode = await _loadEducationNotes();
     final visualsByCode = await _loadVisualNotes();
 
-    return decoded.map((item) {
+    final items = decoded.map((item) {
       final json = item as Map<String, dynamic>;
       final code = json['code'] as String? ?? '';
       final title = json['title'] as String? ?? '';
@@ -884,6 +530,9 @@ class StandardsRepository {
       final visuals = visualsByCode[code] ?? visualsByCode[title] ?? const <VisualNote>[];
       return StandardItem.fromJson(json, educationNotes: notes, visualNotes: visuals);
     }).toList();
+
+    items.sort((a, b) => a.title.compareTo(b.title));
+    return items;
   }
 
   static Future<List<dynamic>> _loadListAsset(String path) async {
@@ -891,10 +540,8 @@ class StandardsRepository {
       final raw = await rootBundle.loadString(path);
       final decoded = jsonDecode(raw);
       if (decoded is List<dynamic>) return decoded;
-      return const <dynamic>[];
-    } catch (_) {
-      return const <dynamic>[];
-    }
+    } catch (_) {}
+    return const <dynamic>[];
   }
 
   static Future<Map<String, dynamic>> _loadMapAsset(String path) async {
@@ -902,10 +549,8 @@ class StandardsRepository {
       final raw = await rootBundle.loadString(path);
       final decoded = jsonDecode(raw);
       if (decoded is Map<String, dynamic>) return decoded;
-      return const <String, dynamic>{};
-    } catch (_) {
-      return const <String, dynamic>{};
-    }
+    } catch (_) {}
+    return const <String, dynamic>{};
   }
 
   static Future<Map<String, List<String>>> _loadEducationNotes() async {
@@ -933,81 +578,6 @@ class StandardsRepository {
       }
     }
     return result;
-  }
-}
-
-class VisualManifestRepository {
-  static Future<List<VisualManifestItem>> loadItems() async {
-    final byAsset = <String, VisualManifestItem>{};
-
-    try {
-      final raw = await rootBundle.loadString('assets/visual_manifest_extra.json');
-      final decoded = jsonDecode(raw);
-      if (decoded is List<dynamic>) {
-        for (final entry in decoded.whereType<Map<String, dynamic>>()) {
-          final item = VisualManifestItem.fromJson(entry);
-          if (item.imageAsset.trim().isNotEmpty) {
-            byAsset[item.imageAsset] = item;
-          }
-        }
-      }
-    } catch (_) {
-      // Manifest dosyası okunamazsa ham görseller AssetManifest üzerinden yine listelenir.
-    }
-
-    final discoveredAssets = await _discoverVisualAssets();
-    for (final assetPath in discoveredAssets) {
-      byAsset.putIfAbsent(
-        assetPath,
-        () => VisualManifestItem(
-          filename: _filenameFromPath(assetPath),
-          imageAsset: assetPath,
-          status: 'kontrol_bekliyor',
-          statusLabel: 'Kontrol bekliyor',
-          topic: 'Ham görsel',
-          note: 'assets/visuals içinde bulundu; henüz aktif görsel, metin işlendi veya bilinçli arşiv sınıfına ayrılmadı.',
-        ),
-      );
-    }
-
-    final items = byAsset.values.toList();
-    items.sort((a, b) => a.filename.compareTo(b.filename));
-    return items;
-  }
-
-  static Future<List<String>> _discoverVisualAssets() async {
-    try {
-      final raw = await rootBundle.loadString('AssetManifest.json');
-      final decoded = jsonDecode(raw);
-      if (decoded is Map<String, dynamic>) {
-        final paths = decoded.keys
-            .where((key) => key.startsWith('assets/visuals/') && key.toLowerCase().endsWith('.jpg'))
-            .toList();
-        paths.sort();
-        return paths;
-      }
-    } catch (_) {
-      // Bazı Flutter sürümlerinde AssetManifest okunamazsa sadece manuel manifest kullanılır.
-    }
-    return const <String>[];
-  }
-
-  static String _filenameFromPath(String path) {
-    final parts = path.split('/');
-    return parts.isEmpty ? path : parts.last;
-  }
-}
-
-class ProgramPagesRepository {
-  static Future<List<ProgramPageItem>> loadItems() async {
-    try {
-      final raw = await rootBundle.loadString('assets/program_pages_extra.json');
-      final decoded = jsonDecode(raw);
-      if (decoded is! List<dynamic>) return const <ProgramPageItem>[];
-      return decoded.whereType<Map<String, dynamic>>().map(ProgramPageItem.fromJson).toList();
-    } catch (_) {
-      return const <ProgramPageItem>[];
-    }
   }
 }
 
@@ -1099,12 +669,13 @@ class StandardItem {
 }
 
 class VisualNote {
-  const VisualNote({required this.title, required this.caption, required this.imageBase64, required this.imageAsset});
+  const VisualNote({required this.title, required this.caption, required this.imageBase64, required this.imageAsset, required this.placement});
 
   final String title;
   final String caption;
   final String imageBase64;
   final String imageAsset;
+  final String placement;
 
   factory VisualNote.fromJson(Map<String, dynamic> json) {
     return VisualNote(
@@ -1112,63 +683,8 @@ class VisualNote {
       caption: json['caption'] as String? ?? '',
       imageBase64: json['imageBase64'] as String? ?? '',
       imageAsset: json['imageAsset'] as String? ?? '',
+      placement: json['placement'] as String? ?? 'general',
     );
-  }
-}
-
-class VisualManifestItem {
-  const VisualManifestItem({required this.filename, required this.imageAsset, required this.status, required this.statusLabel, required this.topic, required this.note});
-
-  final String filename;
-  final String imageAsset;
-  final String status;
-  final String statusLabel;
-  final String topic;
-  final String note;
-
-  factory VisualManifestItem.fromJson(Map<String, dynamic> json) {
-    return VisualManifestItem(
-      filename: json['filename'] as String? ?? '',
-      imageAsset: json['imageAsset'] as String? ?? '',
-      status: json['status'] as String? ?? '',
-      statusLabel: json['statusLabel'] as String? ?? '',
-      topic: json['topic'] as String? ?? '',
-      note: json['note'] as String? ?? '',
-    );
-  }
-}
-
-class ProgramPageItem {
-  const ProgramPageItem({required this.id, required this.title, required this.category, required this.summary, required this.sections});
-
-  final String id;
-  final String title;
-  final String category;
-  final String summary;
-  final List<ProgramPageSection> sections;
-
-  factory ProgramPageItem.fromJson(Map<String, dynamic> json) {
-    final rawSections = json['sections'];
-    return ProgramPageItem(
-      id: json['id'] as String? ?? '',
-      title: json['title'] as String? ?? '',
-      category: json['category'] as String? ?? '',
-      summary: json['summary'] as String? ?? '',
-      sections: rawSections is List
-          ? rawSections.whereType<Map<String, dynamic>>().map(ProgramPageSection.fromJson).toList()
-          : const <ProgramPageSection>[],
-    );
-  }
-}
-
-class ProgramPageSection {
-  const ProgramPageSection({required this.title, required this.body});
-
-  final String title;
-  final String body;
-
-  factory ProgramPageSection.fromJson(Map<String, dynamic> json) {
-    return ProgramPageSection(title: json['title'] as String? ?? '', body: json['body'] as String? ?? '');
   }
 }
 
