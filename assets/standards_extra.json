@@ -1,5 +1,22 @@
 [
   {
+    "title": "ISDL / MID Hedef Hacim ve Raporlama Limiti Planlaması",
+    "code": "ISDL / MID",
+    "category": "Emisyon",
+    "subgroup": "Kalite Kontrol / Raporlanabilirlik / Hedef Hacim",
+    "keywords": ["ISDL", "MID", "tayin limiti", "raporlama limiti", "minimum hacim", "ELV/10", "hedef hacim", "blank", "LOD", "LOQ"],
+    "purpose": "Sahaya çıkmadan önce ölçümün raporlanabilir olup olmayacağını kontrol etmek için hedef tayin limiti, limit değeri, laboratuvar blankı ve minimum örnekleme hacmini birlikte planlayan profesyonel saha rehberidir.",
+    "duration": "Süre sabit bir standart süresi değildir; hedef raporlama limiti, çekiş debisi, nokta sayısı ve minimum numune hacmine göre hesaplanır. Bu bölüm doğrudan kirletici standardı değil, tüm ölçümlerde kullanılan kalite kontrol planlama bölümüdür.",
+    "flowRate": "Minimum hacim hesabı, gerçek çekiş debisi ve normal/kuru hacim dönüşümüyle birlikte değerlendirilir. Sahada alınan gerçek hacim hedef hacmin altında kalırsa sonuç limitin altında olsa bile raporlanabilirlik zayıflar.",
+    "equipment": ["Laboratuvar tayin limiti/raporlama limiti bilgisi", "Hedef limit değeri veya ELV", "Örnekleme debisi ve süre planı", "Blank ve saha körü kayıtları", "Normal/kuru hacim dönüşüm bilgileri"],
+    "reagents": ["Bu bölüm reaktif metodu değildir; ilgili kirletici standardının çözelti/absorban şartları ayrıca uygulanır."],
+    "fieldSteps": ["Ölçümden önce ilgili kirletici için limit değeri ve hedef raporlama seviyesini belirle.", "Laboratuvarın tayin limiti, kör/blank yaklaşımı ve raporlama birimini doğrula.", "Gerekli minimum numune hacmini hesapla.", "Bu hacmi sahadaki debi ve nokta sayısına göre süre planına çevir.", "Ölçüm sonunda gerçek çekilen hacmi hedef hacimle karşılaştır.", "Hedef hacim tutmadıysa sonucu raporlarken raporlanabilirlik notu ekle."],
+    "criticalControls": ["ISDL görselleri doğrudan toz, hız tayini veya HCl görseli değildir; kalite kontrol ve raporlama limiti planı olarak ayrı değerlendirilir.", "mg, m³, Nm³ ve mg/Nm³ birimleri karıştırılmamalıdır.", "Blank yüksekse minimum hacim artsa bile raporlama limiti yükselir.", "ELV/10 hedefi her mevzuat/laboratuvar için otomatik kabul edilmemeli; talimata göre doğrulanmalıdır."],
+    "acceptance": ["Hedef hacim ve laboratuvar raporlama limiti ölçüm başlamadan önce savunulabilir olmalıdır.", "Gerçek çekilen hacim ve blank bilgisi raporda izlenebilir olmalıdır."],
+    "reporting": ["Hedef hacim, gerçek hacim, laboratuvar tayin limiti, blank bilgisi ve sonuç birimi rapor kontrolünde birlikte değerlendirilir."],
+    "mistakes": ["ISDL görsellerini her standart detayında tekrar göstermek", "Minimum hacmi işletme m³ ile normal m³ karıştırarak hesaplamak", "Blank etkisini hesaba katmamak", "Hedef hacim tutmadığı halde rapora not düşmemek"]
+  },
+  {
     "title": "CARB Method 426 Siyanür Örneklemesi",
     "code": "CARB Method 426",
     "category": "Emisyon",
