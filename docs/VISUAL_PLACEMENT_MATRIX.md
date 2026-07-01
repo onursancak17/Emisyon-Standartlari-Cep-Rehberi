@@ -75,6 +75,40 @@ Kullanılan görseller:
 1000064761.jpg  → kaçak testi / kabul kontrolü
 ```
 
+### PAH
+
+Bağlandığı standart:
+
+```text
+TS ISO 11338 / ilgili PAH saha uygulamaları
+```
+
+Kullanılan görseller:
+
+```text
+1000064766.jpg  → PAH örnekleme genel akışı
+1000064767.jpg  → PAH adsorban ve numune hattı
+1000064773.jpg  → PAH numune geri kazanımı
+1000064775.jpg  → PAH blank ve taşıma
+```
+
+### PCDD/F Dioksin-Furan
+
+Bağlandığı standart:
+
+```text
+TS EN 1948-1
+```
+
+Kullanılan görseller:
+
+```text
+1000064776.jpg  → PCDD/DF numune alma genel düzeni
+1000064778.jpg  → XAD-2 koruma ve ekipman
+1000064782.jpg  → XAD-2 uyarısı / kritik kontrol
+1000064785.jpg  → son kontrol / kabul kontrolü
+```
+
 ### Hız / debi / Pitot
 
 Bağlandığı standart:
