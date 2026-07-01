@@ -1,7 +1,7 @@
 name: emisyon_standartlari_cep_rehberi
 description: Emisyon İmisyon Ölçüm Standartları offline APK cep rehberi.
 publish_to: 'none'
-version: 0.3.5+8
+version: 0.3.6+9
 
 environment:
   sdk: '>=3.3.0 <4.0.0'
