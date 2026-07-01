@@ -2,6 +2,14 @@
 
 Bu not, **Emisyon İmisyon Ölçüm Standartları** APK build aşamasına geçildiğini kayıt altına almak için eklendi.
 
+## Güncel profesyonel sürüm
+
+```text
+0.3.4+7
+```
+
+Bu sürümde son kullanıcı arayüzü sadeleştirildi. APK içinde yalnızca profesyonel standart rehberi mantığı gösterilir; geliştirici/test amaçlı görsel arşivi, program sayfaları ve offline test menüleri son kullanıcı ekranından çıkarıldı.
+
 ## Uygulama adı
 
 Android telefonda görünecek ad:
@@ -37,21 +45,28 @@ Bu kontrol şunları raporlar:
 - Standart sayısı
 - Eğitim notu anahtar sayısı
 - Standart detay görsel notu sayısı
-- Görsel manifest kayıt sayısı
 - `assets/visuals` içindeki JPG sayısı
-- Manifestte olmayan JPG sayısı
 - Standart detayına bağlanmamış JPG sayısı
 - Eksik görsel asset var mı
 
-## Offline görsel davranışı
+## Güncel görsel davranışı
 
-`assets/visuals/` içindeki JPG dosyaları APK içine gömülür. Manifestte yazmayan JPG dosyaları uygulamada otomatik olarak:
+APK artık ham görsel arşivi mantığını son kullanıcıya göstermez. Bunun yerine sadece `assets/visual_notes_extra.json` içinde seçilmiş ve doğru standarda bağlanmış görseller standart detaylarında görünür.
+
+Görseller `placement` alanına göre ilgili başlığın altında gösterilir:
 
 ```text
-Kontrol bekliyor / Ham görsel
+purpose
+quality
+flowRate
+equipment
+fieldSteps
+criticalControls
+acceptance
+reporting
 ```
 
-etiketiyle Görsel Arşivi ekranında görünür.
+Görsele dokunulduğunda tam ekran açılır ve kullanıcı parmakla zoom yapabilir.
 
 ## Manuel build alma
 
