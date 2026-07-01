@@ -71,17 +71,12 @@ class _StandardsHomePageState extends State<StandardsHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Emisyon İmisyon Ölçüm Standartları'),
-        centerTitle: false,
-      ),
+      appBar: AppBar(title: const Text('Emisyon İmisyon Ölçüm Standartları'), centerTitle: false),
       body: SafeArea(
         child: FutureBuilder<List<StandardItem>>(
           future: _itemsFuture,
           builder: (context, snapshot) {
-            if (snapshot.connectionState == ConnectionState.waiting) {
-              return const Center(child: CircularProgressIndicator());
-            }
+            if (snapshot.connectionState == ConnectionState.waiting) return const Center(child: CircularProgressIndicator());
             if (snapshot.hasError) {
               return Center(
                 child: Padding(
@@ -141,12 +136,7 @@ class _StandardsHomePageState extends State<StandardsHomePage> {
                     children: [
                       Icon(Icons.offline_bolt, size: 18, color: Theme.of(context).colorScheme.primary),
                       const SizedBox(width: 6),
-                      Expanded(
-                        child: Text(
-                          'Tamamen offline • Sahacı odaklı profesyonel standart rehberi',
-                          style: Theme.of(context).textTheme.bodySmall,
-                        ),
-                      ),
+                      Expanded(child: Text('Tamamen offline • Sahacı odaklı profesyonel standart rehberi', style: Theme.of(context).textTheme.bodySmall)),
                       Text('${filteredItems.length} kayıt'),
                     ],
                   ),
@@ -190,19 +180,13 @@ class StandardCard extends StatelessWidget {
               Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Expanded(
-                    child: Text(item.title, style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w800)),
-                  ),
+                  Expanded(child: Text(item.title, style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w800))),
                   const SizedBox(width: 8),
                   const Icon(Icons.chevron_right),
                 ],
               ),
               const SizedBox(height: 6),
-              Wrap(
-                spacing: 6,
-                runSpacing: 6,
-                children: [_MiniChip(label: item.code), _MiniChip(label: item.category), _MiniChip(label: item.subgroup)],
-              ),
+              Wrap(spacing: 6, runSpacing: 6, children: [_MiniChip(label: item.code), _MiniChip(label: item.category), _MiniChip(label: item.subgroup)]),
               const SizedBox(height: 10),
               Text(TurkishUnitText.normalize(item.purpose), maxLines: 3, overflow: TextOverflow.ellipsis),
               if (item.visualNotes.isNotEmpty || item.educationNotes.isNotEmpty) ...[
@@ -211,12 +195,7 @@ class StandardCard extends StatelessWidget {
                   children: [
                     Icon(Icons.school, size: 16, color: Theme.of(context).colorScheme.primary),
                     const SizedBox(width: 5),
-                    Expanded(
-                      child: Text(
-                        '${item.educationNotes.length} eğitim notu • ${item.visualNotes.length} seçilmiş görsel',
-                        style: Theme.of(context).textTheme.labelMedium,
-                      ),
-                    ),
+                    Expanded(child: Text('${item.educationNotes.length} eğitim notu • ${item.visualNotes.length} seçilmiş görsel', style: Theme.of(context).textTheme.labelMedium)),
                   ],
                 ),
               ],
@@ -233,9 +212,7 @@ class StandardDetailPage extends StatelessWidget {
 
   final StandardItem item;
 
-  List<VisualNote> _notes(String placement) {
-    return item.visualNotes.where((note) => note.placement == placement).toList();
-  }
+  List<VisualNote> _notes(String placement) => item.visualNotes.where((note) => note.placement == placement).toList();
 
   List<VisualNote> get _unplacedNotes {
     const known = <String>{'purpose', 'quality', 'flowRate', 'equipment', 'fieldSteps', 'criticalControls', 'acceptance', 'reporting'};
@@ -252,11 +229,7 @@ class StandardDetailPage extends StatelessWidget {
         children: [
           Text(item.title, style: Theme.of(context).textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.w800)),
           const SizedBox(height: 8),
-          Wrap(
-            spacing: 8,
-            runSpacing: 8,
-            children: [_MiniChip(label: item.category), _MiniChip(label: item.subgroup), _MiniChip(label: item.code)],
-          ),
+          Wrap(spacing: 8, runSpacing: 8, children: [_MiniChip(label: item.category), _MiniChip(label: item.subgroup), _MiniChip(label: item.code)]),
           const SizedBox(height: 16),
           const _UnitInfoBlock(),
           _InfoBlock(title: 'Amaç / kullanım alanı', body: item.purpose),
@@ -279,18 +252,13 @@ class StandardDetailPage extends StatelessWidget {
           _VisualNotesBlock(notes: _unplacedNotes),
           _InfoBlock(title: 'Sık yapılan saha hataları', body: item.mistakes.join('\n')),
           const SizedBox(height: 12),
-          Text(
-            'Not: Bu uygulama sahacı hızlı rehberi olarak hazırlanmıştır. Resmi raporlamada yürürlükteki standart, mevzuat ve laboratuvar talimatı esas alınmalıdır.',
-            style: Theme.of(context).textTheme.bodySmall,
-          ),
+          Text('Not: Bu uygulama sahacı hızlı rehberi olarak hazırlanmıştır. Resmi raporlamada yürürlükteki standart, mevzuat ve laboratuvar talimatı esas alınmalıdır.', style: Theme.of(context).textTheme.bodySmall),
         ],
       ),
     );
   }
 
-  String _numbered(List<String> values) {
-    return values.asMap().entries.map((entry) => '${entry.key + 1}. ${entry.value}').join('\n');
-  }
+  String _numbered(List<String> values) => values.asMap().entries.map((entry) => '${entry.key + 1}. ${entry.value}').join('\n');
 }
 
 class _VisualNotesBlock extends StatelessWidget {
@@ -326,7 +294,7 @@ class _VisualNotesBlock extends StatelessWidget {
                   const SizedBox(height: 8),
                   Text(TurkishUnitText.normalize(note.caption)),
                   const SizedBox(height: 4),
-                  Text('Görseli büyütmek için çift dokun.', style: Theme.of(context).textTheme.bodySmall),
+                  Text('Görseli büyütmek için dokun veya çift dokun.', style: Theme.of(context).textTheme.bodySmall),
                 ],
               ),
             ),
@@ -353,12 +321,7 @@ class _VisualImage extends StatelessWidget {
 
   Widget _buildImage(BuildContext context) {
     if (note.imageAsset.trim().isNotEmpty) {
-      return Image.asset(
-        note.imageAsset,
-        fit: BoxFit.contain,
-        width: double.infinity,
-        errorBuilder: (context, error, stackTrace) => _MissingVisualBox(path: note.imageAsset),
-      );
+      return Image.asset(note.imageAsset, fit: BoxFit.contain, width: double.infinity, errorBuilder: (context, error, stackTrace) => _MissingVisualBox(path: note.imageAsset));
     }
     if (note.imageBase64.trim().isNotEmpty) {
       final bytes = _tryDecodeBase64(note.imageBase64);
@@ -367,9 +330,7 @@ class _VisualImage extends StatelessWidget {
     return const _MissingVisualBox(path: 'Görsel verisi yok');
   }
 
-  void _open(BuildContext context) {
-    Navigator.of(context).push(MaterialPageRoute(builder: (_) => ImageViewerPage(note: note)));
-  }
+  void _open(BuildContext context) => Navigator.of(context).push(MaterialPageRoute(builder: (_) => ImageViewerPage(note: note)));
 
   Uint8List? _tryDecodeBase64(String value) {
     try {
@@ -389,29 +350,12 @@ class ImageViewerPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
-      appBar: AppBar(
-        backgroundColor: Colors.black,
-        foregroundColor: Colors.white,
-        title: Text(note.title, maxLines: 1, overflow: TextOverflow.ellipsis),
-      ),
+      appBar: AppBar(backgroundColor: Colors.black, foregroundColor: Colors.white, title: Text(note.title, maxLines: 1, overflow: TextOverflow.ellipsis)),
       body: SafeArea(
         child: Column(
           children: [
-            Expanded(
-              child: InteractiveViewer(
-                minScale: 0.8,
-                maxScale: 6,
-                child: Center(child: _viewerImage()),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(12),
-              child: Text(
-                TurkishUnitText.normalize(note.caption),
-                style: const TextStyle(color: Colors.white70),
-                textAlign: TextAlign.center,
-              ),
-            ),
+            Expanded(child: InteractiveViewer(minScale: 0.8, maxScale: 6, child: Center(child: _viewerImage()))),
+            Padding(padding: const EdgeInsets.all(12), child: Text(TurkishUnitText.normalize(note.caption), style: const TextStyle(color: Colors.white70), textAlign: TextAlign.center)),
           ],
         ),
       ),
@@ -509,7 +453,7 @@ class _MiniChip extends StatelessWidget {
 }
 
 class StandardsRepository {
-  static const _standardAssetFiles = <String>['assets/standards.json', 'assets/standards_extra.json'];
+  static const _standardAssetFiles = <String>['assets/standards.json', 'assets/standards_extra.json', 'assets/standards_overrides.json'];
   static const _educationAssetFiles = <String>['assets/education_notes.json', 'assets/education_notes_extra.json'];
   static const _visualAssetFiles = <String>['assets/visual_notes.json', 'assets/visual_notes_extra.json'];
 
@@ -521,16 +465,19 @@ class StandardsRepository {
 
     final notesByCode = await _loadEducationNotes();
     final visualsByCode = await _loadVisualNotes();
+    final itemByKey = <String, StandardItem>{};
 
-    final items = decoded.map((item) {
+    for (final item in decoded) {
       final json = item as Map<String, dynamic>;
       final code = json['code'] as String? ?? '';
       final title = json['title'] as String? ?? '';
+      final key = code.trim().isNotEmpty ? code : title;
       final notes = notesByCode[code] ?? notesByCode[title] ?? const <String>[];
       final visuals = visualsByCode[code] ?? visualsByCode[title] ?? const <VisualNote>[];
-      return StandardItem.fromJson(json, educationNotes: notes, visualNotes: visuals);
-    }).toList();
+      itemByKey[key] = StandardItem.fromJson(json, educationNotes: notes, visualNotes: visuals);
+    }
 
+    final items = itemByKey.values.toList();
     items.sort((a, b) => a.title.compareTo(b.title));
     return items;
   }
