@@ -222,6 +222,7 @@ class StandardDetailPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final purposeNotes = [..._notes('purpose'), ..._notes('quality')];
+    final labels = DetailSectionLabels.forItem(item);
     return Scaffold(
       appBar: AppBar(title: Text(item.code)),
       body: ListView(
@@ -232,25 +233,25 @@ class StandardDetailPage extends StatelessWidget {
           Wrap(spacing: 8, runSpacing: 8, children: [_MiniChip(label: item.category), _MiniChip(label: item.subgroup), _MiniChip(label: item.code)]),
           const SizedBox(height: 16),
           const _UnitInfoBlock(),
-          _InfoBlock(title: 'Amaç / kullanım alanı', body: item.purpose),
+          _InfoBlock(title: labels.purposeTitle, body: item.purpose),
           _VisualNotesBlock(notes: purposeNotes),
-          _InfoBlock(title: 'Ölçüm süresi', body: item.duration),
-          _InfoBlock(title: 'Debi / hacim notu', body: item.flowRate),
+          _InfoBlock(title: labels.durationTitle, body: item.duration),
+          _InfoBlock(title: labels.flowRateTitle, body: item.flowRate),
           _VisualNotesBlock(notes: _notes('flowRate')),
-          _InfoBlock(title: 'Cihaz / ekipman', body: item.equipment.join('\n')),
+          _InfoBlock(title: labels.equipmentTitle, body: item.equipment.join('\n')),
           _VisualNotesBlock(notes: _notes('equipment')),
-          _InfoBlock(title: 'Çözelti / absorban', body: item.reagents.join('\n')),
-          _InfoBlock(title: 'Saha adımları', body: _numbered(item.fieldSteps)),
+          _InfoBlock(title: labels.reagentsTitle, body: item.reagents.join('\n')),
+          _InfoBlock(title: labels.fieldStepsTitle, body: _numbered(item.fieldSteps)),
           _VisualNotesBlock(notes: _notes('fieldSteps')),
-          _InfoBlock(title: 'Kritik teknik kontroller', body: item.criticalControls.join('\n')),
+          _InfoBlock(title: labels.criticalControlsTitle, body: item.criticalControls.join('\n')),
           _VisualNotesBlock(notes: _notes('criticalControls')),
-          _InfoBlock(title: 'Kabul / ret kriterleri', body: item.acceptance.join('\n')),
+          _InfoBlock(title: labels.acceptanceTitle, body: item.acceptance.join('\n')),
           _VisualNotesBlock(notes: _notes('acceptance')),
-          _InfoBlock(title: 'Raporlama notları', body: item.reporting.join('\n')),
+          _InfoBlock(title: labels.reportingTitle, body: item.reporting.join('\n')),
           _VisualNotesBlock(notes: _notes('reporting')),
-          _InfoBlock(title: 'Eğitim dokümanı ayrıntıları', body: _numbered(item.educationNotes)),
+          _InfoBlock(title: labels.educationTitle, body: _numbered(item.educationNotes)),
           _VisualNotesBlock(notes: _unplacedNotes),
-          _InfoBlock(title: 'Sık yapılan saha hataları', body: item.mistakes.join('\n')),
+          _InfoBlock(title: labels.mistakesTitle, body: item.mistakes.join('\n')),
           const SizedBox(height: 12),
           Text('Not: Bu uygulama sahacı hızlı rehberi olarak hazırlanmıştır. Resmi raporlamada yürürlükteki standart, mevzuat ve laboratuvar talimatı esas alınmalıdır.', style: Theme.of(context).textTheme.bodySmall),
         ],
@@ -259,6 +260,120 @@ class StandardDetailPage extends StatelessWidget {
   }
 
   String _numbered(List<String> values) => values.asMap().entries.map((entry) => '${entry.key + 1}. ${entry.value}').join('\n');
+}
+
+class DetailSectionLabels {
+  const DetailSectionLabels({
+    this.purposeTitle = 'Amaç / kullanım alanı',
+    this.durationTitle = 'Ölçüm süresi',
+    this.flowRateTitle = 'Debi / hacim notu',
+    this.equipmentTitle = 'Cihaz / ekipman',
+    this.reagentsTitle = 'Çözelti / absorban / impinger',
+    this.fieldStepsTitle = 'Saha adımları',
+    this.criticalControlsTitle = 'Kritik teknik kontroller',
+    this.acceptanceTitle = 'Kabul / ret kriterleri',
+    this.reportingTitle = 'Raporlama notları',
+    this.educationTitle = 'Eğitim dokümanı ayrıntıları',
+    this.mistakesTitle = 'Sık yapılan saha hataları',
+  });
+
+  final String purposeTitle;
+  final String durationTitle;
+  final String flowRateTitle;
+  final String equipmentTitle;
+  final String reagentsTitle;
+  final String fieldStepsTitle;
+  final String criticalControlsTitle;
+  final String acceptanceTitle;
+  final String reportingTitle;
+  final String educationTitle;
+  final String mistakesTitle;
+
+  static DetailSectionLabels forItem(StandardItem item) {
+    final text = TurkishUnitText.normalize('${item.title} ${item.code} ${item.subgroup}').toLowerCase();
+    if (text.contains('çöken toz')) {
+      return const DetailSectionLabels(
+        purposeTitle: 'Ölçüm mantığı ve kapsam',
+        durationTitle: 'Maruziyet süresi',
+        flowRateTitle: 'Kap alanı / maruziyet hesabı',
+        equipmentTitle: 'Toplama kabı ve saha yerleşim ekipmanı',
+        reagentsTitle: 'Kap hazırlığı / koruyucu sıvı',
+        fieldStepsTitle: 'Saha yerleşimi ve toplama adımları',
+        criticalControlsTitle: 'Saha geçerliliğini bozan durumlar',
+        acceptanceTitle: 'Kabul / geçerlilik kontrolü',
+        reportingTitle: 'SKHKKY Ek-2 raporlama notları',
+        mistakesTitle: 'Çöken tozda sık yapılan hatalar',
+      );
+    }
+    if (text.contains('pasif örnekleme') || text.contains('difüzyon tüp')) {
+      return const DetailSectionLabels(
+        purposeTitle: 'Pasif örnekleme mantığı ve kapsam',
+        durationTitle: 'Maruziyet süresi ve tüp açma-kapama',
+        flowRateTitle: 'Difüzyon / alım hızı mantığı',
+        equipmentTitle: 'Pasif tüp, shelter ve saha ekipmanı',
+        reagentsTitle: 'Tüp adsorbanı / blank düzeni',
+        fieldStepsTitle: 'Pasif tüp saha uygulaması',
+        criticalControlsTitle: 'Maruziyet ve kirlenme kontrolleri',
+        acceptanceTitle: 'Tüp kabul / ret kontrolü',
+        reportingTitle: 'Pasif örnekleme raporlama notları',
+        mistakesTitle: 'Pasif örneklemede sık yapılan hatalar',
+      );
+    }
+    if (text.contains('15259') || text.contains('method 1') || text.contains('traverse')) {
+      return const DetailSectionLabels(
+        purposeTitle: 'Ölçüm düzlemi seçiminin amacı',
+        durationTitle: 'Ölçüm öncesi planlama süresi',
+        flowRateTitle: 'Hız profili / traverse planı notu',
+        equipmentTitle: 'Port, platform ve geometri kontrol ekipmanı',
+        reagentsTitle: 'Kimyasal kullanılmaz',
+        fieldStepsTitle: 'Port seçimi ve nokta yerleşimi adımları',
+        criticalControlsTitle: 'Bozucu etki ve akış açısı kontrolleri',
+        acceptanceTitle: 'Ölçüm düzlemi uygunluk kriterleri',
+        reportingTitle: 'Kroki, port ve nokta raporlama notları',
+      );
+    }
+    if (text.contains('method 29') || text.contains('14385') || text.contains('ağır metal')) {
+      return const DetailSectionLabels(
+        purposeTitle: 'Metal ölçümünün kapsamı',
+        durationTitle: 'İzokinetik süre ve hedef hacim',
+        flowRateTitle: 'İzokinetik çekiş / toplam hacim',
+        equipmentTitle: 'Metal örnekleme treni ve temiz ekipman',
+        reagentsTitle: 'Absorbanlar, impinger dizilimi ve mL bilgileri',
+        fieldStepsTitle: 'Örnekleme ve geri kazanım fraksiyonları',
+        criticalControlsTitle: 'Kontaminasyon ve blank kontrolleri',
+        acceptanceTitle: 'Metal numunesi kabul kriterleri',
+        reportingTitle: 'Fraksiyon ve blank raporlama notları',
+        mistakesTitle: 'Metal ölçümünde sık yapılan hatalar',
+      );
+    }
+    if (text.contains('1911') || text.contains('26a') || text.contains('hcl') || text.contains('halojen')) {
+      return const DetailSectionLabels(
+        purposeTitle: 'Asit gazı / halojen ölçüm kapsamı',
+        durationTitle: 'Örnekleme süresi ve hedef hacim',
+        flowRateTitle: 'Çekiş debisi / absorpsiyon verimi',
+        equipmentTitle: 'Prob, filtre ve impinger treni',
+        reagentsTitle: 'Absorban çözeltileri ve impinger hacimleri',
+        fieldStepsTitle: 'Saha kurulumu ve numune geri kazanımı',
+        criticalControlsTitle: 'Breakthrough, karışma ve kaçak kontrolleri',
+        acceptanceTitle: 'Asit gazı numunesi kabul kriterleri',
+        reportingTitle: 'Fraksiyon ve çözelti raporlama notları',
+      );
+    }
+    if (text.contains('pm10') || text.contains('pm2.5') || text.contains('12341')) {
+      return const DetailSectionLabels(
+        purposeTitle: 'Ortam havası PM ölçüm kapsamı',
+        durationTitle: '24 saatlik örnekleme süresi',
+        flowRateTitle: 'Qref / Qamb ve hacim hesabı',
+        equipmentTitle: 'PM başlığı, cihaz ve filtre ekipmanı',
+        reagentsTitle: 'Filtre / saha blankı',
+        fieldStepsTitle: 'Cihaz kurulumu ve filtre yönetimi',
+        criticalControlsTitle: 'Debi, filtre ve saha şartı kontrolleri',
+        acceptanceTitle: 'PM10/PM2.5 kabul kriterleri',
+        reportingTitle: 'Hacim, debi ve filtre raporlama notları',
+      );
+    }
+    return const DetailSectionLabels();
+  }
 }
 
 class _VisualNotesBlock extends StatelessWidget {
@@ -458,28 +573,73 @@ class StandardsRepository {
   static const _visualAssetFiles = <String>['assets/visual_notes.json', 'assets/visual_notes_extra.json'];
 
   static Future<List<StandardItem>> loadItems() async {
-    final decoded = <dynamic>[];
+    final decoded = <Map<String, dynamic>>[];
     for (final path in _standardAssetFiles) {
-      decoded.addAll(await _loadListAsset(path));
+      final list = await _loadListAsset(path);
+      for (final item in list) {
+        if (item is Map<String, dynamic>) decoded.add(item);
+      }
     }
 
-    final notesByCode = await _loadEducationNotes();
-    final visualsByCode = await _loadVisualNotes();
-    final itemByKey = <String, StandardItem>{};
+    final notesByKey = await _loadEducationNotes();
+    final visualsByKey = await _loadVisualNotes();
+    final itemByKey = <String, Map<String, dynamic>>{};
+    final codeToKey = <String, String>{};
+    final titleToKey = <String, String>{};
 
-    for (final item in decoded) {
-      final json = item as Map<String, dynamic>;
+    for (final json in decoded) {
       final code = json['code'] as String? ?? '';
       final title = json['title'] as String? ?? '';
-      final key = code.trim().isNotEmpty ? code : title;
-      final notes = notesByCode[code] ?? notesByCode[title] ?? const <String>[];
-      final visuals = visualsByCode[code] ?? visualsByCode[title] ?? const <VisualNote>[];
-      itemByKey[key] = StandardItem.fromJson(json, educationNotes: notes, visualNotes: visuals);
+      final codeKey = TurkishUnitText.key(code);
+      final titleKey = TurkishUnitText.key(title);
+      var key = '';
+      if (codeKey.isNotEmpty && codeToKey.containsKey(codeKey)) {
+        key = codeToKey[codeKey]!;
+      } else if (titleKey.isNotEmpty && titleToKey.containsKey(titleKey)) {
+        key = titleToKey[titleKey]!;
+      } else {
+        key = codeKey.isNotEmpty ? codeKey : titleKey;
+      }
+      if (key.isEmpty) continue;
+      itemByKey[key] = json;
+      if (codeKey.isNotEmpty) codeToKey[codeKey] = key;
+      if (titleKey.isNotEmpty) titleToKey[titleKey] = key;
     }
 
-    final items = itemByKey.values.toList();
+    final items = <StandardItem>[];
+    for (final json in itemByKey.values) {
+      final code = json['code'] as String? ?? '';
+      final title = json['title'] as String? ?? '';
+      final keys = <String>{TurkishUnitText.key(code), TurkishUnitText.key(title)};
+      final notes = _collectStrings(notesByKey, keys);
+      final visuals = _collectVisuals(visualsByKey, keys);
+      items.add(StandardItem.fromJson(json, educationNotes: notes, visualNotes: visuals));
+    }
+
     items.sort((a, b) => a.title.compareTo(b.title));
     return items;
+  }
+
+  static List<String> _collectStrings(Map<String, List<String>> index, Set<String> keys) {
+    final result = <String>[];
+    for (final key in keys) {
+      if (key.isEmpty) continue;
+      result.addAll(index[key] ?? const <String>[]);
+    }
+    return result;
+  }
+
+  static List<VisualNote> _collectVisuals(Map<String, List<VisualNote>> index, Set<String> keys) {
+    final result = <VisualNote>[];
+    final seen = <String>{};
+    for (final key in keys) {
+      if (key.isEmpty) continue;
+      for (final note in index[key] ?? const <VisualNote>[]) {
+        final noteKey = '${note.title}|${note.imageAsset}|${note.imageBase64.hashCode}|${note.placement}';
+        if (seen.add(noteKey)) result.add(note);
+      }
+    }
+    return result;
   }
 
   static Future<List<dynamic>> _loadListAsset(String path) async {
@@ -505,7 +665,8 @@ class StandardsRepository {
     for (final path in _educationAssetFiles) {
       final decoded = await _loadMapAsset(path);
       for (final entry in decoded.entries) {
-        result.putIfAbsent(entry.key, () => <String>[]).addAll(StandardItem.listFromDynamic(entry.value));
+        final key = TurkishUnitText.key(entry.key);
+        result.putIfAbsent(key, () => <String>[]).addAll(StandardItem.listFromDynamic(entry.value));
       }
     }
     return result;
@@ -516,11 +677,13 @@ class StandardsRepository {
     for (final path in _visualAssetFiles) {
       final decoded = await _loadListAsset(path);
       for (final entry in decoded) {
-        final map = entry as Map<String, dynamic>;
-        final standards = StandardItem.listFromDynamic(map['standards']);
-        final note = VisualNote.fromJson(map);
+        if (entry is! Map<String, dynamic>) continue;
+        final standards = StandardItem.listFromDynamic(entry['standards']);
+        final note = VisualNote.fromJson(entry);
         for (final standard in standards) {
-          result.putIfAbsent(standard, () => <VisualNote>[]).add(note);
+          final key = TurkishUnitText.key(standard);
+          if (key.isEmpty) continue;
+          result.putIfAbsent(key, () => <VisualNote>[]).add(note);
         }
       }
     }
@@ -637,6 +800,8 @@ class VisualNote {
 
 class TurkishUnitText {
   const TurkishUnitText._();
+
+  static String key(String input) => normalize(input).toLowerCase().trim();
 
   static String normalize(String input) {
     if (input.isEmpty) return input;
