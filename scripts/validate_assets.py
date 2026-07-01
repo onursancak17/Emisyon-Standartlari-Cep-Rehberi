@@ -19,6 +19,7 @@ ROOT = Path(__file__).resolve().parents[1]
 STANDARD_FILES = [
     ROOT / "assets" / "standards.json",
     ROOT / "assets" / "standards_extra.json",
+    ROOT / "assets" / "standards_overrides.json",
 ]
 EDUCATION_FILES = [
     ROOT / "assets" / "education_notes.json",
@@ -75,7 +76,7 @@ def main() -> int:
 
     duplicate_codes = [code for code, count in Counter(codes).items() if code and count > 1]
     for code in duplicate_codes:
-        warnings.append(f"Tekrarlı standart code: {code}")
+        warnings.append(f"Tekrarlı standart code override/son değer mantığıyla çözülecek: {code}")
 
     standard_key_set = {str(item.get("code", "")).strip() for item in standards}
     standard_key_set.update(str(item.get("title", "")).strip() for item in standards)
@@ -188,7 +189,7 @@ def main() -> int:
     print(f"Eksik görsel asset: {len(missing_assets)}")
 
     if unlisted_assets:
-        print("\nBİLGİ: Manifestte olmayan JPG dosyaları APK içinde otomatik 'Kontrol bekliyor' olarak listelenir.")
+        print("\nBİLGİ: Manifestte olmayan JPG dosyaları geliştirici arşivinde kalabilir; son kullanıcı APK'sı yalnız seçilmiş görselleri gösterir.")
         for asset in unlisted_assets[:30]:
             print(f"- {asset}")
 
