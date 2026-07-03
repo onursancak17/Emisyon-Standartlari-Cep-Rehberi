@@ -1,0 +1,142 @@
+[
+  {
+    "standards": [
+      "TS EN 15259 / EPA Method 1",
+      "EPA Method 2 / TS EN ISO 16911 / TS ISO 10780"
+    ],
+    "title": "Baca Akış Fiziği ve Traverse Matrisleri",
+    "audioAsset": "assets/audio/01_baca_akis_fizigi_ve_traverse_matrisleri.m4a",
+    "sortOrder": 1
+  },
+  {
+    "standards": [
+      "TS EN 12619 / TSE CEN/TS 13649"
+    ],
+    "title": "Bacada VOC Bileşiklerini Yakalama Teknikleri",
+    "audioAsset": "assets/audio/02_voc_bilesiklerini_yakalama_teknikleri.m4a",
+    "sortOrder": 2
+  },
+  {
+    "standards": [
+      "EPA Method 29",
+      "TS EN 14385",
+      "EPA Method 26A",
+      "TS EN 1911"
+    ],
+    "title": "Hassas Metal ve Halojen Analizi",
+    "audioAsset": "assets/audio/03_hassas_metal_ve_halojen_analizi.m4a",
+    "sortOrder": 3
+  },
+  {
+    "standards": [
+      "ISDL / MID",
+      "EPA Method 5",
+      "TS EN 13284-1",
+      "TS ISO 9096",
+      "EPA Method 17"
+    ],
+    "title": "Veriyi Geçerli Kılan Hassas Hesaplar",
+    "audioAsset": "assets/audio/04_veriyi_gecerli_kilan_hassas_hesaplar.m4a",
+    "sortOrder": 4
+  },
+  {
+    "standards": [
+      "EPA Method 2 / TS EN ISO 16911 / TS ISO 10780",
+      "EPA Method 4",
+      "TS EN 15259 / EPA Method 1"
+    ],
+    "title": "Bacalarda Hız, Debi ve Nem Tayini",
+    "audioAsset": "assets/audio/05_hiz_debi_ve_nem_tayini.m4a",
+    "sortOrder": 5
+  },
+  {
+    "standards": [
+      "EPA Method 5",
+      "TS EN 13284-1",
+      "TS ISO 9096",
+      "TS ISO 12141",
+      "EPA Method 17"
+    ],
+    "title": "Bacalarda İzokinetik Toz Ölçümü Standartları",
+    "audioAsset": "assets/audio/06_izokinetik_toz_olcumu_standartlari.m4a",
+    "sortOrder": 6
+  },
+  {
+    "standards": [
+      "CARB Method 426",
+      "CARB Method 425"
+    ],
+    "title": "Siyanür ve Krom Ölçümü Saha Anlatımı",
+    "audioAsset": "assets/audio/07_siyanur_ve_krom_olcumu.m4a",
+    "sortOrder": 7
+  },
+  {
+    "standards": [
+      "TS EN 1911",
+      "EPA Method 26A",
+      "EPA Method 29",
+      "TS EN 14385",
+      "TS EN 12619 / TSE CEN/TS 13649",
+      "CARB Method 426",
+      "CARB Method 425",
+      "EPA CTM 027"
+    ],
+    "title": "Bacaların Kimyasal Şifrelerini Çözme Rehberi",
+    "audioAsset": "assets/audio/08_bacalarin_kimyasal_sifreleri.m4a",
+    "sortOrder": 8
+  },
+  {
+    "standards": [
+      "TS EN 1948-1",
+      "TS ISO 11338 / ilgili PAH saha uygulamaları"
+    ],
+    "title": "Dioksin/Furan ve PAH Örneklemesi",
+    "audioAsset": "assets/audio/09_dioksin_furan_ve_pah_orneklemesi.m4a",
+    "sortOrder": 9
+  },
+  {
+    "standards": [
+      "TS ISO 12039",
+      "TS EN 14789",
+      "TS EN 14792",
+      "TS EN 15058"
+    ],
+    "title": "Endüstriyel Baca Gazı Analizinde Teknik Esaslar",
+    "audioAsset": "assets/audio/10_endustriyel_baca_gazi_analizi_teknik_esaslar.m4a",
+    "sortOrder": 10
+  },
+  {
+    "standards": [
+      "TS 2341 / TS 2342 / SKHKKY Ek-2",
+      "TS EN 12341 / EPA 40 CFR 50-53",
+      "Pasif Örnekleme / Difüzyon Tüpü"
+    ],
+    "title": "Hava Kalitesi Ölçümünde Ek-2 ve Saha Uygulaması",
+    "audioAsset": "assets/audio/11_hava_kalitesi_ek_2_ve_saha.m4a",
+    "sortOrder": 11
+  },
+  {
+    "standards": [
+      "ISDL / MID",
+      "EPA Method 2 / TS EN ISO 16911 / TS ISO 10780",
+      "EPA Method 4",
+      "TS ISO 12039",
+      "EPA Method 5",
+      "TS EN 13284-1",
+      "TS ISO 9096"
+    ],
+    "title": "Temiz Hava Raporlarının Arkasındaki Baca Matematiği",
+    "audioAsset": "assets/audio/12_temiz_hava_raporlarinin_baca_matematigi.m4a",
+    "sortOrder": 12
+  },
+  {
+    "standards": [
+      "TS EN 12619 / TSE CEN/TS 13649",
+      "EPA Method 316",
+      "EPA Method 323"
+    ],
+    "title": "VOC ve Formaldehit Ölçümünde Saha Gerçekleri",
+    "audioAsset": "assets/audio/13_voc_ve_formaldehit_saha_gercekleri.m4a",
+    "sortOrder": 13
+  }
+]
