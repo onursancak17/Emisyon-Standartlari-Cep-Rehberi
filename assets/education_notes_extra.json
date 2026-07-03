@@ -145,9 +145,25 @@
     "Yanma gazı görselleri sadece yanma gazı/referans O2 bölümünde tutulur; toz veya VOC sayfalarına dağıtılmaz."
   ],
   "CARB Method 426": [
-    "Siyanür ölçümünde NaOH alkali absorbanın pH koruması, absorban hacmi, saha blankı ve breakthrough kontrolü birlikte izlenmelidir.",
-    "NaOH absorban hattı, silika jel ve yıkama fraksiyonları etiketlenirken kap karışıklığı yapılmamalıdır.",
-    "Siyanür minimum hacim hesabı ISDL/MID bölümünde; siyanür örnekleme treni ve absorban görselleri CARB Method 426 altında tutulur."
+    "HCN/siyanür talimatı CARB Method 426 Determination of Cyanide Emissions from Stationary Sources yaklaşımına göre düzenlenir. Amaç, baca gazındaki hidrojen siyanürün izokinetik olarak alınması, cam elyaf filtreden geçirilmesi ve 0,1 N NaOH içinde absorbe edilmesidir.",
+    "Ön hazırlıkta Whatman No:42 filtre kullanılır. Numuneler analiz edilinceye kadar soğukta saklanmalıdır. Ara malzemeler korozyona dayanıklı, yıkama şişeleri cam olmalı; prob ısıtmalı cam malzemeden olmalı ve sistem nemden uzak tutulmak için jel/silika jel ile desteklenmelidir.",
+    "Örnekleme sırasında 4 adet yıkama şişesi kullanılır: 1. ve 2. yıkama şişelerine 100'er mL 0,1 N NaOH eklenir, 3. yıkama şişesi boş bırakılır, 4. yıkama şişesine 200-300 g silika jel eklenir. Yıkama şişeleri soğuk su/buz banyosu içinde tutulur.",
+    "Örnekleme izokinetik şartlarda yapılır. Her bir örnekleme noktasında minimum 2 dakika örnekleme yapılır. Örnekleme sırasında ısıtmalı prob kullanılır ve gaz yıkama şişelerine giren baca gazı sıcaklığı 42 °C'nin altında olmalıdır.",
+    "Ölçüm öncesi kaçak testi yapılmalıdır; talimata göre kaçak oranı 0,57 L/dk'yı geçmemelidir. Gaz ölçümü kapsamına bağlı olarak debi, hız, sıcaklık ve nem ölçümleri de yapılmalıdır ki kütlesel debi hesapları kurulabilsin.",
+    "Filtreler 105 °C'de 3 saat bekletilerek sabit tartıma getirilir. Ölçüm bittikten sonra filtre petri kabına alınır.",
+    "Reaktifler: 0,1 N NaOH için 4 g NaOH 1 L suda çözülür; 10 N NaOH için 40 g NaOH 100 mL suda çözülür; 1,25 N NaOH için 50 g NaOH 1 L suda çözülür; 0,25 N NaOH için 1,25 N NaOH'ten 100 mL alınır ve 1 L'ye seyreltilir.",
+    "Diğer reaktifler arasında askorbik asit kristalleri, KI-nişasta kağıdı, 18 N H2SO4, 1 M NaH2PO4.H2O, 0,0192 N standart AgNO3, KCN/KOH ile hazırlanan ara HCN standardı, çalışma HCN çözeltisi, rhodanine indikatörü, kloramin-T, piridin-barbitürik asit, MgCl2.6H2O, kurşun asetat çözeltisi ve sülfamik asit bulunur.",
+    "Numune taşıma: 1. numune kabında nozul 0,1 N NaOH çözeltisiyle yıkanır; oksitlenmeyi önlemek için birkaç damla KI-nişasta çözeltisi ve birkaç askorbik asit kristali eklenir; koruma için 2 mL 10 N NaOH eklenir ve pH > 12 tutulur.",
+    "2. numune kabında prob ve bağlantılar 0,1 N NaOH ile yıkanır ve 1. numune kabına uygulanan koruma işlemleri uygulanır. 3. numune kabına yıkama şişelerinin içerikleri ve yıkama çözeltileri konur; yıkama için 30 mL 0,1 N NaOH kullanılır. 4. numune kabı blank içindir.",
+    "Tablo şartına göre HCN numunesinde minimum numune miktarı 500 mL'dir. Metot absorpsiyon olarak yürütülür ve numune mümkün olduğunca soğuk ortamda saklanır.",
+    "Numune hazırlamada 1. numune kabı içeriği 250 mL behere alınır. Filtre kağıdı kabından 10 mL 1,25 N NaOH ile alınarak filtreye aktarılır; 1. numune kabına 1,25 N NaOH eklenir ve 30 dakika karıştırılır. 2. ve 3. numune kaplarının içerikleri ayrıca işlenir.",
+    "Damıtma aşamasında tüm örnek damıtma balonuna aktarılır ve hacim 500 mL'ye tamamlanır. Absorbere 50 mL 1,25 N NaOH konulur; damıtma sonrası absorbere 25 mL kurşun asetat eklenir, nitrat/nitrit girişimlerini uzaklaştırmak için 2 g sülfamik asit eklenir, karıştırılır, yavaşça 50 mL 18 N H2SO4 ve 20 mL MgCl2 eklenir. Numune 1 saat kaynatılır, 250 mL distilat toplanır ve 250 mL'ye seyreltilir. Blank için aynı işlemler uygulanır.",
+    "Spektrofotometrik ön hazırlıkta hazırlanan numuneden 50 mL alınır ve 100 mL balona aktarılır; gerekirse 0,25 N NaOH ile tamamlanır. 15 mL 1 M NaH2PO4 eklenir ve karıştırılır.",
+    "Piridin-barbitürik asit metodunda 0,5 mL kloramin-T eklenir; 1-2 dakika sonra KI-nişasta kağıdı ile kontrol edilir. Olumsuzsa 0,5 mL daha eklenebilir fakat kloramin-T fazlası 0,5 mL'den fazla olmamalıdır. Ardından 5 mL piridin-barbitürik asit eklenir, 8 dakika renk gelişimi beklenir ve 578 nm dalga boyunda 1 cm hücrede okunur. Okuma 15 dakika içinde yapılmalıdır.",
+    "Kalibrasyon için çalışma siyanür çözeltisinden 0, 1, 5, 10, 15 ve 20 mL alınarak 250 mL erlenlere aktarılır, her birine 50 mL 1,25 N NaOH eklenir ve su ile tamamlanır. Bu çözeltiler 0, 0,04, 0,08, 0,2, 0,4, 0,6 ve 0,8 mg CN-/L seviyelerine karşılık gelir; sonra 50 mL alınır, 100 mL erlene aktarılır ve 15 mL NaH2PO4 eklenir.",
+    "Titrasyon yönteminde absorblama tüpünden belli miktar alınır, 10-12 damla benzil/rhodanine indikatörü eklenir ve AgNO3 ile titre edilir; renk sarı-kahverengiden pembe renge döner. Blankta indikatör aynı oranda NaOH ile kullanılır.",
+    "Hesaplarda At, Ad, Cc, Vd, Vt, mt, Cs, Qt, T, B ve Vm(std) terimleri kullanılır. Siyanür konsantrasyonu için örnek içindeki siyanür miktarı veya titrasyon sonrası siyanür miktarı, çekilen standart gaz hacmine bölünerek değerlendirilir.",
+    "Kalite kontrolde ara kontrol çalışmaları üç ayda bir referans çözeltiyle yapılır; PT çalışmalarına en az dört yılda bir katılım ve laboratuvarlar arası karşılaştırma en az yılda bir kez yapılır. Belirsizlikte standart çözeltiden, hacimden, cihazdan, tekrarlanabilirlikten ve yeniden üretilebilirlikten gelen bileşenler dikkate alınır."
   ],
   "CARB Method 425": [
     "Cr(VI) numunesinde pH, tür dönüşümü ve metal kontaminasyonu en kritik saha riskleridir.",
