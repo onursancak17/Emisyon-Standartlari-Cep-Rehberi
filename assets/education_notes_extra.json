@@ -77,16 +77,28 @@
     "Girişim notu: klor, gres ve yüksek alabilir gres maruz kalan yüzeylerde adsorpsiyon nedeniyle F sonucunu düşürebilir."
   ],
   "EPA Method 29": [
-    "Metal örneklemelerinde en büyük saha riski düşük konsantrasyonlarda kontaminasyondur; nozul, prob, filtre, impinger, kap ve reaktif blankları ölçümden önce ayrı planlanmalıdır.",
-    "Ön yüzeyde partikül/metalik yük tutulurken gaz fazı metaller impinger çözeltilerinde tutulabilir; fraksiyonların karıştırılıp karıştırılmayacağı metot/laboratuvar talimatına göre yapılır.",
-    "Yanlış yıkama fraksiyonu, kırılan cam malzeme, eksik blank veya metal kontaminasyonu sonucu güvenilirliğini bozar.",
-    "Metal tren, geri kazanım ve blank görselleri sadece EPA29/TS EN 14385 sayfalarında tutulur."
+    "Ağır metal talimatında EPA Method 29 ve TS EN 14385 birlikte ele alınır; numune alma amacı baca ağır metallerinin tayinine yönelik filtre, prob, yıkama şişeleri, absorban çözeltileri ve saklama kaplarının kontrollü yönetilmesidir.",
+    "EPA Method 29 tarafında en az 6 yıkama şişesi kullanılır. Örnekleme sistemi ve yıkama şişeleri buz banyosuyla soğutulur, prob sıcaklık kontrollü ve ısıtmalı olmalıdır.",
+    "Gaz fazındaki metalleri etkin şekilde çözümsemek için 7 yıkama şişesi seri yerleştirilebilir: 1. şişe isteğe bağlı boş, 2. ve 3. şişelere 100'er mL HNO3/H2O2 soğurma solüsyonu, 4. şişe isteğe bağlı boş, 5. ve 6. şişelere 100'er mL asidik KMnO4 soğurma solüsyonu, 7. şişeye silika jel konulur.",
+    "EPA 29 HNO3/H2O2 soğurma solüsyonu: %5 HNO3 / %10 H2O2 hazırlanır. 1000 mL balonjojeye yaklaşık 500 mL su alınır, üzerine yavaşça 50 mL konsantre HNO3 eklenir, ardından 333 mL %30 H2O2 eklenir ve su ile 1 L'ye tamamlanır.",
+    "Asidik KMnO4 soğurma solüsyonu günlük hazırlanır: %4 KMnO4 (w/v) ve %10 H2SO4 (v/v). 100 mL konsantre H2SO4 800 mL suya dikkatle eklenip 1 L'ye tamamlanır; 40 g KMnO4 100 mL %10 H2SO4 içinde çözülür ve %10 H2SO4 ile 1 L'ye tamamlanır.",
+    "Durulama solüsyonu %25 HNO3'tür; %65'lik 225 mL HNO3 yaklaşık 300 mL su ile 1 L'ye tamamlanır. Kullanılmış durulama asidi özel saklama şişesine alınır, tartılır ve etiketlenir.",
+    "Örnekleme TS EN 13284-1:2003'e göre izokinetik yapılır; örnekleme en az 30 dakika olmalı ve 3 adet örnekleme yapılmalıdır.",
+    "Filtre birinci yıkama şişesi ile prob arasına takılmalıdır. Örnekleme bitiminde filtre kirlenmeyecek şekilde çıkarılır ve taşıma çantasına yerleştirilir; çözeltiler uygun kaplara aktarılır.",
+    "Numune saklama tablosuna göre ağır metal numunesi için minimum numune miktarı 200 mL'dir; numune serin yerde muhafaza edilir. Fe, As, Cr, Cd analizinde Al-As-Pb girişimi görülebilir.",
+    "Nozul, prob, filtre kabı, filtre tutacağı, T-parçası, yıkama şişeleri, bağlantı tüpleri, saklama şişeleri ve filtre taşıma kapları ölçüm öncesi temizlenmeli; nozul, prob ve bağlantı boruları her ölçümden sonra durulama asidiyle durulanmalıdır."
   ],
   "TS EN 14385": [
-    "Metal örneklemesinde izokinetiklik, filtre sıcaklığı, impinger seviyesi, buz banyosu ve DGM kayıtları birlikte takip edilir.",
-    "Yan akışlı metal örneklemesinde ana akış ve yan akış oranı sabit tutulmalı; oran değişimi temsil edilebilirliği etkiler.",
-    "Reaktif, kap ve saha blankı düşük metal seviyelerinde sonucu savunmak için kritik kontroldür.",
-    "Metal görselleri VOC, HCl veya toz bölümlerine taşırılmamalıdır; yalnız metal sayfalarında kalmalıdır."
+    "TS EN 14385 genel prensibinde numune TS EN 13284-1:2003'e göre izokinetik çekilir; tanecikli emisyonlar prob ve ısıtılmış filtrede toplanır, gaz emisyonları ise hidrojen peroksitli sıvı asidik solüsyonda tutulur.",
+    "TS EN 14385 hedef metalleri As, Cd, Cr, Co, Cu, Mn, Ni, Pb, Sb, Tl ve V olarak talimatta listelenmiştir. Numuneler analiz için filtre, soğurma solüsyonu ve durulama solüsyonu şeklinde yönetilir.",
+    "TS EN 14385 HNO3/H2O2 soğurma solüsyonu: %65'lik HNO3'den 330 mL ve %30'luk H2O2'den 150 mL alınır, saf su ile 1000 mL'ye tamamlanır.",
+    "TS EN 14385 durulama solüsyonu %25 HNO3'tür; %65'lik 225 mL HNO3 yaklaşık 300 mL su ile 1 L'ye tamamlanır.",
+    "TS EN 14385 ana akım veya yan akım numune alma seti kullanılabilir. Ana elemanlar: nozul, prob, filtre, silika jel, ana akım valfi, bypass valfi, pompa, gaz sayacı, yıkama şişeleri, sıcaklık kontrolü ve isteğe bağlı boş şişedir.",
+    "TS EN 14385 prosedüründe genel malzemeler prob/nozul, filtre kabı/filtre, en az 3 yıkama şişesi ve çekilen havanın kontrol edilebildiği gaz emme ünitesidir.",
+    "Üç yıkama şişesine 100'er mL HNO3/H2O2 soğurma solüsyonu konulur. Boş yıkama şişesi başka bir yıkama şişesiyle tamamlanmalı; ana akıntı yönünde emme korunmalıdır. Her iki numune alma düzeni de kullanılabilir.",
+    "Örnekleme öncesinde 1 dakika sızıntı testi yapılır. Örnekleme en az 30 dakika olmalı ve 3 adet örnekleme yapılmalıdır. Örneklenen gaz miktarı TS EN 13284-1:2003'e göre belirlenir.",
+    "Sıvı numuneler 6 °C'nin altında, örneğin buzdolabında, PE şişelerde saklanmalıdır; numuneler alındıktan sonra 2 hafta içinde analiz edilmelidir.",
+    "Saha şahidinin analiz sonucu emisyon limit değerinin %10'undan fazla ise ölçüm geçersizdir ve yenilenmelidir. Talimatta kalite kontrol çalışması yok, cihaz ölçüm belirsizliği yok notu ayrıca belirtilmiştir."
   ],
   "TS EN 12619 / TSE CEN/TS 13649": [
     "TOC/FID ölçümü ile spesifik VOC tüp numunesi aynı şey değildir; hedef parametre sahaya çıkmadan önce net ayrılmalıdır.",
