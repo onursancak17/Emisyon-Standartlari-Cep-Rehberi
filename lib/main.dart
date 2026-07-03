@@ -1,8 +1,10 @@
 import 'dart:convert';
+import 'dart:math';
 import 'dart:typed_data';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:just_audio/just_audio.dart';
 
 void main() {
   runApp(const StandardsApp());
@@ -98,7 +100,7 @@ class _StandardsHomePageState extends State<StandardsHomePage> {
                     controller: _searchController,
                     decoration: InputDecoration(
                       prefixIcon: const Icon(Icons.search),
-                      labelText: 'Standart, kirletici, çözelti veya cihaz ara',
+                      labelText: 'Standart, kirletici, çözelti, cihaz veya ses ara',
                       border: OutlineInputBorder(borderRadius: BorderRadius.circular(16)),
                       suffixIcon: _query.isEmpty
                           ? null
@@ -136,7 +138,7 @@ class _StandardsHomePageState extends State<StandardsHomePage> {
                     children: [
                       Icon(Icons.offline_bolt, size: 18, color: Theme.of(context).colorScheme.primary),
                       const SizedBox(width: 6),
-                      Expanded(child: Text('Tamamen offline • Sahacı odaklı profesyonel standart rehberi', style: Theme.of(context).textTheme.bodySmall)),
+                      Expanded(child: Text('Tamamen offline • Yazılı rehber + görsel + sesli saha anlatımı', style: Theme.of(context).textTheme.bodySmall)),
                       Text('${filteredItems.length} kayıt'),
                     ],
                   ),
@@ -189,13 +191,18 @@ class StandardCard extends StatelessWidget {
               Wrap(spacing: 6, runSpacing: 6, children: [_MiniChip(label: item.code), _MiniChip(label: item.category), _MiniChip(label: item.subgroup)]),
               const SizedBox(height: 10),
               Text(TurkishUnitText.normalize(item.purpose), maxLines: 3, overflow: TextOverflow.ellipsis),
-              if (item.visualNotes.isNotEmpty || item.educationNotes.isNotEmpty) ...[
+              if (item.visualNotes.isNotEmpty || item.educationNotes.isNotEmpty || item.audioNotes.isNotEmpty) ...[
                 const SizedBox(height: 8),
                 Row(
                   children: [
                     Icon(Icons.school, size: 16, color: Theme.of(context).colorScheme.primary),
                     const SizedBox(width: 5),
-                    Expanded(child: Text('${item.educationNotes.length} eğitim notu • ${item.visualNotes.length} seçilmiş görsel', style: Theme.of(context).textTheme.labelMedium)),
+                    Expanded(
+                      child: Text(
+                        '${item.educationNotes.length} eğitim notu • ${item.visualNotes.length} görsel • ${item.audioNotes.length} sesli anlatım',
+                        style: Theme.of(context).textTheme.labelMedium,
+                      ),
+                    ),
                   ],
                 ),
               ],
@@ -233,6 +240,7 @@ class StandardDetailPage extends StatelessWidget {
           Wrap(spacing: 8, runSpacing: 8, children: [_MiniChip(label: item.category), _MiniChip(label: item.subgroup), _MiniChip(label: item.code)]),
           const SizedBox(height: 16),
           const _UnitInfoBlock(),
+          _AudioNotesBlock(notes: item.audioNotes),
           _InfoBlock(title: labels.purposeTitle, body: item.purpose),
           _VisualNotesBlock(notes: purposeNotes),
           _InfoBlock(title: labels.durationTitle, body: item.duration),
@@ -373,6 +381,190 @@ class DetailSectionLabels {
       );
     }
     return const DetailSectionLabels();
+  }
+}
+
+class _AudioNotesBlock extends StatelessWidget {
+  const _AudioNotesBlock({required this.notes});
+
+  final List<AudioNote> notes;
+
+  @override
+  Widget build(BuildContext context) {
+    if (notes.isEmpty) return const SizedBox.shrink();
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        for (final note in notes) _AudioCard(note: note),
+      ],
+    );
+  }
+}
+
+class _AudioCard extends StatefulWidget {
+  const _AudioCard({required this.note});
+
+  final AudioNote note;
+
+  @override
+  State<_AudioCard> createState() => _AudioCardState();
+}
+
+class _AudioCardState extends State<_AudioCard> {
+  late final AudioPlayer _player;
+  bool _loading = true;
+  String? _errorMessage;
+
+  @override
+  void initState() {
+    super.initState();
+    _player = AudioPlayer();
+    _loadAudio();
+  }
+
+  Future<void> _loadAudio() async {
+    try {
+      await _player.setAsset(widget.note.audioAsset);
+      if (!mounted) return;
+      setState(() => _loading = false);
+    } catch (_) {
+      if (!mounted) return;
+      setState(() {
+        _loading = false;
+        _errorMessage = 'Ses dosyası APK içinde bulunamadı: ${widget.note.audioAsset}';
+      });
+    }
+  }
+
+  @override
+  void dispose() {
+    _player.dispose();
+    super.dispose();
+  }
+
+  Future<void> _toggle() async {
+    if (_errorMessage != null || _loading) return;
+    if (_player.playing) {
+      await _player.pause();
+    } else {
+      if (_player.processingState == ProcessingState.completed) {
+        await _player.seek(Duration.zero);
+      }
+      await _player.play();
+    }
+  }
+
+  Future<void> _seekRelative(int seconds) async {
+    if (_errorMessage != null || _loading) return;
+    final duration = _player.duration ?? Duration.zero;
+    final current = _player.position;
+    final targetMs = (current.inMilliseconds + seconds * 1000).clamp(0, duration.inMilliseconds == 0 ? current.inMilliseconds + seconds * 1000 : duration.inMilliseconds);
+    await _player.seek(Duration(milliseconds: targetMs));
+  }
+
+  Future<void> _seekTo(double seconds) async {
+    if (_errorMessage != null || _loading) return;
+    await _player.seek(Duration(milliseconds: (seconds * 1000).round()));
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final colorScheme = Theme.of(context).colorScheme;
+    return Card(
+      elevation: 0,
+      color: colorScheme.primaryContainer.withAlpha(150),
+      margin: const EdgeInsets.only(bottom: 12),
+      child: Padding(
+        padding: const EdgeInsets.all(14),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Row(
+              children: [
+                Icon(Icons.headphones, color: colorScheme.primary),
+                const SizedBox(width: 8),
+                Expanded(child: Text('Sesli Saha Anlatımı', style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w800))),
+              ],
+            ),
+            const SizedBox(height: 8),
+            Text(widget.note.title, style: Theme.of(context).textTheme.titleSmall?.copyWith(fontWeight: FontWeight.w700)),
+            const SizedBox(height: 4),
+            Text('Offline APK içinden çalar. İnternet gerekmez.', style: Theme.of(context).textTheme.bodySmall),
+            if (_loading) ...[
+              const SizedBox(height: 12),
+              const LinearProgressIndicator(),
+            ] else if (_errorMessage != null) ...[
+              const SizedBox(height: 12),
+              Text(_errorMessage!, style: TextStyle(color: colorScheme.error)),
+            ] else ...[
+              const SizedBox(height: 10),
+              StreamBuilder<Duration?>(
+                stream: _player.durationStream,
+                builder: (context, durationSnapshot) {
+                  final duration = durationSnapshot.data ?? _player.duration ?? Duration.zero;
+                  return StreamBuilder<Duration>(
+                    stream: _player.positionStream,
+                    builder: (context, positionSnapshot) {
+                      final rawPosition = positionSnapshot.data ?? _player.position;
+                      final position = duration == Duration.zero ? rawPosition : Duration(milliseconds: min(rawPosition.inMilliseconds, duration.inMilliseconds));
+                      final maxSeconds = max(1, duration.inSeconds).toDouble();
+                      final valueSeconds = min(position.inSeconds.toDouble(), maxSeconds);
+                      return Column(
+                        children: [
+                          Slider(
+                            value: valueSeconds,
+                            min: 0,
+                            max: maxSeconds,
+                            onChanged: (value) => _seekTo(value),
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(_formatDuration(position), style: Theme.of(context).textTheme.bodySmall),
+                              Text(_formatDuration(duration), style: Theme.of(context).textTheme.bodySmall),
+                            ],
+                          ),
+                        ],
+                      );
+                    },
+                  );
+                },
+              ),
+              const SizedBox(height: 6),
+              StreamBuilder<PlayerState>(
+                stream: _player.playerStateStream,
+                builder: (context, snapshot) {
+                  final playing = _player.playing;
+                  final completed = _player.processingState == ProcessingState.completed;
+                  return Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      IconButton.filledTonal(onPressed: () => _seekRelative(-10), icon: const Icon(Icons.replay_10)),
+                      const SizedBox(width: 12),
+                      IconButton.filled(
+                        iconSize: 34,
+                        onPressed: _toggle,
+                        icon: Icon(playing && !completed ? Icons.pause : Icons.play_arrow),
+                      ),
+                      const SizedBox(width: 12),
+                      IconButton.filledTonal(onPressed: () => _seekRelative(10), icon: const Icon(Icons.forward_10)),
+                    ],
+                  );
+                },
+              ),
+            ],
+          ],
+        ),
+      ),
+    );
+  }
+
+  String _formatDuration(Duration duration) {
+    final hours = duration.inHours;
+    final minutes = duration.inMinutes.remainder(60).toString().padLeft(2, '0');
+    final seconds = duration.inSeconds.remainder(60).toString().padLeft(2, '0');
+    if (hours > 0) return '$hours:$minutes:$seconds';
+    return '$minutes:$seconds';
   }
 }
 
@@ -571,6 +763,7 @@ class StandardsRepository {
   static const _standardAssetFiles = <String>['assets/standards.json', 'assets/standards_extra.json', 'assets/standards_overrides.json'];
   static const _educationAssetFiles = <String>['assets/education_notes.json', 'assets/education_notes_extra.json'];
   static const _visualAssetFiles = <String>['assets/visual_notes.json', 'assets/visual_notes_extra.json'];
+  static const _audioAssetFile = 'assets/standard_audio.json';
 
   static Future<List<StandardItem>> loadItems() async {
     final decoded = <Map<String, dynamic>>[];
@@ -583,6 +776,7 @@ class StandardsRepository {
 
     final notesByKey = await _loadEducationNotes();
     final visualsByKey = await _loadVisualNotes();
+    final audioByKey = await _loadAudioNotes();
     final itemByKey = <String, Map<String, dynamic>>{};
     final codeToKey = <String, String>{};
     final titleToKey = <String, String>{};
@@ -613,7 +807,8 @@ class StandardsRepository {
       final keys = <String>{TurkishUnitText.key(code), TurkishUnitText.key(title)};
       final notes = _collectStrings(notesByKey, keys);
       final visuals = _collectVisuals(visualsByKey, keys);
-      items.add(StandardItem.fromJson(json, educationNotes: notes, visualNotes: visuals));
+      final audioNotes = _collectAudio(audioByKey, keys);
+      items.add(StandardItem.fromJson(json, educationNotes: notes, visualNotes: visuals, audioNotes: audioNotes));
     }
 
     items.sort((a, b) => a.title.compareTo(b.title));
@@ -639,6 +834,19 @@ class StandardsRepository {
         if (seen.add(noteKey)) result.add(note);
       }
     }
+    return result;
+  }
+
+  static List<AudioNote> _collectAudio(Map<String, List<AudioNote>> index, Set<String> keys) {
+    final result = <AudioNote>[];
+    final seen = <String>{};
+    for (final key in keys) {
+      if (key.isEmpty) continue;
+      for (final note in index[key] ?? const <AudioNote>[]) {
+        if (seen.add(note.audioAsset)) result.add(note);
+      }
+    }
+    result.sort((a, b) => a.sortOrder.compareTo(b.sortOrder));
     return result;
   }
 
@@ -689,6 +897,26 @@ class StandardsRepository {
     }
     return result;
   }
+
+  static Future<Map<String, List<AudioNote>>> _loadAudioNotes() async {
+    final result = <String, List<AudioNote>>{};
+    final decoded = await _loadListAsset(_audioAssetFile);
+    for (final entry in decoded) {
+      if (entry is! Map<String, dynamic>) continue;
+      final standards = StandardItem.listFromDynamic(entry['standards']);
+      final note = AudioNote.fromJson(entry);
+      if (note.audioAsset.trim().isEmpty) continue;
+      for (final standard in standards) {
+        final key = TurkishUnitText.key(standard);
+        if (key.isEmpty) continue;
+        result.putIfAbsent(key, () => <AudioNote>[]).add(note);
+      }
+    }
+    for (final notes in result.values) {
+      notes.sort((a, b) => a.sortOrder.compareTo(b.sortOrder));
+    }
+    return result;
+  }
 }
 
 class StandardItem {
@@ -710,6 +938,7 @@ class StandardItem {
     required this.mistakes,
     required this.educationNotes,
     required this.visualNotes,
+    required this.audioNotes,
   });
 
   final String title;
@@ -729,6 +958,7 @@ class StandardItem {
   final List<String> mistakes;
   final List<String> educationNotes;
   final List<VisualNote> visualNotes;
+  final List<AudioNote> audioNotes;
 
   String get searchText => TurkishUnitText.normalize([
         title,
@@ -748,9 +978,15 @@ class StandardItem {
         ...mistakes,
         ...educationNotes,
         ...visualNotes.map((note) => '${note.title} ${note.caption}'),
+        ...audioNotes.map((note) => '${note.title} ${note.audioAsset}'),
       ].join(' ')).toLowerCase();
 
-  factory StandardItem.fromJson(Map<String, dynamic> json, {List<String> educationNotes = const <String>[], List<VisualNote> visualNotes = const <VisualNote>[]}) {
+  factory StandardItem.fromJson(
+    Map<String, dynamic> json, {
+    List<String> educationNotes = const <String>[],
+    List<VisualNote> visualNotes = const <VisualNote>[],
+    List<AudioNote> audioNotes = const <AudioNote>[],
+  }) {
     return StandardItem(
       title: json['title'] as String? ?? '',
       code: json['code'] as String? ?? '',
@@ -769,6 +1005,7 @@ class StandardItem {
       mistakes: listFromDynamic(json['mistakes']),
       educationNotes: educationNotes,
       visualNotes: visualNotes,
+      audioNotes: audioNotes,
     );
   }
 
@@ -794,6 +1031,23 @@ class VisualNote {
       imageBase64: json['imageBase64'] as String? ?? '',
       imageAsset: json['imageAsset'] as String? ?? '',
       placement: json['placement'] as String? ?? 'general',
+    );
+  }
+}
+
+class AudioNote {
+  const AudioNote({required this.title, required this.audioAsset, required this.sortOrder});
+
+  final String title;
+  final String audioAsset;
+  final int sortOrder;
+
+  factory AudioNote.fromJson(Map<String, dynamic> json) {
+    final rawSort = json['sortOrder'];
+    return AudioNote(
+      title: json['title'] as String? ?? 'Sesli Saha Anlatımı',
+      audioAsset: json['audioAsset'] as String? ?? '',
+      sortOrder: rawSort is int ? rawSort : int.tryParse(rawSort?.toString() ?? '') ?? 999,
     );
   }
 }
