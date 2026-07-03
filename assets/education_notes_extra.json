@@ -42,10 +42,16 @@
     "Nem görselleri yalnız EPA Method 4 sayfasında tutulur; toz veya gaz analiz sayfalarında tekrar edilmez."
   ],
   "TS EN 1911": [
-    "HCl ölçümünde prob ve filtre hattı yoğuşma noktasının üzerinde tutulmalı; absorban impinger hattı hedef bileşiği verimli tutacak şekilde soğutulmalıdır.",
-    "Sabit akış ve izokinetik HCl yaklaşımları birbirinin yerine körlemesine kullanılmaz; damlacık/partikül etkisi varsa yöntem seçimi yeniden değerlendirilir.",
-    "İkinci absorban kabında yüksek miktar bulunması breakthrough veya absorpsiyon verimi problemi gösterebilir.",
-    "HCl geri kazanım görselleri sadece HCl/halojen bölümünde tutulur; metal veya toz sayfalarında tekrar edilmez."
+    "TL89 HCl talimatına göre numune alma zamanı 30 dakikadan az olmamalıdır; potansiyel kayıplar nedeniyle kısa süreli çekiş geçerli kabul edilmemelidir.",
+    "HCl'nin toplandığı yıkama şişelerinden gaz 2-3 L/dk ile geçirilmelidir. İzokinetik ana akış daha yüksekse HCl absorban hattı yan akım olarak 2-3 L/dk ikincil debiyle yürütülür.",
+    "Absorpsiyon reaktifi olarak EN ISO 3696 saflık derecesi en az 2 olan, klorür içermeyen saf su kullanılır; iletkenlik 100 µS/m'den düşük olmalıdır.",
+    "İki adet yıkama şişesine 100'er mL absorpsiyon çözeltisi konulur; toplam absorban hacmi 200 mL olarak kaydedilir.",
+    "Damlacık gözleniyorsa veya kaynak nemli biliniyorsa izokinetik numune alma tercih edilir; kaynak homojen ve damlacık yoksa sabit çekişle ölçüm yapılabilir.",
+    "Homojen akışta ve su damlacığı varsa yan akımlı izokinetik ölçüm yapılabilir; amaç izokinetik şartı bozmadan HCl absorban şişelerinde emicilik verimini korumaktır.",
+    "Saha şahidi emisyon limit değerinin %10'undan fazla ise veya emicilik verimi %95'in altındaysa ölçüm geçersiz kabul edilir ve yenilenmelidir.",
+    "Sabit akış örnek hesabı: debi 3 L/dk, çözelti hacmi 200 mL, LOD 0,2 µg/mL ise hedef kütle 40 µg; baca derişimi 1 µg/L ise toplama 3 µg/dk ve teorik süre 13,3 dk çıkar; buna rağmen genel 30 dk minimum süre korunur.",
+    "TS EN 1911 uygulanabilir ölçüm aralığı 1-5000 mg/Nm³ olarak dikkate alınır; 130 °C altı şartlarda yan reaksiyon/kayıp riski nedeniyle sonda sıcaklığı en az 150 °C ve asit çiy noktasından 20 °C yüksek tutulmalıdır.",
+    "Numune +4 °C'de saklanır; girişimler Br-, I-, CN-, S2-, SO3 2-, SCN-, nitritler, peroksitler ve klor gibi türlerden gelebilir."
   ],
   "EPA Method 26A": [
     "Halojen/asit gazı çalışmalarında filtre hedef absorban değildir; partikülün absorban çözeltiye taşınmasını önlemek ve gaz fazı ayrımını korumak için kullanılır.",
@@ -59,8 +65,16 @@
     "IPA blankı, H2O2/su blankı ve kap/yıkama blankı ayrı tutulmalıdır."
   ],
   "EPA Method 13A": [
-    "Flor/florür örneklemesinde cam elyaf filtre ve saf su blankı düşük tayin sınırlarında kritik hale gelir.",
-    "Filtre, prob/hat yıkaması ve absorban fraksiyonlarının nasıl birleştirileceği laboratuvar talimatına göre açıkça etiketlenmelidir."
+    "Florür talimatına göre örnekleme izokinetik şartlar altında yapılır; ölçüm öncesi kaçak testi, baca gazı hızı, baca çapı, nozul ve akış hızı belirlenmelidir.",
+    "Dört impinger kullanılır: ilk iki impingere 100'er mL saf su, üçüncü impinger boş, son impinger silika jel olacak şekilde hazırlanır.",
+    "Çekiş debisi 28 L/dk'yı geçmemelidir. İlk iki impingerde kabarcık oluşturacak kadar güçlü, ancak suyun üçüncü impingere geçmesini engelleyecek kadar düşük debi seçilir; genelde 2-6 L/dk yeterlidir.",
+    "Seçilen debi ±%10 aralığında sabit tutulur; sıcaklık ve basınç periyodik olarak kaydedilir.",
+    "Flor örnekleri toz ölçümleriyle birlikte örneklenmemelidir; filtre/prob yıkaması, filtre tutucu, nozul ve ilk iki şişe suyu aynı numune kabında toplanır.",
+    "Numune taşıması için 1 L geniş ağızlı polietilen kap kullanılır. Nozul ve prob iç yüzeyleri 3 kez yıkanır; her impinger yaklaşık 20 mL deiyonize/distile su ile çalkalanır ve yıkama suları numune kabına eklenir.",
+    "Tablo şartına göre inorganik flor numunesinde minimum numune miktarı 200 mL, metot absorpsiyon, saklama +4 °C olarak kaydedilir.",
+    "SPADNS analizinde spektrofotometre 570 nm'ye ayarlanır; 1 cm küvet kullanılır. SPADNS karışık reaktifi ve florür standart çözeltileriyle kalibrasyon eğrisi oluşturulur.",
+    "Emicilik verimi kontrol edilmelidir; ikinci impingerdeki yüksek tutulum breakthrough/verim sorunu gösterebilir.",
+    "Girişim notu: klor, gres ve yüksek alabilir gres maruz kalan yüzeylerde adsorpsiyon nedeniyle F sonucunu düşürebilir."
   ],
   "EPA Method 29": [
     "Metal örneklemelerinde en büyük saha riski düşük konsantrasyonlarda kontaminasyondur; nozul, prob, filtre, impinger, kap ve reaktif blankları ölçümden önce ayrı planlanmalıdır.",
