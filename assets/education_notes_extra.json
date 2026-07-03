@@ -41,8 +41,22 @@
     "Filtre baca içinde sağlam oturmalı, nozul akışa hizalanmalı ve her noktada DGM, sıcaklık, ΔP, vakum ve süre kaydedilmelidir."
   ],
   "EPA Method 4": [
-    "Nem tayininde ilk iki impingerde su, üçüncü impingerde boş kap ve son kapta silika jel hattı kullanılır; ilk-son ağırlıklar Bws hesabının temelidir.",
-    "Yetersiz soğutma, silika jel doyumu, kaçak veya hat içinde yoğuşma nem sonucunu bozar. Baca sıcaklığı 180 °C ve üzerindeyse kuru baz dönüşümleri için nem değeri özellikle kritiktir."
+    "TL33 Rev.11 nem talimatına göre 180 °C ve üzerindeki bacalarda referans yaklaşım EPA Method 4'tür; cihaz tarafında CH204 C5000, CH265 Eurometrics veya CH406 MEFE izokinetik/toz örnekleme sistemleri kullanılabilir.",
+    "Numune alma noktası EPA Method 1'e göre seçilir: normal şartta akış yönünün tersinden en az 8 çap ve akış yönünden en az 2 hidrolik çap mesafe aranır; zorunlu alternatifte ters yönde en az 2 hidrolik çap ve akış yönünde en az 0,5 hidrolik çap kabul edilebilir.",
+    "180 °C ve üzerindeki referans metotta toplam numune hacmi minimum 0,60 m³ olmalı, çekiş 21 L/dk'dan fazla olmamalı ve ölçüm süresi minimum 30 dakika olmalıdır. Emisyon ölçümüyle birlikte yapılıyorsa emisyon ölçüm süresi boyunca nem numunesi alınır.",
+    "İmpinger dizilimi: 1. ve 2. impingere hacmi bilinen saf su konur ve her ikisi 0,5 g hassasiyetli teraziyle tartılır; 3. impinger boş bırakılır; 4. impingere silika jel konur ve ilk ağırlığı tartılır.",
+    "Prob sıcaklığı 120 °C'ye ayarlanır; baca dışı filtre kullanılıyorsa filtre sıcaklığı da kontrol edilir. Buz banyosu hazırlanır ve örnekleme boyunca silika jel çıkışındaki sıcaklık 20 °C altında tutulacak şekilde buz ilavesi yapılır.",
+    "Ölçüm öncesi kaçak testi zorunlu değildir fakat tavsiye edilir; prob ucu kapatılıp pompa 380 mmHg vakumda çalıştırılarak gaz sayacı değişimi izlenir. Kaçak ortalama numune alma debisinin %4'ü içinde veya 0,00057 m³/dk altında ise uygun kabul edilir.",
+    "Ölçüm sonunda kaçak testi zorunludur. Kaçak uygun sınırın üzerindeyse kaçak oranına bağlı hacim düzeltmesi EPA Method 5 Bölüm 12.3 mantığıyla yapılır; kaçak giderilmeden ölçüme devam edilmez.",
+    "EPA Method 4 herhangi bir izokinetik ölçümle birlikte uygulanıyorsa sabit çekiş yerine izokinetik koşullara göre uygulanan çekiş baz alınır. Her traverste aynı sabit süreyle numune alınır.",
+    "Hesapta yoğunlaşan su buharı hacmi VWC(std) = (Vf - Vi) x 0,001242; silika jelde toplanan su hacmi VWSG(std) = (Wf - Wi) x 0,001245; numune gaz hacmi VM(std) = 0,3594 x Y x ((VM x PM) / TM) olarak takip edilir.",
+    "Nem muhtevası Bws = (VWC(std) + VWSG(std)) / (VWC(std) + VWSG(std) + VM(std)) mantığıyla hesaplanır. İmpinger hacimleri mL olarak, impinger/silika jel ilk-son tartımları 0,5 g hassasiyetle kaydedilir.",
+    "Yaklaşım metodunda 30 mL'lik 2 impinger seri bağlanır ve her birine 5 mL su konur; prob hattı ilk impingere, son impinger ise nem tutucu silika jele bağlanır. Prob hattı başına tozu engellemek için cam yünü konur.",
+    "Yaklaşım metodunda 2 L/dk sabit çekiş yapılır; 30 L hava çekilene kadar veya ilk impingerden ikinci impingere su damlacığı aktarımı gözlenene kadar numune almaya devam edilir. Sıcaklık, basınç ve kuru gaz ölçer değerleri kaydedilir.",
+    "Yaklaşım metodu hesabında iki impinger numunesi birleştirilir ve 0,5 mL hassasiyetle hacim kaydedilir; VWC(std)=K5(Vf-Vi), K5=0,001242 ve VM(std)=0,3594 x Y x ((VM x PM)/TM) kullanılır. BWM yaklaşık gaz hacmi oranı 0,025 olarak dikkate alınır.",
+    "180 °C altındaki bacalarda CH165 NOVA PLUS nem probu işletme içi metot olarak kullanılır. Nem probu soketine takılır, prob bacaya yerleştirilir, cihaz açılır, değerlerin oturması beklenir; bağıl nem (%) ve baca gazı sıcaklığı kaydedilir.",
+    "NOVA cihazı % mutlak nemi doğrudan vermez. Cihazda okunan bağıl nem veya g/m³ cinsinden mutlak nem, yüzde mutlak neme çevrilmelidir. g/m³ okunan mutlak nem için % mutlak nem = Nem(g/m³) x (22,4/18) x 0,1 formülü kullanılır.",
+    "Uygunsuzluk kontrolleri: gaz akış açısı baca eksenine göre en fazla 15° olmalı, negatif yerel basınç olmamalı, pitot fark basıncı en az 5 Pa olmalı, en yüksek hız/en düşük hız oranı 3:1 veya daha düşük olmalı ve maksimum vakumda sızdırmazlık normal debinin en fazla %2'si kadar olmalıdır."
   ],
   "TS EN 1911": [
     "HCl talimatına göre numune alma zamanı 30 dakikadan az olmamalıdır. HCl'nin toplandığı yıkama şişelerinden gaz 2-3 L/dk ile geçirilmelidir.",
