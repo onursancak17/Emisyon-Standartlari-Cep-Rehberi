@@ -5,55 +5,16 @@
     "category": "Emisyon",
     "subgroup": "Hız / Debi / Traverse",
     "keywords": ["ölçüm düzlemi", "port", "traverse", "dairesel baca", "dikdörtgen baca", "EPA Method 1", "TS EN 15259", "bozucu etki", "akış açısı"],
-    "purpose": "Baca emisyon ölçümünden önce ölçüm düzleminin, portların ve traverse noktalarının doğru seçilmesi için kullanılan saha rehberidir. Bu bölümde TS tarafındaki dairesel/dikdörtgen kesit nokta yerleşimleri ile EPA Method 1 ölçüm düzlemi yaklaşımı birbirinden ayrı değerlendirilir; EPA görseli TS dairesel kesit görseli gibi kullanılmaz.",
+    "purpose": "Baca emisyon ölçümünden önce ölçüm düzleminin, portların ve traverse noktalarının doğru seçilmesi için kullanılan saha rehberidir. TS tarafındaki dairesel/dikdörtgen kesit nokta yerleşimleri ile EPA Method 1 ölçüm düzlemi yaklaşımı birbirinden ayrı değerlendirilir; EPA görseli TS dairesel kesit görseli gibi kullanılmaz.",
     "duration": "Bu bölüm doğrudan numune alma süresi vermez. Ölçüm öncesi saha uygunluğu, kesit ölçümü, port erişimi, bozucu etki mesafeleri ve nokta planı hazırlanır. Numune alma süresi ölçülecek kirletici standardına göre belirlenir; ancak nokta ve portlar arasında süre dağılımı metoda uygun yapılır.",
     "flowRate": "Bu bölüm numune debisini belirlemez. Hız profili, akış açısı, ters akış, türbülans, port erişimi ve baca kesit geometrisi değerlendirilir. İzokinetik veya sabit debili ölçümün gerçek çekiş debisi ilgili kirletici metodunda belirlenir.",
-    "equipment": [
-      "Şerit metre veya lazer metre ile baca çapı, dikdörtgen kesitte kenarlar ve port derinliği ölçülür.",
-      "S-tip Pitot, diferansiyel basınç ölçer, sıcaklık probu ve akış yönü kontrol ekipmanı hazır bulundurulur.",
-      "Port çapı; prob, nozül, filtre tutucu, ısıtmalı hat ve numune alma treni girişine izin verecek büyüklükte olmalıdır.",
-      "Dairesel bacada çap ve port açıları; dikdörtgen bacada uzun/kısa kenar, hidrolik çap ve erişilebilir nokta sayısı kaydedilir.",
-      "Saha krokisi, fotoğraf, platform güvenliği kontrolü ve ölçüm düzlemi uygunsuzluk notları ölçüm öncesi hazırlanır."
-    ],
-    "reagents": [
-      "Çözelti, absorban veya impinger kullanılmaz; bu bölüm tamamen ölçüm yeri, port, geometri ve traverse planı kontrolüdür.",
-      "Bu nedenle burada impinger hacmi, absorban mL bilgisi veya kimyasal hazırlık aranmaz; kimyasal bilgiler ilgili HCl, metal, nem, PAH gibi standartların kendi başlığında verilir."
-    ],
-    "fieldSteps": [
-      "Önce ölçüm yapılacak bacayı ve platformu yerinde gör; güvenli erişim, port açıklığı ve probun tüm noktalara ulaşma durumunu kontrol et.",
-      "Fan, dirsek, klape, siklon, daralma, genişleme, taze hava girişi, baca ağzı gibi bozucu etkilerin ölçüm düzlemine uzaklığını kaydet.",
-      "Baca kesitini sınıflandır: dairesel, kare, dikdörtgen veya düzensiz kesit. Buna göre TS dairesel, TS dikdörtgen veya EPA Method 1 yaklaşımını ayrı uygula.",
-      "TS dairesel kesitte çap aralığına göre hat/nokta sayısını belirle; tanjant metodu kullanılacaksa bu ayrıca belirtilir.",
-      "TS dikdörtgen kesitte alanı eş parçalara bölecek grid mantığıyla nokta yerleşimini planla; dairesel tabloyu dikdörtgene uygulama.",
-      "EPA Method 1 için EPA’ya ait H1/H2, upstream/downstream ve nokta seçimi mantığını ayrı başlık altında değerlendir; bu görsel TS dairesel kesit tablosu değildir.",
-      "Her noktanın duvardan mesafesini ve porttan ulaşılabilirliğini saha formuna yaz.",
-      "İlk hız taramasında ters akış, sıfıra yakın hız, aşırı dalgalanma veya yüksek akış açısı varsa noktayı işaretle ve rapor notunu hazırla."
-    ],
-    "criticalControls": [
-      "TS dairesel baca kesit görseli ile EPA Method 1 görseli karıştırılmamalıdır.",
-      "Porttan tüm noktalara erişilemiyorsa ölçüm eksik noktalı hale gelir; bu durum raporda açık yazılmalıdır.",
-      "Bozucu etkiye yakın düzlemde ölçüm sonuçlarının temsil kabiliyeti zayıflar.",
-      "Dairesel bacada tanjant metodu, genel metot ve nokta mesafeleri doğru seçilmelidir.",
-      "Dikdörtgen bacada grid/alan bölme mantığı uygulanmalı; dairesel baca mesafeleri kullanılmamalıdır."
-    ],
-    "acceptance": [
-      "Ölçüm düzlemi mümkün olduğunca bozucu etkilerden uzak ve güvenli erişilebilir olmalıdır.",
-      "Port çapı, port sayısı, port konumu ve prob erişimi ölçüme izin vermelidir.",
-      "Nokta sayısı ve nokta mesafeleri seçilen TS veya EPA yaklaşımına göre savunulabilir olmalıdır.",
-      "Uygunsuzluk varsa fotoğraf, kroki ve gerekçeli sapma notu rapora eklenmelidir."
-    ],
-    "reporting": [
-      "Baca kesiti, çap/kenar ölçüleri, port sayısı, port yönleri, nokta sayısı, nokta mesafeleri ve bozucu etki mesafeleri rapora yazılır.",
-      "TS dairesel, TS dikdörtgen veya EPA Method 1 yaklaşımından hangisinin kullanıldığı açık belirtilir.",
-      "Standarda tam uyulamayan durumlarda sapma gerekçesi ve ölçümün temsil kabiliyeti ayrıca yazılır."
-    ],
-    "mistakes": [
-      "EPA Method 1 görselini TS dairesel kesit görseli gibi göstermek.",
-      "Dairesel ve dikdörtgen nokta yerleşimlerini karıştırmak.",
-      "Tek porttan tüm noktalara erişilip erişilmediğini kontrol etmemek.",
-      "Bozucu etki mesafelerini ölçmeden sadece kolay erişilen porttan ölçmek.",
-      "Uygunsuz ölçüm düzlemini raporda belirtmemek."
-    ]
+    "equipment": ["Şerit metre veya lazer metre ile baca çapı, dikdörtgen kesitte kenarlar ve port derinliği ölçülür.", "S-tip Pitot, diferansiyel basınç ölçer, sıcaklık probu ve akış yönü kontrol ekipmanı hazır bulundurulur.", "Port çapı prob, nozül, filtre tutucu, ısıtmalı hat ve numune alma treni girişine izin verecek büyüklükte olmalıdır.", "Dairesel bacada çap ve port açıları; dikdörtgen bacada uzun/kısa kenar, hidrolik çap ve erişilebilir nokta sayısı kaydedilir.", "Saha krokisi, fotoğraf, platform güvenliği kontrolü ve ölçüm düzlemi uygunsuzluk notları ölçüm öncesi hazırlanır."],
+    "reagents": ["Çözelti, absorban veya impinger kullanılmaz; bu bölüm tamamen ölçüm yeri, port, geometri ve traverse planı kontrolüdür.", "Bu nedenle burada impinger hacmi, absorban mL bilgisi veya kimyasal hazırlık aranmaz; kimyasal bilgiler ilgili HCl, metal, nem, PAH, PCDD/PCDF gibi standartların kendi başlığında verilir."],
+    "fieldSteps": ["Önce ölçüm yapılacak bacayı ve platformu yerinde gör; güvenli erişim, port açıklığı ve probun tüm noktalara ulaşma durumunu kontrol et.", "Fan, dirsek, klape, siklon, daralma, genişleme, taze hava girişi, baca ağzı gibi bozucu etkilerin ölçüm düzlemine uzaklığını kaydet.", "Baca kesitini sınıflandır: dairesel, kare, dikdörtgen veya düzensiz kesit. Buna göre TS dairesel, TS dikdörtgen veya EPA Method 1 yaklaşımını ayrı uygula.", "TS dairesel kesitte çap aralığına göre hat/nokta sayısını belirle; tanjant metodu kullanılacaksa ayrıca belirt.", "TS dikdörtgen kesitte alanı eş parçalara bölecek grid mantığıyla nokta yerleşimini planla; dairesel tabloyu dikdörtgene uygulama.", "EPA Method 1 için EPA’ya ait H1/H2, upstream/downstream ve nokta seçimi mantığını ayrı başlık altında değerlendir; bu görsel TS dairesel kesit tablosu değildir.", "Her noktanın duvardan mesafesini ve porttan ulaşılabilirliğini saha formuna yaz.", "İlk hız taramasında ters akış, sıfıra yakın hız, aşırı dalgalanma veya yüksek akış açısı varsa noktayı işaretle ve rapor notunu hazırla."],
+    "criticalControls": ["TS dairesel baca kesit görseli ile EPA Method 1 görseli karıştırılmamalıdır.", "Porttan tüm noktalara erişilemiyorsa ölçüm eksik noktalı hale gelir; bu durum raporda açık yazılmalıdır.", "Bozucu etkiye yakın düzlemde ölçüm sonuçlarının temsil kabiliyeti zayıflar.", "Dairesel bacada tanjant metodu, genel metot ve nokta mesafeleri doğru seçilmelidir.", "Dikdörtgen bacada grid/alan bölme mantığı uygulanmalı; dairesel baca mesafeleri kullanılmamalıdır."],
+    "acceptance": ["Ölçüm düzlemi mümkün olduğunca bozucu etkilerden uzak ve güvenli erişilebilir olmalıdır.", "Port çapı, port sayısı, port konumu ve prob erişimi ölçüme izin vermelidir.", "Nokta sayısı ve nokta mesafeleri seçilen TS veya EPA yaklaşımına göre savunulabilir olmalıdır.", "Uygunsuzluk varsa fotoğraf, kroki ve gerekçeli sapma notu rapora eklenmelidir."],
+    "reporting": ["Baca kesiti, çap/kenar ölçüleri, port sayısı, port yönleri, nokta sayısı, nokta mesafeleri ve bozucu etki mesafeleri rapora yazılır.", "TS dairesel, TS dikdörtgen veya EPA Method 1 yaklaşımından hangisinin kullanıldığı açık belirtilir.", "Standarda tam uyulamayan durumlarda sapma gerekçesi ve ölçümün temsil kabiliyeti ayrıca yazılır."],
+    "mistakes": ["EPA Method 1 görselini TS dairesel kesit görseli gibi göstermek.", "Dairesel ve dikdörtgen nokta yerleşimlerini karıştırmak.", "Tek porttan tüm noktalara erişilip erişilmediğini kontrol etmemek.", "Bozucu etki mesafelerini ölçmeden sadece kolay erişilen porttan ölçmek.", "Uygunsuz ölçüm düzlemini raporda belirtmemek."]
   },
   {
     "title": "Çöken Toz İmisyon Ölçümü",
@@ -64,56 +25,13 @@
     "purpose": "Tesis çevresinde belirlenen noktalara yerleştirilen pasif toplama kaplarıyla çöken toz miktarının belirlenmesi için ayrıntılı saha rehberidir. Bu ölçüm PM10 cihazıyla aktif çekiş değildir; kap alanı, maruziyet süresi, nokta seçimi, koruyucu sıvı ve saha kabul şartları sonucu belirler.",
     "duration": "Yaygın saha uygulaması 1 ay bekletmedir. Başlangıç ve bitiş tarih/saatleri, toplam gün sayısı, kapların sahada kalma süresi ve varsa eksik/fazla süre gerekçesi forma yazılır. Kap devrilmesi, kayıp, taşma, aşırı kirlenme, kuş/yaprak/böcek etkisi veya dış müdahale varsa sonuç geçerliliği ayrıca değerlendirilir.",
     "flowRate": "Aktif çekiş debisi yoktur. Değerlendirme, toplama kabının açık yüzey alanı, maruziyet gün sayısı ve laboratuvarda belirlenen kütle üzerinden yapılır. Bu nedenle bu ölçümde DGM hacmi, L/dk debi veya izokinetik oran aranmaz.",
-    "equipment": [
-      "Çöken toz toplama kabı veya standarda/laboratuvar talimatına uygun pasif toplama cihazı.",
-      "Direk, stand, sabitleme kelepçesi ve devrilmeye karşı mekanik koruma.",
-      "Kap kapağı, taşıma kabı, etiket, saha formu, koordinat kaydı ve fotoğraf ekipmanı.",
-      "Tesis içi ve tesis dışı noktaların krokisi; hakim rüzgâr, yol, bina, ağaç, engel ve toz kaynağı mesafe bilgileri.",
-      "Koruyucu sıvı kullanılacaksa laboratuvarın verdiği temiz şişe, mezür/pipet ve çözelti hazırlama/ekleme kaydı."
-    ],
-    "reagents": [
-      "Çöken toz kabı sahaya yerleştirilmeden önce laboratuvar/standart talimatındaki kap hazırlığı uygulanır.",
-      "Saha uygulamalarında biyolojik oluşumu azaltmak için kap içine bakır sülfat/CuSO4 içeren koruyucu sıvı kullanılabilir.",
-      "Bakır sülfat veya başka koruyucu sıvının derişimi ve kaba konulacak mL miktarı laboratuvar talimatında yazan kesin değere göre uygulanmalıdır; kesin mL bilinmeden ezbere doldurulmamalıdır.",
-      "Kap içine konulan sıvının türü, derişimi, hacmi, hazırlama tarihi, kap no ve ilk seviye/ilk durum saha formuna yazılır.",
-      "Blank/şahit kap isteniyorsa aynı kap, aynı sıvı ve aynı taşıma şartlarıyla hazırlanır; sahada açılmadan taşınır ve laboratuvara aynı zincirle gönderilir."
-    ],
-    "fieldSteps": [
-      "Ölçüm planında tesis içi ve tesis dışı noktaları ayrı belirle; hakim rüzgâr, toz kaynağı, yerleşim, yol, bina, ağaç ve engel etkilerini değerlendir.",
-      "Kapları temiz, kapalı, etiketli ve gerekiyorsa koruyucu sıvısı eklenmiş halde sahaya götür.",
-      "Her kap için nokta adı, koordinat, yükseklik, başlangıç tarih/saat, kap no, ilk sıvı hacmi ve çevre fotoğrafını kaydet.",
-      "Kap ağzının açık, dengeli, devrilmeyecek ve dış müdahaleye karşı makul korunmuş olduğundan emin ol.",
-      "Kap çevresindeki engel, ağaç, bina, yol, geçici inşaat, toz kaynağı yönü ve insan müdahalesi riskini forma yaz.",
-      "Bir aylık maruziyet boyunca kap devrilmesi, taşması, kuş/yaprak/böcek etkisi, yoğun yağış, inşaat/tozuma veya dış müdahale varsa olay notu tut.",
-      "Bitişte kapları dikkatle kapat; kap kenarı birikimi ve sıvı kaybı varsa laboratuvar talimatına göre hareket et.",
-      "Bitiş tarih/saat, toplam gün, gözlenen uygunsuzluk, numune teslim zinciri ve laboratuvara teslim bilgilerini forma yaz."
-    ],
-    "criticalControls": [
-      "Çöken toz ile pasif difüzyon tüpü aynı şey değildir; pasif tüp görselleri çöken toz başlığında gösterilmemelidir.",
-      "Çöken toz ölçümü aktif debili PM10 ölçümü değildir; debi/hacim değil kap alanı ve maruziyet süresi mantığıyla yürütülür.",
-      "Koruyucu sıvı türü ve mL miktarı kayıt edilmezse laboratuvar düzeltmesi ve saha izlenebilirliği zayıflar.",
-      "Kap ağzı kapanır, kap devrilir, taşar, kaybolur veya yabancı maddeyle aşırı kirlenirse ölçüm geçerliliği ayrıca değerlendirilmelidir.",
-      "Tesis içi/dışı ayrımı, nokta yerleşimi ve çevresel etkiler fotoğrafla desteklenmelidir."
-    ],
-    "acceptance": [
-      "Başlangıç ve bitiş tarih/saatleri net olmalıdır.",
-      "Kap no, nokta adı, koordinat, yükseklik ve fotoğraf kaydı eksiksiz olmalıdır.",
-      "Koruyucu sıvı kullanıldıysa türü, derişimi ve mL miktarı kayıtlı olmalıdır.",
-      "Kap devrilmesi, taşma, dış müdahale, kayıp veya aşırı yabancı madde varsa sonuç geçerliliği raporda tartışılmalıdır."
-    ],
-    "reporting": [
-      "Sonuç kap alanı ve maruziyet süresi üzerinden ilgili birimde raporlanır.",
-      "Tesis içi/tesis dışı nokta ayrımı, toplam gün sayısı, saha gözlemleri, meteorolojik/çevresel etkiler ve uygunsuzluklar rapora eklenir.",
-      "Bakır sülfat veya başka koruyucu kullanıldıysa kullanılan miktar ve laboratuvar talimatı rapor ekinde izlenebilir olmalıdır."
-    ],
-    "mistakes": [
-      "Çöken tozu PM10 aktif çekiş ölçümü gibi değerlendirmek.",
-      "Pasif tüp görsellerini çöken toz başlığına koymak.",
-      "Bakır sülfat/sıvı hacmini forma yazmamak.",
-      "Kap yerleşimini fotoğraflamamak.",
-      "Kap devrilmesi veya yabancı madde girişini rapora yazmamak.",
-      "Tesis içi ve tesis dışı noktaları karıştırmak."
-    ]
+    "equipment": ["Çöken toz toplama kabı veya standarda/laboratuvar talimatına uygun pasif toplama cihazı.", "Direk, stand, sabitleme kelepçesi ve devrilmeye karşı mekanik koruma.", "Kap kapağı, taşıma kabı, etiket, saha formu, koordinat kaydı ve fotoğraf ekipmanı.", "Tesis içi ve tesis dışı noktaların krokisi; hakim rüzgâr, yol, bina, ağaç, engel ve toz kaynağı mesafe bilgileri.", "Koruyucu sıvı kullanılacaksa laboratuvarın verdiği temiz şişe, mezür/pipet ve çözelti hazırlama/ekleme kaydı."],
+    "reagents": ["Çöken toz kabı sahaya yerleştirilmeden önce laboratuvar/standart talimatındaki kap hazırlığı uygulanır.", "Saha uygulamalarında biyolojik oluşumu azaltmak için kap içine bakır sülfat/CuSO4 içeren koruyucu sıvı kullanılabilir.", "Bakır sülfat veya başka koruyucu sıvının derişimi ve kaba konulacak mL miktarı laboratuvar talimatında yazan kesin değere göre uygulanmalıdır; kesin mL bilinmeden ezbere doldurulmamalıdır.", "Kap içine konulan sıvının türü, derişimi, hacmi, hazırlama tarihi, kap no ve ilk seviye/ilk durum saha formuna yazılır.", "Blank/şahit kap isteniyorsa aynı kap, aynı sıvı ve aynı taşıma şartlarıyla hazırlanır; sahada açılmadan taşınır ve laboratuvara aynı zincirle gönderilir."],
+    "fieldSteps": ["Ölçüm planında tesis içi ve tesis dışı noktaları ayrı belirle; hakim rüzgâr, toz kaynağı, yerleşim, yol, bina, ağaç ve engel etkilerini değerlendir.", "Kapları temiz, kapalı, etiketli ve gerekiyorsa koruyucu sıvısı eklenmiş halde sahaya götür.", "Her kap için nokta adı, koordinat, yükseklik, başlangıç tarih/saat, kap no, ilk sıvı hacmi ve çevre fotoğrafını kaydet.", "Kap ağzının açık, dengeli, devrilmeyecek ve dış müdahaleye karşı makul korunmuş olduğundan emin ol.", "Kap çevresindeki engel, ağaç, bina, yol, geçici inşaat, toz kaynağı yönü ve insan müdahalesi riskini forma yaz.", "Bir aylık maruziyet boyunca kap devrilmesi, taşması, kuş/yaprak/böcek etkisi, yoğun yağış, inşaat/tozuma veya dış müdahale varsa olay notu tut.", "Bitişte kapları dikkatle kapat; kap kenarı birikimi ve sıvı kaybı varsa laboratuvar talimatına göre hareket et.", "Bitiş tarih/saat, toplam gün, gözlenen uygunsuzluk, numune teslim zinciri ve laboratuvara teslim bilgilerini forma yaz."],
+    "criticalControls": ["Çöken toz ile pasif difüzyon tüpü aynı şey değildir; pasif tüp görselleri çöken toz başlığında gösterilmemelidir.", "Çöken toz ölçümü aktif debili PM10 ölçümü değildir; debi/hacim değil kap alanı ve maruziyet süresi mantığıyla yürütülür.", "Koruyucu sıvı türü ve mL miktarı kayıt edilmezse laboratuvar düzeltmesi ve saha izlenebilirliği zayıflar.", "Kap ağzı kapanır, kap devrilir, taşar, kaybolur veya yabancı maddeyle aşırı kirlenirse ölçüm geçerliliği ayrıca değerlendirilmelidir.", "Tesis içi/dışı ayrımı, nokta yerleşimi ve çevresel etkiler fotoğrafla desteklenmelidir."],
+    "acceptance": ["Başlangıç ve bitiş tarih/saatleri net olmalıdır.", "Kap no, nokta adı, koordinat, yükseklik ve fotoğraf kaydı eksiksiz olmalıdır.", "Koruyucu sıvı kullanıldıysa türü, derişimi ve mL miktarı kayıtlı olmalıdır.", "Kap devrilmesi, taşma, dış müdahale, kayıp veya aşırı yabancı madde varsa sonuç geçerliliği raporda tartışılmalıdır."],
+    "reporting": ["Sonuç kap alanı ve maruziyet süresi üzerinden ilgili birimde raporlanır.", "Tesis içi/tesis dışı nokta ayrımı, toplam gün sayısı, saha gözlemleri, meteorolojik/çevresel etkiler ve uygunsuzluklar rapora eklenir.", "Bakır sülfat veya başka koruyucu kullanıldıysa kullanılan miktar ve laboratuvar talimatı rapor ekinde izlenebilir olmalıdır."],
+    "mistakes": ["Çöken tozu PM10 aktif çekiş ölçümü gibi değerlendirmek.", "Pasif tüp görsellerini çöken toz başlığına koymak.", "Bakır sülfat/sıvı hacmini forma yazmamak.", "Kap yerleşimini fotoğraflamamak.", "Kap devrilmesi veya yabancı madde girişini rapora yazmamak.", "Tesis içi ve tesis dışı noktaları karıştırmak."]
   },
   {
     "title": "Pasif Tüp ile İmisyon Ölçümleri",
@@ -122,51 +40,15 @@
     "subgroup": "Pasif Örnekleme / Difüzyon Tüpü",
     "keywords": ["pasif tüp", "difüzyon tüpü", "imisyon", "NO2", "SO2", "BTEX", "VOC", "shelter", "maruziyet", "blank"],
     "purpose": "Ortam havasında hedef kirleticilerin aktif pompa olmadan, difüzyon prensibiyle belirli süre maruz bırakılan pasif tüpler veya pasif örnekleyicilerle izlenmesi için saha rehberidir. Çöken toz kabı ile pasif tüp ayrı ölçüm mantığıdır ve uygulamada ayrı başlık altında tutulmalıdır.",
-    "duration": "Süre kullanılan pasif tüp tipine, hedef kirleticiye ve laboratuvar talimatına göre belirlenir. Başlangıç ve bitiş tarih/saatleri kesin yazılır; maruziyet süresi sonuç hesabının temel girdisidir. Süre eksik/fazla kalırsa laboratuvar ve rapor notu ile birlikte değerlendirilir.",
+    "duration": "Süre kullanılan pasif tüp tipine, hedef kirleticiye ve laboratuvar talimatına göre belirlenir. Başlangıç ve bitiş tarih/saatleri kesin yazılır; maruziyet süresi sonuç hesabının temel girdisidir.",
     "flowRate": "Aktif çekiş debisi yoktur. Numune alma, difüzyon yüzeyi, adsorban/reaktif yüzeyi, maruziyet süresi, ortam sıcaklığı, rüzgâr etkisi ve laboratuvarın kullandığı alım hızı üzerinden değerlendirilir.",
-    "equipment": [
-      "Hedef kirleticiye uygun pasif tüp veya difüzyon tipi örnekleyici.",
-      "Yağmur, doğrudan güneş, yüksek rüzgâr ve mekanik hasara karşı koruma aparatı/shelter.",
-      "Askı aparatı, etiket, saha formu, koordinat/fotoğraf kaydı ve taşıma kabı.",
-      "Numune tüpleriyle aynı partiden blank/taşıma tüpü.",
-      "Tüp açma-kapama zamanı için saat ve saha teslim zinciri formu."
-    ],
-    "reagents": [
-      "Pasif tüp içindeki adsorban/reaktif laboratuvar tarafından hazırlanır; sahada tüp içine kimyasal eklenmez.",
-      "Sahada yapılacak işlem genellikle tüpün doğru zamanda açılması, koruma aparatına yerleştirilmesi, doğru zamanda kapatılması ve etiketlenmesidir.",
-      "Blank tüpler numune tüpleriyle aynı taşıma şartında tutulur; ancak sahada açılıp maruz bırakılmaz.",
-      "Tüp no, hedef kirletici, açılma/kapanma zamanı, nokta adı, shelter durumu ve taşıma şartı kayıt altına alınır."
-    ],
-    "fieldSteps": [
-      "Hedef kirletici ve pasif tüp tipini laboratuvarla netleştir.",
-      "Noktayı bina, ağaç, duvar, egzoz çıkışı, yoğun türbülans, doğrudan yağış ve vandalizm riskinden mümkün olduğunca korunaklı seç.",
-      "Shelter/koruma aparatını kur; pasif tüpün difüzyon yüzeyinin kapanmadığını kontrol et.",
-      "Tüpü başlangıç saatinde aç veya laboratuvar talimatına göre kapağını çıkar; tüp no, nokta adı, koordinat ve fotoğraf kaydını al.",
-      "Maruziyet süresi boyunca düşme, ıslanma, kayıp, aşırı toz/kirlenme, kapak sorunu veya dış müdahale olup olmadığını kontrol et.",
-      "Süre bitiminde tüpü kapat, blank ile birlikte taşıma kabına al, etiketle ve laboratuvara gönder."
-    ],
-    "criticalControls": [
-      "Pasif tüp görselleri çöken toz veya yanma gazı sayfasında gösterilmemelidir.",
-      "Shelter yağmur, kar, doğrudan güneş, yüksek rüzgâr ve mekanik hasara karşı önemlidir.",
-      "Başlangıç/bitiş zamanı hatalıysa maruziyet süresi ve sonuç hesabı doğrudan etkilenir.",
-      "Blank tüp olmadan taşıma ve laboratuvar kontaminasyonu değerlendirilemez."
-    ],
-    "acceptance": [
-      "Tüp numarası, nokta, başlangıç/bitiş zamanı, koordinat ve fotoğraf kaydı eksiksiz olmalıdır.",
-      "Tüp düşmüş, ıslanmış, açılmış/kapanmış, kaybolmuş veya shelter dışında kalmışsa sonuç geçerliliği ayrıca değerlendirilir.",
-      "Blank ve taşıma şartları laboratuvar talimatına uygun olmalıdır."
-    ],
-    "reporting": [
-      "Pasif tüp tipi, hedef kirletici, maruziyet süresi, nokta konumu, shelter durumu ve blank bilgisi rapora yazılır.",
-      "Sonuç laboratuvarın alım hızı/difüzyon hesabı ve maruziyet süresiyle birlikte değerlendirilir."
-    ],
-    "mistakes": [
-      "Pasif tüp görsellerini çöken toz başlığında kullanmak.",
-      "Başlangıç/bitiş saatini yuvarlamak veya yazmamak.",
-      "Blank tüp hazırlamamak.",
-      "Tüpü yağmur, rüzgâr veya doğrudan kaynak etkisine uygunsuz yerleştirmek.",
-      "Tüpü açma/kapama yönünü ve koruma aparatını kontrol etmemek."
-    ]
+    "equipment": ["Hedef kirleticiye uygun pasif tüp veya difüzyon tipi örnekleyici.", "Yağmur, doğrudan güneş, yüksek rüzgâr ve mekanik hasara karşı koruma aparatı/shelter.", "Askı aparatı, etiket, saha formu, koordinat/fotoğraf kaydı ve taşıma kabı.", "Numune tüpleriyle aynı partiden blank/taşıma tüpü.", "Tüp açma-kapama zamanı için saat ve saha teslim zinciri formu."],
+    "reagents": ["Pasif tüp içindeki adsorban/reaktif laboratuvar tarafından hazırlanır; sahada tüp içine kimyasal eklenmez.", "Sahada yapılacak işlem genellikle tüpün doğru zamanda açılması, koruma aparatına yerleştirilmesi, doğru zamanda kapatılması ve etiketlenmesidir.", "Blank tüpler numune tüpleriyle aynı taşıma şartında tutulur; ancak sahada açılıp maruz bırakılmaz.", "Tüp no, hedef kirletici, açılma/kapanma zamanı, nokta adı, shelter durumu ve taşıma şartı kayıt altına alınır."],
+    "fieldSteps": ["Hedef kirletici ve pasif tüp tipini laboratuvarla netleştir.", "Noktayı bina, ağaç, duvar, egzoz çıkışı, yoğun türbülans, doğrudan yağış ve vandalizm riskinden mümkün olduğunca korunaklı seç.", "Shelter/koruma aparatını kur; pasif tüpün difüzyon yüzeyinin kapanmadığını kontrol et.", "Tüpü başlangıç saatinde aç veya laboratuvar talimatına göre kapağını çıkar; tüp no, nokta adı, koordinat ve fotoğraf kaydını al.", "Maruziyet süresi boyunca düşme, ıslanma, kayıp, aşırı toz/kirlenme, kapak sorunu veya dış müdahale olup olmadığını kontrol et.", "Süre bitiminde tüpü kapat, blank ile birlikte taşıma kabına al, etiketle ve laboratuvara gönder."],
+    "criticalControls": ["Pasif tüp görselleri çöken toz veya yanma gazı sayfasında gösterilmemelidir.", "Shelter yağmur, kar, doğrudan güneş, yüksek rüzgâr ve mekanik hasara karşı önemlidir.", "Başlangıç/bitiş zamanı hatalıysa maruziyet süresi ve sonuç hesabı doğrudan etkilenir.", "Blank tüp olmadan taşıma ve laboratuvar kontaminasyonu değerlendirilemez."],
+    "acceptance": ["Tüp numarası, nokta, başlangıç/bitiş zamanı, koordinat ve fotoğraf kaydı eksiksiz olmalıdır.", "Tüp düşmüş, ıslanmış, açılmış/kapanmış, kaybolmuş veya shelter dışında kalmışsa sonuç geçerliliği ayrıca değerlendirilir.", "Blank ve taşıma şartları laboratuvar talimatına uygun olmalıdır."],
+    "reporting": ["Pasif tüp tipi, hedef kirletici, maruziyet süresi, nokta konumu, shelter durumu ve blank bilgisi rapora yazılır.", "Sonuç laboratuvarın alım hızı/difüzyon hesabı ve maruziyet süresiyle birlikte değerlendirilir."],
+    "mistakes": ["Pasif tüp görsellerini çöken toz başlığında kullanmak.", "Başlangıç/bitiş saatini yuvarlamak veya yazmamak.", "Blank tüp hazırlamamak.", "Tüpü yağmur, rüzgâr veya doğrudan kaynak etkisine uygunsuz yerleştirmek.", "Tüpü açma/kapama yönünü ve koruma aparatını kontrol etmemek."]
   },
   {
     "title": "EPA Method 29 Ağır Metal Örneklemesi",
@@ -177,53 +59,13 @@
     "purpose": "Baca gazında çoklu metal emisyonlarının izokinetik örnekleme, filtre, asidik absorbanlar, permanganat fraksiyonu ve numune geri kazanımı ile belirlenmesi için saha rehberidir. EPA 29 geri kazanım görselleri EPA Method 29 başlığında tutulur; TS EN 14385 sayfasında EPA 29 görseli gibi gösterilmez.",
     "duration": "Süre beklenen metal seviyesi, hedef tayin limiti, filtre yüklenmesi ve absorban kapasitesine göre planlanır. Her traverse noktasında süre eşit veya metoda uygun dağıtılır; yeterli toplam kuru/normal hacim hedeflenir.",
     "flowRate": "Çekiş izokinetik yürütülür. Nozul çapı, baca hızı, DGM hacmi, sayaç sıcaklığı, sayaç vakumu, orifis ΔH ve nokta süresi düzenli kaydedilir. İzokinetiklik hedef aralıkta tutulmalıdır.",
-    "equipment": [
-      "Keskin kenarlı kalibre nozül, ısıtmalı prob ve uygun liner.",
-      "Filtre tutucu ve metal analizine uygun ön tartım/ön hazırlık görmüş filtre.",
-      "Metal kontaminasyonu yaratmayacak cam/PTFE yüzeyler, temiz bağlantılar ve kaplar.",
-      "İmpinger grubu, buz banyosu, DGM, pompa, sıcaklık/basınç ölçer ve kaçak testi düzeni.",
-      "Prob/nozul yıkama şişeleri, ayrı numune kapları, asit dayanımlı etiket ve blank kapları."
-    ],
-    "reagents": [
-      "Tipik EPA 29 treninde ön impingerlerde nitrik asit/hidrojen peroksit karışımı kullanılır; yaygın saha hazırlığında ilgili impingerlere 100 mL seviyesinde çözelti konulur. Kesin derişim ve hacim laboratuvar SOP/metot talimatıyla doğrulanmalıdır.",
-      "Cıva fraksiyonu için asidik potasyum permanganat çözeltisi içeren impingerler kullanılır; her impingerin başlangıç hacmi ve rengi kaydedilir.",
-      "Son impingerde nem tutucu olarak silika jel kullanılır; ilk ve son ağırlık kayıt edilir.",
-      "Filtre, prob/nozul yıkaması, ön asidik absorbanlar, permanganat fraksiyonu, permanganat yıkamaları ve silika jel ayrı fraksiyonlar olarak etiketlenir.",
-      "Reaktif blankı, saha blankı, filtre blankı, yıkama blankı ve taşıma zinciri düşük seviyeli metal sonuçları için kritik kabul edilir."
-    ],
-    "fieldSteps": [
-      "Ölçümden önce hedef metal listesini, cıva istenip istenmediğini, laboratuvar kap/fraksiyon düzenini ve blank planını netleştir.",
-      "Ekipmanı metal kontaminasyonu yaratmayacak şekilde temiz kur; çıplak elle filtre, nozül içi veya yıkama yüzeylerine dokunma.",
-      "İmpingerleri talimattaki sıraya göre doldur, hacim/derişim/kap no bilgilerini forma yaz.",
-      "Ön kaçak testini yap; izokinetik numune almaya başla ve her noktada DGM, ΔH, sıcaklık, vakum ve süreyi kaydet.",
-      "Ölçüm boyunca buz banyosu, renk değişimi, sıçrama, taşma, filtre yüklenmesi ve vakum artışını izle.",
-      "Ölçüm sonunda son kaçak testini yap; filtreyi, prob/nozul yıkamalarını ve impinger çözeltilerini laboratuvarın fraksiyon şemasına göre ayrı kaplara al.",
-      "Her kapta fraksiyon adı, kap no, tarih, baca, nokta/ölçüm no ve koruyucu asit/çözelti bilgisi bulunmalıdır."
-    ],
-    "criticalControls": [
-      "EPA 29 geri kazanım görseli TS EN 14385 başlığı altında kullanılmamalıdır.",
-      "Metal ölçümünde kontaminasyon; kirli cam malzeme, metal pens, uygunsuz kap, eksik yıkama veya karışan fraksiyonlardan kaynaklanabilir.",
-      "Permanganat fraksiyonları diğer asidik fraksiyonlarla karıştırılmamalıdır.",
-      "Blank olmadan düşük metal sonuçları savunulamaz.",
-      "İzokinetiklik, kaçak testi ve toplam hacim geçerli değilse sonuç tartışmalı hale gelir."
-    ],
-    "acceptance": [
-      "Ön/son kaçak testi uygun olmalıdır.",
-      "İzokinetik oran, toplam hacim ve nokta süreleri savunulabilir olmalıdır.",
-      "Filtre ve tüm sıvı/yıkama fraksiyonları eksiksiz alınmalıdır.",
-      "Blanklar, kap etiketleri ve teslim zinciri eksiksiz olmalıdır."
-    ],
-    "reporting": [
-      "Toplam hacim, izokinetiklik, filtre bilgisi, impinger sırası, absorban türleri, başlangıç/son hacim veya ağırlıklar, blanklar ve fraksiyon adları rapora yazılır.",
-      "EPA 29 ile TS EN 14385 yöntemleri aynı rapor diliyle karıştırılmamalı; kullanılan metot açık belirtilmelidir."
-    ],
-    "mistakes": [
-      "EPA29 geri kazanım görselini TS EN 14385 sayfasında göstermek.",
-      "Fraksiyonları aynı kaba almak veya yanlış etiketlemek.",
-      "Blank almamak.",
-      "Permanganat fraksiyonunu diğer asitlerle karıştırmak.",
-      "Metal kontaminasyonu yaratacak malzeme kullanmak."
-    ]
+    "equipment": ["Keskin kenarlı kalibre nozül, ısıtmalı prob ve uygun liner.", "Filtre tutucu ve metal analizine uygun filtre.", "Metal kontaminasyonu yaratmayacak cam/PTFE yüzeyler, temiz bağlantılar ve kaplar.", "İmpinger grubu, buz banyosu, DGM, pompa, sıcaklık/basınç ölçer ve kaçak testi düzeni.", "Prob/nozul yıkama şişeleri, ayrı numune kapları, asit dayanımlı etiket ve blank kapları."],
+    "reagents": ["Tipik EPA 29 treninde ön impingerlerde nitrik asit/hidrojen peroksit karışımı kullanılır; yaygın saha hazırlığında ilgili impingerlere 100 mL seviyesinde çözelti konulur. Kesin derişim ve hacim laboratuvar SOP/metot talimatıyla doğrulanmalıdır.", "Cıva fraksiyonu için asidik potasyum permanganat çözeltisi içeren impingerler kullanılır; her impingerin başlangıç hacmi ve rengi kaydedilir.", "Son impingerde nem tutucu olarak silika jel kullanılır; ilk ve son ağırlık kayıt edilir.", "Filtre, prob/nozul yıkaması, ön asidik absorbanlar, permanganat fraksiyonu, permanganat yıkamaları ve silika jel ayrı fraksiyonlar olarak etiketlenir.", "Reaktif blankı, saha blankı, filtre blankı, yıkama blankı ve taşıma zinciri düşük seviyeli metal sonuçları için kritik kabul edilir."],
+    "fieldSteps": ["Ölçümden önce hedef metal listesini, cıva istenip istenmediğini, laboratuvar kap/fraksiyon düzenini ve blank planını netleştir.", "Ekipmanı metal kontaminasyonu yaratmayacak şekilde temiz kur; çıplak elle filtre, nozül içi veya yıkama yüzeylerine dokunma.", "İmpingerleri talimattaki sıraya göre doldur, hacim/derişim/kap no bilgilerini forma yaz.", "Ön kaçak testini yap; izokinetik numune almaya başla ve her noktada DGM, ΔH, sıcaklık, vakum ve süreyi kaydet.", "Ölçüm boyunca buz banyosu, renk değişimi, sıçrama, taşma, filtre yüklenmesi ve vakum artışını izle.", "Ölçüm sonunda son kaçak testini yap; filtreyi, prob/nozul yıkamalarını ve impinger çözeltilerini laboratuvarın fraksiyon şemasına göre ayrı kaplara al.", "Her kapta fraksiyon adı, kap no, tarih, baca, nokta/ölçüm no ve koruyucu asit/çözelti bilgisi bulunmalıdır."],
+    "criticalControls": ["EPA 29 geri kazanım görseli TS EN 14385 başlığı altında kullanılmamalıdır.", "Metal ölçümünde kontaminasyon; kirli cam malzeme, metal pens, uygunsuz kap, eksik yıkama veya karışan fraksiyonlardan kaynaklanabilir.", "Permanganat fraksiyonları diğer asidik fraksiyonlarla karıştırılmamalıdır.", "Blank olmadan düşük metal sonuçları savunulamaz.", "İzokinetiklik, kaçak testi ve toplam hacim geçerli değilse sonuç tartışmalı hale gelir."],
+    "acceptance": ["Ön/son kaçak testi uygun olmalıdır.", "İzokinetik oran, toplam hacim ve nokta süreleri savunulabilir olmalıdır.", "Filtre ve tüm sıvı/yıkama fraksiyonları eksiksiz alınmalıdır.", "Blanklar, kap etiketleri ve teslim zinciri eksiksiz olmalıdır."],
+    "reporting": ["Toplam hacim, izokinetiklik, filtre bilgisi, impinger sırası, absorban türleri, başlangıç/son hacim veya ağırlıklar, blanklar ve fraksiyon adları rapora yazılır.", "EPA 29 ile TS EN 14385 yöntemleri aynı rapor diliyle karıştırılmamalı; kullanılan metot açık belirtilmelidir."],
+    "mistakes": ["EPA29 geri kazanım görselini TS EN 14385 sayfasında göstermek.", "Fraksiyonları aynı kaba almak veya yanlış etiketlemek.", "Blank almamak.", "Permanganat fraksiyonunu diğer asitlerle karıştırmak.", "Metal kontaminasyonu yaratacak malzeme kullanmak."]
   },
   {
     "title": "TS EN 14385 Ağır Metal Ölçümü",
@@ -234,53 +76,13 @@
     "purpose": "Sabit kaynak emisyonlarında seçili ağır metallerin izokinetik örnekleme, filtre, absorban çözelti, yıkama fraksiyonları ve kontaminasyon kontrolü ile belirlenmesi için saha rehberidir. Bu başlıkta EPA Method 29 görselleri değil, TS EN 14385’e uygun saha mantığı ve kontaminasyon kontrolü anlatılır.",
     "duration": "Ölçüm süresi beklenen metal seviyesi, hedef tayin limiti, filtre yükü ve laboratuvar minimum hacim ihtiyacına göre planlanır. Nokta sayısı ve nokta başı süre, traverse planı ve izokinetik şartlar korunarak uygulanır.",
     "flowRate": "Numune alma izokinetik yürütülür. Nozul çapı baca hızına göre seçilir; DGM hacmi, sayaç sıcaklığı, sayaç vakumu, ΔH, baca sıcaklığı ve süre düzenli kaydedilir.",
-    "equipment": [
-      "İzokinetik prob, nozül, filtre tutucu ve metal analizine uygun filtre.",
-      "Numune ile temas eden yüzeylerde cam/PTFE gibi düşük kontaminasyon riski olan malzemeler.",
-      "Asidik absorban impingerleri, gerekirse boş/sıçrama tutucu impinger ve silika jel son impingeri.",
-      "Buz banyosu, DGM, pompa, sıcaklık/basınç ölçer, kaçak testi düzeni ve temiz numune kapları.",
-      "Prob/nozul yıkama çözeltileri, saha blankı kapları ve ayrı fraksiyon etiketleri."
-    ],
-    "reagents": [
-      "TS EN 14385 uygulamasında filtre sonrası metal tutulumu için laboratuvar/metot talimatında belirtilen asidik absorban çözeltileri kullanılır; çoğu saha SOP’unda nitrik asit/hidrojen peroksit esaslı absorban yaklaşımı bulunur.",
-      "Her impingere konulacak çözelti hacmi laboratuvar SOP’unda net yazılmalıdır; uygulamada 100 mL seviyesinde impinger hacimleri sık görülür fakat kesin mL, derişim ve impinger sayısı talimatla doğrulanmadan uygulanmaz.",
-      "Son impingerde silika jel kullanılıyorsa ilk ve son ağırlık kaydedilir; nem fraksiyonu metal numunesiyle karıştırılmaz.",
-      "Filtre, prob/nozul yıkaması, absorban çözeltileri, son yıkamalar ve blanklar ayrı etiketli kaplara alınır.",
-      "Reaktif blankı, filtre blankı, saha blankı, yıkama blankı ve taşıma zinciri TS EN 14385 sonuç savunulabilirliği için kritik kontrollerdir."
-    ],
-    "fieldSteps": [
-      "Hedef metal listesini, laboratuvarın istediği fraksiyon kaplarını, absorban derişimlerini ve impinger hacimlerini ölçümden önce yazılı olarak doğrula.",
-      "Tüm cam/PTFE yüzeyleri temiz ve kapalı taşı; filtre, nozül ve prob iç yüzeylerine çıplak elle temas etme.",
-      "İmpingerleri TS EN 14385/SOP sırasına göre hazırla; her impinger için çözelti türü, derişim ve başlangıç hacmini forma yaz.",
-      "Ön kaçak testini yap ve izokinetik numune almaya başla.",
-      "Ölçüm boyunca sıcaklık, DGM hacmi, vakum, ΔH, filtre yükü, buz banyosu ve impinger seviyesi takip edilir.",
-      "Ölçüm sonunda son kaçak testini yap; filtre, prob/nozul yıkaması, absorbanlar ve yıkama fraksiyonlarını karıştırmadan ayrı kaplara al.",
-      "Kap etiketlerinde metot, baca, ölçüm no, fraksiyon adı, tarih ve koruyucu/çözelti bilgisi bulunur."
-    ],
-    "criticalControls": [
-      "TS EN 14385 sayfasına EPA 29 geri kazanım görseli konulmamalıdır.",
-      "Metal kontaminasyonu çok düşük sonuç seviyelerinde belirleyicidir; kirli cam, metal aparat, uygunsuz kap ve eksik blank sonucu bozabilir.",
-      "Absorban hacmi ve derişimi kayıt edilmezse numune savunulamaz.",
-      "Fraksiyonlar karışırsa hangi yüzeyden gelen metalin ölçüldüğü izlenemez.",
-      "Kaçak testi ve izokinetiklik geçerli değilse metal sonucu tartışmalı hale gelir."
-    ],
-    "acceptance": [
-      "Kaçak testi, izokinetiklik, toplam hacim ve nokta dağılımı uygun olmalıdır.",
-      "Filtre ve tüm yıkama/absorban fraksiyonları eksiksiz olmalıdır.",
-      "Blanklar alınmış ve teslim zinciri korunmuş olmalıdır.",
-      "Absorban türü, derişimi ve mL miktarı sahada kayıtlı olmalıdır."
-    ],
-    "reporting": [
-      "Hedef metal listesi, çekilen hacim, izokinetiklik, filtre bilgisi, absorban/impinger sırası, hacimler, blanklar ve fraksiyon kapları rapora yazılır.",
-      "EPA Method 29 ile ortak görünen saha adımları olsa bile kullanılan standart TS EN 14385 ise raporda bu metot açık belirtilir."
-    ],
-    "mistakes": [
-      "EPA 29 görselini TS EN 14385 başlığına koymak.",
-      "Absorban mL ve derişim bilgilerini yazmamak.",
-      "Fraksiyonları karıştırmak.",
-      "Blank almamak.",
-      "Metal kontaminasyonu yaratacak ekipman kullanmak."
-    ]
+    "equipment": ["İzokinetik prob, nozül, filtre tutucu ve metal analizine uygun filtre.", "Numune ile temas eden yüzeylerde cam/PTFE gibi düşük kontaminasyon riski olan malzemeler.", "Asidik absorban impingerleri, gerekirse boş/sıçrama tutucu impinger ve silika jel son impingeri.", "Buz banyosu, DGM, pompa, sıcaklık/basınç ölçer, kaçak testi düzeni ve temiz numune kapları.", "Prob/nozul yıkama çözeltileri, saha blankı kapları ve ayrı fraksiyon etiketleri."],
+    "reagents": ["TS EN 14385 uygulamasında filtre sonrası metal tutulumu için laboratuvar/metot talimatında belirtilen asidik absorban çözeltileri kullanılır; çoğu saha SOP’unda nitrik asit/hidrojen peroksit esaslı absorban yaklaşımı bulunur.", "Her impingere konulacak çözelti hacmi laboratuvar SOP’unda net yazılmalıdır; uygulamada 100 mL seviyesinde impinger hacimleri sık görülür fakat kesin mL, derişim ve impinger sayısı talimatla doğrulanmadan uygulanmaz.", "Son impingerde silika jel kullanılıyorsa ilk ve son ağırlık kaydedilir; nem fraksiyonu metal numunesiyle karıştırılmaz.", "Filtre, prob/nozul yıkaması, absorban çözeltileri, son yıkamalar ve blanklar ayrı etiketli kaplara alınır.", "Reaktif blankı, filtre blankı, saha blankı, yıkama blankı ve taşıma zinciri TS EN 14385 sonuç savunulabilirliği için kritik kontrollerdir."],
+    "fieldSteps": ["Hedef metal listesini, laboratuvarın istediği fraksiyon kaplarını, absorban derişimlerini ve impinger hacimlerini ölçümden önce yazılı olarak doğrula.", "Tüm cam/PTFE yüzeyleri temiz ve kapalı taşı; filtre, nozül ve prob iç yüzeylerine çıplak elle temas etme.", "İmpingerleri TS EN 14385/SOP sırasına göre hazırla; her impinger için çözelti türü, derişim ve başlangıç hacmini forma yaz.", "Ön kaçak testini yap ve izokinetik numune almaya başla.", "Ölçüm boyunca sıcaklık, DGM hacmi, vakum, ΔH, filtre yükü, buz banyosu ve impinger seviyesi takip edilir.", "Ölçüm sonunda son kaçak testini yap; filtre, prob/nozul yıkaması, absorbanlar ve yıkama fraksiyonlarını karıştırmadan ayrı kaplara al.", "Kap etiketlerinde metot, baca, ölçüm no, fraksiyon adı, tarih ve koruyucu/çözelti bilgisi bulunur."],
+    "criticalControls": ["TS EN 14385 sayfasına EPA 29 geri kazanım görseli konulmamalıdır.", "Metal kontaminasyonu çok düşük sonuç seviyelerinde belirleyicidir; kirli cam, metal aparat, uygunsuz kap ve eksik blank sonucu bozabilir.", "Absorban hacmi ve derişimi kayıt edilmezse numune savunulamaz.", "Fraksiyonlar karışırsa hangi yüzeyden gelen metalin ölçüldüğü izlenemez.", "Kaçak testi ve izokinetiklik geçerli değilse metal sonucu tartışmalı hale gelir."],
+    "acceptance": ["Kaçak testi, izokinetiklik, toplam hacim ve nokta dağılımı uygun olmalıdır.", "Filtre ve tüm yıkama/absorban fraksiyonları eksiksiz olmalıdır.", "Blanklar alınmış ve teslim zinciri korunmuş olmalıdır.", "Absorban türü, derişimi ve mL miktarı sahada kayıtlı olmalıdır."],
+    "reporting": ["Hedef metal listesi, çekilen hacim, izokinetiklik, filtre bilgisi, absorban/impinger sırası, hacimler, blanklar ve fraksiyon kapları rapora yazılır.", "EPA Method 29 ile ortak görünen saha adımları olsa bile kullanılan standart TS EN 14385 ise raporda bu metot açık belirtilir."],
+    "mistakes": ["EPA 29 görselini TS EN 14385 başlığına koymak.", "Absorban mL ve derişim bilgilerini yazmamak.", "Fraksiyonları karıştırmak.", "Blank almamak.", "Metal kontaminasyonu yaratacak ekipman kullanmak."]
   },
   {
     "title": "TS EN 1911 HCl Ölçümü",
@@ -292,14 +94,9 @@
     "duration": "Süre beklenen HCl seviyesi, hedef tayin limiti ve absorban kapasitesine göre belirlenir. Proses kararlı değilse ölçüm periyodu proses temsilini sağlayacak şekilde planlanır.",
     "flowRate": "Saha uygulamasında HCl örneklemesinde genellikle 2-3 L/dk bandında kontrollü çekiş kullanılır; kesin debi laboratuvar/metot talimatına göre doğrulanır. Çok yüksek debi absorpsiyon verimini düşürebilir.",
     "equipment": ["Isıtmalı prob ve uygun numune hattı.", "Partikül filtresi veya metoda uygun filtre düzeni.", "Absorban impingerleri, buz banyosu, DGM/debimetre, pompa ve kaçak testi düzeni.", "HCl fraksiyon kapları, yıkama şişesi, etiket ve saha formu."],
-    "reagents": [
-      "TS EN 1911 HCl saha uygulamasında absorban olarak saf su kullanılan iki impinger düzeni yaygındır.",
-      "Pratik saha bilgisinde ilk iki impingere 100 mL + 100 mL saf su konulur; laboratuvar SOP’unun istediği kesin hacim ve düzen her ölçüm öncesi doğrulanmalıdır.",
-      "Absorban başlangıç hacimleri, impinger numaraları, varsa son hacim/ağırlık ve numune sonrası yıkama hacimleri saha formuna yazılır.",
-      "Saha blankı ve reaktif/su blankı, düşük HCl seviyelerinde kontaminasyon ve taşıma etkisini kontrol etmek için hazırlanmalıdır."
-    ],
+    "reagents": ["TS EN 1911 HCl saha uygulamasında absorban olarak saf su kullanılan iki impinger düzeni yaygındır.", "Pratik saha bilgisinde ilk iki impingere 100 mL + 100 mL saf su konulur; laboratuvar SOP’unun istediği kesin hacim ve düzen her ölçüm öncesi doğrulanmalıdır.", "Absorban başlangıç hacimleri, impinger numaraları, varsa son hacim/ağırlık ve numune sonrası yıkama hacimleri saha formuna yazılır.", "Saha blankı ve reaktif/su blankı, düşük HCl seviyelerinde kontaminasyon ve taşıma etkisini kontrol etmek için hazırlanmalıdır."],
     "fieldSteps": ["Parametreyi ve raporlama birimini netleştir: HCl tek başına mı, toplam asit gazı mı isteniyor?", "İmpingerlere talimat hacminde saf su koy; kapları numaralandır ve başlangıç hacmini kaydet.", "Ön kaçak testini yap; hattı ısıt ve yoğuşma riskini azalt.", "Çekiş debisini hedef aralığa ayarla; süre, debi, sıcaklık, DGM hacmi ve impinger durumunu kaydet.", "Ölçüm sonunda son kaçak testini yap; absorbanları ve yıkama fraksiyonlarını laboratuvar talimatına göre kaplara al."],
-    "criticalControls": ["TS EN 1911 HCl görseli EPA Method 26A halojen tren şeması gibi kullanılmamalıdır.", "Absorban hacimleri kayıt edilmezse numune izlenebilirliği zayıflar.", "Sıçrama, taşma veya impingerler arası karışma olursa rapora yazılmalıdır.", "Hattaki yoğuşma HCl kaybı veya geçikmeye neden olabilir."],
+    "criticalControls": ["TS EN 1911 HCl görseli EPA Method 26A halojen tren şeması gibi kullanılmamalıdır.", "Absorban hacimleri kayıt edilmezse numune izlenebilirliği zayıflar.", "Sıçrama, taşma veya impingerler arası karışma olursa rapora yazılmalıdır.", "Hattaki yoğuşma HCl kaybı veya gecikmeye neden olabilir."],
     "acceptance": ["Kaçak testi uygun olmalıdır.", "Absorban hacimleri ve impinger sırası kayıtlı olmalıdır.", "Debi/süre/toplam hacim laboratuvar hedefini karşılamalıdır.", "Blank ve taşıma şartları korunmalıdır."],
     "reporting": ["HCl sonucu ile birlikte çekilen hacim, süre, debi, absorban hacimleri, impinger sırası, blanklar ve varsa sapmalar yazılır."],
     "mistakes": ["Saf su hacmini forma yazmamak.", "EPA26A görselini TS EN 1911 sanmak.", "İmpingerleri yanlış sıraya bağlamak.", "Kaçak testi yapmamak.", "Sıçrama/taşmayı rapora yazmamak."]
@@ -320,5 +117,40 @@
     "acceptance": ["Kaçak testi geçerli, absorbanlar yeterli ve debi metotla uyumlu olmalıdır.", "Blank ve taşıma şartları kayıt altına alınmalıdır.", "Silika jel doygunluğu kontrol edilmelidir."],
     "reporting": ["NH3 sonucu, çekilen gaz hacmi, absorban hacimleri, H2SO4 derişimi, blanklar ve proses durumu ile birlikte raporlanır."],
     "mistakes": ["Çok yüksek debiyle çekiş yapmak.", "Yoğuşmayı kontrol etmemek.", "Asit absorban kapasitesini yetersiz bırakmak.", "Blank almamak.", "Köpürme/sıçramayı rapora yazmamak."]
+  },
+  {
+    "title": "PAH Örneklemesi",
+    "code": "TS ISO 11338 / ilgili PAH saha uygulamaları",
+    "category": "Emisyon",
+    "subgroup": "PAH / Yarı Uçucu Organikler",
+    "keywords": ["PAH", "TS ISO 11338", "XAD-2", "adsorban", "filtre", "kondens", "izokinetik", "4 m3", "11,2 L/dk", "6-8 saat", "blank"],
+    "purpose": "Baca gazında PAH ve benzeri yarı uçucu organik bileşiklerin izokinetik örnekleme, filtre, soğutucu/kondens ve adsorban kartuş/fraksiyonlarıyla alınması için saha rehberidir. Kullanıcının PCDD/PCDF talimatında verilen uzun süreli XAD-2/adsorpsiyon yaklaşımı PAH bölümüne saha referansı olarak eklenmiştir; hangi değerlerin PAH çalışmasında aynen uygulanacağı laboratuvar talimatı ve müşteri kapsamı ile netleştirilir.",
+    "duration": "Sabit tek süre yoktur; hedef minimum numune hacmi, beklenen PAH seviyesi, LOD/tayin limiti, proses kararlılığı ve laboratuvar talimatına göre süre planlanır. Paylaşılan PCDD/PCDF talimatında minimum 4 m3 baca gazı örneklemesi, minimum 0,67 m3/saat yani yaklaşık 11,2 L/dk çekiş ve her bir örnekleme için minimum 6 saat maksimum 8 saat saha referansı verilmiştir. PAH ölçümünde bu değerler laboratuvar SOP’u tarafından isteniyorsa hedef olarak kullanılır; aksi halde PAH metodunun kendi minimum hacim ve süre şartı esas alınır.",
+    "flowRate": "PAH örneklemesi izokinetik yürütülür; debi sabit bir L/dk değeri olarak ezbere seçilmez, baca hızı ve nozul çapına göre ayarlanır. Bununla birlikte paylaşılan talimatta örnek hesap için seçilen örnekleme debisi 11,2 L/dk verilmiştir. Aynı talimattaki hesap örneği: baca gazındaki bileşik konsantrasyonu 3,9 ng/m3, LOD 60 µg, alınan numune kütlesi LOD’nin 50 katı kabul edilirse 50 × 60 = 3000 µg ve 3000 / 3,9 = 769,2 L hedef hacim hesaplanır; 769,2 / 11,2 = 68 dk örnek süre çıkar. Ancak talimatın genel saha şartı minimum 4 m3 ve 6-8 saat olarak verildiği için süre/hacim planı sadece bu hesapla değil, SOP ve kabul kriterleriyle birlikte yapılır.",
+    "equipment": ["İzokinetik örnekleme probu, cam/kuvars hat ve uygun nozul.", "Prob ve filtre tutucu; filtre tutucu 125 °C’ye kadar ya da çiğlenme noktasının yaklaşık 10 °C üzerine kadar ısıtılabilir.", "Yoğuşturucu/soğutucu, kondens toplama şişesi ve adsorban kartuşu veya XAD-2 reçine kartuşu.", "Gaz yıkama şişeleri/impingerler, buz banyosu, DGM, pompa, sıcaklık, vakum ve basınç ölçüm düzeni.", "Aseton, alüminyum folyo, temiz cam kaplar, numune standardı/internal standard uygulaması için laboratuvarın verdiği ekipman.", "Çalışma platformu en az 5 m2, yaklaşık 0,5-1 m yükseklikte korkuluk, açık hava prizleri ve güvenli erişim şartları sağlanmalıdır."],
+    "reagents": ["XAD-2 reçine kullanılacaksa her bir ölçüm için yaklaşık 30 g reçine hazırlanır.", "Paylaşılan talimata göre XAD-2 reçinesi ilk kullanımdan önce su, metanol ve metilen klorür ile bulanıklık kalmayıncaya kadar yıkanır; soxhlet ekstraktörde en az 48 saat ekstrakte edilir; metilen klorür ile yıkanıp döner buharlaştırıcıda kontrollü sıcaklık/basınç altında uzaklaştırılır; temiz reçine sıkı kapaklı cam şişede saklanır.", "XAD-2 üzerine 20-30 µL sampling standard / internal standard eklenir; kullanıcı talimatında 13C12 etiketli PCDD/PCDF standardı örnek verilmiştir. PAH çalışmasında kullanılacak etiketli standart laboratuvar metoduna göre seçilir.", "Temizlikte su ve deterjan sonrası toluen yıkama; numune sonrası çözücü yıkamaları; numune ile temas eden cam yüzeylerin alüminyum folyo ile korunması uygulanır.", "İlk gaz yıkama şişesi boş bırakılabilir; 2. ve 3. gaz yıkama şişelerine 100’er mL su konulabilir; 4. gaz yıkama şişesine 200-300 g silika jel konulabilir. Bu düzen paylaşılan talimattaki PCDD/PCDF hattı referansıdır; PAH uygulamasında laboratuvar SOP’u esas alınır."],
+    "fieldSteps": ["Ölçüm başlamadan önce tesis yetkilisiyle numune alma planı, çalışma şartı, güvenlik, proses kapasitesi ve ölçüm noktası erişimi değerlendirilir.", "Numune alma noktası TS ISO 9096/ilgili traverse yaklaşımına göre seçilir; baca boyutları ölçülür ve nokta sayısı belirlenir.", "Cam malzemeler kontrol edilir; görülen kirlenmeler temizlenir, numune ile temas eden yüzeyler su-deterjan ve sonra uygun çözücü/toluen ile yıkanır.", "Sistem sahada önemli kirlenme olmadan kurulur; bağlantılardan sonra sızıntı/kaçak kontrolü yapılır.", "Prob, ilk traverse noktasına konulduktan sonra pompa çalıştırılır; su var mı, kondens oluşuyor mu, filtre basıncı ani artıyor mu takip edilir.", "Numune alma sırasında örnekleme doğrultusu en az bir kez değiştirilir; talimata göre tek bir doğrultuda tek nokta kabul edilmez, birden çok noktada izokinetik örnekleme yapılır.", "Ölçüm boyunca filtre tutucu ve prob ısıtılır; gaz yıkama şişeleri buz banyosunda tutulur; son gaz yıkama şişesi sıcaklığı 0-25 °C aralığında izlenir.", "Ölçüm bitiminde numune alma hattı borudan uzaklaştırılır; giriş duvarından bulaşma olmamasına dikkat edilir.", "Filtre tutucu, adsorplayıcı kartuş, bağlantılar, soğutucu ve kondens şişesi cihazdan alınır; asetonu bezle silinir; filtre/adsorban alüminyum folyo ile sarılır.", "Adsorban nemli ise oda sıcaklığında çeker ocakta bekletilir; XAD-2 su içeriği yüksekse 40-45 °C etüvde kurutulur; prob iç yüzeyi önce asetonla çalkalanır."],
+    "criticalControls": ["PAH ile PCDD/PCDF aynı analitik parametre değildir; fakat izokinetik örnekleme, filtre, kondens, adsorban, blank, soğuk/karanlık taşıma ve kontaminasyon kontrolü benzerdir.", "Minimum 4 m3, 11,2 L/dk, 6-8 saat değerleri paylaşılan PCDD/PCDF talimatından alınmış saha referanslarıdır; PAH’ta aynen uygulanacaksa ölçüm planında ve laboratuvar talimatında belirtilmelidir.", "Filtre tutucu çiğlenme noktasının altında kalmamalı; yoğuşma PAH kaybı ve fraksiyon karışmasına neden olabilir.", "Gaz yıkama şişeleri kontaminasyon ve sızdırmaya karşı birbirinden bağımsız çalışmalıdır.", "Adsorbanın ıslanması, yüksek sıcaklığa maruz kalması, ışıkta beklemesi veya yanlış çözücüyle yıkanması sonucu etkiler.", "Kaçak testi, blank ölçümü ve internal standard uygulaması ihmal edilmemelidir."],
+    "acceptance": ["Örnekleme izokinetik yürütülmeli, kaçak testi uygun olmalı ve ölçüm noktaları metoda göre temsil edici olmalıdır.", "Toplam hedef hacim ve süre ölçüm planı/laboratuvar şartını karşılamalıdır.", "Filtre, kondens, adsorban, yıkama fraksiyonları ve blanklar eksiksiz alınmalıdır.", "Numune karanlıkta, uygun sıcaklıkta ve kontaminasyondan korunarak taşınmalıdır.", "Filtre gerek baca içinde gerek baca dışında 125 °C’nin altında olmamalı; ancak filtre tutucusundaki gaz sıcaklığı çiğlenme noktasının üzerinde olmalıdır."],
+    "reporting": ["PAH raporunda kullanılan metot, hedef bileşik listesi, nokta sayısı, toplam süre, çekilen hacim, ortalama debi, izokinetiklik ve blanklar açık yazılır.", "Eğer paylaşılan PCDD/PCDF talimatındaki 4 m3, 11,2 L/dk, 6-8 saat yaklaşımı PAH çalışmasında kullanıldıysa raporda bu SOP referansı ve gerekçesi belirtilir.", "Filtre, adsorban, kondens ve yıkama fraksiyonları ayrı ayrı izlenebilir olmalıdır."],
+    "mistakes": ["PAH ölçümünü düşük debili VOC tüp ölçümü gibi düşünmek.", "PCDD/PCDF talimatındaki değerleri PAH metoduna gerekçesiz ve kör şekilde taşımak.", "XAD-2/adsorbanı nemli, sıcak veya ışıkta bekletmek.", "Filtre, kondens ve adsorban fraksiyonlarını karıştırmak.", "Minimum hacim, süre, debi ve izokinetiklik kayıtlarını raporda göstermemek."]
+  },
+  {
+    "title": "TS EN 1948-1 PCDD/PCDF Dioksin-Furan Örneklemesi",
+    "code": "TS EN 1948-1",
+    "category": "Emisyon",
+    "subgroup": "Dioksin-Furan / PCDD-PCDF",
+    "keywords": ["TS EN 1948-1", "PCDD", "PCDF", "dioksin", "furan", "XAD-2", "4 m3", "11,2 L/dk", "6-8 saat", "125 °C", "blank", "internal standard"],
+    "purpose": "Sabit kaynak emisyonlarında PCDD/PCDF bileşiklerinin kütle derişimlerini belirlemek için izokinetik numune alma, filtre, soğutucu, kondens ve XAD-2 adsorpsiyon sisteminin uygulanmasına yönelik saha rehberidir.",
+    "duration": "Paylaşılan kurum talimatına göre numune alma TS EN 13284-1 yaklaşımıyla izokinetik yapılır; minimum 4 m3 baca gazı örneklemesi hedeflenir. Minimum örnekleme debisi 0,67 m3/saat yani yaklaşık 11,2 L/dk olmalı ve her bir örnekleme minimum 6 saat, maksimum 8 saat sürmelidir. Süre hesabı hedef hacim, beklenen derişim, LOD ve cihaz/proses şartlarıyla birlikte yapılır.",
+    "flowRate": "Seçilen örnekleme debisi örnek talimatta 11,2 L/dk verilmiştir. Örnek hesap: baca gazındaki bileşik konsantrasyonu 3,9 ng/m3, LOD 60 µg, alınan numune kütlesi LOD’nin 50 katı kabul edilirse 50 × 60 = 3000 µg ve 3000 / 3,9 = 769,2 L hedef hacim bulunur; 769,2 / 11,2 = 68 dk süre hesaplanabilir. Ancak genel talimat şartı minimum 4 m3 ve 6-8 saat olduğundan saha planı bu minimum şartlarla uyumlu yapılmalıdır.",
+    "equipment": ["PCDD/PCDF örnekleme sistemi; örnekleme probu, numune hattı, ana örnekleme ünitesi, PCDD/PCDF adsorplama ünitesi ve soğurma ünitesi.", "Filtre kâğıtları ve kapları.", "XAD-2 reçine kartuşu; her bir ölçüm için yaklaşık 30 g.", "Soğutucu, kondens şişesi, 4 adet gaz yıkama şişesi, buz banyosu, DGM ve pompa sistemi.", "Prob/nozul için kuvars veya borosilikat cam kullanılmamalıdır; prob malzemesi sıcak baca şartına uygun seçilir.", "Prob, kuvars veya borosilikat cam olmalı ve cam prob paslanmaz çelik içerisinde bulunmalıdır; bu düzen prob 480-900 °C arası bacalarda kullanılabilir.", "Aseton, alüminyum folyo, temiz cam numune kapları, internal standard ve blank kapları."],
+    "reagents": ["XAD-2 reçinesi ilk kullanıma hazırlanırken su, metanol ve metilen klorür ile bulanıklık kalmayıncaya kadar yıkanır; soxhlet ekstraktörde en az 48 saat ekstrakte edilir; metilen klorür ile yıkanıp döner buharlaştırıcıda yaklaşık 40 °C ve 50 kPa altında uzaklaştırılır; temiz reçine sıkı kapaklı cam şişede muhafaza edilir.", "XAD-2 reçinesi üzerine 20-30 µL 13C12 etiketli 2,3,7,8-klorlu PCDD/PCDF sampling standard eklenir.", "İlk gaz yıkama şişesi boş bırakılır.", "2. ve 3. gaz yıkama şişelerine 100’er mL su konulur.", "4. gaz yıkama şişesine 200-300 g silika jel konulur.", "Numune alma standartları ölçümden iki saat önce filtre, gaz yıkama şişesi ve adsorber içine damlatılır; ayrıca kontaminasyon tespiti için blank numune alınır.", "Temizlik ve yıkamalarda su-deterjan, toluen, aseton ve laboratuvar talimatındaki çözücü dizilimi kullanılır."],
+    "fieldSteps": ["Ölçüm öncesinde tesis yetkilileriyle numune alma planı değerlendirilir; ekipman, personel, güvenlik, proses kapasitesi ve çevresel faktörler kayıt altına alınır.", "Numune alma noktası TS ISO 9096’da verilen özellikleri karşılayacak şekilde seçilir; baca boyutları ölçülür ve örnekleme nokta sayısı belirlenir.", "Platformun yeterli genişlikte, güvenli taşıma kapasitesinde, korkuluklu, aydınlatılmış, elektrik ve hava-su şartları uygun olduğundan emin olunur.", "Cam malzemeler kontrol edilir; kirlenmeler su-deterjan ve ardından toluen/uygun çözücü ile temizlenir.", "Cihaz sahada önemli kirlenme olmadan kurulur; bağlantılar yapıldıktan sonra sızıntı/kaçak kontrolü yapılır.", "Numune alma süresince numune alma doğrultusu en az bir kez değiştirilir; tek noktadan tek doğrultuda örnekleme kabul edilmez.", "Prob 125 °C’ye kadar ısıtılır; filtre tutucu çiğlenme olmayacak şekilde, 125 °C’ye kadar veya çiğlenme noktasının yaklaşık 10 °C üzerine kadar ısıtılır.", "Gaz yıkama şişeleri buz banyosu içerisinde olmalıdır; son gaz yıkama şişesindeki sıcaklık 0-25 °C aralığında izlenir.", "Prob ilk traverse noktasına konulduktan sonra pompa çalıştırılır; yoğuşma, su, filtre basıncı ve ani vakum artışları takip edilir.", "Örnekleme sonunda numune alma hattı bacadan uzaklaştırılır; giriş duvarından bulaşma olmamasına dikkat edilir.", "Filtre tutucu, adsorplayıcı kartuş, bağlantılar, soğutucu ve kondens şişesi cihazdan alınır; filtre ve adsorban alüminyum folyo ile sarılır.", "XAD-2 nemli ise gece oda sıcaklığında çeker ocakta tutulur; su içeriği yüksekse 40-45 °C etüvde kurutulur; prob iç yüzeyi önce asetonla çalkalanır."],
+    "criticalControls": ["İzokinetik numune alma tanımı: numune alma ağzına giren gazın hız ve yönünün, bacadan geçen gazın hız ve yönü ile aynı olmasıdır; yüksek/düşük hız sonucu sistematik yüksek/düşük konsantrasyon oluşturabilir.", "Minimum 4 m3 hacim, yaklaşık 11,2 L/dk debi ve 6-8 saat süre kurum talimatındaki kritik saha şartlarıdır.", "Filtre tutucu 125 °C altında kalmamalı; aynı zamanda çiğlenme olmayacak sıcaklıkta tutulmalıdır.", "Gaz yıkama şişeleri kontaminasyon ve sızdırma olmayacak şekilde bağlanmalıdır.", "Internal standard, blank ve kaçak testi yapılmadan sonuç savunulamaz.", "XAD-2 ıslak, aşırı sıcak, ışığa açık veya kontamine olursa sonuç güvenilirliği düşer."],
+    "acceptance": ["Örnekleme izokinetik olmalı, kaçak testi yapılmalı ve numune alma noktaları TS ISO 9096/TS EN 13284-1 yaklaşımına uygun olmalıdır.", "Minimum 4 m3 örnekleme hacmi ve 6-8 saat süre şartı karşılanmalıdır; sapma varsa teknik gerekçe raporda yazılmalıdır.", "Blank ölçümü en az her seri öncesi alınmalıdır; prob bacaya yerleştirilir, bacada gaz emişi yapılmaz ve kaçak testi yapılır.", "Filtre, kondens, adsorban ve yıkama fraksiyonları eksiksiz alınmalıdır.", "Numune taşıma ve saklama koşulları sağlanmalıdır; ışık korumalı, 4 °C altında depolamaya uygun yerde muhafaza edilir."],
+    "reporting": ["Rapor; PCDD/PCDF kapsamını, müşteri/proses şartını, ölçüm noktalarını, toplam süreyi, çekilen hacmi, ortalama debiyi, izokinetiklik değerlendirmesini, blankları ve numune fraksiyonlarını içermelidir.", "Talimat tablosuna göre örneklenecek minimum numune miktarı 4 m3, numune kabı XAD-2 reçineleri, metot absorpsiyon ve saklama koşulu ışıktan korunarak 4 °C altında depolama şeklinde yazılmalıdır.", "Belirsizlik hesabında hacimden gelen, cihaz kalibrasyonundan gelen, analizden gelen, tekrarlanabilirlikten gelen ve yeniden üretilebilirlikten gelen bileşenler değerlendirilmelidir."],
+    "mistakes": ["PCDD/PCDF ölçümünü kısa süreli normal toz çekişi gibi yapmak.", "Minimum 4 m3, 11,2 L/dk ve 6-8 saat şartını saha planına yazmamak.", "XAD-2 reçineyi nemli, sıcak veya ışıksız/korumasız taşımak.", "Internal standard ve blank uygulamasını atlamak.", "Filtre, kondens, adsorban ve yıkama fraksiyonlarını karıştırmak.", "Filtre tutucu sıcaklığını ve son gaz yıkama şişesi sıcaklığını kaydetmemek."
+    ]
   }
 ]
