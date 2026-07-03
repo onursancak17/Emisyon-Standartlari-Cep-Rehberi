@@ -1,0 +1,18 @@
+Bu klasöre APK sesli anlatım dosyaları konur.
+
+standard_audio.json dosyasındaki audioAsset yolları bu klasördeki dosya adlarıyla birebir aynı olmalıdır.
+
+Beklenen dosya adları:
+01_baca_akis_fizigi_ve_traverse_matrisleri.m4a
+02_voc_bilesiklerini_yakalama_teknikleri.m4a
+03_hassas_metal_ve_halojen_analizi.m4a
+04_veriyi_gecerli_kilan_hassas_hesaplar.m4a
+05_hiz_debi_ve_nem_tayini.m4a
+06_izokinetik_toz_olcumu_standartlari.m4a
+07_siyanur_ve_krom_olcumu.m4a
+08_bacalarin_kimyasal_sifreleri.m4a
+09_dioksin_furan_ve_pah_orneklemesi.m4a
+10_endustriyel_baca_gazi_analizi_teknik_esaslar.m4a
+11_hava_kalitesi_ek_2_ve_saha.m4a
+12_temiz_hava_raporlarinin_baca_matematigi.m4a
+13_voc_ve_formaldehit_saha_gercekleri.m4a
