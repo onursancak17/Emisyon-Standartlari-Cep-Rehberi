@@ -13,6 +13,28 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          lfs: true
+
+      - name: Pull and verify Git LFS audio assets
+        run: |
+          set -e
+          git lfs install
+          git lfs pull
+          echo "Audio asset folder size:"
+          du -sh assets/audio || true
+          echo "Audio files:"
+          find assets/audio -maxdepth 1 -type f -name "*.m4a" -print -exec ls -lh {} \;
+          python3 - <<'PY'
+          from pathlib import Path
+          files = sorted(Path('assets/audio').glob('*.m4a'))
+          if len(files) != 13:
+              raise SystemExit(f'Expected 13 audio files, found {len(files)}')
+          total = sum(p.stat().st_size for p in files)
+          if total < 500 * 1024 * 1024:
+              raise SystemExit(f'Audio files look like Git LFS pointers, total size is only {total} bytes')
+          print(f'Audio files verified: {len(files)} files, {total / 1024 / 1024:.1f} MB')
+          PY
 
       - name: Validate offline APK assets
         run: |
@@ -84,6 +106,7 @@ jobs:
         run: |
           mkdir -p build-output
           cp /tmp/mobile_build/build/app/outputs/flutter-apk/app-release.apk build-output/emisyon-imisyon-olcum-standartlari.apk
+          ls -lh build-output/emisyon-imisyon-olcum-standartlari.apk
 
       - name: Upload APK artifact
         uses: actions/upload-artifact@v4
