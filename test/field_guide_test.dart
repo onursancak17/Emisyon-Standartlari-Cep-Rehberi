@@ -52,6 +52,8 @@ void main() {
       addTearDown(tester.view.resetPhysicalSize);
       addTearDown(tester.view.resetDevicePixelRatio);
       await tester.runAsync(fonts);
+      // Decode large JSON assets outside the test fake clock before the home future reads them.
+      await tester.runAsync(StandardsRepository.loadItems);
       final key = GlobalKey();
       await tester.pumpWidget(
         RepaintBoundary(key: key, child: const StandardsApp()),
