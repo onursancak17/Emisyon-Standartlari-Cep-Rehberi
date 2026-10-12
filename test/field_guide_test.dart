@@ -53,10 +53,13 @@ void main() {
       addTearDown(tester.view.resetDevicePixelRatio);
       await tester.runAsync(fonts);
       // Decode large JSON assets outside the test fake clock before the home future reads them.
-      await tester.runAsync(StandardsRepository.loadItems);
+      final initialItems = await tester.runAsync(StandardsRepository.loadItems);
       final key = GlobalKey();
       await tester.pumpWidget(
-        RepaintBoundary(key: key, child: const StandardsApp()),
+        RepaintBoundary(
+          key: key,
+          child: StandardsApp(initialItems: initialItems),
+        ),
       );
       await tester.pumpAndSettle();
       expect(find.text('31 rehber'), findsOneWidget);
@@ -71,6 +74,7 @@ void main() {
       await tester.pump();
       expect(preferences.favorites.length, 1);
       await tester.ensureVisible(find.widgetWithText(ChoiceChip, 'Ölçümü yap'));
+      await tester.pumpAndSettle();
       await tester.tap(find.widgetWithText(ChoiceChip, 'Ölçümü yap'));
       await tester.pumpAndSettle();
       expect(find.byType(StepCard), findsWidgets);
@@ -112,6 +116,7 @@ void main() {
       await tester.pumpAndSettle();
       expect(tester.takeException(), isNull, reason: '${item.code} intro');
       await tester.ensureVisible(find.widgetWithText(ChoiceChip, 'Treni kur'));
+      await tester.pumpAndSettle();
       await tester.tap(find.widgetWithText(ChoiceChip, 'Treni kur'));
       await tester.pumpAndSettle();
       expect(find.byType(TrainCard), findsOneWidget);

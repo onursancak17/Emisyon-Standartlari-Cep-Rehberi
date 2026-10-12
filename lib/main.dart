@@ -115,7 +115,8 @@ class UserPreferences extends ChangeNotifier {
 }
 
 class StandardsApp extends StatelessWidget {
-  const StandardsApp({super.key});
+  const StandardsApp({super.key, this.initialItems});
+  final List<StandardItem>? initialItems;
   ThemeData theme(Brightness b) => ThemeData(
     useMaterial3: true,
     brightness: b,
@@ -152,7 +153,7 @@ class StandardsApp extends StatelessWidget {
         ),
         child: child!,
       ),
-      home: const StandardsHomePage(),
+      home: StandardsHomePage(initialItems: initialItems),
     ),
   );
 }
@@ -170,7 +171,8 @@ IconData iconFor(String group) => switch (group) {
 };
 
 class StandardsHomePage extends StatefulWidget {
-  const StandardsHomePage({super.key});
+  const StandardsHomePage({super.key, this.initialItems});
+  final List<StandardItem>? initialItems;
   @override
   State<StandardsHomePage> createState() => _HomeState();
 }
@@ -183,7 +185,9 @@ class _HomeState extends State<StandardsHomePage> {
   @override
   void initState() {
     super.initState();
-    future = StandardsRepository.loadItems();
+    future = widget.initialItems == null
+        ? StandardsRepository.loadItems()
+        : Future.value(widget.initialItems);
   }
 
   @override
