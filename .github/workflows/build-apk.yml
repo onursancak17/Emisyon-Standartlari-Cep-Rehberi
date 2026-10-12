@@ -2,7 +2,7 @@ name: Build Android APK
 
 on:
   push:
-    branches: [ main ]
+    branches: [ main, codex/professional-field-guide ]
   workflow_dispatch:
 
 jobs:
@@ -38,7 +38,8 @@ jobs:
 
       - name: Validate offline APK assets
         run: |
-          python3 scripts/validate_assets.py || true
+          python3 scripts/validate_assets.py
+          python3 scripts/validate_field_guides.py
 
       - name: Set up Java
         uses: actions/setup-java@v4
@@ -50,6 +51,7 @@ jobs:
         uses: subosito/flutter-action@v2
         with:
           channel: stable
+          flutter-version: '3.47.7'
           cache: true
 
       - name: Show Flutter version
@@ -64,31 +66,10 @@ jobs:
           cp -r lib /tmp/mobile_build/lib
           cp -r assets /tmp/mobile_build/assets
           cp pubspec.yaml /tmp/mobile_build/pubspec.yaml
+          cp -r test /tmp/mobile_build/test
 
-      - name: Set Android app display name
-        run: |
-          set -e
-          python3 - <<'PY'
-          from pathlib import Path
-          import re
-
-          app_name = 'Emisyon İmisyon Ölçüm Standartları'
-          values_dir = Path('/tmp/mobile_build/android/app/src/main/res/values')
-          values_dir.mkdir(parents=True, exist_ok=True)
-          (values_dir / 'strings.xml').write_text(
-              '<?xml version="1.0" encoding="utf-8"?>\n'
-              '<resources>\n'
-              f'    <string name="app_name">{app_name}</string>\n'
-              '</resources>\n',
-              encoding='utf-8',
-          )
-
-          manifest_path = Path('/tmp/mobile_build/android/app/src/main/AndroidManifest.xml')
-          text = manifest_path.read_text(encoding='utf-8')
-          text = re.sub(r'android:label="[^"]+"', 'android:label="@string/app_name"', text, count=1)
-          manifest_path.write_text(text, encoding='utf-8')
-          print(f'Android app label set to: {app_name}')
-          PY
+      - name: Configure Android display name, icon and background audio
+        run: python3 scripts/configure_android.py /tmp/mobile_build
 
       - name: Install dependencies
         working-directory: /tmp/mobile_build
@@ -98,6 +79,18 @@ jobs:
         working-directory: /tmp/mobile_build
         run: flutter analyze lib --no-fatal-infos --no-fatal-warnings
 
+      - name: Test mobile navigation, accessibility and guide coverage
+        working-directory: /tmp/mobile_build
+        run: flutter test
+
+      - name: Upload UI verification images
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: saha-rehberi-ui-verification
+          path: /tmp/mobile_build/test-output/*.png
+          if-no-files-found: warn
+
       - name: Build APK
         working-directory: /tmp/mobile_build
         run: flutter build apk --release
@@ -105,12 +98,12 @@ jobs:
       - name: Copy APK to repository workspace
         run: |
           mkdir -p build-output
-          cp /tmp/mobile_build/build/app/outputs/flutter-apk/app-release.apk build-output/emisyon-imisyon-olcum-standartlari.apk
-          ls -lh build-output/emisyon-imisyon-olcum-standartlari.apk
+          cp /tmp/mobile_build/build/app/outputs/flutter-apk/app-release.apk build-output/emisyon-imisyon-saha-rehberi-v1.0.0.apk
+          ls -lh build-output/emisyon-imisyon-saha-rehberi-v1.0.0.apk
 
       - name: Upload APK artifact
         uses: actions/upload-artifact@v4
         with:
-          name: emisyon-imisyon-olcum-standartlari-apk
-          path: build-output/emisyon-imisyon-olcum-standartlari.apk
+          name: emisyon-saha-rehberi-v1.0.0
+          path: build-output/emisyon-imisyon-saha-rehberi-v1.0.0.apk
           if-no-files-found: error

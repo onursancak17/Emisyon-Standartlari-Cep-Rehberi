@@ -1,174 +1,45 @@
-# Emisyon İmisyon Ölçüm Standartları
+# Emisyon İmisyon Ölçüm Standartları — Saha Rehberi 1.0.0
 
-Bu proje, emisyon ve imisyon saha ölçüm personeli için hazırlanmış **tam Türkçe**, offline Android cep rehberi uygulamasıdır.
+Offline Flutter Android rehberi. Ana emisyon hesaplama programından bağımsızdır.
 
-Android telefonda görünecek APK uygulama adı:
+## Bu sürüm
 
-```text
-Emisyon İmisyon Ölçüm Standartları
-```
+- 31 ayrı rehber; tekrar eden birleşik kayıtlar tek ölçüm konusuna yönlendirilir.
+- Ölçümü tanı → Hazırlan → Treni kur → Ölçümü yap → Numuneyi toparla → Kontrol et.
+- Numaralı adımlar, işlem gerekçeleri ve açık metot/kontrol etiketleri.
+- 31 büyük, Türkçe etiketli düzenek veya işlem şeması; dokunarak tam ekran yakınlaştırma.
+- EPA 26A, 29, 23, 13A, 323, 8, 11 ve amonyak yöntemlerinde farklı trenler.
+- Yanma gazlarında T90 tanımı, örnek hesabı, sistem/sensör cevabı ayrımı ve uygulama sırası.
+- Türkçe karakterlere dayanıklı arama, emisyon/imisyon filtreleri, favoriler ve son açılanlar.
+- Cihazda saklanan kişisel saha kontrol listeleri; her yeni ölçümde sıfırlanır.
+- Açık/koyu tema ve yazı büyütme.
+- Mevcut 13 eğitim ses kaydı ve önceki konu görselleri korunur. Sesler yeni metnin yeniden seslendirmesi değildir.
+- Tek ses oynatıcısı, hız seçimi, konum kaydı ve Android bildirim/arka plan çalma desteği.
+- Baca ve ortam havası cihazını temsil eden yeni uygulama simgesi.
 
-Ana emisyon hesaplama programından tamamen bağımsızdır. Bu repo sadece mobil standartlar rehberi içindir.
+## İçerik kaynakları ve sınırlar
 
-## Proje yönü
+`assets/field_guides.json` kullanıcıya gösterilen yeni düzenlenmiş içeriği içerir.
+Eski JSON ve eğitim notları arşiv olarak korunur; eski metinler yeni rehber altında tekrar yüklenmez.
 
-Bu uygulama kısa standart özeti olmayacak. Amaç, sahadaki ölçüm personelinin telefondan açıp adım adım kullanabileceği ayrıntılı ve profesyonel bir Türkçe saha rehberi oluşturmaktır.
+Açık resmi EPA, CARB ve SCAQMD metinleri mevcut oldukları kapsamda kullanılır. Tam TS/EN/ISO metnine veya CARB 425 tam PDF'sine erişilemeyen konularda prensip şeması gösterilir; doğrulanmamış hacim, sıcaklık ve kabul sınırları kesin şart gibi yazılmaz. Bu kayıtlar uygulamanın kaynak bölümünde açıkça işaretlenir. Rehber, tam standardın ve onaylı laboratuvar prosedürünün yerine geçmez.
 
-Uygulama arayüzü tüm emisyoncuların kullanacağı şekilde sade tutulur. Gereksiz test/rapor/arşiv ekranları APK içinde son kullanıcıya gösterilmez.
+EPA standart hacmi otomatik olarak 0 °C normal hacme dönüştürülmez. Referans sıcaklık/basınç ve kuru/yaş baz açıkça değerlendirilir.
 
-Her standartta mümkün olduğunca şu bilgiler bulunur:
+## Derleme
 
-- Ölçüm amacı
-- Kullanım alanı
-- Ölçüm süresi
-- Debi / hacim yaklaşımı
-- Cihaz ve ekipman listesi
-- Çözelti / absorban / impinger bilgileri
-- Filtre, nozül, prob ve hat hazırlığı
-- Saha adımları
-- Kaçak testi
-- Kritik teknik kontroller
-- Kabul / ret kriterleri
-- Numune geri alma ve saklama notları
-- Ölçüm talimatı kontrol adımları
-- Raporlama notları
-- Sık yapılan saha hataları
+GitHub Actions → Build Android APK. Başarılı çalışmanın `emisyon-saha-rehberi-v1.0.0` artifact'i ZIP içinde APK içerir.
+Flutter 3.47.7 ve Java 17 kullanılır. Android projesi temiz oluşturulur; `scripts/configure_android.py` simgeyi ve arka plan ses servisini uygular.
 
-## Kaynak işleme mantığı
+Üretim imzalama anahtarı depoda saklanmaz. Mevcut derleme Flutter'ın release için varsayılan geliştirme imzasını kullanır; önceki APK'nin imzasından farklı olabilir. Gerçek cihazda eski sürüm üzerine güncelleme kabul edilmeyebilir. Dağıtım için sabit üretim anahtarının GitHub Secrets üzerinden ayrıca tanımlanması gerekir.
 
-Cep rehberi üç katmanla büyütülür:
+## Kontroller
 
-1. Standart kaynakları: resmi metot ve standart mantığı
-2. Eğitim dokümanları: sahacıya yönelik açıklamalar ve örnekler
-3. Ölçüm talimatları: sahaya çıkmadan önce, ölçüm sırasında ve ölçüm sonunda yapılacak pratik kontrol adımları
+- `python3 scripts/validate_assets.py`
+- `python3 scripts/validate_field_guides.py`
+- `flutter analyze lib --no-fatal-infos --no-fatal-warnings`
+- `flutter test`
 
-## Birim dili
+Widget testleri arama, favori, kontrol listesi, 31 rehberin dar ekran/büyük yazı yerleşimi ve ses bağlantılarını kontrol eder. Test sırasında UI önizlemeleri artifact olarak alınır. Ses çıkışı ve Android kilit ekranı gerçek cihazda ayrıca denenmelidir.
 
-Uygulama Türkiye saha kullanımına göre hazırlanır. Amerikan/İngiliz kaynaklı birimler ekranda Türk saha birimlerine çevrilmiş olarak gösterilir.
-
-Örnek dönüşümler:
-
-- `scm` yerine `Nm³`
-- `21 scf` yerine yaklaşık `0,60 Nm³`
-- `0,75 cfm` yerine yaklaşık `21 L/dk` veya `0,021 m³/dk`
-- `0,020 cfm` yerine yaklaşık `0,57 L/dk` veya `0,00057 m³/dk`
-- `m3` yerine `m³`
-
-## Uygulamada olanlar
-
-- Offline çalışan Flutter Android uygulaması
-- Profesyonel standart arama ekranı
-- Kategori filtreleme
-- Emisyon / imisyon ayrımı
-- Ayrıntılı standart detay sayfası
-- Tam Türkçe saha rehberi içerikleri
-- Eğitim PDF ayrıntıları
-- Ölçüm talimatı kontrol notları
-- Türkiye saha kullanımına uygun birim gösterimi
-- Konuya göre yerleştirilmiş seçilmiş görseller
-- Görsele dokununca tam ekran ve zoom desteği
-
-## APK içine gömülen veri paketleri
-
-Uygulama son kullanıcı APK'sında yalnızca gerekli veri paketlerini okur:
-
-- `assets/standards.json`
-- `assets/standards_extra.json`
-- `assets/education_notes.json`
-- `assets/education_notes_extra.json`
-- `assets/visual_notes.json`
-- `assets/visual_notes_extra.json`
-- `assets/visuals/`
-
-Görsel manifesti ve program sayfası dosyaları geliştirici/dokümantasyon amaçlı repoda kalabilir; son kullanıcı APK arayüzüne gereksiz menü olarak eklenmez.
-
-## Genişletilmiş veri tabanındaki başlıklar
-
-- TS EN 15259 / EPA Method 1 - Ölçüm düzlemi, port ve traverse
-- EPA Method 2 / TS EN ISO 16911 / TS ISO 10780 - Hız ve debi
-- EPA Method 5 - Partikül madde
-- TS EN 13284-1 - Düşük derişimli partikül madde
-- TS ISO 9096 - Yüksek konsantrasyon partikül madde
-- EPA Method 17 - In-stack filtreli partikül madde
-- EPA Method 4 - Nem tayini
-- TS ISO 12039 / TS EN 14789 / TS EN 14792 / TS EN 15058 - Yanma gazları
-- TS EN 1911 - HCl
-- EPA Method 26A - HCl/HF ve halojenler
-- EPA Method 29 - Ağır metal
-- TS EN 14385 - Ağır metal
-- TS EN 12619 / TSE CEN/TS 13649 - TOC/VOC
-- TS ISO 11338 / PAH saha uygulamaları
-- TS EN 1948-1 - PCDD/F dioksin-furan
-- TS EN 12341 / EPA 40 CFR 50-53 - PM10/PM2.5 imisyon
-- TS 2341 / TS 2342 / SKHKKY Ek-2 - Çöken toz
-- ISDL / MID - hedef hacim ve raporlanabilirlik planı
-- CARB Method 426 - Siyanür
-- CARB Method 425 - Krom+6 / Cr(VI)
-- EPA CTM 027 - Amonyak
-- SCAQMD Method 207.1 - Amonyak
-
-## Offline görsel mantığı
-
-Görseller internetten çekilmez. APK içine gömülür.
-
-Görsellerin doğru klasörü:
-
-```text
-assets/visuals/
-```
-
-Görsel bağlantıları:
-
-```text
-assets/visual_notes_extra.json
-```
-
-Her görsel için `placement` alanı kullanılır. Bu alan, görselin standardın hangi bölümünde gösterileceğini belirler:
-
-```text
-purpose
-quality
-flowRate
-equipment
-fieldSteps
-criticalControls
-acceptance
-reporting
-```
-
-Detaylı yerleşim matrisi:
-
-```text
-docs/VISUAL_PLACEMENT_MATRIX.md
-```
-
-## Otomatik kontrol
-
-GitHub Actions APK build öncesi şu script çalışır:
-
-```text
-scripts/validate_assets.py
-```
-
-Bu script JSON dosyalarını, standart anahtarlarını, görsel asset yollarını ve assets/visuals içindeki JPG sayısını kontrol eder. Eksik görseller şimdilik uyarıdır; build'i durdurmaz.
-
-## APK nasıl alınır?
-
-1. GitHub'da bu repoyu aç.
-2. Üst menüden **Actions** sekmesine gir.
-3. **Build Android APK** workflow'unu seç.
-4. En son başarılı çalışmayı aç.
-5. Sayfanın altındaki **Artifacts** bölümünden `emisyon-imisyon-olcum-standartlari-apk` dosyasını indir.
-6. ZIP içinden `emisyon-imisyon-olcum-standartlari.apk` dosyasını çıkarıp Android telefona kur.
-
-Detaylı telefon talimatı için:
-
-`docs/TELEFONDAN_APK_ALMA.md`
-
-## İçerik nasıl genişletilir?
-
-Standart içerikleri `assets/standards.json` ve `assets/standards_extra.json` dosyalarında tutulur. Eğitim notları `assets/education_notes.json` ve `assets/education_notes_extra.json` dosyalarında tutulur. Görsel notları `assets/visual_notes.json` ve `assets/visual_notes_extra.json` dosyalarında tutulur.
-
-## Önemli not
-
-Bu uygulama sahada hızlı kontrol ve eğitim amaçlı Türkçe rehberdir. Resmi raporlama ve denetim işlerinde yürürlükteki standart, mevzuat ve laboratuvar talimatı esas alınmalıdır.
+İçerik kaynağı: `scripts/build_field_guides.py`. Çizim kaynağı: `scripts/draw_assets.py` (Pillow ve DejaVu Sans). Bu iki script değişirse JSON/PNG çıktıları yeniden üretilip commit edilir.
