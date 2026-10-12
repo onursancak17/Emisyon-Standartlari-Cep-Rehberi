@@ -1,0 +1,16 @@
+name: Cancel stale APK test created during guide validation
+on:
+  push:
+    branches: [codex/cancel-stale-apk-test]
+permissions:
+  contents: read
+  actions: write
+jobs:
+  cancel-own-stale-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Cancel only the superseded test run
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: gh api --method POST "repos/$GH_REPO/actions/runs/38283535282/cancel"
