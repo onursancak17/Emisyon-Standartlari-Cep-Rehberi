@@ -81,7 +81,7 @@ jobs:
 
       - name: Test mobile navigation, accessibility and guide coverage
         working-directory: /tmp/mobile_build
-        run: flutter test
+        run: timeout 180 flutter test --reporter expanded
 
       - name: Upload UI verification images
         if: always()

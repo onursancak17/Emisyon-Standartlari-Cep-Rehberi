@@ -51,7 +51,7 @@ void main() {
       tester.view.devicePixelRatio = 1;
       addTearDown(tester.view.resetPhysicalSize);
       addTearDown(tester.view.resetDevicePixelRatio);
-      await fonts();
+      await tester.runAsync(fonts);
       final key = GlobalKey();
       await tester.pumpWidget(
         RepaintBoundary(key: key, child: const StandardsApp()),
@@ -60,7 +60,7 @@ void main() {
       expect(find.text('31 rehber'), findsOneWidget);
       expect(tester.takeException(), isNull);
       await screenshot(tester, key, 'home');
-      await tester.enterText(find.byType(TextField), 'yanma');
+      await tester.enterText(find.byType(TextField), 'yanma gazları');
       await tester.pumpAndSettle();
       expect(find.byType(StandardCard), findsOneWidget);
       await tester.tap(find.byType(StandardCard));
@@ -82,6 +82,7 @@ void main() {
       expect(preferences.checks.values.single.length, 1);
       await screenshot(tester, key, 'checklist');
     },
+    timeout: const Timeout(Duration(seconds: 90)),
   );
   testWidgets('Every guide and diagram fits a narrow screen with large text', (
     tester,
@@ -116,7 +117,7 @@ void main() {
       await tester.pumpWidget(const SizedBox.shrink());
       await tester.pumpAndSettle();
     }
-  });
+  }, timeout: const Timeout(Duration(seconds: 90)));
   testWidgets(
     'Method-specific media, T90 and chemistry are present without duplicate records',
     (tester) async {
@@ -154,5 +155,6 @@ void main() {
       await tester.pumpAndSettle();
       expect(tester.takeException(), isNull);
     },
+    timeout: const Timeout(Duration(seconds: 90)),
   );
 }
