@@ -380,14 +380,17 @@
     "duration": "Süre ve hacim, tayin limiti ile ölçüm planına göre seçilir.",
     "flowRate": "Sabit 20 L/dk zorunluluğu yok; çekiş izokinetik hesapla belirlenir.",
     "equipment": [
-      "Nozul + prob — Bacadan numune",
-      "Filtre — Baca dışı ısıtmalı filtre",
-      "Nem tutucu — Metoda göre su / boş şişe",
-      "Kurutucu — Tartımı bilinen silika jel",
+      "Isıtmalı nozul / prob — 120 ±14 °C",
+      "Baca dışı filtre — 120 ±14 °C",
+      "İmpinger 1 — 100 mL saf su",
+      "İmpinger 2 — 100 mL saf su",
+      "İmpinger 3 — Başlangıçta boş",
+      "İmpinger 4 — 200–300 g silika jel",
       "Pompa — Kontrollü çekiş",
       "Kuru gaz sayacı — T ve P kaydı",
       "Metoda uygun sıcaklık / basınç ve zaman kayıt ekipmanı.",
-      "Numune ve blank kapları; saha formu ve etiketler."
+      "Numune ve blank kapları; saha formu ve etiketler.",
+      "Pitot, diferansiyel basınç ölçer, baca sıcaklık sensörü ve barometre; izokinetik ayar için kalibrasyonlu nozul takımı."
     ],
     "keywords": [
       "partikül",
@@ -525,35 +528,49 @@
     ],
     "trains": [
       {
-        "title": "EPA Method 5 · işlevsel düzenek",
+        "title": "EPA Method 5 · Method 5 temelli nem treni",
         "nodes": [
           {
-            "label": "Nozul + prob",
-            "value": "Bacadan numune",
-            "role": "Akışı ve fazları temsil eden numune alır.",
+            "label": "Isıtmalı nozul / prob",
+            "value": "120 ±14 °C",
+            "role": "İzinli kaynak sıcaklığı istisnası ayrıca kontrol edilir.",
             "kind": "probe",
-            "zone": ""
+            "zone": "Isıtma"
           },
           {
-            "label": "Filtre",
-            "value": "Baca dışı ısıtmalı filtre",
-            "role": "Partikül fazını toplar.",
+            "label": "Baca dışı filtre",
+            "value": "120 ±14 °C",
+            "role": "Partikül fazını tutar.",
             "kind": "filter",
-            "zone": ""
+            "zone": "Isıtma"
           },
           {
-            "label": "Nem tutucu",
-            "value": "Metoda göre su / boş şişe",
-            "role": "Sayaç öncesi nemi tutar.",
+            "label": "İmpinger 1",
+            "value": "100 mL saf su",
+            "role": "İlk nem toplama.",
             "kind": "water",
-            "zone": "Soğutma"
+            "zone": "Buz / su banyosu"
           },
           {
-            "label": "Kurutucu",
-            "value": "Tartımı bilinen silika jel",
-            "role": "Kalan nemi tutar.",
+            "label": "İmpinger 2",
+            "value": "100 mL saf su",
+            "role": "İkinci nem toplama.",
+            "kind": "water",
+            "zone": "Buz / su banyosu"
+          },
+          {
+            "label": "İmpinger 3",
+            "value": "Başlangıçta boş",
+            "role": "Sıvı sürüklenmesi koruması.",
+            "kind": "empty",
+            "zone": "Buz / su banyosu"
+          },
+          {
+            "label": "İmpinger 4",
+            "value": "200–300 g silika jel",
+            "role": "Artık nem tutma.",
             "kind": "silica",
-            "zone": ""
+            "zone": "Buz / su banyosu"
           },
           {
             "label": "Pompa",
@@ -570,9 +587,9 @@
             "zone": ""
           }
         ],
-        "source": "EPA Method 5",
-        "note": "Nem şişelerinin miktarları ve sıcaklıklar seçilen metotla belirlenir.",
-        "verified": false,
+        "source": "EPA Method 5 §8.3.1",
+        "note": "Prob ve filtre sıcaklıkları 120 ±14 °C veya kaynak için izinli farklı koşuldur. Hız ölçümü gaz hattından ayrı Pitot / ΔP sistemiyle izlenir.",
+        "verified": true,
         "imageAsset": "assets/trains/g03_1.png"
       }
     ],
@@ -603,12 +620,15 @@
     "equipment": [
       "Nozul + filtre — Baca içinde",
       "Prob — Filtre arkasında",
-      "Nem tutucu — Metoda göre su / boş şişe",
-      "Kurutucu — Tartımı bilinen silika jel",
+      "İmpinger 1 — 100 mL saf su",
+      "İmpinger 2 — 100 mL saf su",
+      "İmpinger 3 — Başlangıçta boş",
+      "İmpinger 4 — 200–300 g silika jel",
       "Pompa — Kontrollü çekiş",
       "Kuru gaz sayacı — T ve P kaydı",
       "Metoda uygun sıcaklık / basınç ve zaman kayıt ekipmanı.",
-      "Numune ve blank kapları; saha formu ve etiketler."
+      "Numune ve blank kapları; saha formu ve etiketler.",
+      "Pitot, diferansiyel basınç ölçer, baca sıcaklık sensörü ve barometre; izokinetik ayar için kalibrasyonlu nozul takımı."
     ],
     "keywords": [
       "EPA 17",
@@ -719,6 +739,11 @@
     ],
     "checks": [
       {
+        "title": "Method 17 uygulanabilirliği",
+        "text": "Damlacıklı veya su buharına doygun bacada Method 17 yazıldığı haliyle uygulanmaz. Filtrasyon sıcaklığı ve kesit engelleme koşulları kaynak/metot kapsamıyla doğrulanır.",
+        "kind": "Metot şartı"
+      },
+      {
         "title": "Geçerlilik",
         "text": "Kaçak, izokinetiklik, sıcaklık ve blank şartlarını birlikte kontrol et. Evrensel bir süre/hacim tüm toz metotlarına uygulanmaz.",
         "kind": "Kritik kontrol"
@@ -741,7 +766,7 @@
     ],
     "trains": [
       {
-        "title": "EPA Method 17 · işlevsel düzenek",
+        "title": "EPA Method 17 · Method 5 temelli nem treni",
         "nodes": [
           {
             "label": "Nozul + filtre",
@@ -758,18 +783,32 @@
             "zone": ""
           },
           {
-            "label": "Nem tutucu",
-            "value": "Metoda göre su / boş şişe",
-            "role": "Sayaç öncesi nemi tutar.",
+            "label": "İmpinger 1",
+            "value": "100 mL saf su",
+            "role": "İlk nem toplama.",
             "kind": "water",
-            "zone": "Soğutma"
+            "zone": "Buz / su banyosu"
           },
           {
-            "label": "Kurutucu",
-            "value": "Tartımı bilinen silika jel",
-            "role": "Kalan nemi tutar.",
+            "label": "İmpinger 2",
+            "value": "100 mL saf su",
+            "role": "İkinci nem toplama.",
+            "kind": "water",
+            "zone": "Buz / su banyosu"
+          },
+          {
+            "label": "İmpinger 3",
+            "value": "Başlangıçta boş",
+            "role": "Sıvı sürüklenmesi koruması.",
+            "kind": "empty",
+            "zone": "Buz / su banyosu"
+          },
+          {
+            "label": "İmpinger 4",
+            "value": "200–300 g silika jel",
+            "role": "Artık nem tutma.",
             "kind": "silica",
-            "zone": ""
+            "zone": "Buz / su banyosu"
           },
           {
             "label": "Pompa",
@@ -786,17 +825,21 @@
             "zone": ""
           }
         ],
-        "source": "EPA Method 17",
-        "note": "Nem şişelerinin miktarları ve sıcaklıklar seçilen metotla belirlenir.",
-        "verified": false,
+        "source": "EPA Method 5 §8.3.1 / Method 17 §6.1.5",
+        "note": "Method 17 için bu nem düzeni metotta önerilen Method 5 temelli seçenektir; filtre baca içinde kalır.",
+        "verified": true,
         "imageAsset": "assets/trains/g04_1.png"
       }
     ],
     "concepts": [],
     "sources": [
       {
-        "title": "EPA Method 17 · baca içi filtre",
-        "url": "https://www.epa.gov/emc/method-17-particulate-matter"
+        "title": "EPA Method 17 · §6.1.5 ve §1.2",
+        "url": "https://www.epa.gov/sites/default/files/2017-08/documents/method_17.pdf"
+      },
+      {
+        "title": "EPA Method 5 · 2020 · §8.3",
+        "url": "https://www.epa.gov/sites/default/files/2019-08/documents/method_5_0.pdf"
       }
     ],
     "sourceScope": "Şema işlevsel akışı gösterir; Method 5 ve Method 17 filtre yerleşimleri ayrıdır. Sayısal kabul şartları seçilen resmi metinden uygulanır.",
@@ -824,7 +867,8 @@
       "Pompa — Kontrollü çekiş",
       "Kuru gaz sayacı — T ve P kaydı",
       "Metoda uygun sıcaklık / basınç ve zaman kayıt ekipmanı.",
-      "Numune ve blank kapları; saha formu ve etiketler."
+      "Numune ve blank kapları; saha formu ve etiketler.",
+      "Pitot, diferansiyel basınç ölçer, baca sıcaklık sensörü ve barometre; izokinetik ayar için kalibrasyonlu nozul takımı."
     ],
     "keywords": [
       "TS EN 13284-1",
@@ -1043,7 +1087,8 @@
       "Pompa — Kontrollü çekiş",
       "Kuru gaz sayacı — T ve P kaydı",
       "Metoda uygun sıcaklık / basınç ve zaman kayıt ekipmanı.",
-      "Numune ve blank kapları; saha formu ve etiketler."
+      "Numune ve blank kapları; saha formu ve etiketler.",
+      "Pitot, diferansiyel basınç ölçer, baca sıcaklık sensörü ve barometre; izokinetik ayar için kalibrasyonlu nozul takımı."
     ],
     "keywords": [
       "TS ISO 9096",
@@ -1258,7 +1303,8 @@
       "Pompa — Kontrollü çekiş",
       "Kuru gaz sayacı — T ve P kaydı",
       "Metoda uygun sıcaklık / basınç ve zaman kayıt ekipmanı.",
-      "Numune ve blank kapları; saha formu ve etiketler."
+      "Numune ve blank kapları; saha formu ve etiketler.",
+      "Pitot, diferansiyel basınç ölçer, baca sıcaklık sensörü ve barometre; izokinetik ayar için kalibrasyonlu nozul takımı."
     ],
     "keywords": [
       "ISO 12141",
@@ -2175,7 +2221,8 @@
       "Pompa — Kontrollü çekiş",
       "Kuru gaz sayacı — T ve P kaydı",
       "Metoda uygun sıcaklık / basınç ve zaman kayıt ekipmanı.",
-      "Numune ve blank kapları; saha formu ve etiketler."
+      "Numune ve blank kapları; saha formu ve etiketler.",
+      "Pitot, diferansiyel basınç ölçer, baca sıcaklık sensörü ve barometre; izokinetik ayar için kalibrasyonlu nozul takımı."
     ],
     "keywords": [
       "EPA 26A",
@@ -2434,7 +2481,8 @@
       "Pompa — Kontrollü çekiş",
       "Kuru gaz sayacı — T ve P kaydı",
       "Metoda uygun sıcaklık / basınç ve zaman kayıt ekipmanı.",
-      "Numune ve blank kapları; saha formu ve etiketler."
+      "Numune ve blank kapları; saha formu ve etiketler.",
+      "Pitot, diferansiyel basınç ölçer, baca sıcaklık sensörü ve barometre; izokinetik ayar için kalibrasyonlu nozul takımı."
     ],
     "keywords": [
       "florür",
@@ -2679,7 +2727,8 @@
       "Pompa — Kontrollü çekiş",
       "Kuru gaz sayacı — T ve P kaydı",
       "Metoda uygun sıcaklık / basınç ve zaman kayıt ekipmanı.",
-      "Numune ve blank kapları; saha formu ve etiketler."
+      "Numune ve blank kapları; saha formu ve etiketler.",
+      "Pitot, diferansiyel basınç ölçer, baca sıcaklık sensörü ve barometre; izokinetik ayar için kalibrasyonlu nozul takımı."
     ],
     "keywords": [
       "EPA 29",
@@ -2949,7 +2998,8 @@
       "Pompa — Kontrollü çekiş",
       "Kuru gaz sayacı — T ve P kaydı",
       "Metoda uygun sıcaklık / basınç ve zaman kayıt ekipmanı.",
-      "Numune ve blank kapları; saha formu ve etiketler."
+      "Numune ve blank kapları; saha formu ve etiketler.",
+      "Pitot, diferansiyel basınç ölçer, baca sıcaklık sensörü ve barometre; izokinetik ayar için kalibrasyonlu nozul takımı."
     ],
     "keywords": [
       "TS EN 14385",
@@ -3180,7 +3230,8 @@
       "Pompa — Kontrollü çekiş",
       "Kuru gaz sayacı — T ve P kaydı",
       "Metoda uygun sıcaklık / basınç ve zaman kayıt ekipmanı.",
-      "Numune ve blank kapları; saha formu ve etiketler."
+      "Numune ve blank kapları; saha formu ve etiketler.",
+      "Pitot, diferansiyel basınç ölçer, baca sıcaklık sensörü ve barometre; izokinetik ayar için kalibrasyonlu nozul takımı."
     ],
     "keywords": [
       "PAH",
@@ -3416,7 +3467,8 @@
       "Pompa — Kontrollü çekiş",
       "Kuru gaz sayacı — T ve P kaydı",
       "Metoda uygun sıcaklık / basınç ve zaman kayıt ekipmanı.",
-      "Numune ve blank kapları; saha formu ve etiketler."
+      "Numune ve blank kapları; saha formu ve etiketler.",
+      "Pitot, diferansiyel basınç ölçer, baca sıcaklık sensörü ve barometre; izokinetik ayar için kalibrasyonlu nozul takımı."
     ],
     "keywords": [
       "dioksin",
@@ -3656,7 +3708,8 @@
       "Pompa — Kontrollü çekiş",
       "Kuru gaz sayacı — T ve P kaydı",
       "Metoda uygun sıcaklık / basınç ve zaman kayıt ekipmanı.",
-      "Numune ve blank kapları; saha formu ve etiketler."
+      "Numune ve blank kapları; saha formu ve etiketler.",
+      "Pitot, diferansiyel basınç ölçer, baca sıcaklık sensörü ve barometre; izokinetik ayar için kalibrasyonlu nozul takımı."
     ],
     "keywords": [],
     "aliases": [],
@@ -3917,7 +3970,8 @@
       "Pompa — Kontrollü çekiş",
       "Kuru gaz sayacı — T ve P kaydı",
       "Metoda uygun sıcaklık / basınç ve zaman kayıt ekipmanı.",
-      "Numune ve blank kapları; saha formu ve etiketler."
+      "Numune ve blank kapları; saha formu ve etiketler.",
+      "Pitot, diferansiyel basınç ölçer, baca sıcaklık sensörü ve barometre; izokinetik ayar için kalibrasyonlu nozul takımı."
     ],
     "keywords": [
       "siyanür",
@@ -4159,7 +4213,8 @@
       "Pompa — Kontrollü çekiş",
       "Kuru gaz sayacı — T ve P kaydı",
       "Metoda uygun sıcaklık / basınç ve zaman kayıt ekipmanı.",
-      "Numune ve blank kapları; saha formu ve etiketler."
+      "Numune ve blank kapları; saha formu ve etiketler.",
+      "Pitot, diferansiyel basınç ölçer, baca sıcaklık sensörü ve barometre; izokinetik ayar için kalibrasyonlu nozul takımı."
     ],
     "keywords": [
       "Cr(VI)",
@@ -4388,7 +4443,8 @@
       "Pompa — Kontrollü çekiş",
       "Kuru gaz sayacı — T ve P kaydı",
       "Metoda uygun sıcaklık / basınç ve zaman kayıt ekipmanı.",
-      "Numune ve blank kapları; saha formu ve etiketler."
+      "Numune ve blank kapları; saha formu ve etiketler.",
+      "Pitot, diferansiyel basınç ölçer, baca sıcaklık sensörü ve barometre; izokinetik ayar için kalibrasyonlu nozul takımı."
     ],
     "keywords": [
       "amonyak",
@@ -5074,7 +5130,8 @@
       "Pompa — Kontrollü çekiş",
       "Kuru gaz sayacı — T ve P kaydı",
       "Metoda uygun sıcaklık / basınç ve zaman kayıt ekipmanı.",
-      "Numune ve blank kapları; saha formu ve etiketler."
+      "Numune ve blank kapları; saha formu ve etiketler.",
+      "Pitot, diferansiyel basınç ölçer, baca sıcaklık sensörü ve barometre; izokinetik ayar için kalibrasyonlu nozul takımı."
     ],
     "keywords": [
       "EPA Method 8",

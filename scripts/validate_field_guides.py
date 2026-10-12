@@ -22,6 +22,8 @@ for guide in guides:
 by_code={g['code']:g for g in guides}
 def nodes(code):return by_code[code]['trains'][0]['nodes']
 # Scientific regressions: these methods must not share one generic filter/impinger layout.
+for code in ['EPA Method 5','EPA Method 17']:
+    assert len([n for n in nodes(code) if n['label'].startswith('İmpinger')])==4
 m8=nodes('EPA Method 8')
 assert m8[1]['label']=='İmpinger 1' and m8[2]['kind']=='filter' and m8[3]['label']=='İmpinger 2'
 m13=nodes('EPA Method 13A')

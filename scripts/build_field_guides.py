@@ -50,7 +50,7 @@ SOURCES = {
  '11338': ('ISO 11338-1:2003 · ISO kapsam / metotlar', 'https://www.iso.org/standard/32903.html'),
  '4': ('EPA Method 4 · §8.1 referans yöntemi', 'https://www.epa.gov/sites/default/files/2017-08/documents/method_4_0.pdf'),
  '5': ('EPA Method 5 · 2020 · §8.3', 'https://www.epa.gov/sites/default/files/2019-08/documents/method_5_0.pdf'),
- '17': ('EPA Method 17 · baca içi filtre', EPA+'method-17-particulate-matter'),
+ '17': ('EPA Method 17 · §6.1.5 ve §1.2', 'https://www.epa.gov/sites/default/files/2017-08/documents/method_17.pdf'),
  '1': ('EPA Method 1 · ölçüm yeri ve traverse', EPA+'method-1-sample-and-velocity-traverses-stationary-sources'),
  '2': ('EPA Method 2 · hız ve debi', EPA+'method-2-velocity-s-type-pitot'),
  '25a': ('EPA Method 25A · toplam gaz organikleri', EPA+'method-25a-total-gaseous-organic-concentration-using-flame-ionization-detector'),
@@ -334,9 +334,27 @@ add('ISDL / MID','Hedef hacim ve raporlama limiti','Kalite kontrol',
  steps(('Tayin limiti / sınır değer','Laboratuvar tayin limiti ile yönetmelik sınır değeri aynı kavram değildir.','Kritik kontrol')),
  [train('Numune hacmi planlama',[node('Analit ve limit','Raporlama hedefi'),node('Laboratuvar','Kütle LOD / LOQ'),node('Hedef hacim','Kütle / derişim'),node('Saha planı','Metot debisi ve süre'),node('Son kontrol','Gerçek hacim + blank')],'Laboratuvar validasyonu + seçilen numune metodu','Numune treni değildir; planlama akışıdır.',False)])
 
+# Explicit EPA particulate moisture trains, with the different front-filter locations preserved.
+for g in guides:
+    if g['code'] in {'EPA Method 5','EPA Method 17'}:
+        t=g['trains'][0]
+        front=t['nodes'][:2]
+        if g['code']=='EPA Method 5':
+            front[0]=node('Isıtmalı nozul / prob','120 ±14 °C','İzinli kaynak sıcaklığı istisnası ayrıca kontrol edilir.','probe','Isıtma')
+            front[1]=node('Baca dışı filtre','120 ±14 °C','Partikül fazını tutar.','filter','Isıtma')
+        t['nodes']=front+[imp(1,'100 mL saf su','İlk nem toplama.'),imp(2,'100 mL saf su','İkinci nem toplama.'),imp(3,'Başlangıçta boş','Sıvı sürüklenmesi koruması.','empty'),imp(4,SILICA,'Artık nem tutma.','silica'),PUMP,DGM]
+        t['title']=g['code']+' · Method 5 temelli nem treni'
+        t['source']='EPA Method 5 §8.3.1'+(' / Method 17 §6.1.5' if g['code']=='EPA Method 17' else '')
+        t['note']='Method 17 için bu nem düzeni metotta önerilen Method 5 temelli seçenektir; filtre baca içinde kalır.' if g['code']=='EPA Method 17' else 'Prob ve filtre sıcaklıkları 120 ±14 °C veya kaynak için izinli farklı koşuldur. Hız ölçümü gaz hattından ayrı Pitot / ΔP sistemiyle izlenir.'
+        t['verified']=True
+        if g['code']=='EPA Method 17':
+            g['sources'].append(dict(title=SOURCES['5'][0],url=SOURCES['5'][1]))
+            g['checks'].insert(0,point('Method 17 uygulanabilirliği','Damlacıklı veya su buharına doygun bacada Method 17 yazıldığı haliyle uygulanmaz. Filtrasyon sıcaklığı ve kesit engelleme koşulları kaynak/metot kapsamıyla doğrulanır.','Metot şartı'))
 # Equipment follows the curated diagram, rather than old mixed-method lists.
 for g in guides:
     g['equipment'] = list(dict.fromkeys([n['label'] + (' — ' + n['value'].replace('\n', '; ') if n['value'] else '') for t in g['trains'] for n in t['nodes']])) + ['Metoda uygun sıcaklık / basınç ve zaman kayıt ekipmanı.', 'Numune ve blank kapları; saha formu ve etiketler.']
+    if g['code'] in {'EPA Method 5','EPA Method 17','TS EN 13284-1','TS ISO 9096','ISO 12141','EPA Method 26A','EPA Method 13A','EPA Method 29','TS EN 14385','TS ISO 11338 / ilgili PAH saha uygulamaları','TS EN 1948-1','EPA Method 23','CARB Method 426','CARB Method 425','EPA CTM 027','EPA Method 8'}:
+        g['equipment'] += ['Pitot, diferansiyel basınç ölçer, baca sıcaklık sensörü ve barometre; izokinetik ayar için kalibrasyonlu nozul takımı.']
     g['mistakes'] = ['Farklı metotların trenini veya sayısal şartlarını birbirine taşımak.', 'Ölçüm kesintisini ve proses değişikliğini kaydetmemek.', 'Sayaç hacmi ile kuru referans hacmi aynı kabul etmek.']
     if g['group'] == 'İmisyon':
         g['mistakes'] = ['Başlangıç ve bitiş zamanını eksik kaydetmek.', 'Blank ve numune kimliğini karıştırmak.', 'Geçersiz maruziyet / kesinti kaydını değerlendirmemek.']
