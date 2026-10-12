@@ -91,7 +91,7 @@ for g in json.loads((ROOT/'assets/field_guides.json').read_text()):
             if n['zone']:text(d,(x+80,y+18),n['zone'],18,False,cardw-90,TEAL)
             layer=Image.new('RGBA',(250,170),(0,0,0,0))
             component(ImageDraw.Draw(layer),125,28,n['kind'])
-            if row%2: layer=ImageOps.mirror(layer)
+            if row%2 and n['kind'] not in {'equipment','meter','cooler'}: layer=ImageOps.mirror(layer)
             im.paste(layer,(int(x+cardw/2-125),y+48),layer)
             ty=text(d,(x+20,y+215),n['label'],27,True,cardw-40)
             value=n['value'];f=font(22)

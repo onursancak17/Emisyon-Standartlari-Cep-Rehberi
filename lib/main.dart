@@ -1,7 +1,6 @@
 import 'dart:async';
 import 'dart:convert';
 import 'dart:math';
-import 'dart:typed_data';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -40,7 +39,7 @@ Future<void> main() async {
 }
 
 class UserPreferences extends ChangeNotifier {
-  final _prefs = SharedPreferencesAsync();
+  late final _prefs = SharedPreferencesAsync();
   bool memoryOnly = false;
   bool dark = false;
   double scale = 1;
@@ -1158,7 +1157,7 @@ class SharedAudio extends ChangeNotifier {
   AudioPlayer? _player;
   String? asset;
   bool loading = false;
-  final _prefs = SharedPreferencesAsync();
+  late final _prefs = SharedPreferencesAsync();
   int position = 0;
   AudioPlayer get player {
     if (_player == null) {
@@ -1670,25 +1669,6 @@ class _MissingVisualBox extends StatelessWidget {
   }
 }
 
-class _UnitInfoBlock extends StatelessWidget {
-  const _UnitInfoBlock();
-
-  @override
-  Widget build(BuildContext context) {
-    return Card(
-      elevation: 0,
-      color: Theme.of(context).colorScheme.secondaryContainer,
-      margin: const EdgeInsets.only(bottom: 12),
-      child: const Padding(
-        padding: EdgeInsets.all(14),
-        child: Text(
-          'Birim notu: Amerikan kaynaklı scf/scm/cfm ifadeleri Türkiye saha kullanımına uygun Nm³, m³/dk ve L/dk karşılıklarıyla değerlendirilir.',
-        ),
-      ),
-    );
-  }
-}
-
 class _InfoBlock extends StatelessWidget {
   const _InfoBlock({required this.title, required this.body});
 
@@ -1879,20 +1859,6 @@ class StandardsRepository {
       if (decoded is Map<String, dynamic>) return decoded;
     } catch (_) {}
     return const <String, dynamic>{};
-  }
-
-  static Future<Map<String, List<String>>> _loadEducationNotes() async {
-    final result = <String, List<String>>{};
-    for (final path in _educationAssetFiles) {
-      final decoded = await _loadMapAsset(path);
-      for (final entry in decoded.entries) {
-        final key = TurkishUnitText.key(entry.key);
-        result
-            .putIfAbsent(key, () => <String>[])
-            .addAll(StandardItem.listFromDynamic(entry.value));
-      }
-    }
-    return result;
   }
 
   static Future<Map<String, List<VisualNote>>> _loadVisualNotes() async {
