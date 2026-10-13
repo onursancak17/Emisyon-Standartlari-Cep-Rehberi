@@ -187,7 +187,7 @@ class FieldApp extends StatelessWidget {
       title:'Emisyon Saha Talimatları',
       theme: ThemeData(useMaterial3:true, brightness:Brightness.light,
         colorScheme:ColorScheme.fromSeed(seedColor:teal),
-        appBarTheme:const AppBarTheme(backgroundColor:Color(0xFFF3F6F8),foregroundColor:navy,titleTextStyle:TextStyle(color:navy,fontSize:22,fontWeight:FontWeight.w700)),
+        appBarTheme:const AppBarTheme(backgroundColor:Color(0xFFF3F6F8),foregroundColor:navy,titleTextStyle:TextStyle(fontFamily:'Roboto',color:navy,fontSize:22,fontWeight:FontWeight.w700)),
         cardTheme:CardThemeData(color:Colors.white,surfaceTintColor:Colors.transparent,elevation:0,shape:RoundedRectangleBorder(borderRadius:BorderRadius.circular(18),side:const BorderSide(color:Color(0xFFDCE6ED)))),
         scaffoldBackgroundColor:const Color(0xFFF3F6F8),
         textTheme:const TextTheme(bodyMedium:TextStyle(fontSize:16,height:1.55),bodyLarge:TextStyle(fontSize:17,height:1.5))),
