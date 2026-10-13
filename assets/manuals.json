@@ -1728,6 +1728,16 @@
             "Başlangıç/son tartım koşullarını eşleştir. Cihaz başlığının çalışma debisini seçilen metoda göre uygula."
           ],
           "ordered": false
+        },
+        {
+          "title": "Tesis içi spot ölçüm uygulaması",
+          "items": [
+            "Laboratuvar saha planında spot ölçüm isteniyorsa açık toz kaynağından yaklaşık 3 m uzakta, güncel hakim rüzgâr yönünü dikkate alarak noktayı seç.",
+            "Toz yoğunluğuna göre 15–30 dakika spot ölçüm yap; cihazın seçilen yönteme uygun başlık/debisini koru.",
+            "Spot sonucu 24 saatlik hava kalitesi ortalaması olarak sunma. Kaynak, rüzgâr, gerçek süre ve çekilen hacmi ayrı kaydet.",
+            "Aylık hava kalitesi programında günlük 24 saat filtreleri ve aylık sonuçları kendi programına göre işle."
+          ],
+          "ordered": true
         }
       ],
       "trains": [],
@@ -2002,6 +2012,16 @@
             "Numune sıvısı ve silika jel son tartımlarını kaydet.",
             "Kaçak ve taşıma kaybını değerlendir; sayaç/su referans bazlarını kontrol et.",
             "Elde edilen nemi aynı proses dönemindeki ana ölçümle eşleştir."
+          ],
+          "ordered": true
+        },
+        {
+          "title": "EPA 4 uygulama koşulları",
+          "items": [
+            "EPA 4 eğitim uygulamasında örnekleme debisi 21 L/dakikayı aşmayacak şekilde ayarlanır ve en az 600 L gaz örneklenir.",
+            "Minimum 30 dakikalık ölçüm ile hacim hedefini birlikte sağla. Örneğin 20 L/dakika × 30 dakika = 600 L’dir.",
+            "Prob ve filtrede yoğuşmayı önle; örnekleme boyunca silika jel çıkış sıcaklığı 20 °C’yi aşmayacak şekilde soğutmayı sürdür.",
+            "EN 14790’ın örnek debi/hacim çalışmasını EPA 4 zorunlu debisiyle karıştırma; her yöntemin doğrulanmış uygulama planını kullan."
           ],
           "ordered": true
         }
