@@ -67,6 +67,7 @@ void main(){
   final n=Narrator();
   await t.runAsync(()async{await n.start(['HNO₃ 100 mL','İkinci adım']);});
   expect(spoken.length,2,reason:'${n.error}; methods: $calls; chunks: ${n.chunks}');
+  expect(Narrator.pronounce('CO₂ / SO₂ / NO₂ / O₂'), 'karbondioksit / kükürt dioksit / azot dioksit / oksijen');
   expect(spoken.first,contains('nitrik asit'));expect(spoken.first,contains('100 mililitre'));
   await t.runAsync(()async{await n.pause();});expect(n.paused,isTrue);expect(n.playing,isFalse);
   await t.runAsync(()async{await n.resume();});expect(spoken.length,4);

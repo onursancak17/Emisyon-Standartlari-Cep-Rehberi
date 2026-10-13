@@ -138,7 +138,8 @@ class Narrator extends ChangeNotifier {
       'KMnO₄':'potasyum permanganat','NaOH':'sodyum hidroksit','CdSO₄':'kadmiyum sülfat',
       'CuSO₄':'bakır sülfat','XAD-2':'iks ad iki','T90':'T doksan','HCl':'hidrojen klorür',
       'mL':'mililitre','L/dakika':'litre bölü dakika','°C':'derece Celsius','m³':'metreküp',
-      'µg':'mikrogram','mg':'miligram','±':'artı eksi','×':'çarpı','O₂':'oksijen'};
+      'µg':'mikrogram','mg':'miligram','±':'artı eksi','×':'çarpı',
+      'CO₂':'karbondioksit','SO₂':'kükürt dioksit','NO₂':'azot dioksit','NOx':'azot oksitler','O₂':'oksijen'};
     for (final e in map.entries) { s=s.replaceAll(e.key, e.value); }
     return s;
   }
