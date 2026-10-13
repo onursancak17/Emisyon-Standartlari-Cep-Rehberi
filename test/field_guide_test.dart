@@ -57,17 +57,21 @@ void main(){
   final gas=data.manuals.singleWhere((a)=>a.id=='yanma');expect(gas.sections.any((s)=>s.title.startsWith('T90')),isTrue);
   final metal=data.manuals.singleWhere((a)=>a.id=='metal-epa');expect(metal.trains.first.bottles.length,7);
   expect(metal.narration.any((s)=>s.contains('100 mL')&&s.contains('HNO₃')),isTrue);
-  const channel=MethodChannel('flutter_tts');final spoken=<String>[];Completer<int>? pending;final firstSpeak=Completer<void>();
+  const channel=MethodChannel('flutter_tts');final spoken=<String>[];final calls=<String>[];
   TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger.setMockMethodCallHandler(channel,(call)async{
+   calls.add(call.method);
    if(call.method=='isLanguageAvailable')return true;
-   if(call.method=='speak'){spoken.add(call.arguments is Map ? (call.arguments as Map)['text'] as String : call.arguments as String);if(!firstSpeak.isCompleted)firstSpeak.complete();pending=Completer<int>();return pending!.future;}
-   if(call.method=='stop'){if(pending!=null&&!pending!.isCompleted)pending!.complete(0);return 1;}return 1;
+   if(call.method=='speak'){spoken.add(call.arguments is Map ? (call.arguments as Map)['text'] as String : call.arguments as String);return 1;}
+   return 1;
   });
-  final n=Narrator();await t.runAsync(()async{expect(await n.init(),isTrue,reason:n.error);unawaited(n.start(['HNO₃ 100 mL','İkinci adım']));await firstSpeak.future.timeout(const Duration(seconds:5));});
+  final n=Narrator();
+  await t.runAsync(()async{await n.start(['HNO₃ 100 mL','İkinci adım']);});
+  expect(spoken.length,2,reason:'${n.error}; methods: $calls; chunks: ${n.chunks}');
   expect(spoken.first,contains('nitrik asit'));expect(spoken.first,contains('100 mililitre'));
-  await n.pause();expect(n.paused,isTrue);expect(n.playing,isFalse);
-  await t.runAsync(()async{unawaited(n.resume());await Future<void>.delayed(const Duration(milliseconds:20));});expect(n.playing,isTrue);
-  await n.halt();n.dispose();TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger.setMockMethodCallHandler(channel,null);
+  await t.runAsync(()async{await n.pause();});expect(n.paused,isTrue);expect(n.playing,isFalse);
+  await t.runAsync(()async{await n.resume();});expect(spoken.length,4);
+  await t.runAsync(()async{await n.halt();});expect(calls.where((x)=>x=='stop').length,greaterThanOrEqualTo(3));
+  n.dispose();TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger.setMockMethodCallHandler(channel,null);
  });
  testWidgets('Missing Turkish voice produces an actionable message', (t)async{
   const channel=MethodChannel('flutter_tts');TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger.setMockMethodCallHandler(channel,(call)async=>call.method=='isLanguageAvailable'?false:1);
