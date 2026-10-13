@@ -1,109 +1,70 @@
 name: Build Android APK
-
 on:
   push:
-    branches: [ main, codex/professional-field-guide ]
+    branches: [main, codex/professional-field-guide]
   workflow_dispatch:
-
 jobs:
   build-apk:
     name: Build release APK
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
-          lfs: true
-
-      - name: Pull and verify Git LFS audio assets
-        run: |
-          set -e
-          git lfs install
-          git lfs pull
-          echo "Audio asset folder size:"
-          du -sh assets/audio || true
-          echo "Audio files:"
-          find assets/audio -maxdepth 1 -type f -name "*.m4a" -print -exec ls -lh {} \;
-          python3 - <<'PY'
-          from pathlib import Path
-          files = sorted(Path('assets/audio').glob('*.m4a'))
-          if len(files) != 13:
-              raise SystemExit(f'Expected 13 audio files, found {len(files)}')
-          total = sum(p.stat().st_size for p in files)
-          if total < 500 * 1024 * 1024:
-              raise SystemExit(f'Audio files look like Git LFS pointers, total size is only {total} bytes')
-          print(f'Audio files verified: {len(files)} files, {total / 1024 / 1024:.1f} MB')
-          PY
-
-      - name: Validate offline APK assets
-        run: |
-          python3 scripts/validate_assets.py
-          python3 scripts/validate_field_guides.py
-
-      - name: Set up Java
-        uses: actions/setup-java@v4
+          lfs: false
+      - name: Validate instructions and reagent data
+        run: python3 scripts/validate_manuals.py
+      - uses: actions/setup-java@v4
         with:
           distribution: temurin
           java-version: '17'
-
-      - name: Set up Flutter
-        uses: subosito/flutter-action@v2
+      - uses: subosito/flutter-action@v2
         with:
           channel: stable
           flutter-version: '3.47.7'
           cache: true
-
-      - name: Show Flutter version
-        run: flutter --version
-
-      - name: Create clean Flutter Android project
+      - name: Create clean Android project
         run: |
-          set -e
-          rm -rf /tmp/mobile_build
           flutter create /tmp/mobile_build --platforms=android --project-name emisyon_standartlari_cep_rehberi --org com.onursancak
-          rm -rf /tmp/mobile_build/lib /tmp/mobile_build/assets /tmp/mobile_build/test
-          cp -r lib /tmp/mobile_build/lib
-          cp -r assets /tmp/mobile_build/assets
-          cp pubspec.yaml /tmp/mobile_build/pubspec.yaml
-          cp -r test /tmp/mobile_build/test
-
-      - name: Configure Android display name, icon and background audio
-        run: python3 scripts/configure_android.py /tmp/mobile_build
-
+          python3 - <<'PY'
+          from pathlib import Path
+          import shutil
+          p=Path('/tmp/mobile_build')
+          shutil.rmtree(p/'lib');shutil.copytree('lib',p/'lib')
+          shutil.copytree('test',p/'test',dirs_exist_ok=True)
+          for f in ['manuals.json','training.json']: 
+              (p/'assets').mkdir(exist_ok=True)
+              shutil.copyfile('assets/'+f,p/'assets'/f)
+          for d in ['equipment','branding']:shutil.copytree('assets/'+d,p/'assets'/d)
+          shutil.copyfile('pubspec.yaml',p/'pubspec.yaml')
+          PY
+          python3 scripts/configure_android.py /tmp/mobile_build
       - name: Install dependencies
         working-directory: /tmp/mobile_build
         run: flutter pub get
-
-      - name: Analyze Flutter lib
+      - name: Format and analyze
         working-directory: /tmp/mobile_build
-        run: flutter analyze lib --no-fatal-infos --no-fatal-warnings
-
-      - name: Test mobile navigation, accessibility and guide coverage
+        run: |
+          dart format lib test
+          flutter analyze lib --no-fatal-infos --no-fatal-warnings
+      - name: Test phone layouts, navigation and narration
         working-directory: /tmp/mobile_build
-        run: timeout 180 flutter test --reporter expanded
-
-      - name: Upload UI verification images
+        run: timeout 240 flutter test --reporter expanded
+      - name: Upload UI verification
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: saha-rehberi-ui-verification
+          name: saha-talimatlari-ui
           path: /tmp/mobile_build/test-output/*.png
           if-no-files-found: warn
-
       - name: Build APK
         working-directory: /tmp/mobile_build
         run: flutter build apk --release
-
-      - name: Copy APK to repository workspace
+      - name: Copy APK
         run: |
           mkdir -p build-output
-          cp /tmp/mobile_build/build/app/outputs/flutter-apk/app-release.apk build-output/emisyon-imisyon-saha-rehberi-v1.0.0.apk
-          ls -lh build-output/emisyon-imisyon-saha-rehberi-v1.0.0.apk
-
-      - name: Upload APK artifact
-        uses: actions/upload-artifact@v4
+          cp /tmp/mobile_build/build/app/outputs/flutter-apk/app-release.apk build-output/emisyon-saha-talimatlari-v2.0.0.apk
+      - uses: actions/upload-artifact@v4
         with:
-          name: emisyon-saha-rehberi-v1.0.0
-          path: build-output/emisyon-imisyon-saha-rehberi-v1.0.0.apk
+          name: emisyon-saha-talimatlari-v2.0.0
+          path: build-output/emisyon-saha-talimatlari-v2.0.0.apk
           if-no-files-found: error

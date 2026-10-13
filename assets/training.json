@@ -1,0 +1,1917 @@
+[
+  {
+    "id": "egitim-isdl",
+    "title": "Tayin sınırları ve ölçüm süresi",
+    "method": "LOD • LOQ • ISDL • Hedef hacim",
+    "domain": "Eğitim",
+    "trains": [],
+    "visual": null,
+    "sections": [
+      {
+        "title": "Tayin sınırını sahaya taşımak",
+        "items": [
+          "Laboratuvarın LOD/LOQ değeri tek başına bacadaki derişim sınırı değildir. Analiz edilen toplam sıvı veya sorbent fraksiyonu ve örneklenen gaz hacmiyle ilişkilendirilir.",
+          "Sıvı numunede toplanabilen en düşük kütle yaklaşık LOD(mg/L) × son sıvı hacmi(L) olur. Baca içi tayin sınırı bu kütlenin kuru-normal gaz hacmine bölünmesidir.",
+          "Hedef hacim hesaplamak için Vgaz = [LOD × Vanalit] / hedef ISDL kullanılır. Planlanan sıvı hacmiyle hesaplanan tahmin, numune sonrası gerçek hacimle yeniden kontrol edilir."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Minimum ve ideal hacim",
+        "items": [
+          "Limitin altında/üstünde ayrım yapabilen minimum hacim, düşük derişimi güvenilir raporlamak için yeterli olmayabilir. Hedef ISDL daha düşük seçildiğinde gerekli gaz hacmi büyür.",
+          "Örneğin tartım belirsizliği 0,4 mg ve hedef kütle bunun on katıysa 4 mg gerekir. ELD 50 mg/m³ için 0,08 m³, hedef ISDL 5 mg/m³ için 0,8 m³ gerekir.",
+          "800 L hedef ve 20 L/dakika debiyle süre 40 dakikadır. Önce cihazın bu debide kararlı izokinetik çalışma yapabildiği doğrulanır."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Sıvı fraksiyonu ve kapasite örneği",
+        "items": [
+          "LOD 1 mg/L ve toplam sıvı 0,25 L ise en düşük kütle 0,25 mg olur. Hedef ISDL 0,5 mg/Nm³ için gaz hacmi 0,5 Nm³, yani 500 normal litredir.",
+          "Gerçek sıvı hacmi 0,30 L ve gaz 0,75 Nm³ ise gerçekleşen ISDL 0,40 mg/Nm³’tür.",
+          "Sorbent kapasitesi de üst hacmi sınırlar. 75 µg kapasitenin %75’i ve 3700 µg/m³ beklenen derişimde yaklaşık 15,2 L güvenli hacim hesaplanır; daha fazla çekmek numuneyi iyileştirmek yerine breakthrough oluşturabilir."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "MID 13284-1 Dokümanına göre Toz Tayini için ISDL Hesabı:",
+        "items": [
+          "Baca gazında toz tayini için genişletilmiş tartım belirsizliği 0,4 mg olan bir laboratuvarın Emisyon Limit Değeri 50 mg/m3 olan bir baca için örnekleme süresi ne olmalıdır? Uv (mg) = 0,4 mg Minimum Örnekleme hacmi hesaplanırken ISDL = ELD Vmin= (4 mg)/(50 mg/m3) = 0,08 m3 (Bu hacim örneklendiğinde ölçüm sonucu sadece ELD’nin altında yada üstünde olup olmadığı tespit edilebilir. Raporlama yapabilmek için İdeal Örnekleme Hacmi hesplanmalı minimum hacim kullanılmamalıdır.) İdeal örnekleme hacmi için laboratuvar kendine hedef ISDL seçmelidir. Yada eski raporlara bakarak beklenen konsantrasyonu ISDL olarak seçebilir. Genellikle ISDL, ELD’nin 10 da biri alınabilir. Fakat düşük konsantrasyonlu bacalarda metotların çalışma aralığına da dikkat etmek gerekir. ISDL = 5 mg/m3 (laboratuvarın hedeflediği ISDL, ELD’nin 10 da biri) Videal = 4 (mg)/5 (mg/m3) = 0,8 m3 (Raporlama yapabilmek için laboratuvarın bacaya gitmeden önce planlayacağı örnekleme hacmi İdeal Örnekleme Hacmi olmalıdır.)"
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Örnekleme Süresi Hesabı:",
+        "items": [
+          "İzokinetik örneklemelerde, örnekleme süresini hesaplamak için laboratuvarın örnekleme cihazının performansına göre en uygun çalışma debisini bilmesi gerekmektedir. Cihaz üreticileri örnekleme cihazları için bir çalışma aralığı vermektedir. (örn: 5-50 lt/dk gibi) fakat saha uygulamalarında cihazların yüksek debilerde veya düşük debilerde izokinetiklik oranını sağlayamadığı gözlemlenmiştir. İzokinetiklik oranını etkileyen sebeplerden biriside cihazın zamanla performans düşüklüğüdür. Cihazı kullanan personelin cihazın en iyi performansı hangi debide verdiğini bilmesi ve nozul seçiminde bu hususa dikkat etmesi gerekmektedir. Bir önceki slaytta yer alan örneğe göre örnekleme hacmi 20 lt/dk olacak bir nozul seçilir ve ona göre örnekleme yapılrısa örnekleme süresi aşağıda ki gibi hesaplanır. Videal = 0,8 m3 = 800 litre Qörnekleme =20 litre/dak 800 𝑙𝑖𝑡𝑟𝑒 törnekleme =20 𝑙𝑖𝑡𝑟𝑒/𝑑𝑎𝑘 = 40 dakika"
+        ],
+        "ordered": false
+      },
+      {
+        "title": "EPA Metotlarına Göre ISDL Hesabı:",
+        "items": [
+          "Baca İçi Dedeksiyon Limiti (EPA): Başarılı uygunluk testinin unsurlarından biri, kirleticinin baca içi tespit limiti ile standart seviyesi arasındaki ilişkidir. Baca içi algılama sınırlarının belirlenmesi, örnekleme zamanı ve analitik tekniklerdeki hassasiyetinin belirlenmesinde kullanılmaktadır. Baca içi algılama sınırının (ISDL) belirlenmesinde kullanılan denklem; ISDL = Baca içi algılama sınırı A = Analitik tespit limiti. B = Analiz edilen analit miktarı C = Bacadan örneklenen gaz hacmi"
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Kavramlar ve uygulama ayrıntıları",
+        "items": [
+          "Tespit limitinin (ISDL) üzerinde kirletici konsantrasyonunun artırılması için aşağıdaki yollardan biri izlenebilir; Örnek hacmin arttırılması, numunenin konsantre hale getirilmesi, Daha hassas analitik teknikler kullanılması, Tespit limitinin altında olan sonuçlar; EPA 23 ve EPA 29 dışında kabul edilemez olarak değerlendirilmelidir. Tespit limitinin altındaki değerlere sahip PCDD'ler / PCDF'ler için prosedürler, EPA Metodu 23'ün §9.9 kısmının hemen sonrasında belirtilir. Bu prosedürler PAH örneklemeleri içinde kullanılabilir.* *Source Testing Manual (Revision 3.3) 274-0300-002 / November 11, 2000"
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Kavramlar ve uygulama ayrıntıları",
+        "items": [
+          "Emisyon hesaplamalarında kullanılan ‘baca dedeksiyon limiti’ tanımları ve örnek hesaplamalarına aşağıdaki adresten ulaşılabilir."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "ISDL'nin birimleri, yapılan örnekleme türüne göre değişecektir.",
+        "items": [
+          "Örneğin, iyon kromatografı, gaz kromatografı gibi analitik yöntemler için analitik tespit sınırı, birim hacim başına kütle birimine sahip olacakken, partiküler madde için analitik tespit limiti kütle birimleri olacaktır. (EPA Metotları) Parçacık Ölçüm Yöntemleri için ISDL Partikül örnekleme yöntemleri için ISDL hesaplanırken, analitik bulma sınırları (A): ODEQ Metod 5 ve 7 için 7 mg (toplam partikül), EPA Yöntemleri 5, 5A, 5B, 5D, 5E, 5F ve 17 için 3 mg (filtrelenebilir parçacık),"
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Kavramlar ve uygulama ayrıntıları",
+        "items": [
+          "203.881 m3/saat (120.000 dscfm) hacimsel debiye sahip bir bacada 3 saatlik bir örnekleme yapılmıştır. 3 saatlik örnekleme sonunda 3,82 m3 (135 dscf) baca gazı örneklenmiştir. Filtrede toplanması gereken minimum partikül madde miktarı 20 mg, filtrede toplanan partikül madde miktarı ise 88 mg’dır. Bu örnekleme çalışması için baca algılama sınırı nedir? 0,088 gr x 203881 (m3/saat) Toplanan Miktar = = 4696,74 gr/saat = 78,2 gr/dak (10,33 lb/h) 3,82 𝑚3 0,020 gr x 203881 (m3/saat) ISDL = 3 = 1067,44 gr/saat = 17,8 gr/dak (2,35 lb/h) 3,82 𝑚 Bu örnekte toplanan miktar ISDL’den daha yüksek çıkmıştır. Bu durum güvenilir bir sonuç verebileceğimiz anlamına gelmektedir. Eğer toplanan miktar ISDL’den düşük çıkarsa yeterli örnek toplanamamış demektir. 1 ft3/dk=1,70 m3/saat 1 ft³=0.0283 m³ 1 pound (lbs)=0.4536 kg"
+        ],
+        "ordered": false
+      },
+      {
+        "title": "İmpingerlara Örneklenen Kirletici Parametre İçin ISDL Ve Örnekleme Hacmi Hesaplamaları",
+        "items": [
+          "Baca gazında Siyanür analizi için LOD değeri 1 mg/L olan bir laboratuvarın Emisyon Limit Değeri 5 mg/Nm3 olan bir bacada örnekleme süresi ne olmalıdır. (Laboratuvara gelecek tahmini adsorbsiyon çözeltisi 250 ml) LOD = 1 mg/L Vanalit = 250 ml LOD = 1 x 0,25 = 0,25 mg Vmin = (0,25 (𝑚𝑔))/(5 (𝑚𝑔/𝑁𝑚3)) = 0,05 Nm3 Not: Minimum hacim örneklemesi bize emisyon sınır değerini geçip geçmediğinin tespitini verir. Sağlıklı bir raporlama yapabilmek için hedef ISDL belirlemek gerekmektedir. Hedef ISDL genellikle Emisyon Limit Değerinin onda biri alınabilir."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Örneğin devamı:",
+        "items": [
+          "ISD^L’yi ELV’nin onda biri olarak alırsak; ISDL = ELV /10 ISDL = 5 mg/Nm3 /10 ISDL = 0,5 mg/Nm3 (laboratuvarın hedeflediği ISDL) Videal =(0,25 (mg))/(0,5 (mg/Nm3)) Videal =0,5 Nm3 = 500 NLitre Not: Bu örneğe göre bacada 500 litre örnekleme hacmi ile örnekleme yapıldığında, 0,5 mg/m3 konsatrasyona kadar bacada kirletici gaz tespit edilebileceği anlaşılmaktadır. Bu nedenle bacada numune almadan önce örnekleme hacmi hesaplamaları hedeflenen ISDL ‘ye göre yapılmalıdır."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Örneğin devamı:",
+        "items": [
+          "örnekte verilen siyanür tayini için gerçekleşen örnekleme hacmi 0,75 Nm3, laboratuvara getirilen toplam absorbans 300 ml olsun; 𝐿𝑂𝐷 𝑚𝑔/𝐿 𝑥 𝑉𝑎𝑛𝑎𝑙𝑖𝑡 (𝐿) ISDL = 𝑉 (𝑚3) 1 𝑚𝑔/𝐿 𝑥 0,3(𝐿) ISDLgerçekleşen = 3 = 0,4 mg/ 𝑁𝑚3 0,75(𝑁𝑚 ) Bu örnekte numune alma işleminden sonra ISDL; 0,4 mg/Nm3 olarak bulunmuştur. Yani laboratuvar 0,4 mg/Nm3 değerinin üstünde sonuçları güvenilir bir şekilde raporlayabilecektir. Not: Hedef ISDL’ ye göre yapılan örnekleme hacmi hesabı numune alma planı aşamasında laboratuvarın uygun bir hacimde örnekleme yapması için kullandığı tahmini bir hesaptır. Numune alma sonrası geçek veriler ile gerçek ISDL hesaplanmalıdır."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "İmisyon Parametrelerinde Isdl Ve Akış Hızı Hesaplanması",
+        "items": [
+          "1) Minimum Numune Hacmi Hesaplanması Raporlama Limiti (LOQ): 0,05 ug ISDL : 0,08 ug/m3 Örnekleme Hacmi = Raporlama Limiti / ISDL Örnekleme Hacmi = (0,05 𝑢𝑔)/(0,08 𝑢𝑔/𝑚3) = 0,625 m3 Örnekleme Hacmi = 625 Litre 2) Minimum Akış Hızı Hesaplanması Örnekleme Hacmi: 625 Litre Süre: 24 Saat Minimum Akış Hızı = Minimum Hacim / Süre Örnekleme Hacmi = (625 𝐿𝑖𝑡𝑟𝑒)/(24 ∗60 𝑑𝑎𝑘𝑖𝑘𝑎) = 0,625 m3 Örnekleme Hacmi = 0,43 Litre / dakika"
+        ],
+        "ordered": false
+      },
+      {
+        "title": "İmisyon Parametrelerinde Isdl Ve Akış Hızı Hesaplanması",
+        "items": [
+          "3) Absorbsiyon Kapasitesine göre güvenli örnekleme hacmi hesabı EPA to-11 metodu güvenli örnekleme hacminin sorbent tpü veya kartuşun absorbans kapasitesinin % 75’ i olması gerektiğini belirtir. Bir aborbans 75 ug toplam karbonil kapasitesine sahip ise ve kaynakta tahmini 3700 ug/m3 formaldehit varsa; Tahmini hacim = absorbans kapasitesi x %75 / tahmini konsantrasyon Tahmini hacim = (0,75 ∗75 𝑢𝑔)/(3700 𝑢𝑔/𝑚3) Tahmini hacim = 0,0152 m3 Tahmini hacim = 15,2 Litre Sonuç: Abosrbans 15,2 Litre örneklemeden sonra kapasitesini dolduracaktır."
+        ],
+        "ordered": false
+      }
+    ]
+  },
+  {
+    "id": "egitim-imisyon",
+    "title": "Hava kalitesi ve imisyon",
+    "method": "PM₁₀ • Çöken toz • Pasif örnekleme",
+    "domain": "Eğitim",
+    "trains": [],
+    "visual": null,
+    "sections": [
+      {
+        "title": "Temsil edici ortam örneklemesi",
+        "items": [
+          "Ortam ölçümü, kaynak ağzını değil insanın/çevrenin bulunduğu hava ortamını temsil eder. Yer seçimi, maruz kalma süresi ve çevredeki başka kaynaklar birlikte değerlendirilir.",
+          "Rüzgâr yönü/hızı, sıcaklık, bağıl nem, yağış ve ışınım ölçümü yorumlamak için önemlidir. Tek günkü rüzgâr yıllık hakim yönle her zaman aynı değildir.",
+          "Numune girişinin çevresinde serbest hava akışı bulunmalı; yerel baca dumanı, duvar ve elektrik/erişim kısıtları kontrol edilmelidir."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Üç ölçüm türünün farkı",
+        "items": [
+          "PM₁₀: boyut seçici başlıktan belirli debide gaz çekilir, filtre kütlesi hacme bölünür.",
+          "Çöken toz: yüzeye çöken madde toplanır; sonuç alan ve gün başına kütledir. Pompa/sayaç gaz hacmi kullanılmaz.",
+          "Pasif tüp: gaz difüzyonla tutulur; derişim bileşiğe özgü uptake oranı ve maruz kalma süresinden hesaplanır."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "PM₁₀ yöntemi ve debi",
+        "items": [
+          "TS EN 12341 eğitim uygulaması 2,3 m³/saat ≈ 38,33 L/dakika; EPA düşük hacimli örnek 1 m³/saat ≈ 16,67 L/dakikadır.",
+          "Başlık tasarımı ve debi birlikte parçacık kesimini belirler. Debiyi değiştirip başlığın hâlâ aynı kesimi yaptığını varsayma.",
+          "Başlangıç ve son filtre tartımı aynı yöntemin sıcaklık/nem şartlandırmasında gerçekleştirilir; sahadaki kütle kadar laboratuvar koşulu da önemlidir."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "İmi̇syon örnekleme",
+        "items": [
+          "Hava kalitesi ölçümlerinde zaman ve yer açısından alınan numunenin süreci temsil edici olması ve numune alma noktalarının iyi seçilmesi önemli bir husustur. Ortam havası örnekleme ve analizinde ölçüm sonuçları rüzgar hızı ve yönü, sıcaklık, güneş ışını ve bağıl nem ile birlikte değerlendirilmelidir. Tesisten açık havaya verilen emisyonların Hava Kirlenmesine Katkı Değerinin (HKKD) hesaplanmasında veya hava kalitesi ölçümlerinin yapılmasında tesis etki alanı, inceleme alanı ve tepe noktaları dikkate alınmalıdır."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Kavramlar ve uygulama ayrıntıları",
+        "items": [
+          "Çöken toz tayininde yaygın olarak TS 2341 ve TS 2342 Metotları kullanılmaktadır. Bu metotların yanında VDI 2119 Part 2 metodu ve VDI 4320 part 2 metotlarıda kullanılabilinir. Çöken toz ölçümü sırasında tesis inceleme alanı içinde en az 2 (iki) ölçüm noktasında hakim rüzgar yönü dikkate alınır. Aynı bölgede toz emisyonuna neden olan başka kaynakların da bulunması durumunda ölçüm noktası sayısı tesis dışındaki diğer kaynakların katkılarının belirlenmesi için arttırılabilir. Ölçüm süresi birer aylık 2 (iki) ölçüm olup, toplam 2 (iki) aydır. Aylık olarak bulunacak değerler gün sayısına bölünerek bir günde çöken ortalama toz miktarı hesaplanır. Bir ay süre ile yapılan hava kalitesi ölçümlerinin aritmetik ortalaması, S.K.H.K.K.Y. Ek-2 de belirtilen Uzun Vade Sınır Değerin % 60’ının üzerinde olması durumunda ölçüm süresi yetkili merci tarafından uzatılır ve istasyon sayısı artırılabilir. Hava kalitesi ölçümleri kural olarak yer seviyesinden, 1,5 - 4,0 metre arasındaki yüksekliklerde, binadan (veya ekili alandan) en az 1,5 metre yan mesafe tutularak yapılır. Ormanda yapılan ölçümler, ağaç yüksekliğinden daha yukarıda yapılmalıdır."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Çöken Toz Numune Alma Düzenekleri ve Numune Alma İşlemi",
+        "items": [
+          "Toplanan çökeltinin kimyasal yapısını etkileyebilecek mikroorganizmalar üremesini engellemek için temiz toplama şişesine,10 ml 0,02 N bakır sülfat çözeltisi (litrede 2,50 g CuSO4 . 5H2O) konulmalıdır. Her toplama kabı bir seri numarası ile işaretlenmeli ve her kap için bir dönüştürme faktörü (F) bulunmalıdır. Cihaz birleştirilirken huninin silindirik kısmı şişenin konik kısmına olabildiği kadar yakın olmalıdır. Birleştirme işleminden sonra borular yapışkan bantla iki kat olarak sarılmalıdır. Böylece sistem güneşin ve havanın etkisinden korunmuş ve eskime hızı azalmış olur."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Çöken Toz Numune Alma Düzenekleri ve Numune Alma İşlemi",
+        "items": [
+          "Çökelti ölçme cihazı öncelikle açıklık ve düz bir yere yerleştirilmelidir. Düz bir yerin bulunamaması halinde sehpanın ayakları ayarlanarak toplama kabının üst düzeyinin yatay konumda olması sağlanmalıdır. Sehpanın ayaklarındaki deliklere vida veya pimler sokularak konumunun değişmezliği sağlanır. Cihazın çevresindeki kendinden daha yüksek olan cisimlerden uzaklığı toplama kabının üst düzeyi ile bu cisimlerin yüksekliği arasındaki farkın iki katından az olmamalıdır. Cihaz toprak düzeyinden daha yükseğe konulabilir. Bu durumda toplama kabının üst düzeyi toprak düzeyinden 5 m den daha yüksek olmamalıdır."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Çöken Toz Numune Alma Sonrası Yapılan İşlemler",
+        "items": [
+          "Aşağıdaki Parametreler belirlenmelidir. Toplanan sıvı miktarı. Sıvının pH değeri (damıtık su katılan durumlar dışında) (İstenilirse), Çözünmeyen kuru madde miktarı, Çözünmeyen maddenin yakılması sonucu elde edilen kül miktarı (İstenilirse), Süzüntünün belli miktarının dikkatle kuruluğa kadar buharlaştırılması sonucu elde edilen kalıntının miktarı, Not: Bakır sülfat katılan durumlarda gerekli düzeltme yapılmalıdır. Bakır sülfat CuSO4. H2O (10 ml = 0,0178 g) olarak hesaplanmalıdır. Not: Çöken toz ölçümlerinde sadece süzme işlemi yapılarak filtrelenen miktarın tayini yanlıştır. Çözünen tozların da tayin edilerek toplam toz miktarına ilave edilmesi geekmektedir."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "İmi̇syonda pm10 tayi̇ni̇",
+        "items": [
+          "Çapları 10 mikrondan küçük olan havada asılı partiküller PM10 olarak adlandırılmaktadır. PM 10 ölçümleri yaygın olarak TS EN 12341 ve EPA 40 CFR PART 50 App J Metotları ile yapılmaktadır. Numune Alma İşlemi Numune alma işlemi otomatik cihazlar ile yapılmaktadır. Numune alımlarından önce ve sonra filtrelerin şartlandırılması gerekmektedir. Her iki PM10 Tayin metodu için filtre şartlandırma ve numune alma debisi ile ilgili hususlar aşağıdaki tabloda belirtilmiştir. TS EN 12341 EPA 40 CFR PART 50 Sıcaklık 19-21 °C Sıcaklık 15-30°C arasında seçilen sıcaklık ±3° Filtre Şartlandırma Nem % 45-50 Nem % 20-45 arasında seçilen nem % ± 5 48 saat 24 saat 24 saat, Numune Alma Süresi ve 24 saat, 2,3 m3/h = 38,33 lt/dk Debisi 1 m3/h = 16,67 lt/dk"
+        ],
+        "ordered": false
+      },
+      {
+        "title": "İmi̇syonda pm10 tayi̇ni̇",
+        "items": [
+          "Ölçüm Sırasında Dikkat Edilecek Hususlar Numune alma cihazının girişi etrafındaki akış, numune alma cihazlarının yakınındaki hava akışını etkileyen hiç bir engel (örneğin balkonlar, ağaçlar, düşey yüzeyler, duvarlar vb.) ile kısıtlanmamalıdır. Bütün numune girişleri (PM10 başlıklarının seviyesi) zeminden yüksekliği (1,5 m ile 4 m arasında) aynı seviyede olmalıdır; Diğer kaynaklardan taşınan baca dumanlarından sakınmak için; numune alma noktası lokal kaynaklardan uzakta konumlandırılmalıdır. Yer tipi belirlenmesinin akabinde, özellikle işletme (erişilebilirlik, saldırılara karşı güvenlik, dış hava şartlarına karşı korunma) ve altyapı bakımından (elektrik) değerlendirildikten sonra gerçek örnekleme yerleri seçilmelidir. Filtre şartlandırmalarında metotlarda belirtilen sıcaklık ve nem değerlerine dikkat edilmeli, şartlandırma odası kaydedicili bir sıcaklık ve nem ölçüm cihazı ile izlenmelidir. EPA Metodu ile yapılan PM10 tayininde 15-30°C arasında bir sıcaklık değeri seçilmeli ve bu seçilen değerin sapması ±3°C’yi geçmemelidir. Nem ise % 20-45 arasında bir değer seçilmeli ve seçilen değerin sapması % ± 5’i geçmemelidir."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Kavramlar ve uygulama ayrıntıları",
+        "items": [
+          "Çevre havasında bulunan Uçucu Organik Bileşikler, SO2, NOx, NH3, O3, HCl ve HF gazları pasif difüzyon tüplerine örnekleme uygun analiz cihazları ile analizinin yapılması suretiyle tayin edilebilirler. Pasif tüpler ile çevre havasında tayin için kullanılan metotlar aşağıda belirtilmiştir. TS EN 13528–1; Ortam Hava Kalitesi–Gaz ve Buhar Derişimlerinin Tayini İçin Difüzif Numune Alma Cihazları–Özellikler ve Deney Metotları–Bölüm: 1 Genel Özellikler TS EN 13528–2; Ortam Hava Kalitesi–Gaz ve Buhar Derişimlerinin Tayini İçin Difüzif Numune Alma Cihazları–Özellikler ve Deney Metotları Bölüm 2: Özel Koşullar ve Test Metotları TS EN 13528–3; Ortam Hava Kalitesi–Gaz ve Buhar Derişimlerinin Tayini İçin Difüzif Numune Alma Cihazları–Özellikler ve Deney Metotları–Bölüm 3: Seçim, Kullanım ve Bakım Kılavuzu EN 14662-4:2005; Ortam Hava Kalitesi-Standart Metodu Benzen Konsantrasyonları Ölçümü İçin–Bölüm 4: Diffusive Örnekleme Ardından TD ve GC EN 14662-5:2005: Ortam Hava Kalitesi–Standart Yöntem Ölçümü İçin Benzen Konsantrasyonları–Bölüm 5: Diffusive Örnekleme Ardından Çözücü Bırakma ve Gc;(Tanımlayan Tip B Olarak Radiello Sampler) Uçucu Organik Bileşiklerin tayini yapılacak ise hangi absorbansın ve hangi çözücünün kullanılacağı ile ilgili hususlara dikkat etmek gerekir. Bunun için kaynak olarak MDHS72, MDHS80, MDHS88, MDHS96 dokümanlarından yararlanılabilinir. 1"
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Difüzif Numune Alma Cihazı",
+        "items": [
+          "Atmosferde durgun hava tabakasındaki gaz difüzyonu veya zardan veya delikli malzemeden geçen bir madde gibi fiziksel bir prosesle kontrol edilen oranda gaz veya buhar örnekleri alabilen fakat cihazın içinde havanın aktif hareketini içermeyen cihazdır."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Numune Alma Cihazının Seçimi ve Prosedür",
+        "items": [
+          "Numune alma yapılacak pasif tüpleri seçerken aşağıdaki hususlara dikkat etmek gerekir. Gerekli olan ölçüm aralığı, numune alma zamanına referansı, ölçme limiti, oranı ve numune alma cihazının emici ortamının dengedeki doyma kapasitesine ulaşma olasılığı, Gerekli çözünme zamanı, Gaz veya gaza olan seçicilik ve etkileşimde olan gazlara ve buharlara olan duyarlılığı, (Eğer ölçüm yapılmadan önce hava içeriği biliniyorsa, tüm veri kayıt altına alındığı ve olası etkileşimler düşük seviyede olduğu sürece seçicilik gerekliliği daha az olacaktır. ) Veri kalite amaçları ile olan ilgisi, (Veri Kalite Amaçlarının özellikleri değerlendirme metodunun belirsizliğini (%95 güvenilirlik aralığı) de içererek ölçüm için gereklidir. ) Numune alma cihazının çevresel faktörlere olan duyarlılığı (özellikle hava hızı), Olumsuz çevresel koşullardan yeterli korunma, Amaca uygunluk, (örn. ölçüleri, ağırlığı, dayanıklılığı)"
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Numune Alma Cihazının Performansını Etkileyen Çevresel Faktörler",
+        "items": [
+          "Sıcaklık ve Basınç: İdeal difüzif numune alma cihazı için U’nun, sıcaklık ve basınca bağlılığı analitin difüzyon katsayısı ile yönetilir. Nem: Yüksek nem odun kömürü ve moleküler elek gibi hidrofilik emicilerin emme kapasitesini etkileyebilir. Emici malzeme doygunluğa erişmeden önce numune alma zamanını (belli bir derişimde) azaltacaktır. Yüksek nem ayrıca tüp –tipi numune alma cihazlarının iç duvarlarını ya da ekranının emiş davranışını, özellikle yoğunlaşma olursa, değiştirecektir. Düşük ve Yüksek Rüzgar Hızlarının Etkisi: Rüzgar hızı ve yönü difüzif numune alma cihazının performansını etkiler çünkü rüzgar hızı ve yönü etkin difüzyon yolu uzunluğunu etkiler. Düşük hızdaki dış rüzgar koşullarında, etkili difüzyon yolu uzunluğu artabilir Yüksek hızdaki dış rüzgar koşullarında, etkili difüzyon yolu azalabilir. Kullanılan korumaya alternatif olarak cihaz koruyucu kutunun içine yerleştirilmelidir, fakat bu durumda kutu cihazı tamamıyla çevreleyecektir."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Kavramlar ve uygulama ayrıntıları",
+        "items": [
+          "Tüp Tipi: Bu tip numune alma cihazları düşük hava hızlarından etkilenmez, yüksek hızlarda ise koruma olmadan etkilenebilir. Pasif Difüzyon Tüpü"
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Kavramlar ve uygulama ayrıntıları",
+        "items": [
+          "Badge Tipi: Bu tip numune alma cihazları genelde küçük hava boşluğu ve geniş yüzey alanına sahiptir, bu nedenle hava hızından; tüp cinsinde olanlara göre daha fazla etkilenebilir ve tipik olarak minimum yüzey hızı 0,5 m/s ve 0,2 m/s arasında gerekmektedir. Pasif Difüzyon Tüpü (Badget Tip) 1"
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Kavramlar ve uygulama ayrıntıları",
+        "items": [
+          "Radyal Difüzif Tip: Bu tip numune alma cihazının 0,25 m/s civarında minimum yüzey hızına sahip olması gerekir. Pasif Difüzyon Tüpü (Radyal Tip)"
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Taşıma",
+        "items": [
+          "Birçok numune alma cihazı, numune alma bölgesi ile analitik laboratuvar arasında taşıma gerektirmektedir, bu aşamada numunenin bütünlüğünün sağlanması için aşağıdaki önlemlerin alınması tavsiye edilir: Taşıma sırasında herhangi bir dökülme ve kontamine olmaya karşı kabın iyi sıkıştırıldığından emin olunmalıdır. Metal–lastik kaplar yüksek sıcaklık farklarında genişleyebilirler; Dış kontaminasyonun engellenmesi için numuneler kapalı kutulara yerleştirilmelidir. Numunelerin olumsuz basınca maruz kalmadığından emin olunmalıdır. Taşıma sırasında yüksek sıcaklığa maruz bırakmaktan kaçınılmalıdır. Eğer mümkünse numuneleri düşük sıcaklıklarda, düşük nem ve kontaminasyon kaynaklarından uzakta tutulmalıdır. Yeterli sayıda numunenin alındığından emin olunmalıdır."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Olumsuz Çevre Koşullarından Korunma",
+        "items": [
+          "Hava Hızı: Düşük rüzgar hızlarından etkilenen ve bu gibi durumların önemli olabileceği numune alma cihazları için bazı ek havalandırma gereklidir. Yüksek rüzgar hızlarından etkilenen numune alma cihazları için hava hızının dikkate alınması gereklidir. Orta derecede rüzgar hızları beklense bile, numune alma cihazı binalara ya da diğer engellere çok yakın yerleştirildiğinde problem çıkabilir. Numune alma cihazının bulunduğu yerdeki engellerin büyüklüğüne ve yerine göre önlem alınmalıdır. Yağış: Yağıştan korunma her tip numune alma cihazı için önemlidir. Yağmur ya da eriyen kar yüzeylerinden korunmalıdır. . Korumanın sağlanması: Koruma; cihazın tipine uygun olmalıdır ve aşağıdaki özellikleri de içermelidir: Koruma; cihazı yüksek hava hızlarından ve çökelmeden koruyacaktır, fakat değerleri belirleyebilmek ve herhangi asgari hız seviyesini sağlamak için yeterli hava ortamda bulunmalıdır. Korumanın tasarımı ve cihaza takılması difüzyon oranını etkilememelidir. Pasif Tüplerin Koruması İçin Korumanın yapımı, yüzeyi ve rengi direkt güneş radyasyonundan kaynaklanan sıcaklık artışını asgari Örnek Bir Gösterim seviyede tutacak şekilde olmalıdır"
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Numune Alma Noktalarının Belirlenmesi",
+        "items": [
+          "Numune alma noktalarının sayısı, yeri ve uzunluğu ölçüm prosedürünün bir fonksiyonu olmalıdır. Bir kez numune alma noktaları belirlendiğinde, ölçüm programı içerisinde değiştirilmemelidir. Başka bir şekilde belirtilmediyse, uygun numune alma noktaları yöresel karışıklık etkilerinden kaçınmak için binalardan ya da diğer engellerden 1 m. uzaklıkta olmalıdır. Ölçüm yüksekliği 1,5 m. ile 4,0 m. arasında olmalıdır; en azından 2,5 m. olması hırsızlık riskini . azaltacaktır. Çevre etkilerini asgari seviyeye düşürmek veya böceklerin etkilerini asgari seviyeye düşürmek için ağaçlardan ve çalılardan uzakta olunmasına dikkat edilmelidir."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Dikkat Edilecek Hususlar",
+        "items": [
+          "Birçok aparat için bakım ve kalibrasyondan sorumlu operatör ve yardımcıları için özel eğitim gereklidir. Difüzif numune alma cihazları kılavuzunda belirtilen kurallara uyulduğu sürece özel bir operatöre ihtiyaç yoktur (EN 13528-2:2002’ye bakınız). En azından çok yaygın olarak yapılan hatalardan sakınmak için, çalışırken sigara içmemek, araba çalışırken yanında örnekleme yapmamak veya cihazın iç yüzeylerine dokunmamak gerekir. Diğer cihazlarda olduğu gibi difüzif numune alma cihazlarında da bakım önemlidir ve aşağıdaki hususlara .gerekli önem gösterilmelidir: Tekrar kullanılabilen cihazlar için, toplama elemanının temiz olduğundan emin olunmalı ve gerektiği gibi değiştirilmelidir. Tüm parçalarda kontaminasyon olmadığından emin olunmalıdır. Cihazların imalatçının tavsiye ettiği şekilde depolandığından emin olunmalıdır."
+        ],
+        "ordered": false
+      }
+    ]
+  },
+  {
+    "id": "egitim-hiz-nem",
+    "title": "Hız, debi ve nem",
+    "method": "Pitot • Kesit taraması • Kuru gaz",
+    "domain": "Eğitim",
+    "trains": [],
+    "visual": null,
+    "sections": [
+      {
+        "title": "Pitotla hızın temeli",
+        "items": [
+          "Pitot, gaz akışındaki basınç farkını ölçer. Hız, pitot katsayısı, gaz yoğunluğu ve fark basıncıyla hesaplanır; sıcaklık, basınç ve molar kütle yoğunluğu belirler.",
+          "L tipi, S tipi ve çok boyutlu pitotlar farklı kullanım koşullarına sahiptir. S tipi eşzamanlı izokinetik numune alımında kullanılabilir; girdaplı akışta yön ölçebilen problar gerekebilir.",
+          "Her noktada hızı ayrı hesaplayıp kesit ortalamasını oluştur. Basınç farkını önce ortalamak, karekök ilişkisinden dolayı aynı sonucu vermez."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Debi ve referans şartlar",
+        "items": [
+          "Baca şartlarında Q = v̄ × A. Dairesel alan πD²/4; dikdörtgen alan a×b’dir.",
+          "Kuru-normal debiye dönüşümde sıcaklık Kelvin, basınç mutlak ve nem hacim kesri olarak kullanılır. Gösterge basıncını mutlak basınç yerine koyma.",
+          "Sayaçtan nemi uzaklaştırılmış gaz geçiyorsa ölçülen hacim zaten kurudur; sonuca aynı nem düzeltmesini ikinci kez uygulama."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Nem örneklemesinin mantığı",
+        "items": [
+          "Kondenserde biriken su ile silika jelin kütle artışı toplam suyu temsil eder. Bu suyun referans şartlardaki buhar hacmi, kuru gaz hacmiyle birlikte kullanılır.",
+          "EPA 4 eğitim uygulamasında en az 600 L hacim ve 21 L/dakikanın altında debi belirtilir; son nem tutucu çıkışı 20 °C’yi aşmamalıdır.",
+          "EN 14790’daki 4 L/dakika/120 L örneği evrensel zorunlu debi değildir. Örnek planı yöntem, gaz derişimi ve cihaz kapasitesiyle belirlenir."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Bağıl nem ve mutlak nem",
+        "items": [
+          "Dijital cihazın verdiği değerin bağıl nem mi, hacimsel su buharı oranı mı olduğunu kontrol et.",
+          "Bağıl nem sıcaklığa bağlı bir doygunluk oranıdır; izokinetik hesapta doğrudan baca su buharı hacim kesri gibi kullanılamaz.",
+          "İşletme içi dijital nem yönteminin standart yöntemle geçerli kılınmış olması gerekir."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Baca gazinda hiz tayi̇ni̇",
+        "items": [
+          "HIZ ÖLÇÜM STANDARTLARI TS ISO 10780 - Nokta kaynak emisyonları- Borulardaki gaz akışlarının hız ve debisinin ölçülmesi (S Tipi Pitot Tüp / L Tipi Pitot Tüp) EPA 2 - Baca Gazı Hızı ve Hacimsel Debi Tayini (S Tipi Pitot Tüp) TS EN 16911-1 - Sabit kaynak emisyonları – Kanallardaki hızın ve debinin elle ve otomatik tayini – Bölüm 1: Elle yapılan referans yöntem (S Tipi Pitot Tüp / L Tipi Pitot Tüp / 3D Pitot Tüp / 2D Pitot tüp / Pervaneli Anonnometre)"
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Hız:",
+        "items": [
+          "Baca içerisinde bulunan gazın, birim zamanda baca boyunca aldığı yoldur. Prensip: Gaz akışının ortalama hızı, borunun kesitinde belirli noktalarda azami hızı(v) belirlemek için kullanılan Pitot Tüpü vasıtasıyla tayin edilir."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Metot;",
+        "items": [
+          "a) Numune alma yerindeki boru boyutlarının (D) tayini, b) Hız profilini yeterince belirleyebilmek için kesitte gerekli ölçme noktalarının sayısı ve yerinin tayini, c) Pitot tüpü numune alma noktalarına yerleştirildiğinde pitot tüpünün basınç deliklerinde basınç farkının (Δp) ölçülmesi, d) Bu basınç farkını esas alan bağıntılardan yararlanarak, her numune alma noktasında hızın tayini, e) Ortalama hız ve kesit alanı yardımıyla debinin hesaplanması adımlarını kapsar."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "L Tipi Pitot Tüpü Örneği",
+        "items": [
+          "L tipi pitot tüpü akış ölçümleri, kirletici gazdan numune almadan önce ve sonra yapılacağı durumlarda tercih edilir."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "S Tipi Pitot Tüpü Örneği",
+        "items": [
+          "S tipi pitot tüpü, kirleticiden numune alınırken aynı anda hız ölçümünün yapılacağı durumlarda kullanılabilir. Giriş kısmı küçükse, boru cidarı kalınsa, baca gazı kirli ve su damlaları ile sülfürik asitin oluşturduğu gibi aeroseller içeriyorsa tercih edilir. S tipi pitot tüpü, düzensiz akışın hatalarına L tipi pitot tüpünden daha duyarlıdır"
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Kavramlar ve uygulama ayrıntıları",
+        "items": [
+          "Önemli ölçüde eksenel olmayan akış veya girdabın olduğu yerlerde, küresel gibi bir 3D Pitot tüpü daha küçük belirsizlik değerleri sağlayabilir."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Dikkat Edilmesi Gereken Hususlar",
+        "items": [
+          "Baca eksenine göre gaz akışının açısı 15°’den daha az olmalıdır. EPA Metotlarında isE gaz akışının açısı 20°’den daha az olmalıdır. Gaz akımında düzensiz veya dönüşümlü basınç dalgalanmaları olmamalıdır. Ayrıca, ölçme düzlemindeki herhangi bir düzensiz basınç dalgalanması, Pitot tüpüne mümkün olduğunca kısa bağlantılı manometrede basınç farkı okumalarının ortalamasından 24 Pa ( ± 2,5 mm H2O) daha büyük olmamalıdır. Dairesel borular için ölçmeler, en az iki yarıçap üzerinde yapılmalı ve bunlar birbirlerine dik açılı olmalıdır. Her bir çapta ortalama hızlar arasındaki fark bütün çaplar için ortalamanın %5’ ini aşmamalıdır. Fark %5’i geçerse, ek numune alma noktaları belirlenmeli veya yeni numune alma bölgesi seçilmelidir. Pitot tüpünün kullanılacağı kesit alanının herhangi bir noktasında ters akış bulunmamalıdır."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Dikkat Edilmesi Gereken Hususlar",
+        "items": [
+          "Asgarî hızın, akış hızı ölçümü için kullanılan metodun tayin sınırından daha yüksek olması, En yüksek ve en düşük mevzi gaz hızlarının birbirine oranının 3:1’den daha az olması. Borunun iç çapında, hızın ölçüldüğü yere alt ve üst akış da en az 5 hidrolik çap mesafede ani değişiklikler olmamalıdır. Not: Dairesel olmayan borularda, hidrolik çap, borunun kesit alanının 4 ile çarpılması ve sonucun borunun çevresine bölünmesi ile bulunur. Her hız ölçme noktasındaki mutlak sıcaklık, borunun kesit alanındaki ortalamadan % 5’ den daha fazla sapmamalıdır. Not: Sıcaklık farklarının %5’den daha büyük olması, numune alma noktasında tabakalı bir akış olduğunu gösterir."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Dairesel Bacalar İçin Numune Alma Noktaları",
+        "items": [
+          "Numune alma noktalarından hiçbiri, boru cidarına 2 cm’ den daha yakın olmamalıdır. Böyle bir durum söz konusu olduğunda numune alma noktası, pitot tüpü boru cidarına 2 cm uzaklıkta yer alacak şekilde ayarlanmalıdır. Dikdörtgen En Kesitli Boru Borunun kenarlarına paralel hatlarda numune alma noktalarında şekilde gösterildiği gibi eşit alanlara bölünür, numune alma noktaları her alanın merkezinde yer alır."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Boru stati̇k basincinin pi̇tot tüpleri̇ i̇le tayi̇ni̇",
+        "items": [
+          "L Tipi Pitot Tüpü Pitot tüpünün statik basınca duyarlı olan ayağı, basınç ölçme aletine birleştirilir, aletin diğer ucu atmosfere açılır ve hava akışlarından korunur. Pitot tüpü, boruya daldırılır ve orifis gaz akışına yönlendirilir. Basınçtaki fark tespit edilir ve kPa olarak kaydedilir. Bu değer, boru statik basıncıdır. S Tipi Pitot Tüpü Pitot tüpünün bir ayağı, manometrenin bir tarafına veya diğer basınca duyarlı cihaza bağlanır ve basınca duyarlı cihazın diğer ucunun atmosfere açılması sağlanır. Pitot tüpü, gaz akışının doğrultusuna ayarlanarak boruya yerleştirilir, 90o çevrilir ve basınçtaki fark , kPa olarak kaydedilir. Bu değer, borudaki statik basınçtır."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Ortalama Statik Basınç, Pstatik",
+        "items": [
+          "Numune alma noktalarındaki statik basınç okumalarının tamamının ortalaması alınır ve kPa olarak kaydedilir. Mutlak Gaz Basıncı, Pe Ortalama statik basınç, borudaki gazın mutlak basıncını (Pe) bulmak için çevre (barometrik) basıncına (Pam) eklenir. Bu değer, Pam’den küçük veya büyük olabilir."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Pitot Tüpü Ortalama Basınç Farkı (Δp)",
+        "items": [
+          "Pitot tüpü ortalama basınç farkı, Δp , aşağıdaki bağıntı ile bulunur. Burada; Δpi : i noktasındaki basınç farkı, kPa dır."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "HACİMSEL AKIŞ HIZI, qVs",
+        "items": [
+          "Boru akış şartlarında debi, qVs, m3/s cinsinden aşağıdaki bağıntı kullanılarak hesaplanır: qVs꞊ V*A Burada: V: boru koşullarında hız, m/s, A: numune alma noktasında borunun en kesit alanı, m2 ’dir Hacimsel akış hızını standart referans şartlarda (0˚C ve 101,3 kPa) verebilmek için aşağıdaki formül kullanılır. qVr = qVs(273/Ts)(Pmutlak/101,3) Ortalama baca gazı hızı, baca kesit alanı ile çarpılarak hacimsel debi bulunur. Bulunan bu değer 0 0C ve 1 atm koşullarına göre hesaplanır ve nem düzeltmesi de yapılarak kuru bazda ve normal şartlarda hacimsel debi elde edilir."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Baca gazi emi̇syonlarinda nem tayi̇ni̇",
+        "items": [
+          "NEM ÖLÇÜM STANDARTLARI TS EN 14790 - Sabit kaynak emisyonları - Bacalarda su buharı tayini - Standart referans yöntem EPA Metot 4 – Baca Gazlarında Nem İçeriğinin Belirlenmesi İşletme İçi Metot – Dijital Nem Sensörü İle Nem İçeriğinin Belirlenmesi CEN TS 17337 – FTIR Metodu ile Baca Gaıznda Nem Tayini"
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Kavramlar ve uygulama ayrıntıları",
+        "items": [
+          "Prensip: Bir gaz numunesi kaynaktan sabit hızla elde edilir; örnekleme akımından nem alınır ve hacimsel ya da ağırlıksal olarak saptanır. Nem ölçümü neden yapılır? Bacadan gaz olarak atılan kirleticilerinin konsantrasyon ve kütlesel debi değerlerinin tespit edilebilmesi için baca gazı nem miktarının bilinmesi gerekmektedir EPA Metot 4 iki faklı prosedür içermektedir. Referans Metot; Nem içeriğinin doğru saptamaları için (emisyon verisini hesaplamak için gerekli olanlar gibi) kullanılır. Yaklaşım Metodu; Bir kirletici emisyon ölçümü yapılmadan önce izokinetik örnekleme hızlarını ayarlamaya yardım etmek için nem yüzdesini tahmini olarak verir."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Referans Yöntem İçin Gerekli",
+        "items": [
+          "Ekipman ve Gereçler; 1. Isıtılmış ve bir parçacık filtresi ile donatılmış, paslanmaz çelik veya cam prob 2. Kondenser 3. Soğutma sistemi 4. Gaz akış hızını ve örneklenen gaz hacmini ölçen sistem 5. Barometre ve dereceli silindir ve/veya terazi"
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Örnekleme:",
+        "items": [
+          "İlk 2 impingera 100 ml. saf su koyulur ve her ikisi de 0.5 gr hassasiyetinde bir teraziyle tartılır. 3.impinger boş bırakılır ve 4. impingera 200 gr silika jel konularak ağırlığı tartılır. Prob ve filtre tutucunun sıcaklığı 120 °C’ye ısıtılır. Baca içerisindeki örnekleme noktaları EPA Metot 1’e göre belirlenir. 21 lt/dak.’yı geçmeyecek bir akış hızında en az 600 lt. örnek toplanır. Örnekleme süresi boyunca silika jel çıkışındaki sıcaklığın 20 °C’yi geçmemesi sağlanacak şekilde buz takviyesi yapılır."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Bu Yöntemde Dikkat Edilmesi Gereken Hususlar;",
+        "items": [
+          "En önemli konu örnekleme zincirinde kullanılan hortumda ve bağlantı ekipmanlarında yoğuşmanın olmamasıdır. Dikkat edilmesi gereken ikinci konu ise nemli baca gazının içerisindeki partikül maddenin alınmasıdır. Bu nedenle partikül maddenin tutulması için filtre kartuşu kullanılır. Ancak partikül madde alınırken yoğuşmanın engellenmesi gerekmektedir. Bu nedenle filtre kartuşu bacanın içerisinde olacak şekilde dizayn edilmelidir. Eğer bu yapılamıyor ise ya filtre kartuşu ısıtılmalı ya da ısıtmalı proba çok yakın bir noktaya konulmalıdır. Isıtmalı prob 120 ºC’ye veya daha fazla bir sıcaklığa ısıtılacak şekilde dizayn edilmelidir. Bu sayede nemin probta ve filtre kartuşunda yoğuşması engellenmiş olur."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Hesaplama: Örnekleme sonrası impingerlerde biriken su miktarı tespit edildikten sonra",
+        "items": [
+          "aşağıdaki formüller kullanılarak nem muhtevası hesaplanır. Yoğunlaşan Su Buharı Hacmi: Vwc(std): Yoğunlaşan su buharı hacmi (m3) Vf: İmpingerlerdeki son hacim (ml) Vi: İmpingerlerdeki ilk hacim (ml)"
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Silika Jelde Toplanan Su Hacmi:",
+        "items": [
+          "Vwsg(std): Silikajelde toplanan su hacmi (m3) Wf: Son tartım (silika jel + impinger) (gr) Wi: İlk tartım (silika jel + impinger) (gr)"
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Numune Gaz Hacmi:             Vm(std): Numune gaz hacmi, (m3)",
+        "items": [
+          "K4: 0.3855 °K/mmHg Y: Kuru gaz ölçer kalibrasyon faktörü Vm: Kuru gaz hacmi, (m3) Pm: Kuru gaz ölçerdeki mutlak basınç, (mmHg) Tm:Kuru gaz ölçerdeki mutlak sıcaklık, (°K) Nem Muhtevası (Bws):"
+        ],
+        "ordered": false
+      },
+      {
+        "title": "TS EN 14790 Standardı ile Nem Tayini",
+        "items": [
+          "EPA Metot 4 ile benzer bir yöntem ile baca gazında ki nem miktarının belirlenmesinde kullanılır. Sürekli Emisyon Ölçüm Sistemlerinde Nem Parametresinin KGS-2 ve YGT Paralel Ölçümleri için Referans Metottur. Metot Spesifik bir örnekleme debisi ve örnekleme hacmi belirtmemektedir. Fakat Metodun Ek- D’sinde yapılan örnek çalışmada 4 lt/dk (240 lt/sa) örnekleme debisi ile yarım saatlik bir işlemde 120 litre hacim örneklendiği görülmektedir. İmpinger haznesinin 4oC sıcaklıkta olması kontrol edilmelidir."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Nem (İşletme İçi Metot – Dijital Nem Sensörü)",
+        "items": [
+          "Baca gazında nem ölçümü için standart metotlar dışında işletme içi dijital sensörlü nem probları da kullanılmaktadır. İşletme içi metotların, standart metotlar ile metot geçerli kılma çalışması yapılmalıdır. Dijital sensörlü nem probu kullanıldığında ölçülen nemin mutlak nem mi? Yoksa bağıl nem mi? olduğu hususu önemlidir. Bazı cihazlar sadece bağıl nem sonucu vermektedir. Bu gibi durumlarda ölçülen bağıl nemden mutlak nem hesaplanmalı ve hesaplamalarda mutlak nem kullanılmalıdır. Ayrıca, izokinetik örnekleme cihazlarına ölçülen nem muhakkak girilmelidir. İzokinetik örnekleme cihazına ölçülen nem girilmez ise % nem oranı kadar izokinetiklikten sapma olur."
+        ],
+        "ordered": false
+      }
+    ]
+  },
+  {
+    "id": "egitim-metal-halojen",
+    "title": "Metal, klorür ve florür",
+    "method": "EPA 29 • EN 14385 • EPA 26A • EN 1911 • EPA 13A",
+    "domain": "Eğitim",
+    "trains": [],
+    "visual": null,
+    "sections": [
+      {
+        "title": "Filtre ve absorpsiyon fraksiyonları",
+        "items": [
+          "Birçok metalin önemli bölümü filtrede veya filtre öncesinde tutulur. Gaz fazında kalanlar absorpsiyon çözeltilerine gider. Sonuç bütün ilgili fraksiyonların geri kazanımını gerektirir.",
+          "Hg için asitli permanganat ayrı bir fraksiyondur. Cıva dahil ve hariç düzeneklerin şişe sayısı aynı değildir.",
+          "Filtre, reaktif ve cam yüzeylerin metal blankı düşük derişimde belirleyici olabilir; metal fırça/pens kontaminasyon kaynağıdır."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Halojenür ile halojen ayrımı",
+        "items": [
+          "EPA 26A’da asit fraksiyonu hidrojen halojenürleri, baz fraksiyonu halojenleri toplar. Sıvılar ayrı tutulur.",
+          "Laboratuvar talimatının EPA 26A düzeni önde 50 mL asitli şişeyle altı şişelidir; temel eğitimdeki beş şişeli çizim farklı konfigürasyondur.",
+          "TS EN 1911 ise HCl olarak tanımlanan gaz hâlindeki klorürü klorürsüz saf suda toplar. Klor adı altında bu iki yöntemi karıştırma."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Flor yöntemini seçmek",
+        "items": [
+          "EPA 13A absorpsiyon sıvısı saf sudur; ISO 15713 örneğinde NaOH kullanılır. Reaktifi yöntem adına göre seç.",
+          "EPA 13A ikinci impinger standart Greenburg–Smith uçludur; ilk ve üçüncü şişe modifiye uçludur.",
+          "Filtrenin flor blankı uygun olmalıdır. Cam elyafın yüksek veya değişken flor içeriği ölçümü etkileyebilir."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Emicilik verimi",
+        "items": [
+          "Son toplama şişesinde bulunan analit oranı, gazın önceki şişelerde tutulup tutulmadığını gösterir.",
+          "HCl eğitim/talimatında emicilik %95 ve son şişe %5 koşulları; EN metal eğitiminde son şişe %10 koşulu bulunur. Tek verim sınırı bütün parametrelere taşınmaz.",
+          "Son şişenin çözeltilerini diğerleriyle birleştirmek, ayrı analizle yapılacak verim kontrolünü imkânsızlaştırır."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Kavramlar ve uygulama ayrıntıları",
+        "items": [
+          "METAL ÖRNEKLEME EPA 29 ve EN 14385 Standartları ile tayin edilebilen metaller Baca gazında ağır metal tayini için yaygın EPA 29 EN 14385 Antimon (Sb) Antimon (Sb) olarak EPA 29 ve EN 14385 metotları Arsenik (As) Arsenik (As) kullanılmaktadır. Baryum (Ba) Berilyum (Be) Kadmiyum (Cd) Kadmiyum (Cd) Krom (Cr) Krom (Cr) Kobalt (Co) Kobalt (Co) Bakır (Cu) Bakır (Cu) Kurşun (Pb) Kurşun (Pb) Mangan (Mn) Mangan (Mn) Not: EN 14385 Standardının İngiltere uygulama Civa (Hg) dokümanı olan MID 14385 dokümanı, EN 14385 Nikel (Ni) Nikel (Ni) Fosfor (P) standardı ile civanın tayin edilebileceğini, bu işlem için Selenyum (Se) EN 13211 Standardında belirtilen Permanganat/sülfürik Gümüş (Ag) asit çözeltisi (%2 (m/m) KMnO4 / %10 (m/m) H2SO4) Talyum (Tl) Talyum (Tl) absorbansının numune alma düzeneğine dahil edilmesi Çinko (Zn) gerektiğini belirtir. Vanadyum (V)"
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Kullanılacak Absorbanslar",
+        "items": [
+          "Filtre: Ölçülecek metallerin her birinden 1,3 μg/ inc2 ‘den daha az metal içermelidir. Kullanılan filtrenin sertifikasında bu değerler verilmemiş ise filtre serisinden bir filtre analiz edilerek filtredeki metal içeriği belirlenmelidir. Metal tayinlerinde kuartz fiber filtre kullanılması tavsiye edilmektedir. HNO3/H2O2 çözeltisi, bu reaktif, her bir hedef metalden 2 ng / ml'den daha az içermelidir. KMnO4/H2SO4 çözeltisi, (Civa örneklenecek ise), bu reaktif, her bir hedef metalden 2 ng / ml'den daha az içermelidir. Saf Su, ASTM D1193-77 veya 912’de belirtilen en az tip 2 sınıfı saf su olmalıdır, her bir hedef metalden 1 ng / ml'den daha az içermelidir."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "İzokinetik Örneklemede Kullanılan Ekipmanlar",
+        "items": [
+          "Numune alma işlemi için, toz numune alma işleminde kullanılan örnekleme düzeneği kullanılır. Prob ve filtre tutucu, toz numune alma sisteminden farklı olarak cam ya da kuvars malzemeden yapılmış olmalıdır. Ara bağlantı elemanları için cam, kuvars ya da teflon malzeme kullanılmalıdır. İmpinger serisi cam malzemeden yapılmış olmalıdır. Genel olarak dört adet impinger yeterlidir. Fakat civa örneklenecek ise impinger serisine 5. ve 6. impingerlarda ilave edilmelidir. 3 numaralı impinger olarak standart uçlu Greenburg Smith tipinde bir impinger kullanılmalıdır. Sızdırmazlık elemanları (contalar) teflon malzemeden yapılmış olmalıdır. Numune saklama kapları teflon kapaklı, cam ya da polietilen malzemeden yapılmış kaplar olmalıdır. Numune saklama kapları etiketlendirilmelidir. Huni, mezür, erlen v.b. ekipmanlar cam malzemeden yapılmış olmalıdır. Filtreyi tutmakta kullanılacak pens polipropilen malzemeden yapılmış olmalıdır."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "EPA 29 Metodu İle Numune Alma",
+        "items": [
+          "Baca gazında metal tayininde numune alma işlemi EPA 5 Metoduna göre izokinetik olarak yapılır. Numune alma işlemindeki kurallar toz numune alma işlemi ile aynıdır."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "EN 14385 Metodu İle Numune Alma",
+        "items": [
+          "Bu metot numune alma ile ilgili kurallar için TS EN 13284-1 Metoduna yönlendirir. EN 14385 Metodu iki tür numune alımını anlatmaktadır. Bunlardan birisi EPA 29 Metodunda olduğu gibi izokinetik numune alımı bir diğeri ise yan akışlı izokinetik numune alımıdır. Yan akışlı numune alımları absorbsiyon veriminin düşük olabileceği durumlarda ya da civa örneklemesi de yapılacak ise tercih edilir. Eğer yan akışlı numune alma sistemi yapılmayacak ise ilk 3 impingera absorbsiyon çözeltisi, yan akışlı numune alma işlemi yapılacaksa ilk iki impingera absorbsiyon çözeltisi ilave edilir. Yan akışlı numune alımı yapılacak ise ana akış ile yan akış arasındaki akış oranı sabit tutulmalıdır (±% 10). Not: Absorbsiyon verimini düşürecek etkiler metotta ayrıntılı olarak anlatılmamıştır. Fakat baca gazı hızının çok yüksek olması nedeniyle düşük çaplı nozul seçilse bile absorbanslardan geçecek gaz hızının yüksek kalması absorbsiyon verimini düşüren en önemli etkidir. Absorbans bulunan son impingerdaki belirlenen miktar toplam miktarın % 10’ndan küçük olmalıdır."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "EPA 29 Metoduna Göre Geri Kazanım",
+        "items": [
+          "Numune alma işlemi bittikten sonra prob bacadan çıkartılarak soğumaya bırakılır. Daha sonra bağlantı elemanları dikkatli bir şekilde sökülmelidir. Çıkarılan filtre 1. nolu kaba alınmalıdır. Filtre tutucuda toz parçacıkları tespit edilirse fırça ile 1 nolu kaba aktarılmalıdır. Kullanılan fırça pens gibi ekipmanlar metal malzemeden yapılmamış malzemeler olmalıdır. Eğer metal tayini ile birlikte toz tayini de yapılacak ise filtreye kadar olan kısım aseton ile yıkanmalı ve 2 nolu kapa alınmalıdır. Prob, prob bağlantıları ve filtre tutucunun ön bölümü, 100 ml 0,1 N HNO3 çözeltisi ile yıkanarak 3 nolu kaba aktarılmalıdır. Filtre tutucu ve ilk 3 impinger 100 ml 0,1 N HNO3 çözeltisi ile yıkanarak 4 nolu kaba aktarılmalıdır. Civa örneklemesi yapıldığında ilk iki impinger 100 ml 0,1 N HNO3 çözeltisi ile yıkanarak 5A nolu kaba aktarılmalıdır. 4 ve 5 numaralı impingerlar ise 5B nolu kaba 100 ml KMnO4 çözeltisi ile yıkanarak aktarılmalıdır. Eğer beraberinde nem tayinide yapılacaksa ise impingerlardaki çözelti miktarlarının ve slikajel kütlesinin numune alma öncesi ve sonrası belirlenmesi gerekmektedir."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "EN 14385 Metoduna Göre Geri Kazanım",
+        "items": [
+          "EN 14385 Metoduna göre filtre bir petri kabına alınır. Numune alma düzeneğinde gaza maruz kalan kısımlar absorbsiyon çözeltisi ile yıkanır ve impingerdaki absorbsiyon çözeltisi ile birleştirilerek (son impinger hariç) polietilen malzemeden yapılmış bir kaba alınır. Son impingerdaki absorbsiyon çözeltisi ise ayrı bir polietilen kaba alınır. Bunun nedeni analiz sonrası son impingerdaki çözelti ile absorbsiyon veriminin hesaplanacak olmasıdır."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Kavramlar ve uygulama ayrıntıları",
+        "items": [
+          "EN 14385 Metoduna göre tanık numuneler numune alımının kontrolü için analiz edilmelidir. Fakat deney sonucu olarak kullanılmamalıdır. EPA 29 Metodunda ise tanık numune değerleri düzeltmeler için kullanılmaktadır. EPA 29 Metoduna Göre Tanık Numune Alımı Her bir saha testinde en az bir adet aseton tanığı 7 nolu kaba alınmalıdır. Her bir saha testinde en az bir adet 0.1 N HNO3 çözeltisinden 300 ml tanık olarak 8A nolu kaba alınmalıdır. Her bir saha testinde en az bir adet safsudan 100 ml tanık olarak 8B nolu kaba alınmalıdır. Her bir saha testinde en az bir adet HNO3/H2O2 çözeltisinden 200 ml tanık olarak 9 nolu kaba alınmalıdır. Her bir saha testinde en az bir adet KMnO4/H2SO2 çözeltisinden 100 ml tanık olarak 10 nolu kaba alınmalıdır. Her bir saha testinde en az bir adet 8 N HCl çözeltisinden 25 ml tanık olarak 200 ml su üzerine ilave edilmek suretiyle 11 nolu kaba alınmalıdır. Her bir saha testinde en az bir adet boş filtre 12 nolu petri kabına alınmalıdır. EN 14385 Metoduna Göre Tanık Numune Alımı Numune alma düzeneğinden baca gazı geçirilmeden bir adet tanık numune alınmalıdır."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Filtre ve Filtreye    Nitrik Asit      Potasyum",
+        "items": [
+          "Numune Alma Sonrası İşlemler ve Diğer Hususlar Kadar Olan Çözeltisinde Permanganat Toplam Metal Parametre Kısımda Tespit Tutulan Metal Çözeltisinde Miktarı Baca gazında metal numunesi alımından sonra numune Edilen Metal Miktarı Tutulan Civa ( μg/m3) uygun koşullarda laboratuvara taşınır ve ICP veya AAS Antimon (Sb) 7,7 ( μg/m3) 3,8 11,5 analizörleri ile analiz edilir. Arsenik (As) 12,7 6,4 19,1 Baryum (Ba) 0,5 0,3 0,8 EPA 29 Metodunda yapılan bir çalışmada filtrede ve Berilyum (Be) 0,07 0,04 0,11 absorbanslarda tutulan metallerin sonuçları yandaki Kadmiyum (Cd) Krom (Cr) 1,7 0,5 0,8 1,5 2,5 tabloda verilmiştir. Kobalt (Co) 1,7 0,8 2,5 Bakır (Cu) 1,4 0,7 2,1 Tablodan da anlaşılacağı gibi metallerin büyük bir kısmı Kurşun (Pb) 10,1 5 15,1 Mangan (Mn) 0,5 0,2 0,7 filtrede tutulmakta filtrede tutulamayanlar ise Civa (Hg) 0,06 0,3 0,2 0,56 absorbanslarda tutulmaktadır. Nikel (Ni) 3,6 1,8 5,4 Fosfor (P) 18 9 27 Civanın ise önemli bir kısmının potasyum permanganat Selenyum (Se) 18 9 27 Gümüş (Ag) 1,7 0,9 2,6 çözeltisinde tutulduğu yapılan çalışmada görülmektedir. Talyum (Tl) 9,6 4,8 14,4 Çinko (Zn) 0,5 0,3 0,8"
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Kullanılacak Absorbanslar",
+        "items": [
+          "Filtre: Teflon glass mat (PTFE reçinesi ile güçlendirilmiş filtre) filtre kullanılmalıdır. Fakat bacadaki sıcaklık 210 OC’nin üstünde ise kuvars fiber filtre kullanılmalıdır. 0.1 N H2SO4 çözeltisi, 0.1 N NaOH çözeltisi, Saf Su, ASTM) Specification D 1193-77 veya 91’de belirtilen en az tip 3 sınıfı saf su olmalıdır."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "İzokinetik Örneklemede Kullanılan Ekipmanlar",
+        "items": [
+          "Prob ve filtre tutucu, toz numune alma sisteminden farklı olarak cam, kuvars ya da teflon malzemeden yapılmış olmalıdır. Ara bağlantı elemanları için cam, kuvars ya da teflon malzemeden kullanılmalıdır. Fakat teflon yüksek sıcaklığa karşı dayanıksız olduğundan 210 OC’nin üstünde baca gazı sıcaklığı olan bacalarda teflon kullanılmamalıdır. İmpinger serisi cam malzemden yapılmış olmalıdır. Sızdırmazlık elemanları (contalar) girişim yapmayacak malzemeden yapılmış olmalıdır. Numune saklama kapları polipropilen ya da polietilen malzemeden yapılmış kaplar olmalıdır. Numune saklama kapları etiketlendirilmelidir. Huni, mezür, erlen v.b. ekipmanlar cam malzemeden yapılmış olmalıdır."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "EPA 26A Metodu İle Numune Alma",
+        "items": [
+          "Baca gazında halojen tayininde numune alma işlemi EPA 5 Metoduna göre izokinetik olarak yapılır. Numune alma işlemindeki kurallar toz numune alma işlemi ile aynıdır. İlk iki impingera 100’er ml 0.1 N H2SO4 absorbans solüsyonu konulmalıdır. Sonraki iki impingera 100’er ml 0.1 N NaOH absorbans çözeltisi konulmalıdır. Son impingera ise slikajel konulur. Eğer baca gazı yüksek nem içeriyorsa ilk impingerin önüne bir impinger daha ilave edilmeli ve bu impingerada 50 ml 0,1 N H2SO4 absorbans çözeltisi konulmalıdır. Prob ve filtre tutucu 120 OC’nin üzerine ısıtılmalıdır."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "EPA 26 Metodu İle Numune Alma",
+        "items": [
+          "Bu metot numune alma sabit debi ile yapılmaktadır. Numune alma debisi 2 L/dk olmalı ve bu debiden sapmalar numune alma boyunca % 10’u geçmemelidir. Not-42: İzokinetik numune alımlarında kullanılan pompalar 2 L/dk debiyi çekmek için uygun olmayabilir. Bu nedenle düşük debide çekiş yapabilen numune alma pompaları kullanılmalıdır. İlk iki impingera 15’er ml 0.1 N H2SO4 absorbans solüsyonu konulmalıdır. Sonraki iki impingera 15’er ml 0.1 N NaOH absorbans çözeltisi konulmalıdır. Son impingera ise slikajel konulur. Burada kullanılan impingerlar 30 ml’lik hacimli cüce impingerlar olmalıdır. Prob ve filtre tutucu 120 OC’nin üzerine ısıtılmalıdır."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "EPA 26A Metoduna Göre Geri Kazanım",
+        "items": [
+          "Numune alma işlemi bittikten sonra prob bacadan çıkartılarak soğumaya bırakılır. Daha sonra bağlantı elemanları dikkatli bir şekilde sökülmelidir. Eğer EPA 26A metodunda halojenler ile birlikte toz da tayin edilecek ise filtre 1 nolu numune kabına (petri kabı) konulur. Numune alma düzeneğinin nozuldan filtreye kadar olan kısmı su ile durulanarak 2 nolu kaba aktarılmalıdır. Sülfürik asit çözeltilerinin olduğu impingerlar hacmi ölçülüp ya da ağırlığı tartılarak 3 nolu numune kabına aktarılmalıdır. Sodyum hidroksit çözeltilerinin olduğu impingerlar hacmi ölçülüp ya da ağırlığı tartılarak 4 nolu numune kabına aktarılır. Bu numune kabına örneklenen numune hacmi ve beklenen halojen konsantrasyonu başına 25 mg sodyum tiyosülfat eklenmelidir. Slikajel tartılarak 5 nolu numune alma kabına aktarılır. Not: Geri kazanım sırasında absorbans çözeltilerinin ve slikajelin miktarının tayin edilmesinin nedeni nem tayini yapmak içindir. Eğer nem tayini halojen tayini ile birlikte yapılmayacaksa geri kazanımda absorbans çözeltilerinin ve slikajelin miktarının tayin edilmesine gerek yoktur."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "EPA 26 Metoduna Göre Geri Kazanım",
+        "items": [
+          "EPA 26A Metodu ile aynıdır. Sadece birlikte toz ve nem numune alma işlemi yapılamayacağı için EPA 26A metodundaki toz ve nem numune alması ile ilgili hususlar ihmal edilir. Absorbsiyonda ve yıkamada kullanılan solüsyonlardan tanık numune de alınır. Bu tanık numunelerden tespit edilen değerler hesaplamalarda düzeltme yapmak için kullanılmalıdır. Baca gazında halojen numunesi alımından sonra numune uygun koşullarda laboratuvara taşınır ve İyon Kromotografisinde analiz edilir. Not: İyon kromotografisinde yapılan analizlerde kalibrasyon eğrisi hem asidik hem de bazik olarak çizilmelidir."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Kavramlar ve uygulama ayrıntıları",
+        "items": [
+          "Baca gazında HCl tayini için yaygın olarak TS EN 1911 metodu kullanılmaktadır. Metot 1 mg/m3 ile 5000 mg/m3 tayin aralığındadır. Kullanılacak Absorbanslar ve Ekipmanlar Absorbans olarak içinde Cl iyonu bulunmayan saf su kullanılmalıdır. Not: HCl tayininde absorbans olarak filtrenin bir önemi yoktur. Filtrenin amacı absorbansa partikül kaçmasını engellemektir. Toz numune alınmasında kullanılan filtreler bu işlem için uygundur. Prob ve filtre tutucu, toz numune alma sisteminde farklı olarak cam, kuvars, titanyum ya da PTFE malzemeden yapılmış olmalıdır. Ara bağlantı elemanları için cam, kuvars ya da teflon malzeme kullanılmalıdır. İmpinger serisi cam malzemeden yapılmış olmalıdır. Sızdırmazlık elemanları (contalar) teflon malzemeden yapılmış olmalıdır. Numune alma düzeneği toz ölçümlerinde kullanılan numune alma düzeneği ile aynıdır. Fakat sabit akışta numune alımlarında uygun çekişli bir pompa kullanılmalıdır. Yan akışlı izokinetik numune alımlarında ise absorbansdan geçirilecek gaz için filtre tutucu sonrası bir t bağlantısı ve düşük debili bir pompa ilavesi gereklidir."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Numune Alma İşlemi",
+        "items": [
+          "Baca gazında TS EN 1911 metodu ile numune alımında 3 farklı numune alma yöntemi mevcuttur. Sabit Akış Numune Alma İzokinetik Numune Alma Yan Akışlı İzokinetik Numune Alma Numune alma işlemi başlamadan önce prob ve filtre tutucu ısıtılmalıdır. Prob ve filtre tutucu, baca gazı sıcaklığı çiğlenme noktasının en az 20 OC üstünde olmalıdır. Fakat absorbansların olduğu impingerlarda gaz sıcaklığı 20 oC’nin altına düşürülmelidir. Örneklenen baca gazı sıcaklığının 200 °C’nin üstünde olduğu özel durumlarda, numune alma probu etrafındaki ısıtma ceketi, filtre tutucuda ki ısıtma sistemi kapatılabilir. Ancak örneklenen gazdaki sıcaklığın çiğlenme noktası sıcaklığının 20 ° C altına düşmemesine dikkat edilmelidir."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Sabit Akış Numune Alma",
+        "items": [
+          "Baca gazında nem içeriği çok düşük ise TS EN 1911 Metodu ile sabit akışta numune alınabilir. Sabit akış numune alımlarında numune alma debisi 2 L/dk – 3 L/dk arasında olmalıdır. İlk iki impingera 40 ml ya da 100 ml saf su (içinde klor iyonu ihtiva etmeyen) konulur, 3. impinger boş bırakılır. 1. Isıtmalı Prob 5. Slikajel Örnekleme öncesi prob ve filtre tutucu ısıtılmalıdır. 2. Isıtmalı Filtre Tutucu 6. Pompa 4. Boş İmpinger Şişesi 8. Gaz Sayacı Sabit Akış Numune Alma Düzeneği"
+        ],
+        "ordered": false
+      },
+      {
+        "title": "İzokinetik Numune Alma",
+        "items": [
+          "Baca gazında nem içeriği yüksek ise izokinetik örnekleme yapılmalıdır. İzokinetik örneklemede numune alımı ile ilgi kurallar TS EN 13284-1 Metodu ile aynıdır. Fakat izokinetik örneklemede özellikle yüksek hızlı bacalarda absorsiyon verimini sağlamak zordur. İlk iki impingera 100 ml saf su (içinde klor iyonu ihtiva etmeyen) konulur, 3. İmpinger boş bırakılır. Örnekleme öncesi prob ve filtre tutucu ısıtılmalıdır. 1. Isıtmalı Prob 5. Slikajel 2. Isıtmalı Filtre Tutucu 6. Pompa 4. Boş İmpinger Şişesi 8. Gaz Sayacı İzokinetik Numune Alma Düzeneği"
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Yan Akışlı İzokinetik Numune Alma",
+        "items": [
+          "Nem içeriği yüksek bacalarda izokinetik örnekleme yapılmalıdır fakat izokinetik örnekleme yapılırken yüksek hızlı bacalarda ya da Cl konsantrasyonu yüksek bacalarda absorbsiyon verimi sağlanması mümkün değildir. Bu gibi durumlarda yan akışlı izokinetik numune alma sistemi kullanılmalıdır. Yan akışlı izokineitk numune almalarında filtre tutucunun sonrasına bir T bağlantısı bağlanarak akış 2 ye bölünür. Ana akış izokinetik örnekleme pompasına bağlı iken absorbansdan geçen yan akış ikinci bir pompa vasıtasıyla 2 L/dk 1. Isıtmalı Prob 5. Slikajel – 3 L/dk arasında bir çekiş ile çalışır. 2. Isıtmalı Filtre Tutucu 6. Pompa Böylece absorbsiyon veriminin artırılması hedeflenir. 4. Boş İmpinger Şişesi 8. Gaz Sayacı İlk iki impingera 40 ya da 100 ml saf su (içinde klor iyonu ihtiva Yan Akışlı Zokinetik Numune Alma Düzeneği etmeyen) konulur, 3. İmpinger boş bırakılır. Örnekleme öncesi prob ve filtre tutucu ısıtılmalıdır."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Geri Kazanım",
+        "items": [
+          "Her bir absorbans ayrı ayrı kaplara alınmalıdır. İmpingerlar absorbsiyon çözeltisi (saf su) ile durulanarak kaplara ilave edilmelidir. Ayrıca filtre sonrası impingerlara kadar olan parçalarda saf su ile durulanarak ilk impingerdaki absorbansın konulduğu toplama kabına eklenmelidir. Numune alma düzeneği kurulup içerisinde gaz geçirilmeden tanık numune alımı yapılmalıdır. Tanık numune miktarı emisyon limit değerinin % 10’undan daha az olmalıdır. Aksi halde yapılan numune alma işlemi geçersizdir."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Baca gazından alınan HCl numunesi 3 farklı yöntem ile analiz edilmektedir.",
+        "items": [
+          "Yöntem A- gümüş titrasyonu: potansiyometrik yöntem Yöntem B- civa-tiyosiyanat spektrofotometrisi Yöntem C- iyon değişimi kromatografisi Yöntem A’da analitik tespit limiti 0,5 mg/L ile 1 mg/ L aralığındadır. Bu nedenle yöntem A’nın düşük konsantrasyonlu klor içeren numunelerde kullanılması tavsiye edilmemektedir. Yöntem B ve Yöntem C için analitik tespit limiti 0,05 mg/ L ile 0,1 mg/ L aralığındadır. Numune alma ve analiz sonrası, ikinci impingerdaki absorbansın analizinde bulunan miktar eğer toplam bulunan miktarın % 5’inden fazla ise absorbsiyon veriminin düşük olduğu ve metot performans kriterlerini sağlayamadığı sonucu ortaya çıkmaktadır. Bu gibi durumda işlemler tekrarlanmalıdır. Ayrıca tanık numune konsantrasyonu; ELD’nin % 10’undan küçük olmalıdır."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Kavramlar ve uygulama ayrıntıları",
+        "items": [
+          "Baca Gazında Flor tayini için EPA 13A ve ISO 15713 Metotları yaygın olarak kullanılan metotlardır. Kullanılacak Absorbanslar ve Ekipmanlar EPA 13 A metodunda absorbans olarak saf su kullanılmaktadır. ISO 15713 Metodunda ise absorbans olarak 0,1 N NaOH kullanılmaktadır. Not: ISO 15713 Metodunda Flor tayininde absorbans olarak filtrenin bir önemi yoktur. Filtrenin amacı absorbansa partikül kaçmasını engellemektir. Toz numune alınmasında kullanılan filtreler bu işlem için uygundur. Fakat EPA 13 A Metodu boş filtrede Flor miktarının 0,0015 mg/cm2’den az olması gerektiğini belirtir. Cam elyaf filtrelerde bu değerin altına flor ihtiva eden filtre bulmak zordur. Bu nedenle cam elyaf filtrelerin kullanılması tavsiye edilmez. Prob ve filtre tutucu, toz numune alma sisteminden farklı olarak cam veya kuvars malzemeden yapılmış olmalıdır. ISO 15713 Metodunda korozyona dayanıklı Monel® (korozyona dayanıklı nikel alaşımlı bir malzeme) tipi alaşımlar tavsiye edilmektedir. EPA 13A metodu paslanmaz çelik kullanımına da izin vermektedir. Ara bağlantı elemanları için cam, kuvars ya da flor ile girişim yapmayan malzeme kullanılmalıdır. İmpinger serisi cam malzemeden yapılmış olmalıdır. Birinci ve üçüncü impingerler Greenburg – Smith modifiye dizayn (1,3 cm uçlu), ikinci impinger ise standart dizayn olmalıdır. Sızdırmazlık elemanları (contalar) teflon malzemeden yapılmış olmalıdır. 2"
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Numune Alma İşlemi",
+        "items": [
+          "ISO 15713 Metodu ile yapılan numune alımları, sabit akış ya da TS ISO 9096 Metoduna göre izokinetik olarak yapılabilmektedir. EPA 13A Metodunda ise sadece EPA 5 Metoduna göre izokinetik numune alımı anlatılmaktadır. ISO 15713 Metoduna Göre Numune Alımı Numune alımında tüm esaslar TS ISO 9096 Metoduna göre belirlenir. Sabit akış ile numune alımı yapılacak ise numune alma debisi 2 L/dk – 6 L/dk arasında ayarlanmalıdır. Akışdaki sapma en fazla % 10 olmalıdır. Numune alımlarında filtre tutucu ve prob 150 OC ya da çiğlenme 1.Isıtmalı Prob 2. Filtre Tutucu noktasının 20 OC üzerinde (hangisi yüksek ise) ısıtılmalıdır. 3. 0,1 M NaOH İmpingerlar 4. Boş impinger Numune alma düzeneğinde yer alan ilk iki impingera 50 ml ile 100 ml 5. Slikajel 6. Pompa arasında 0,1 N NaOH konulur, 3. impinger boş bırakılır son impingera ise 7. Sıcaklık ve basınçölçer slika jel konulur. 8. Gaz Sayacı 9. Akış Ölçer ISO 15713 Metodu Numune Alma Düzeneği"
+        ],
+        "ordered": false
+      },
+      {
+        "title": "EPA 13A Metoduna Göre Numune Alımı",
+        "items": [
+          "Numune alımı EPA 5 Metoduna göre yapılmalıdır. Prob ve filte tutucu 120 ±14°C’ye kadar ısıtılmalıdır. Numune alma da impingerlara eklenecek saf su miktarı ile ilgili bir bilgi metotta yer almamakla birlikte 10’er ml saf su eklemek uygundur. Örnekleme debisi 28 litre/dk altında olmalıdır. Prob sıcaklığı 120 oC ±14 olarak ayarlanmalıdır. EPA 13 A Numune Alma Düzeneği"
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Geri Kazanım",
+        "items": [
+          "ISO 15713 Metodu ile yapılan numune alma işleminde geri kazanım yaparken prob içinde bir yoğuşmanın olup olmadığı gözlemlenmelidir. Eğer prob içinde yoğuşma görülmüşse numune alma işlemi iptal edilip tekrarlanmalıdır. İmpinger içindeki çözeltiler bir numune alma kabına alınmalı ve impingerlar 20 ml saf su ile yıkanarak aynı kaba yıkama çözeltisi eklenmelidir. Eğer numune alma işleminde absorbsiyon veriminin düşük olduğundan şüpheleniliyorsa her bir impinger ayrı kaplara alınmalıdır. Bağlantı elemanları 10 ml saf su ile yıkanarak numune kabına aktarılır. Yıkama işlemleri 3 kez tekrarlanmalıdır. EPA 13A Metodu ile yapılan numune alma işleminde geri kazanım yaparken 1 nolu kaba filtre alınmalıdır. Ardından prob nozul ve filtre tutucu elemanları su ile yıkanarak kaba aktarılır. İmpinger çözeltileri de kaba aktarıldıktan sonra impingerlar durulanarak kaba ilave edilir. Kullanılmamış bir filtre ve 1 nolu kabta oluşan hacim kadar saf su 2 nolu kaba tanık numune alınır. Bu kap saha tanığı olarak kullanılır. Silika jel rengi not edildikten sonra 4 nolu kaba alınır. Geri kazanım işlemi sırasında ekipmanlara yapışmış olan partiküller için kıl fırça kullanılarak temizlenmelidir."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Kavramlar ve uygulama ayrıntıları",
+        "items": [
+          "ISO 15713 Metounda göre tanık numune alırken, numune alma düzeneği kurulup içerisinde gaz geçirilmeden tanık numune alımı yapılmalıdır. Tanık numune miktarı bacada ölçülen flor değerinin % 10’undan daha az olmalıdır. Aksi halde yapılan numune alma işlemi geçersizdir. EPA 13A Metoduna göre tanık numune alırken filtre ve geri kazanımda kullanılan sıvı miktarı kadar bir saf su (SAHADA) alınarak laboratuvara analize gönderilmelidir. Baca gazından alınan Flor numunesi ISO 15713 Metoduna göre İyon Seçici Elektrot ile EPA 13 A metoduna göre ise spands zirkonyun rengi kolorimetrik yöntem ile 570 nm dalga boyunda spektrofotometrede analiz edilir."
+        ],
+        "ordered": false
+      }
+    ]
+  },
+  {
+    "id": "egitim-pah-dioksin",
+    "title": "PAH ve dioksin–furan",
+    "method": "Fazlar • Metot A/B/C • XAD-2 • Geri kazanım",
+    "domain": "Eğitim",
+    "trains": [],
+    "visual": null,
+    "sections": [
+      {
+        "title": "Gaz ve partikül fazı",
+        "items": [
+          "PAH ve PCDD/PCDF gaz fazında ve partiküllere bağlı bulunabilir. Yalnız filtre veya yalnız sıvı kullanmak bütün numuneyi temsil etmeyebilir.",
+          "İzokinetik toplama partikül fazının temsil ediciliğini, adsorban ve kondenser gaz/aerosol fazının tutulmasını sağlar.",
+          "PAH ve dioksin aynı cam ekipman tipleriyle örneklenebilir; analiz standardı, spike ve saklama aynı kabul edilmez."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Üç örnekleme yaklaşımı",
+        "items": [
+          "Metot A gazı temiz hava ile seyreltip soğutarak filtre/adsorban toplamasını kullanır.",
+          "Metot B ısıtılmış prob/filtre, kondenser ve adsorban düzenidir. XAD-2 veya ayrı tasarımda dietilen glikol kullanılabilir.",
+          "Metot C soğutulmuş prob ve adsorban yaklaşımıdır. Bir yöntemin debi/sıcaklığını diğerine doğrudan taşıma."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Reçine ve akış",
+        "items": [
+          "XAD-2 yatağındaki gaz hızı 34 cm/s sınırını aşmamalıdır. Q(L/dakika)=v(cm/s)×πd²/4×0,06 kullanılır.",
+          "3 cm iç çap için 34 cm/s yaklaşık 14,4 L/dakika; 4 cm için yaklaşık 25,6 L/dakikadır. Bunlar kartuş iç kesitinden hesaplanır.",
+          "Yatakta büyük boşluklar gazı reçine temasından kaçırır. Dolumun oturması, cam yünü, soğutma ve folyoyla ışık koruması birlikte kontrol edilir."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Dioksin numune standardı",
+        "items": [
+          "¹³C₁₂ işaretli standardın toplama öncesi eklenmesi geri kazanımı izlemek içindir. Eğitimde 10 m³ kuru gaz örneği için PeCDF/HxCDF 400 pg, HpCDF 800 pg ve 100 µL standart çözelti örneği vardır.",
+          "Bu miktarlar bütün beklenen derişimler için tek reçete değildir; numune hacmi ve laboratuvar analiz planına göre ayarlanır.",
+          "EN 1948-1 numune alma, -2 ekstraksiyon/temizleme, -3 analiz aşamasını tanımlar."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Numune sonrası",
+        "items": [
+          "PAH için eğitimde karanlıkta −7 °C saklama ve mümkünse 24 saatte, en geç bir haftada ekstraksiyon anlatılır.",
+          "Dioksin/furan için ışıktan koruma ve 25 °C altı saklama anlatılır. PAH saklama şartını otomatik dioksine taşıma.",
+          "Filtre, reçine, kondensat ve durulama fraksiyonlarının her biri tanımlanır; tanık numune, taşıma ve spike geri kazanımı birlikte değerlendirilir."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Kavramlar ve uygulama ayrıntıları",
+        "items": [
+          "Polisiklik aromatik hidrokarbonlar iki ya da daha fazla benzen halkasına sahip hidrofobik karakterli organik bileşiklerdir. PAH’lar doğal ya da insan kaynaklı olarak organik bileşiklerin eksik yanması sonucu oluşurlar. Endüstriyel Kaynaklar; Çöp Yakma, Çimento Fabrikaları, Petrol Rafinerileri, Kok ve Asfalt Üretimi, Alüminyum, Demir Çelik Üretimi Havada partiküllere tutunmuş veya buhar fazda bulunan bu bileşikler rüzgâr ile çok uzun mesafelere taşınabilirler. Bacagazında PAH Bileşiklerin tayini için yaygın olarak ISO 11338-1(Numune Alma), ISO 11338-2 (Ön İşlem ve Analiz) ve EPA 8100 Metodu kullanılır. Numune alma için ISO 11338-1 metodunda anlatılan 3 farklı yöntem vardır; Metot A (seyreltme metodu) Metot B (ısıtılmış filtre/kondenser/adsorber metodu) Metot C (soğutulmuş prob/adsorber metodu)"
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Kullanılacak Absorbanslar ve Ekipmanlar",
+        "items": [
+          "Prob, filtre tutucu, nozul, xad-2 şişesi, bağlantı elemanları kondenser v.b. baca gazı ile temaz eden tüm ekipmanlar cam, kuvars ya da titanyum malzemeden yapılmış olmalıdır. Prob ve filtre tutucu ısıtma ceketli olmalıdır. Katı Absorbans olarak XAD-2 Reçine, PU Köpük ya da Propak PS kullanılabilinir. Ayrıca Dietilenglikolün absorbans olarak kullanıldığı Methot B ‘ye göre örnekleme yöntemi de mevcuttur."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Kavramlar ve uygulama ayrıntıları",
+        "items": [
+          "Numune alma işlemi TS ISO 9096 ya da TS EN 13284-1 metotlarına göre izokinetik olarak yapılmalıdır. Örnekleme işleminden önce tüm ekipmanlar aseton, diklorometan ya da metanol ve daha sonra toluen ile çalkalanır. Bu işleme alternatif olarak ise, tüm parçaları metanole batırıp, 2 saat boyunca ultrasonik titreşime maruz bırakılır ve ardından da 2 saat boyunca 150ºC’de kurutulur. Örneklemeden önce internal standart eklenir. (C-13 nitelikli PAH). Fluorene-d10, pyrene-d 10, ve benzo[k]fluorene-d12 iyi seçimdir, bunların saflığı % 98 veya daha iyidir. Uygun standard çözeltisi genellikle 50 ng/μl konsantrasyonundadır. Absorbans olarak XAD-2 kullanılıyorsa Absorbansdan geçen gaz hızı en fazla 34 cm/s olmalıdır. Absorbans olarak PU Köpük kullanılıyorsa absorbansdan geçen gaz hızı en fazla 30 cm/s olmalıdır. Gaz ile temas eden tüm parçalar yeniden kullanılacak ise önce aseton, diklorometan ya da metanol çözeltisi ile sonrada bir toluen çözeltisi ile durulanmalıdır."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Metot A (Seyreltme Metodu)",
+        "items": [
+          "Örnekleme izokinetik olarak, ısıtılmış prob kullanılarak yapılır. Ardından 40 oC altına soğutulur. Örnekleme debisi 2 m3/h ile 8 m3/h aralığında olmalıdır. Analiz için 8 m3 ile 10 m3 arasında numune toplamak yeterli olacaktır. 1. Off-Gas 6. Sampling Filter 11. To Extractor 2. Sampling Probe 7. Compartment A 12. Drying Tower 3. Elbow Joint 8. Solid Adsorber 13. Gas Meter 4. Heated Suction Tube 9. Compartment B 14. Solid Adsorber 5. Mixing Tube 10. Gas Meter 15. Cold Air Filter Metot A Numune Alma Düzeneği"
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Metot B      (Isıtılmış   Filtre/Kondenser/Adsorber",
+        "items": [
+          "Metodu) Baca gazı izokinetik olarak ısıtılmış prob ile örneklenir. Prob sıcaklığı çiğlenme noktasının üstünde ancak baca gazı sıcaklığından düşük olmalıdır. Gaz 20 oC altına soğutulur. Numune debisi 1m3/h ile 6 m3/h arasında olmalıdır. Baca gazı hızı çok yüksek olduğu durumlarda düşük nozul seçiminde bile katı absorbansdan geçecek gaz hızı yüksek olacağı için yan akış kullanılmalıdır. XAD- 2 absorbans olarak seçilmiş ise XAD-2’den geçecek gaz hızının 34 cm/s’den yüksek olmamasına dikkat Metot B Numune Alma Düzeneği (XAD-2) edilmelidir. 3 cm çapında bir XAD-2 şişesi için bu değer yaklaşık 15 L/dk ya denk gelmektedir."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Metot B        (Isıtılmış   Filtre/Kondenser/Adsorber",
+        "items": [
+          "Metodu) Bu metotta ayrıca katı absorbanslar yerine dietilen glikol de absorbans olarak kullanılabilinir. Dietilen glikol absorbans olarak kullanılacaksa örnekleme düzeneği yandaki gibi olmalıdır. Ülkemizde PAH Örneklemeden yetki almış laboratuvarların ekipmanları Methot B için uygun olup yetkilendirmeler Methot B ‘ye göre yapılmıştır. Methot B Numune Alma Düzeneği (Dietilen Glikol)"
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Metot C (Soğutulmuş Prob/Adsorber Metodu)",
+        "items": [
+          "Baca gazı su ile soğutulmuş bir probdan izokinetik olarak örneklenir. Numune 40 oC altına soğutulur. Numune debisi 0,5 m3/h ile 2 m3/h arasında olmalıdır. Methot C Numune Alma Düzeneği"
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Geri Kazanım",
+        "items": [
+          "Her bir örnek alımından sonra prob temizlenmelidir. Probun çalkalandığı çözeltiler, diğer numunelere analiz için eklenmelidir. Tanık Numune Kullanılan absorbanslardan birer set tanık numune olarak alınarak analiz edilmelidir. 20.5. Numune Alma Sonrası İşlemler ve Diğer Hususlar Alınmış olan numuneler 1 hafta içerisinde, tercihen ise 24 saat içerisinde ekstrakte edilir. Numuneler karanlık bir ortamda -7 ºC’de saklanmalıdır. Numuneleri ışıktan korumak için alüminyum folyolar kullanılabilinir. Analizi GC-MS ya da HPLC de yapılmaktadır. Analiz öncesi numune ekstrakte edilmeli ve temizlenmelidir. Not: PAH Tayininde numune alma işleminin performansını kontrol etmek gerekmektedir. Bu nedenle internal standart kullanılarak geri kazanım hesaplanmalıdır. İnternal standart numune alma ekipmanlarına eklenmelidir."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Kavramlar ve uygulama ayrıntıları",
+        "items": [
+          "Dioksin ve furanlar ticari amaçla üretilen bileşikler değildirler ve bilinen kullanım alanları da yoktur. Bunlar genellikle kimyasal ürünlerin üretiminde istenmeyen yan ürün olarak açığa çıkarlar. Dioksin ve furan kaynakları aşağıdaki gibidir. Atık Yakılması Demirli ve Demirsiz Metal Üretimi Elektrik Üretimi ve Isınma Mineral (kireç, çimento, seramik, cam ve asfalt karışımı) üretimi Motorlu Taşıtlar Kontrolsüz Yanma Prosesleri Kimyasalların ve Tüketici Gıdaların Üretimi (kağıt, tekstil, deri ve kim. end.) Düzenli Depolama ve Biriktirme (çamur arıtımı, kompostlama, atık yağların birikimi) Sigara Dumanı Orman Yangınları, Volkanik Patlama Gibi Doğa Olayları Hayvan Yemleri Poliklorlu dibenzodioksinler (PCDD) ve poliklorlu dibenzofuranlar (PCDF), klorlu aromatik eterlerin 2 grubudur. Bunlar, 210 çeşit olup 75’i PCDD ve 135’i PCDF dir. Bu standart 17 türdeşin ölçülmesini içermektedir."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Kavramlar ve uygulama ayrıntıları",
+        "items": [
+          "Baca gazında dioksin furan numune alma işlemi TS EN 1948-1 Metoduna göre yapılmaktadır. TS EN 1948-2 Metodu ekstraksiyon ve temizleme aşamasını, TS EN 1948-3 Metodu ise analiz aşamasını anlatmaktadır. Ayrıca EPA 23 A Metodu da dioksin ve furanların numune alması için kullanılan bir metoddur. EPA 23 A Metodu ile yapılan numune alma işleminden sonra analiz için EPA 8280 veya EPA 8290 metotlarına yönlendirmektedir. TS EN 1948-1 Metodu nokta kaynak emisyonlarında yaklaşık, 0,1 ng I-TEQ/m3 derişimleri ölçmek için geliştirilmiştir. Kullanıcı 3 farklı metottan birini seçebilir. Metot A (seyreltme metodu) Metot B (ısıtılmış filtre/kondenser/adsorber metodu) Metot C (soğutulmuş prob/adsorber metodu)"
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Kullanılacak Absorbanslar ve Ekipmanlar",
+        "items": [
+          "Prob, filtre tutucu, nozul, xad-2 şişesi, bağlantı elemanları kondenser v.b. bacagazı ile temaz eden tüm ekipmanlar cam, kuvars ya da titanyum malzemeden yapılmış olmalıdır. Prob ve filtre tutucu ısıtma ceketli olmalıdır. Katı Absorbans olarak XAD-2 Reçine, PU Köpük ya da Propak PS kullanılabilinir. Ayrıca Dietilenglikolün absorbans olarak kullanıldığı Methot B ‘ye göre örnekleme yöntemi de mevcuttur. Kullanılan ekimanlar ve absorbanslar PAH numune alımında kullanılan ekipmanlar ile aynıdır."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Numune alma işlemi TS EN 13284-1 metotlarına göre izokinetik olarak yapılmalıdır.",
+        "items": [
+          "Numune alma hattı, laboratuvarda gözle görünen bütün bulaşmalar, deterjan ve bunu takiben su ile yıkanarak temizlenir, iyonları giderilmiş su ile çalkalanır, kurutulur ve toluen ile çalkalanır. Prob hariç cam malzeme, etüvde 400-450 oC da bir kaç saat pişirilerek şartlandırılır. Numune almada en uzun süre, 8 saattir."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Kavramlar ve uygulama ayrıntıları",
+        "items": [
+          "Örneklemeden önce 13C12 etiketli standardlar eklenmelidir. Eklenecek bu standart verim hesabı için önemlidir. Bu standartlar bacada çıkma ihitmali olmayan izotoplar olup aşağıda belirtilmiştir. PeCDF ve HxCDF için 400 pg, HpCDF için 800 pg etiketli standard, 10 m3 numuneye eklenir (kurugaz) ve 0,1 ng I- TEQ/m3 derişime karşılık gelir. Numune alma standard çözeltisi, 100 μL olmalıdır. Numunede doğal PCDD/PCDF’ lerin oldukça yüksek veya düşük derişimleri bekleniyorsa, 13C12 etiketli standardın eklenecek miktarları buna göre ayarlanır. 1,2,3,7,8-Pentachlorodibenzofuran (PeCDF) 1,2,3,7,8,9-Hexachlorodibenzofuran (HxCDF) 1,2,3,4,7,8,9-Heptachlorodibenzofuran (HpCDF) Eklenecek miktar (pg) (100 μl çözelti (örn: toluen) ile İzotoplar tutucu olarak %4 tetradecan kullanılır) 13C -1,2,3,7,8-PeCDF 400 13C -1,2,3,7,8,9-HxCDF 400 13C -1,2,3,4,7,8,9-HpCDF 800 12 1"
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Örneleme Metotları PAH Örnekleme Metotları ile aynıdır.",
+        "items": [
+          "Ülkemizde yetki almış laboratuvarların kullandığı Metot B (Isıtılmış Filtre/Kondenser/Adsorber Metodu) ile örneklemede aşağıda ki hususlara dikkat edilmesi gerekmektedir. Filtre, bacada başlığın alt akımına veya baca dışında sondadan sonra yerleştirilir. Filtre tutucu ve prob sıcaklığı 125°C'nin altında çiğlenme noktasının ise en az 10 °C üzerinde olmalıdır. Numune gaz, 20°C'nin altındaki sıcaklığa soğutulur. PCDD ve PCDF lerin, gaz ve aerosol kısımları impingerler ve/veya katı adsorbanlarda tutulur. Filtre Yoğunlaştırıcı Metot ile yapılan örneklemede absorbans olarak impingerlarda dietilen glikol kullanılıyorsa yan akışa gerek yoktur. Örnekleme XAD-2 ye yapılıyor ise sistemde yan akış kullanılmalıdır. XAD-2 reçineden geçecek gaz hızı 34 cm/s’yi geçmemelidir. Örneğin; 3 cm çapında bir XAD-2 şişesi kullanılıyor ise absorbans dan geçen akış hızının 34 cm/sn altında kalabilmesi için XAD-2 şişesinden geçecek debi en fazla 14,4 L/dk olabilir. Bir diğer yolda XAD-2’nin yoğuşturucudan önce soğutmalı bir şişeye konduğu sistemdir burada akış hızı 5 l/dk ile 25 l/dk arasında olmalıdır."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Geri Kazanım",
+        "items": [
+          "Her bir örnek alımından sonra prob temizlenmelidir. Probun çalkalandığı çözeltiler, diğer numunelere analiz için eklenmelidir. Çalkalama çözeltisi, muhafaza edilmelidir. Numunenin derişimi, sınır değeri aşarsa analizlenmelidir. Tanık Numune Kullanılan absorbanslardan birer set tanık numune olarak alınarak analiz edilmelidir. Tanık numunenin değeri, numune almada kullanılan aynı hacim için limit değerin %10'unu aşmamalıdır."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Kavramlar ve uygulama ayrıntıları",
+        "items": [
+          "Numunedeki PCDD/PCDF'leri ayırmak ve onları uygun çözücü hacminde toplamak için ekstraksiyon gerekir. Ekstraksiyon işlemi, filtrenin ve adsorbanların Sokslet ekstraksiyonunu ve destilatın sıvı ekstraksiyonunu esas alır. Numune temizleme, farklı tipte adsorbanları kullanan, çok kolonlu kromatografik tekniklerle gerçekleştirilir. Ham numune ekstraktlarının temizlenmesinin esas amacı, ayırma metodunda olumsuz etki yapan ve kantitatif çalışmayı bozan, numune matriks bileşenleri uzaklaştırmaktır. Ekstraksiyon ve temizleme işlemlerinde ihtiyaçlar, TS EN 1948-2'de anlatılmaktadır. Numuneler, ışıktan korunarak, 25 °C'nin altında depolamaya uygun bir yerde muhafaza edilir. Numune bulunduran her bir kap için, gerekli kayıtlar tutulmalıdır. Dioksin ve Furanların analizi TS 1948-3 Metoduna göre Gas Chromatograph with high resolution Mass Spectrometer (GC-HRMS) ‘de yapılır."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "XAD 2 şişelerine XAD 2 ler doldurulduktan sonra şişeler",
+        "items": [
+          "bir gün bekletilmeli, ertesi gün şişede XAD2’lerin üzeri tamamlanmalıdır. Daha sonrada yıkanmış cam yünü ile ağzı kapatılmalıdır. Şekilde gösterilen XAD2 şişesi doldurma yöntemi YANLIŞTIR."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "XAD2 taneciklerinin şişe içindeki dağılımı",
+        "items": [
+          "önemlidir. ŞEKİL-1 deki gibi arasında çok boşluk olan dağılım İSTENMEZ. Bu şekilde Gaz XAD2 ile temas etmeden ya da çok az temas ederek geçebilir. Şekil-1 XAD2 taneciklerinin şişe içindeki dağılımı önemlidir. ŞEKİL-2 deki gibi Tanecikler arasında üçgen kalacak şekilde dağılımı İSTENİR. Bu sayede Gazın XAD2 tanecikleri ile teması artar."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "XAD2 lerin bulunduğu örnekleme",
+        "items": [
+          "şişeleri alüminyum folyo ile ışıktan korunmalıdır. Filtre cam petri kabına alınmalı ve petri kapının etrafı TEFLON bantla iyice sarılarak sızdırmazlık sağlanmalıdır."
+        ],
+        "ordered": false
+      }
+    ]
+  },
+  {
+    "id": "egitim-toz-egitim",
+    "title": "Partiküler madde ve izokinetik örnekleme",
+    "method": "Nozul • Filtre • Geri kazanım • Hatalar",
+    "domain": "Eğitim",
+    "trains": [],
+    "visual": null,
+    "sections": [
+      {
+        "title": "İzokinetiklik neden önemlidir?",
+        "items": [
+          "Nozul girişindeki gaz hızı yerel baca hızından yüksekse iri partiküller eksik, düşükse fazla toplanabilir. Özellikle iri partiküllerde gazla birlikte doğru örnek alma şartı gerekir.",
+          "İzokinetiklik nozul hızı/baca hızı oranıdır; pompadaki çekiş debisinin sabitliği tek başına yeterli değildir.",
+          "Hız, sıcaklık, nem ve basınç değiştiğinde gerekli çekiş de değişir."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Yöntemlere göre koşullar",
+        "items": [
+          "Eğitimde TS ISO 9096 / TS EN 13284-1 için %95–115; EPA 5 / EPA 17 için %90–110 izokinetik oranlar verilmiştir.",
+          "Gaz akışı uygunluğu değerlendirmesinde EN/ISO için 15°, EPA için 20° yaklaşımı bulunur. Sunumdaki ters yazılmış büyüklük işaretleri uygunluk olarak yorumlanmamalıdır.",
+          "Filtrenin baca içinde veya dışında olması prob ısıtması, geri kazanım ve toplanan kütlenin tanımını etkiler."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Filtre ve geri kazanım",
+        "items": [
+          "Filtredeki kütle farkına ek olarak filtre öncesi nozul/prob yüzeylerinde biriken toz ilgili yönteme göre geri kazanılır.",
+          "Nemli bacalarda geri kazanım kütlesi filtre kütlesinden fazla olabilir; bu fraksiyonu atlamak sonucu ciddi düşürür.",
+          "Cam elyaf filtre SO₃ gibi asidik bileşiklerle reaksiyona girebilir; filtre malzemesi prosesle uyumlu seçilir."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Sahada hata kaynakları",
+        "items": [
+          "Yanlış nozul çapı, hizalama, gaz açısı, kaçak, yoğuşma, ölçüm hacmi ve tartım koşulları birbirinden farklı hata kaynaklarıdır.",
+          "Yatay kanallarda yerçekimi ve bozucu etkiler nedeniyle dağılım daha heterojen olabilir. Uygun düzlem ve yeterli nokta taraması önemlidir.",
+          "Cihazın çalışma aralığı dışında ortam sıcaklığında veya gerekli kontrol sağlanmadan ölçüm başlatılmaz."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Baca gazinta toz tayi̇ni̇",
+        "items": [
+          "Toz: Analiz edilecek gazı temsil edebilecek numune alınmasından sonra, belirli şartlar altında filtre edilmek suretiyle toplanabilen ve belirli şartlarda kurutulmasından sonra filtrenin girişinde ve filtre üzerinde kalabilen, numune alma noktası şartlarında gaz halinde dağılmış olan herhangi bir şekil, yapı ve yoğunluktaki taneciklerdir. Baca gazında toz tayini için en yaygın olarak kullanılan metotlar: TS ISO 9096: Sabit kaynak emisyonları - Tanecikli maddenin kütle derişiminin elle tayini TS EN 13284-1: Sabit kaynak emisyonları - Tozun düşük aralıktaki kütle derişiminin tayini - Bölüm 1: Manuel gravimetrik metot TS ISO 12141: Sabit kaynak emisyonları - Düşük derişimlerdeki tanecikli maddenin (tozun) kütle derişiminin tayini- Elle gravimetrik metot EPA-5: Sabit Kaynaklardan Partikül Madde Emisyonlarının Tespit Edilmesi (Baca Dışı) EPA-17: Sabit Kaynaklardan Partikül Madde Emisyonlarının Tespit Edilmesi (Baca İçi) TS ISO 9096 standardı toz derişimi 20-1000 mg/m3 olan, TS EN 13284-1standardı ise toz derişimi 5-50 mg/m3 olan kaynaklarda kullanılmaktadır."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Prensip:",
+        "items": [
+          "Bacadan izokinetik koşullarda partikül maddelerin alınarak filtre üzerinde toplanması ve çekilen hacim içerisinde bulunan partikül madde miktarının tespit edilmesidir. Numune Alma Noktaları İçin Şartlar: Baca eksenine göre gaz akışının açısı EN ve ISO Metotlarına göre 15°‘ den daha az, EPA metotlarına göre 20°‘ den daha az olması gerekmektedir. Hiçbir mevziî negatif akım olmaması, Asgarî hız, akış hızı ölçümü için kullanılan metodun tayin sınırından daha yüksek (pitot tüpler için 5 Pa’dan daha büyük basınç farkı) olması, En yüksek ve en düşük mevzi gaz hızlarının birbirine oranının 3:1’den daha az olması. Yukarıdaki şartlar, TS EN 15259 ve EPA 1 Standartlarına uygun ölçüm yerlerinde sağlanmaktadır. Numune alma işlemi için şartlar sağlanmadığında, numune alma noktaları sayısı artırılarak Temsilî numune almanın geliştirilmesiyle mümkün olabilir."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Kavramlar ve uygulama ayrıntıları",
+        "items": [
+          "Örnekleme düzlemi gaz akımının bozulduğu dirsek, vana, baca çıkış ağzı vb. noktalardan yeterince uzakta seçilmelidir. Hız profilinin Laminer akış profilini temsil etmesi gerekir. Laminer akış profilinde hız ortada maximum, kenarlara doğru sürtünmeden dolayı düşük olması gerekir. (TS ISO 10780 ve EPA 2 Standartlarına göre)"
+        ],
+        "ordered": false
+      },
+      {
+        "title": "İzokinetik Şartlarda Toz Örneklemesi Yapılması",
+        "items": [
+          "İzokinetik Numune Alma: Numune alma memesi girişindeki gaz hızı (Vn) ve yönünün, bacadaki numune alma noktalarındaki gazın hızı (Vs) ve yönü ile aynı olduğu akış hızında numune alma. (İzokinetik oranı (%) = Gerçek örnekleme akış hızı /Gerekli numune akış hızı X 100)"
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Eğer baca gazı hızı, numune alma hızından yüksek ise",
+        "items": [
+          "İzokinetik Örneklemenin Önemi numunenin konsantrasyonu bacanın konsantrasyonundan düşük çıkmaktadır. Eğer baca gazı hızı, numune alma hızında küçük ise numunenin konsantrasyonu bacanın konsantrasyonundan büyük çıkmaktadır. İzokinetiklik oranı çoğu numune alma cihazında, cihazın yazılımı tarafından hesaplanmakta ve ölçüm sırasında göstergesinden okunabilmektedir. Otomatik örnekleme yapmayan cihaz türlerinde ise ölçüm personeli izokinetiklik oranının sürekli hesaplamalı, sapma oluyorsa numune alma debisini ayarlamalıdır. İzokinetiklik oranı, referans koşullardaki gerçek örnek hacminin, referans koşullarda tahmin edilen örnek hacmine oranı ile hesaplanır. I = Vn,s / Vn,b x 100"
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Numune Alma Süresi",
+        "items": [
+          "Laboratuvar numune alma personeli kullandığı izokinetik numune alma cihazlarının izokinetikliği en uygun hangi aralıkta sağladığını bilmelidir. Çoğu cihaz için üretici firma, geniş bir çalışma aralığı verilebilir. Fakat çok düşük debilerde ve çok yüksek debilerde cihazlar izokinetik çekiş yapmakta zorlanabilirler. Özellikle cihazların pompalarının belirli bir zamandan sonra performansı düşebilir. Bu gibi durumlar dikkate alınmalı ve cihazı kullanan personel cihazının hangi debi aralıklarında en iyi performansta çalıştığını bilmelidir. Numune alma süresi belirlenirken hedef numune alma hacmi hesaplanmalı, cihazın performansına göre çekiş debisi belirlenmeli ve bu çekiş debisini sağlayacak nozul seçilmelidir. Numune alma süresi, örneklenecek gaz hacminin örnekleme debisine bölümü ile bulunur ve aşağıdaki formül ile hesaplanır. ts= V (lt) /Q (lt/dk) ts: Örnekleme süresi (dk) Vs: Örnekleme hacmi (lt) Qs: Örnekleme debisi (lt/dk)"
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Kavramlar ve uygulama ayrıntıları",
+        "items": [
+          "Baca İçi Örnekleme Düzeneği Filtre Baca İçinde Baca içi Partikül örnekleme (1)Başlık; (2) Filtre tutucu; (3) pitot tüpü; (4) sıcaklık probu; (5) sıcaklık ölçer; (6) statik basınç ölçer; (7) diferansiyel basınç ölçer; (8) isıtıcılı/izoleli prob (9) gaz kurutma cihazı; (10) vakum ünitesi akış kontrolü ve gaz sayacı"
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Baca Dışı Örnekleme Düzeneği",
+        "items": [
+          "Isıtma Ceketli Prob Filtre Baca İçinde ve Isıtmalı Filtre Tutucu Baca Dışı Partikül Örnekleme 1) Başlık; (2) Isıtıcılı filtre tutucu; (3) pitot tüpü; (4) sıcaklık probu; (5) sıcaklık ölçer; (6) statik basınç ölçer; (7) diferansiyel basınç ölçer; (8) isıtıcılı prob (9) gaz kurutma cihazı; (10) vakum ünitesi akış kontrolü ve gaz sayacı; (11) Barometre"
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Örnekleme Yapılacak Filtrenin Seçilmesi",
+        "items": [
+          "TS ISO 9096 TS EN 13284-1 EPA Metot 5 ve EPA Metot 17 - Cam elyaf - Fiber-glass - Kuvars elyaf - PTFE Örnekleme Yapılacak Filtrenin Şartlandırılması Metot Etüvde Şartlandırma Sıcaklığı Etüvde Bekleme Desikatörde Bekleme (OC) Süresi (saat) Süresi (saat) TS ISO 9096 180 (numune alma sonrası 160) >1 8-12 TS ISO 12141 180 (numune alma sonrası 160) >1 4-12 TS EN 13284-1 180 (numune alma sonrası 160) >1 4-12 EPA 5 105 2-3 >2 EPA 17 105 2-3 >2"
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Nozul",
+        "items": [
+          "Gaz akışını engellememelidir. Nozul ucundan itibaren uzunluğu boyunca ya en az bir iç çap uzunluğunda veya en az 10 mm uzunluğunda, hangisi büyükse, sabit bir çapa sahip olmalıdır. Delik çapındaki herhangi bir değişim 30°’den küçük bir konik açı ile düzgünleştirilmelidir. Dirseklerden en az 30 mm uzaklıkta olmalıdır. İzokinetik numune alma şartlarını sağlamak için nozul konikliğinin yeterli kalınlığa sahip olmasından gelen belirsizlik % 10’dan daha az olmalıdır. Bu nedenle, metotlarca tavsiye edilen nozul çapları kullanılmalarıdır. Tavsiye edilen nozul çapları Metot Tavsiye Edilen Nozul Çapı Minimum Nozul Çapı TS EN 13284-1 8 mm (10 mm Son Revizyonda) 6 mm TS ISO 9096 8 mm 4 mm TS ISO 12141 8 mm 6 mm EPA 5 6,4 mm 3,2 mm EPA 17 6,4 mm 3,2 mm 1"
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Nozul Seçimi",
+        "items": [
+          "Otomatik olarak çalışan İzokinetik Örnekleme Cihazlarının bir çoğu cihaz içinde nozul seçimini kullanıcıya sunmaktadır. Fakat örnekleme personeli nozul seçimin nasıl yapacağını bilmek zorundadır. Nozul seçiminde baca gazı hızı, örnekleme cihazının performansı ve hedeflenen örnekleme hacmi önemli kriterlerdir. Örneğin hızı 5 m/s olan bir bacada 15 litre/ dakika ile örnekleme yapmayı hedefliyoruz. Çapı kaç mm olan nozul kullanmalıyız? Q=(D2*π/4)*v (Örnekleme Debisi = (nozul çapının karesi * pi /4) * baca gazı hızı) 15 Litre/ dakika = 0,00025 m3/sn 0,00025 m3/sn = (D2*3,14/4)*5 m/sn D2= 0,0000637 m2 D= 0,008 m = 8 mm Sonuç olarak 8 mm lik bir nozul seçmemiz gerekmektedir."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Prob:",
+        "items": [
+          "Prob, düz ve iyice parlatılmış bir iç yüzeye sahip olmalı ve numune almadan önce gerekli şartları sağlaması için bir fırça veya diğer mekanik araçlar kullanarak kolayca temizlenebilecek şekilde dizayn edilmelidir. Isıtmalı probların yoğuşmayı engelleyecek şekilde ısıtma ceketi ile çevrelenmiş olması gerekmektedir. Bu ısıtma ceketi probun tamamını kapsamalıdır. Bölgesel ısıtma yapan ceketler uygun değildir. Ayrıca ısıtmanın sıcaklık kontörlü olmalıdır. Probun sıcaklığı personel tarafından ayarlanabilmelidir."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Filtre Tutucu:",
+        "items": [
+          "Filtre tutucu, baca dışına yerleştirildiğinde, yoğunlaşmayı önlemek için ısıtılmalı ve sıcaklık kontrollü olmalıdır. Filtre yuvası bağlantıların yakınında hiçbir gaz türbülânsı oluşmayacak şekilde tasarımlanmalıdır. Not: Cam elyaf filtreler, filtre kütlesinde artışa sebep olan SO3 gibi asidik bileşiklerle reaksiyona girebilir. Böyle bir durumun meydana gelebileceği bir yerde bunların kullanımı tavsiye edilmez."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Pompa:",
+        "items": [
+          "İstenilen gaz emişini sağlayabilecek güçte olmalıdır Kuru Gaz Akış Ölçer (Gaz Sayacı): Mutlak basınç ve mutlak sıcaklık ölçmeleri % 1 doğrulukta yapıldığında, beklenen akış hızını % 2 doğrulukta ölçebilir özellikte olmalıdır. Orifismetre: Çekilen gaz akış hızını ölçmek için orifis metre düzeneğe entegre olmalıdır."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Sıcaklık Sensörleri:",
+        "items": [
+          "Baca sıcaklığını ve kuru gaz sıcaklığını ölçmek için uygun aralıklarda ölçüm yapabilecek sıcaklık sensörleri olmalıdır. Akış Ölçer (Pitot Tüpü): Baca gazı akış hızını ölçmek için pitot tüpü sisteme entegre olmalıdır."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Numune Alma Düzeneğinin Hazırlanması ve Kaçak Testi:",
+        "items": [
+          "Numune alma düzeneği kurulmadan önce temiz olduğundan emin olunmalıdır. Eğer toz birikintileri görülürse temizlenmelidir. Baca dışı numune alımlarında yoğuşma olmaması için prob ve filtre tutucu ısıtılmalıdır. Tozu toplayacak filtre kontrol edilmeli zarar görmüş ve yıpranmış olmamalıdır. Sistem kurulduktan sonra kaçak testi uygulanmalıdır. Metotlara göre izin verilen kaçak oranları: Metot İzin Verilen Kaçak Oranı (%) TS ISO 9096 <2 TS ISO 12141 <2 TS EN 13284-1 <2 EPA 5 < 4 veya < 0,57 lt/dk (hangisi az ise) EPA 17 < 4 veya < 0,57 lt/dk (hangisi az ise) 2"
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Numune Alma Düzeneğinin Hazırlanması ve Kaçak Testi",
+        "items": [
+          "Tespit edilen kaçak oranı Tablo da verilen değerlerden yüksek ise numune alımına başlanmadan önce kaçağın nereden kaynaklandığının belirlenmesi gerekir. Bu işlem için kaçak olması muhtemel bağlantı elemanları sökülerek her sökülen parçanın dışında kalan kısım için kaçak testi yapılmak sureti ile tespit yapılabilir. Not: Yapılan çalışmalarda kaçağın çoğunlukla impinger serisindeki ara bağlantı elemanlarından veya filtre tutucudan kaynaklandığı gözlemlenmiştir. Not: Kaçak testi sonucu sistemdeki kaçak izin verilen değerlerin altına ise numune alma işlemine başlanabilir fakat tespit edilen kaçak miktarı, toplam belirsizlik hesabına dahil edilmelidir."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Numune Alma İşlemi:",
+        "items": [
+          "Numune alma sistemi kurulduktan sonra belirlenen düzlemde ve ölçüm noktalarında (travers) numune alma işlemine başlanır. Numune alma işlemi sırasında izokinetiklik oranına dikkat edilmelidir. Metotlara göre izokinetiklik oranları tabloda verilmiştir. Numune alma işlemi esnasında izokinetiklik şartlar metotlarda belirtilen değerlerin dışına çıkarsa ölçüm geçerli değildir. Metotlara göre İzokinetiklik oranları: Metot İzokineitiklik Oranı TS ISO 9096 % 95 - % 115 TS ISO 12141 % 95 - % 115 TS EN 13284-1 % 95 - % 115 EPA 5 % 90 - % 110 EPA 17 % 90 - % 110"
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Tanık Numune Alınması:",
+        "items": [
+          "Her ölçüm için mutlaka tanık numune alınmalıdır. Tanık numunede toplanan partikül kütlesinin gerçek numunede toplanan partikül kütlesine oranı 1/5 veya ELD değerinin % 10’dan küçük olmalıdır. Tanık numune alımı Metotlara göre farklılık gösterebilir. Ama genel olarak tanık numune alımı; örnekleme düzeneğinin kurulması fakat baca gazının örnekleme düzeneğinden geçirilmemesi şeklinde yapılır. Örnek Geri Kazanımı: Baca dışı örnekleme yapılan durumlarda, örnekleme sisteminin fitreye kadar olan kısımlarında biriken tanecikli maddelerin geri kazanılması için, saf su ve asetonla yıkama işlemi gerçekleştirilir. Geri kazanımdan elde edilen numuneler muhakkak toplam toz miktarına dahil edilmelidir. Özellikle nemli bacalarda Geri kazanımdan elde edilen toz miktarı filtrede toplanandan fazla çıkabilir."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Yatay Kanallarda Toz Numune Alımı:",
+        "items": [
+          "Yatay bacalarda toz örneklemesi yapılırken ölçüm yeri seçimine dikkat edilmelidir. Yer çekimi kuvvetinden dolayı yatay kanallarda toz partiküllerinin homojen dağılım yapması daha zordur. Numune alma yerinin A kesitinde seçilmesi her bir numune alma noktasında (travers) hızın ve toz konsantrasyonları arasındaki farkın çok değişken olmasına neden olabilir. Bu nedenle bozucu etkiden mümkün olduğu kadar kaçmak ve bacada laminer akışın en uygun olduğu yeri bulmak gerekmektedir (örneğin B kesiti). Ayrıca yatay kanallarda tozun çökmesini engellemek için hızın mümkün olduğu kadar yüksek olması tercih edilir. < 2 x 8xD D A Kesiti B Kesiti"
+        ],
+        "ordered": false
+      },
+      {
+        "title": "İzokinetik Örnekleme Hataları;",
+        "items": [
+          "İzokinetik örnekleme yapılması önemlidir. Eğer örnekleme çizgisel hızı, baca hızından yüksek olursa ölçülen konsantrasyon bacadaki gerçek konsantrasyondan düşük çıkacaktır. Örnekleme hızı, bacadaki gaz hızından düşük olursa bacada ki gerçek konsantrasyondan daha yüksek bir toz miktarı ölçülecektir."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "2-Hizalama Hataları",
+        "items": [
+          "Baca gazı akış yönüne nozulun hizlamasının metotlarda izin verilen açıyı geçmemesi gerekmektedir. Açısal hata ne kadar fazla olursa o gerçek konsantrasyondan o kadar az toz toplanabilecektir."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "2-Nozul Çapı Hataları",
+        "items": [
+          "Baca gazı hızına ve örnekleme debisine bağlı olarak mümkün olduğu kadar büyük çaplı nozullar kullanılmalıdır."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Dikkat Edilmesi Gereken Diğer Hususlar",
+        "items": [
+          "Eğer numune alma planında nem ölçümü toz numune alması ile birlikte yapılması planlanmış ise numune alma öncesinde EPA 4’de belirtilen yaklaşım metodu ile yaklaşık bir nem hesabı yapılmalı ve izokinetiklik hesabı için kullanılmalıdır. İzokinetik örneklemelerde, numune alma öncesi basınç ve sıcaklık değerleri de ölçülmelidir. Bacanın çiğlenme noktası hesaplanmalıdır. Genel yaklaşım baca dışı örneklemelerde prob ve filtre tutucu çiğlenme noktasının en az 20 OC ‘ üstüne kadar ısıtılmalıdır. Fakat eğer metotta bir sıcaklık değeri belirlenmiş ise belirlenen sıcaklık değeri kullanılmalıdır. Kaçak testi sonucu sistemdeki kaçak izin verilen değerlerin altına ise numune alma işlemine başlanabilir fakat tespit edilen kaçak miktarı, toplam belirsizlik hesabına dahil edilmelidir. Numune alımlarında önce ortam sıcaklığı da ölçülmeli ve kayıt altına alınmalıdır. Birçok numune alma cihazı ortam çalışma şartlarını kılavuzlarında belirtmektedir. Eğer ortam sıcaklığı numune alma sistemindeki her hangi bir cihazın çalışma aralığından yüksek veya düşük ise numune alma işlemine başlanmamalıdır."
+        ],
+        "ordered": false
+      }
+    ]
+  },
+  {
+    "id": "egitim-hcn-sulfurik",
+    "title": "Siyanür ve sülfürik asit",
+    "method": "Alkalik toplama • Ayrı asit/SO₂ fraksiyonları",
+    "domain": "Eğitim",
+    "trains": [],
+    "visual": null,
+    "sections": [
+      {
+        "title": "Siyanür toplaması",
+        "items": [
+          "CARB 426 yaklaşımında ilk iki şişede 100 mL 0,1 N NaOH, üçüncüde boş kapan ve son şişede silika jel bulunur.",
+          "Numune alkalik korunur; pH>12 koruma şartı laboratuvar prosedürüyle uygulanır. Beklenen oksitleyici girişimler ve koruma reaktifleri birlikte değerlendirilir.",
+          "İzokinetik numune alma, uygun filtre ve soğutma ayrı gerekliliklerdir."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Sülfürik asit ve SO₂ ayrımı",
+        "items": [
+          "EPA 8’de izopropanol bölümü asit sisi/SO₃’ü; peroksit bölümü SO₂’yi toplar. İki fraksiyonun aynı kapta toplanması analit ayrımını bozar.",
+          "Düzen: 100 mL %80 izopropanol, iki adet 100 mL %3 H₂O₂ ve silika jel. Filtre seçilen düzenin fraksiyon sınırında yer alır.",
+          "Prob ısıtması yoğuşma kaybını, buz banyosu sıvı bölümünün performansını kontrol eder."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Geri kazanım ve şahit",
+        "items": [
+          "Numune alan gaz temas yüzeyleri ilgili absorpsiyon/durulama sıvısıyla geri kazanılır; asit/baz/organik çözücü birbirinin yerine kullanılamaz.",
+          "Saha tanığı bütün hazırlık/geri kazanım işlemlerini görür ancak baca gazı geçmez.",
+          "Analitik girişim, son hacim, blank ve metot aralığı derişim hesabının geçerliliğini belirler."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Baca gazında Siyanür CARB 426",
+        "items": [
+          "Metoduna göre tayin edilir. Bu metotta siyanür bileşiklerinin belirlenmesi için EPA Metot 5 gereğince gaz yıkama şişeleriyle sıvı absorbanlara izokinetik olarak örneklenmesi ve kolorimetrik metotla belirlenmesi anlatılmaktadır."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "İmpinger serisi; İlk iki impingera 0,1 N NaOH çözeltisi son",
+        "items": [
+          "impingera ise slika jel olacak şekilde kurulmalıdır. Örneklenecek baca gazı önemli miktarda karbondioksit içeriyorsa sodyum hidroksit yerine sodyum bikarbonat da kullanılması uygundur. İmpingerlara konulacak absorbans miktarı metotta belirtilmemek ile birlikte 100 ml hacimde absorbans çözeltisi konulması uygundur. Filtre olarak cam elyaf filtreler kullanılmalıdır. Örnekleme düzeneğinde numune ile temas edecek tüm metaryeller (Nozul, filtre tutucu, prob, bağlantı elemanları v.b.) Borosilikat ya da kuvars cam olmalıdır. Kaçak Testi Prosedürü: Her bir örneklemden önce ölçüm öncesi ve ölçüm sonrası kaçak testi yapılması gereklidir."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Geri Kazanım:",
+        "items": [
+          "Örnekleme bittikten sonra bacadan prob çekilir ve prob ucunu kapatarak soğumasını beklenir. Daha sonra numunenin çıkarılması ve geri kazanımı başlar. KAP 1 ( Filtre ): Filtre, filtre tutucudan dikkatlice çıkarılarak 50 ml NaOH çözeltisinin içerisine atılır. Filtre tutucuda kalan partikül maddeler dikkatlice yumuşak bir fırça ile süpürülerek buraya alınır."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "KAP 2 ( Prob ): Nozulundan başlayarak filtreye kadar olan kısım",
+        "items": [
+          "( örneklemede maruz kalmış bütün yüzeyler ) 0,1N NaOH çözeltisi ile yıkanarak cam bir kaba ilave edilir. Dikkatlice prob çıkarılır ve içerisi hiçbir partikül madde kalmayacak şekilde naylon fırça ile temizlenip 0,1 N NaOH çözeltisi ile iyice yıkanır ve filtre tutucuda temiz bir naylon fırça ile temizlenir. KAP 3 ( Silika Jel ): Kap -3’e silika jel alınır"
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Şahit Numune:",
+        "items": [
+          "Örnek geri kazanımında izlenen adımlar aynı şekilde izlenerek kullanılan miktardaki reaktifler saha şahidi olarak ayrı kaplara alınır ve işaretlenir. Taşıma: Numuneler taşınırken sızıntı olmamasına dikkate edilmelidir. Analiz: Numuneler titrimetrik ya da kolorimetrik olarak analiz edilir. Gümüş nitrat kullanılarak titrasyon yöntemi, 1 mg / L'den (0.25 mg / 250 mL emici sıvı) daha büyük siyanid konsantrasyonlarını ölçmek için kullanılır ve saptama sınırı 0,3 mg / L'dir. Kolorimetrik yöntem ise 0.02 - 1 mg / L çalışma aralığına ve 0.01 mg / L saptama sınırına sahiptir."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "EPA 8 Metodu ile tayin edilir.",
+        "items": [
+          "Örnekleme EPA Metot-5’ e göre izokinetik olarak yapılır. Bu metotta; Sülfürik Asit (H2SO4), Sülfür Dioksit (SO2) gazlarının izokinetik olarak örneklenmesi ve tayini için EPA Method 8 gereğince gaz yıkama şişeleriyle sıvı absorbanlara izokinetik olarak örneklenmesi ve Baryum Thorin titrasyon metodu ile ayrı ayrı belirlenir."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Prob ve nozullar borosilikat veya kuartz cam",
+        "items": [
+          "malzemeden yapılmış ve prop hattı ısıtmalı olmalıdır. İmpingerlar örnekleme probuna yine cam malzemelerle bağlanmalıdır. Örnekleme hattı 4 adet impingerdan oluşur. Kaçak Testi Prosedürü: Her bir örneklemden önce ölçüm öncesi ve ölçüm sonrası kaçak testi yapılması gereklidir."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "İmpinger serisi; ilk impingera 100 ml, %80’lik",
+        "items": [
+          "izopropanol, ikinci ve üçüncü impingera 100 ml, %3’lük hidrojen peroksit, son impingera ise slikajel olacak şekilde kurulmalıdır. Birinci ve ikinci impinger arasında filtre tutucu kurulmalıdır. Saklama kapları cam ya da polietilen malzemeden yapılmış olmalıdır. Numune alımı EPA 5 Metoduna göre izokinetik olarak yapılmalıdır. Fakat numune çekiş debisi 30 L/dk’nın altında olacak şekilde nozul seçimi yapılmalıdır."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Örnek Geri Kazanımı:",
+        "items": [
+          "Numune alma işlemi sonrası ilk impinger 250 ml’yi ölçebilecek bir mezüre aktarılır. Prob ve filtre öncesi baca gazı ile temas etmiş parçalar izopropanol çözeltisi ile durulanarak mezüre aktarılır ve izopropanol çözeltisi ile 225 ml’ye tamalanarak 1 nolu kaba alınır. Ardından 25 ml izopropanol çözeltisi ile impinger durulanarak kaba ilave edilir. İkinci ve üçüncü impingerlar 1000 ml’lik mezüre aktarılır. Ara bağlantı elemanları saf su ile yıkanarak mezüre alınır ve saf su ile mezür 950 ml’ye tamamlanır. Ardından impingerlar 50 ml saf su ile yıkanarak 2 nolu saklama kabına alınır."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Şahit Numune:",
+        "items": [
+          "Örnek geri kazanımında izlenen adımlar aynı şekilde izlenerek kullanılan miktardaki reaktiflerden saha şahidi olarak ayrı kaplara alınır ve işaretlenir. Analiz: Baryum Thorin Titrasyon Metodu"
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Kavramlar ve uygulama ayrıntıları",
+        "items": [
+          "Numune alma işlemi bittikten sonra sistemden 15 dakika boyunca temiz hava geçirilmelidir. Temiz havayı sağlamak için aktif karbon tüpleri hava filtreleyici olarak kullanılabilinir. Numuneler taşınırken sızıntı olmamasına dikkate edilmelidir. Not: EPA 8 Metodu sülfürik asitten kaynaklanan sülfüroksit bileşiklerinin ölçülmesi için uygundur. Katı sülfat emisyonlarına sahip olan kaynaklar ve katı sülfatlar, sodyum sülfat gibi bileşiklerin olduğu kaynaklarda, ayrıca önemli miktarda sülfür dioksit ve amonyak emisyonuna sahip olan kaynaklarda EPA 8 metodu girişimlerden dolayı uygun bir metot değildir. Bu gibi kaynaklarda ön filtreleme ile katı sülfatların filtrelendiği EPA 8A Metodu ile numune alma işlemi yapılması gerekmektedir."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Probe Nozulları ve ısıtılmış örnekleme hattı",
+        "items": [
+          "Borosilikat ya da kuvars cam olmalıdır. Fitre: Teflon kaplı cam elyaf filtre kullanılır. Kullanılan İmpinger Düzeneği : Atık gaz, 0,1 Normal 100 ml NaOH çözeltisinden geçirilir.(pH > 8 olmalıdır.) Teflon kaplı cam elyaf filtre kullanılır. Örnekleme akışı prob, impingerlar ve daha sonra filtre olarak sıralanmaktadır. Numune alma işlemi sonrasında absorbansların hala bazik olduğundan emin olunmalıdır. Bu nedenle pH seviyesi kontrol edilmelidir."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Geri Kazanım",
+        "items": [
+          "Prob ve nozul 100 ml 0,1 N NaOH çözeltisi ile yıkanarak 1 nolu kaba aktarılır. Beklenen krom konsantrasyonu yüksek ise impingerlar içindeki kullanılan absorbans çözeltisi impingerlar çalkalanarak bir kaba aktarılır. Filtrede bu kaba aktarılarak en 30 dakika çalkalama işlemi yapılmalıdır. Eğer beklenen krom konsantrasyonu düşük ise her bir impinger ayrı kaplara konulmalıdır (2 ve 3 nolu kaplar) filtre ise krom konsantrasyonunun yüksek olduğu düşünülen kaba alınmalıdır. Tanık Numune Tanık numune alırken, numune alma düzeneği kurulup içerisinde gaz geçirilmeden tanık numune alımı yapılmalıdır. Numune en geç 2 hafta içinde analiz edilmelidir. Numune analiz öncesi 4 oC’nin altında muhafaza edilmelidir. Geri kazanım işlemi numune alımı sonrası 24 saat içinde yapılmalıdır. Alınan her bir numune ikiye bölünmelidir. Bunlardan birisi toplam krom analizi için diğeri ise krom +6 analizi için kullanılacaktır. Krom+6 analizi iyon kromotografide ya da spektrofotometrede yapılabilir."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "EPA CTM 027 Metodu ile amonyak tayini için numune alma işlemi EPA 17 Metoduna göre",
+        "items": [
+          "analizi ise iyon kromotografi cihazında yapılmaktadır. Ayrıca SCAQMD 207.1 Metodu da baca gazında amonyak tayini için yaygın olarak kullanılan metotlardan biridir. Bu metot sabit akışta numune alma ve iyon seçici elektrot ile analizi kapsamaktadır."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Kullanılacak Absorbanslar ve Ekipmanlar",
+        "items": [
+          "EPA CTM 027 Metoduna göre; Prob, nozul ve filtre tutucu cam ya da kuvars malzemeden yapılmış olmalıdır. Absorbanslar için cam malzemeden yapılmış, 2 adet modifiye uçlu, 2 adet standart uçlu Greenburg-Smith tasarımlı impingerlar kullanılmalıdır. Saklama kapları: HDPE malzemeden yapılmış, 500 ml hacimli olmalıdır. SCAQMD 207.1 Metoduna göre; Cam veya 316 tip paslanmaz çelik prob kullanılmalıdır. Düşük sıcaklıklı bacalarda metot teflon malzeme kullanımına da izin vermektedir. Filtre tutucu olarak da partikül madde veya örneklenmiş gazlarla reaksiyona girmeyen paslanmaz çelik, teflon veya viton gibi malzemeler kullanılmalıdır. Absorbanslar için birinci ve ikinci impingerlar standart tipli Greenburg-Smith tasarımlı, üçüncü ve dördüncü impingerlar 1,3 cm uçlu modifiye tasarımlı Greenburg-Smith impingerlar olmalıdır. Ya da 4 adet 30 ml kapasiteli cüce impingerlarda kullanılabilinir."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Numune Alma İşlemi",
+        "items": [
+          "EPA CTM 027 Metoduna Göre Numune Alımı; Numune alımı EPA 17 Metoduna göre izokinetik olarak yapılmalıdır. İlk iki impingera 100 ml 0,1 N H2SO4 konulur, üçüncü impinger boş bırakılır. Eğer bacada amonyak konsantrasyonunun yüksek olması bekleniyorsa üçüncü impingera da 100 ml 0,1 N H2SO4 konulur. Son impingera ise 200- 300 gram arası slikajel konulmalıdır."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "SCAQMD 207.1 Metoduna Göre Numune Alımı",
+        "items": [
+          "Bu metotda iki numune alma yöntemi vardır. Birinci yöntem, Greenburg-Smith tasarımlı impinger düzeneğine numune alma, ikinci yöntem ise cüce impingerlar kurulu düzeneğe numune alma yöntemleridir. Birinci yöntemde ilk iki impingera 100 ml 0,1 N H2SO4 konulur, üçüncü impinger boş bırakılır, son impingera ise slikajel konulur. Numune alma çekiş debisi 15 L/dk ile 30 L/dk Greenburg-Smith impingerların Kullanıldığı Numune Alma arasında olacak sabit bir çekiş debisi ile alınır. Düzeneği"
+        ],
+        "ordered": false
+      },
+      {
+        "title": "SCAQMD 207.1 Metoduna Göre Numune Alımı",
+        "items": [
+          "2. yöntemde ise ilk iki impingera 15 ml 0,1 N H2SO4 konulur, üçüncü impinger boş bırakılır, son impingera ise slikajel konulur. Bu yöntemde numune alma debisi personele bırakılmıştır. Fakat cüce impingerlar kullanılmasında dolayı yüksek bir debi ile numune alımı önerilmez. Yüksek bir debi ile numune alımı yapılırsa absorblama verimi düşecektir. Numune alma işlemi geçersiz olacaktır. Cüce impingerların kullanıldığı Numune Alma Düzeneği"
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Geri Kazanım",
+        "items": [
+          "EPA CTM 027 Metoduna Göre Geri Kazanım; İlk üç impinger içerisindeki absorbanslar saklama kabına boşaltılır. Sonra bu impingerlar ve bağlantı elamanları saf su ile durulanarak saklama kabına ilave edilmelidir. Durulama ile birlikte saklama kabının hacmindeki toplam sıvı miktarının 230 ml’yi geçmemesine dikkat edilmelidir. SCAQMD 207.1 Metoduna Göre Geri Kazanım: İmpingerlardaki çözeltilerin pH’ları ölçülür. Eğer ikiden yükse ise numune alma işlemi geçersizdir. İmpingerlar içindeki çözeltiler (slikajel hariç) saklama kabına aktarılır. Bağlantı elmanları, impingerlar saf su ile durulanarak saklama kabına ilave edilir. Ardından numune 500 ml’ye seyreltilir (Seyreltme işlemi mini impingerların geri kazanımında 75 ml’ye kadardır). 2"
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Tanık Numune",
+        "items": [
+          "Numune alma düzeneği absorbanslar ile birlikte kurulur ve içinde gaz geçirilmeksizin geri kazanılır. Geri kazanılan bu numune tanık numune olarak kullanılır. Numune analiz öncesi 4 oC’nin altında muhafaza edilmelidir."
+        ],
+        "ordered": false
+      }
+    ]
+  },
+  {
+    "id": "egitim-voc-secim",
+    "title": "VOC parametresinde yöntem seçimi",
+    "method": "Uçuculuk • Polarite • Reaktivite • Sorbent",
+    "domain": "Eğitim",
+    "trains": [],
+    "visual": null,
+    "sections": [
+      {
+        "title": "İlk karar: hangi analit?",
+        "items": [
+          "VOC adı tek bir bileşik veya tek cihaz ölçümü değildir. Hedef bileşikler ve beklenen derişim listelenir; örnekleme ve analiz yöntemi birlikte seçilir.",
+          "Uçuculuk, polarite/suda çözünürlük ve reaktivite başlıca seçim kriterleridir. Kaynama noktası tek başına güvenilir bir yöntem seçimi sağlamaz.",
+          "Çok uçucu bileşikler sorbentte tutulmakta zorlanabilir; yarı uçucular gaz ve partikül fazında birlikte bulunabilir."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Örnekleme türleri",
+        "items": [
+          "Tam hava yöntemleri canister, torba veya doğrudan örnek yaklaşımını kullanır.",
+          "Sorbent yöntemleri aktif karbon, Tenax, PUF/XAD gibi materyallere toplar; tüp kapasitesi ve desorpsiyon uyumu önemlidir.",
+          "Reaktif/polar bileşikler özel sıvı toplama veya türevlendirme gerektirebilir; yüzey kaybı ve suyla reaksiyon değerlendirilir."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Yöntem eşleştirmeleri",
+        "items": [
+          "TS EN 13649 baca VOC’lerinin sorbent/çözücü desorpsiyon yaklaşımını ele alır. EPA 18 torba/sorbent/doğrudan GC seçeneklerini içerir.",
+          "EPA TO-17 ortam havasında aktif sorbent tüp; TO-13A ortam PAH; TO-4A/TO-10A pestisit/PCB için PUF yaklaşımlarıdır. Ortam yöntemini baca yöntemi gibi kullanma.",
+          "TO-11A DNPH kartuşla ortam karbonilleri; EPA 0011 DNPH içeren izokinetik örnekleme; CARB 430 formaldehit/asetaldehit HPLC yaklaşımıdır.",
+          "EPA 323 formaldehitin suya sabit akış toplaması, EPA 316 ise izokinetik yaklaşımıdır. Metot numarası benzer diye prosedürler aynı olmaz."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Güvenli numune hacmi",
+        "items": [
+          "Minimum tayin hacmi ile sorbent kapasitesinin izin verdiği maksimum hacmi birlikte hesapla.",
+          "Nem, sıcaklık ve derişim güvenli kapasiteyi düşürebilir. Yedek tabaka analizi breakthrough kontrolünü sağlar.",
+          "Yöntem seçiminde analiz laboratuvarının doğrulanmış bileşik listesi ve geri kazanım verimini kontrol et."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Uçucu organik bileşikler (VOC), ihmal edilebilir fotokimyasal reaktifliğe",
+        "items": [
+          "sahip olarak tanımlananlar hariç olmak üzere, atmosferik fotokimyasal reaksiyonlara katılan karbon monoksit, karbon dioksit, karbonik asit, metalik karbürler veya karbonatlar ve amonyum karbonat hariç herhangi bir karbon bileşiği anlamına gelir. (EPA) Bilimsel literatürde VOC'lerin genel tanımı ; bileşimleri normal iç ortam atmosferik sıcaklık ve basınç koşullarında buharlaşmalarını mümkün kılan organik kimyasal bileşiklerdir. Bir bileşiğin uçuculuğu genellikle kaynama noktası sıcaklığı ne kadar düşükse o kadar yüksek olduğundan, organik bileşiklerin uçuculuğu bazen kaynama noktalarına göre tanımlanır ve sınıflandırılır. Avrupa Birliği, VOC'lerin tanımı yaparken uçucu organik bileşiklerin kaynama noktasını kullanmaktadır. VOC, 101,3 kPa'lık standart atmosfer basıncında ölçülen başlangıç kaynama noktası 250°C veya daha düşük olan herhangi bir organik bileşiktir."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "VOC'ler yayılma kolaylığına göre aşağıdaki kategorilere ayrılır.",
+        "items": [
+          "Çok uçucu organik bileşikler (VVOC'ler) Uçucu organik bileşikler (VOC'ler) Yarı Uçucu Organik Bileşikler (SVOC'ler) Uçuculuk ne kadar yüksekse (kaynama noktası ne kadar düşükse), bileşiğin bir üründen veya yüzeyden havaya yayılma olasılığı o kadar yüksektir. Çok uçucu organik bileşikler o kadar uçucudur ki ölçülmeleri zordur ve malzemelerde veya yüzeylerde olmaktan ziyade neredeyse tamamen havada gaz olarak bulunurlar.."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Numune alma için uygun bir yöntem seçimi için ilk kriter, izlenecek bileşiklerin",
+        "items": [
+          "fiziksel ve kimyasal davranışlarıdır. Analit, uçucu bir bileşik olarak nitelendikten sonra uygun ölçüm yöntemi (örnekleme ve analiz) seçilir. Bu aşamada bu parametre için uygun örnekleme ve analiz metodu olup olamadığına bakılır. Örneklemenin nasıl veya neye yapılacağına karar verilir. Sorbent ve çözücü seçim kriterleri çok önemlidir."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "VOC - Fiziksel ve Kimyasal Davranışlarını sınıflandırırsak;",
+        "items": [
+          "Uçuculuk Polarite / suda çözünürlük Reaktivite Kararlı, reaktif olmayan Yoğunlaşarak su ile reaksiyona girenler."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Çok Uçucu Organik Bileşişler; 25°C'de (kaynama noktaları tipik olarak 30°C'nin",
+        "items": [
+          "altında) buhar basıncı 15 kPa'nın üzerinde olan VOC'ler bazen çok uçucu organik bileşikler (VVOC'ler) olarak anılır. Oda sıcaklığında ve atmosferik basınçta, VVOC'ler havada gaz fazında bulunur. Yüksek buhar basınçları nedeniyle, VVOC'lerin emici maddeler üzerinde toplanması ve tutulması genellikle VOC'lere göre daha zordur. Uçucu organik bileşikler tipik olarak 25°C'de 10-2 kPa'nın üzerinde buhar basınçlarına sahiptir (tipik kaynama noktaları yaklaşık 30 ila 180°C arasındadır). Kaynama noktaları aralığın üst ucunda olan VOC'ler, oda sıcaklığında ve atmosfer basıncında hala önemli bir buhar basıncına sahiptir. Oda sıcaklığında ve atmosferik basınçta, havada gaz fazında VOC'ler bulunur."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Yarı uçucu organik bileşikler (SVOC'ler) tipik olarak 25°C'de (tipik kaynama",
+        "items": [
+          "noktaları 180 ila 350°C arası) 10-2 ile 10-8 kPa arasında buhar basınçlarına sahiptir. SVOC'ler hem buhar hem de partikül fazlarında mevcut olabilir (1). Uçucu olmayan organik bileşiklerin buhar basınçları 25°C'de 10-8 kPa'nın altındadır (kaynama noktaları tipik olarak 300°C'nin üzerindedir). Uçucu olmayan organik bileşikler esas olarak parçacık fazında meydana gelir. Önemli Not: Kaynama noktaları volatilitenin güvenilir göstergeleri değildir. 300°C'nin üzerinde kaynayan bazı bileşikler oda sıcaklığında uçucudur. Yarı-uçucu bileşikler veya SVOC'ler, kaynama noktaları nedeniyle Baca gaz sıcaklığına bağlı olarak hem katı hem de buhar fazında olabilen organik bileşiklerdir. Sonuç olarak, izokinetik örnekleme yöntemlerinin seçilmesi en iyi sonucu verebilir."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Bir VOC'nin polaritesi, suda çözünürlüğü ve reaktivitesi, numune alma ve analitik",
+        "items": [
+          "yöntemlerin seçiminde kritik öneme sahiptir. VOC'lerin polariteleri polar olmayandan (örneğin propan) çok polara (örneğin asetik asit) kadar değişir. Polar organik bileşikler tipik olarak oksijen, nitrojen, kükürt veya diğer heteroatomları içerir ve iyonlaşabilen veya polarize olabilen olarak sınıflandırılabilir. İlk kategori alkolleri, fenolleri, aminleri ve karboksilik asitleri içerir; ikincisi ketonları, eterleri, nitro bileşiklerini, nitrilleri ve izosiyanatları içerir. VOC'lerin reaktiviteleri de kararlıdan (örneğin benzen) yüksek derecede reaktife (örneğin diazometan) kadar değişir. Polar bileşikler sıklıkla reaktif bileşiklerdir ve genellikle numune alma cihazlarından geri kazanılmaları daha zordur ve kimyasal reaktiviteleri, metal ve diğer yüzeylere olan ilgileri ve suda çözünürlükleri nedeniyle özel analitik problemler sunarlar. Bu problemler iyonlaşabilen bileşiklerde daha şiddetlidir."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "VOC'ler için Numune Alma Yöntemlerinin Seçimi",
+        "items": [
+          "Analit uçucu bir bileşik olarak tanımlandıktan sonra uygun ölçüm yöntemi (numune alma ve analiz) seçilir. Örnekleme yöntemleri aktif veya pasif olabilir. Aktif numune alma yöntemleri üç geniş türe ayrılabilir: canisters (hava örnekleme kabı), torbalar veya şırıngalar kullanan tam hava yöntemleri; sorbent toplama yöntemleri; ve reaktif bileşikler için özel numune alma yöntemleridir."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Yoğunlaştırılabilir/Yarı Uçucu/Reaktif Olmayan",
+        "items": [
+          "(Örneğin naftalin ölçmek için yeterli miktarda toplamak/yoğunlaştırmakla ilgilidir) - 25°C'de 10-2 ila 10-8 kPa'dan büyük buhar basınçları - Kaynama noktaları genellikle 180 ila 350 °C'dir. Yarı uçucu bileşik ölçümü - Sorbent örnekleme (örneğin stiren, naftalin) - Isıtılmış örnekleme hatları – doğrudan analiz - SW-826 Yöntemleri 0010/8270 - Yöntem 18 veya diğer sorbent yöntemleri"
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Reaktif Olmayan Suda Çözünmeyen",
+        "items": [
+          "Referans Yöntem 18 - çok uçucu bileşikler Tedlar torbalarından veya doğrudan kaynaktan Referans Yöntem 320 – FTIR"
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Reaktif olmayan, polar/suda çözünür VOC",
+        "items": [
+          "(Ölçümler daha zordur - örn. metanol, etanol, aseton, asetaldehit, metil etil keton, eterler) - Manuel örnekleme yapılır - Sorbent destekli veya desteksiz impinger kullanılır - Doğrudan sulu analiz – çok hassas değil - Türev çıkarma ve analiz etme Reaktif olmayan, polar/suda çözünür yöntem örnekleri - İmpenger Yöntem 323 (formaldehit ve diğerleri) Türevlendirme/analiz - İmpiger + sorbent desteği Yöntem 308 (metanol, glikol eterler), Su analizi ve Sorbent analizi"
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Sorbent Örneklemesi",
+        "items": [
+          "EPA Yöntemi TO-4A EPA Yöntemi TO-10A EPA Metod TO-13A Yüksek Hacim 12 EPA Metod TO-13A Düşük Hacim 14 EPA Yöntemi 0010 / 8270C, (EPA M5 Örnekleme düzeneği) EPA Metod TO-17 18 EPA Metod VOST, 0030 / 5041A 22 NIOSH Yöntemleri EN 13649 metodu Solüsyon Örneklemeleri Çözüm Örnekleme EPA Yöntemi TO-5 EPA Yöntemi TO-11A CARB 430 Yöntemi EPA Yöntemleri 0011/316 1"
+        ],
+        "ordered": false
+      },
+      {
+        "title": "SORBENT & SOLİSYON Örnekleme Metotları",
+        "items": [
+          "EPA TO-4A Yüksek Hacimli Poliüretan Köpük (PUF) Örneklemesi ve GC veya Elektron Yakalama Dedektörü (GC / ECD) kullanılarak Ortam Havasında Pestisitlerin ve Poliklorlu Bifenillerin (PCB'ler) Belirlenmesi için kullanılır. Bu yöntem, ortam havasında pestisitlerin ve PCB'lerin numune toplanması ve analizi için geçerlidir. EPA Yöntemi TO-10A Düşük Hacimli Poliüretan Köpük (PUF) Örneklemesi ve ardından GC veya Elektron Yakalama Dedektörü (GC / ECD) kullanılarak Ortam Havasındaki Pestisitlerin ve Poliklorlu Bifenillerin Belirlenmesi. Bu yöntem, ortam havasında pestisitlerin ve PCB'lerin numune toplanması ve analizi için geçerlidir. EPA Yöntemi TO-13A Gaz Kromatografisi / Kütle Spektrometresi (GC / MS) Kullanılarak Ortam Havasındaki Polisiklik Aromatik Hidrokarbonların (PAH) Tayini. Bu yöntem, ortam havasındaki PAH'ların analizi için geçerlidir. Yüksek hacimli PUF / XAD örnekleme prosedürü 24 saatlik örnekleme süresi için geçerlidir"
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Ts en 13649",
+        "items": [
+          "Bu standart Çözücü kullanan proseslerden kaynaklananlar gibi aktif uçucu organik bileşenlerin aktifleştirilmiş karbon üzerine örneklenmesi, çözücü uygulayıcı işlemlerinde ortaya çıkan bu gibi organik numunelerin hazırlanması ve analizi ile ilgili işlemler içerir. EPA Yöntemi 0010 / 8270C Modifiye Yöntem 5 Numune Alma Düzeneği Yakma Sistemlerinden ve Sabit Kaynaklardan Yarı Uçucu Başlıca Tehlikeli Bileşiklerin (POHC'ler) İmha ve Uzaklaştırma Verimliliğinin (DRE) Belirlenmesi. EPA Yöntemi TO-17 Sorbent Tüpler Üzerinden Aktif Örnekleme Kullanılarak Ortam Havasındaki Uçucu Organik Bileşiklerin Belirlenmesi. Bu yöntem, önceki sorbent bazlı EPA Yöntemleri TO-1 ve TO-2'nin yerini alır ve teneke kutu bazlı EPA Yöntemi TO-15'e bir alternatif sağlar. Tüp Stili 3 (yani Supelco tarafından üretilen Carbotrap 300),% 65'in altındaki bağıl nem ve 30 ° C'nin altındaki sıcaklıklarda 2 L hava hacimleri için uçuculuk açısından n-C3'ten n- C16'ya kadar değişen bileşikler için kullanılabilir. Naftalin ve orta distilatı etkili bir şekilde toplamak için kullanılabilir."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "EPA Yöntemi 0030 / 5041A (VOST)",
+        "items": [
+          "Bu yöntem, tehlikeli atık yakma fırınlarının baca gazı atıklarından uçucu temel organik tehlikeli bileşenlerin (POHC'ler) toplanmasını açıklar. Tanım amacıyla, uçucu POHC'ler, kaynama noktaları 100 ° C'nin altında olan uçucu organiklerdir. Gazlı numune, GC / FID kullanılarak taranır. Yöntem 0031 M0031 kısmen, tek başına kaynama noktasına dayalı kılavuzlar sağlayan M0030'un aksine hangi organik bileşiklerin toplanmaya uygun olduğunu belirtmek için yazılmıştır. Ayrıca, polar ve reaktif bileşikler, M0031 toplama stratejisi için zayıf performans gösterenler olarak tanımlanır. Yöntem 0031'de VOST, organik kütleyi yakalamak için sırasıyla Tenax, Tenax ve Anasorb içeren üç cam tüpten oluşur."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "EPA Yöntemi TO-11A",
+        "items": [
+          "Havadaki formaldehit ve diğer karbonil bileşikleri (aldehitler ve ketonlar), numune alma pompası kullanılarak DNPH kaplı bir silika jel kartuşundan numune çekilerek toplanır. TO-11A, iç mekan havasına, ortam havasına ve kaynaktan etkilenen alanlara uygulanabilir. Düşük ppbv ortamları için 24 saate kadar toplama süreleri kullanılır ve daha yüksek konsantrasyon alanları için kısa süreli örnekleme (5 ila 60 dakika) kullanılabilir. CARB Yöntemi 430 Bu yöntem, sabit kaynaklardan formaldehit ve asetaldehit emisyonlarının belirlenmesi için geçerlidir. Yöntem, yüksek performanslı sıvı kromatografisinin (HPLC) kullanımına dayanmaktadır. EPA Yöntemi 0011 Sabit kaynaklardan seçilen aldehit ve keton emisyonları için örnekleme. Yöntem 0011 örnekleme, DNPH ile doldurulmuş impenger içeren bir izokinetik örnekleme dizisinden oluşur. Formaldehit ve diğer aldehitler ve ketonlar türevleri oluşturmak için DNPH ile reaksiyona girer. Türevler çıkarılır ve HPLC / UV ile analiz edilir."
+        ],
+        "ordered": false
+      }
+    ]
+  },
+  {
+    "id": "egitim-voc-formaldehit",
+    "title": "VOC ve formaldehit örnekleme",
+    "method": "Sorbent / su • EPA 323 / 316",
+    "domain": "Eğitim",
+    "trains": [],
+    "visual": null,
+    "sections": [
+      {
+        "title": "VOC tüpünde ölçüm",
+        "items": [
+          "Aktif karbon ön ve yedek tabakalı tüpte tutulur; gazın debisi ve toplam hacmi ölçülür.",
+          "Numune hattı kısa ve inert, sorbent gazı 40 °C altında ve yoğuşmasız tutulur.",
+          "Yüksek sıcaklık/nem veya yüksek organik derişimde seyreltme gerekebilir. Seyreltme gazı ve baca gazı hacimleri ayrı ölçülür."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Formaldehit yöntemleri",
+        "items": [
+          "EPA 323: üç cüce şişe, boş → 20 mL saf su → silika jel; 0,2–0,4 L/dakika düşük debi.",
+          "EPA 316: izokinetik dört şişeli sistem; iki 100 mL saf su, boş şişe ve 200–300 g silika jel. Çekiş 28 L/dakika altında planlanır.",
+          "EPA 323’de 40 mL VOA numune kabı başlangıç absorpsiyon hacmi değildir; numune/durulama hacmi ayrı kaydedilir."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Taşıma ve kalite",
+        "items": [
+          "VOC tüplerini kapalı, serin, karanlık ve çözücü kirinden uzakta taşı. Ön/arka tabakaların analiz oranı tutulma verimini gösterir.",
+          "Formaldehit su fraksiyonunu soğukta ve geciktirmeden laboratuvara ilet; durulamada kullanılan saf su en fazla 10 mL olacak şekilde EPA 323 hacmini koru.",
+          "Şahit kriterleri ve saklama süreleri yöntemlere göre farklıdır; hepsine aynı blank yüzdesini uygulama."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Uçucu Organik Bileşiklerin (VOC) tayini için genelde kullanılan iki çeşit metot vardır;",
+        "items": [
+          "TSE CEN/TS 13649 - Sabit kaynak emisyonları – Gaz halindeki her bir organik bileşiğin kütle derişiminin tayini EPA Metot 18 - Gaz Kromatografisiyle Gaz Halindeki Organik Bileşik Emisyonlarının Tayini"
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Bu standart, aktif karbon üzerine numune alınması, çözücü kullanan işlemlerde ortaya",
+        "items": [
+          "çıkanlar gibi uçucu organik bileşik numunelerinin hazırlanması ve analizi ile ilgili işlemleri kapsar. (referans metodu olarak kullanılabilir.) Metot genel olarak baca gazı numunesinin alınması, numune alınan maddenin işleme tâbi tutulması ve gaz kromatografi ile kimyasal analizidir."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Numune almada;",
+        "items": [
+          "Ölçülü bir hacimdeki gazda bulunan organik bileşikler aktif karbon üzerine adsorbe edilebilir olmalıdır. Ölçmelerde girişime neden olabilecek tanecik halindeki madde uzaklaştırılmalıdır. Suyun yoğuşması önlenmelidir. Numune alma hattı mümkün olduğunca kısa olmalıdır."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Kavramlar ve uygulama ayrıntıları",
+        "items": [
+          "Adsorbant (örn: aktif karbon) üzerine doğrudan numune alma, baca gazının su muhtevası ve organik malzemenin kütle derişimi kaçak olmayacak kadar düşük olduğu durumlarda kullanılabilir. Absorbanstan geçen baca gazının sıcaklığı, adsorpsiyon süresince 40 0C’yi geçmemelidir. Hiç yoğuşma olmamasının sağlanması suretiyle, sıcak baca gazı bir soğutucu bölüm (inert numune hattı) kullanılarak soğutulabilir. Baca gazı yoğuşmaya neden olacak derecede nemli ise veya organik bileşiklerin kütle derişimlerinin sorbent borularının kapasitesini aşma riski varsa, numune alma işlemi, seyreltme yapılarak veya eşdeğer metotlar kullanılarak yapılmalıdır. Seyreltme, statik veya dinamik olabilir."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Kavramlar ve uygulama ayrıntıları",
+        "items": [
+          "Toplam örnekleme hacmi 100 mg’lık aktif karbon tüpü için 10 L ile 50 L arasında, hacimsel akış hızı, 0,1 - 0,5 L/dak. arasında olmalıdır. Analiz için GC-MS kullanılırsa iyon tayin sınırı azaltılabilir. Gaz numunesinin hacmi bir gazometre ile ölçülebilir. Numune alımı sırasında sızıntının hataya katkısı önemli olup uygun kontrol işlemleriyle her numune ölçümünden önce kontrol edilmelidir."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Kavramlar ve uygulama ayrıntıları",
+        "items": [
+          "Numune almayı takiben, tüpler serin ve karanlık bir ortamda taşınmalıdır. Uzun süreli depolamada tüpler 4 0C’nin altına kadar soğutulmuş, çözücü tarafından kirletilmemiş bir kap içerisinde muhafaza edilmelidir. Numune alma sırasında tanık olarak kullanmak üzere her seriden deneme tüpleri alınmalıdır. Tanık tüpler, baca gazı akışına maruz bırakılma dışında numune tüpleriyle aynı işlemlere tabi tutulmalıdır. İlgili her bileşik için ortalama tanık tayininde, tanık sorbent borusunun ana adsorplayıcı tabakası analiz Her tüp serisi için en az iki tanık tüp analiz edilmelidir. Tanık değeri, ilgili bileşiğin emisyon sınır değerinin %5’inden daha büyük olan numune değerine eşdeğer ise, numune alma işlemi tekrar edilmelidir."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Kavramlar ve uygulama ayrıntıları",
+        "items": [
+          "Uygun taşıma ve saklama koşullarında laboratuvara getirilen numuneler kromatografik yöntem ile analiz edilir. (GC-FID veya GC-MS) Sorbent borusunun emniyet tabakasının üzerindeki münferit organik bileşiğin oranı, ana adsorplayıcı tabakadaki miktarın % 5’ini geçmemelidir."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Kavramlar ve uygulama ayrıntıları",
+        "items": [
+          "Sorbent Tüpler farklı materyallerden tüpler mevcuttur. Örneklenecek parametrenin türüne göre uygun absorbans tüpü seçilmelidir. (Aktif Karbon, XAD, Silikajel, Tenax) Örneklenecek organik parmetresinin türüne göre uygun absorbans ve çözücü için Standartlar ve yayımlanmış uluslar arası dokümanlar (örn: MDHS96, NİSOH Standartları vb. ) kaynak olarak kullanılmalıdır. Örneklenen VOC’ler desorpsiyon aşamasından sonra Gz Kromotografisinde analiz edilir."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Epa metot 18:",
+        "items": [
+          "Metot; Paslanmaz çelik, cam veya teflon prob ile örnekleme Aktif karbon üzerine adsorpsiyon veya NİOSH metotlarına uygun olarak adsorblayıcı seçeneği Tedlar bag (Teflon poşet) lerle örnekleme Uygun organik çözücülerle desorpsiyon (Özellikle CS2 ile desorpsiyon) GC, GC-MS, HPLC ile analiz Hususlarını içermektedir."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Baca gazında Formaldehit Tayini EPA Metot 323 veya EPA Metot 316 Metotlarına göre",
+        "items": [
+          "yapılır. EPA 323 Metodu sabit akış numune alma ve spektrofotometrede analizini kapsar. EPA 316 Metodu ise izokinetik numune alma ve kolorimetrik olarak spektrofotometrede analizi kapsar. Her iki metotta da absorbans olarak saf su kullanılır."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Prob, paslanmaz çelik olan ısıtmalı ceket içinde kuvars cam malzemeden yapılmış",
+        "items": [
+          "20 ml hacimli 3 adet cüce impinger kullanılmalı ve impingerlar cam malzemeden yapılmış olmalıdır. Prob ve impinger bağlantı elemanları teflon ya da cam malzemeden EPA 323 Metodu ile numune alma işleminde düşük debili pompa kullanılmalıdır. Saklama kapları olarak 40 ml’lik VOA şişeleri kullanılmalıdır."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "EPA 323 Metodu ile numune alma işleminde 3 impinger kullanılır. İlk impinger boş",
+        "items": [
+          "bırakılır. İkinci impingera 20 ml saf su, üçüncü impingera ise slika jel konulur ve numune alma işlemi düşük debili bir pompa vasıtasıyla 0,2 L/dk ile 0,4 L/dk arasında bir çekiş debisi ile gerçekleştirilir."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "EPA 323 Metodunda göre Geri Kazanım;",
+        "items": [
+          "Numune hattı saf su ile yıkanır ve bir VOA şişesine aktarılır, impinger içindeki absorbans saf su da VOA şişesine aktarılır. Eğer boş impingerda su birikintisi varsa onu da VOA şişesine ilave etmek gerekmektedir. Durulamada kullanılan su hacmi en fazla 10 ml"
+        ],
+        "ordered": false
+      },
+      {
+        "title": "EPA 316 Metodunda;",
+        "items": [
+          "EPA 5 numune alma düzeneği kullanılır. Prob ve nozul, paslanmaz çelik olan ısıtmalı ceket içinde kuvars veya cam malzemeden yapılmış olmalıdır. Numune alma işleminde 4 adet impinger serisi kullanılır. Birinci, üçüncü ve dördüncü impingerlar Greenburg-Smith modifiye tasarımı ( 1,3 cm uçlu) impingerlar, ikinci impinger ise standart uçlu impinger Kullanılan bağlantı elemanları teflon ya da cam malzemeden olmalıdır. Polietilen, teflon ya da cam yıkama şişeleri ve polietilen geniş ağızlı ve 500 ml hacimli saklama kapları kullanılmalıdır."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "EPA 316 Metodunda;",
+        "items": [
+          "EPA 316 Metodunda numune alma işleminde 4 impinger serisi kullanılır. İlk iki impingerda 100 ml saf su konulur, üçüncü impinger boş bırakılır ve son impingera 200-300 gram arası slikajel konulur. Numune alma işlemi EPA 5 Metoduna göre izokinetik olarak yapılır. Fakat izokinetik numune alımında çekiş debisi 28 L/dk’yı geçmeyecek şekilde nozul secimi yapılmasına dikkat edilmelidir."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "EPA 316 Metoduna göre Geri Kazanım;",
+        "items": [
+          "İlk üç impinger içindeki absorbans 1 nolu kaba aktarılır. Ardından prob, impinger ve bağlantı elemanları durulanarak 1 nolu kaba durulama suyu ilave edilir. Toplam sıvı hacminin 400 ml’yi geçememesine dikkat Tanık numune, numune alma düzeneği kurularak numune geri kazanımı gibi geri kazanılır ve 2 nolu saklama kabına alınır. Slikajel 3 nolu kaba alınır. Slikajeldeki renk değişimi kontrol edilmelidir. Silikajelin toplandığı kap alüminyum folyo ile sarılarak muhafaza edilmelidir. Eğer kaynakta mikrobiyal bir kirlenme söz konusu ise geri kazanılan her 100 ml numune için 2,5 ml QAC (Kuaterner Amonyum Bileşiği) çözeltisi ilave edilerek numune kirlenmeye karşı korunmalıdır. İmpinger içindeki solüsyon 50 ml bir balon joje/mezür içine alınır. Tüm bağlantılar, impingerın içi ve prob saf su ile yıkanır ve yıkama suları da örnekleme yapılan su içine ilave edilir. Balon joje/mezür içindeki solüsyon 50 ml hacme tamamlanır ve ya sıvı hacmi not edilerek laboratuvara taşınır."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "EPA 323 ve EPA 316 Metotlarına göre tanık numune alımı; örnekleme düzeneğinin kurulup",
+        "items": [
+          "gaz geçirilmeden numunin geri kazanımı işlemine göre yapılmaktadır. Not: EPA 323 Metodu tanık numune değerinin en düşük kalibrasyon standardı değerinin % 50’sinden daha az olması gerektiğini, aksi halde numune alma işleminin şüpheli olduğunu belirtmektedir. Numuneler 4 oC’nin altında karanlık ortamda saklanmalı ve 1 hafta içinde analiz"
+        ],
+        "ordered": false
+      }
+    ]
+  },
+  {
+    "id": "egitim-yanma-egitim",
+    "title": "Yanma gazları eğitimi",
+    "method": "Sensörler • T90 • Gaz şartlandırma • O₂ düzeltmesi",
+    "domain": "Eğitim",
+    "trains": [],
+    "visual": null,
+    "sections": [
+      {
+        "title": "Ölçüm prensipleri",
+        "items": [
+          "Elektrokimyasal sensör gazın elektrottaki tepkimesinden gelen elektrik sinyalini ölçer. Hücre seçimi, çapraz duyarlılık ve kalibrasyon sonucu etkiler.",
+          "IR yöntem gazın belirli dalga boylarındaki soğurmasını kullanır. Her gaz ve cihazın ölçüm prensibi aynı değildir.",
+          "Cihaz ekranındaki ölçülen ve hesaplanan değerler ayırt edilir; örneğin hesaplanan CO₂ doğrudan CO₂ sensör ölçümü olarak sunulmaz."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "T90 ve zamanlama",
+        "items": [
+          "T90 toplam sistemin derişim değişiminin %90’ına ulaşma süresidir. Numune hattı gecikmesi ölçümün parçasıdır.",
+          "En yavaş cevap veren gaz esas alınır. Her ölçüm en az 4×T90, ölçümler arası bekleme en az 3×T90’dır; kararsız sistemde daha uzun süre seçilebilir.",
+          "Örnekleme hattını veya şartlandırmayı değiştirince eski T90’ın geçerli olduğunu varsayma."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Referans oksijen ve baz",
+        "items": [
+          "Oksijen düzeltmesi Cref = Cölç × (21−O₂ref)/(21−O₂ölç) ilişkisiyle uygulanır; ölçülen/kullanılan oksijenin aynı kuru bazda olması gerekir.",
+          "Referans oksijen tesisin ilgili uygulamasından seçilir; bütün tesisler için tek %O₂ değeri atanmaz.",
+          "Sıcaklık, basınç ve nem düzeltmeleri aynı sonuca iki kez uygulanmaz. Birim dönüşümü ve normal şart dönüşümü farklı işlemlerdir."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Yoğuşma ve sensör kaybı",
+        "items": [
+          "Filtre partikülü, şartlandırma nemi kontrol eder. SO₂ gibi çözünebilen gazlar yoğuşan suda kaybolabilir.",
+          "Mümkün olduğunca kısa, sızdırmaz ve uygun ısıtılmış numune hattı kullanılır.",
+          "Referans gaz doğrulaması ölçüm öncesi/sonrası performansı, saha kayıtları ise prosesin temsil ediciliğini gösterir."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Yanma gazi ölçümleri̇ neden yapilir ?",
+        "items": [
+          "Yanma Verimliliği Proses Kontrolü Emisyon Kontrolü Kontrolü • Kazan verimliliğini arttırmak • Emisyon limitleri içinde • Yakıt tasarrufu • Proseste kaliteyi arttırmak kalmak • Emisyonları azaltmak • Proseste kazanları ayarlamak • Mevzuata uymak"
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Yanma gazi ölçümleri̇ neden yapilir ?",
+        "items": [
+          "SKHKK Yönetmeliği’nden Bir Örnek Katı yakıtlı yakma tesislerinde mg/Nm3 olarak baca gazında % 6 hacimsel oksijen (O2) esas alınarak aşağıdaki emisyon sınır değerleri aşılamaz Emisyon Sınır Değerleri (mg/Nm3 ) Yakıt türü Yakıt Isıl Gücü NO2 Toz SO2 CO (NO ve NO2) 50 MW ≤ Yakıt ısıl gücü <100 MW 50 850 400 150 Katı yakıt Yakıt ısıl gücü≥100 MW 30 200 200 200 50 MW ≤ Yakıt ısıl gücü <100 MW 20 400 400 150 Petrol koku Yakıt ısıl gücü≥100 MW 20 200 200 200 50 MW ≤ Yakıt ısıl gücü <100 MW 200 400 Biyokütle 100 MW ≤ Yakıt ısıl gücü <300 MW 200 300 Yakıt ısıl gücü≥300 MW 200 200 Limit değeri olup ölçülmesi gereken kirletici yanma gazları: SO2, NO2, CO’dir. O2 ve CO2 ise hacimsel (yani yüzde olarak) ölçülerek düzeltmede kullanılır. Düzeltmeden yapılmasının sebebi bütün tesisler için aynı şartta değerlendirme yapabilmek içindir."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Yanma Gazları Parametreleri",
+        "items": [
+          "Bir yakıtın yanması sonucu oluşan ve atmosfere atılan atık gazlar yanma gazları olarak adlandırılır. Yanma gazları; • Karbonmonoksit (CO), • Karbondioksit(CO2), • Azot oksitler (NOx), • Kükürtdioksit (SO2) Ayrıca oksijen (O2) ölçümleride yanma gazı ölçümleri ile birlikte yapılır."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Oksijen Ölçümü",
+        "items": [
+          "Oksijen Ölçümü, Elektrokimyasal yöntem, zirkonyum oksit teknolojisi yöntemi ve paramanyetik oksijen yöntemi ile çalışan cihazlarla yapılır. Oksijen ölçümleri için TS EN 14789, TS ISO 12039 ve EPA CTM 030 kullanılan başlıca ölçüm metotlarıdır. Karbonmonoksit Ölçümü Karbonmonoksit Ölçümü, Kızılötesi (IR) absorbsiyon yöntemi ile çalışan cihazlarla yapılır. Karbonmonoksit ölçümleri için TS EN 15058 ve TS ISO 12039 kullanılan başlıca ölçüm metotlarıdır. Not: Kasım 2020 tarihinde TS ISO 12039 Standardı, revize edilmiş olup söz konusu revizyonda karbon monoksit ölçümlerinin kızılötesi absorbsiyon yöntemi ile yapılabileceği görülmektedir. Ancak; TS ISO 12039 Standardının Kasım 2020 revizyonunda, “1. Kapsam” başlığı altında “Bu belgede önerilen minimum gereksinimleri karşılamaları koşuluyla, diğer enstrümantal yöntemler kullanılabilir.” ifadesi yer almaktadır. Bu nedenle, standardın “7. Performans Özellikleri Ve Kriterleri” başlığı altında belirtilen kriterleri sağlamak koşulu ile karbon monoksit parametresinin tayininde, elektrokimyasal yöntem kullanan cihazlar ile de TS ISO 12039 standardına göre ölçüm yapılması uygundur."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Karbondioksit Ölçümü",
+        "items": [
+          "Karbondioksit Ölçümü, Kızılötesi (IR) absorbsiyon yöntemi ile çalışan cihazlarla yapılır. Karbondioksit ölçümleri için TS ISO 12039 kullanılan başlıca ölçüm metodudur. Azot Oksitlerin Ölçümü Azotoksitlerin Ölçümü, Elektrokimyasal yöntem, Kızılötesi (IR) absorbsiyon yöntemi, UV Floresans Yöntemi ve kimyasal ışıma yöntemi ile çalışan cihazlarla ya da baca gazının bir absorbansa örneklenerek laboratuvarda analiz edilmesi yöntemiyle yapılır. Azot Oksitlerin ölçümleri için TS EN 14792, TS ISO 10849, TS ISO 11564 ve EPA CTM 022 kullanılan başlıca ölçüm metotlarıdır. Ayrıca Epa 7, Epa 7A, Epa 7B, Epa 7C ve Epa 7D metotları da azot okistlerin tayininin de kullanılan metotlardandır."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Kükürtdioksit Ölçümü",
+        "items": [
+          "Kükürtdioksit Ölçümü; Elektrokimyasal yöntem, Kızılötesi (IR) absorbsiyon yöntemi ve UV Floresans Yöntemi ile çalışan cihazlarla yapılır. Kükürtdioksit ölçümleri için TS EN 14791, TS ISO 7934, TS ISO 7935, EPA 6A ve EPA 8 kullanılan başlıca ölçüm metotlarıdır. Kükürtdioksidin ölçüldüğü metotlardan TS ISO 7935 bacada ölçüm yapan analizörlerin kullanıldığı otomatik ölçüm yöntemleridir. TS EN 14791, TS ISO 7934, EPA 6A ve EPA 8 ise atık gazın bir absorbansa absorblandığı ve laboratuvarda analiz edildiği ölçüm metodudur. Not: Mart 2024 tarihinde TS ISO 7935 Standardı, revize edilmiş olup söz konusu revizyonda kükürt dioksit ölçümlerinin kızılötesi absorbsiyon yöntemi ile yapılabileceği görülmektedir. Ancak; Standardının yeni revizyonunda, “Performans Özellikleri Ve Kriterleri” sağlamak koşulu ile kükürt dioksit parametresinin tayininde, elektrokimyasal yöntem kullanan cihazlar ile de TS ISO 7935 standardına göre ölçüm yapılması uygundur."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Ölçüm Yöntemleri",
+        "items": [
+          "Yayılımı Olmayan Kızılötesi Absorbsiyon Yöntemi (NDIR) (CO, CO2, NO, NO2, NOx, N2O, SO2); Pramagnetik Oksijen Yöntemi (O2); Zirkonyum Oksit Yöntemi (O2); Elektrokimyasal Hücre Yöntemi (O2, CO, NOx, SO2) Ayarlanabilir Lazer Spektroskopisi (TLS) (CO, CO2 and O2) Fourier Dönüşümlü Kızılötesi Spektroskopisi (FTIR) (CO, CO2, NO, NO2, NOx, N2O, SO2) Yukarıda belirtilen ölçüm yöntemlerinin dışında bacadan izokinetik yada sabit akış örnekleme yapılarak laboratuvarda titrimetrik, spektrofotometrik veya iyon kromotografik yöntemler ile analizi içeren Ölçüm Standartları ile yanma gazlarını tayin etmekte mümkündür. (Örn: TS EN 14791 SO2 tayini)"
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Analizör",
+        "items": [
+          "Taşınabilir gaz analizörünün probu, bağlantı hattı gibi elemanları gaz ile etkileşim yapmayacak malzemeden seçilmelidir (Prob paslanmaz çelik, gaz hattı ise teflon olabilir). Partikül maddenin analizöre geçmesini engellemek için emiş hattında filtre (taş veya seramik filtre olabilir) bulunmalıdır. Nemin analizöre zarar vermemesi için nem tutucu ya da gaz yoğuşturucu bulunmalıdır. NotAnalizörlerin ölçüm hücreleri çok hassas olduğu için analizörler taşınırken dikkat edilmelidir. Taşıma esnasında analizörlerin ölçüm hücrelerinde meydana gelebilecek kaymalar yanlış okumalara neden olmaktadır."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Ölçüm Süresinin Belirlenmesi",
+        "items": [
+          "Yanma gazı ölçümlerinde, ölçüm süresi belirlenirken Tepki Süresi (T90) kullanılır. Tepki Süresi (T90): Analizöre verilen ve konsantrasyonu bilinen bir referans gazın konsantrasyonunun % 90’ını analizörün okuduğu süredir. Yanma gazı ölçümlerinde her bir ölçüm süresi en az tepki süresinin (T90) 4 katı kadar olmalıdır. Kararsız sistemlerde ölçüm süresi, tepki süresinin 10 katı kadar olabilir. Her bir ölçüm arası bekleme süresi ise tepki süresinin (T90) en az 3 katı kadar olmalıdır. Not: Analizörün tepki süresinin (T90) belirlenmesi, en geç tepki veren gaz esas alınarak yapılır. Genellikle kükürt dioksit gazı analizörlere en geç tepki veren gazdır. Not: Tepki süresi belirlenmesi işleminde referans gaz analizöre probun ucundan verilmelidir."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Güvenlik",
+        "items": [
+          "Personel güvenliğine dikkat edilmelidir. Ölçüm cihazları ve personel için mümkün platform, yürüme yolu v.b. ihtiyaçları sağlanmalıdır. Kullanılan elektrikli cihazlar için gerekli güvenlik önlemleri alınmalıdır. Patlama olabilecek veya zararlı madde bulunması şüphelenilen atmosferde çalışılıyorsa, özel dikkat gereklidir ve işlemlerin güvenliğini sağlamak için gerekli tedbirler alınmalıdır."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Ölçüme Hazırlık",
+        "items": [
+          "Analizörün probu ve bağlantı hattı gibi elemanları gaz ile etkileşim yapmayacak malzemeden seçilmelidir (Prob paslanmaz çelik, gaz hattı ise teflon olabilir). Örnekleme hattı mümkün olduğu kadar kısa tutulmalıdır. Partikül maddeler ve nem, ölçümleri etkileyebileceğinden numune alma hattı, filtre ve nem giderme kısımlarını ihtiva etmelidir. Kükürt dioksit kayıplarını önlemek ve yanlış okumalara yol açmamak için numune alma hattı ısıtılmalıdır."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Numune Alma Yeri",
+        "items": [
+          "Numune alma yeri; Bacadaki ortalama konsantrasyonu temsil etmeli. Bacada gazın akışını bozan bir düzenden uzak bir yerde olmalıdır. (dirsek, fan, t bağlantısı, ani daralma veya genişleme vs) Örnekleme sistemine hava girişi veya sistemden dışarıya gaz kaçağı olmamalıdır. Analizörlerin ölçüm hücreleri hassas olduğu için analizörler taşınırken dikkat edilmelidir. Sürekli rejimde çalışan tesislerde en büyük yükte en az üç ölçüm yapılmalıdır."
+        ],
+        "ordered": false
+      }
+    ]
+  },
+  {
+    "id": "egitim-yer-plan",
+    "title": "Ölçüm bölgesi, yer ve amaç",
+    "method": "EN 15259 • EPA 1 / 1A • Travers • Temsil edicilik",
+    "domain": "Eğitim",
+    "trains": [],
+    "visual": null,
+    "sections": [
+      {
+        "title": "Ölçüm amacı ve düzlem",
+        "items": [
+          "Uygunluk, proses kontrolü ve özel inceleme ölçümlerinin süre ve temsil edicilik hedefleri aynı değildir.",
+          "Baca ölçüm düzlemi fan, dirsek, damper ve kesit değişimlerinden mümkün olduğunca uzakta seçilir.",
+          "Düz mesafe ölçülür ve hidrolik çapa bölünür; yalnız “baca yüksek” demek yeterli değildir."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Hidrolik çap ve nokta taraması",
+        "items": [
+          "Dairesel kanalda hidrolik çap gerçek iç çaptır. Dikdörtgende Dh = 4A/çevre = 2ab/(a+b).",
+          "Örneğin 0,30 ×0,50 m kesitte Dh = 0,375 m’dir. Parantezsiz yazılmış formüller yanlış 0,46 m sonucuna götürebilir.",
+          "Kesit eşit alanlara bölünür; noktalar bu alanları temsil eder. Merkez dahil/hariç sayım ve port/nokta kavramı ayırt edilir."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "EPA ve EN yaklaşımı",
+        "items": [
+          "EPA 1’in uygun düz mesafe yaklaşımı akışın geldiği tarafta 8D, sonraki tarafta 2D’dir. Azalan mesafelerde nokta sayısı yöntem diyagramından belirlenir.",
+          "EPA 1A küçük çaplı bacalar için ayrı yerleşim yaklaşımıdır. EPA 1/1A kendi başına kirletici tayin yöntemi değildir.",
+          "EN ölçüm düzlemi değerlendirmesinde akış açısı, ters akış, hız dağılımı ve gaz homojenliği birlikte incelenir; mesafe şartı tek kontrol değildir."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Uygunsuz düzlem",
+        "items": [
+          "Nokta sayısını artırmak siklonik akışı veya güvenli erişim eksikliğini tek başına çözmez.",
+          "Uygun alternatif düzlem, akış düzeltme veya yöntemin alternatif saha prosedürü değerlendirilir; standart dışı durum gerekçesi kaydedilir.",
+          "Gaz parametrelerinde temsil edici tek nokta seçimi homojenlik kanıtına dayanır; partikül numunesi ise travers gerektirebilir."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "• TS EN 15259 Hava kalitesi - Sabit kaynak emisyonlarının ölçümü - Ölçme bölgeleri",
+        "items": [
+          "ve yerleri ile ölçümün amacı, planı ve raporlanması için gerekler • EPA METOT 1 Sabit kaynak emisyonları Numune ve Hız Noktalarının Belirlenmesi • EPA METOT 1A Küçük Çaplı Bacalarda Numune ve Hız Noktalarının Belirlenmesi"
+        ],
+        "ordered": false
+      },
+      {
+        "title": "• Ölçüm Düzlemi",
+        "items": [
+          "• Ölçüm yerleri (baca, çatı v.b.) ; • Ölçüm yapmaya uygun yeterli alana, • Ölçüm cihazlarının ve ekipmanın taşınması için gerekli düzeneklere (vinç, asansör v.b.), • Personelin ulaşımına uygun (merdiven, asansör v.b.), • İş güvenliği tedbirleri alınmış, • Ölçüm personelleri, cihazları ve ekipmanı taşıyabilecek kapasitede, • olmalıdır. • Bir kaynaktan kirletici parametrelerin ölçümü için ölçüm yeri belirlenmesinde mevzuat ve standartlardan yararlanılır. • Baca gazı hızı dağılımı homojen olmalıdır. Baca gazı akışının homojen olup olmadığını tespit etmek için örneklemelerden önce hız taraması yapılmalıdır. • En iyi mevcut örnekleme düzlemi seçilmelidir. Örnekleme portlarının fanlar, kanal bükümü ve kanal kavşakları gibi türbülans kaynaklarından uzak olması için her türlü çaba gösterilmelidir. Bacanın (kanalın) hem dikey hem de yatay kesimlerinde uygun örneklemlerin bulunduğu durumlarda, birincisi seçilmelidir."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Dikkat Edilecek Hususlar",
+        "items": [
+          "• Kararlı bir emisyon ölçüm için, en iyi uygulama en az üç ölçüm almaktır. Kararsız emisyonların ölçümü durumunda, ölçüm hedefini karşılamak için numune sayısı arttırılabilir. Yasal amaçlar için uygunluk izleme durumlarında münferit ölçümlerin sayısı izin belgesinde belirtilir. • Emisyon ölçümlerinin zamanlama ve süresi, ölçüm hedefine göre ölçüm planında belirtilmelidir. Belirtilen yerlerde, mevzuatın öngördüğü münferit ölçümlerin numune alma süresi idari hükümler veya diğer yasal mevzuat emisyon ölçümlerinde kullanılmalıdır. • Elle yapılan yöntemler için, ölçülen bileşenin düşük derişimlerinden şüphelenildiği durumlarda, ölçüm yönteminde belirtilen izin verilebilen en uzun numune alma süresi, açık alan gereğini karşılamak amacıyla ilk önce kullanılmalıdır. • Numune alma zamanlaması ve süresi, incelenen tesisin emisyon davranışı için uygun olmalıdır."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Dikkat Edilecek Hususlar",
+        "items": [
+          "• Numune alma zamanlaması ve süresi, incelenen tesisin emisyon davranışı için uygun olmalıdır. • Ölçüm tarihleri ölçüm planında belirtilmelidir. Bu tarihler aşağıda verilenleri sağlamak için seçilmelidir: ✓ Ölçüm hedefinin karşılanması, ✓ Uygun süreç şartlarının mevcut olması (örneğin tesis ve atık gaz temizleme faaliyetinin gereği), ✓ Yerinde ölçüm için altyapı, ✓ Ölçüm ve analitik sistemlerin varlığı ve ✓ Personel ve yardımcıların varlığı. • Aşağıda verilen ölçüm hazırlıkları deney laboratuvarı tarafından gerçekleştirilmelidir: ✓ Ölçümün çalışma süresi boyunca gerekli personel temin edilmelidir, ✓ Ölçümün çalışma süresi boyunca gerekli ölçüm cihazı, uygulanacak olan münferit ölçüm standartlarının gereklerine göre temin edilmelidir, ✓ Ölçüm filtreleri ve numune alma malzemeleri hazırlanmalıdır, ✓ Ölçüm tarihleri teyit edilmelidir, ✓ Kullanılan ölçüm sistemleri kontrol edilmeli, ayarlanmalı veya yerinde kalibre edilmelidir."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Örnekleme yeri belirlenirken EN, ISO ve EPA",
+        "items": [
+          "metotlarından faydalanılır: Ölçüm düzlemi bacada akışı etkileyebilecek en son bozucu etkenden (fan, dirsek, t bağlantı, filtre v.b.) belirli uzaklıklarda olmalıdır bu mesafeler ile ilgili Tablo aşağıda verilmiştir. Ölçüm düzleminin bacadaki en son bozucu etkene ve baca çıkışına uzaklıkları Metot H1 H2 TS EN 15259 5xD 5xD EPA 1 8xD 2xD Ölçüm Düzleminin Yeri"
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Ölçüm Deliği ve Ölçüm Noktası (Travers Noktası) Sayısı",
+        "items": [
+          "İzokinetik ve bazı sabit akış örneklemelerde, örneklemenin düzlemi tarayarak yani birden fazla noktadan örnekleme yapılarak numunenin alınması gerekir. Numune alma düzlemi, kanalın iç duvarlarına dik olan ve kanalın boyut ve şekline bağlı olarak eşit alana bölünen bir kesit alanıdır. Numuneler, numune probu ve / veya pitot tüpünü kanalın çapı boyunca (diğer bir ifadeyle çaprazlama) hareket ettirerek her bölümün merkezinden alınır. Her yöntem, bacanın büyüklüğüne göre değişen temsili örnekleme için gerekli travers ve örnekleme noktalarının sayısını belirtir."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Dairesel Bacalarda Örnekleme Nokta Sayısı Belirleme",
+        "items": [
+          "Dairesel bacalarda TS EN 13284-1, TS ISO 9096 veya TS ISO 12141 Metotlarına göre örnekleme nokta sayıları 2 metoda göre belirlenir. Bunlar genel metot ve tanjant metodudur. Dairesel kesitli kanallar için numune alma noktalarının asgarî sayısı Baca çapının Numune alma Her hat için numune Düzlem başına uzunluğu hattının sayısı, alma noktalarının asgarî sayıda (m) en az asgarî sayısı numune alma noktaları < 0,35 - 1 - 1a - 0,35 – 0,7 2 3 2 5 4 0,7 - 1 2 5 4 9 8 1-2 2 7 6 13 12 >2 2 9 8 17 16 a Sadece bir numune alma noktasının kullanılması, bu standartta belirtilenden daha büyük hatalara sebep olabilir. b Geniş kanallar için, genellikle 20 numune alma noktası yeterlidir. Dairesel Bacalar İçin Nokta Sayısının Belirlenmesi"
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Dairesel Bacalarda Örnekleme Nokta Sayısı Belirleme",
+        "items": [
+          "Dairesel bacalarda TS EN 13284-1, TS ISO 9096 veya TS ISO 12141 Metotlarına göre örnekleme nokta sayıları 2 metoda göre belirlenir. Bunlar genel metot ve tanjant metodudur. Dairesel kesitli kanallar için numune alma noktalarının asgarî sayısı Baca çapının Numune alma Her hat için Düzlem başına uzunluğu hattının sayısı,numune alma asgarî sayıda (m) en az noktalarının numune alma asgarî sayısı noktaları < 0,35 - 1 - 1a - 0,35 – 0,7 2 3 2 5 4 0,7 - 1 2 5 4 9 8 Dairesel Bacalar İçin Nokta Sayısının Belirlenmesi 1-2 2 7 6 13 12 xi : Ki x d >2 2 9 8 17 16 Ki : Yüzde olarak belirtilen katsayı a Sadece bir numune alma noktasının kullanılması, bu i : Çap boyunca numune alma noktası indisi n standartta belirtilenden daha büyük hatalara sebep olabilir. d : Her bir numune alma hattı boyunca numune alma noktalarının sayısı (merkez dahil) b Geniş kanallar için, genellikle 20 numune alma noktası n : Numune alma hatlarının veya çaplarının sayısı xi : i noktasının kanal duvarından uzaklığı yeterlidir. d : Kanalın çapı 1"
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Dikdörtgen Kesitli Bacalarda Örnekleme Nokta Saysı Belirleme)",
+        "items": [
+          "Dikdörtgen Kesitli Kanallar İçin Numune Alma Noktalarının Asgari Sayısı (TS ISO 9096 Numune Alma Numune Alma Numune Alma Düzlemindeki Numune Düzleminin Alanı Hattının Sayısı a, Alma Noktalarının (m²) En Az Sayısı, En Az < 0,09 - 1b 0,09 – 0,38 2 4 0,38 – 1,5 3 9 > 1,5 4 16 Dildörtgen Kesitli Bacalarda Numune Alma a Kanalın uzun kenarının uzunluğu kısa kenarının uzunluğundan iki Noktası Konumlarının Gösterimİ kat daha fazla olduğu durumda, numune alma düzleminde ilave kenar bölmeler gerekli olabilir. b Sadece bir numune alma noktasının kullanılması, bu standartta belirtilenden daha büyük hatalara sebep olabilir."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "EPA 1 Metoduna Göre Örnekleme Nokta Sayısının Belirlenmesi:",
+        "items": [
+          "EPA 1 Metoduna göre dairesel bacalarda örnekleme düzlemi ve örnekleme nokta sayısı belirlemede aşağıdaki diyagram kullanılır. Bu diyagrama göre baca yüksekliği hidrolik çapın 10 katı olan bacalarda örnekleme düzlemi homojen akışı etkileyecek en son etkenden, hidrolik çapın 8 katı kadar üzerinde baca çıkışından 2 hidrolik çap kadar aşağıda olmalıdır. 8xD - 2xD kuralının sağlandığı durumlarda baca çapı 0,30-0,61 m aralığında ise örnekleme nokta sayısı en az 8 adet olmalıdır. Baca çapının 0,61 m’den büyük olduğu durumlarda örnekleme nokta sayısı en az 12 adet olmalıdır. Bazı işletmelerde baca yüksekliğinin hidrolik çapın 2,5 katına kadar düştüğü bacalar olabilir. Bu gibi durumlarda diyagrama göre örnekleme nokta sayısı en az 24 olmalıdır."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "EPA 1 Metoduna Göre Örnekleme Nokta Sayısının Belirlenmesi:",
+        "items": [
+          "EPA 1 Metodu çapı 30 cm’den büyük bacalar için geçerli bir metotdur. Çapı 30 cm’den küçük bacalarda EPA 1A metodu kullanılır. EPA 1A metoduna göre örnekleme nokta sayısı EPA 1 Metodu ile aynı şekilde belirlenir. En uygun baca çapına göre nokta sayısı dairesel bacalar için en az 8 dikdörtgen bacalar için en az 9 olmalıdır. Bu metoda göre örnekleme düzlemi ile hız ölçüm düzlemi farklı yerlerde seçilir EPA 1 ve EPA 1A Metodu ölçüm yeri belirleme metotları olup bu metotlar deney metotları değildir."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "EN ve ISO Metotlarında;",
+        "items": [
+          "Gaz akışı, kanal ekseni bakımından 15°'den daha fazla ters akış şartları olması ve numune alma düzleminin Bölüm 2’de belirtilen şartları sağlamadığı durumlarda travers noktası sayısının arttırılması yoluna gidilebilir. Standartlarda nokta sayısının arttırılmasına ilişkin sayı verilmemekle beraber kural olarak travers sayısının 2 katına çıkarılarak (en fazla 20 nokta) işleme devam edilebilir. Uygun olmayan noktaların yerine uygun noktalar bulunması halinde uygun olmayan noktalar ihmal edilir ve ölçüme devam edilir (MID 15259). Aksi halde alternatif yerler aranır. Önemli bir girdap olduğunda ve alternatif numune alma yeri bulunamıyorsa akış düzeltilmelidir."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Kavramlar ve uygulama ayrıntıları",
+        "items": [
+          "Travers nokta sayısının artırılması; test sırasında herhangi bir nedenle minimum sayıda travers noktasından fazla sayıda travers kullanmak isteniyor ise, matrisin biri ya da diğer kısmı ya da her iki ayağı boyunca ekstra çapraz noktalar ekleyerek \"en az sayıda travers noktası\" matrisini genişletilebilir. Son matrisin dengelenmesine gerek yoktur. Örneğin, 4 x 3 \"minimum nokta sayısı\" matrisi 36 noktaya genişletildiğinde, matris 9 x 4 veya 12 x 3 olabilir fakat 6 x 6 olmamalıdır. Son matrisi oluşturduktan sonra, baca kesiti travers noktaları kadar çok dikdörtgen alana bölünmeli ve her eşit alanın merkezindeki bir traverse noktalar yerleştirilmelidir. Not-10: Matris genişletme sadece travers sayısı artırılmasında uygulanmaz. Eğer bir bacada ölçüm deliği sayısı kısıtlı ise yeni ölçüm deliği açmak bacanın statik yapısına zarar verecek ise bu gibi durumlarda da matris genişletme yapılabilir. Örneğin dikdörtgen bir bacada metot gereği 3x3 matris gerekiyor ise fakat bacada 3 ölçüm deliği açmak bacanın fiziki yapısı gereği mümkün değil ise o zaman örneklemeler 2x5 matris kullanılarak yapılabilir. Fakat ölçüm deliği açmak bacanın fiziki yapısı gereği mümkün ise bu tür bir matris genişletme kesinlikle yapılmamalı ve metodun belirttiği matriste ölçüm yapılmalıdır."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "60 cm’den (24 inç) büyük bacalarda çapraz nokta ile",
+        "items": [
+          "baca duvarı arası mesafe 1.00 inç (2,54 cm), 60 cm’den küçük bacalarda ise 2,54 cm yerine 1,25 cm olarak kullanılmalıdır. Travers noktası sayısının artırılması nedeniyle, tek bir ayarlanmış travers noktası oluşturmak için iki ardışık travers noktası birleştirildiğinde, hem örnekleme (veya hız ölçümü) prosedüründe ve verileri kaydedecek şekilde ayarlanan noktanın iki ayrı Örnek Bir Akış Düzleştirme Cihazı travers noktası olarak muamele edilmesi gerekir."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Akış Doğrulama",
+        "items": [
+          "L tipi Pitot tüpü, gaz akışına 15o doğrultuda ayarlanırsa gaz hızının doğru olarak ölçülmesi sağlanır. Ancak iki basınç duyarlı orifis arasındaki basınç farkı, doğrultu 15o’yi aşarsa düşer. Gaz akışına 90o doğrultuya gelince negatif cevap elde edilir. Bu, gaz akışının doğrultusunun belirlenmesi için basit bir metottur ve boruda girdap olup olmadığını belirlemek için de kullanılır. S tipi Pitot tüpü, gaz akış yönüne 15o doğrultuda yerleştirilirse, gazın hızı % 4 doğrulukla ölçülebilir. Ancak, Pitot tüpünün basınca duyarlı deliklerinin olduğu düzlem, boru akışı doğrultusuna paralelse sıfır değeri elde edilir. Girdap varlığı, S tipi Pitot tüpü sıfır değerini alana kadar döndürmekle bulunabilir (manometre uygun şekilde sıfırlandığı ve dengelendiğinde). Akışın yönü, basınca duyarlı deliklerin olduğu düzleme paralel olmalıdır."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Homojenlik Tespiti",
+        "items": [
+          "Baca gazında yapılan ölçümlerde, ölçülen değer ölçüm düzlemi boyunca değişim göstermiyorsa o düzlemde ölçülen parametrenin homojen olduğu kabul edilir. Homojenlik testi iki ayrı cihaz ile aynı zamanda yapılan karelaj ölçümü ile belirlenir. Cihazlardan biri referans cihaz olarak kullanılır, diğer cihaz is karelaj ölçümlerinde kullanılır. Referans cihaz ile yapılan ölçümler tek bir noktada yapılır diğer cihaz ile belirlenen gridlerde ölçümler yapılır. 1. Durum: Yapılan ölçümler sonucunda her iki paralel ölçümlerin standart sapması hesaplanır. Referans olarak belirlenen cihazın ölçümlerinin standart sapması grid ölçümlerinin standart sapmasından büyük ya da eşit ise (Sgrid ≤ Sref) ölçülen maddenin dağılımı homojendir. 2. Durum: Eğer grid ölçümlerinin standart sapması, referans ölçümlerin standart sapmasından büyük ise (Sgrid > Sref) F-faktör hesaplanır. Hesaplanan F-faktör F N–1;N– 1;0,95 ‘den küçük ise (F<FN–1;N–1;0,95) ölçülen maddenin dağılımı homojendir. 2"
+        ],
+        "ordered": false
+      },
+      {
+        "title": "Homojenlik Tespiti",
+        "items": [
+          "3. Durum: 1. ve 2 durumlarda yapılan testlerde homojenlik tespiti yapılamamış ise genişletilmiş belirsizlik (Upos) hesaplanmalıdır. Eğer Upos, izin verilen genişletilmiş belirsizlik Uperm’in % 50’sinden daha az veya eşit ise, atık gazın homojenliğine bağlı belirsizliğin toplam belirsizliğe etkisi göz ardı edilebileceği için, gelecekteki ölçümler, ölçüm yüzeyindeki tek bir temsili numune noktasında yapılabilir. Eğer Upos, izin verilen genişletilmiş belirsizlik Uperm’in % 50’sinden daha büyükse, gelecekteki ölçümler karelaj ölçümü olarak yürütülmelidir. Uperm = P E (Bakınız: EN 14181) Not: Sabit bir noktadaki bağımsız ölçüm sistemi kalıcı olarak kurulmuş, EN 14181’e göre çalışan bir SEÖS (AMS) olabilir."
+        ],
+        "ordered": false
+      }
+    ]
+  }
+]

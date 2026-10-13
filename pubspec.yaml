@@ -1,36 +1,22 @@
 name: emisyon_standartlari_cep_rehberi
-description: Emisyon İmisyon Ölçüm Standartları offline APK cep rehberi.
+description: Çevrimdışı emisyon ve imisyon saha ölçüm talimatları.
 publish_to: 'none'
-version: 1.0.0+11
-
+version: 2.0.0+20
 environment:
   sdk: '>=3.3.0 <4.0.0'
-
 dependencies:
   flutter:
     sdk: flutter
-  just_audio: ^0.9.40
-  just_audio_background: ^0.0.1-beta.17
+  flutter_tts: ^4.2.3
   shared_preferences: ^2.5.6
-
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^5.0.0
-
 flutter:
   uses-material-design: true
   assets:
-    - assets/standards.json
-    - assets/standards_extra.json
-    - assets/standards_overrides.json
-    - assets/education_notes.json
-    - assets/education_notes_extra.json
-    - assets/visual_notes.json
-    - assets/visual_notes_extra.json
-    - assets/standard_audio.json
-    - assets/visuals/
-    - assets/audio/
-    - assets/field_guides.json
-    - assets/trains/
+    - assets/manuals.json
+    - assets/training.json
+    - assets/equipment/
     - assets/branding/launcher.png

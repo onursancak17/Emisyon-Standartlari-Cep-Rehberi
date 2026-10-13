@@ -1,0 +1,49 @@
+# İçerik inceleme eşleştirmesi
+
+Bu dosya APK kullanıcı arayüzüne dahil edilmez.
+
+- standards_sources/Emisyon-İmisyon Eğitim Dokümanları/Dedeksiyon Limitleri Ölçüm Süreleri.pdf — 15 sayfa — Git blob: ca28eb8fdd2d14f2b1a9e62c4e61ccf6c2ddaccf
+- standards_sources/Emisyon-İmisyon Eğitim Dokümanları/Hava Kalitesi Ölçümleri.pdf — 21 sayfa — Git blob: 4e2555ca13731749b47ca8570e0886d1f065686a
+- standards_sources/Emisyon-İmisyon Eğitim Dokümanları/Hız Tayini,  Nem Tayini.pdf — 27 sayfa — Git blob: 80a15615e39a48907132f178a83d9940d3e55438
+- standards_sources/Emisyon-İmisyon Eğitim Dokümanları/Metal Örneklemesi, Halojen Örneklemesi.pdf — 30 sayfa — Git blob: 7042952c179a6052a35c4169cba7885f8582ced2
+- standards_sources/Emisyon-İmisyon Eğitim Dokümanları/PAH Örneklemesi, PCDDDF Örneklemesi.pdf — 22 sayfa — Git blob: ea57d07d0699884694b9212b1bbbf5c4c45a77fa
+- standards_sources/Emisyon-İmisyon Eğitim Dokümanları/Partiküler Madde  (Toz) Ölçümü.pdf — 32 sayfa — Git blob: 23586d1117d7f751bcc37d5f42cc38494cf228f3
+- standards_sources/Emisyon-İmisyon Eğitim Dokümanları/Siyanür Örneklemesi, Sülfirik Asit Örneklemesi.pdf — 24 sayfa — Git blob: 8b3cb60d099897463db65d1ce45c968cffd5ce8b
+- standards_sources/Emisyon-İmisyon Eğitim Dokümanları/VOC Parametresinde Metot Seçimi.pdf — 23 sayfa — Git blob: a43d98e1ff69846d2df4ba3b92f60840663fa0b4
+- standards_sources/Emisyon-İmisyon Eğitim Dokümanları/VOC Örneklemesi, Formaldehit Örneklemesi-1.pdf — 21 sayfa — Git blob: ba9f792fd7efd5374232ecceebc2ad7a95a1e82d
+- standards_sources/Emisyon-İmisyon Eğitim Dokümanları/Yanma Gazları Ölçümü.pdf — 16 sayfa — Git blob: 6bca4388fe72434ed6cd6c93714192caa9b6cdae
+- standards_sources/Emisyon-İmisyon Eğitim Dokümanları/Ölçme Bölgeleri, Yerleri ve Ölçümün Amacı.pdf — 22 sayfa — Git blob: 05edb091f42738df3d8a9e686984b0103e0ea3b5
+- standards_sources/Emisyon-İmisyon Eğitim Dokümanları/Örneklemesi, Formaldehit Örneklemesi.pdf — 21 sayfa — Git blob: ba9f792fd7efd5374232ecceebc2ad7a95a1e82d
+- standards_sources/Ölçüm Talimatları/TL07-REV.10-BACADA STANDART YANMA GAZLARI ÖLÇÜM TALİMATI.pdf — 13 sayfa — Git blob: a2ae971be207c14380947ff724b4132ccbbb646d
+- standards_sources/Ölçüm Talimatları/TL08-04 BACADA İSLİLİK ÖLÇÜM TALİMATI.pdf — 5 sayfa — Git blob: 919950f5f24ac4cf7d210555cc6254f6fc6d0e19
+- standards_sources/Ölçüm Talimatları/TL09-REV.12-BACADA TOZ ÖRNEKLEMESİ STANDART İŞLETME TALİMATI.pdf — 38 sayfa — Git blob: ed262ec34949e00f5cbd65f595f90a9619d241f5
+- standards_sources/Ölçüm Talimatları/TL11-15 BACADA VOC ÖRNEKLEMESİ STANDART İŞLETME TALİMATI.pdf — 11 sayfa — Git blob: b7aeb546549861acf4c180cf6ba729afca4814f0
+- standards_sources/Ölçüm Talimatları/TL112-07 BACADA  SÜLFÜRİK ASİT TAYİNİ STANDART İŞLETME TALİMATI.pdf — 11 sayfa — Git blob: 70c9d22e258d817ae818913a53c9dbe1274b6263
+- standards_sources/Ölçüm Talimatları/TL113-REV.11-BACADA  FORMALDEHİT TAYİNİ STANDART İŞLETME TALİMATI.pdf — 12 sayfa — Git blob: 911798195d4beb3a49ff71ddc0ea931be1538140
+- standards_sources/Ölçüm Talimatları/TL114-07 BACADA HİDROJEN SÜLFÜR TAYİNİ STANDART İŞLETME TALİMATI.pdf — 14 sayfa — Git blob: 24e31de68c6cdaf68f9a0efb801c634291fa41ba
+- standards_sources/Ölçüm Talimatları/TL115-07 BACADA  HİDROJENSİYANÜR TAYİNİ STANDART İŞLETME TALİMATI.pdf — 13 sayfa — Git blob: c53ca1de56ed18b988775e72ced63d6ff2a18b31
+- standards_sources/Ölçüm Talimatları/TL119-04 BACADA   PAH ÖRNEKLEMESİ STANDART İŞLETME TALİMATI.pdf — 11 sayfa — Git blob: bfc4cd53c38762c3befcaf258cc38583de2df795
+- standards_sources/Ölçüm Talimatları/TL13-08 ORTAM HAVASINDA SOLUNABİLİR TOZ TAYİNİ STANDART İŞLETME TALİMATI.pdf — 8 sayfa — Git blob: b43e8724c2820aff90e67fc674380053578fa1d6
+- standards_sources/Ölçüm Talimatları/TL14-REV07- ORTAM HAVASINDA ÇÖKEN TOZ TAYİNİ STANDART İŞLETME TALİMATI.pdf — 7 sayfa — Git blob: ec82a274dea0c42af3f1d571556fbd27b81156cc
+- standards_sources/Ölçüm Talimatları/TL144-REV.02-BACADA TOPLAM ORGANİK KARBONUN(TOC) TAYİNİ STANDART İŞLETME TALİMATI (2).pdf — 8 sayfa — Git blob: 612874fb15579206524dbdfbff97d4bda7b531ab
+- standards_sources/Ölçüm Talimatları/TL15-04 ORTAM HAVASINDA GAZ TAYİNİ STANDART İŞLETME TALİMATI.pdf — 5 sayfa — Git blob: fe942c8b3a3119384bfe016424942f96f33f64f9
+- standards_sources/Ölçüm Talimatları/TL179-02 BACAGAZINDA AĞIR METAL TAYİNİ STANDART İŞLETME TALİMATI.pdf — 12 sayfa — Git blob: 4a9b3de6de1ddfa4cf45892e281831e8baa1061a
+- standards_sources/Ölçüm Talimatları/TL195-01  EPA METHOD 29 BACA GAZINDAN AĞIR METAL NUMUNESİ ALMA TALİMATI.pdf — 7 sayfa — Git blob: 61e3d7d4d0413d04f57db95f5900465c7f7ace0b
+- standards_sources/Ölçüm Talimatları/TL200 -01 EPA BACAGAZI TOZ ÖLÇÜMLERİ STANDART İŞLETME TALİMATI.pdf — 17 sayfa — Git blob: bd9eadec84b91fad01a1fc8eb0f9e0b3dcd40133
+- standards_sources/Ölçüm Talimatları/TL297-REV.01-BACADA TS EN ISO 16911-1 İLE HIZ VE DEBİ STANDART İŞLETME TALİMATI.pdf — 11 sayfa — Git blob: 1b9202c14958aa1bc7be1a66fcf90dc16fecea7e
+- standards_sources/Ölçüm Talimatları/TL298-REV.01-BACADA EPA-2 İLE HIZ ÖLÇÜMLERİ STANDART İŞLETME TALİMATI.pdf — 10 sayfa — Git blob: 2fca2703c0c04e407dd4baf9b34c1478f49a84ef
+- standards_sources/Ölçüm Talimatları/TL309-REV.00-BACA GAZI HALOJEN ÖLÇÜMÜ EPA 26A STANDART İŞLETME TALİMATI.pdf — 12 sayfa — Git blob: 8303b1eeeee790fe12f7fbd14a6d653d4eed185e
+- standards_sources/Ölçüm Talimatları/TL89-REV.09-BACADA HCl TAYİNİ STANDART İŞLETME TALİMATI.pdf — 12 sayfa — Git blob: 5173049298a9cddd5f6405f17c343b922d65a6f9
+- standards_sources/Ölçüm Talimatları/TL90-08 BACADA TOPLAM FLORÜR TAYİNİ STANDART İŞLETME TALİMATI.pdf — 11 sayfa — Git blob: 682c543cd9fef94256ab5e0859b21be5099b97b3
+
+## İncelemede çözülen farklar
+
+- TL309: laboratuvarın altı şişeli EPA 26A düzeni; ilk şişe 50 mL 0,1 N H₂SO₄.
+- TL90: ilk iki şişe 100 mL saf su; eğitimdeki 10 mL önerisi laboratuvar talimatı yerine kullanılmadı.
+- TL195: Hg için 7 şişe, Hg hariç 4 şişe; TL179 EN düzeniyle karıştırılmadı.
+- Dioksin gram miktarı eğitimde tanımlı değil; PAH miktarı kopyalanmadı.
+- Hidrolik çap: 0,3 × 0,5 m için 0,375 m; parantez hatası düzeltilmiştir.
+- ISDL: 0,3 mg/L × 0,3 L / 1 mg/Nm³ = 0,09 Nm³.
+- Eğitimdeki partikül akış açısı tablosunda yönü ters büyüklük işaretleri normatif uygunluk olarak kullanılmadı.
+- Uygulama metninde tesis güvenliği ve genel hazırlık tekrarları ortak bölüme taşındı.
+- İki eğitim PDF’i aynı SHA içerdiğinden tek VOC/formaldehit konusu altında birleştirildi.

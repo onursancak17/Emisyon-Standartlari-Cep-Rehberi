@@ -1,167 +1,77 @@
+import 'dart:async';
 import 'dart:io';
 import 'dart:ui' as ui;
-
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:emisyon_standartlari_cep_rehberi/main.dart';
 
-void main() {
-  TestWidgetsFlutterBinding.ensureInitialized();
-  setUp(() {
-    preferences.memoryOnly = true;
-    preferences.favorites.clear();
-    preferences.recent.clear();
-    preferences.checks.clear();
-    preferences.scale = 1;
-    preferences.dark = false;
+Future<void> fonts() async {
+ for(final e in {'Roboto':'/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf',
+  'MaterialIcons':'${Platform.environment['FLUTTER_ROOT']}/bin/cache/artifacts/material_fonts/MaterialIcons-Regular.otf'}.entries){
+  final f=File(e.value);if(f.existsSync()){final l=FontLoader(e.key)..addFont(Future.value(ByteData.sublistView(f.readAsBytesSync())));await l.load();}
+ }
+}
+Future<void> shot(WidgetTester t,GlobalKey key,String name) async {
+ await t.pump();await t.runAsync(() async {
+ final b=key.currentContext!.findRenderObject() as RenderRepaintBoundary;
+ final im=await b.toImage(pixelRatio:2);final bytes=await im.toByteData(format:ui.ImageByteFormat.png);
+ Directory('test-output').createSync(recursive:true);File('test-output/$name.png').writeAsBytesSync(bytes!.buffer.asUint8List());im.dispose();
+ });
+}
+void main(){
+ TestWidgetsFlutterBinding.ensureInitialized();
+ setUp(() {settings.scale=1;settings.dark=false;settings.rate=.45;});
+ testWidgets('Two tabs, Turkish search and independent common chapter', (t) async {
+  t.view.physicalSize=const Size(390,844);t.view.devicePixelRatio=1;addTearDown(t.view.resetPhysicalSize);addTearDown(t.view.resetDevicePixelRatio);
+  await t.runAsync(fonts);final data=(await t.runAsync(Content.load))!;final key=GlobalKey();
+  await t.pumpWidget(RepaintBoundary(key:key,child:FieldApp(content:data)));await t.pumpAndSettle();
+  expect(find.text('Ortak Saha Talimatları'),findsOneWidget);expect(find.byType(NavigationDestination),findsNWidgets(2));
+  expect(t.takeException(),isNull);await shot(t,key,'home');
+  await t.enterText(find.byType(TextField),'klorür');await t.pumpAndSettle();
+  await t.tap(find.text('HCl • Gaz hâlindeki klorür'));await t.pumpAndSettle();
+  expect(find.byType(TrainCard),findsOneWidget);expect(find.text('100 mL'),findsNWidgets(2));
+  expect(find.text('Ortak hazırlığı aç'),findsNothing);expect(find.textContaining('REVİZYON'),findsNothing);
+  await t.runAsync(()async{for(final k in ['water','empty','silica']){await precacheImage(AssetImage('assets/equipment/$k.webp'),t.element(find.byType(TrainCard)));}});
+  await t.pumpAndSettle();await shot(t,key,'hcl');
+  await t.tap(find.text('Tam ekran • Büyüt'));await t.pumpAndSettle();expect(find.byType(InteractiveViewer),findsOneWidget);expect(t.takeException(),isNull);
+  await t.pageBack();await t.pumpAndSettle();await t.pageBack();await t.pumpAndSettle();
+  await t.tap(find.text('Eğitim'));await t.pumpAndSettle();await t.enterText(find.byType(TextField),'tayin sınırları');await t.pumpAndSettle();
+  expect(find.text('Tayin sınırları ve ölçüm süresi'),findsOneWidget);await t.tap(find.text('Tayin sınırları ve ölçüm süresi'));await t.pumpAndSettle();
+  expect(find.text('Tayin sınırını sahaya taşımak'),findsOneWidget);expect(t.takeException(),isNull);await shot(t,key,'education');
+ },timeout:const Timeout(Duration(seconds:90)));
+ testWidgets('All instructions fit narrow phone at large text', (t) async {
+  t.view.physicalSize=const Size(320,800);t.view.devicePixelRatio=1;addTearDown(t.view.resetPhysicalSize);addTearDown(t.view.resetDevicePixelRatio);
+  final data=(await t.runAsync(Content.load))!;
+  for(final a in [data.common,...data.manuals]){
+   await t.pumpWidget(MaterialApp(home:MediaQuery(data:const MediaQueryData(size:Size(320,800),textScaler:TextScaler.linear(1.4)),child:DetailPage(article:a))));await t.pumpAndSettle();
+   expect(t.takeException(),isNull,reason:'${a.id} intro');
+   final tiles=find.byType(ExpansionTile);await t.ensureVisible(tiles.at(2));await t.pumpAndSettle();await t.tap(tiles.at(2));await t.pumpAndSettle();
+   expect(t.takeException(),isNull,reason:'${a.id} expanded');
+   await t.pumpWidget(const SizedBox.shrink());await t.pumpAndSettle();
+  }
+ },timeout:const Timeout(Duration(seconds:90)));
+ testWidgets('T90, amounts and device TTS use the actual instruction text', (t) async {
+  final data=(await t.runAsync(Content.load))!;
+  final gas=data.manuals.singleWhere((a)=>a.id=='yanma');expect(gas.sections.any((s)=>s.title.startsWith('T90')),isTrue);
+  final metal=data.manuals.singleWhere((a)=>a.id=='metal-epa');expect(metal.trains.first.bottles.length,7);
+  expect(metal.narration.any((s)=>s.contains('100 mL')&&s.contains('HNO₃')),isTrue);
+  const channel=MethodChannel('flutter_tts');final spoken=<String>[];Completer<int>? pending;
+  TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger.setMockMethodCallHandler(channel,(call)async{
+   if(call.method=='isLanguageAvailable')return true;
+   if(call.method=='speak'){spoken.add((call.arguments as Map)['text'] as String);pending=Completer<int>();return pending!.future;}
+   if(call.method=='stop'){if(pending!=null&&!pending!.isCompleted)pending!.complete(0);return 1;}return 1;
   });
-  Future<void> fonts() async {
-    final file = File('/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf');
-    if (file.existsSync()) {
-      final loader = FontLoader('Roboto')
-        ..addFont(Future.value(ByteData.sublistView(file.readAsBytesSync())));
-      await loader.load();
-    }
-  }
-
-  Future<void> screenshot(
-    WidgetTester tester,
-    GlobalKey key,
-    String name,
-  ) async {
-    await tester.pump();
-    final boundary =
-        key.currentContext!.findRenderObject()! as RenderRepaintBoundary;
-    await tester.runAsync(() async {
-      final image = await boundary.toImage(pixelRatio: 2);
-      final bytes = await image.toByteData(format: ui.ImageByteFormat.png);
-      Directory('test-output').createSync(recursive: true);
-      File('test-output/$name.png')
-          .writeAsBytesSync(bytes!.buffer.asUint8List());
-      image.dispose();
-    });
-  }
-
-  testWidgets(
-    'Turkish search, favorites and personal checklist stay connected',
-    (tester) async {
-      tester.view.physicalSize = const Size(390, 844);
-      tester.view.devicePixelRatio = 1;
-      addTearDown(tester.view.resetPhysicalSize);
-      addTearDown(tester.view.resetDevicePixelRatio);
-      await tester.runAsync(fonts);
-      // Decode large JSON assets outside the test fake clock before the home future reads them.
-      final initialItems = await tester.runAsync(StandardsRepository.loadItems);
-      final key = GlobalKey();
-      await tester.pumpWidget(
-        RepaintBoundary(
-          key: key,
-          child: StandardsApp(initialItems: initialItems),
-        ),
-      );
-      await tester.pumpAndSettle();
-      expect(find.text('31 rehber'), findsOneWidget);
-      expect(tester.takeException(), isNull);
-      await screenshot(tester, key, 'home');
-      await tester.enterText(find.byType(TextField), 'yanma gazları');
-      await tester.pumpAndSettle();
-      expect(find.byType(StandardCard), findsOneWidget);
-      await tester.tap(find.byType(StandardCard));
-      await tester.pumpAndSettle();
-      await tester.tap(find.byTooltip('Favoriye ekle / çıkar'));
-      await tester.pump();
-      expect(preferences.favorites.length, 1);
-      await tester.ensureVisible(find.widgetWithText(ChoiceChip, 'Ölçümü yap'));
-      await tester.pumpAndSettle();
-      await tester.tap(find.widgetWithText(ChoiceChip, 'Ölçümü yap'));
-      await tester.pumpAndSettle();
-      expect(find.byType(StepCard), findsWidgets);
-      expect(tester.takeException(), isNull);
-      await screenshot(tester, key, 'combustion-steps');
-      await tester.tap(find.text('Saha kontrol listesi'));
-      await tester.pumpAndSettle();
-      await tester.scrollUntilVisible(find.byType(CheckboxListTile).first, 150);
-      await tester.tap(find.byType(CheckboxListTile).first);
-      await tester.pump();
-      expect(preferences.checks.values.single.length, 1);
-      await screenshot(tester, key, 'checklist');
-    },
-    timeout: const Timeout(Duration(seconds: 90)),
-  );
-  testWidgets('Every guide and diagram fits a narrow screen with large text', (
-    tester,
-  ) async {
-    tester.view.physicalSize = const Size(320, 800);
-    tester.view.devicePixelRatio = 1;
-    addTearDown(tester.view.resetPhysicalSize);
-    addTearDown(tester.view.resetDevicePixelRatio);
-    final guides = await tester.runAsync(StandardsRepository.loadItems);
-    expect(guides!.length, 31);
-    preferences.scale = 1.3;
-    for (final item in guides) {
-      await tester.pumpWidget(
-        MaterialApp(
-          theme: ThemeData(useMaterial3: true),
-          home: MediaQuery(
-            data: const MediaQueryData(
-              size: Size(320, 800),
-              textScaler: TextScaler.linear(1.3),
-            ),
-            child: StandardDetailPage(item: item),
-          ),
-        ),
-      );
-      await tester.pumpAndSettle();
-      expect(tester.takeException(), isNull, reason: '${item.code} intro');
-      await tester.ensureVisible(find.widgetWithText(ChoiceChip, 'Treni kur'));
-      await tester.pumpAndSettle();
-      await tester.tap(find.widgetWithText(ChoiceChip, 'Treni kur'));
-      await tester.pumpAndSettle();
-      expect(find.byType(TrainCard), findsOneWidget);
-      expect(tester.takeException(), isNull, reason: '${item.code} train');
-      await tester.pumpWidget(const SizedBox.shrink());
-      await tester.pumpAndSettle();
-    }
-  }, timeout: const Timeout(Duration(seconds: 90)));
-  testWidgets(
-    'Method-specific media, T90 and chemistry are present without duplicate records',
-    (tester) async {
-      final guides = await tester.runAsync(StandardsRepository.loadItems);
-      expect(guides!.map((g) => g.code).toSet().length, 31);
-      expect(
-        guides
-            .expand((g) => g.audioNotes)
-            .map((a) => a.audioAsset)
-            .toSet()
-            .length,
-        13,
-      );
-      final gas = guides.singleWhere((g) => g.title.startsWith('Yanma'));
-      expect(maps(gas.guide['concepts']).length, 7);
-      final halogen = guides.singleWhere((g) => g.code == 'EPA Method 26A');
-      expect(
-        maps(maps(halogen.guide['trains']).single['nodes'])
-            .where((n) => (n['label'] as String).startsWith('İmpinger'))
-            .length,
-        6,
-      );
-      expect(
-        guides.singleWhere((g) => g.code == 'EPA Method 323').flowRate,
-        contains('0,2–0,4'),
-      );
-      // Media cards are idle until explicitly played; no concurrent native players are created by navigation.
-      await tester.pumpWidget(MaterialApp(home: StandardDetailPage(item: gas)));
-      await tester.pumpAndSettle();
-      await tester.ensureVisible(
-        find.widgetWithText(ChoiceChip, 'Görseller & ses'),
-      );
-      await tester.pumpAndSettle();
-      await tester.tap(find.widgetWithText(ChoiceChip, 'Görseller & ses'));
-      await tester.pumpAndSettle();
-      expect(tester.takeException(), isNull);
-    },
-    timeout: const Timeout(Duration(seconds: 90)),
-  );
+  final n=Narrator();unawaited(n.start(['HNO₃ 100 mL','İkinci adım']));await t.pumpAndSettle();
+  expect(spoken.first,contains('nitrik asit'));expect(spoken.first,contains('100 mililitre'));
+  await n.pause();expect(n.paused,isTrue);expect(n.playing,isFalse);
+  unawaited(n.resume());await t.pumpAndSettle();expect(n.playing,isTrue);
+  await n.halt();n.dispose();TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger.setMockMethodCallHandler(channel,null);
+ });
+ testWidgets('Missing Turkish voice produces an actionable message', (t)async{
+  const channel=MethodChannel('flutter_tts');TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger.setMockMethodCallHandler(channel,(call)async=>call.method=='isLanguageAvailable'?false:1);
+  final n=Narrator();await n.start(['Deneme']);expect(n.error,contains('Türkçe ses bulunamadı'));expect(n.playing,isFalse);n.dispose();
+  TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger.setMockMethodCallHandler(channel,null);
+ });
 }
