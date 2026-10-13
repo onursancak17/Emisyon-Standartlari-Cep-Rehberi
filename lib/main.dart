@@ -264,7 +264,9 @@ class _DetailState extends State<DetailPage> {
        Align(alignment:Alignment.centerRight,child:TextButton.icon(onPressed:()=>unawaited(narrator.start([a.sections[i].title,...a.sections[i].items])),icon:const Icon(Icons.volume_up_outlined,size:20),label:const Text('Bu bölümü dinle'))),
        for(var j=0;j<a.sections[i].items.length;j++) Padding(padding:const EdgeInsets.only(bottom:14),child:Row(crossAxisAlignment:CrossAxisAlignment.start,children:[
         if(a.sections[i].ordered)...[CircleAvatar(radius:15,backgroundColor:teal.withValues(alpha:.12),child:Text('${j+1}',style:const TextStyle(color:teal,fontSize:14,fontWeight:FontWeight.bold))),const SizedBox(width:10)],
-        Expanded(child:SelectableText(a.sections[i].items[j])),
+        Expanded(child:Text(a.sections[i].items[j],
+          style:Theme.of(c).textTheme.bodyMedium,
+          softWrap:true)),
        ])),
       ])),
    ]));

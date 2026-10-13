@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:io';
 import 'dart:ui' as ui;
 import 'package:flutter/material.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -22,7 +23,8 @@ Future<void> shot(WidgetTester t,GlobalKey key,String name) async {
 }
 void main(){
  TestWidgetsFlutterBinding.ensureInitialized();
- setUp(() {settings.scale=1;settings.dark=false;settings.rate=.45;});
+ setUp(() {settings.scale=1;settings.dark=false;settings.rate=.45;debugDefaultTargetPlatformOverride=TargetPlatform.android;});
+ tearDown(() {debugDefaultTargetPlatformOverride=null;});
  testWidgets('Two tabs, Turkish search and independent common chapter', (t) async {
   t.view.physicalSize=const Size(390,844);t.view.devicePixelRatio=1;addTearDown(t.view.resetPhysicalSize);addTearDown(t.view.resetDevicePixelRatio);
   await t.runAsync(fonts);final data=(await t.runAsync(Content.load))!;final key=GlobalKey();
@@ -49,6 +51,33 @@ void main(){
    expect(t.takeException(),isNull,reason:'${a.id} intro');
    final heading=find.text(a.sections[2].title);await t.scrollUntilVisible(heading,180,maxScrolls:60,scrollable:find.byType(Scrollable).first);await t.pumpAndSettle();await t.tap(heading);await t.pumpAndSettle();
    expect(t.takeException(),isNull,reason:'${a.id} expanded');
+   await t.pumpWidget(const SizedBox.shrink());await t.pumpAndSettle();
+  }
+ },timeout:const Timeout(Duration(seconds:90)));
+ testWidgets('Android dust instructions render readable paragraphs in every section', (t) async {
+  t.view.physicalSize=const Size(393,873);t.view.devicePixelRatio=1;
+  addTearDown(t.view.resetPhysicalSize);addTearDown(t.view.resetDevicePixelRatio);
+  await t.runAsync(fonts);final data=(await t.runAsync(Content.load))!;
+  final dust=data.manuals.singleWhere((a)=>a.id=='toz-ts');
+  for(final dark in [false,true]){
+   settings.dark=dark;
+   await t.pumpWidget(FieldApp(content:data));await t.pumpAndSettle();
+   await t.enterText(find.byType(TextField),'');await t.pumpAndSettle();
+   await t.tap(find.text(dust.title));await t.pumpAndSettle();
+   for(final section in dust.sections){
+    final heading=find.text(section.title);
+    await t.scrollUntilVisible(heading,150,maxScrolls:80,scrollable:find.byType(Scrollable).first);
+    await t.pumpAndSettle();
+    final tile=t.widget<ExpansionTile>(find.ancestor(of:heading,matching:find.byType(ExpansionTile)));
+    if(!tile.initiallyExpanded){await t.tap(heading);await t.pumpAndSettle();}
+    final paragraph=find.text(section.items.first);
+    await t.scrollUntilVisible(paragraph,150,maxScrolls:80,scrollable:find.byType(Scrollable).first);
+    await t.pumpAndSettle();
+    expect(t.widget(paragraph),isA<Text>());
+    expect(find.byType(ErrorWidget),findsNothing);
+    expect(t.takeException(),isNull,reason:section.title);
+   }
+   expect(find.byType(SelectableText),findsNothing);
    await t.pumpWidget(const SizedBox.shrink());await t.pumpAndSettle();
   }
  },timeout:const Timeout(Duration(seconds:90)));
