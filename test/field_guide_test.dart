@@ -57,10 +57,10 @@ void main(){
   t.view.physicalSize=const Size(393,873);t.view.devicePixelRatio=1;
   addTearDown(t.view.resetPhysicalSize);addTearDown(t.view.resetDevicePixelRatio);
   await t.runAsync(fonts);final data=(await t.runAsync(Content.load))!;
-  final dust=data.manuals.singleWhere((a)=>a.id=='toz-ts');
+  final dust=data.manuals.singleWhere((a)=>a.id=='toz-ts');final key=GlobalKey();
   for(final dark in [false,true]){
    settings.dark=dark;
-   await t.pumpWidget(FieldApp(content:data));await t.pumpAndSettle();
+   await t.pumpWidget(RepaintBoundary(key:key,child:FieldApp(content:data)));await t.pumpAndSettle();
    await t.enterText(find.byType(TextField),'');await t.pumpAndSettle();
    await t.tap(find.text(dust.title));await t.pumpAndSettle();
    for(final section in dust.sections){
@@ -73,6 +73,7 @@ void main(){
     await t.scrollUntilVisible(paragraph,150,maxScrolls:80,scrollable:find.byType(Scrollable).first);
     await t.pumpAndSettle();
     expect(t.widget(paragraph),isA<Text>());
+    if(section.title.contains('hazırlık'))await shot(t,key,dark?'dust-dark':'dust-light');
     expect(find.byType(ErrorWidget),findsNothing);
     expect(t.takeException(),isNull,reason:section.title);
    }
