@@ -23,8 +23,7 @@ Future<void> shot(WidgetTester t,GlobalKey key,String name) async {
 }
 void main(){
  TestWidgetsFlutterBinding.ensureInitialized();
- setUp(() {settings.scale=1;settings.dark=false;settings.rate=.45;debugDefaultTargetPlatformOverride=TargetPlatform.android;});
- tearDown(() {debugDefaultTargetPlatformOverride=null;});
+ setUp(() {settings.scale=1;settings.dark=false;settings.rate=.45;});
  testWidgets('Two tabs, Turkish search and independent common chapter', (t) async {
   t.view.physicalSize=const Size(390,844);t.view.devicePixelRatio=1;addTearDown(t.view.resetPhysicalSize);addTearDown(t.view.resetDevicePixelRatio);
   await t.runAsync(fonts);final data=(await t.runAsync(Content.load))!;final key=GlobalKey();
@@ -42,7 +41,7 @@ void main(){
   await t.tap(find.text('Eğitim'));await t.pumpAndSettle();await t.enterText(find.byType(TextField),'tayin sınırları');await t.pumpAndSettle();
   expect(find.text('Tayin sınırları ve ölçüm süresi'),findsOneWidget);await t.tap(find.text('Tayin sınırları ve ölçüm süresi'));await t.pumpAndSettle();
   expect(find.text('Tayin sınırını sahaya taşımak'),findsOneWidget);expect(t.takeException(),isNull);await shot(t,key,'education');
- },timeout:const Timeout(Duration(seconds:90)));
+ },variant:TargetPlatformVariant.only(TargetPlatform.android),timeout:const Timeout(Duration(seconds:90)));
  testWidgets('All instructions fit narrow phone at large text', (t) async {
   t.view.physicalSize=const Size(320,800);t.view.devicePixelRatio=1;addTearDown(t.view.resetPhysicalSize);addTearDown(t.view.resetDevicePixelRatio);
   final data=(await t.runAsync(Content.load))!;
@@ -53,7 +52,7 @@ void main(){
    expect(t.takeException(),isNull,reason:'${a.id} expanded');
    await t.pumpWidget(const SizedBox.shrink());await t.pumpAndSettle();
   }
- },timeout:const Timeout(Duration(seconds:90)));
+ },variant:TargetPlatformVariant.only(TargetPlatform.android),timeout:const Timeout(Duration(seconds:90)));
  testWidgets('Android dust instructions render readable paragraphs in every section', (t) async {
   t.view.physicalSize=const Size(393,873);t.view.devicePixelRatio=1;
   addTearDown(t.view.resetPhysicalSize);addTearDown(t.view.resetDevicePixelRatio);
@@ -80,7 +79,7 @@ void main(){
    expect(find.byType(SelectableText),findsNothing);
    await t.pumpWidget(const SizedBox.shrink());await t.pumpAndSettle();
   }
- },timeout:const Timeout(Duration(seconds:90)));
+ },variant:TargetPlatformVariant.only(TargetPlatform.android),timeout:const Timeout(Duration(seconds:90)));
  testWidgets('T90, amounts and device TTS use the actual instruction text', (t) async {
   final data=(await t.runAsync(Content.load))!;
   final gas=data.manuals.singleWhere((a)=>a.id=='yanma');expect(gas.sections.any((s)=>s.title.startsWith('T90')),isTrue);
@@ -102,7 +101,7 @@ void main(){
   await t.runAsync(()async{await n.resume();});expect(spoken.length,4);
   await t.runAsync(()async{await n.halt();});expect(calls.where((x)=>x=='stop').length,2);
   n.dispose();TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger.setMockMethodCallHandler(channel,null);
- });
+ },variant:TargetPlatformVariant.only(TargetPlatform.android));
  testWidgets('Missing Turkish voice produces an actionable message', (t)async{
   const channel=MethodChannel('flutter_tts');TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger.setMockMethodCallHandler(channel,(call)async=>call.method=='isLanguageAvailable'?false:1);
   final n=Narrator();await n.start(['Deneme']);expect(n.error,contains('Türkçe ses bulunamadı'));expect(n.playing,isFalse);n.dispose();
