@@ -160,7 +160,7 @@ class Narrator extends ChangeNotifier {
       _baseOffset=offset;
       final phrase=current.substring(offset.clamp(0,current.length).toInt());
       if(phrase.isNotEmpty) {
-        try { await _tts!.speak(phrase); }
+        try { await _tts!.speak(phrase,focus:true); }
         catch (_) { if(session==_session) {error='Sesli anlatım kesildi. Yeniden oynatabilirsin.';playing=false;announce();} return; }
       }
       if(session!=_session || !playing || _closed) return;
@@ -185,7 +185,10 @@ class FieldApp extends StatelessWidget {
     builder: (_,__) => MaterialApp(debugShowCheckedModeBanner:false,
       title:'Emisyon Saha Talimatları',
       theme: ThemeData(useMaterial3:true, brightness:Brightness.light,
-        colorScheme:ColorScheme.fromSeed(seedColor:teal), scaffoldBackgroundColor:const Color(0xFFF3F6F8),
+        colorScheme:ColorScheme.fromSeed(seedColor:teal),
+        appBarTheme:const AppBarTheme(backgroundColor:Color(0xFFF3F6F8),foregroundColor:navy,titleTextStyle:TextStyle(color:navy,fontSize:22,fontWeight:FontWeight.w700)),
+        cardTheme:CardThemeData(color:Colors.white,surfaceTintColor:Colors.transparent,elevation:0,shape:RoundedRectangleBorder(borderRadius:BorderRadius.circular(18),side:const BorderSide(color:Color(0xFFDCE6ED)))),
+        scaffoldBackgroundColor:const Color(0xFFF3F6F8),
         textTheme:const TextTheme(bodyMedium:TextStyle(fontSize:16,height:1.55),bodyLarge:TextStyle(fontSize:17,height:1.5))),
       darkTheme:ThemeData(useMaterial3:true,brightness:Brightness.dark,colorScheme:ColorScheme.fromSeed(seedColor:teal,brightness:Brightness.dark),
         textTheme:const TextTheme(bodyMedium:TextStyle(fontSize:16,height:1.55),bodyLarge:TextStyle(fontSize:17,height:1.5))),
