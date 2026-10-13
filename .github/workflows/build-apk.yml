@@ -30,7 +30,7 @@ jobs:
           import shutil
           p=Path('/tmp/mobile_build')
           shutil.rmtree(p/'lib');shutil.copytree('lib',p/'lib')
-          shutil.copytree('test',p/'test',dirs_exist_ok=True)
+          shutil.rmtree(p/'test');shutil.copytree('test',p/'test')
           for f in ['manuals.json','training.json']: 
               (p/'assets').mkdir(exist_ok=True)
               shutil.copyfile('assets/'+f,p/'assets'/f)

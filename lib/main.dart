@@ -93,6 +93,8 @@ class Content {
 
 class Narrator extends ChangeNotifier {
   FlutterTts? _tts;
+  Future<bool>? _opening;
+  bool preparing=false;
   bool playing = false, paused = false;
   String? error;
   List<String> chunks = [];
@@ -104,6 +106,11 @@ class Narrator extends ChangeNotifier {
   void announce() { if (!_closed) notifyListeners(); }
   Future<bool> init() async {
     if (_tts != null) return true;
+    final result=await (_opening ??= configure());
+    if(!result) _opening=null;
+    return result;
+  }
+  Future<bool> configure() async {
     try {
       final t = FlutterTts();
       final available = await t.isLanguageAvailable('tr-TR');
@@ -112,6 +119,11 @@ class Narrator extends ChangeNotifier {
         announce(); return false;
       }
       await t.setLanguage('tr-TR');
+      final voices=await t.getVoices;
+      if(voices is List){
+        final local=voices.whereType<Map>().where((v)=>v['locale'].toString().replaceAll('_','-').toLowerCase().startsWith('tr-') && v['network_required']!=true && v['network_required']!='true').toList();
+        if(local.isNotEmpty){local.sort((a,b)=>(int.tryParse(b['quality'].toString())??0).compareTo(int.tryParse(a['quality'].toString())??0));await t.setVoice({'name':local.first['name'].toString(),'locale':local.first['locale'].toString()});}
+      }
       await t.awaitSpeakCompletion(true);
       await t.setPitch(1);
       t.setProgressHandler((text, start, end, word) {
@@ -131,14 +143,18 @@ class Narrator extends ChangeNotifier {
     return s;
   }
   Future<void> start(List<String> text) async {
-    await halt(); chunks = text.map(pronounce).toList(); index=0; offset=0;
+    await halt(); chunks = text.map(pronounce).expand((value){final parts=<String>[];while(value.length>1800){var end=value.lastIndexOf('. ',1800);if(end<700)end=value.lastIndexOf(' ',1800);if(end<1)end=1800;parts.add(value.substring(0,end));value=value.substring(end).trim();}if(value.isNotEmpty)parts.add(value);return parts;}).toList(); index=0; offset=0;
     await resume();
   }
   Future<void> resume() async {
     error=null;
-    if (!await init() || _closed || chunks.isEmpty) return;
+    final session=++_session;preparing=true;announce();
+    final ready=await init();
+    if(_closed || session!=_session) return;
+    preparing=false;
+    if(!ready || chunks.isEmpty){playing=false;announce();return;}
     if(index>=chunks.length) {index=0; offset=0;}
-    final session=++_session; playing=true; paused=false; announce();
+    playing=true; paused=false; announce();
     await _tts!.setSpeechRate(settings.rate);
     while (!_closed && playing && session==_session && index<chunks.length) {
       _baseOffset=offset;
@@ -153,7 +169,7 @@ class Narrator extends ChangeNotifier {
     if(session==_session && !_closed) {playing=false; paused=false; announce();}
   }
   Future<void> pause() async { _session++; playing=false; paused=true; await _tts?.stop(); announce(); }
-  Future<void> halt() async { _session++; playing=false; paused=false; await _tts?.stop(); announce(); }
+  Future<void> halt() async { _session++; preparing=false;playing=false; paused=false; await _tts?.stop(); announce(); }
   Future<void> skip(int direction) async {
     final wasPlaying=playing; await halt();
     index=(index+direction).clamp(0, math.max(0,chunks.length-1)).toInt(); offset=0;
@@ -253,7 +269,7 @@ class _DetailState extends State<DetailPage> {
 class AudioPanel extends StatelessWidget {
  const AudioPanel({super.key,required this.narrator,required this.article});final Narrator narrator;final Article article;
  @override Widget build(BuildContext c)=>ListenableBuilder(listenable:narrator,builder:(_,__)=>Card(child:Padding(padding:const EdgeInsets.all(12),child:Column(crossAxisAlignment:CrossAxisAlignment.start,children:[
-  Row(children:[IconButton.filled(tooltip:narrator.playing?'Duraklat':'Sesli anlatımı oynat',onPressed:()=>unawaited(narrator.playing?narrator.pause():narrator.paused?narrator.resume():narrator.start(article.narration)),icon:Icon(narrator.playing?Icons.pause:Icons.play_arrow)),const SizedBox(width:10),
+  Row(children:[IconButton.filled(tooltip:narrator.playing?'Duraklat':'Sesli anlatımı oynat',onPressed:narrator.preparing?null:()=>unawaited(narrator.playing?narrator.pause():narrator.paused?narrator.resume():narrator.start(article.narration)),icon:Icon(narrator.playing?Icons.pause:Icons.play_arrow)),const SizedBox(width:10),
    const Expanded(child:Text('Sesli anlatım',style:TextStyle(fontWeight:FontWeight.w700))),
    IconButton(tooltip:'Önceki madde',onPressed:narrator.chunks.isEmpty?null:()=>unawaited(narrator.skip(-1)),icon:const Icon(Icons.skip_previous)),
    IconButton(tooltip:'Sonraki madde',onPressed:narrator.chunks.isEmpty?null:()=>unawaited(narrator.skip(1)),icon:const Icon(Icons.skip_next)),
@@ -298,15 +314,21 @@ class ConnectionPainter extends CustomPainter {
  }
  @override bool shouldRepaint(ConnectionPainter old)=>count!=old.count;
 }
-class TrainFullScreen extends StatelessWidget {
+class TrainFullScreen extends StatefulWidget {
  const TrainFullScreen({super.key,required this.train});final Train train;
- @override Widget build(BuildContext c)=>Scaffold(backgroundColor:Colors.white,appBar:AppBar(title:Text(train.name)),body:Column(children:[
+ @override State<TrainFullScreen> createState()=>_TrainFullState();
+}
+class _TrainFullState extends State<TrainFullScreen> {
+ final controller=TransformationController();double oldWidth=0;
+ @override void didChangeDependencies(){super.didChangeDependencies();final width=MediaQuery.sizeOf(context).width;if(width!=oldWidth){oldWidth=width;controller.value=Matrix4.diagonal3Values((width/(widget.train.bottles.length*190)).clamp(.2,1).toDouble(),(width/(widget.train.bottles.length*190)).clamp(.2,1).toDouble(),1);}}
+ @override void dispose(){controller.dispose();super.dispose();}
+ @override Widget build(BuildContext c){final train=widget.train;return Scaffold(backgroundColor:Colors.white,appBar:AppBar(title:Text(train.name)),body:Column(children:[
   const Padding(padding:EdgeInsets.all(12),child:Text('Soldan sağa gaz akışı • Kaydır ve iki parmakla büyüt',style:TextStyle(color:navy))),
-  Expanded(child:InteractiveViewer(constrained:false,minScale:.4,maxScale:3,child:ColoredBox(color:Colors.white,child:MediaQuery(data:MediaQuery.of(c).copyWith(textScaler:TextScaler.noScaling),child:TrainView(train:train))))),
+  Expanded(child:InteractiveViewer(transformationController:controller,constrained:false,minScale:.2,maxScale:3,child:ColoredBox(color:Colors.white,child:MediaQuery(data:MediaQuery.of(c).copyWith(textScaler:TextScaler.noScaling),child:TrainView(train:train))))),
   Flexible(child:SingleChildScrollView(padding:const EdgeInsets.all(16),child:Column(crossAxisAlignment:CrossAxisAlignment.start,children:[
     for(var i=0;i<train.bottles.length;i++) Text('${i+1}. ${train.bottles[i].content} — ${train.bottles[i].amount}${train.bottles[i].strength.isEmpty?'':' • ${train.bottles[i].strength}'}${train.bottles[i].tip.contains('Standart')?' • ${train.bottles[i].tip}':''}',style:const TextStyle(color:navy,fontSize:18,height:1.6)),
   ]))),
- ]));
+ ]));}
 }
 class ImageCard extends StatelessWidget {
  const ImageCard({super.key,required this.asset,required this.title});final String asset,title;

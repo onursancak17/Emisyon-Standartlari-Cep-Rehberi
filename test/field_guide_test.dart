@@ -47,7 +47,7 @@ void main(){
   for(final a in [data.common,...data.manuals]){
    await t.pumpWidget(MaterialApp(home:MediaQuery(data:const MediaQueryData(size:Size(320,800),textScaler:TextScaler.linear(1.4)),child:DetailPage(article:a))));await t.pumpAndSettle();
    expect(t.takeException(),isNull,reason:'${a.id} intro');
-   final tiles=find.byType(ExpansionTile);await t.ensureVisible(tiles.at(2));await t.pumpAndSettle();await t.tap(tiles.at(2));await t.pumpAndSettle();
+   final heading=find.text(a.sections[2].title);await t.scrollUntilVisible(heading,180,maxScrolls:60);await t.pumpAndSettle();await t.tap(heading);await t.pumpAndSettle();
    expect(t.takeException(),isNull,reason:'${a.id} expanded');
    await t.pumpWidget(const SizedBox.shrink());await t.pumpAndSettle();
   }
@@ -57,16 +57,16 @@ void main(){
   final gas=data.manuals.singleWhere((a)=>a.id=='yanma');expect(gas.sections.any((s)=>s.title.startsWith('T90')),isTrue);
   final metal=data.manuals.singleWhere((a)=>a.id=='metal-epa');expect(metal.trains.first.bottles.length,7);
   expect(metal.narration.any((s)=>s.contains('100 mL')&&s.contains('HNO₃')),isTrue);
-  const channel=MethodChannel('flutter_tts');final spoken=<String>[];Completer<int>? pending;
+  const channel=MethodChannel('flutter_tts');final spoken=<String>[];Completer<int>? pending;final firstSpeak=Completer<void>();
   TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger.setMockMethodCallHandler(channel,(call)async{
    if(call.method=='isLanguageAvailable')return true;
-   if(call.method=='speak'){spoken.add((call.arguments as Map)['text'] as String);pending=Completer<int>();return pending!.future;}
+   if(call.method=='speak'){spoken.add((call.arguments as Map)['text'] as String);if(!firstSpeak.isCompleted)firstSpeak.complete();pending=Completer<int>();return pending!.future;}
    if(call.method=='stop'){if(pending!=null&&!pending!.isCompleted)pending!.complete(0);return 1;}return 1;
   });
-  final n=Narrator();unawaited(n.start(['HNO₃ 100 mL','İkinci adım']));await t.pumpAndSettle();
+  final n=Narrator();await t.runAsync(()async{expect(await n.init(),isTrue,reason:n.error);unawaited(n.start(['HNO₃ 100 mL','İkinci adım']));await firstSpeak.future.timeout(const Duration(seconds:5));});
   expect(spoken.first,contains('nitrik asit'));expect(spoken.first,contains('100 mililitre'));
   await n.pause();expect(n.paused,isTrue);expect(n.playing,isFalse);
-  unawaited(n.resume());await t.pumpAndSettle();expect(n.playing,isTrue);
+  await t.runAsync(()async{unawaited(n.resume());await Future<void>.delayed(const Duration(milliseconds:20));});expect(n.playing,isTrue);
   await n.halt();n.dispose();TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger.setMockMethodCallHandler(channel,null);
  });
  testWidgets('Missing Turkish voice produces an actionable message', (t)async{
