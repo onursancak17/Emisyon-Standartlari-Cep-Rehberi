@@ -1659,9 +1659,9 @@
       "visual": "resin"
     },
     {
-      "id": "pm10-ts",
-      "title": "Ortamda PM₁₀ • TS",
-      "method": "TS EN 12341",
+      "id": "pm10",
+      "title": "Ortamda PM₁₀",
+      "method": "TS EN 12341 / EPA 40 CFR Part 50 App J",
       "domain": "İmisyon",
       "sections": [
         {
@@ -1684,82 +1684,7 @@
           "items": [
             "Başlığın kesim karakteristiğini ve cihaz debi kalibrasyonunu kontrol et.",
             "Yöntemin kendi şartlandırma koşullarında hazırlanmış filtreyi kullan.",
-            "Çekişi 2,3 m³/saat ≈ 38,33 L/dakika olacak şekilde ayarla. Bu değerler aynı başlık için birbirinin yerine kullanılamaz.",
-            "Başlık girişini 1,5–4 m yükseklikte, akışı engelleyen yüzeylerden uzakta kur."
-          ],
-          "ordered": true
-        },
-        {
-          "title": "Ölçümün uygulanması",
-          "items": [
-            "Filtreyi yerleştir; başlık ve hat sızdırmazlığını kontrol et.",
-            "Sayaç/örnekleme başlangıcını ve filtre kimliğini kaydet.",
-            "Hava kalitesi programında 24 saatlik filtre örneklemesini uygula; aylık programda günlük filtreleri ayrı işle.",
-            "Debi, süre ve toplam hacmi kontrol et; meteorolojik olayları kaydet.",
-            "Filtreyi değiştirirken yüzeyine dokunma ve numune kaybı oluşturma.",
-            "Saha tanığını pompa çalıştırmadan aynı taşıma/yerleştirme işlemlerine tabi tut."
-          ],
-          "ordered": true
-        },
-        {
-          "title": "Dikkat edilecek noktalar",
-          "items": [
-            "Spot tesis içi ölçüm ile 24 saatlik ortam hava kalitesi ölçümünü aynı sonuç türü olarak kullanma.",
-            "Debi değişmesi PM₁₀ başlığının boyut seçimini de etkiler.",
-            "Cihazın gösterdiği hacmin ortam mı referans şartlar mı olduğunu doğrula; otomatik düzeltilmiş hacmi ikinci kez düzeltme.",
-            "Filtre şartlandırması TS ve EPA yöntemlerinde farklıdır."
-          ],
-          "ordered": false
-        },
-        {
-          "title": "Ölçüm sonrası ve numune işlemleri",
-          "items": [
-            "Filtreyi kapalı petriye al ve aynı şartlandırma koşullarında son tartıma ilet.",
-            "Net partikül kütlesini örneklenen uygun bazdaki hacme böl.",
-            "Kesinti, taşma ve elektrik arızası olan dönemleri ayrıca değerlendir."
-          ],
-          "ordered": true
-        },
-        {
-          "title": "Filtre şartlandırma koşulları",
-          "items": [
-            "TS EN 12341 eğitim uygulaması: 19–21 °C, %45–50 bağıl nem, 48 saat.",
-            "EPA eğitim uygulaması: 15–30 °C aralığında seçilen sıcaklığın ±3 °C içinde, %20–45 aralığında seçilen nemin ±%5 içinde, 24 saat.",
-            "Başlangıç/son tartım koşullarını eşleştir. Cihaz başlığının çalışma debisini seçilen metoda göre uygula."
-          ],
-          "ordered": false
-        }
-      ],
-      "trains": [],
-      "visual": null
-    },
-    {
-      "id": "pm10-epa",
-      "title": "Ortamda PM₁₀ • EPA",
-      "method": "EPA 40 CFR Part 50 • App J",
-      "domain": "İmisyon",
-      "sections": [
-        {
-          "title": "Bu ölçüm neden yapılır?",
-          "items": [
-            "Ortam havasındaki boyut seçilmiş partiküllerin filtrede toplanan kütlesini hacme bölerek hava kalitesini değerlendirmek için yapılır."
-          ],
-          "ordered": false
-        },
-        {
-          "title": "Gerekli malzemeler",
-          "items": [
-            "Seçilen yönteme uygun PM₁₀ başlık ve sabit akışlı örnekleyici.",
-            "Şartlandırılmış/tartılmış filtre, temiz petri ve meteorolojik kayıt ekipmanı."
-          ],
-          "ordered": false
-        },
-        {
-          "title": "Parametreye özgü hazırlık",
-          "items": [
-            "Başlığın kesim karakteristiğini ve cihaz debi kalibrasyonunu kontrol et.",
-            "Yöntemin kendi şartlandırma koşullarında hazırlanmış filtreyi kullan.",
-            "Çekişi 1 m³/saat ≈ 16,67 L/dakika olacak şekilde ayarla. Bu değerler aynı başlık için birbirinin yerine kullanılamaz.",
+            "Seçilen yönteme göre debiyi ayarla: TS EN 12341 için 2,3 m³/saat ≈ 38,33 L/dakika; EPA uygulaması için 1 m³/saat ≈ 16,67 L/dakika. Başlık tasarımı ve debi birlikte eşleşmelidir.",
             "Başlık girişini 1,5–4 m yükseklikte, akışı engelleyen yüzeylerden uzakta kur."
           ],
           "ordered": true
@@ -1952,9 +1877,9 @@
       "visual": null
     },
     {
-      "id": "hiz-ts",
-      "title": "Hız ve debi • TS",
-      "method": "TS EN ISO 16911-1",
+      "id": "hiz",
+      "title": "Hız ve debi",
+      "method": "TS EN ISO 16911-1 / EPA Method 2",
       "domain": "Emisyon",
       "sections": [
         {
@@ -1987,7 +1912,7 @@
           "title": "Ölçümün uygulanması",
           "items": [
             "Pitotu ilk travers noktasına yerleştir ve akışa uygun yönde hizala.",
-            "Fark basıncı ve sıcaklığı kararlı okuma oluşunca kaydet. Her noktada en az üç saniye bekle.",
+            "Fark basıncı ve sıcaklığı kararlı okuma oluşunca kaydet. TS uygulamasında her noktada en az üç saniye bekle; EPA uygulamasında da kararlı ve temsil edici okuma sağla.",
             "Bütün noktalarda aynı ölçüm yaklaşımını kullan.",
             "Noktaları tek tek hıza dönüştür; basınçların ortalamasından doğrudan hız üretme.",
             "Nokta hızlarından kesit ortalamasını hesapla; hacimsel debi Q = ortalama hız × kesit alanıdır.",
@@ -1999,72 +1924,6 @@
           "title": "Dikkat edilecek noktalar",
           "items": [
             "EN uygulamasında eksene göre akış açısı 15° altında, ters akış bulunmaması ve en büyük/en küçük hız oranının 3:1 altında olması değerlendirilir.",
-            "Çok düşük fark basıncında cihaz çözünürlüğü ve belirsizliği önemlidir; sırf ekranda hız var diye ölçüm aralığını uygun sayma.",
-            "S tipi pitotun katsayısını ve kalibrasyonunu kullan.",
-            "Akış salınımı varsa uygun sönümlemeyi değerlendir; sistematik etki oluşturmadığını doğrula."
-          ],
-          "ordered": false
-        },
-        {
-          "title": "Ölçüm sonrası ve numune işlemleri",
-          "items": [
-            "Pitotun son kaçak/tıkanıklık kontrolünü yap.",
-            "Nokta konumları, ΔP, sıcaklık, statik/mutlak basınç ve kullanılan katsayıyı kaydet.",
-            "Baca şartlarında ve kuru-normal şartlarda debileri ayrı isimlendir."
-          ],
-          "ordered": true
-        }
-      ],
-      "trains": [],
-      "visual": null
-    },
-    {
-      "id": "hiz-epa",
-      "title": "Hız ve debi • EPA",
-      "method": "EPA Method 2",
-      "domain": "Emisyon",
-      "sections": [
-        {
-          "title": "Bu ölçüm neden yapılır?",
-          "items": [
-            "Baca gazının kesit ortalama hızını ve hacimsel debisini belirler. Kütlesel emisyon hesabı ve izokinetik nozul/çekiş seçimi bu veriye dayanır."
-          ],
-          "ordered": false
-        },
-        {
-          "title": "Gerekli malzemeler",
-          "items": [
-            "Kalibre edilmiş uygun pitot, fark basınç ölçer ve hortumlar.",
-            "Sıcaklık sensörü, barometre/statik basınç ölçümü, kesit ölçüm araçları.",
-            "Gaz bileşimi ve nem bilgisi; travers işaretleme."
-          ],
-          "ordered": false
-        },
-        {
-          "title": "Parametreye özgü hazırlık",
-          "items": [
-            "Kesiti ölç, hidrolik çapı ve yönteme uygun travers planını belirle.",
-            "Pitot deliklerini temizle; hortumlarda sıvı, çatlak ve tıkanıklık olmadığını kontrol et.",
-            "Fark basınç cihazını sıfırla ve pitot sisteminin kaçak kontrolünü yap.",
-            "Baca basıncı, sıcaklık, nem ve molar kütle verilerini hız hesabı için hazırla."
-          ],
-          "ordered": true
-        },
-        {
-          "title": "Ölçümün uygulanması",
-          "items": [
-            "Pitotu ilk travers noktasına yerleştir ve akışa uygun yönde hizala.",
-            "Fark basıncı ve sıcaklığı kararlı okuma oluşunca kaydet.",
-            "Bütün noktalarda aynı ölçüm yaklaşımını kullan.",
-            "Noktaları tek tek hıza dönüştür; basınçların ortalamasından doğrudan hız üretme.",
-            "Nokta hızlarından kesit ortalamasını hesapla; hacimsel debi Q = ortalama hız × kesit alanıdır.",
-            "Nem/sıcaklık/basınçla gerekli kuru-normal debiyi ayrı hesapla."
-          ],
-          "ordered": true
-        },
-        {
-          "title": "Dikkat edilecek noktalar",
-          "items": [
             "EPA siklonik akış kontrolünde ortalama açı 20° sınırı dikkate alınır. Uygunsuz düzlemi standart geçerli düzlem gibi sunma.",
             "Çok düşük fark basıncında cihaz çözünürlüğü ve belirsizliği önemlidir; sırf ekranda hız var diye ölçüm aralığını uygun sayma.",
             "S tipi pitotun katsayısını ve kalibrasyonunu kullan.",

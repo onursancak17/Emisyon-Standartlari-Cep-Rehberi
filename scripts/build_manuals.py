@@ -192,5 +192,15 @@ common=dict(id='ortak',title='Ortak Saha Talimatları',method='Hazırlık • G�
  block('Genel numune bütünlüğü','Gaz geçen numuneyi gaz geçirilmemiş şahit numuneyle karıştırma.|Sızdırmaz kapatma ve numune teslim zincirini koru.|Parametreye özgü sıcaklık, ışık koruması, koruyucu reaktif ve analiz süresini uygula; bütün numunelere tek saklama koşulu verme.|Numune sayısını, bütün fraksiyonları ve teslim alanını kontrol et.',True),
  block('Sonuç kontrolü','Ölçülen değer, hesaplanan değer ve düzeltilmiş sonucu ayrı tanımla.|Kuru/yaş gaz, ortam/baca/normal şartlar ve referans oksijen bazını karıştırma.|Başlangıç/son doğrulama, kaçak, şahit ve emicilik kriterleri sağlanmadan sonucu uygun kabul etme.|Ölçüm aralığı dışında kalan veya kaydı eksik sonuçları sorumluya bildir.',True)
 ])
+# Keep genuinely identical method-pair content once under the measurement itself.
+for ids,new_id,title,method in [(['pm10-ts','pm10-epa'],'pm10','Ortamda PM₁₀','TS EN 12341 / EPA 40 CFR Part 50 App J'),(['hiz-ts','hiz-epa'],'hiz','Hız ve debi','TS EN ISO 16911-1 / EPA Method 2')]:
+ pair=[next(r for r in records if r['id']==id) for id in ids]
+ merged=pair[0];merged['id']=new_id;merged['title']=title;merged['method']=method
+ if new_id=='pm10':
+  merged['sections'][2]['items'][2]='Seçilen yönteme göre debiyi ayarla: TS EN 12341 için 2,3 m³/saat ≈ 38,33 L/dakika; EPA uygulaması için 1 m³/saat ≈ 16,67 L/dakika. Başlık tasarımı ve debi birlikte eşleşmelidir.'
+ else:
+  merged['sections'][3]['items'][1]='Fark basıncı ve sıcaklığı kararlı okuma oluşunca kaydet. TS uygulamasında her noktada en az üç saniye bekle; EPA uygulamasında da kararlı ve temsil edici okuma sağla.'
+  merged['sections'][4]['items'].insert(1,pair[1]['sections'][4]['items'][0])
+ records.remove(pair[1])
 (ROOT/'assets/manuals.json').write_text(json.dumps({'common':common,'manuals':records},ensure_ascii=False,indent=2))
 print(f'{len(records)} ölçüm talimatı, {sum(len(s["items"]) for r in [common]+records for s in r["sections"])} anlatım maddesi')

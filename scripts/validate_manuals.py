@@ -2,7 +2,7 @@
 import json,re,hashlib
 from pathlib import Path
 root=Path(__file__).resolve().parents[1];j=json.loads((root/'assets/manuals.json').read_text());t=json.loads((root/'assets/training.json').read_text())
-a=j['manuals'];assert len(a)==24 and len(t)==11
+a=j['manuals'];assert len(a)==22 and len(t)==11
 assert len({r['id'] for r in a+t})==len(a+t)
 for r in [j['common']]+a+t:
  assert r['sections'] and all(s['title'] and s['items'] for s in r['sections'])

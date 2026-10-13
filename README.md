@@ -3,7 +3,7 @@
 Android için çevrimdışı ölçüm talimatları ve ayrı emisyon–imisyon eğitim bölümü.
 
 - Ana ekran: arama, Ortak Saha Talimatları, Emisyon / İmisyon listeleri.
-- 24 parametre/yöntem talimatı; ortak hazırlık ayrı bölümde tutulur.
+- 22 ölçüm başlığı; TS/EPA hız ve PM₁₀ ortak anlatımları kendi başlıkları altında birleştirilir; ortak hazırlık ayrı bölümde tutulur.
 - 11 eğitim konusu, 246 alt başlık. Aynı içerikteki iki formaldehit eğitim PDF’i birleştirilmiştir.
 - Gerçekçi cam ekipman görselleri; şişe sırası, mL, gram ve derişimler JSON’dan native metin olarak gösterilir. Yakınlaştırma ve yatay kaydırma desteklenir.
 - PAH/dioksin XAD-2 kartuşu dik, alt giriş/üst çıkış şeklinde gösterilir. Pompa/sayaç görseli yoktur.

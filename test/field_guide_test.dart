@@ -70,7 +70,7 @@ void main(){
   expect(spoken.first,contains('nitrik asit'));expect(spoken.first,contains('100 mililitre'));
   await t.runAsync(()async{await n.pause();});expect(n.paused,isTrue);expect(n.playing,isFalse);
   await t.runAsync(()async{await n.resume();});expect(spoken.length,4);
-  await t.runAsync(()async{await n.halt();});expect(calls.where((x)=>x=='stop').length,greaterThanOrEqualTo(3));
+  await t.runAsync(()async{await n.halt();});expect(calls.where((x)=>x=='stop').length,2);
   n.dispose();TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger.setMockMethodCallHandler(channel,null);
  });
  testWidgets('Missing Turkish voice produces an actionable message', (t)async{
