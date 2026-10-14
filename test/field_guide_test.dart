@@ -36,7 +36,7 @@ void main(){
   expect(find.text('Ortak hazırlığı aç'),findsNothing);expect(find.textContaining('REVİZYON'),findsNothing);
   await t.runAsync(()async{for(final k in ['water','empty','silica']){await precacheImage(AssetImage('assets/equipment/$k.webp'),t.element(find.byType(TrainCard)));}});
   await t.pumpAndSettle();await shot(t,key,'hcl');
-  await t.tap(find.text('Tam ekran • Büyüt'));await t.pumpAndSettle();expect(find.byType(InteractiveViewer),findsOneWidget);expect(t.takeException(),isNull);
+  await t.scrollUntilVisible(find.text('Tam ekran • Büyüt'),150,maxScrolls:30,scrollable:find.byType(Scrollable).first);await t.pumpAndSettle();await t.tap(find.text('Tam ekran • Büyüt'));await t.pumpAndSettle();expect(find.byType(InteractiveViewer),findsOneWidget);expect(t.takeException(),isNull);
   await t.pageBack();await t.pumpAndSettle();await t.pageBack();await t.pumpAndSettle();
   await t.tap(find.text('Eğitim'));await t.pumpAndSettle();await t.enterText(find.byType(TextField),'tayin sınırları');await t.pumpAndSettle();
   expect(find.text('Tayin sınırları ve ölçüm süresi'),findsOneWidget);await t.tap(find.text('Tayin sınırları ve ölçüm süresi'));await t.pumpAndSettle();
@@ -102,16 +102,18 @@ void main(){
   final key=GlobalKey();
   for(final id in ['nem','halojen','hcl','flor','formaldehit','metal-en','pah','dioksin']){
    final a=data.manuals.singleWhere((a)=>a.id==id);
-   await t.pumpWidget(RepaintBoundary(key:key,child:MaterialApp(home:DetailPage(article:a))));await t.pumpAndSettle();
+   await t.pumpWidget(RepaintBoundary(key:key,child:MaterialApp(home:DetailPage(key:ValueKey(id),article:a))));await t.pumpAndSettle();
    for(var i=0;i<a.trains.length;i++){
     final dropdown=find.byType(DropdownButtonFormField<int>);
     await t.scrollUntilVisible(dropdown,-150,maxScrolls:60,scrollable:find.byType(Scrollable).first);
     await t.pumpAndSettle();await t.tap(dropdown);await t.pumpAndSettle();
     await t.tap(find.text(a.trains[i].name).last);await t.pumpAndSettle();
-    final card=t.widget<TrainCard>(find.byType(TrainCard));expect(card.train,a.trains[i]);
+    await t.scrollUntilVisible(find.byType(AudioPanel),-150,maxScrolls:50,scrollable:find.byType(Scrollable).first);await t.pumpAndSettle();
     final audio=t.widget<AudioPanel>(find.byType(AudioPanel));
     expect(audio.narration,contains(a.trains[i].sampling));
     expect(audio.narration,contains(a.trains[i].flow));
+    await t.scrollUntilVisible(find.byType(TrainCard),150,maxScrolls:50,scrollable:find.byType(Scrollable).first);await t.pumpAndSettle();
+    final card=t.widget<TrainCard>(find.byType(TrainCard));expect(card.train,a.trains[i]);
     expect(find.byType(BranchView),a.trains[i].branch?findsOneWidget:findsNothing);
     expect(t.takeException(),isNull,reason:'$id / $i');
     if(id=='nem'||id=='halojen'){

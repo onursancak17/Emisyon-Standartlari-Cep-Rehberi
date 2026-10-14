@@ -312,8 +312,8 @@ class TrainCard extends StatelessWidget {
   Text(train.vesselType,style:Theme.of(c).textTheme.bodySmall),const SizedBox(height:12),
   if(train.branch) const BranchView(),
   Text(train.inlet,style:Theme.of(c).textTheme.bodySmall),const SizedBox(height:8),
-  SizedBox(height:620,child:SingleChildScrollView(scrollDirection:Axis.horizontal,child:ColoredBox(color:Colors.white,child:MediaQuery(data:MediaQuery.of(c).copyWith(textScaler:TextScaler.noScaling),child:TrainView(train:train))))),
   TextButton.icon(onPressed:()=>Navigator.push(c,MaterialPageRoute<void>(builder:(_)=>TrainFullScreen(train:train))),icon:const Icon(Icons.open_in_full),label:const Text('Tam ekran • Büyüt')),
+  SizedBox(height:620,child:SingleChildScrollView(scrollDirection:Axis.horizontal,child:ColoredBox(color:Colors.white,child:MediaQuery(data:MediaQuery.of(c).copyWith(textScaler:TextScaler.noScaling),child:TrainView(train:train))))),
   if(train.note.isNotEmpty) Text(train.note),
   if(train.steps.isNotEmpty)...[const SizedBox(height:16),Text('Bu uygulamanın özel adımları',style:Theme.of(c).textTheme.titleMedium),
    if(onListen!=null) TextButton.icon(onPressed:onListen,icon:const Icon(Icons.volume_up_outlined),label:const Text('Seçili uygulamayı dinle')),
@@ -325,11 +325,11 @@ class BranchView extends StatelessWidget {
  const BranchView({super.key});
  @override Widget build(BuildContext c)=>Container(margin:const EdgeInsets.only(bottom:12),padding:const EdgeInsets.all(12),decoration:BoxDecoration(color:teal.withValues(alpha:.08),borderRadius:BorderRadius.circular(12)),child:Column(crossAxisAlignment:CrossAxisAlignment.start,children:[
   const Text('Filtre sonrası T bağlantısı',style:TextStyle(fontWeight:FontWeight.w700)),
-  SizedBox(height:70,width:double.infinity,child:CustomPaint(painter:BranchPainter(),child:const Padding(padding:EdgeInsets.only(left:70),child:Column(crossAxisAlignment:CrossAxisAlignment.start,mainAxisAlignment:MainAxisAlignment.spaceBetween,children:[Text('Ana akış • İzokinetik'),Text('Yan akış • Bu trene')])))),
+  IntrinsicHeight(child:Row(crossAxisAlignment:CrossAxisAlignment.stretch,children:[SizedBox(width:60,child:CustomPaint(painter:BranchPainter())),const Expanded(child:Column(mainAxisSize:MainAxisSize.min,crossAxisAlignment:CrossAxisAlignment.start,children:[Text('Ana akış • İzokinetik'),SizedBox(height:16),Text('Yan akış • Bu trene')]))])),
  ]));
 }
 class BranchPainter extends CustomPainter {
- @override void paint(Canvas c,Size s){final p=Paint()..color=teal..strokeWidth=3; c.drawLine(const Offset(0,20),const Offset(52,20),p);c.drawLine(const Offset(35,20),const Offset(35,58),p);c.drawLine(const Offset(35,58),const Offset(52,58),p);for(final y in [20.0,58.0]){c.drawLine(Offset(52,y),Offset(46,y-5),p);c.drawLine(Offset(52,y),Offset(46,y+5),p);}}
+ @override void paint(Canvas c,Size s){final p=Paint()..color=teal..strokeWidth=3;final top=s.height*.22,bottom=s.height*.78;c.drawLine(Offset(0,top),Offset(52,top),p);c.drawLine(Offset(35,top),Offset(35,bottom),p);c.drawLine(Offset(35,bottom),Offset(52,bottom),p);for(final y in [top,bottom]){c.drawLine(Offset(52,y),Offset(46,y-5),p);c.drawLine(Offset(52,y),Offset(46,y+5),p);}}
  @override bool shouldRepaint(BranchPainter old)=>false;
 }
 class TrainView extends StatelessWidget {

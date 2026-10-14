@@ -361,7 +361,55 @@
           "ordered": true
         }
       ],
-      "trains": [],
+      "trains": [
+        {
+          "name": "EPA 5 • Filtre sonrası nem tutma",
+          "method": "EPA Method 5",
+          "sampling": "İzokinetik örnekleme",
+          "flow": "Ana ölçümün izokinetik debisi",
+          "condition": "Toz filtresinden sonra gazı kurutmak; başlangıç/son verileriyle nem de birlikte belirlenebilir.",
+          "bottles": [
+            {
+              "content": "Saf su",
+              "amount": "100 mL",
+              "strength": "",
+              "kind": "water",
+              "tip": "Modifiye uç"
+            },
+            {
+              "content": "Saf su",
+              "amount": "100 mL",
+              "strength": "",
+              "kind": "water",
+              "tip": "Standart Greenburg–Smith uç"
+            },
+            {
+              "content": "Boş",
+              "amount": "Sıvı eklenmez",
+              "strength": "",
+              "kind": "empty",
+              "tip": "Modifiye uç"
+            },
+            {
+              "content": "Silika jel",
+              "amount": "200–300 g",
+              "strength": "",
+              "kind": "silica",
+              "tip": "Modifiye uç"
+            }
+          ],
+          "steps": [
+            "Filtrede tozu toplarken aynı ana izokinetik debiyi nem tutma bölümünden geçir.",
+            "Nem birlikte hesaplanacaksa başlangıç ve son sıvı hacimlerini ve kurutucu kütlesini ayrıca kaydet."
+          ],
+          "note": "Bu şişeler filtreyi geçen gazdaki nemi tutar; toz numunesi filtre ve yöntemce tanımlanan ön hat fraksiyonudur.",
+          "vesselType": "Greenburg–Smith",
+          "branch": false,
+          "inlet": "Isıtmalı prob → filtre → tren",
+          "filterAfter": 0,
+          "visual": null
+        }
+      ],
       "visual": null
     },
     {
