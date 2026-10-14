@@ -66,6 +66,26 @@
           "Ölçüm aralığı dışında kalan veya kaydı eksik sonuçları sorumluya bildir."
         ],
         "ordered": true
+      },
+      {
+        "title": "EPA 1 • Ölçüm yeri ve travers planı",
+        "items": [
+          "Tercih edilen kesit, akış bozucudan sonra en az 8D ve sonraki akış bozucudan önce en az 2D uzaklıktadır. D baca çapı; dikdörtgen kesitte eşdeğer çap 2LW/(L+W) olarak alınır.",
+          "Alternatif kesitte en az 2D sonrası ve 0,5D öncesi koşulu aranır; nokta sayısı EPA 1 şekillerinde her iki uzaklık için belirlenip büyük olan sonuç seçilir. Daha kısa mesafe normal travers planı olarak kabul edilmez.",
+          "8D/2D koşulunda çap/eşdeğer çap 0,61 m’den büyükse partikül için en az 12 nokta; 0,30–0,61 m aralığında dairesel kesitte en az 8, dikdörtgende en az 9 nokta gerekir. Küçük kesitlerde EPA 1A kapsamını kontrol et.",
+          "Dairesel kesitte iki dik çap üzerindeki EPA 1 tablo konumlarını, dikdörtgende eşit alanların merkezlerini kullan. Noktaları rastgele eşit doğrusal aralıklarla dağıtma.",
+          "Duvara yakın noktanın uzaklığı büyük kesitte en az 2,5 cm veya nozul iç çapından büyük olan; 0,61 m ve altındaki kesitte en az 1,3 cm veya nozul iç çapından büyük olan değerdir."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "EPA 1 • Siklonik akış kontrolü",
+        "items": [
+          "S tipi pitotla manometreyi sıfırla; her travers noktasında fark basıncını sıfırlayan dönüş açısını kaydet. Sıfır açılı noktaları hesap dışında bırakma.",
+          "Açıların mutlak değerlerinin ortalaması 20°’yi aşarsa basitleştirilmiş EPA 1 uygulaması uygun değildir; kesiti değiştir veya yöntemin izin verdiği alternatif değerlendirmeyi uygula.",
+          "Alternatif üç boyutlu akış değerlendirmesi ayrı bir prosedürdür; normal pitot kontrolü yerine yalnızca daha çok nokta seçmek yeterli olmaz."
+        ],
+        "ordered": false
       }
     ]
   },
@@ -297,7 +317,7 @@
     },
     {
       "id": "toz-epa",
-      "title": "Bacada toz • EPA",
+      "title": "Bacada toz • EPA 5",
       "method": "EPA Method 5",
       "domain": "Emisyon",
       "sections": [
@@ -312,7 +332,7 @@
           "title": "Gerekli malzemeler",
           "items": [
             "İzokinetik örnekleyici; cam/kuvars veya yönteme uygun prob/nozul.",
-            "Isıtmalı filtre tutucu, şartlandırılmış filtre, pitot ve sıcaklık sensörleri.",
+            "Baca dışına yerleştirilen ısıtmalı filtre tutucu, şartlandırılmış filtre, pitot ve sıcaklık sensörleri.",
             "Soğutma ve nem tutma sistemi; sayaç, geri kazanım asetonu, temiz fırça ve kaplar."
           ],
           "ordered": false
@@ -323,7 +343,7 @@
             "EPA 1 travers planına göre nozul konumlarını işaretle.",
             "Hız, sıcaklık, mutlak basınç, gaz bileşimi ve nem verilerinden nozul ve çekişi seç.",
             "Örneklenen kütlenin raporlama için yeterli olmasını sağlayacak süre ve hacmi belirle.",
-            "Isıtmalı prob/filtreyi yönteme uygun set değerine getir; rutin EPA 5 uygulamasında 120 ±14 °C esasını proses koşullarıyla birlikte değerlendir.",
+            "Prob ve filtre ısıtmasını ayarla; örnekleme başlamadan set değerinde kararlılığı doğrula ve ölçüm boyunca kaydet.",
             "Nozul kapalıyken numune hattının kaçak kontrolünü yap ve uygulanan vakumu kaydet."
           ],
           "ordered": true
@@ -405,12 +425,137 @@
           "note": "Bu şişeler filtreyi geçen gazdaki nemi tutar; toz numunesi filtre ve yöntemce tanımlanan ön hat fraksiyonudur.",
           "vesselType": "Greenburg–Smith",
           "branch": false,
-          "inlet": "Isıtmalı prob → filtre → tren",
+          "inlet": "Isıtmalı prob → baca DIŞINDA ısıtmalı filtre → nem treni",
           "filterAfter": 0,
           "visual": null
         }
       ],
-      "visual": null
+      "visual": null,
+      "essentials": [
+        "Filtre baca DIŞINDADIR; ısıtmalı filtre tutucuda yer alır.",
+        "Rutin filtre sıcaklığı 120 ±14 °C’dir; farklı sıcaklık ancak uygulanabilir yöntem hükmüyle kullanılır."
+      ],
+      "filterPlacement": "outside"
+    },
+    {
+      "id": "toz-epa17",
+      "title": "Bacada toz • EPA 17",
+      "method": "EPA Method 17",
+      "domain": "Emisyon",
+      "sections": [
+        {
+          "title": "Bu ölçüm neden yapılır?",
+          "items": [
+            "Filtrelenebilir partikülleri doğrudan baca içinde toplar. Filtre sıcaklığı baca gazına bağlıdır; EPA 5’in dışarıda ısıtılan filtresiyle aynı sıcaklık koşulunu sağlamaz.",
+            "Yalnızca uygulanabilir kaynak kuralı izin verdiğinde ve partikül miktarının ilgili sıcaklık aralığındaki bağımlılığı yöntem seçimine uygun olduğunda kullan. EPA 5’in otomatik alternatifi değildir."
+          ],
+          "ordered": false
+        },
+        {
+          "title": "Gerekli malzemeler",
+          "items": [
+            "Baca içi filtre tutucu; uygun cam elyaf filtre, nozul, uzatma borusu, S tipi pitot ve sıcaklık sensörü.",
+            "Sızdırmazlığa uygun conta ve bağlantılar, nem tutma sistemi, aseton geri kazanım kapları ve temiz fırça."
+          ],
+          "ordered": false
+        },
+        {
+          "title": "Parametreye özgü hazırlık",
+          "items": [
+            "Filtre tutucu ve probun akışa dik izdüşüm alanını hesapla. Toplam baca kesitinin %5’ini aşarsa standart düzeneği kullanma; yöntemin izin verdiği alternatif düzeni değerlendir.",
+            "Tutucu/nozul/pitot geometrisinin akışı ve hız ölçümünü bozmadığını doğrula; standart dışı geometride gerekli pitot kalibrasyonunu tamamla.",
+            "Filtreyi merkezleyip contayla sızdırmaz oturt; yırtık, kenardan gaz kaçışı veya tutucuya uygunsuz temas bırakma.",
+            "Tüm travers noktalarına erişimi kontrol et; gerekli işaretleri uzatma borusuna koy.",
+            "Tutucuyu baca içine yerleştir. Nozulu ısıya dayanıklı biçimde kapat; sıcaklık dengesi için yaklaşık 5 dakika, gerekiyorsa daha uzun bekle ve baca içi düzende kaçak kontrolünü uygula."
+          ],
+          "ordered": true
+        },
+        {
+          "title": "Ölçümün uygulanması",
+          "items": [
+            "Baca sıcaklığı, hız, nem ve gaz bileşimine göre nozul ve izokinetik çekişi belirle.",
+            "Nozulu akışa doğru çevir; her travers noktasında yerel hıza uygun çekiş ve eşit örnekleme süresi uygula.",
+            "Baca gazı sıcaklığını, pitot fark basıncını, sayaç/orifis verilerini ve çalışma vakumunu kaydet. Dış filtre ısıtıcısı sıcaklığını EPA 17’ye zorunlu alan olarak taşıma.",
+            "Nokta değişimleri ve hat açılması sırasında numune kaybını önle; gerekli ara ve son kaçak kontrollerini yap.",
+            "Son hacim ve ölçüm verileriyle izokinetik oranı hesapla; %90–110 aralığını kontrol et."
+          ],
+          "ordered": true
+        },
+        {
+          "title": "Dikkat edilecek noktalar",
+          "items": [
+            "Kaçak sınırı 0,57 L/dakika veya örnekleme debisinin %4’ünden küçük olan değerdir.",
+            "Filtre tıkanması ve aşırı vakum çekişi değiştirebilir; debiyi ve filtrenin bütünlüğünü takip et.",
+            "Uzun bağlantı hortumları yoğuşma ve nem geri kazanımını etkileyebilir; hattı yönteme uygun tut."
+          ],
+          "ordered": false
+        },
+        {
+          "title": "Ölçüm sonrası ve numune işlemleri",
+          "items": [
+            "Düzeneği dikkatle çıkarıp soğut. Soğurken probu hava geçirmez biçimde sıkıca kapatma: oluşan vakum kondensatı geriye çekebilir.",
+            "Filtre/nozul tertibatını uzatmadan ayır; kondensatı nem bölümüne al ve kaybetme.",
+            "Filtreyi ayrı kaba al; nozul ve filtre ön yüzeylerini asetonla fırçalayarak geri kazan. Filtre sonrası nem fraksiyonunu partikül numunesine katma.",
+            "Reaktif körü için kullanılan asetondan 200 mL ayır; filtre ve geri kazanım fraksiyonlarını analiz planına göre ayrı muhafaza et."
+          ],
+          "ordered": true
+        }
+      ],
+      "trains": [
+        {
+          "name": "EPA 17 • Baca içi filtre sonrası nem tutma",
+          "method": "EPA Method 17",
+          "sampling": "İzokinetik örnekleme",
+          "flow": "Ana ölçümün izokinetik debisi",
+          "condition": "Toz filtresinden sonra gazı kurutmak; başlangıç/son verileriyle nem de birlikte belirlenebilir.",
+          "bottles": [
+            {
+              "content": "Saf su",
+              "amount": "100 mL",
+              "strength": "",
+              "kind": "water",
+              "tip": "Modifiye uç"
+            },
+            {
+              "content": "Saf su",
+              "amount": "100 mL",
+              "strength": "",
+              "kind": "water",
+              "tip": "Standart Greenburg–Smith uç"
+            },
+            {
+              "content": "Boş",
+              "amount": "Sıvı eklenmez",
+              "strength": "",
+              "kind": "empty",
+              "tip": "Modifiye uç"
+            },
+            {
+              "content": "Silika jel",
+              "amount": "200–300 g",
+              "strength": "",
+              "kind": "silica",
+              "tip": "Modifiye uç"
+            }
+          ],
+          "steps": [
+            "Filtrede tozu toplarken aynı ana izokinetik debiyi nem tutma bölümünden geçir.",
+            "Nem birlikte hesaplanacaksa başlangıç ve son sıvı hacimlerini ve kurutucu kütlesini ayrıca kaydet."
+          ],
+          "note": "Bu şişeler filtreyi geçen gazdaki nemi tutar; toz numunesi filtre ve yöntemce tanımlanan ön hat fraksiyonudur.",
+          "vesselType": "Greenburg–Smith",
+          "branch": false,
+          "inlet": "Nozul → baca İÇİNDE filtre → uzatma hattı → nem treni",
+          "filterAfter": 0,
+          "visual": null
+        }
+      ],
+      "visual": null,
+      "essentials": [
+        "Filtre baca İÇİNDEDİR; partiküller baca gazı sıcaklığında toplanır.",
+        "Su damlacığı içeren veya su buharına doygun baca gazında bu yöntem uygulanmaz."
+      ],
+      "filterPlacement": "inside"
     },
     {
       "id": "voc",
@@ -2408,9 +2553,8 @@
         {
           "title": "Gerekli malzemeler",
           "items": [
-            "Yönlendirilebilir toplama cihazı; kodlanmış temiz kaplar.",
-            "Her toplama kabı için 10 mL 0,02 N CuSO₄ çözeltisi.",
-            "Sabit zemin/ankraj, konum ve rüzgâr kayıtları; temiz lastik silecek ve kapaklar."
+            "Yönlendirilebilir toplama cihazı; kodlanmış temiz kaplar ve görseldeki gravimetrik toplama çözeltisi.",
+            "Sabit zemin/ankraj, konum ve rüzgâr kayıtları; temiz fırça, distile su ve kapaklar."
           ],
           "ordered": false
         },
@@ -2419,7 +2563,7 @@
           "items": [
             "Hakim rüzgâr ve tesis etki alanına göre en az iki temsil edici nokta seç.",
             "Toplama başlığının doğrulanmış yüzey alanını kaydet; rastgele nominal kap alanını kullanma.",
-            "Her temiz kaba 10 mL 0,02 N bakır sülfat ekle; biyolojik büyümeyi sınırlamak içindir.",
+            "Gravimetrik toplama çözeltisini temiz kaplara ekle; biyolojik büyümeyi sınırlamak içindir.",
             "Düz ve güvenli zemine sabitle; A kodlu kabı işletme yönüne çevir.",
             "Giriş yüksekliğini ve bina/ekili alan uzaklığını kontrol et; talimatta 1,5–4 m yükseklik ve en az 1,5 m yan mesafe vardır."
           ],
@@ -2432,7 +2576,7 @@
             "Birer aylık iki dönem olmak üzere toplam iki aylık programı uygula.",
             "Her dönemin gerçek maruz kalma gün sayısını hesapla; bütün ayları otomatik 30 gün kabul etme.",
             "Kap kaybı, devrilme, yaprak/böcek ve olağandışı yağış durumlarını kaydet.",
-            "Dönem sonunda kabın kenarındaki çökeltiyi temiz silecek veya kontrollü saf su durulamasıyla numuneye geri al.",
+            "Dönem sonunda cihazın iç yüzeyine yapışan tozu temiz fırça ve distile suyla numune kabına geri al; bu yıkamayı numune toplanmadan atma.",
             "Kapları sıkıca kapat ve dönem numunelerini birbirine karıştırmadan laboratuvara gönder."
           ],
           "ordered": true
@@ -2458,16 +2602,88 @@
           "ordered": true
         },
         {
-          "title": "Toplama kabı içeriği",
+          "title": "Cihazın bakım ve kullanımı",
           "items": [
-            "Her kaba: 10 mL 0,02 N CuSO₄ • 2,50 g/L CuSO₄·5H₂O.",
-            "Toplama kabı numune süresince yağmur ve çökelti biriktirir; aktif çekiş veya impinger treni kurulmaz."
+            "Cihaz ayaklarını zemine sağlam bağla; gerekiyorsa kazıklarla destekle. Devrilme ve yön değişmesini her kap değişiminde kontrol et.",
+            "Numune geri kazanımı tamamlandıktan sonra dış yüzeydeki kir ve tozu nemli bezle sil.",
+            "Bakım talimatı sabit bir periyodik bakım aralığı tanımlamaz; temizlik ihtiyacını sahadaki kirlenmeye göre değerlendir.",
+            "Bu düzenek pasif çökelme toplar; pompa, sabit gaz debisi veya impinger treni kullanılmaz."
           ],
           "ordered": false
         }
       ],
       "trains": [],
       "visual": "settled"
+    },
+    {
+      "id": "cokentoz-metal",
+      "title": "Çöken tozda ağır metal",
+      "method": "VDI 2267-14 • ICP-OES / VDI 2267-7 • Tl için AAS",
+      "domain": "İmisyon",
+      "visual": "settled-metal",
+      "trains": [],
+      "essentials": [
+        "Pasif çökelme örneklemesi: aktif gaz çekişi ve impinger treni yoktur.",
+        "Toplama kabının başlangıç kimyası metal analiz planıyla belirlenir; gravimetrik CuSO₄ ilavesini otomatik uygulama."
+      ],
+      "sections": [
+        {
+          "title": "Bu ölçüm neden yapılır?",
+          "items": [
+            "Çöken tozla yüzeye taşınan metallerin birikimini belirler; sonuç alan ve gerçek örnekleme süresine göre değerlendirilir.",
+            "VDI 2267-14 kapsamında ICP-OES ile Al, As, Ca, Cd, Co, Cr, Cu, Fe, K, Mg, Mn, Na, Ni, Pb, V ve Zn incelenir. Talyum (Tl) için VDI 2267-7 atomik absorpsiyon uygulaması ayrı değerlendirilir."
+          ],
+          "ordered": false
+        },
+        {
+          "title": "Gerekli malzemeler",
+          "items": [
+            "Analiz edilecek metallere uygun, temizlenmiş toplama kapları; yönlü çöken toz düzeneği, kapaklar ve numune geri kazanımı için temiz malzemeler.",
+            "Saha körü ve numune planına uygun kaplar. Fırça, su ve kap malzemelerinin hedef metallere katkısı kontrol edilir."
+          ],
+          "ordered": false
+        },
+        {
+          "title": "Sahada örnekleme sırası",
+          "items": [
+            "Toplama başlığının doğrulanmış alanını ve kap yönlerini kaydet; işletme yönüne bakan kabı belirle.",
+            "Laboratuvarın metal analiz planına göre kapları hazırla. Gönderilen metal talimatı başlangıç koruyucusu için bir mL değeri tanımlamıyor; bu değeri gravimetrik talimattan aktarma.",
+            "Başlangıç tarih ve saatini kaydet; bu talimattaki 30 ±2 günlük toplama dönemini uygula.",
+            "Dönem sonunda iç yüzeydeki birikimi numuneye geri al; eklenen distile su miktarını ve her türlü kayıp/kirlenmeyi kaydet.",
+            "Kapları kapatıp ayrı kodlarla laboratuvara gönder; gerçek başlangıç/bitiş zamanı ve numune durumunu bildir."
+          ],
+          "ordered": true
+        },
+        {
+          "title": "Metale özgü dikkat noktaları",
+          "items": [
+            "Bakır sülfat bakır analizine katkı verebilir; kimyasal ilavesi ancak analiz planı ve doğrulanmış kör/düzeltme uygulamasıyla uyumlu olmalıdır.",
+            "Asit ve peroksit miktarları laboratuvar parçalama işlemine aittir; sahadaki toplama şişesine bu miktarları ekleme.",
+            "Isıtma/şartlandırma yalnızca laboratuvarın belirlediği ısıya dayanıklı hazırlama malzemesine uygulanır; plastik saha kabını otomatik olarak etüve koyma."
+          ],
+          "ordered": false
+        },
+        {
+          "title": "Laboratuvarda numune hazırlama",
+          "items": [
+            "Analiz edilecek numune/fraksiyonu tanımla; kayıp olmadan uygun PTFE parçalama kabına aktar.",
+            "Numuneye 8 mL HNO₃ ekle. Filtre kabını 2 mL H₂O₂ ve 2 mL saf suyla yıka; yıkamayı aynı parçalama kabına aktar.",
+            "Mikrodalga programı: 3 dakikada 130 °C’ye çık, 2 dakika beklet; 3 dakikada 180 °C’ye çık, 2 dakika beklet; 3 dakikada 220 °C’ye çık, 20 dakika beklet. Programı uygun cihaz ve kap basınç sınırlarıyla uygula.",
+            "50 °C’ye soğutma aşaması 20 dakikadan uzundur. Soğuyan kapları çeker ocakta dikkatle aç; oda sıcaklığına gelmesini bekle.",
+            "%1 HNO₃ ile son hacmi 50 mL’ye tamamla. Her seride aynı işlemlerden geçen boş filtre körü hazırla."
+          ],
+          "ordered": true
+        },
+        {
+          "title": "Analiz ve sonuç kontrolü",
+          "items": [
+            "ICP-OES kalibrasyonu, kör ve kontrol numunelerini analiz serisiyle birlikte değerlendir; talyum için ayrı AAS koşullarını kullan.",
+            "Körle düzeltilmiş metal kütlesini, doğrulanmış toplama alanına ve gerçek gün sayısına böl. Seyreltme ve son hacmi hesaba kat; 50 mL = 0,050 L dönüşümünü doğru kullan.",
+            "Süzme ve parçalama sırasında hangi fraksiyonların analiz edildiğini kaydet; yalnızca bir fraksiyon incelenmişse sonucu toplam çöken metal olarak yorumlama."
+          ],
+          "ordered": false
+        }
+      ]
     },
     {
       "id": "pasif",

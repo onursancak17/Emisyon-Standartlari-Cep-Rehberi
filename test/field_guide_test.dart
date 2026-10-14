@@ -24,6 +24,22 @@ Future<void> shot(WidgetTester t,GlobalKey key,String name) async {
 void main(){
  TestWidgetsFlutterBinding.ensureInitialized();
  setUp(() {settings.scale=1;settings.dark=false;settings.rate=.45;});
+ testWidgets('EPA filter locations and metal collector chemistry remain distinct', (t) async {
+  final data=(await t.runAsync(Content.load))!;
+  for(final id in ['toz-epa','toz-epa17','cokentoz-metal']){
+   final a=data.manuals.singleWhere((a)=>a.id==id);
+   await t.pumpWidget(MaterialApp(home:DetailPage(key:ValueKey(id),article:a)));await t.pumpAndSettle();
+   expect(find.text(a.essentials.first),findsOneWidget);
+   if(id!='cokentoz-metal'){
+    final card=t.widget<FilterPlacementCard>(find.byType(FilterPlacementCard));expect(card.inside,id=='toz-epa17');
+   }else{
+    await t.scrollUntilVisible(find.byType(SettledCard),150,maxScrolls:40,scrollable:find.byType(Scrollable).first);await t.pumpAndSettle();
+    expect(t.widget<SettledCard>(find.byType(SettledCard)).metal,isTrue);
+    expect(find.text('Her toplama kabı: 10 mL 0,02 N CuSO₄'),findsNothing);
+   }
+   expect(t.takeException(),isNull);
+  }
+ });
  testWidgets('Two tabs, Turkish search and independent common chapter', (t) async {
   t.view.physicalSize=const Size(390,844);t.view.devicePixelRatio=1;addTearDown(t.view.resetPhysicalSize);addTearDown(t.view.resetDevicePixelRatio);
   await t.runAsync(fonts);final data=(await t.runAsync(Content.load))!;final key=GlobalKey();

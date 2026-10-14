@@ -1,7 +1,7 @@
 name: emisyon_standartlari_cep_rehberi
 description: Çevrimdışı emisyon ve imisyon saha ölçüm talimatları.
 publish_to: 'none'
-version: 2.1.0+22
+version: 2.2.0+23
 environment:
   sdk: '>=3.3.0 <4.0.0'
 dependencies:

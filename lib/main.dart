@@ -77,16 +77,18 @@ class Article {
   Article.fromJson(Map<String, dynamic> j)
       : id = j['id'] as String, title = j['title'] as String,
         method = j['method'] as String, domain = j['domain'] as String,
-        visual = j['visual'] as String?,
+        visual = j['visual'] as String?, filterPlacement = j['filterPlacement'] as String?,
+        essentials = ((j['essentials'] ?? []) as List).cast<String>(),
         sections = (j['sections'] as List).map((x) => Section.fromJson(x)).toList(),
         trains = ((j['trains'] ?? []) as List).map((x) => Train.fromJson(x)).toList();
   final String id, title, method, domain;
-  final String? visual;
+  final String? visual, filterPlacement;
+  final List<String> essentials;
   final List<Section> sections;
   final List<Train> trains;
-  String get searchable => searchKey('$title $method ${sections.map((s) => '${s.title} ${s.items.join(' ')}').join(' ')} ${trains.map((t)=>t.narration.join(' ')).join(' ')}');
+  String get searchable => searchKey('$title $method ${essentials.join(' ')} ${sections.map((s) => '${s.title} ${s.items.join(' ')}').join(' ')} ${trains.map((t)=>t.narration.join(' ')).join(' ')}');
   List<String> get narration => narrationFor(null);
-  List<String> narrationFor(Train? selected) => [title, method,
+  List<String> narrationFor(Train? selected) => [title, method, ...essentials,
     if(selected!=null) ...selected.narration else for(final t in trains) ...t.narration,
     for(final s in sections) ...[s.title,...s.items]];
 }
@@ -263,6 +265,9 @@ class _DetailState extends State<DetailPage> {
   return Scaffold(appBar:AppBar(title:Text(a.title),actions:[IconButton(tooltip:'Okuma ve ses ayarları',onPressed:()=>showAppearance(c),icon:const Icon(Icons.tune))]),
    body:ListView(padding:const EdgeInsets.fromLTRB(16,8,16,40),children:[
     Text(a.method,style:Theme.of(c).textTheme.titleMedium?.copyWith(color:teal)),const SizedBox(height:16),
+    if(a.trains.isNotEmpty) Padding(padding:const EdgeInsets.only(bottom:12),child:Text('${a.trains[selectedTrain].method} • ${a.trains[selectedTrain].sampling}',style:const TextStyle(fontWeight:FontWeight.w700,color:teal))),
+    if(a.essentials.isNotEmpty) Card(child:Padding(padding:const EdgeInsets.all(16),child:Column(crossAxisAlignment:CrossAxisAlignment.start,children:[for(final fact in a.essentials) Padding(padding:const EdgeInsets.only(bottom:8),child:Text(fact,style:const TextStyle(fontWeight:FontWeight.w700)))]))),
+    if(a.filterPlacement!=null) FilterPlacementCard(inside:a.filterPlacement=='inside'),
     AudioPanel(narrator:narrator,article:a,narration:a.narrationFor(a.trains.isEmpty?null:a.trains[selectedTrain])),
     if(a.trains.isNotEmpty)...[const SizedBox(height:24),Text('Ölçüm düzeneği',style:Theme.of(c).textTheme.titleLarge?.copyWith(fontWeight:FontWeight.bold)),
       if(a.trains.length>1) ...[const SizedBox(height:12),DropdownButtonFormField<int>(
@@ -273,7 +278,7 @@ class _DetailState extends State<DetailPage> {
       TrainCard(key:ValueKey('${a.id}-$selectedTrain'),train:a.trains[selectedTrain],onListen:()=>unawaited(narrator.start(a.trains[selectedTrain].narration)))],
     if(a.visual=='resin') ...[const SizedBox(height:20),ImageCard(asset:'assets/equipment/resin.webp',title:'Kondenser ve dik XAD-2 kartuşu'),
      const Padding(padding:EdgeInsets.all(8),child:Text('Gaz girişi kartuşun altında, çıkışı üstündedir. Yan bağlantılar soğutma suyuna aittir.'))],
-    if(a.visual=='settled') ...[const SizedBox(height:20),const SettledCard()],
+    if(a.visual=='settled'||a.visual=='settled-metal') ...[const SizedBox(height:20),SettledCard(metal:a.visual=='settled-metal')],
     const SizedBox(height:20),
     for(var i=0;i<a.sections.length;i++) Card(margin:const EdgeInsets.only(bottom:10),clipBehavior:Clip.antiAlias,child:ExpansionTile(
       key:PageStorageKey('${a.id}-$i'),initiallyExpanded:i==0,maintainState:true,
@@ -389,12 +394,40 @@ class ImageCard extends StatelessWidget {
   Image.asset(asset,semanticLabel:title),TextButton.icon(onPressed:()=>Navigator.push(c,MaterialPageRoute<void>(builder:(_)=>Scaffold(backgroundColor:Colors.white,appBar:AppBar(title:Text(title)),body:InteractiveViewer(minScale:1,maxScale:5,child:Center(child:Image.asset(asset)))))),icon:const Icon(Icons.open_in_full),label:const Text('Tam ekran • Büyüt')),
  ]));
 }
+class FilterPlacementCard extends StatelessWidget {
+ const FilterPlacementCard({super.key,required this.inside});
+ final bool inside;
+ @override Widget build(BuildContext c)=>Card(child:Padding(padding:const EdgeInsets.all(16),child:Column(children:[
+ Text(inside?'EPA 17 • Baca içi filtre':'EPA 5 • Baca dışı filtre',style:const TextStyle(fontWeight:FontWeight.bold)),
+ const SizedBox(height:12),AspectRatio(aspectRatio:1.65,child:CustomPaint(painter:FilterPlacementPainter(inside))),
+ Text(inside?'Nozul → baca içinde filtre → uzatma → nem treni':'Nozul → ısıtmalı prob → dışarıda ısıtmalı filtre → nem treni',textAlign:TextAlign.center),
+ ])));
+}
+class FilterPlacementPainter extends CustomPainter {
+ FilterPlacementPainter(this.inside);final bool inside;
+ @override void paint(Canvas c,Size s){
+ final w=s.width,h=s.height;final line=Paint()..color=teal..strokeWidth=4;
+ c.drawRect(Rect.fromLTWH(0,0,w*.48,h),Paint()..color=const Color(0xFFE4EFF3));
+ c.drawRect(Rect.fromLTWH(w*.48,0,w*.04,h),Paint()..color=const Color(0xFF8296A2));
+ void text(String value,double x,double y,double width){final t=TextPainter(text:TextSpan(text:value,style:const TextStyle(color:navy,fontSize:14,fontWeight:FontWeight.bold)),textDirection:TextDirection.ltr)..layout(maxWidth:width);t.paint(c,Offset(x,y));}
+ text('BACA İÇİ',w*.03,8,w*.43);text('BACA DIŞI',w*.55,8,w*.44);
+ c.drawLine(Offset(w*.12,h*.52),Offset(w*.94,h*.52),line);
+ c.drawLine(Offset(w*.94,h*.52),Offset(w*.89,h*.47),line);c.drawLine(Offset(w*.94,h*.52),Offset(w*.89,h*.57),line);
+ final x=inside?w*.30:w*.72;
+ c.drawRRect(RRect.fromRectAndRadius(Rect.fromCenter(center:Offset(x,h*.52),width:w*.14,height:h*.26),const Radius.circular(6)),Paint()..color=const Color(0xFFF0C67B));
+ c.drawLine(Offset(x,h*.42),Offset(x,h*.62),Paint()..color=navy..strokeWidth=4);
+ text('FİLTRE',x-w*.10,h*.70,w*.25);
+ text(inside?'Baca gazı sıcaklığı':'Isıtmalı tutucu',inside?w*.04:w*.55,h*.85,w*.43);
+ }
+ @override bool shouldRepaint(covariant FilterPlacementPainter old)=>old.inside!=inside;
+}
 class SettledCard extends StatelessWidget {
- const SettledCard({super.key});
+ const SettledCard({super.key,this.metal=false});
+ final bool metal;
  @override Widget build(BuildContext c)=>Card(child:Padding(padding:const EdgeInsets.all(16),child:Column(children:[
   const Text('Yönlü çöken toz toplama',style:TextStyle(fontWeight:FontWeight.w700)),const SizedBox(height:16),
   AspectRatio(aspectRatio:1,child:CustomPaint(painter:SettledPainter())),
-  const Text('Her toplama kabı: 10 mL 0,02 N CuSO₄',textAlign:TextAlign.center,style:TextStyle(color:teal,fontWeight:FontWeight.w700,fontSize:18)),
+  Text(metal?'Metal analizi: başlangıç kimyası analiz planına göre':'Her toplama kabı: 10 mL 0,02 N CuSO₄',textAlign:TextAlign.center,style:TextStyle(color:teal,fontWeight:FontWeight.w700,fontSize:18)),
   const SizedBox(height:8),const Text('A kabı işletmeye bakar. Yönler ve başlık alanı cihazın doğrulanmış düzenine göre kaydedilir.'),
  ])));
 }

@@ -68,3 +68,11 @@ Kaynak repo başı: bff1fc626da9b813198aee908c02ce2468cae3c4. Eğitimdeki 12 PDF
 EPA 5 toz talimatında filtre sonrası nem tutma da ayrı etiketli tren olarak gösterilir; nem ölçümünde tarif edilen EPA 5 ortak düzeni kullanılır. TS toz eğitiminde yalnız performans koşulu tanımlandığından universal dolum/sayı icat edilmez.
 
 EPA 8 6.1.1.3–4 kontrolü: birinci/üçüncü uç standart, ikinci/dördüncü modifiye; ilk iki şişe arasındaki filtre ısıtılmaz. https://www.epa.gov/sites/default/files/2019-06/documents/method_8.pdf . Cüce gösteriminin gaz hattı bağlantıları görsel ölçeğine göre hizalanır; yöntem/debi etiketi telefon genişliğine sarılır.
+
+## 2.2.0 field instructions
+- EPA 5 external heated filter and EPA 17 in-stack filter have separate native diagrams and prominent critical facts.
+- Added EPA 17 from user-supplied Turkish translation, cross-checked official EPA method: suitability, blockage, leak check at stack temperature, recovery and cooling cap precaution. Translation ambiguity about sealing during cooling resolved against official method.
+- EPA 1 shared travers/site and cyclonic flow guidance added once to common instructions; current official boundary conditions take precedence over translated unit errors.
+- Deposited-dust maintenance integrated into existing gravimetric SOP; separate metal deposition article uses supplied metal SOP. Collection preservative volumes absent from metal SOP are not invented or inherited from CuSO4 gravimetry.
+- Metal laboratory digestion: 8 mL HNO3, 2 mL H2O2, 2 mL water; rendered table 130/180/220 C steps 3+2,3+2,3+20 min; cool to 50 C >20 min; 50 mL final with 1% HNO3. Tl AAS separated from ICP-OES elements.
+- Source upload hashes: EPA17 2e1f65ef2b557a558d5ff0eedbdfe753d727819fae8f66170abaaddc00f99853; EPA1 8f8174fc10c1d1613ba4b1b860aaf15afd45ac0256b0a86a8a26839798c31294; deposited-metal d9e8cf07d08cc527b1036e91e805a5b26f5eac3fb8f91cb5bcdbf79c6614022b; maintenance c3271e7e2384f879201b79e26aba2afdb159f9539807007e952dea8fa5b9d834.
