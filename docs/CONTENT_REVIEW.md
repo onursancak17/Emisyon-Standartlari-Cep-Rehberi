@@ -66,3 +66,5 @@ Kaynak repo başı: bff1fc626da9b813198aee908c02ce2468cae3c4. Eğitimdeki 12 PDF
 27 tren/adsorber seçeneğinin her birinde standart, örnekleme biçimi, akış, kullanım koşulu ve şişe tipi verisi var. Ortak talimatlar tek bölümde; uygulamaya özel adımlar yalnız seçilen tren altında gösterilir. Sesli anlatım seçili trenle birlikte değişir. Aynı makaledeki birebir tekrarlanan talimat cümleleri doğrulamada reddedilir. Metotlar arasındaki gerekli eşit eşik değerleri, yalnız aynı oldukları için silinmez.
 
 EPA 5 toz talimatında filtre sonrası nem tutma da ayrı etiketli tren olarak gösterilir; nem ölçümünde tarif edilen EPA 5 ortak düzeni kullanılır. TS toz eğitiminde yalnız performans koşulu tanımlandığından universal dolum/sayı icat edilmez.
+
+EPA 8 6.1.1.3–4 kontrolü: birinci/üçüncü uç standart, ikinci/dördüncü modifiye; ilk iki şişe arasındaki filtre ısıtılmaz. https://www.epa.gov/sites/default/files/2019-06/documents/method_8.pdf . Cüce gösteriminin gaz hattı bağlantıları görsel ölçeğine göre hizalanır; yöntem/debi etiketi telefon genişliğine sarılır.

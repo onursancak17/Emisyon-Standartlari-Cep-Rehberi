@@ -796,7 +796,6 @@
           "title": "Dikkat edilecek noktalar",
           "items": [
             "EPA 13A için sabit debili bir uygulama tanımlanmaz; ISO 15713’ün sabit akış seçeneğini bu metoda taşıma.",
-            "EPA 13A görseli mevcut 100 mL saf su uygulamasını gösterir; farklı dolumu yöntem hazırlama planı doğrulanmadan kullanma.",
             "Kullanılan filtre ve gaz temas malzemeleri flor bulaşmasına neden olmamalıdır.",
             "Soğutma, numune geri kazanımı ve fraksiyon ayrımı seçilen metoda göre değerlendirilir."
           ],
@@ -1989,7 +1988,7 @@
               "amount": "100 mL",
               "strength": "%80",
               "kind": "water",
-              "tip": "Modifiye uç"
+              "tip": "Standart Greenburg–Smith uç"
             },
             {
               "content": "H₂O₂",
@@ -2003,7 +2002,7 @@
               "amount": "100 mL",
               "strength": "%3",
               "kind": "water",
-              "tip": "Modifiye uç"
+              "tip": "Standart Greenburg–Smith uç"
             },
             {
               "content": "Silika jel",
@@ -2013,7 +2012,7 @@
               "tip": "Modifiye uç"
             }
           ],
-          "note": "Filtre, ilk izopropanol şişesi ile peroksit bölümü arasındadır. Şişeleri buz banyosunda soğut.",
+          "note": "Birinci ve üçüncü şişe standart, ikinci ve dördüncü şişe modifiye uçludur. Aradaki filtre tutucuyu ısıtma; probda yoğuşmayı önle.",
           "method": "EPA Method 8",
           "sampling": "İzokinetik örnekleme",
           "flow": "En fazla 30 L/dakika; izokinetiklik korunur",

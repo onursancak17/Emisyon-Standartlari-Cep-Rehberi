@@ -68,7 +68,7 @@ class Train {
   final String? visual;
   final List<String> steps;
   final List<Vessel> bottles;
-  double get canvasWidth => math.max(600, bottles.length*190.0 + (filterAfter>0 ? 100 : 0)).toDouble();
+  double get canvasWidth => math.max(visual=='resin'?600:380, bottles.length*190.0 + (filterAfter>0 ? 100 : 0)).toDouble();
   List<String> get narration => [method, sampling, flow, condition, vesselType, inlet,
     for(var i=0;i<bottles.length;i++) '${i+1}. şişe. ${bottles[i].content}. ${bottles[i].amount}. ${bottles[i].strength}. ${bottles[i].tip}.',
     note, ...steps];
@@ -335,14 +335,14 @@ class BranchPainter extends CustomPainter {
 class TrainView extends StatelessWidget {
  const TrainView({super.key,required this.train});final Train train;
  @override Widget build(BuildContext c)=>SizedBox(width:train.canvasWidth,height:620,child:Column(crossAxisAlignment:CrossAxisAlignment.start,children:[
-  Padding(padding:const EdgeInsets.fromLTRB(12,10,12,8),child:Column(crossAxisAlignment:CrossAxisAlignment.start,children:[
+  SizedBox(width:math.min(train.canvasWidth,MediaQuery.sizeOf(c).width-56),child:Padding(padding:const EdgeInsets.fromLTRB(12,10,12,8),child:Column(crossAxisAlignment:CrossAxisAlignment.start,children:[
    Text(train.method,style:const TextStyle(color:navy,fontSize:20,fontWeight:FontWeight.bold)),
    Text(train.sampling,style:const TextStyle(color:teal,fontSize:20,fontWeight:FontWeight.bold)),
    Text(train.flow,style:const TextStyle(color:navy,fontSize:17)),
-  ])),
+  ]))),
   if(train.visual=='resin') Expanded(child:Image.asset('assets/equipment/resin.webp',width:train.canvasWidth,fit:BoxFit.contain,semanticLabel:'Dik XAD-2: gaz girişi alttan, çıkış üstten'))
   else Expanded(child:Stack(children:[
-   Positioned(top:10,left:0,right:0,child:CustomPaint(size:Size(train.canvasWidth,20),painter:ConnectionPainter(train.bottles.length,train.filterAfter))),
+   Positioned(top:train.vesselType.toLowerCase().contains('cüce')?48:10,left:0,right:0,child:CustomPaint(size:Size(train.canvasWidth,20),painter:ConnectionPainter(train.bottles.length,train.filterAfter,train.vesselType.toLowerCase().contains('cüce')))),
    Row(crossAxisAlignment:CrossAxisAlignment.start,children:[for(var i=0;i<train.bottles.length;i++) ...[
     SizedBox(width:190,child:Column(children:[
      SizedBox(height:270,child:Center(child:Image.asset('assets/equipment/${train.bottles[i].tip.contains('Standart')?'standard':train.bottles[i].kind}.webp',width:train.vesselType.toLowerCase().contains('cüce')?125:190,height:train.vesselType.toLowerCase().contains('cüce')?190:270,fit:BoxFit.contain,semanticLabel:'${i+1}. şişe: ${train.bottles[i].content}, ${train.bottles[i].amount}, ${train.bottles[i].strength}'))),
@@ -358,10 +358,10 @@ class TrainView extends StatelessWidget {
  ]));
 }
 class ConnectionPainter extends CustomPainter {
- ConnectionPainter(this.count,this.filterAfter);final int count,filterAfter;
+ ConnectionPainter(this.count,this.filterAfter,this.compact);final int count,filterAfter;final bool compact;
  @override void paint(Canvas c,Size size){final p=Paint()..color=teal..strokeWidth=3;
-  for(var i=0;i<count-1;i++){final x=167.0+i*190+(filterAfter>0 && i>=filterAfter?100:0);final gap=filterAfter==i+1?146.0:46.0;c.drawLine(Offset(x,0),Offset(x+gap,0),p);c.drawLine(Offset(x+gap-16,0),Offset(x+gap-23,-5),p);c.drawLine(Offset(x+gap-16,0),Offset(x+gap-23,5),p);}}
- @override bool shouldRepaint(ConnectionPainter old)=>count!=old.count || filterAfter!=old.filterAfter;
+  for(var i=0;i<count-1;i++){final x=(compact?145.0:167.0)+i*190+(filterAfter>0 && i>=filterAfter?100:0);final gap=(compact?90.0:46.0)+(filterAfter==i+1?100:0);c.drawLine(Offset(x,0),Offset(x+gap,0),p);c.drawLine(Offset(x+gap-16,0),Offset(x+gap-23,-5),p);c.drawLine(Offset(x+gap-16,0),Offset(x+gap-23,5),p);}}
+ @override bool shouldRepaint(ConnectionPainter old)=>count!=old.count || filterAfter!=old.filterAfter || compact!=old.compact;
 }
 class TrainFullScreen extends StatefulWidget {
  const TrainFullScreen({super.key,required this.train});final Train train;
