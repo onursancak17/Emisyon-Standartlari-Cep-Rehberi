@@ -1,1078 +1,459 @@
+import 'dart:async';
 import 'dart:convert';
-import 'dart:math';
-import 'dart:typed_data';
-
+import 'dart:math' as math;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:just_audio/just_audio.dart';
+import 'package:flutter_tts/flutter_tts.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
-void main() {
-  runApp(const StandardsApp());
+const navy = Color(0xFF123349);
+const teal = Color(0xFF07858C);
+String searchKey(String s) => s.replaceAll('İ', 'i').toLowerCase()
+    .replaceAll('ı', 'i').replaceAll('ş', 's').replaceAll('ğ', 'g')
+    .replaceAll('ü', 'u').replaceAll('ö', 'o').replaceAll('ç', 'c')
+    .replaceAll('₂', '2').replaceAll('₁', '1').replaceAll('₀', '0');
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await settings.restore();
+  runApp(const FieldApp());
 }
 
-class StandardsApp extends StatelessWidget {
-  const StandardsApp({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Emisyon İmisyon Ölçüm Standartları',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF145DA0)),
-        useMaterial3: true,
-      ),
-      home: const StandardsHomePage(),
-    );
+class Appearance extends ChangeNotifier {
+  double scale = 1, rate = .45;
+  bool dark = false;
+  Future<void> restore() async {
+    final p = SharedPreferencesAsync();
+    scale = (await p.getDouble('manual-text-scale') ?? 1).clamp(1, 1.4);
+    rate = (await p.getDouble('narration-rate') ?? .45).clamp(.25, .65);
+    dark = await p.getBool('manual-dark') ?? false;
+  }
+  Future<void> change({double? font, double? speech, bool? night}) async {
+    scale = font ?? scale; rate = speech ?? rate; dark = night ?? dark;
+    notifyListeners();
+    final p = SharedPreferencesAsync();
+    await p.setDouble('manual-text-scale', scale);
+    await p.setDouble('narration-rate', rate);
+    await p.setBool('manual-dark', dark);
   }
 }
+final settings = Appearance();
 
-class StandardsHomePage extends StatefulWidget {
-  const StandardsHomePage({super.key});
-
-  @override
-  State<StandardsHomePage> createState() => _StandardsHomePageState();
+class Section {
+  Section(this.title, this.items, this.ordered);
+  final String title;
+  final List<String> items;
+  final bool ordered;
+  factory Section.fromJson(Map<String, dynamic> j) => Section(j['title'] as String,
+      (j['items'] as List).cast<String>(), j['ordered'] == true);
 }
-
-class _StandardsHomePageState extends State<StandardsHomePage> {
-  late final Future<List<StandardItem>> _itemsFuture;
-  final TextEditingController _searchController = TextEditingController();
-  String _query = '';
-  String _selectedCategory = 'Tümü';
-
-  @override
-  void initState() {
-    super.initState();
-    _itemsFuture = StandardsRepository.loadItems();
-  }
-
-  @override
-  void dispose() {
-    _searchController.dispose();
-    super.dispose();
-  }
-
-  List<String> _categories(List<StandardItem> items) {
-    final categories = <String>{'Tümü'};
-    for (final item in items) {
-      categories.add(item.category);
-    }
-    return categories.toList();
-  }
-
-  List<StandardItem> _filter(List<StandardItem> items) {
-    final normalizedQuery = TurkishUnitText.normalize(_query).toLowerCase().trim();
-    return items.where((item) {
-      final categoryMatches = _selectedCategory == 'Tümü' || item.category == _selectedCategory;
-      if (!categoryMatches) return false;
-      if (normalizedQuery.isEmpty) return true;
-      return item.searchText.contains(normalizedQuery);
-    }).toList();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: const Text('Emisyon İmisyon Ölçüm Standartları'), centerTitle: false),
-      body: SafeArea(
-        child: FutureBuilder<List<StandardItem>>(
-          future: _itemsFuture,
-          builder: (context, snapshot) {
-            if (snapshot.connectionState == ConnectionState.waiting) return const Center(child: CircularProgressIndicator());
-            if (snapshot.hasError) {
-              return Center(
-                child: Padding(
-                  padding: const EdgeInsets.all(24),
-                  child: Text('Standart verisi okunamadı: ${snapshot.error}'),
-                ),
-              );
-            }
-
-            final items = snapshot.data ?? const <StandardItem>[];
-            final categories = _categories(items);
-            final filteredItems = _filter(items);
-
-            return Column(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(16, 12, 16, 8),
-                  child: TextField(
-                    controller: _searchController,
-                    decoration: InputDecoration(
-                      prefixIcon: const Icon(Icons.search),
-                      labelText: 'Standart, kirletici, çözelti, cihaz veya ses ara',
-                      border: OutlineInputBorder(borderRadius: BorderRadius.circular(16)),
-                      suffixIcon: _query.isEmpty
-                          ? null
-                          : IconButton(
-                              onPressed: () {
-                                _searchController.clear();
-                                setState(() => _query = '');
-                              },
-                              icon: const Icon(Icons.clear),
-                            ),
-                    ),
-                    onChanged: (value) => setState(() => _query = value),
-                  ),
-                ),
-                SizedBox(
-                  height: 52,
-                  child: ListView.separated(
-                    padding: const EdgeInsets.symmetric(horizontal: 16),
-                    scrollDirection: Axis.horizontal,
-                    itemCount: categories.length,
-                    separatorBuilder: (_, __) => const SizedBox(width: 8),
-                    itemBuilder: (context, index) {
-                      final category = categories[index];
-                      return ChoiceChip(
-                        label: Text(category),
-                        selected: _selectedCategory == category,
-                        onSelected: (_) => setState(() => _selectedCategory = category),
-                      );
-                    },
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(16, 2, 16, 8),
-                  child: Row(
-                    children: [
-                      Icon(Icons.offline_bolt, size: 18, color: Theme.of(context).colorScheme.primary),
-                      const SizedBox(width: 6),
-                      Expanded(child: Text('Tamamen offline • Yazılı rehber + görsel + sesli saha anlatımı', style: Theme.of(context).textTheme.bodySmall)),
-                      Text('${filteredItems.length} kayıt'),
-                    ],
-                  ),
-                ),
-                Expanded(
-                  child: filteredItems.isEmpty
-                      ? const Center(child: Text('Sonuç bulunamadı.'))
-                      : ListView.separated(
-                          padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
-                          itemCount: filteredItems.length,
-                          separatorBuilder: (_, __) => const SizedBox(height: 10),
-                          itemBuilder: (context, index) => StandardCard(item: filteredItems[index]),
-                        ),
-                ),
-              ],
-            );
-          },
-        ),
-      ),
-    );
+class Vessel {
+  Vessel.fromJson(Map<String, dynamic> j)
+      : content = j['content'] as String, amount = j['amount'] as String,
+        strength = j['strength'] as String, kind = j['kind'] as String,
+        tip = j['tip'] as String;
+  final String content, amount, strength, kind, tip;
+}
+class Train {
+  Train.fromJson(Map<String, dynamic> j)
+      : name = j['name'] as String, note = j['note'] as String,
+        method = j['method'] as String? ?? '', sampling = j['sampling'] as String? ?? '',
+        flow = j['flow'] as String? ?? '', condition = j['condition'] as String? ?? '',
+        vesselType = j['vesselType'] as String? ?? '', inlet = j['inlet'] as String? ?? '',
+        branch = j['branch'] == true, filterAfter = j['filterAfter'] as int? ?? 0,
+        controls = ((j['controls'] ?? []) as List).cast<String>(),
+        visual = j['visual'] as String?, steps = ((j['steps'] ?? []) as List).cast<String>(),
+        bottles = (j['bottles'] as List).map((x) => Vessel.fromJson(x)).toList();
+  final String name, note, method, sampling, flow, condition, vesselType, inlet;
+  final bool branch;
+  final int filterAfter;
+  final String? visual;
+  final List<String> steps, controls;
+  final List<Vessel> bottles;
+  double get canvasWidth => math.max(visual=='resin'?600:380, bottles.length*190.0 + (filterAfter>0 ? 100 : 0)).toDouble();
+  List<String> get narration => [method, sampling, flow, condition, vesselType, inlet, ...controls,
+    for(var i=0;i<bottles.length;i++) '${i+1}. şişe. ${bottles[i].content}. ${bottles[i].amount}. ${bottles[i].strength}. ${bottles[i].tip}.',
+    note, ...steps];
+}
+class Article {
+  Article.fromJson(Map<String, dynamic> j)
+      : id = j['id'] as String, title = j['title'] as String,
+        method = j['method'] as String, domain = j['domain'] as String,
+        visual = j['visual'] as String?, filterPlacement = j['filterPlacement'] as String?,
+        essentials = ((j['essentials'] ?? []) as List).cast<String>(),
+        sections = (j['sections'] as List).map((x) => Section.fromJson(x)).toList(),
+        trains = ((j['trains'] ?? []) as List).map((x) => Train.fromJson(x)).toList();
+  final String id, title, method, domain;
+  final String? visual, filterPlacement;
+  final List<String> essentials;
+  final List<Section> sections;
+  final List<Train> trains;
+  String get searchable => searchKey('$title $method ${essentials.join(' ')} ${sections.map((s) => '${s.title} ${s.items.join(' ')}').join(' ')} ${trains.map((t)=>t.narration.join(' ')).join(' ')}');
+  List<String> get narration => narrationFor(null);
+  List<String> narrationFor(Train? selected) => [title, method, ...essentials,
+    if(selected!=null) ...selected.narration else for(final t in trains) ...t.narration,
+    for(final s in sections) ...[s.title,...s.items]];
+}
+class Content {
+  Content(this.common, this.manuals, this.training);
+  final Article common;
+  final List<Article> manuals, training;
+  static Future<Content> load() async {
+    final j = jsonDecode(await rootBundle.loadString('assets/manuals.json'));
+    final t = jsonDecode(await rootBundle.loadString('assets/training.json')) as List;
+    return Content(Article.fromJson(j['common']),
+      (j['manuals'] as List).map((x) => Article.fromJson(x)).toList(),
+      t.map((x) => Article.fromJson(x)).toList());
   }
 }
 
-class StandardCard extends StatelessWidget {
-  const StandardCard({super.key, required this.item});
-
-  final StandardItem item;
-
-  @override
-  Widget build(BuildContext context) {
-    return Card(
-      elevation: 1,
-      clipBehavior: Clip.antiAlias,
-      child: InkWell(
-        onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => StandardDetailPage(item: item))),
-        child: Padding(
-          padding: const EdgeInsets.all(14),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Expanded(child: Text(item.title, style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w800))),
-                  const SizedBox(width: 8),
-                  const Icon(Icons.chevron_right),
-                ],
-              ),
-              const SizedBox(height: 6),
-              Wrap(spacing: 6, runSpacing: 6, children: [_MiniChip(label: item.code), _MiniChip(label: item.category), _MiniChip(label: item.subgroup)]),
-              const SizedBox(height: 10),
-              Text(TurkishUnitText.normalize(item.purpose), maxLines: 3, overflow: TextOverflow.ellipsis),
-              if (item.visualNotes.isNotEmpty || item.educationNotes.isNotEmpty || item.audioNotes.isNotEmpty) ...[
-                const SizedBox(height: 8),
-                Row(
-                  children: [
-                    Icon(Icons.school, size: 16, color: Theme.of(context).colorScheme.primary),
-                    const SizedBox(width: 5),
-                    Expanded(
-                      child: Text(
-                        '${item.educationNotes.length} eğitim notu • ${item.visualNotes.length} görsel • ${item.audioNotes.length} sesli anlatım',
-                        style: Theme.of(context).textTheme.labelMedium,
-                      ),
-                    ),
-                  ],
-                ),
-              ],
-            ],
-          ),
-        ),
-      ),
-    );
+class Narrator extends ChangeNotifier {
+  FlutterTts? _tts;
+  Future<bool>? _opening;
+  bool preparing=false;
+  bool playing = false, paused = false;
+  String? error;
+  List<String> chunks = [];
+  int index = 0, offset = 0, _baseOffset = 0, _session = 0;
+  bool _closed = false;
+  String get current => chunks.isEmpty || index >= chunks.length ? '' : chunks[index];
+  double get progress => chunks.isEmpty ? 0 :
+    ((index + (current.isEmpty ? 0 : offset/current.length)) / chunks.length).clamp(0, 1);
+  void announce() { if (!_closed) notifyListeners(); }
+  Future<bool> init() async {
+    if (_tts != null) return true;
+    final result=await (_opening ??= configure());
+    if(!result) _opening=null;
+    return result;
   }
-}
-
-class StandardDetailPage extends StatelessWidget {
-  const StandardDetailPage({super.key, required this.item});
-
-  final StandardItem item;
-
-  List<VisualNote> _notes(String placement) => item.visualNotes.where((note) => note.placement == placement).toList();
-
-  List<VisualNote> get _unplacedNotes {
-    const known = <String>{'purpose', 'quality', 'flowRate', 'equipment', 'fieldSteps', 'criticalControls', 'acceptance', 'reporting'};
-    return item.visualNotes.where((note) => !known.contains(note.placement)).toList();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    final purposeNotes = [..._notes('purpose'), ..._notes('quality')];
-    final labels = DetailSectionLabels.forItem(item);
-    return Scaffold(
-      appBar: AppBar(title: Text(item.code)),
-      body: ListView(
-        padding: const EdgeInsets.fromLTRB(16, 12, 16, 24),
-        children: [
-          Text(item.title, style: Theme.of(context).textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.w800)),
-          const SizedBox(height: 8),
-          Wrap(spacing: 8, runSpacing: 8, children: [_MiniChip(label: item.category), _MiniChip(label: item.subgroup), _MiniChip(label: item.code)]),
-          const SizedBox(height: 16),
-          const _UnitInfoBlock(),
-          _AudioNotesBlock(notes: item.audioNotes),
-          _InfoBlock(title: labels.purposeTitle, body: item.purpose),
-          _VisualNotesBlock(notes: purposeNotes),
-          _InfoBlock(title: labels.durationTitle, body: item.duration),
-          _InfoBlock(title: labels.flowRateTitle, body: item.flowRate),
-          _VisualNotesBlock(notes: _notes('flowRate')),
-          _InfoBlock(title: labels.equipmentTitle, body: item.equipment.join('\n')),
-          _VisualNotesBlock(notes: _notes('equipment')),
-          _InfoBlock(title: labels.reagentsTitle, body: item.reagents.join('\n')),
-          _InfoBlock(title: labels.fieldStepsTitle, body: _numbered(item.fieldSteps)),
-          _VisualNotesBlock(notes: _notes('fieldSteps')),
-          _InfoBlock(title: labels.criticalControlsTitle, body: item.criticalControls.join('\n')),
-          _VisualNotesBlock(notes: _notes('criticalControls')),
-          _InfoBlock(title: labels.acceptanceTitle, body: item.acceptance.join('\n')),
-          _VisualNotesBlock(notes: _notes('acceptance')),
-          _InfoBlock(title: labels.reportingTitle, body: item.reporting.join('\n')),
-          _VisualNotesBlock(notes: _notes('reporting')),
-          _InfoBlock(title: labels.educationTitle, body: _numbered(item.educationNotes)),
-          _VisualNotesBlock(notes: _unplacedNotes),
-          _InfoBlock(title: labels.mistakesTitle, body: item.mistakes.join('\n')),
-          const SizedBox(height: 12),
-          Text('Not: Bu uygulama sahacı hızlı rehberi olarak hazırlanmıştır. Resmi raporlamada yürürlükteki standart, mevzuat ve laboratuvar talimatı esas alınmalıdır.', style: Theme.of(context).textTheme.bodySmall),
-        ],
-      ),
-    );
-  }
-
-  String _numbered(List<String> values) => values.asMap().entries.map((entry) => '${entry.key + 1}. ${entry.value}').join('\n');
-}
-
-class DetailSectionLabels {
-  const DetailSectionLabels({
-    this.purposeTitle = 'Amaç / kullanım alanı',
-    this.durationTitle = 'Ölçüm süresi',
-    this.flowRateTitle = 'Debi / hacim notu',
-    this.equipmentTitle = 'Cihaz / ekipman',
-    this.reagentsTitle = 'Çözelti / absorban / impinger',
-    this.fieldStepsTitle = 'Saha adımları',
-    this.criticalControlsTitle = 'Kritik teknik kontroller',
-    this.acceptanceTitle = 'Kabul / ret kriterleri',
-    this.reportingTitle = 'Raporlama notları',
-    this.educationTitle = 'Eğitim dokümanı ayrıntıları',
-    this.mistakesTitle = 'Sık yapılan saha hataları',
-  });
-
-  final String purposeTitle;
-  final String durationTitle;
-  final String flowRateTitle;
-  final String equipmentTitle;
-  final String reagentsTitle;
-  final String fieldStepsTitle;
-  final String criticalControlsTitle;
-  final String acceptanceTitle;
-  final String reportingTitle;
-  final String educationTitle;
-  final String mistakesTitle;
-
-  static DetailSectionLabels forItem(StandardItem item) {
-    final text = TurkishUnitText.normalize('${item.title} ${item.code} ${item.subgroup}').toLowerCase();
-    if (text.contains('çöken toz')) {
-      return const DetailSectionLabels(
-        purposeTitle: 'Ölçüm mantığı ve kapsam',
-        durationTitle: 'Maruziyet süresi',
-        flowRateTitle: 'Kap alanı / maruziyet hesabı',
-        equipmentTitle: 'Toplama kabı ve saha yerleşim ekipmanı',
-        reagentsTitle: 'Kap hazırlığı / koruyucu sıvı',
-        fieldStepsTitle: 'Saha yerleşimi ve toplama adımları',
-        criticalControlsTitle: 'Saha geçerliliğini bozan durumlar',
-        acceptanceTitle: 'Kabul / geçerlilik kontrolü',
-        reportingTitle: 'SKHKKY Ek-2 raporlama notları',
-        mistakesTitle: 'Çöken tozda sık yapılan hatalar',
-      );
-    }
-    if (text.contains('pasif örnekleme') || text.contains('difüzyon tüp')) {
-      return const DetailSectionLabels(
-        purposeTitle: 'Pasif örnekleme mantığı ve kapsam',
-        durationTitle: 'Maruziyet süresi ve tüp açma-kapama',
-        flowRateTitle: 'Difüzyon / alım hızı mantığı',
-        equipmentTitle: 'Pasif tüp, shelter ve saha ekipmanı',
-        reagentsTitle: 'Tüp adsorbanı / blank düzeni',
-        fieldStepsTitle: 'Pasif tüp saha uygulaması',
-        criticalControlsTitle: 'Maruziyet ve kirlenme kontrolleri',
-        acceptanceTitle: 'Tüp kabul / ret kontrolü',
-        reportingTitle: 'Pasif örnekleme raporlama notları',
-        mistakesTitle: 'Pasif örneklemede sık yapılan hatalar',
-      );
-    }
-    if (text.contains('15259') || text.contains('method 1') || text.contains('traverse')) {
-      return const DetailSectionLabels(
-        purposeTitle: 'Ölçüm düzlemi seçiminin amacı',
-        durationTitle: 'Ölçüm öncesi planlama süresi',
-        flowRateTitle: 'Hız profili / traverse planı notu',
-        equipmentTitle: 'Port, platform ve geometri kontrol ekipmanı',
-        reagentsTitle: 'Kimyasal kullanılmaz',
-        fieldStepsTitle: 'Port seçimi ve nokta yerleşimi adımları',
-        criticalControlsTitle: 'Bozucu etki ve akış açısı kontrolleri',
-        acceptanceTitle: 'Ölçüm düzlemi uygunluk kriterleri',
-        reportingTitle: 'Kroki, port ve nokta raporlama notları',
-      );
-    }
-    if (text.contains('method 29') || text.contains('14385') || text.contains('ağır metal')) {
-      return const DetailSectionLabels(
-        purposeTitle: 'Metal ölçümünün kapsamı',
-        durationTitle: 'İzokinetik süre ve hedef hacim',
-        flowRateTitle: 'İzokinetik çekiş / toplam hacim',
-        equipmentTitle: 'Metal örnekleme treni ve temiz ekipman',
-        reagentsTitle: 'Absorbanlar, impinger dizilimi ve mL bilgileri',
-        fieldStepsTitle: 'Örnekleme ve geri kazanım fraksiyonları',
-        criticalControlsTitle: 'Kontaminasyon ve blank kontrolleri',
-        acceptanceTitle: 'Metal numunesi kabul kriterleri',
-        reportingTitle: 'Fraksiyon ve blank raporlama notları',
-        mistakesTitle: 'Metal ölçümünde sık yapılan hatalar',
-      );
-    }
-    if (text.contains('1911') || text.contains('26a') || text.contains('hcl') || text.contains('halojen')) {
-      return const DetailSectionLabels(
-        purposeTitle: 'Asit gazı / halojen ölçüm kapsamı',
-        durationTitle: 'Örnekleme süresi ve hedef hacim',
-        flowRateTitle: 'Çekiş debisi / absorpsiyon verimi',
-        equipmentTitle: 'Prob, filtre ve impinger treni',
-        reagentsTitle: 'Absorban çözeltileri ve impinger hacimleri',
-        fieldStepsTitle: 'Saha kurulumu ve numune geri kazanımı',
-        criticalControlsTitle: 'Breakthrough, karışma ve kaçak kontrolleri',
-        acceptanceTitle: 'Asit gazı numunesi kabul kriterleri',
-        reportingTitle: 'Fraksiyon ve çözelti raporlama notları',
-      );
-    }
-    if (text.contains('pm10') || text.contains('pm2.5') || text.contains('12341')) {
-      return const DetailSectionLabels(
-        purposeTitle: 'Ortam havası PM ölçüm kapsamı',
-        durationTitle: '24 saatlik örnekleme süresi',
-        flowRateTitle: 'Qref / Qamb ve hacim hesabı',
-        equipmentTitle: 'PM başlığı, cihaz ve filtre ekipmanı',
-        reagentsTitle: 'Filtre / saha blankı',
-        fieldStepsTitle: 'Cihaz kurulumu ve filtre yönetimi',
-        criticalControlsTitle: 'Debi, filtre ve saha şartı kontrolleri',
-        acceptanceTitle: 'PM10/PM2.5 kabul kriterleri',
-        reportingTitle: 'Hacim, debi ve filtre raporlama notları',
-      );
-    }
-    return const DetailSectionLabels();
-  }
-}
-
-class _AudioNotesBlock extends StatelessWidget {
-  const _AudioNotesBlock({required this.notes});
-
-  final List<AudioNote> notes;
-
-  @override
-  Widget build(BuildContext context) {
-    if (notes.isEmpty) return const SizedBox.shrink();
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.stretch,
-      children: [
-        for (final note in notes) _AudioCard(note: note),
-      ],
-    );
-  }
-}
-
-class _AudioCard extends StatefulWidget {
-  const _AudioCard({required this.note});
-
-  final AudioNote note;
-
-  @override
-  State<_AudioCard> createState() => _AudioCardState();
-}
-
-class _AudioCardState extends State<_AudioCard> {
-  late final AudioPlayer _player;
-  bool _loading = true;
-  String? _errorMessage;
-
-  @override
-  void initState() {
-    super.initState();
-    _player = AudioPlayer();
-    _loadAudio();
-  }
-
-  Future<void> _loadAudio() async {
+  Future<bool> configure() async {
     try {
-      await _player.setAsset(widget.note.audioAsset);
-      if (!mounted) return;
-      setState(() => _loading = false);
-    } catch (_) {
-      if (!mounted) return;
-      setState(() {
-        _loading = false;
-        _errorMessage = 'Ses dosyası APK içinde bulunamadı: ${widget.note.audioAsset}';
+      final t = FlutterTts();
+      final available = await t.isLanguageAvailable('tr-TR');
+      if (available != true && available != 1) {
+        error = 'Telefonda Türkçe ses bulunamadı. Android metin okuma ayarlarından Türkçe sesi yükleyebilirsin.';
+        announce(); return false;
+      }
+      await t.setLanguage('tr-TR');
+      final voices=await t.getVoices;
+      if(voices is List){
+        final local=voices.whereType<Map>().where((v)=>v['locale'].toString().replaceAll('_','-').toLowerCase().startsWith('tr-') && v['network_required']!=true && v['network_required']!='true').toList();
+        if(local.isNotEmpty){local.sort((a,b)=>(int.tryParse(b['quality'].toString())??0).compareTo(int.tryParse(a['quality'].toString())??0));await t.setVoice({'name':local.first['name'].toString(),'locale':local.first['locale'].toString()});}
+      }
+      await t.awaitSpeakCompletion(true);
+      await t.setPitch(1);
+      t.setProgressHandler((text, start, end, word) {
+        if (playing) { offset = (_baseOffset + end).clamp(0, current.length).toInt(); announce(); }
       });
-    }
+      t.setErrorHandler((message) { error = 'Sesli anlatım başlatılamadı: $message'; playing = false; announce(); });
+      _tts = t; return true;
+    } catch (_) { error = 'Ses motoruna ulaşılamadı. Android metin okuma ayarlarını kontrol et.'; announce(); return false; }
   }
-
-  @override
-  void dispose() {
-    _player.dispose();
-    super.dispose();
+  static String pronounce(String s) {
+    const map = {'HNO₃':'nitrik asit', 'H₂O₂':'hidrojen peroksit', 'H₂SO₄':'sülfürik asit',
+      'KMnO₄':'potasyum permanganat','NaOH':'sodyum hidroksit','CdSO₄':'kadmiyum sülfat',
+      'CuSO₄':'bakır sülfat','XAD-2':'iks ad iki','T90':'T doksan','HCl':'hidrojen klorür',
+      'mL':'mililitre','L/dakika':'litre bölü dakika','°C':'derece Celsius','m³':'metreküp',
+      'µg':'mikrogram','mg':'miligram','±':'artı eksi','×':'çarpı',
+      'CO₂':'karbondioksit','SO₂':'kükürt dioksit','NO₂':'azot dioksit','NOx':'azot oksitler','O₂':'oksijen'};
+    for (final e in map.entries) { s=s.replaceAll(e.key, e.value); }
+    return s;
   }
-
-  Future<void> _toggle() async {
-    if (_errorMessage != null || _loading) return;
-    if (_player.playing) {
-      await _player.pause();
-    } else {
-      if (_player.processingState == ProcessingState.completed) {
-        await _player.seek(Duration.zero);
+  Future<void> start(List<String> text) async {
+    await halt(); chunks = text.map(pronounce).expand((value){final parts=<String>[];while(value.length>1800){var end=value.lastIndexOf('. ',1800);if(end<700)end=value.lastIndexOf(' ',1800);if(end<1)end=1800;parts.add(value.substring(0,end));value=value.substring(end).trim();}if(value.isNotEmpty)parts.add(value);return parts;}).toList(); index=0; offset=0;
+    await resume();
+  }
+  Future<void> resume() async {
+    error=null;
+    final session=++_session;preparing=true;announce();
+    final ready=await init();
+    if(_closed || session!=_session) return;
+    preparing=false;
+    if(!ready || chunks.isEmpty){playing=false;announce();return;}
+    if(index>=chunks.length) {index=0; offset=0;}
+    playing=true; paused=false; announce();
+    await _tts!.setSpeechRate(settings.rate);
+    while (!_closed && playing && session==_session && index<chunks.length) {
+      _baseOffset=offset;
+      final phrase=current.substring(offset.clamp(0,current.length).toInt());
+      if(phrase.isNotEmpty) {
+        try { await _tts!.speak(phrase,focus:true); }
+        catch (_) { if(session==_session) {error='Sesli anlatım kesildi. Yeniden oynatabilirsin.';playing=false;announce();} return; }
       }
-      await _player.play();
+      if(session!=_session || !playing || _closed) return;
+      index++; offset=0; announce();
     }
+    if(session==_session && !_closed) {playing=false; paused=false; announce();}
   }
-
-  Future<void> _seekRelative(int seconds) async {
-    if (_errorMessage != null || _loading) return;
-    final duration = _player.duration ?? Duration.zero;
-    final current = _player.position;
-    final targetMs = (current.inMilliseconds + seconds * 1000).clamp(0, duration.inMilliseconds == 0 ? current.inMilliseconds + seconds * 1000 : duration.inMilliseconds);
-    await _player.seek(Duration(milliseconds: targetMs));
+  Future<void> pause() async { _session++; playing=false; paused=true; await _tts?.stop(); announce(); }
+  Future<void> halt() async { _session++; preparing=false;playing=false; paused=false; await _tts?.stop(); announce(); }
+  Future<void> reset() async { await halt();chunks=[];index=0;offset=0;error=null;announce(); }
+  Future<void> skip(int direction) async {
+    final wasPlaying=playing; await halt();
+    index=(index+direction).clamp(0, math.max(0,chunks.length-1)).toInt(); offset=0;
+    paused=true; announce(); if(wasPlaying) unawaited(resume());
   }
-
-  Future<void> _seekTo(double seconds) async {
-    if (_errorMessage != null || _loading) return;
-    await _player.seek(Duration(milliseconds: (seconds * 1000).round()));
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    final colorScheme = Theme.of(context).colorScheme;
-    return Card(
-      elevation: 0,
-      color: colorScheme.primaryContainer.withAlpha(150),
-      margin: const EdgeInsets.only(bottom: 12),
-      child: Padding(
-        padding: const EdgeInsets.all(14),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Row(
-              children: [
-                Icon(Icons.headphones, color: colorScheme.primary),
-                const SizedBox(width: 8),
-                Expanded(child: Text('Sesli Saha Anlatımı', style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w800))),
-              ],
-            ),
-            const SizedBox(height: 8),
-            Text(widget.note.title, style: Theme.of(context).textTheme.titleSmall?.copyWith(fontWeight: FontWeight.w700)),
-            const SizedBox(height: 4),
-            Text('Offline APK içinden çalar. İnternet gerekmez.', style: Theme.of(context).textTheme.bodySmall),
-            if (_loading) ...[
-              const SizedBox(height: 12),
-              const LinearProgressIndicator(),
-            ] else if (_errorMessage != null) ...[
-              const SizedBox(height: 12),
-              Text(_errorMessage!, style: TextStyle(color: colorScheme.error)),
-            ] else ...[
-              const SizedBox(height: 10),
-              StreamBuilder<Duration?>(
-                stream: _player.durationStream,
-                builder: (context, durationSnapshot) {
-                  final duration = durationSnapshot.data ?? _player.duration ?? Duration.zero;
-                  return StreamBuilder<Duration>(
-                    stream: _player.positionStream,
-                    builder: (context, positionSnapshot) {
-                      final rawPosition = positionSnapshot.data ?? _player.position;
-                      final position = duration == Duration.zero ? rawPosition : Duration(milliseconds: min(rawPosition.inMilliseconds, duration.inMilliseconds));
-                      final maxSeconds = max(1, duration.inSeconds).toDouble();
-                      final valueSeconds = min(position.inSeconds.toDouble(), maxSeconds);
-                      return Column(
-                        children: [
-                          Slider(
-                            value: valueSeconds,
-                            min: 0,
-                            max: maxSeconds,
-                            onChanged: (value) => _seekTo(value),
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
-                              Text(_formatDuration(position), style: Theme.of(context).textTheme.bodySmall),
-                              Text(_formatDuration(duration), style: Theme.of(context).textTheme.bodySmall),
-                            ],
-                          ),
-                        ],
-                      );
-                    },
-                  );
-                },
-              ),
-              const SizedBox(height: 6),
-              StreamBuilder<PlayerState>(
-                stream: _player.playerStateStream,
-                builder: (context, snapshot) {
-                  final playing = _player.playing;
-                  final completed = _player.processingState == ProcessingState.completed;
-                  return Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      IconButton.filledTonal(onPressed: () => _seekRelative(-10), icon: const Icon(Icons.replay_10)),
-                      const SizedBox(width: 12),
-                      IconButton.filled(
-                        iconSize: 34,
-                        onPressed: _toggle,
-                        icon: Icon(playing && !completed ? Icons.pause : Icons.play_arrow),
-                      ),
-                      const SizedBox(width: 12),
-                      IconButton.filledTonal(onPressed: () => _seekRelative(10), icon: const Icon(Icons.forward_10)),
-                    ],
-                  );
-                },
-              ),
-            ],
-          ],
-        ),
-      ),
-    );
-  }
-
-  String _formatDuration(Duration duration) {
-    final hours = duration.inHours;
-    final minutes = duration.inMinutes.remainder(60).toString().padLeft(2, '0');
-    final seconds = duration.inSeconds.remainder(60).toString().padLeft(2, '0');
-    if (hours > 0) return '$hours:$minutes:$seconds';
-    return '$minutes:$seconds';
-  }
+  @override void dispose() { _closed=true; _session++; unawaited(_tts?.stop() ?? Future.value()); super.dispose(); }
 }
 
-class _VisualNotesBlock extends StatelessWidget {
-  const _VisualNotesBlock({required this.notes});
+class FieldApp extends StatelessWidget {
+  const FieldApp({super.key, this.content});
+  final Content? content;
+  @override Widget build(BuildContext context) => ListenableBuilder(listenable:settings,
+    builder: (_,__) => MaterialApp(debugShowCheckedModeBanner:false,
+      title:'Emisyon Saha Talimatları',
+      theme: ThemeData(useMaterial3:true, brightness:Brightness.light,
+        colorScheme:ColorScheme.fromSeed(seedColor:teal),
+        appBarTheme:const AppBarTheme(backgroundColor:Color(0xFFF3F6F8),foregroundColor:navy,titleTextStyle:TextStyle(fontFamily:'Roboto',color:navy,fontSize:22,fontWeight:FontWeight.w700)),
+        cardTheme:CardThemeData(color:Colors.white,surfaceTintColor:Colors.transparent,elevation:0,shape:RoundedRectangleBorder(borderRadius:BorderRadius.circular(18),side:const BorderSide(color:Color(0xFFDCE6ED)))),
+        scaffoldBackgroundColor:const Color(0xFFF3F6F8),
+        textTheme:const TextTheme(bodyMedium:TextStyle(fontSize:16,height:1.55),bodyLarge:TextStyle(fontSize:17,height:1.5))),
+      darkTheme:ThemeData(useMaterial3:true,brightness:Brightness.dark,colorScheme:ColorScheme.fromSeed(seedColor:teal,brightness:Brightness.dark),
+        textTheme:const TextTheme(bodyMedium:TextStyle(fontSize:16,height:1.55),bodyLarge:TextStyle(fontSize:17,height:1.5))),
+      themeMode:settings.dark?ThemeMode.dark:ThemeMode.light,
+      builder:(c,child)=>MediaQuery(data:MediaQuery.of(c).copyWith(textScaler:TextScaler.linear(MediaQuery.textScalerOf(c).scale(1)*settings.scale)),child:child!),
+      home:HomePage(content:content)));
+}
+void showAppearance(BuildContext context) => showModalBottomSheet<void>(context:context,
+  isScrollControlled:true, useSafeArea:true, builder:(c)=>ListenableBuilder(listenable:settings,builder:(_,__)=>Padding(
+    padding:const EdgeInsets.all(24), child:Column(mainAxisSize:MainAxisSize.min,crossAxisAlignment:CrossAxisAlignment.start,children:[
+    Text('Okuma ve ses ayarları',style:Theme.of(c).textTheme.titleLarge),const SizedBox(height:16),
+    const Text('Yazı boyutu'),Slider(value:settings.scale,min:1,max:1.4,divisions:4,label:'${(settings.scale*100).round()}%',onChanged:(v)=>unawaited(settings.change(font:v))),
+    const Text('Sesli anlatım hızı'),Slider(value:settings.rate,min:.25,max:.65,divisions:8,onChanged:(v)=>unawaited(settings.change(speech:v))),
+    SwitchListTile(contentPadding:EdgeInsets.zero,title:const Text('Koyu görünüm'),value:settings.dark,onChanged:(v)=>unawaited(settings.change(night:v))),
+    const Text('Anlatım, telefonun Türkçe metin okuma sesini kullanır. Türkçe ses yüklüyse internet gerekmez.',style:TextStyle(fontSize:14)),
+  ]))));
+IconData articleIcon(Article a) => a.domain=='İmisyon'?Icons.air:
+ a.id.startsWith('hiz')?Icons.speed_outlined:a.id.startsWith('toz')?Icons.grain:
+ a.id=='yanma'?Icons.local_fire_department_outlined:Icons.science_outlined;
 
-  final List<VisualNote> notes;
-
-  @override
-  Widget build(BuildContext context) {
-    if (notes.isEmpty) return const SizedBox.shrink();
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.stretch,
-      children: [
-        for (final note in notes)
-          Card(
-            elevation: 0,
-            color: Theme.of(context).colorScheme.tertiaryContainer.withAlpha(120),
-            margin: const EdgeInsets.only(bottom: 12),
-            child: Padding(
-              padding: const EdgeInsets.all(14),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Row(
-                    children: [
-                      Icon(Icons.image_search, size: 18, color: Theme.of(context).colorScheme.primary),
-                      const SizedBox(width: 6),
-                      Expanded(child: Text(note.title, style: Theme.of(context).textTheme.titleSmall?.copyWith(fontWeight: FontWeight.w800))),
-                    ],
-                  ),
-                  const SizedBox(height: 10),
-                  _VisualImage(note: note),
-                  const SizedBox(height: 8),
-                  Text(TurkishUnitText.normalize(note.caption)),
-                  const SizedBox(height: 4),
-                  Text('Görseli büyütmek için dokun veya çift dokun.', style: Theme.of(context).textTheme.bodySmall),
-                ],
-              ),
-            ),
-          ),
-      ],
-    );
-  }
+class HomePage extends StatefulWidget {
+ const HomePage({super.key,this.content});final Content? content;
+ @override State<HomePage> createState()=>_HomeState();
+}
+class _HomeState extends State<HomePage> {
+ late Future<Content> future;final search=TextEditingController(); int tab=0;String domain='Emisyon';
+ @override void initState(){super.initState();future=widget.content==null?Content.load():Future.value(widget.content);}
+ @override void dispose(){search.dispose();super.dispose();}
+ void open(Article a)=>Navigator.of(context).push(MaterialPageRoute<void>(builder:(_)=>DetailPage(article:a)));
+ @override Widget build(BuildContext context)=>Scaffold(
+  appBar:AppBar(title:Text(tab==0?'Ölçüm Talimatları':'Emisyon–İmisyon Eğitimi'),actions:[IconButton(tooltip:'Okuma ve ses ayarları',onPressed:()=>showAppearance(context),icon:const Icon(Icons.tune))]),
+  bottomNavigationBar:NavigationBar(selectedIndex:tab,onDestinationSelected:(i)=>setState((){tab=i;search.clear();}),destinations:const[
+   NavigationDestination(icon:Icon(Icons.fact_check_outlined),selectedIcon:Icon(Icons.fact_check),label:'Talimatlar'),
+   NavigationDestination(icon:Icon(Icons.menu_book_outlined),label:'Eğitim')]),
+  body:FutureBuilder<Content>(future:future,builder:(c,s){
+   if(s.hasError) return Center(child:Column(mainAxisSize:MainAxisSize.min,children:[const Text('İçerik açılamadı.'),TextButton(onPressed:()=>setState(()=>future=Content.load()),child:const Text('Yeniden dene'))]));
+   if(!s.hasData) return const Center(child:CircularProgressIndicator());
+   final data=s.data!;final query=searchKey(search.text.trim());
+   final list=(tab==0?data.manuals:data.training).where((a)=>(tab==1||a.domain==domain)&&(query.isEmpty||a.searchable.contains(query))).toList();
+   return ListView(padding:const EdgeInsets.fromLTRB(16,8,16,24),children:[
+    Text(tab==0?'Sahada adım adım uygulama':'Konuların ayrıntılı anlatımı',style:Theme.of(c).textTheme.bodyMedium),const SizedBox(height:16),
+    TextField(controller:search,onChanged:(_)=>setState((){}),decoration:InputDecoration(hintText:tab==0?'Ölçüm veya parametre ara':'Eğitim konusu ara',prefixIcon:const Icon(Icons.search),suffixIcon:search.text.isEmpty?null:IconButton(tooltip:'Aramayı temizle',onPressed:()=>setState(search.clear),icon:const Icon(Icons.close)),filled:true,border:OutlineInputBorder(borderRadius:BorderRadius.circular(16),borderSide:BorderSide.none))),
+    if(tab==0)...[const SizedBox(height:12),Card(child:ListTile(leading:const Icon(Icons.checklist,color:teal),title:const Text('Ortak Saha Talimatları',style:TextStyle(fontWeight:FontWeight.w700)),trailing:const Icon(Icons.chevron_right),onTap:()=>open(data.common))),const SizedBox(height:12),
+     Row(children:[for(final d in ['Emisyon','İmisyon']) Expanded(child:Padding(padding:const EdgeInsets.symmetric(horizontal:4),child:ChoiceChip(label:SizedBox(width:double.infinity,child:Text(d,textAlign:TextAlign.center)),selected:domain==d,onSelected:(_)=>setState(()=>domain=d),showCheckmark:false)))]),],
+    const SizedBox(height:12),if(list.isEmpty) const Padding(padding:EdgeInsets.all(24),child:Text('Bu aramada sonuç bulunamadı. Parametre adı veya yöntem numarasıyla arayabilirsin.')),
+    for(final a in list) Card(margin:const EdgeInsets.only(bottom:8),child:ListTile(contentPadding:const EdgeInsets.symmetric(horizontal:16,vertical:8),leading:Icon(tab==0?articleIcon(a):Icons.menu_book_outlined,color:teal),title:Text(a.title,style:const TextStyle(fontWeight:FontWeight.w700)),subtitle:Text(a.method),trailing:const Icon(Icons.chevron_right),onTap:()=>open(a))),
+   ]);
+  }));
+}
+class DetailPage extends StatefulWidget {
+ const DetailPage({super.key,required this.article});final Article article;
+ @override State<DetailPage> createState()=>_DetailState();
+}
+class _DetailState extends State<DetailPage> {
+ final narrator=Narrator();int selectedTrain=0;
+ @override void dispose(){narrator.dispose();super.dispose();}
+ @override Widget build(BuildContext c){ final a=widget.article;
+  return Scaffold(appBar:AppBar(title:Text(a.title),actions:[IconButton(tooltip:'Okuma ve ses ayarları',onPressed:()=>showAppearance(c),icon:const Icon(Icons.tune))]),
+   body:ListView(padding:const EdgeInsets.fromLTRB(16,8,16,40),children:[
+    Text(a.method,style:Theme.of(c).textTheme.titleMedium?.copyWith(color:teal)),const SizedBox(height:16),
+    if(a.trains.isNotEmpty) Padding(padding:const EdgeInsets.only(bottom:12),child:Text('${a.trains[selectedTrain].method} • ${a.trains[selectedTrain].sampling}',style:const TextStyle(fontWeight:FontWeight.w700,color:teal))),
+    if(a.essentials.isNotEmpty) Card(child:Padding(padding:const EdgeInsets.all(16),child:Column(crossAxisAlignment:CrossAxisAlignment.start,children:[for(final fact in a.essentials) Padding(padding:const EdgeInsets.only(bottom:8),child:Text(fact,style:const TextStyle(fontWeight:FontWeight.w700)))]))),
+    if(a.filterPlacement!=null) FilterPlacementCard(inside:a.filterPlacement=='inside'),
+    AudioPanel(narrator:narrator,article:a,narration:a.narrationFor(a.trains.isEmpty?null:a.trains[selectedTrain])),
+    if(a.trains.isNotEmpty)...[const SizedBox(height:24),Text('Ölçüm düzeneği',style:Theme.of(c).textTheme.titleLarge?.copyWith(fontWeight:FontWeight.bold)),
+      if(a.trains.length>1) ...[const SizedBox(height:12),DropdownButtonFormField<int>(
+        initialValue:selectedTrain,isExpanded:true,itemHeight:null,
+        decoration:const InputDecoration(labelText:'Uygulama ve tren seçimi',border:OutlineInputBorder()),
+        items:[for(var i=0;i<a.trains.length;i++) DropdownMenuItem(value:i,child:Text(a.trains[i].name,maxLines:2))],
+        onChanged:(i){if(i!=null){unawaited(narrator.reset());setState(()=>selectedTrain=i);}})],
+      TrainCard(key:ValueKey('${a.id}-$selectedTrain'),train:a.trains[selectedTrain],onListen:()=>unawaited(narrator.start(a.trains[selectedTrain].narration)))],
+    if(a.visual=='resin') ...[const SizedBox(height:20),ImageCard(asset:'assets/equipment/resin.webp',title:'Kondenser ve dik XAD-2 kartuşu'),
+     const Padding(padding:EdgeInsets.all(8),child:Text('Gaz girişi kartuşun altında, çıkışı üstündedir. Yan bağlantılar soğutma suyuna aittir.'))],
+    if(a.visual=='settled'||a.visual=='settled-metal') ...[const SizedBox(height:20),SettledCard(metal:a.visual=='settled-metal')],
+    const SizedBox(height:20),
+    for(var i=0;i<a.sections.length;i++) Card(margin:const EdgeInsets.only(bottom:10),clipBehavior:Clip.antiAlias,child:ExpansionTile(
+      key:PageStorageKey('${a.id}-$i'),initiallyExpanded:i==0,maintainState:true,
+      title:Text(a.sections[i].title,style:const TextStyle(fontWeight:FontWeight.w700)),
+      childrenPadding:const EdgeInsets.fromLTRB(16,0,16,16),children:[
+       Align(alignment:Alignment.centerRight,child:TextButton.icon(onPressed:()=>unawaited(narrator.start([a.sections[i].title,...a.sections[i].items])),icon:const Icon(Icons.volume_up_outlined,size:20),label:const Text('Bu bölümü dinle'))),
+       for(var j=0;j<a.sections[i].items.length;j++) Padding(padding:const EdgeInsets.only(bottom:14),child:Row(crossAxisAlignment:CrossAxisAlignment.start,children:[
+        if(a.sections[i].ordered)...[CircleAvatar(radius:15,backgroundColor:teal.withValues(alpha:.12),child:Text('${j+1}',style:const TextStyle(color:teal,fontSize:14,fontWeight:FontWeight.bold))),const SizedBox(width:10)],
+        Expanded(child:Text(a.sections[i].items[j],
+          style:Theme.of(c).textTheme.bodyMedium,
+          softWrap:true)),
+       ])),
+      ])),
+   ]));
+ }
+}
+class AudioPanel extends StatelessWidget {
+ const AudioPanel({super.key,required this.narrator,required this.article,this.narration});final Narrator narrator;final Article article;final List<String>? narration;
+ @override Widget build(BuildContext c)=>ListenableBuilder(listenable:narrator,builder:(_,__)=>Card(child:Padding(padding:const EdgeInsets.all(12),child:Column(crossAxisAlignment:CrossAxisAlignment.start,children:[
+  Row(children:[IconButton.filled(tooltip:narrator.playing?'Duraklat':'Sesli anlatımı oynat',onPressed:narrator.preparing?null:()=>unawaited(narrator.playing?narrator.pause():narrator.paused?narrator.resume():narrator.start(narration??article.narration)),icon:Icon(narrator.playing?Icons.pause:Icons.play_arrow)),const SizedBox(width:10),
+   const Expanded(child:Text('Sesli anlatım',style:TextStyle(fontWeight:FontWeight.w700))),
+   IconButton(tooltip:'Önceki madde',onPressed:narrator.chunks.isEmpty?null:()=>unawaited(narrator.skip(-1)),icon:const Icon(Icons.skip_previous)),
+   IconButton(tooltip:'Sonraki madde',onPressed:narrator.chunks.isEmpty?null:()=>unawaited(narrator.skip(1)),icon:const Icon(Icons.skip_next)),
+   IconButton(tooltip:'Anlatımı durdur',onPressed:narrator.playing||narrator.paused?()=>unawaited(narrator.halt()):null,icon:const Icon(Icons.stop)),]),
+  const SizedBox(height:8),LinearProgressIndicator(value:narrator.progress),
+  if(narrator.chunks.isNotEmpty) Padding(padding:const EdgeInsets.only(top:8),child:Text('${math.min(narrator.index+1,narrator.chunks.length)} / ${narrator.chunks.length} madde',style:Theme.of(c).textTheme.bodySmall)),
+  if(narrator.error!=null) Padding(padding:const EdgeInsets.only(top:8),child:Text(narrator.error!,style:TextStyle(color:Theme.of(c).colorScheme.error))),
+ ]))));
 }
 
-class _VisualImage extends StatelessWidget {
-  const _VisualImage({required this.note});
-
-  final VisualNote note;
-
-  @override
-  Widget build(BuildContext context) {
-    final imageWidget = _buildImage(context);
-    return GestureDetector(
-      onTap: () => _open(context),
-      onDoubleTap: () => _open(context),
-      child: ClipRRect(borderRadius: BorderRadius.circular(12), child: imageWidget),
-    );
+class TrainCard extends StatelessWidget {
+ const TrainCard({super.key,required this.train,this.onListen});final Train train;final VoidCallback? onListen;
+ @override Widget build(BuildContext c)=>Card(margin:const EdgeInsets.only(top:12),child:Padding(padding:const EdgeInsets.all(12),child:Column(crossAxisAlignment:CrossAxisAlignment.start,children:[
+  Text(train.name,style:Theme.of(c).textTheme.titleMedium?.copyWith(fontWeight:FontWeight.w700)),const SizedBox(height:8),
+  Text(train.condition),const SizedBox(height:8),
+  Text(train.flow,style:const TextStyle(color:teal,fontWeight:FontWeight.w700)),
+  for(final control in train.controls) Padding(padding:const EdgeInsets.symmetric(vertical:8),child:Text(control,style:const TextStyle(fontWeight:FontWeight.w700))),
+  Text(train.vesselType,style:Theme.of(c).textTheme.bodySmall),const SizedBox(height:12),
+  if(train.branch) const BranchView(),
+  Text(train.inlet,style:Theme.of(c).textTheme.bodySmall),const SizedBox(height:8),
+  TextButton.icon(onPressed:()=>Navigator.push(c,MaterialPageRoute<void>(builder:(_)=>TrainFullScreen(train:train))),icon:const Icon(Icons.open_in_full),label:const Text('Tam ekran • Büyüt')),
+  SizedBox(height:620,child:SingleChildScrollView(scrollDirection:Axis.horizontal,child:ColoredBox(color:Colors.white,child:MediaQuery(data:MediaQuery.of(c).copyWith(textScaler:TextScaler.noScaling),child:TrainView(train:train))))),
+  if(train.note.isNotEmpty) Text(train.note),
+  if(train.steps.isNotEmpty)...[const SizedBox(height:16),Text('Bu uygulamanın özel adımları',style:Theme.of(c).textTheme.titleMedium),
+   if(onListen!=null) TextButton.icon(onPressed:onListen,icon:const Icon(Icons.volume_up_outlined),label:const Text('Seçili uygulamayı dinle')),
+   for(var i=0;i<train.steps.length;i++) Padding(padding:const EdgeInsets.only(top:10),child:Row(crossAxisAlignment:CrossAxisAlignment.start,children:[
+    Text('${i+1}. ',style:const TextStyle(color:teal,fontWeight:FontWeight.bold)),Expanded(child:Text(train.steps[i]))]))],
+ ])));
+}
+class BranchView extends StatelessWidget {
+ const BranchView({super.key});
+ @override Widget build(BuildContext c)=>Container(margin:const EdgeInsets.only(bottom:12),padding:const EdgeInsets.all(12),decoration:BoxDecoration(color:teal.withValues(alpha:.08),borderRadius:BorderRadius.circular(12)),child:Column(crossAxisAlignment:CrossAxisAlignment.start,children:[
+  const Text('Filtre sonrası T bağlantısı',style:TextStyle(fontWeight:FontWeight.w700)),
+  IntrinsicHeight(child:Row(crossAxisAlignment:CrossAxisAlignment.stretch,children:[SizedBox(width:60,child:CustomPaint(painter:BranchPainter())),const Expanded(child:Column(mainAxisSize:MainAxisSize.min,crossAxisAlignment:CrossAxisAlignment.start,children:[Text('Ana akış • İzokinetik'),SizedBox(height:16),Text('Yan akış • Bu trene')]))])),
+ ]));
+}
+class BranchPainter extends CustomPainter {
+ @override void paint(Canvas c,Size s){final p=Paint()..color=teal..strokeWidth=3;final top=s.height*.22,bottom=s.height*.78;c.drawLine(Offset(0,top),Offset(52,top),p);c.drawLine(Offset(35,top),Offset(35,bottom),p);c.drawLine(Offset(35,bottom),Offset(52,bottom),p);for(final y in [top,bottom]){c.drawLine(Offset(52,y),Offset(46,y-5),p);c.drawLine(Offset(52,y),Offset(46,y+5),p);}}
+ @override bool shouldRepaint(BranchPainter old)=>false;
+}
+class TrainView extends StatelessWidget {
+ const TrainView({super.key,required this.train});final Train train;
+ @override Widget build(BuildContext c)=>SizedBox(width:train.canvasWidth,height:620,child:Column(crossAxisAlignment:CrossAxisAlignment.start,children:[
+  SizedBox(width:math.min(train.canvasWidth,MediaQuery.sizeOf(c).width-56),child:Padding(padding:const EdgeInsets.fromLTRB(12,10,12,8),child:Column(crossAxisAlignment:CrossAxisAlignment.start,children:[
+   Text(train.method,style:const TextStyle(color:navy,fontSize:20,fontWeight:FontWeight.bold)),
+   Text(train.sampling,style:const TextStyle(color:teal,fontSize:20,fontWeight:FontWeight.bold)),
+   Text(train.flow,style:const TextStyle(color:navy,fontSize:17)),
+  ]))),
+  if(train.visual=='resin') Expanded(child:Image.asset('assets/equipment/resin.webp',width:train.canvasWidth,fit:BoxFit.contain,semanticLabel:'Dik XAD-2: gaz girişi alttan, çıkış üstten'))
+  else Expanded(child:Stack(children:[
+   Positioned(top:train.vesselType.toLowerCase().contains('cüce')?48:10,left:0,right:0,child:CustomPaint(size:Size(train.canvasWidth,20),painter:ConnectionPainter(train.bottles.length,train.filterAfter,train.vesselType.toLowerCase().contains('cüce')))),
+   Row(crossAxisAlignment:CrossAxisAlignment.start,children:[for(var i=0;i<train.bottles.length;i++) ...[
+    SizedBox(width:190,child:Column(children:[
+     SizedBox(height:270,child:Center(child:Image.asset('assets/equipment/${train.bottles[i].tip.contains('Standart')?'standard':train.bottles[i].kind}.webp',width:train.vesselType.toLowerCase().contains('cüce')?125:190,height:train.vesselType.toLowerCase().contains('cüce')?190:270,fit:BoxFit.contain,semanticLabel:'${i+1}. şişe: ${train.bottles[i].content}, ${train.bottles[i].amount}, ${train.bottles[i].strength}'))),
+     Text('${i+1}. şişe',style:const TextStyle(color:teal,fontSize:16,fontWeight:FontWeight.w700)),
+     Text(train.bottles[i].content,textAlign:TextAlign.center,style:const TextStyle(color:navy,fontSize:19,fontWeight:FontWeight.w700)),
+     Text(train.bottles[i].amount,textAlign:TextAlign.center,style:const TextStyle(color:teal,fontSize:19,fontWeight:FontWeight.bold)),
+     if(train.bottles[i].strength.isNotEmpty) Text(train.bottles[i].strength,textAlign:TextAlign.center,style:const TextStyle(color:navy,fontSize:16)),
+     Text(train.bottles[i].tip,textAlign:TextAlign.center,style:const TextStyle(color:navy,fontSize:14)),
+    ])),
+    if(train.filterAfter==i+1) const SizedBox(width:100,child:Padding(padding:EdgeInsets.only(top:6),child:Column(children:[Icon(Icons.filter_alt_outlined,color:teal,size:36),Text('Filtre',style:TextStyle(color:navy,fontSize:17,fontWeight:FontWeight.bold))]))),
+   ]]),
+  ])),
+ ]));
+}
+class ConnectionPainter extends CustomPainter {
+ ConnectionPainter(this.count,this.filterAfter,this.compact);final int count,filterAfter;final bool compact;
+ @override void paint(Canvas c,Size size){final p=Paint()..color=teal..strokeWidth=3;
+  for(var i=0;i<count-1;i++){final x=(compact?145.0:167.0)+i*190+(filterAfter>0 && i>=filterAfter?100:0);final gap=(compact?90.0:46.0)+(filterAfter==i+1?100:0);c.drawLine(Offset(x,0),Offset(x+gap,0),p);c.drawLine(Offset(x+gap-16,0),Offset(x+gap-23,-5),p);c.drawLine(Offset(x+gap-16,0),Offset(x+gap-23,5),p);}}
+ @override bool shouldRepaint(ConnectionPainter old)=>count!=old.count || filterAfter!=old.filterAfter || compact!=old.compact;
+}
+class TrainFullScreen extends StatefulWidget {
+ const TrainFullScreen({super.key,required this.train});final Train train;
+ @override State<TrainFullScreen> createState()=>_TrainFullState();
+}
+class _TrainFullState extends State<TrainFullScreen> {
+ final controller=TransformationController();double oldWidth=0;
+ @override void didChangeDependencies(){super.didChangeDependencies();final width=MediaQuery.sizeOf(context).width;if(width!=oldWidth){oldWidth=width;final scale=(width/widget.train.canvasWidth).clamp(.2,1).toDouble();controller.value=Matrix4.diagonal3Values(scale,scale,1);}}
+ @override void dispose(){controller.dispose();super.dispose();}
+ @override Widget build(BuildContext c){final t=widget.train;return Scaffold(backgroundColor:Colors.white,appBar:AppBar(title:Text(t.name)),body:Column(children:[
+  Padding(padding:const EdgeInsets.all(12),child:Text('${t.method} • ${t.sampling}\n${t.flow}',style:const TextStyle(color:navy,fontSize:16))),
+  const Text('Soldan sağa gaz akışı • Kaydır ve iki parmakla büyüt',style:TextStyle(color:navy,fontSize:13)),
+  Expanded(child:InteractiveViewer(transformationController:controller,constrained:false,minScale:.2,maxScale:3,child:ColoredBox(color:Colors.white,child:MediaQuery(data:MediaQuery.of(c).copyWith(textScaler:TextScaler.noScaling),child:TrainView(train:t))))),
+  Flexible(child:SingleChildScrollView(padding:const EdgeInsets.all(16),child:Column(crossAxisAlignment:CrossAxisAlignment.start,children:[
+   Text(t.vesselType,style:const TextStyle(color:navy,fontSize:16)),
+   for(var i=0;i<t.bottles.length;i++) Text('${i+1}. ${t.bottles[i].content} — ${t.bottles[i].amount}${t.bottles[i].strength.isEmpty?'':' • ${t.bottles[i].strength}'} • ${t.bottles[i].tip}',style:const TextStyle(color:navy,fontSize:18,height:1.5)),
+   if(t.filterAfter>0)Text('Filtre: ${t.filterAfter}. şişeden sonra.',style:const TextStyle(color:teal,fontSize:18)),
+   if(t.note.isNotEmpty)Text(t.note,style:const TextStyle(color:navy,fontSize:16)),
+  ]))),
+ ]));}
+}
+class ImageCard extends StatelessWidget {
+ const ImageCard({super.key,required this.asset,required this.title});final String asset,title;
+ @override Widget build(BuildContext c)=>Card(clipBehavior:Clip.antiAlias,child:Column(children:[
+  Image.asset(asset,semanticLabel:title),TextButton.icon(onPressed:()=>Navigator.push(c,MaterialPageRoute<void>(builder:(_)=>Scaffold(backgroundColor:Colors.white,appBar:AppBar(title:Text(title)),body:InteractiveViewer(minScale:1,maxScale:5,child:Center(child:Image.asset(asset)))))),icon:const Icon(Icons.open_in_full),label:const Text('Tam ekran • Büyüt')),
+ ]));
+}
+class FilterPlacementCard extends StatelessWidget {
+ const FilterPlacementCard({super.key,required this.inside});
+ final bool inside;
+ @override Widget build(BuildContext c)=>Card(child:Padding(padding:const EdgeInsets.all(16),child:Column(children:[
+ Text(inside?'EPA 17 • Baca içi filtre':'EPA 5 • Baca dışı filtre',style:const TextStyle(fontWeight:FontWeight.bold)),
+ const SizedBox(height:12),AspectRatio(aspectRatio:1.65,child:CustomPaint(painter:FilterPlacementPainter(inside))),
+ Text(inside?'Nozul → baca içinde filtre → uzatma → nem treni':'Nozul → ısıtmalı prob → dışarıda ısıtmalı filtre → nem treni',textAlign:TextAlign.center),
+ ])));
+}
+class FilterPlacementPainter extends CustomPainter {
+ FilterPlacementPainter(this.inside);final bool inside;
+ @override void paint(Canvas c,Size s){
+ final w=s.width,h=s.height;final line=Paint()..color=teal..strokeWidth=4;
+ c.drawRect(Rect.fromLTWH(0,0,w*.48,h),Paint()..color=const Color(0xFFE4EFF3));
+ c.drawRect(Rect.fromLTWH(w*.48,0,w*.04,h),Paint()..color=const Color(0xFF8296A2));
+ void text(String value,double x,double y,double width){final t=TextPainter(text:TextSpan(text:value,style:const TextStyle(color:navy,fontSize:14,fontWeight:FontWeight.bold)),textDirection:TextDirection.ltr)..layout(maxWidth:width);t.paint(c,Offset(x,y));}
+ text('BACA İÇİ',w*.03,8,w*.43);text('BACA DIŞI',w*.55,8,w*.44);
+ c.drawLine(Offset(w*.12,h*.52),Offset(w*.94,h*.52),line);
+ c.drawLine(Offset(w*.94,h*.52),Offset(w*.89,h*.47),line);c.drawLine(Offset(w*.94,h*.52),Offset(w*.89,h*.57),line);
+ final x=inside?w*.30:w*.72;
+ c.drawRRect(RRect.fromRectAndRadius(Rect.fromCenter(center:Offset(x,h*.52),width:w*.14,height:h*.26),const Radius.circular(6)),Paint()..color=const Color(0xFFF0C67B));
+ c.drawLine(Offset(x,h*.42),Offset(x,h*.62),Paint()..color=navy..strokeWidth=4);
+ text('FİLTRE',x-w*.10,h*.70,w*.25);
+ text(inside?'Baca gazı sıcaklığı':'Isıtmalı tutucu',inside?w*.04:w*.55,h*.85,w*.43);
+ }
+ @override bool shouldRepaint(covariant FilterPlacementPainter old)=>old.inside!=inside;
+}
+class SettledCard extends StatelessWidget {
+ const SettledCard({super.key,this.metal=false});
+ final bool metal;
+ @override Widget build(BuildContext c)=>Card(child:Padding(padding:const EdgeInsets.all(16),child:Column(children:[
+  const Text('Yönlü çöken toz toplama',style:TextStyle(fontWeight:FontWeight.w700)),const SizedBox(height:16),
+  AspectRatio(aspectRatio:1,child:CustomPaint(painter:SettledPainter())),
+  Text(metal?'Metal analizi: başlangıç kimyası analiz planına göre':'Her toplama kabı: 10 mL 0,02 N CuSO₄',textAlign:TextAlign.center,style:TextStyle(color:teal,fontWeight:FontWeight.w700,fontSize:18)),
+  const SizedBox(height:8),const Text('A kabı işletmeye bakar. Yönler ve başlık alanı cihazın doğrulanmış düzenine göre kaydedilir.'),
+ ])));
+}
+class SettledPainter extends CustomPainter {
+ void label(Canvas c,String s,Offset p,double width,{Color color=navy,double font=16}){
+  final t=TextPainter(text:TextSpan(text:s,style:TextStyle(color:color,fontSize:font,fontWeight:FontWeight.bold)),textDirection:TextDirection.ltr)..layout(maxWidth:width);t.paint(c,p);
+ }
+ @override void paint(Canvas c,Size s){
+  final w=s.width;final metal=Paint()..shader=const LinearGradient(colors:[Color(0xFF6C8290),Color(0xFFE2EAF0),Color(0xFF7D929F)]).createShader(Rect.fromLTWH(w*.43,0,w*.14,s.height));
+  c.drawRRect(RRect.fromRectAndRadius(Rect.fromLTWH(w*.46,w*.39,w*.07,w*.53),const Radius.circular(4)),metal);
+  c.drawLine(Offset(w*.18,w*.5),Offset(w*.82,w*.5),Paint()..color=navy..strokeWidth=8);
+  c.drawLine(Offset(w*.5,w*.18),Offset(w*.5,w*.72),Paint()..color=navy..strokeWidth=7);
+  for(final e in [('A',.50,.18),('B',.79,.45),('C',.50,.68),('D',.21,.45)]){
+   final x=w*e.$2,y=w*e.$3;final rect=Rect.fromCenter(center:Offset(x,y+20),width:w*.17,height:w*.20);
+   c.drawRRect(RRect.fromRectAndRadius(rect,const Radius.circular(10)),Paint()..color=const Color(0xFFDDEFF5));
+   c.drawRRect(RRect.fromRectAndRadius(rect,const Radius.circular(10)),Paint()..color=const Color(0xFF6F9BAD)..style=PaintingStyle.stroke..strokeWidth=2);
+   final f=Path()..moveTo(x-w*.12,y-w*.12)..lineTo(x+w*.12,y-w*.12)..lineTo(x+w*.035,y+w*.01)..lineTo(x-w*.035,y+w*.01)..close();c.drawPath(f,metal);
+   label(c,e.$1,Offset(x-6,y+20),30,font:18);
   }
-
-  Widget _buildImage(BuildContext context) {
-    if (note.imageAsset.trim().isNotEmpty) {
-      return Image.asset(note.imageAsset, fit: BoxFit.contain, width: double.infinity, errorBuilder: (context, error, stackTrace) => _MissingVisualBox(path: note.imageAsset));
-    }
-    if (note.imageBase64.trim().isNotEmpty) {
-      final bytes = _tryDecodeBase64(note.imageBase64);
-      if (bytes != null) return Image.memory(bytes, fit: BoxFit.contain, width: double.infinity);
-    }
-    return const _MissingVisualBox(path: 'Görsel verisi yok');
-  }
-
-  void _open(BuildContext context) => Navigator.of(context).push(MaterialPageRoute(builder: (_) => ImageViewerPage(note: note)));
-
-  Uint8List? _tryDecodeBase64(String value) {
-    try {
-      return base64Decode(value);
-    } catch (_) {
-      return null;
-    }
-  }
+  label(c,'İŞLETME YÖNÜ',Offset(w*.28,0),w*.6,color:teal,font:15);
+  c.drawLine(Offset(w*.5,w*.07),Offset(w*.5,w*.13),Paint()..color=teal..strokeWidth=3);
+  c.drawLine(Offset(w*.23,w*.93),Offset(w*.77,w*.93),Paint()..color=navy..strokeWidth=5);
+ }
+ @override bool shouldRepaint(SettledPainter old)=>false;
 }
 
-class ImageViewerPage extends StatelessWidget {
-  const ImageViewerPage({super.key, required this.note});
-
-  final VisualNote note;
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.black,
-      appBar: AppBar(backgroundColor: Colors.black, foregroundColor: Colors.white, title: Text(note.title, maxLines: 1, overflow: TextOverflow.ellipsis)),
-      body: SafeArea(
-        child: Column(
-          children: [
-            Expanded(child: InteractiveViewer(minScale: 0.8, maxScale: 6, child: Center(child: _viewerImage()))),
-            Padding(padding: const EdgeInsets.all(12), child: Text(TurkishUnitText.normalize(note.caption), style: const TextStyle(color: Colors.white70), textAlign: TextAlign.center)),
-          ],
-        ),
-      ),
-    );
-  }
-
-  Widget _viewerImage() {
-    if (note.imageAsset.trim().isNotEmpty) return Image.asset(note.imageAsset, fit: BoxFit.contain);
-    if (note.imageBase64.trim().isNotEmpty) {
-      try {
-        return Image.memory(base64Decode(note.imageBase64), fit: BoxFit.contain);
-      } catch (_) {
-        return const Text('Görsel açılamadı.', style: TextStyle(color: Colors.white));
-      }
-    }
-    return const Text('Görsel yok.', style: TextStyle(color: Colors.white));
-  }
-}
-
-class _MissingVisualBox extends StatelessWidget {
-  const _MissingVisualBox({required this.path});
-
-  final String path;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      width: double.infinity,
-      padding: const EdgeInsets.all(14),
-      decoration: BoxDecoration(borderRadius: BorderRadius.circular(12), color: Theme.of(context).colorScheme.errorContainer),
-      child: Text('Görsel APK içinde bulunamadı. Dosya yolu: $path', style: Theme.of(context).textTheme.bodySmall),
-    );
-  }
-}
-
-class _UnitInfoBlock extends StatelessWidget {
-  const _UnitInfoBlock();
-
-  @override
-  Widget build(BuildContext context) {
-    return Card(
-      elevation: 0,
-      color: Theme.of(context).colorScheme.secondaryContainer,
-      margin: const EdgeInsets.only(bottom: 12),
-      child: const Padding(
-        padding: EdgeInsets.all(14),
-        child: Text('Birim notu: Amerikan kaynaklı scf/scm/cfm ifadeleri Türkiye saha kullanımına uygun Nm³, m³/dk ve L/dk karşılıklarıyla değerlendirilir.'),
-      ),
-    );
-  }
-}
-
-class _InfoBlock extends StatelessWidget {
-  const _InfoBlock({required this.title, required this.body});
-
-  final String title;
-  final String body;
-
-  @override
-  Widget build(BuildContext context) {
-    final displayBody = TurkishUnitText.normalize(body);
-    if (displayBody.trim().isEmpty) return const SizedBox.shrink();
-    return Card(
-      elevation: 0,
-      color: Theme.of(context).colorScheme.surfaceContainerHighest,
-      margin: const EdgeInsets.only(bottom: 12),
-      child: Padding(
-        padding: const EdgeInsets.all(14),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(title, style: Theme.of(context).textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w800)),
-            const SizedBox(height: 8),
-            Text(displayBody),
-          ],
-        ),
-      ),
-    );
-  }
-}
-
-class _MiniChip extends StatelessWidget {
-  const _MiniChip({required this.label});
-
-  final String label;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 9, vertical: 5),
-      decoration: BoxDecoration(color: Theme.of(context).colorScheme.primaryContainer, borderRadius: BorderRadius.circular(999)),
-      child: Text(TurkishUnitText.normalize(label), style: Theme.of(context).textTheme.labelSmall),
-    );
-  }
-}
-
-class StandardsRepository {
-  static const _standardAssetFiles = <String>['assets/standards.json', 'assets/standards_extra.json', 'assets/standards_overrides.json'];
-  static const _educationAssetFiles = <String>['assets/education_notes.json', 'assets/education_notes_extra.json'];
-  static const _visualAssetFiles = <String>['assets/visual_notes.json', 'assets/visual_notes_extra.json'];
-  static const _audioAssetFile = 'assets/standard_audio.json';
-
-  static Future<List<StandardItem>> loadItems() async {
-    final decoded = <Map<String, dynamic>>[];
-    for (final path in _standardAssetFiles) {
-      final list = await _loadListAsset(path);
-      for (final item in list) {
-        if (item is Map<String, dynamic>) decoded.add(item);
-      }
-    }
-
-    final notesByKey = await _loadEducationNotes();
-    final visualsByKey = await _loadVisualNotes();
-    final audioByKey = await _loadAudioNotes();
-    final itemByKey = <String, Map<String, dynamic>>{};
-    final codeToKey = <String, String>{};
-    final titleToKey = <String, String>{};
-
-    for (final json in decoded) {
-      final code = json['code'] as String? ?? '';
-      final title = json['title'] as String? ?? '';
-      final codeKey = TurkishUnitText.key(code);
-      final titleKey = TurkishUnitText.key(title);
-      var key = '';
-      if (codeKey.isNotEmpty && codeToKey.containsKey(codeKey)) {
-        key = codeToKey[codeKey]!;
-      } else if (titleKey.isNotEmpty && titleToKey.containsKey(titleKey)) {
-        key = titleToKey[titleKey]!;
-      } else {
-        key = codeKey.isNotEmpty ? codeKey : titleKey;
-      }
-      if (key.isEmpty) continue;
-      itemByKey[key] = json;
-      if (codeKey.isNotEmpty) codeToKey[codeKey] = key;
-      if (titleKey.isNotEmpty) titleToKey[titleKey] = key;
-    }
-
-    final items = <StandardItem>[];
-    for (final json in itemByKey.values) {
-      final code = json['code'] as String? ?? '';
-      final title = json['title'] as String? ?? '';
-      final keys = <String>{TurkishUnitText.key(code), TurkishUnitText.key(title)};
-      final notes = _collectStrings(notesByKey, keys);
-      final visuals = _collectVisuals(visualsByKey, keys);
-      final audioNotes = _collectAudio(audioByKey, keys);
-      items.add(StandardItem.fromJson(json, educationNotes: notes, visualNotes: visuals, audioNotes: audioNotes));
-    }
-
-    items.sort((a, b) => a.title.compareTo(b.title));
-    return items;
-  }
-
-  static List<String> _collectStrings(Map<String, List<String>> index, Set<String> keys) {
-    final result = <String>[];
-    for (final key in keys) {
-      if (key.isEmpty) continue;
-      result.addAll(index[key] ?? const <String>[]);
-    }
-    return result;
-  }
-
-  static List<VisualNote> _collectVisuals(Map<String, List<VisualNote>> index, Set<String> keys) {
-    final result = <VisualNote>[];
-    final seen = <String>{};
-    for (final key in keys) {
-      if (key.isEmpty) continue;
-      for (final note in index[key] ?? const <VisualNote>[]) {
-        final noteKey = '${note.title}|${note.imageAsset}|${note.imageBase64.hashCode}|${note.placement}';
-        if (seen.add(noteKey)) result.add(note);
-      }
-    }
-    return result;
-  }
-
-  static List<AudioNote> _collectAudio(Map<String, List<AudioNote>> index, Set<String> keys) {
-    final result = <AudioNote>[];
-    final seen = <String>{};
-    for (final key in keys) {
-      if (key.isEmpty) continue;
-      for (final note in index[key] ?? const <AudioNote>[]) {
-        if (seen.add(note.audioAsset)) result.add(note);
-      }
-    }
-    result.sort((a, b) => a.sortOrder.compareTo(b.sortOrder));
-    return result;
-  }
-
-  static Future<List<dynamic>> _loadListAsset(String path) async {
-    try {
-      final raw = await rootBundle.loadString(path);
-      final decoded = jsonDecode(raw);
-      if (decoded is List<dynamic>) return decoded;
-    } catch (_) {}
-    return const <dynamic>[];
-  }
-
-  static Future<Map<String, dynamic>> _loadMapAsset(String path) async {
-    try {
-      final raw = await rootBundle.loadString(path);
-      final decoded = jsonDecode(raw);
-      if (decoded is Map<String, dynamic>) return decoded;
-    } catch (_) {}
-    return const <String, dynamic>{};
-  }
-
-  static Future<Map<String, List<String>>> _loadEducationNotes() async {
-    final result = <String, List<String>>{};
-    for (final path in _educationAssetFiles) {
-      final decoded = await _loadMapAsset(path);
-      for (final entry in decoded.entries) {
-        final key = TurkishUnitText.key(entry.key);
-        result.putIfAbsent(key, () => <String>[]).addAll(StandardItem.listFromDynamic(entry.value));
-      }
-    }
-    return result;
-  }
-
-  static Future<Map<String, List<VisualNote>>> _loadVisualNotes() async {
-    final result = <String, List<VisualNote>>{};
-    for (final path in _visualAssetFiles) {
-      final decoded = await _loadListAsset(path);
-      for (final entry in decoded) {
-        if (entry is! Map<String, dynamic>) continue;
-        final standards = StandardItem.listFromDynamic(entry['standards']);
-        final note = VisualNote.fromJson(entry);
-        for (final standard in standards) {
-          final key = TurkishUnitText.key(standard);
-          if (key.isEmpty) continue;
-          result.putIfAbsent(key, () => <VisualNote>[]).add(note);
-        }
-      }
-    }
-    return result;
-  }
-
-  static Future<Map<String, List<AudioNote>>> _loadAudioNotes() async {
-    final result = <String, List<AudioNote>>{};
-    final decoded = await _loadListAsset(_audioAssetFile);
-    for (final entry in decoded) {
-      if (entry is! Map<String, dynamic>) continue;
-      final standards = StandardItem.listFromDynamic(entry['standards']);
-      final note = AudioNote.fromJson(entry);
-      if (note.audioAsset.trim().isEmpty) continue;
-      for (final standard in standards) {
-        final key = TurkishUnitText.key(standard);
-        if (key.isEmpty) continue;
-        result.putIfAbsent(key, () => <AudioNote>[]).add(note);
-      }
-    }
-    for (final notes in result.values) {
-      notes.sort((a, b) => a.sortOrder.compareTo(b.sortOrder));
-    }
-    return result;
-  }
-}
-
-class StandardItem {
-  const StandardItem({
-    required this.title,
-    required this.code,
-    required this.category,
-    required this.subgroup,
-    required this.keywords,
-    required this.purpose,
-    required this.duration,
-    required this.flowRate,
-    required this.equipment,
-    required this.reagents,
-    required this.fieldSteps,
-    required this.criticalControls,
-    required this.acceptance,
-    required this.reporting,
-    required this.mistakes,
-    required this.educationNotes,
-    required this.visualNotes,
-    required this.audioNotes,
-  });
-
-  final String title;
-  final String code;
-  final String category;
-  final String subgroup;
-  final List<String> keywords;
-  final String purpose;
-  final String duration;
-  final String flowRate;
-  final List<String> equipment;
-  final List<String> reagents;
-  final List<String> fieldSteps;
-  final List<String> criticalControls;
-  final List<String> acceptance;
-  final List<String> reporting;
-  final List<String> mistakes;
-  final List<String> educationNotes;
-  final List<VisualNote> visualNotes;
-  final List<AudioNote> audioNotes;
-
-  String get searchText => TurkishUnitText.normalize([
-        title,
-        code,
-        category,
-        subgroup,
-        purpose,
-        duration,
-        flowRate,
-        ...keywords,
-        ...equipment,
-        ...reagents,
-        ...fieldSteps,
-        ...criticalControls,
-        ...acceptance,
-        ...reporting,
-        ...mistakes,
-        ...educationNotes,
-        ...visualNotes.map((note) => '${note.title} ${note.caption}'),
-        ...audioNotes.map((note) => '${note.title} ${note.audioAsset}'),
-      ].join(' ')).toLowerCase();
-
-  factory StandardItem.fromJson(
-    Map<String, dynamic> json, {
-    List<String> educationNotes = const <String>[],
-    List<VisualNote> visualNotes = const <VisualNote>[],
-    List<AudioNote> audioNotes = const <AudioNote>[],
-  }) {
-    return StandardItem(
-      title: json['title'] as String? ?? '',
-      code: json['code'] as String? ?? '',
-      category: json['category'] as String? ?? '',
-      subgroup: json['subgroup'] as String? ?? '',
-      keywords: listFromDynamic(json['keywords']),
-      purpose: json['purpose'] as String? ?? '',
-      duration: json['duration'] as String? ?? '',
-      flowRate: json['flowRate'] as String? ?? '',
-      equipment: listFromDynamic(json['equipment']),
-      reagents: listFromDynamic(json['reagents']),
-      fieldSteps: listFromDynamic(json['fieldSteps']),
-      criticalControls: listFromDynamic(json['criticalControls']),
-      acceptance: listFromDynamic(json['acceptance']),
-      reporting: listFromDynamic(json['reporting']),
-      mistakes: listFromDynamic(json['mistakes']),
-      educationNotes: educationNotes,
-      visualNotes: visualNotes,
-      audioNotes: audioNotes,
-    );
-  }
-
-  static List<String> listFromDynamic(dynamic value) {
-    if (value is! List) return const <String>[];
-    return value.map((item) => item.toString()).toList();
-  }
-}
-
-class VisualNote {
-  const VisualNote({required this.title, required this.caption, required this.imageBase64, required this.imageAsset, required this.placement});
-
-  final String title;
-  final String caption;
-  final String imageBase64;
-  final String imageAsset;
-  final String placement;
-
-  factory VisualNote.fromJson(Map<String, dynamic> json) {
-    return VisualNote(
-      title: json['title'] as String? ?? '',
-      caption: json['caption'] as String? ?? '',
-      imageBase64: json['imageBase64'] as String? ?? '',
-      imageAsset: json['imageAsset'] as String? ?? '',
-      placement: json['placement'] as String? ?? 'general',
-    );
-  }
-}
-
-class AudioNote {
-  const AudioNote({required this.title, required this.audioAsset, required this.sortOrder});
-
-  final String title;
-  final String audioAsset;
-  final int sortOrder;
-
-  factory AudioNote.fromJson(Map<String, dynamic> json) {
-    final rawSort = json['sortOrder'];
-    return AudioNote(
-      title: json['title'] as String? ?? 'Sesli Saha Anlatımı',
-      audioAsset: json['audioAsset'] as String? ?? '',
-      sortOrder: rawSort is int ? rawSort : int.tryParse(rawSort?.toString() ?? '') ?? 999,
-    );
-  }
-}
-
-class TurkishUnitText {
-  const TurkishUnitText._();
-
-  static String key(String input) => normalize(input).toLowerCase().trim();
-
-  static String normalize(String input) {
-    if (input.isEmpty) return input;
-    var value = input;
-    value = value.replaceAll(RegExp(r'0[,.]60\s*scm\s*/\s*21\s*scf', caseSensitive: false), '0,60 Nm³');
-    value = value.replaceAll(RegExp(r'21\s*scf', caseSensitive: false), '0,60 Nm³');
-    value = value.replaceAll(RegExp(r'0[,.]75\s*cfm\s*/\s*(yaklaşık\s*)?0[,.]021\s*m3\s*/\s*dk', caseSensitive: false), 'yaklaşık 21 L/dk (0,021 m³/dk)');
-    value = value.replaceAll(RegExp(r'0[,.]021\s*m3\s*/\s*dk', caseSensitive: false), '0,021 m³/dk (yaklaşık 21 L/dk)');
-    value = value.replaceAll(RegExp(r'0[,.]00057\s*m3\s*/\s*dk\s*/\s*0[,.]020\s*cfm', caseSensitive: false), '0,00057 m³/dk (yaklaşık 0,57 L/dk)');
-    value = value.replaceAll(RegExp(r'0[,.]020\s*cfm', caseSensitive: false), '0,57 L/dk (0,00057 m³/dk)');
-    value = value.replaceAll(RegExp(r'0[,.]00057\s*m3\s*/\s*dk', caseSensitive: false), '0,00057 m³/dk');
-    value = value.replaceAll(RegExp(r'\bscm\b', caseSensitive: false), 'Nm³');
-    value = value.replaceAll(RegExp(r'\bscf\b', caseSensitive: false), 'standart ft³ (Türkiye karşılığı: Nm³)');
-    value = value.replaceAll(RegExp(r'\bcfm\b', caseSensitive: false), 'ft³/dk (Türkiye karşılığı: m³/dk veya L/dk)');
-    value = value.replaceAll(RegExp(r'\bm3\s*/\s*dk\b', caseSensitive: false), 'm³/dk');
-    value = value.replaceAll(RegExp(r'\bm3\b', caseSensitive: false), 'm³');
-    value = value.replaceAll(RegExp(r'\bm2\b', caseSensitive: false), 'm²');
-    return value;
-  }
-}

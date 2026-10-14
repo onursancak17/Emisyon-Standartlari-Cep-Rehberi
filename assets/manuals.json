@@ -1,0 +1,3032 @@
+{
+  "common": {
+    "id": "ortak",
+    "title": "Ortak Saha Talimatları",
+    "method": "Hazırlık • Güvenlik • Kayıt",
+    "domain": "Ortak",
+    "trains": [],
+    "visual": null,
+    "sections": [
+      {
+        "title": "Planlama ve tesis hazırlığı",
+        "items": [
+          "Ölçüm amacı, parametreler, yöntemler ve çalışma koşullarını tesisle netleştir.",
+          "Numune alma planındaki değişiklikleri sahada kaydet; prosesin temsil edici çalışmasını teyit et.",
+          "Ekipman, personel, enerji, erişim ve taşıma ihtiyaçlarını önceden planla.",
+          "Tesis yetkilisinin eşliğini ve acil durumda ulaşılacak kişiyi belirle."
+        ],
+        "ordered": true
+      },
+      {
+        "title": "Saha güvenliği ve erişim",
+        "items": [
+          "Platform, korkuluk, merdiven ve ekipman kaldırma imkânını kontrol et.",
+          "Isı, toz, basınçlı deşarj, patlayıcı/yanıcı ortam ve elektrik tehlikelerini değerlendir.",
+          "Açık havadaki enerji bağlantılarını yağışa karşı koru; yeterli aydınlatma ve gerektiğinde geçici koruma sağla.",
+          "Güvenli erişim veya gerekli tedbir sağlanmıyorsa çalışmayı başlatma; sorumluya bildir."
+        ],
+        "ordered": true
+      },
+      {
+        "title": "Cihaz ve ekipman kontrolü",
+        "items": [
+          "Kalibrasyon geçerliliğini, cihaz çalışma aralığını, batarya/enerji ve saat ayarını kontrol et.",
+          "Temiz numune temas yüzeyleri, uygun filtre/reaktif serileri ve sızdırmaz kapları hazırla.",
+          "Ekipmanı taşırken kırılma ve dış kirlenmeden koru.",
+          "Kaçak testi ve doğrulama koşulları parametreye özgüdür; tek sınırı bütün ölçümlere uygulama."
+        ],
+        "ordered": true
+      },
+      {
+        "title": "Etiketleme ve saha kayıtları",
+        "items": [
+          "Tesis, kaynak/baca, parametre, numune no, tarih ve ölçüm başlangıç/bitişini eşleştir.",
+          "Filtre, tüp, reçine, sıvı fraksiyonu ve şahitlerin kimliklerini ayrı tanımla.",
+          "Cihaz, reaktif/filtre lotu, proses yükü ve çevre koşullarını kaydet.",
+          "Kesinti, cihaz ikazı, değişen tesis çalışması, dökülme ve numune kaybını eşzamanlı kaydet."
+        ],
+        "ordered": true
+      },
+      {
+        "title": "Genel numune bütünlüğü",
+        "items": [
+          "Gaz geçen numuneyi gaz geçirilmemiş şahit numuneyle karıştırma.",
+          "Sızdırmaz kapatma ve numune teslim zincirini koru.",
+          "Parametreye özgü sıcaklık, ışık koruması, koruyucu reaktif ve analiz süresini uygula; bütün numunelere tek saklama koşulu verme.",
+          "Numune sayısını, bütün fraksiyonları ve teslim alanını kontrol et."
+        ],
+        "ordered": true
+      },
+      {
+        "title": "Sonuç kontrolü",
+        "items": [
+          "Ölçülen değer, hesaplanan değer ve düzeltilmiş sonucu ayrı tanımla.",
+          "Kuru/yaş gaz, ortam/baca/normal şartlar ve referans oksijen bazını karıştırma.",
+          "Başlangıç/son doğrulama, kaçak, şahit ve emicilik kriterleri sağlanmadan sonucu uygun kabul etme.",
+          "Ölçüm aralığı dışında kalan veya kaydı eksik sonuçları sorumluya bildir."
+        ],
+        "ordered": true
+      },
+      {
+        "title": "EPA 1 • Ölçüm yeri ve travers planı",
+        "items": [
+          "Tercih edilen kesit, akış bozucudan sonra en az 8D ve sonraki akış bozucudan önce en az 2D uzaklıktadır. D baca çapı; dikdörtgen kesitte eşdeğer çap 2LW/(L+W) olarak alınır.",
+          "Alternatif kesitte en az 2D sonrası ve 0,5D öncesi koşulu aranır; nokta sayısı EPA 1 şekillerinde her iki uzaklık için belirlenip büyük olan sonuç seçilir. Daha kısa mesafe normal travers planı olarak kabul edilmez.",
+          "8D/2D koşulunda çap/eşdeğer çap 0,61 m’den büyükse partikül için en az 12 nokta; 0,30–0,61 m aralığında dairesel kesitte en az 8, dikdörtgende en az 9 nokta gerekir. Küçük kesitlerde EPA 1A kapsamını kontrol et.",
+          "Dairesel kesitte iki dik çap üzerindeki EPA 1 tablo konumlarını, dikdörtgende eşit alanların merkezlerini kullan. Noktaları rastgele eşit doğrusal aralıklarla dağıtma.",
+          "Duvara yakın noktanın uzaklığı büyük kesitte en az 2,5 cm veya nozul iç çapından büyük olan; 0,61 m ve altındaki kesitte en az 1,3 cm veya nozul iç çapından büyük olan değerdir."
+        ],
+        "ordered": false
+      },
+      {
+        "title": "EPA 1 • Siklonik akış kontrolü",
+        "items": [
+          "S tipi pitotla manometreyi sıfırla; her travers noktasında fark basıncını sıfırlayan dönüş açısını kaydet. Sıfır açılı noktaları hesap dışında bırakma.",
+          "Açıların mutlak değerlerinin ortalaması 20°’yi aşarsa basitleştirilmiş EPA 1 uygulaması uygun değildir; kesiti değiştir veya yöntemin izin verdiği alternatif değerlendirmeyi uygula.",
+          "Alternatif üç boyutlu akış değerlendirmesi ayrı bir prosedürdür; normal pitot kontrolü yerine yalnızca daha çok nokta seçmek yeterli olmaz."
+        ],
+        "ordered": false
+      }
+    ]
+  },
+  "manuals": [
+    {
+      "id": "yanma",
+      "title": "Yanma gazları",
+      "method": "O₂ / CO / CO₂ / SO₂ / NO / NO₂ / NOx",
+      "domain": "Emisyon",
+      "sections": [
+        {
+          "title": "Bu ölçüm neden yapılır?",
+          "items": [
+            "Yanmanın verimini ve kirletici gazların derişimini belirlemek için ölçülür. Oksijen, kuru/yaş gaz durumu ve referans oksijen bilgisi, sonucun karşılaştırılabilir olması için birlikte değerlendirilir."
+          ],
+          "ordered": false
+        },
+        {
+          "title": "Gerekli malzemeler",
+          "items": [
+            "Gaz analizörü ve uygun sensörler; MRU Nova gibi cihazlarda ölçülen ve hesaplanan gazları ayır.",
+            "Isıtmalı prob ve numune hattı, filtre, uygun gaz şartlandırma sistemi.",
+            "Sertifikalı O₂, CO, SO₂ ve NO referans gazları; uygun regülatör ve doğrulama bağlantısı.",
+            "Baca sıcaklığı, basınç ve gerektiğinde nem ölçüm ekipmanı."
+          ],
+          "ordered": false
+        },
+        {
+          "title": "Parametreye özgü hazırlık",
+          "items": [
+            "Cihazı çalışma sıcaklığına getir; kullanılan sensörlerin ölçüm aralığını ve gaz şartlandırma durumunu kontrol et.",
+            "MRU menüsündeki sızıntı testini prob ucu kapalıyken uygula. Testin tamamlanmasını bekle; kaçak varsa ölçümü başlatma.",
+            "Sıfır ve referans gaz doğrulamalarını yap. O₂/CO/CO₂ ve SO₂ için %4, NO için %3 sapma kriterlerini ve kalite kontrol kartının ±2S sınırını değerlendir.",
+            "Referans gazı yalnız analizöre değil, kullanılan hattın başından vererek sistemin T90 süresini belirle.",
+            "Baca kesitindeki derişimin temsil edici olduğunu doğrula. İlk taramada ±%15’ten büyük fark varsa tek noktayı bütün baca gibi kabul etme."
+          ],
+          "ordered": true
+        },
+        {
+          "title": "Ölçümün uygulanması",
+          "items": [
+            "Probu temsil edici noktaya yerleştir ve hat sıcaklığını yoğuşma oluşmayacak şekilde koru.",
+            "Cihaz menüsünden emisyon ölçümünü ve uygun yakıt türünü seç. Yakıt seçiminin gaz ölçümünü ve hesaplanan değerleri nasıl etkilediğini ayır.",
+            "Baca gazının bütün hat boyunca analizöre ulaşıp değerlerin kararlı hâle gelmesini bekle.",
+            "Her bacada en az üç ayrı ölçüm yap. Talimattaki ölçüm süresi en az 4 × T90, iki ölçüm arası bekleme en az 3 × T90’dır.",
+            "Her ölçümün başlangıç/bitişini ve O₂, CO, CO₂, SO₂, NO, NO₂/NOx değerlerini ayrı kaydet.",
+            "Ölçüm sonunda referans gaz doğrulamasını tekrarla; başlangıç ve bitiş performansını karşılaştır."
+          ],
+          "ordered": true
+        },
+        {
+          "title": "Dikkat edilecek noktalar",
+          "items": [
+            "SO₂ suda çözünebildiği için hat içindeki yoğuşma düşük sonuca neden olabilir. Isıtmalı hattı ve şartlandırmayı özellikle kontrol et.",
+            "Ölçülen gazla cihazın hesapladığı gazı aynı tür veri gibi kullanma. NOx’in hangi bileşenlerden ve hangi bazda hesaplandığını belirt.",
+            "CO/CO₂/O₂ için tepki süresi 200 saniyenin altında; yükselme/düşme süreleri 20 saniyenin altında olmalıdır. SO₂ için 200 saniye üstü cevap süresi ayrıca değerlendirilir.",
+            "Nem veya referans oksijen düzeltmesini cihaz zaten uygulamışsa ikinci kez uygulama.",
+            "Proses değişirse yeni kararlı dönemi ayrıca değerlendir; başlangıç ve duruş gazını normal çalışma ortalamasına fark etmeden ekleme."
+          ],
+          "ordered": false
+        },
+        {
+          "title": "Ölçüm sonrası ve numune işlemleri",
+          "items": [
+            "Probu bacadan çıkar; cihazın temiz gazla hat temizleme prosedürünü uygula.",
+            "Başlangıç/bitiş gaz doğrulamalarını ve kullanılan referans gaz değerlerini sonuçlarla birlikte değerlendir.",
+            "Sonucun birimini, normal şartını, kuru/yaş bazını ve referans O₂ değerini kontrol et."
+          ],
+          "ordered": true
+        },
+        {
+          "title": "T90 nedir ve nasıl uygulanır?",
+          "items": [
+            "T90, gaz derişimindeki değişiklikten sonra sistemin toplam cevap değişiminin %90’ına ulaşması için geçen süredir. Hat taşıma gecikmesini ve analizörün yükselme süresini kapsar; yalnız sensör katalog süresi değildir.",
+            "1. Ölçümde kullanılacak prob, filtre, hat ve şartlandırma sistemini aynı düzenle kur. Cihazı sıfır gazında kararlı hâle getir.",
+            "2. Sertifikalı referans gazını hattın girişine uygula ve gaz değişimiyle aynı anda kronometreyi başlat.",
+            "3. Sıfırdan farklı bir başlangıç varsa hedefi C₀ + 0,90 × (Cson − C₀) olarak hesapla. Örneğin 0’dan 100 ppm’e geçişte hedef 90 ppm’dir.",
+            "4. Hedef değere ilk kararlı ulaşma zamanını kaydet. Kullanılan gazı, hat uzunluğunu, debiyi ve şartlandırmayı da kaydet.",
+            "5. İlgili gazları ayrı değerlendir; ölçüm zamanlamasında en geç cevap veren bileşeni esas al. SO₂ çoğu düzende daha yavaş tepki verebilir.",
+            "6. T90 = 40 saniye ise ölçüm süresi en az 160 saniye, ölçümler arası bekleme en az 120 saniyedir. Proses değişkense daha uzun temsil edici süre seç.",
+            "7. Prob, hat, debi veya şartlandırma değişirse önceki T90 değerini otomatik olarak geçerli sayma; yeni düzeni doğrula."
+          ],
+          "ordered": false
+        }
+      ],
+      "trains": [],
+      "visual": null
+    },
+    {
+      "id": "islilik",
+      "title": "İslilik",
+      "method": "Bacharach skalası",
+      "domain": "Emisyon",
+      "sections": [
+        {
+          "title": "Bu ölçüm neden yapılır?",
+          "items": [
+            "Baca gazındaki is oluşumunu filtrede oluşan lekenin koyuluğundan değerlendirmek için yapılır. Sonuç bir kütle derişimi değildir; skalaya göre duman leke numarasıdır."
+          ],
+          "ordered": false
+        },
+        {
+          "title": "Gerekli malzemeler",
+          "items": [
+            "İslilik ölçüm pompası veya uygun analizör; temiz numune hattı.",
+            "Yönteme uygun beyaz filtre ve 0–9 Bacharach karşılaştırma skalası."
+          ],
+          "ordered": false
+        },
+        {
+          "title": "Parametreye özgü hazırlık",
+          "items": [
+            "Yakma sisteminin en az beş dakika çalışarak rejime girmesini bekle.",
+            "Pompa hattında önceki numuneden partikül kalmadığını kontrol et.",
+            "Temiz filtreyi sızdırmaz biçimde yerleştir; cihazın standart çekiş prosedürünü hazırla."
+          ],
+          "ordered": true
+        },
+        {
+          "title": "Ölçümün uygulanması",
+          "items": [
+            "Probu numune noktasına yerleştir.",
+            "Pompayı cihaz/yöntem prosedüründeki tam strokla çalıştır; yarım çekiş yapma.",
+            "Filtredeki lekeyi iyi aydınlatmada Bacharach skalasıyla karşılaştır.",
+            "En yakın leke numarasını kaydet; iki seviye arasındaysa en yakın yarım numarayı değerlendir.",
+            "En az üç ölçüm yap ve münferit değerlerle aritmetik ortalamayı kaydet."
+          ],
+          "ordered": true
+        },
+        {
+          "title": "Dikkat edilecek noktalar",
+          "items": [
+            "Lekenin 9’dan koyu olması 9 olarak sınırlandırılmaz; “9’dan büyük” kaydedilir.",
+            "Kirli hat sonucu yapay olarak yükseltir. Başlangıçtaki kararsız yanma temsil edici normal çalışma olarak kullanılmaz.",
+            "Skalanın temiz, okunaklı ve uygun durumda olması gerekir."
+          ],
+          "ordered": false
+        },
+        {
+          "title": "Ölçüm sonrası ve numune işlemleri",
+          "items": [
+            "Filtreleri numara ve ölçüm sırasıyla muhafaza et.",
+            "Şahit filtreyi değerlendir ve numune hattını temizle."
+          ],
+          "ordered": true
+        }
+      ],
+      "trains": [],
+      "visual": null
+    },
+    {
+      "id": "toz-ts",
+      "title": "Bacada toz • TS / ISO",
+      "method": "TS EN 13284-1 / TS ISO 9096",
+      "domain": "Emisyon",
+      "sections": [
+        {
+          "title": "Bu ölçüm neden yapılır?",
+          "items": [
+            "Baca gazındaki filtrelenebilir partikül madde kütlesini ve gerekiyorsa kütlesel debisini belirlemek için yapılır. İri parçacıkların temsili toplanması için nozul giriş hızı yerel baca gazı hızına eşit tutulur."
+          ],
+          "ordered": false
+        },
+        {
+          "title": "Gerekli malzemeler",
+          "items": [
+            "İzokinetik örnekleyici, uygun nozul, ısıtmalı prob ve filtre tutucu.",
+            "Şartlandırılmış ve tartılmış uygun filtre, kapalı petri kapları.",
+            "S tipi pitot, diferansiyel basınç ölçer, sıcaklık sensörü, basınç ve nem bilgisi.",
+            "Geri kazanım için yönteme uygun su/aseton, piset ve temiz kaplar."
+          ],
+          "ordered": false
+        },
+        {
+          "title": "Parametreye özgü hazırlık",
+          "items": [
+            "Ölçüm hedefi ve derişim aralığına göre TS EN 13284-1 veya TS ISO 9096’yı seç; yöntemleri tek kabul aralığına karıştırma.",
+            "Kesiti ve travers planını belirle; prob üzerinde nokta mesafelerini işaretle.",
+            "Hız, sıcaklık, basınç ve nemi ölç. Nem değerini izokinetik debi hesabına dahil et.",
+            "Beklenen kütle, tartım belirsizliği ve hedef hacme göre nozul ve toplam süreyi planla.",
+            "Prob/filtre sıcaklığını yoğuşma olmayacak şekilde ayarla; filtreyi ve numune hattını sızdırmaz yerleştir."
+          ],
+          "ordered": true
+        },
+        {
+          "title": "Ölçümün uygulanması",
+          "items": [
+            "Nozul ağzını akışa bakacak ve kanal eksenine uygun olacak şekilde ilk travers noktasına yerleştir.",
+            "Cihaz çekişini yerel hıza göre ayarla; cihazın ana ekrandaki litre/dakika değerini tek başına izokinetiklik kabul etme.",
+            "Seçilmiş her noktada eşit süre örnekle. Talimattaki toplam süreyi ve hedef hacmi birlikte sağla; rutin seride en az üç ayrı numune al.",
+            "En az her beş dakikada bir çekişi ve izokinetik şartı kontrol et; hız değiştiğinde cihazın ayarını güncelle.",
+            "Nokta geçişlerinde dış hava emilmesini, probun cidara sürtmesini ve filtredeki birikimin kaybolmasını önle.",
+            "Örnekleme sonunda son kaçak kontrolünü ve toplam sayaç hacmini kaydet."
+          ],
+          "ordered": true
+        },
+        {
+          "title": "Dikkat edilecek noktalar",
+          "items": [
+            "Laboratuvar talimatında EN/ISO uygulaması için izokinetiklik %95–115 olarak belirtilmiştir. EPA %90–110 kriterini buraya taşımama.",
+            "Gaz akış açısı, ters akış ve kesitteki hız dağılımı travers uygunluğunu etkiler; yetersiz ölçüm düzlemini yalnız süre artırarak uygun kabul etme.",
+            "Toz sonucuna filtre öncesi geri kazanım kütlesi de dahil olabilir; yalnız filtre farkını kullanmak eksik sonuca neden olur.",
+            "Filtre ve geri kazanım miktarının yeterli olup olmadığını tartım belirsizliği ve hedef derişime göre kontrol et.",
+            "Yıkama çözeltisinin türü ve filtre şartlandırması seçilen standarda göre uygulanır; bütün filtreleri tek sıcaklıkta şartlandırma."
+          ],
+          "ordered": false
+        },
+        {
+          "title": "Ölçüm sonrası ve numune işlemleri",
+          "items": [
+            "Filtreyi temiz pensle çıkarıp kapalı petri kabına al.",
+            "Nozul, prob ve filtre önündeki birikimi seçilen yöntemin geri kazanımıyla topla; yabancı kirleri numuneye katma.",
+            "Geri kazanım kaplarını ayrı etiketle. Numunenin kaybolmadığını ve bütün fraksiyonların laboratuvara gittiğini kontrol et.",
+            "Filtre ve yıkama fraksiyonlarını aynı yöntemle şartlandırma/tartım ve blank değerlendirmesine gönder."
+          ],
+          "ordered": true
+        },
+        {
+          "title": "Yöntem seçimi",
+          "items": [
+            "TS EN 13284-1 düşük derişimli gravimetrik toz ölçümünü; TS ISO 9096 daha yüksek toz derişimlerini ele alır. Her yöntemin çalışma aralığını, filtrenin sıcaklık dayanımını ve hedef belirsizliğini birlikte değerlendir.",
+            "Düşük derişimde süreyi yalnız 30 dakika olarak sabitleme. Toplanacak kütle yetersizse uygun nozul ve daha uzun örnekleme ile gerekli hacmi sağla."
+          ],
+          "ordered": false
+        }
+      ],
+      "trains": [],
+      "visual": null
+    },
+    {
+      "id": "toz-epa",
+      "title": "Bacada toz • EPA 5",
+      "method": "EPA Method 5",
+      "domain": "Emisyon",
+      "sections": [
+        {
+          "title": "Bu ölçüm neden yapılır?",
+          "items": [
+            "Baca gazındaki filtrelenebilir partikülleri izokinetik olarak filtre ve filtre öncesi yüzeylerde toplamak için uygulanır."
+          ],
+          "ordered": false
+        },
+        {
+          "title": "Gerekli malzemeler",
+          "items": [
+            "İzokinetik örnekleyici; cam/kuvars veya yönteme uygun prob/nozul.",
+            "Baca dışına yerleştirilen ısıtmalı filtre tutucu, şartlandırılmış filtre, pitot ve sıcaklık sensörleri.",
+            "Soğutma ve nem tutma sistemi; sayaç, geri kazanım asetonu, temiz fırça ve kaplar."
+          ],
+          "ordered": false
+        },
+        {
+          "title": "Parametreye özgü hazırlık",
+          "items": [
+            "EPA 1 travers planına göre nozul konumlarını işaretle.",
+            "Hız, sıcaklık, mutlak basınç, gaz bileşimi ve nem verilerinden nozul ve çekişi seç.",
+            "Örneklenen kütlenin raporlama için yeterli olmasını sağlayacak süre ve hacmi belirle.",
+            "Prob ve filtre ısıtmasını ayarla; örnekleme başlamadan set değerinde kararlılığı doğrula ve ölçüm boyunca kaydet.",
+            "Nozul kapalıyken numune hattının kaçak kontrolünü yap ve uygulanan vakumu kaydet."
+          ],
+          "ordered": true
+        },
+        {
+          "title": "Ölçümün uygulanması",
+          "items": [
+            "Gaz sayacının ilk değerini kaydet ve ilk travers noktasında çekişi başlat.",
+            "Her noktada yerel hızla uyumlu izokinetik debiyi ayarla.",
+            "Sıcaklık, pitot fark basıncı, sayaç sıcaklığı/basıncı, orifis basıncı ve sayaç değerlerini kaydet.",
+            "Her travers noktasına planlanan eşit süreyi uygula; gaz hızı değişince çekişi düzelt.",
+            "Örnekleme sonunda pompayı durdurup probu çıkar; maksimum çalışma vakumu esas alınarak son kaçak kontrolünü uygula.",
+            "Nihai hacim ve bütün ölçüm kaydından izokinetik oranı hesapla."
+          ],
+          "ordered": true
+        },
+        {
+          "title": "Dikkat edilecek noktalar",
+          "items": [
+            "EPA 5 için %90–110 izokinetiklik aralığı uygulanır.",
+            "Kaçak sınırı 0,57 L/dakika veya örnekleme debisinin %4’ünden küçük olan değerdir; tek sabit 0,57 değerini bütün debilerde yeterli sayma.",
+            "Örnekleme sırasında prob değişirse veya hat açılırsa ara kaçak kontrolü gerekir.",
+            "Nem izokinetik koşulları etkiler; nemden arındırılmış sayaç hacmini ikinci kez nem oranıyla azaltma."
+          ],
+          "ordered": false
+        },
+        {
+          "title": "Ölçüm sonrası ve numune işlemleri",
+          "items": [
+            "Filtreyi kapalı numune kabına al.",
+            "Nozul/prob/filtre ön yarısını asetonla geri kazan; fırça ve yıkama işlemlerini numune kaybı olmadan yap.",
+            "Filtre sonrası nem tutma fraksiyonunu toz fraksiyonuna karıştırma.",
+            "Filtre, aseton yıkaması ve saha/reaktif blanklarını ayrı etiketle."
+          ],
+          "ordered": true
+        }
+      ],
+      "trains": [
+        {
+          "name": "EPA 5 • Filtre sonrası nem tutma",
+          "method": "EPA Method 5",
+          "sampling": "İzokinetik örnekleme",
+          "flow": "Ana ölçümün izokinetik debisi",
+          "condition": "Toz filtresinden sonra gazı kurutmak; başlangıç/son verileriyle nem de birlikte belirlenebilir.",
+          "bottles": [
+            {
+              "content": "Saf su",
+              "amount": "100 mL",
+              "strength": "",
+              "kind": "water",
+              "tip": "Modifiye uç"
+            },
+            {
+              "content": "Saf su",
+              "amount": "100 mL",
+              "strength": "",
+              "kind": "water",
+              "tip": "Standart Greenburg–Smith uç"
+            },
+            {
+              "content": "Boş",
+              "amount": "Sıvı eklenmez",
+              "strength": "",
+              "kind": "empty",
+              "tip": "Modifiye uç"
+            },
+            {
+              "content": "Silika jel",
+              "amount": "200–300 g",
+              "strength": "",
+              "kind": "silica",
+              "tip": "Modifiye uç"
+            }
+          ],
+          "steps": [
+            "Filtrede tozu toplarken aynı ana izokinetik debiyi nem tutma bölümünden geçir.",
+            "Nem birlikte hesaplanacaksa başlangıç ve son sıvı hacimlerini ve kurutucu kütlesini ayrıca kaydet."
+          ],
+          "note": "Bu şişeler filtreyi geçen gazdaki nemi tutar; toz numunesi filtre ve yöntemce tanımlanan ön hat fraksiyonudur.",
+          "vesselType": "Greenburg–Smith",
+          "branch": false,
+          "inlet": "Isıtmalı prob → baca DIŞINDA ısıtmalı filtre → nem treni",
+          "filterAfter": 0,
+          "visual": null
+        }
+      ],
+      "visual": null,
+      "essentials": [
+        "Filtre baca DIŞINDADIR; ısıtmalı filtre tutucuda yer alır.",
+        "Rutin filtre sıcaklığı 120 ±14 °C’dir; farklı sıcaklık ancak uygulanabilir yöntem hükmüyle kullanılır."
+      ],
+      "filterPlacement": "outside"
+    },
+    {
+      "id": "toz-epa17",
+      "title": "Bacada toz • EPA 17",
+      "method": "EPA Method 17",
+      "domain": "Emisyon",
+      "sections": [
+        {
+          "title": "Bu ölçüm neden yapılır?",
+          "items": [
+            "Filtrelenebilir partikülleri doğrudan baca içinde toplar. Filtre sıcaklığı baca gazına bağlıdır; EPA 5’in dışarıda ısıtılan filtresiyle aynı sıcaklık koşulunu sağlamaz.",
+            "Yalnızca uygulanabilir kaynak kuralı izin verdiğinde ve partikül miktarının ilgili sıcaklık aralığındaki bağımlılığı yöntem seçimine uygun olduğunda kullan. EPA 5’in otomatik alternatifi değildir."
+          ],
+          "ordered": false
+        },
+        {
+          "title": "Gerekli malzemeler",
+          "items": [
+            "Baca içi filtre tutucu; uygun cam elyaf filtre, nozul, uzatma borusu, S tipi pitot ve sıcaklık sensörü.",
+            "Sızdırmazlığa uygun conta ve bağlantılar, nem tutma sistemi, aseton geri kazanım kapları ve temiz fırça."
+          ],
+          "ordered": false
+        },
+        {
+          "title": "Parametreye özgü hazırlık",
+          "items": [
+            "Filtre tutucu ve probun akışa dik izdüşüm alanını hesapla. Toplam baca kesitinin %5’ini aşarsa standart düzeneği kullanma; yöntemin izin verdiği alternatif düzeni değerlendir.",
+            "Tutucu/nozul/pitot geometrisinin akışı ve hız ölçümünü bozmadığını doğrula; standart dışı geometride gerekli pitot kalibrasyonunu tamamla.",
+            "Filtreyi merkezleyip contayla sızdırmaz oturt; yırtık, kenardan gaz kaçışı veya tutucuya uygunsuz temas bırakma.",
+            "Tüm travers noktalarına erişimi kontrol et; gerekli işaretleri uzatma borusuna koy.",
+            "Tutucuyu baca içine yerleştir. Nozulu ısıya dayanıklı biçimde kapat; sıcaklık dengesi için yaklaşık 5 dakika, gerekiyorsa daha uzun bekle ve baca içi düzende kaçak kontrolünü uygula."
+          ],
+          "ordered": true
+        },
+        {
+          "title": "Ölçümün uygulanması",
+          "items": [
+            "Baca sıcaklığı, hız, nem ve gaz bileşimine göre nozul ve izokinetik çekişi belirle.",
+            "Nozulu akışa doğru çevir; her travers noktasında yerel hıza uygun çekiş ve eşit örnekleme süresi uygula.",
+            "Baca gazı sıcaklığını, pitot fark basıncını, sayaç/orifis verilerini ve çalışma vakumunu kaydet. Dış filtre ısıtıcısı sıcaklığını EPA 17’ye zorunlu alan olarak taşıma.",
+            "Nokta değişimleri ve hat açılması sırasında numune kaybını önle; gerekli ara ve son kaçak kontrollerini yap.",
+            "Son hacim ve ölçüm verileriyle izokinetik oranı hesapla; %90–110 aralığını kontrol et."
+          ],
+          "ordered": true
+        },
+        {
+          "title": "Dikkat edilecek noktalar",
+          "items": [
+            "Kaçak sınırı 0,57 L/dakika veya örnekleme debisinin %4’ünden küçük olan değerdir.",
+            "Filtre tıkanması ve aşırı vakum çekişi değiştirebilir; debiyi ve filtrenin bütünlüğünü takip et.",
+            "Uzun bağlantı hortumları yoğuşma ve nem geri kazanımını etkileyebilir; hattı yönteme uygun tut."
+          ],
+          "ordered": false
+        },
+        {
+          "title": "Ölçüm sonrası ve numune işlemleri",
+          "items": [
+            "Düzeneği dikkatle çıkarıp soğut. Soğurken probu hava geçirmez biçimde sıkıca kapatma: oluşan vakum kondensatı geriye çekebilir.",
+            "Filtre/nozul tertibatını uzatmadan ayır; kondensatı nem bölümüne al ve kaybetme.",
+            "Filtreyi ayrı kaba al; nozul ve filtre ön yüzeylerini asetonla fırçalayarak geri kazan. Filtre sonrası nem fraksiyonunu partikül numunesine katma.",
+            "Reaktif körü için kullanılan asetondan 200 mL ayır; filtre ve geri kazanım fraksiyonlarını analiz planına göre ayrı muhafaza et."
+          ],
+          "ordered": true
+        }
+      ],
+      "trains": [
+        {
+          "name": "EPA 17 • Baca içi filtre sonrası nem tutma",
+          "method": "EPA Method 17",
+          "sampling": "İzokinetik örnekleme",
+          "flow": "Ana ölçümün izokinetik debisi",
+          "condition": "Toz filtresinden sonra gazı kurutmak; başlangıç/son verileriyle nem de birlikte belirlenebilir.",
+          "bottles": [
+            {
+              "content": "Saf su",
+              "amount": "100 mL",
+              "strength": "",
+              "kind": "water",
+              "tip": "Modifiye uç"
+            },
+            {
+              "content": "Saf su",
+              "amount": "100 mL",
+              "strength": "",
+              "kind": "water",
+              "tip": "Standart Greenburg–Smith uç"
+            },
+            {
+              "content": "Boş",
+              "amount": "Sıvı eklenmez",
+              "strength": "",
+              "kind": "empty",
+              "tip": "Modifiye uç"
+            },
+            {
+              "content": "Silika jel",
+              "amount": "200–300 g",
+              "strength": "",
+              "kind": "silica",
+              "tip": "Modifiye uç"
+            }
+          ],
+          "steps": [
+            "Filtrede tozu toplarken aynı ana izokinetik debiyi nem tutma bölümünden geçir.",
+            "Nem birlikte hesaplanacaksa başlangıç ve son sıvı hacimlerini ve kurutucu kütlesini ayrıca kaydet."
+          ],
+          "note": "Bu şişeler filtreyi geçen gazdaki nemi tutar; toz numunesi filtre ve yöntemce tanımlanan ön hat fraksiyonudur.",
+          "vesselType": "Greenburg–Smith",
+          "branch": false,
+          "inlet": "Nozul → baca İÇİNDE filtre → uzatma hattı → nem treni",
+          "filterAfter": 0,
+          "visual": null
+        }
+      ],
+      "visual": null,
+      "essentials": [
+        "Filtre baca İÇİNDEDİR; partiküller baca gazı sıcaklığında toplanır.",
+        "Su damlacığı içeren veya su buharına doygun baca gazında bu yöntem uygulanmaz."
+      ],
+      "filterPlacement": "inside"
+    },
+    {
+      "id": "voc",
+      "title": "VOC",
+      "method": "TS EN 13649 • Sorbent tüp",
+      "domain": "Emisyon",
+      "sections": [
+        {
+          "title": "Bu ölçüm neden yapılır?",
+          "items": [
+            "Gaz hâlindeki münferit organik bileşikleri sorbent tüpte toplayıp kromatografik analizle ayrı ayrı belirlemek için yapılır. Toplam organik karbon ölçümüyle aynı sonuç değildir."
+          ],
+          "ordered": false
+        },
+        {
+          "title": "Gerekli malzemeler",
+          "items": [
+            "Hedef bileşiğe uygun sorbent tüp; ön ve yedek tabakası tanımlı.",
+            "Düşük debili pompa, sayaç/akış ölçer, inert hat, gerektiğinde seyreltme ünitesi.",
+            "Temiz kuru seyreltme havası veya yönteme uygun gaz; tüp kapakları, serin taşıma kutusu."
+          ],
+          "ordered": false
+        },
+        {
+          "title": "Parametreye özgü hazırlık",
+          "items": [
+            "Hedef bileşik listesini, uygun sorbenti ve laboratuvar desorpsiyon/analiz yöntemini eşleştir.",
+            "Tüp akış yönünü kontrol et; tüpün bütünlüğünü ve numune kapasitesini doğrula.",
+            "Baca sıcaklığı ve su içeriğine göre doğrudan veya seyreltmeli numune alma yöntemini seç.",
+            "Sorbentten geçen gazı 40 °C’nin altında ve yoğuşmasız tut. Isıtılan giriş hattı, soğutma ve seyreltmeyi birlikte planla.",
+            "Prob ucu kapalıyken kaçak kontrolünü yap. Başlangıç prosedüründeki %5 sınırına ek olarak talimatın son kontrolünde daha sıkı %2 koşulu bulunduğundan %2’yi hedefle."
+          ],
+          "ordered": true
+        },
+        {
+          "title": "Ölçümün uygulanması",
+          "items": [
+            "Gaz çekişini seçilen tüp için 0,1–0,5 L/dakika aralığında ayarla.",
+            "Debi kararlı hâle geldikten sonra sayaç başlangıcını kaydet ve örneklemeyi başlat.",
+            "Genellikle en az 30 dakika örnekle; özel proses gerekçesiyle kısaltılacaksa talimattaki 20 dakika alt sınırını dikkate al.",
+            "Sorbent kapasitesi ve analiz tayin sınırına göre 10–50 litre hedef aralığını kontrol et. Debi × süre ile sayaç hacmini karşılaştır.",
+            "Seyreltme varsa baca gazı ve seyreltme gazı debilerini ayrı kaydet; tüp hacmini baca gazı hacmi olarak kullanma.",
+            "En az üç ayrı numune al; her baca için en az bir saha şahit tüpünü baca gazından geçirmeden aynı işlemlere tabi tut."
+          ],
+          "ordered": true
+        },
+        {
+          "title": "Dikkat edilecek noktalar",
+          "items": [
+            "Yüksek sıcaklık ve nem nedeniyle yoğuşma VOC kaybına yol açar; gazı yalnız soğutup sıvı oluşturma.",
+            "Yüksek bileşik derişimi sorbentin kapasitesini aşabilir. Yedek tabakadaki miktarın %5’i aşması breakthrough göstergesidir.",
+            "Ön tabakada toplamın en az %95’i bulunmalıdır.",
+            "Şahit sonucu numuneden otomatik çıkarılmaz; talimattaki %10 numune/limit kriterine göre geçerlilik değerlendirilir.",
+            "Akış, süre ve toplam hacim birlikte yeterli olmalıdır. Örneğin 0,1 L/dakika × 30 dakika yalnız 3 litredir; bunu 10 litre diye kabul etme."
+          ],
+          "ordered": false
+        },
+        {
+          "title": "Ölçüm sonrası ve numune işlemleri",
+          "items": [
+            "Tüpün iki ucunu hemen sızdırmaz kapat.",
+            "Serin ve karanlık taşı; uzun süreli bekletmede 4 °C’nin altında, çözücü bulaşması olmayan kutu kullan.",
+            "Seyreltme oranı, tüp lotu, ön/arka tabaka bilgisi ve hacimleri laboratuvara ilet."
+          ],
+          "ordered": true
+        }
+      ],
+      "trains": [],
+      "visual": null
+    },
+    {
+      "id": "toc",
+      "title": "Toplam organik karbon • TOC",
+      "method": "TS EN 12619 / EPA 25A • FID",
+      "domain": "Emisyon",
+      "sections": [
+        {
+          "title": "Bu ölçüm neden yapılır?",
+          "items": [
+            "Gaz hâlindeki organik bileşiklerin toplam karbon karşılığını alev iyonlaştırma dedektörüyle belirlemek için yapılır. Sonuç tek tek VOC bileşiklerinin listesi değildir."
+          ],
+          "ordered": false
+        },
+        {
+          "title": "Gerekli malzemeler",
+          "items": [
+            "FID analizör; ısıtmalı prob, hat ve filtre.",
+            "Sıfırlama için %99,998 azot, doğrulama için sertifikalı propan, yakıt için hidrojen.",
+            "Uygun regülatörler ve güvenli gaz bağlantıları."
+          ],
+          "ordered": false
+        },
+        {
+          "title": "Parametreye özgü hazırlık",
+          "items": [
+            "Üreticinin FID kurulum ve gaz akış prosedürünü uygula.",
+            "Isıtmalı hattı talimattaki 120 °C set değerine getir; numune girişini 180 °C üstüne çıkarmama.",
+            "Azotla sıfır kontrolünü, propanla aralık doğrulamasını yap.",
+            "Kalibrasyon gazına ani geçişle sistem cevap süresini ölç; alevin ve okumanın kararlı olduğunu doğrula."
+          ],
+          "ordered": true
+        },
+        {
+          "title": "Ölçümün uygulanması",
+          "items": [
+            "Filtreli probu temsil edici noktaya yerleştir.",
+            "Numune çekişini başlat ve ölçülen cevap süresine göre değerin oturmasını bekle.",
+            "Okumayı hangi birimde verdiğini kaydet: propan ppm veya karbon mg/m³.",
+            "Ölçüm serisini proses davranışını temsil edecek sürede kaydet.",
+            "Ölçüm sonrası sıfır/aralık doğrulamasını tekrarla ve sapmayı değerlendir."
+          ],
+          "ordered": true
+        },
+        {
+          "title": "Dikkat edilecek noktalar",
+          "items": [
+            "Sıfırlama ve kalibrasyon sapması ±%3 sınırını karşılamalıdır.",
+            "Propan ppm’i doğrudan VOC mg/m³ kabul etme. Karbon dönüşümünde propanın üç karbon atomu dikkate alınır.",
+            "Yoğuşma ve hat kirlenmesi organik bileşiklerin kaybına neden olur.",
+            "Hidrojen yakıt ve alev güvenliği FID’ye özgüdür; gaz kaçağı veya alev sönmesinde üretici prosedürünü uygula."
+          ],
+          "ordered": false
+        },
+        {
+          "title": "Ölçüm sonrası ve numune işlemleri",
+          "items": [
+            "Analizörün temizleme ve kapatma sırasını uygula.",
+            "Sonuçları karbon bazında ve kullanılan kuru/yaş/referans O₂ bazını belirterek değerlendir."
+          ],
+          "ordered": true
+        }
+      ],
+      "trains": [],
+      "visual": null
+    },
+    {
+      "id": "hcl",
+      "title": "HCl • Gaz hâlindeki klorür",
+      "method": "TS EN 1911",
+      "domain": "Emisyon",
+      "sections": [
+        {
+          "title": "Bu ölçüm neden yapılır?",
+          "items": [
+            "HCl olarak tanımlanan gaz hâlindeki klorürü saf suda tutup laboratuvarda analiz etmek için uygulanır. Elementel klor/halojen EPA 26A ölçümüyle aynı düzenek değildir."
+          ],
+          "ordered": false
+        },
+        {
+          "title": "Gerekli malzemeler",
+          "items": [
+            "Cam/kuvars/PTFE uygun prob ve ısıtmalı filtre tutucu.",
+            "Klorür içermeyen en az derece 2 saf su; iki absorpsiyon şişesi, boş koruma şişesi ve nem tutucu.",
+            "İzokinetik ana sistem; yan akış gerekiyorsa T bağlantısı, ayrı debi/hacim ölçümü ve düşük debili çekiş.",
+            "Temiz numune kapları, suyla geri kazanım ekipmanı."
+          ],
+          "ordered": false
+        },
+        {
+          "title": "Parametreye özgü hazırlık",
+          "items": [
+            "Gazda damlacık varlığını, kesit homojenliğini ve emicilik koşullarını değerlendirerek üstteki uygulamayı seç.",
+            "Prob ve filtreyi çiğlenme noktasının en az 20 °C üstünde tut; absorpsiyon gazını 20 °C altına soğut.",
+            "Klorür blankı uygun suyu ve ayrı birinci/ikinci şişe numune kaplarını hazırla."
+          ],
+          "ordered": true
+        },
+        {
+          "title": "Ölçümün uygulanması",
+          "items": [
+            "Seçili uygulamanın özel adımlarını izleyerek numuneyi al.",
+            "En az 30 dakika örnekle; tayin sınırı daha büyük hacim gerektiriyorsa süreyi artır.",
+            "Nokta geçişlerini, süreyi ve şişelerde gaz–sıvı temasını kaydet."
+          ],
+          "ordered": true
+        },
+        {
+          "title": "Dikkat edilecek noktalar",
+          "items": [
+            "Saf suyun kendisi klorür taşıyorsa düşük derişimde sonucun büyük kısmı blanktan gelebilir.",
+            "İkinci şişe ayrı analiz edilerek emicilik verimi kontrol edilir. Emicilik %95’in altındaysa veya saha şahidi limitin %10’unu aşıyorsa ölçüm yenilenir.",
+            "Filtre partikülü ayırır; HCl’yi esas tutan saf sudur.",
+            "Yoğuşma ve hava sızıntısı HCl kaybına veya seyreltmeye neden olur."
+          ],
+          "ordered": false
+        },
+        {
+          "title": "Ölçüm sonrası ve numune işlemleri",
+          "items": [
+            "Birinci ve ikinci şişeyi ayrı kaplara al; ayrı analizle emicilik verimini koru.",
+            "Filtre sonrası bağlantıları klorürsüz suyla durula; ilgili fraksiyona ekle.",
+            "Son hacimleri kaydet, kapları sızdırmaz kapat ve hızla laboratuvara teslim et."
+          ],
+          "ordered": true
+        }
+      ],
+      "trains": [
+        {
+          "name": "Sabit debili • Damlacıksız gaz",
+          "method": "TS EN 1911",
+          "sampling": "Sabit debili örnekleme",
+          "flow": "2–3 L/dakika",
+          "condition": "Damlacık içermeyen, temsil edici homojen gaz; düşük nemli uygulama.",
+          "bottles": [
+            {
+              "content": "Saf su",
+              "amount": "40 veya 100 mL",
+              "strength": "Klorür içermez",
+              "kind": "water",
+              "tip": "Modifiye uç"
+            },
+            {
+              "content": "Saf su",
+              "amount": "40 veya 100 mL",
+              "strength": "Klorür içermez",
+              "kind": "water",
+              "tip": "Modifiye uç"
+            },
+            {
+              "content": "Boş",
+              "amount": "Sıvı eklenmez",
+              "strength": "",
+              "kind": "empty",
+              "tip": "Modifiye uç"
+            },
+            {
+              "content": "Silika jel",
+              "amount": "Ön tartımı yapılmış",
+              "strength": "",
+              "kind": "silica",
+              "tip": "Modifiye uç"
+            }
+          ],
+          "steps": [
+            "Uygun düşük debili çekişle hedef debiyi ayarla; ana izokinetik sistem kurmadan gaz fazı numunesini al.",
+            "Sabit debiyi ve örneklenen gaz hacmini numune boyunca kaydet."
+          ],
+          "note": "Başlangıç su hacmini kullanılan şişe ve doğrulanmış plan belirler; iki farklı hacmi ölçüm sırasında rastgele değiştirme.",
+          "vesselType": "Greenburg–Smith",
+          "branch": false,
+          "inlet": "Isıtmalı prob → filtre → tren",
+          "filterAfter": 0,
+          "visual": null
+        },
+        {
+          "name": "İzokinetik • Tam akış",
+          "method": "TS EN 1911",
+          "sampling": "İzokinetik örnekleme",
+          "flow": "Nozul ve yerel baca hızına göre",
+          "condition": "Damlacık/nem koşullarında temsil edici örnekleme; tam akışta emicilik sağlanabiliyorsa.",
+          "bottles": [
+            {
+              "content": "Saf su",
+              "amount": "100 mL",
+              "strength": "Klorür içermez",
+              "kind": "water",
+              "tip": "Modifiye uç"
+            },
+            {
+              "content": "Saf su",
+              "amount": "100 mL",
+              "strength": "Klorür içermez",
+              "kind": "water",
+              "tip": "Modifiye uç"
+            },
+            {
+              "content": "Boş",
+              "amount": "Sıvı eklenmez",
+              "strength": "",
+              "kind": "empty",
+              "tip": "Modifiye uç"
+            },
+            {
+              "content": "Silika jel",
+              "amount": "Ön tartımı yapılmış",
+              "strength": "",
+              "kind": "silica",
+              "tip": "Modifiye uç"
+            }
+          ],
+          "steps": [
+            "Nozulu yerel gaz hızına göre seç; bütün travers noktalarında izokinetik şartı koru.",
+            "Tam çekişi absorpsiyon bölümünden geçir; yüksek debide emicilik yetersiz kalıyorsa yan akışlı seçeneğe geç."
+          ],
+          "note": "",
+          "vesselType": "Greenburg–Smith",
+          "branch": false,
+          "inlet": "Isıtmalı prob → filtre → tren",
+          "filterAfter": 0,
+          "visual": null
+        },
+        {
+          "name": "İzokinetik • Yan akış",
+          "method": "TS EN 1911",
+          "sampling": "Yan akışlı izokinetik örnekleme",
+          "flow": "Yan akış: 2–3 L/dakika",
+          "condition": "Yüksek ana debi veya yüksek klorür derişimi nedeniyle tam akışta emicilik sağlanamıyorsa.",
+          "bottles": [
+            {
+              "content": "Saf su",
+              "amount": "40 veya 100 mL",
+              "strength": "Klorür içermez",
+              "kind": "water",
+              "tip": "Modifiye uç"
+            },
+            {
+              "content": "Saf su",
+              "amount": "40 veya 100 mL",
+              "strength": "Klorür içermez",
+              "kind": "water",
+              "tip": "Modifiye uç"
+            },
+            {
+              "content": "Boş",
+              "amount": "Sıvı eklenmez",
+              "strength": "",
+              "kind": "empty",
+              "tip": "Modifiye uç"
+            },
+            {
+              "content": "Silika jel",
+              "amount": "Ön tartımı yapılmış",
+              "strength": "",
+              "kind": "silica",
+              "tip": "Modifiye uç"
+            }
+          ],
+          "steps": [
+            "Filtre sonrasında T bağlantısıyla ana ve absorpsiyon akışını ayır; ana akış izokinetik kalır.",
+            "Yan akışın debi ve hacmini ayrı ölç; ana/yan akış oranını numune boyunca koru."
+          ],
+          "note": "Klorür sonucu için absorpsiyon kolunun örnek hacmini kullan; ana ve yan hat hacimlerini karıştırma.",
+          "vesselType": "Greenburg–Smith",
+          "branch": true,
+          "inlet": "Isıtmalı prob → filtre → tren",
+          "filterAfter": 0,
+          "visual": null
+        }
+      ],
+      "visual": null
+    },
+    {
+      "id": "flor",
+      "title": "Florür",
+      "method": "EPA Method 13A / ISO 15713",
+      "domain": "Emisyon",
+      "sections": [
+        {
+          "title": "Bu ölçüm neden yapılır?",
+          "items": [
+            "Gaz ve partikül fazındaki toplam florürü toplayarak SPADNS zirkonyum kolorimetrik analiziyle belirlemek için uygulanır."
+          ],
+          "ordered": false
+        },
+        {
+          "title": "Gerekli malzemeler",
+          "items": [
+            "Yönteme uygun prob, filtre tutucu, gaz temas malzemeleri ve numune kapları.",
+            "EPA 13A için düşük flor blanklı filtre ve saf su; ISO 15713 için NaOH absorpsiyon çözeltisi.",
+            "Seçili görseldeki şişeler, soğutma, nem tutucu ve uygun debi/hacim ölçümü."
+          ],
+          "ordered": false
+        },
+        {
+          "title": "Parametreye özgü hazırlık",
+          "items": [
+            "Hedefin toplam florür mü yoksa gaz hâlindeki florür bileşikleri mi olduğunu yöntem planıyla netleştir; iki metodu aynı analit kapsamı gibi kullanma.",
+            "Filtre blankını ve seçilen filtre yerleşimini kontrol et.",
+            "Nozul, örnekleme noktaları ve sıcaklıkları seçili uygulamaya göre hazırla."
+          ],
+          "ordered": true
+        },
+        {
+          "title": "Ölçümün uygulanması",
+          "items": [
+            "Seçili yöntem ve uygulamanın özel adımlarını izleyerek gaz numunesini al.",
+            "Kabarcık oluşumu, sıvı sürüklenmesi ve soğutmayı izle; gaz hacmi ve nokta sürelerini kaydet.",
+            "Emicilik kontrolü gerekiyorsa son absorpsiyon şişesini ayrı geri kazan."
+          ],
+          "ordered": true
+        },
+        {
+          "title": "Dikkat edilecek noktalar",
+          "items": [
+            "EPA 13A için sabit debili bir uygulama tanımlanmaz; ISO 15713’ün sabit akış seçeneğini bu metoda taşıma.",
+            "Kullanılan filtre ve gaz temas malzemeleri flor bulaşmasına neden olmamalıdır.",
+            "Soğutma, numune geri kazanımı ve fraksiyon ayrımı seçilen metoda göre değerlendirilir."
+          ],
+          "ordered": false
+        },
+        {
+          "title": "Ölçüm sonrası ve numune işlemleri",
+          "items": [
+            "İlk üç şişenin sıvısını ve ilgili yüzeylerin saf su durulamalarını kontrollü biçimde geri kazan.",
+            "Şişeleri yaklaşık 20 mL deiyonize suyla durula; toplam durulama hacmini kaydet.",
+            "Filtreyi seçilen yerleşime uygun ayrı numune veya tanımlı fraksiyon olarak gönder.",
+            "Son şişenin silika jelini tart; çözeltideki toplam hacim ve kütleden emicilik/derişim hesabını yaptır."
+          ],
+          "ordered": true
+        }
+      ],
+      "trains": [
+        {
+          "name": "EPA 13A • Dört şişe",
+          "bottles": [
+            {
+              "content": "Saf su",
+              "amount": "100 mL",
+              "strength": "",
+              "kind": "water",
+              "tip": "Modifiye uç"
+            },
+            {
+              "content": "Saf su",
+              "amount": "100 mL",
+              "strength": "",
+              "kind": "water",
+              "tip": "Standart Greenburg–Smith uç"
+            },
+            {
+              "content": "Boş",
+              "amount": "Sıvı eklenmez",
+              "strength": "",
+              "kind": "empty",
+              "tip": "Modifiye uç"
+            },
+            {
+              "content": "Silika jel",
+              "amount": "200–300 g",
+              "strength": "",
+              "kind": "silica",
+              "tip": "Modifiye uç"
+            }
+          ],
+          "note": "Gösterilen yerleşimde filtre üçüncü ile dördüncü şişe arasındadır. Prob ile ilk şişe arasındaki filtre alternatifini kullanırsan yerleşimi ve fraksiyonları ayrıca kaydet.",
+          "method": "EPA Method 13A",
+          "sampling": "İzokinetik örnekleme",
+          "flow": "Çekiş 28 L/dakikanın altında",
+          "condition": "Gaz ve partikül fazındaki toplam florür; saf suyla laboratuvar uygulaması.",
+          "vesselType": "Greenburg–Smith",
+          "steps": [
+            "EPA 5 esaslarına göre nozul seç ve izokinetik örnekle.",
+            "Prob/filtreyi 120 ±14 °C’de tut; düşük flor blanklı filtre kullan."
+          ],
+          "branch": false,
+          "inlet": "Isıtmalı prob → absorpsiyon şişeleri",
+          "filterAfter": 3,
+          "visual": null
+        },
+        {
+          "name": "ISO 15713 • Sabit debili",
+          "method": "ISO 15713",
+          "sampling": "Sabit debili örnekleme",
+          "flow": "2–6 L/dakika • Sapma en fazla ±%10",
+          "condition": "Damlacıksız gaz fazı için yöntem planının sabit akışa izin verdiği koşullar.",
+          "bottles": [
+            {
+              "content": "NaOH",
+              "amount": "50–100 mL",
+              "strength": "0,1 N",
+              "kind": "water",
+              "tip": "Modifiye uç"
+            },
+            {
+              "content": "NaOH",
+              "amount": "50–100 mL",
+              "strength": "0,1 N",
+              "kind": "water",
+              "tip": "Modifiye uç"
+            },
+            {
+              "content": "Boş",
+              "amount": "Sıvı eklenmez",
+              "strength": "",
+              "kind": "empty",
+              "tip": "Modifiye uç"
+            },
+            {
+              "content": "Silika jel",
+              "amount": "Doğrulanmış kütle (g)",
+              "strength": "",
+              "kind": "silica",
+              "tip": "Modifiye uç"
+            }
+          ],
+          "steps": [
+            "Düşük debide kararlı çekişi ayarla ve numune boyunca hedef debiyi koru.",
+            "Prob ve filtreyi 150 °C veya çiğlenme noktasının 20 °C üstüne ayarla; yüksek olan sıcaklığı esas al."
+          ],
+          "note": "NaOH başlangıç hacmini kullanılan şişe ve doğrulanmış yöntem planına göre seç. Bu kimya EPA 13A saf su treni değildir.",
+          "vesselType": "Greenburg–Smith",
+          "branch": false,
+          "inlet": "Isıtmalı prob → filtre → tren",
+          "filterAfter": 0,
+          "visual": null
+        },
+        {
+          "name": "ISO 15713 • İzokinetik",
+          "method": "ISO 15713",
+          "sampling": "İzokinetik örnekleme",
+          "flow": "Nozul ve yerel baca hızına göre",
+          "condition": "Damlacık/nem koşullarında temsil edici izokinetik numune alma.",
+          "bottles": [
+            {
+              "content": "NaOH",
+              "amount": "50–100 mL",
+              "strength": "0,1 N",
+              "kind": "water",
+              "tip": "Modifiye uç"
+            },
+            {
+              "content": "NaOH",
+              "amount": "50–100 mL",
+              "strength": "0,1 N",
+              "kind": "water",
+              "tip": "Modifiye uç"
+            },
+            {
+              "content": "Boş",
+              "amount": "Sıvı eklenmez",
+              "strength": "",
+              "kind": "empty",
+              "tip": "Modifiye uç"
+            },
+            {
+              "content": "Silika jel",
+              "amount": "Doğrulanmış kütle (g)",
+              "strength": "",
+              "kind": "silica",
+              "tip": "Modifiye uç"
+            }
+          ],
+          "steps": [
+            "TS ISO 9096 esaslarına göre yerel hız ve nozuldan çekişi ayarla; bütün travers noktalarını örnekle.",
+            "Prob ve filtreyi 150 °C veya çiğlenme noktasının 20 °C üstüne ayarla; yüksek olan sıcaklığı esas al."
+          ],
+          "note": "NaOH başlangıç hacmini kullanılan şişe ve doğrulanmış yöntem planına göre seç. Bu kimya EPA 13A saf su treni değildir.",
+          "vesselType": "Greenburg–Smith",
+          "branch": false,
+          "inlet": "Isıtmalı prob → filtre → tren",
+          "filterAfter": 0,
+          "visual": null
+        }
+      ],
+      "visual": null
+    },
+    {
+      "id": "halojen",
+      "title": "Klor / Halojen",
+      "method": "EPA Method 26A / EPA Method 26",
+      "domain": "Emisyon",
+      "sections": [
+        {
+          "title": "Bu ölçüm neden yapılır?",
+          "items": [
+            "Hidrojen halojenürleri asidik çözeltide, halojenleri bazik çözeltide ayrı toplayarak analiz etmek için yapılır."
+          ],
+          "ordered": false
+        },
+        {
+          "title": "Gerekli malzemeler",
+          "items": [
+            "Seçilen yönteme uygun cam/PTFE gaz temas yüzeyleri, prob ve filtre.",
+            "H₂SO₄ ve NaOH çözeltileri; ayrı asit/baz numune kapları, buz banyosu ve nem tutucu.",
+            "İzokinetik veya düşük debili örnekleyici; şişe kapasitesi seçili görselde belirtilmiştir."
+          ],
+          "ordered": false
+        },
+        {
+          "title": "Parametreye özgü hazırlık",
+          "items": [
+            "Gaz fazı ile damlacık/partikül kapsamını ve kaynak nemini değerlendir; yöntemi ve uygun treni seç.",
+            "Absorpsiyon çözeltilerini ayrı hazırla; asit ile baz fraksiyonunu birleştirme.",
+            "Doymuş gazda filtrenin sıvıyla yüklenmesini önleyecek uygun siklonu prob ile filtre arasına yerleştir."
+          ],
+          "ordered": true
+        },
+        {
+          "title": "Ölçümün uygulanması",
+          "items": [
+            "Seçili trenin özel adımlarını uygula; debi, gaz hacmi ve sıcaklıkları nokta/süreyle birlikte kaydet.",
+            "Şişe taşması, sıvı sürüklenmesi ve nem tutucunun doygunluğunu izle.",
+            "Sistem sökülmeden önce son kaçak kontrolünü ve tüm fraksiyonların geri kazanımını tamamla."
+          ],
+          "ordered": true
+        },
+        {
+          "title": "EPA 26A ortak uygulama koşulları",
+          "items": [
+            "Travers, yerel hız ve nozul seçimiyle izokinetik çekişi ayarla; filtre öncesi yoğuşmayı önle.",
+            "Prob ve filtreyi 120–134 °C aralığında tut; asit/baz bölümlerinde gaz temasını ve taşmayı izle."
+          ],
+          "ordered": true
+        },
+        {
+          "title": "Dikkat edilecek noktalar",
+          "items": [
+            "EPA 26 sabit debili, EPA 26A izokinetik yöntemdir; birinin şişe hacimlerini diğerine taşıma.",
+            "Numune hacmi tayin sınırından hesaplanırken mL, L ve Nm³ birimlerini tutarlı kullan.",
+            "LOD 0,3 mg/L, sıvı 0,3 L ve hedef 1 mg/Nm³ için gerekli hacim 0,09 Nm³’tür."
+          ],
+          "ordered": false
+        },
+        {
+          "title": "Ölçüm sonrası ve numune işlemleri",
+          "items": [
+            "Konum numarası yerine reaktife göre geri kazan: varsa ön kapanla birlikte asitli şişeleri asit fraksiyonuna, bazlı şişeleri baz fraksiyonuna al.",
+            "Baz fraksiyonundaki sodyum tiyosülfat eklemesini beklenen halojen miktarına göre analiz planıyla eşleştir.",
+            "26A’da nem birlikte belirlenecekse başlangıç/son çözelti hacimleri ve silika jel kütlelerini kaydet; varsa toz fraksiyonunu ayrı tut.",
+            "26 gaz fazı numunesinde toz/nem fraksiyonu oluşturma; reaktif tanıklarını uygun ayrı kaplarda gönder."
+          ],
+          "ordered": true
+        }
+      ],
+      "trains": [
+        {
+          "name": "EPA 26A • Yüksek nem",
+          "method": "EPA Method 26A",
+          "sampling": "İzokinetik örnekleme",
+          "flow": "Nozul ve yerel baca hızına göre",
+          "condition": "Yüksek nemde öne kondensat kapanı eklenir; altı şişeli düzen.",
+          "bottles": [
+            {
+              "content": "H₂SO₄",
+              "amount": "50 mL",
+              "strength": "0,1 N",
+              "kind": "water",
+              "tip": "Kısa saplı modifiye uç"
+            },
+            {
+              "content": "H₂SO₄",
+              "amount": "100 mL",
+              "strength": "0,1 N",
+              "kind": "water",
+              "tip": "Standart Greenburg–Smith uç"
+            },
+            {
+              "content": "H₂SO₄",
+              "amount": "100 mL",
+              "strength": "0,1 N",
+              "kind": "water",
+              "tip": "Standart Greenburg–Smith uç"
+            },
+            {
+              "content": "NaOH",
+              "amount": "100 mL",
+              "strength": "0,1 N",
+              "kind": "water",
+              "tip": "Modifiye uç"
+            },
+            {
+              "content": "NaOH",
+              "amount": "100 mL",
+              "strength": "0,1 N",
+              "kind": "water",
+              "tip": "Modifiye uç"
+            },
+            {
+              "content": "Silika jel",
+              "amount": "200–300 g",
+              "strength": "",
+              "kind": "silica",
+              "tip": "Modifiye uç"
+            }
+          ],
+          "steps": [
+            "Ön kapan dolarsa fraksiyonu kaybetmeden geri kazan; yenilenen başlangıç çözeltisini nem hesabında ayrıca kaydet."
+          ],
+          "note": "",
+          "vesselType": "Greenburg–Smith",
+          "branch": false,
+          "inlet": "Isıtmalı prob → filtre → tren",
+          "filterAfter": 0,
+          "visual": null
+        },
+        {
+          "name": "EPA 26A • Temel düzen",
+          "method": "EPA Method 26A",
+          "sampling": "İzokinetik örnekleme",
+          "flow": "Nozul ve yerel baca hızına göre",
+          "condition": "Ön kondensat kapanına ihtiyaç duyulmayan koşullarda beş şişeli düzen.",
+          "bottles": [
+            {
+              "content": "H₂SO₄",
+              "amount": "100 mL",
+              "strength": "0,1 N",
+              "kind": "water",
+              "tip": "Standart Greenburg–Smith uç"
+            },
+            {
+              "content": "H₂SO₄",
+              "amount": "100 mL",
+              "strength": "0,1 N",
+              "kind": "water",
+              "tip": "Standart Greenburg–Smith uç"
+            },
+            {
+              "content": "NaOH",
+              "amount": "100 mL",
+              "strength": "0,1 N",
+              "kind": "water",
+              "tip": "Modifiye uç"
+            },
+            {
+              "content": "NaOH",
+              "amount": "100 mL",
+              "strength": "0,1 N",
+              "kind": "water",
+              "tip": "Modifiye uç"
+            },
+            {
+              "content": "Silika jel",
+              "amount": "200–300 g",
+              "strength": "",
+              "kind": "silica",
+              "tip": "Modifiye uç"
+            }
+          ],
+          "steps": [
+            "Ön kapan bulunmayan temel dizilimde gazı iki asitli ve iki bazlı absorpsiyon bölümünden geçir."
+          ],
+          "note": "",
+          "vesselType": "Greenburg–Smith",
+          "branch": false,
+          "inlet": "Isıtmalı prob → filtre → tren",
+          "filterAfter": 0,
+          "visual": null
+        },
+        {
+          "name": "EPA 26 • Sabit debili",
+          "method": "EPA Method 26",
+          "sampling": "Sabit debili örnekleme",
+          "flow": "2 L/dakika • Sapma en fazla ±%10",
+          "condition": "Damlacık/partikül toplamını izokinetik toplama yerine gaz fazı örneklemesi; uygun yöntem kapsamını seç.",
+          "bottles": [
+            {
+              "content": "H₂SO₄",
+              "amount": "15 mL",
+              "strength": "0,1 N",
+              "kind": "water",
+              "tip": "Cüce impinger"
+            },
+            {
+              "content": "H₂SO₄",
+              "amount": "15 mL",
+              "strength": "0,1 N",
+              "kind": "water",
+              "tip": "Cüce impinger"
+            },
+            {
+              "content": "NaOH",
+              "amount": "15 mL",
+              "strength": "0,1 N",
+              "kind": "water",
+              "tip": "Cüce impinger"
+            },
+            {
+              "content": "NaOH",
+              "amount": "15 mL",
+              "strength": "0,1 N",
+              "kind": "water",
+              "tip": "Cüce impinger"
+            },
+            {
+              "content": "Silika jel",
+              "amount": "Doğrulanmış kütle (g)",
+              "strength": "",
+              "kind": "silica",
+              "tip": "Nem tutucu"
+            }
+          ],
+          "steps": [
+            "Düşük debide kararlı çalışan numune pompasını seç; cüce şişeleri buz banyosuna al.",
+            "Hedef debiyi ayarla ve numune boyunca sapmayı izle; 26A nozul/izokinetiklik ayarlarını bu uygulamaya taşıma.",
+            "Bu gaz fazı düzeneğini eşzamanlı toz veya referans nem numunesi olarak kullanma."
+          ],
+          "note": "",
+          "vesselType": "30 mL kapasiteli cüce impingerler",
+          "branch": false,
+          "inlet": "Isıtmalı prob → filtre → tren",
+          "filterAfter": 0,
+          "visual": null
+        }
+      ],
+      "visual": null
+    },
+    {
+      "id": "metal-epa",
+      "title": "Ağır metal • EPA",
+      "method": "EPA Method 29",
+      "domain": "Emisyon",
+      "sections": [
+        {
+          "title": "Bu ölçüm neden yapılır?",
+          "items": [
+            "Partiküle bağlı metalleri filtrede, filtreyi geçen metalleri absorpsiyon çözeltilerinde toplar. Cıva dahil olup olmaması şişe dizilimini değiştirir."
+          ],
+          "ordered": false
+        },
+        {
+          "title": "Gerekli malzemeler",
+          "items": [
+            "Cam/kuvars prob ve uygun nozul, ısıtmalı filtre tutucu, metal blankı düşük filtre.",
+            "HNO₃/H₂O₂ çözeltisi; cıva için asitli KMnO₄ çözeltisi.",
+            "Dört veya yedi şişeli cam tren, silika jel, buz banyosu ve son sıcaklık sensörü.",
+            "Metal bulaştırmayan fırça/pens; asitle temizlenmiş kaplar, geri kazanım için uygun reaktifler."
+          ],
+          "ordered": false
+        },
+        {
+          "title": "Parametreye özgü hazırlık",
+          "items": [
+            "Analiz edilecek metal listesini netleştir; Hg varsa yedi şişeli düzeni seç.",
+            "Cıva dahil sıra: boş → iki 100 mL HNO₃/H₂O₂ → boş → iki 100 mL KMnO₄/H₂SO₄ → silika jel.",
+            "Hg yoksa cıva bölümündeki boş ve iki KMnO₄ şişesini çıkar; ilk nem kapanı kaynak nemine göre korunur.",
+            "Cam yüzeyleri asitle temizlik ve durulama işlemlerinden geçir; metal parçaların numuneyi kirletmesini önle.",
+            "Prob/filtreyi 120 ±14 °C set değerinde hazırla; numune hattının kaçak kontrolünü yap."
+          ],
+          "ordered": true
+        },
+        {
+          "title": "Ölçümün uygulanması",
+          "items": [
+            "Baca hızı ve nemden nozul/izokinetik debiyi hesapla.",
+            "İlk sayaç değerini kaydet ve akışa dönük nozul ile örneklemeyi başlat.",
+            "Her seçilmiş noktada eşit süre çalış; toplam süreyi hedef hacim ve tayin sınırına göre doğrula. Rutin talimatta 30 dakika ve üç ayrı numune vardır.",
+            "%90–110 izokinetiklik aralığını koru.",
+            "Cıva numunesinde permanganat şişelerindeki rengi ve sıvı taşınmasını izle.",
+            "Nihai sayaç, sıcaklık, kaçak ve bütün fraksiyonları kaydet."
+          ],
+          "ordered": true
+        },
+        {
+          "title": "Dikkat edilecek noktalar",
+          "items": [
+            "Asitli H₂O₂ ile asitli KMnO₄ fraksiyonlarını karıştırma.",
+            "Mn tayini yapılacak numune yüzeylerine permanganat bulaştırma.",
+            "Ön taraftaki metal fırça veya bağlantı kirlenmesi düşük derişimde sonucu belirgin etkiler.",
+            "Şahit sonucu emisyon limitinin %10’unu aşarsa numune geçerliliğini değerlendir; laboratuvar talimatı yenileme ister.",
+            "Son şişe çıkış sıcaklığı ve nem tutucunun durumunu kaydet."
+          ],
+          "ordered": false
+        },
+        {
+          "title": "Ölçüm sonrası ve numune işlemleri",
+          "items": [
+            "Filtreyi ayrı kaba al; varsa gravimetrik toz/aseton fraksiyonunu ayrı tut.",
+            "Nozul/prob/filtre ön bölümünü tanımlı HNO₃ durulamasıyla geri kazan.",
+            "İlk üç şişe fraksiyonunu ve Hg öncesi boş şişeyi ayrı tanımla.",
+            "İki permanganat şişesini ilgili cıva kabına aktar; yöntemdeki permanganat/su/HCl durulama fraksiyonlarını karıştırmadan uygula.",
+            "Aseton, HNO₃, su, HNO₃/H₂O₂ ve KMnO₄ çözeltilerinin reaktif şahitlerini ve filtre şahidini gönder."
+          ],
+          "ordered": true
+        }
+      ],
+      "trains": [
+        {
+          "name": "Cıva dahil • Yedi şişe",
+          "bottles": [
+            {
+              "content": "Boş",
+              "amount": "Sıvı eklenmez",
+              "strength": "",
+              "kind": "empty",
+              "tip": "Modifiye uç"
+            },
+            {
+              "content": "HNO₃ / H₂O₂",
+              "amount": "100 mL",
+              "strength": "%5 / %10",
+              "kind": "water",
+              "tip": "Modifiye uç"
+            },
+            {
+              "content": "HNO₃ / H₂O₂",
+              "amount": "100 mL",
+              "strength": "%5 / %10",
+              "kind": "water",
+              "tip": "Standart Greenburg–Smith uç"
+            },
+            {
+              "content": "Boş",
+              "amount": "Sıvı eklenmez",
+              "strength": "",
+              "kind": "empty",
+              "tip": "Modifiye uç"
+            },
+            {
+              "content": "KMnO₄ / H₂SO₄",
+              "amount": "100 mL",
+              "strength": "%4 / %10",
+              "kind": "purple",
+              "tip": "Modifiye uç"
+            },
+            {
+              "content": "KMnO₄ / H₂SO₄",
+              "amount": "100 mL",
+              "strength": "%4 / %10",
+              "kind": "purple",
+              "tip": "Modifiye uç"
+            },
+            {
+              "content": "Silika jel",
+              "amount": "200–300 g",
+              "strength": "",
+              "kind": "silica",
+              "tip": "Modifiye uç"
+            }
+          ],
+          "note": "Buz banyosunda soğut.",
+          "method": "EPA Method 29",
+          "sampling": "İzokinetik örnekleme",
+          "flow": "Nozul ve yerel baca hızına göre",
+          "condition": "Hedef metal listesi cıvayı da içeriyorsa.",
+          "vesselType": "Greenburg–Smith",
+          "steps": [],
+          "branch": false,
+          "inlet": "Isıtmalı prob → filtre → tren",
+          "filterAfter": 0,
+          "visual": null
+        },
+        {
+          "name": "Cıva hariç • İlk nem kapanı korunmuş",
+          "bottles": [
+            {
+              "content": "Boş",
+              "amount": "Sıvı eklenmez",
+              "strength": "",
+              "kind": "empty",
+              "tip": "Modifiye uç"
+            },
+            {
+              "content": "HNO₃ / H₂O₂",
+              "amount": "100 mL",
+              "strength": "%5 / %10",
+              "kind": "water",
+              "tip": "Modifiye uç"
+            },
+            {
+              "content": "HNO₃ / H₂O₂",
+              "amount": "100 mL",
+              "strength": "%5 / %10",
+              "kind": "water",
+              "tip": "Standart Greenburg–Smith uç"
+            },
+            {
+              "content": "Silika jel",
+              "amount": "200–300 g",
+              "strength": "",
+              "kind": "silica",
+              "tip": "Modifiye uç"
+            }
+          ],
+          "note": "Buz banyosunda soğut.",
+          "method": "EPA Method 29",
+          "sampling": "İzokinetik örnekleme",
+          "flow": "Nozul ve yerel baca hızına göre",
+          "condition": "Cıva analizi yapılmıyorsa; gösterilen varyant ön nem kapanını korur.",
+          "vesselType": "Greenburg–Smith",
+          "steps": [],
+          "branch": false,
+          "inlet": "Isıtmalı prob → filtre → tren",
+          "filterAfter": 0,
+          "visual": null
+        }
+      ],
+      "visual": null
+    },
+    {
+      "id": "metal-en",
+      "title": "Ağır metal • EN",
+      "method": "EN 14385",
+      "domain": "Emisyon",
+      "sections": [
+        {
+          "title": "Bu ölçüm neden yapılır?",
+          "items": [
+            "As, Cd, Co, Cr, Cu, Mn, Ni, Pb, Sb, Tl ve V gibi metalleri izokinetik filtre/absorpsiyon örneklemesiyle belirlemek için uygulanır."
+          ],
+          "ordered": false
+        },
+        {
+          "title": "Gerekli malzemeler",
+          "items": [
+            "Cam/kuvars gaz temas yüzeyleri; izokinetik örnekleyici ve uygun filtre.",
+            "HNO₃/H₂O₂ çözeltisi, temiz şişeler ve geri kazanım kapları.",
+            "Yan akış gerekiyorsa ayrı debi ölçümü ve izokinetik ana sistem."
+          ],
+          "ordered": false
+        },
+        {
+          "title": "Parametreye özgü hazırlık",
+          "items": [
+            "Analit listesinde cıva isteniyorsa uygun Hg yöntemini ayrıca seç; EN 14385 tek başına cıva yöntemi değildir.",
+            "Tam veya yan akış seçimini ana debi ve beklenen absorpsiyon verimiyle belirle.",
+            "Numune temas eden malzemelerin metal bulaşmasına yol açmadığını kontrol et."
+          ],
+          "ordered": true
+        },
+        {
+          "title": "Ölçümün uygulanması",
+          "items": [
+            "Hız, sıcaklık ve nem verilerinden izokinetik şartları oluştur.",
+            "Bütün travers noktalarında eşit süre örnekle.",
+            "Çekişi, gaz hacmini ve absorpsiyon şişelerinin durumunu kaydet.",
+            "Şahit numuneyi gaz geçirmeden aynı toplama işlemleriyle al."
+          ],
+          "ordered": true
+        },
+        {
+          "title": "Dikkat edilecek noktalar",
+          "items": [
+            "Son absorpsiyon şişesi ayrı analiz edilir; son şişe miktarı toplamın %10’undan küçük olmalıdır.",
+            "Reaktif şahit ile saha tanığının amacı ve sonuç düzeltmesi EPA 29 ile aynı kabul edilmez.",
+            "Laboratuvarın EPA 29 cıva düzeniyle EN treninin şişe sayısını karıştırma."
+          ],
+          "ordered": false
+        },
+        {
+          "title": "Ölçüm sonrası ve numune işlemleri",
+          "items": [
+            "Absorpsiyon çözeltisiyle gaz temas yüzeylerini durula.",
+            "Son absorpsiyon şişesini ayrı kapta sakla; emicilik kontrolü için diğerlerine birleştirme.",
+            "Numuneleri serin, sızdırmaz ve bulaşmadan korunmuş biçimde laboratuvara ilet."
+          ],
+          "ordered": true
+        }
+      ],
+      "trains": [
+        {
+          "name": "Yan akışsız EN laboratuvar düzeni",
+          "bottles": [
+            {
+              "content": "HNO₃ / H₂O₂",
+              "amount": "100 mL",
+              "strength": "%5 / %10",
+              "kind": "water",
+              "tip": "Modifiye uç"
+            },
+            {
+              "content": "HNO₃ / H₂O₂",
+              "amount": "100 mL",
+              "strength": "%5 / %10",
+              "kind": "water",
+              "tip": "Modifiye uç"
+            },
+            {
+              "content": "HNO₃ / H₂O₂",
+              "amount": "100 mL",
+              "strength": "%5 / %10",
+              "kind": "water",
+              "tip": "Modifiye uç"
+            },
+            {
+              "content": "Boş",
+              "amount": "Sıvı eklenmez",
+              "strength": "",
+              "kind": "empty",
+              "tip": "Modifiye uç"
+            },
+            {
+              "content": "Silika jel",
+              "amount": "200 g",
+              "strength": "",
+              "kind": "silica",
+              "tip": "Modifiye uç"
+            }
+          ],
+          "note": "Buz banyosunda soğut.",
+          "method": "EN 14385",
+          "sampling": "İzokinetik örnekleme",
+          "flow": "Nozul ve yerel baca hızına göre",
+          "condition": "Yan akış kullanılmadan bütün örnek gazı absorpsiyon bölümünden geçirilir.",
+          "vesselType": "Greenburg–Smith",
+          "steps": [],
+          "branch": false,
+          "inlet": "Isıtmalı prob → filtre → tren",
+          "filterAfter": 0,
+          "visual": null
+        },
+        {
+          "name": "EN 14385 • Yan akış",
+          "method": "EN 14385",
+          "sampling": "Yan akışlı izokinetik örnekleme",
+          "flow": "Ana/yan akış oranı: ±%10 içinde sabit",
+          "condition": "Tam akışta absorpsiyon verimi yetersiz kaldığında filtre sonrası yan kol.",
+          "bottles": [
+            {
+              "content": "HNO₃ / H₂O₂",
+              "amount": "Doğrulanmış hacim (mL)",
+              "strength": "Hazırlama planına göre",
+              "kind": "water",
+              "tip": "Modifiye uç"
+            },
+            {
+              "content": "HNO₃ / H₂O₂",
+              "amount": "Doğrulanmış hacim (mL)",
+              "strength": "Hazırlama planına göre",
+              "kind": "water",
+              "tip": "Modifiye uç"
+            },
+            {
+              "content": "Boş",
+              "amount": "Sıvı eklenmez",
+              "strength": "",
+              "kind": "empty",
+              "tip": "Modifiye uç"
+            },
+            {
+              "content": "Silika jel",
+              "amount": "Doğrulanmış kütle (g)",
+              "strength": "",
+              "kind": "silica",
+              "tip": "Modifiye uç"
+            }
+          ],
+          "steps": [
+            "Filtre sonrası T bağlantısını kur; ana izokinetik akışı absorpsiyon kolundan ayır.",
+            "Yan kolun hacmini ayrı ölç ve akış oranını koru; son absorpsiyon şişesini ayrı analiz için topla."
+          ],
+          "note": "Bu yan akış seçeneğinde iki absorpsiyon şişesi kullanılır; sabit dolum miktarı tanımlanmadığından tam akış dolumu otomatik kopyalanmaz.",
+          "vesselType": "Greenburg–Smith",
+          "branch": true,
+          "inlet": "Isıtmalı prob → filtre → tren",
+          "filterAfter": 0,
+          "visual": null
+        }
+      ],
+      "visual": null
+    },
+    {
+      "id": "formaldehit",
+      "title": "Formaldehit",
+      "method": "EPA Method 323 / EPA Method 316",
+      "domain": "Emisyon",
+      "sections": [
+        {
+          "title": "Bu ölçüm neden yapılır?",
+          "items": [
+            "Gaz hâlindeki formaldehiti suda tutup asetil aseton tepkimesi sonrasında spektrofotometrik olarak belirlemek için yapılır."
+          ],
+          "ordered": false
+        },
+        {
+          "title": "Gerekli malzemeler",
+          "items": [
+            "Seçili yönteme uygun prob, cam/PTFE bağlantılar, buz banyosu ve gaz hacmi/debi ölçümü.",
+            "Sabit debili uygulamada düşük debili çekiş ve VOA kabı; izokinetik uygulamada nozul, filtre sistemi ve ayrı geniş ağızlı toplama kapları."
+          ],
+          "ordered": false
+        },
+        {
+          "title": "Parametreye özgü hazırlık",
+          "items": [
+            "Analiz planından EPA 323 veya EPA 316’yı seç; numune kabını ve toplama sistemini bu seçime göre hazırla.",
+            "EPA 323’te ısıtılmış hat zorunlu değildir; yöntemin %2 kaçak sınırını doğrula.",
+            "İzokinetik uygulamada hız/nem verilerinden nozul planını oluştur."
+          ],
+          "ordered": true
+        },
+        {
+          "title": "Ölçümün uygulanması",
+          "items": [
+            "Seçili yöntemin özel adımlarını uygula.",
+            "Örnekleme boyunca sıvı kaybı, taşınma, sıcaklık ve toplam gaz hacmini izle."
+          ],
+          "ordered": true
+        },
+        {
+          "title": "Dikkat edilecek noktalar",
+          "items": [
+            "Asetaldehit, aminler, polimerler, periyodat/sülfitler analitik girişime neden olabilir.",
+            "Blank en düşük kalibrasyon standardının %50’sini aşıyorsa numuneyi şüpheli kabul et; geri kazanım kriteri %80–120’dir."
+          ],
+          "ordered": false
+        },
+        {
+          "title": "Ölçüm sonrası ve numune işlemleri",
+          "items": [
+            "Seçili yöntemin geri kazanım adımlarına göre fraksiyonları topla; başlangıç su miktarı ile kap kapasitesini ayır.",
+            "Soğuk ve karanlık taşı, bekletmeden analize ilet.",
+            "EPA 323 analizi asetil aseton reaksiyonu ve 412 nm okumayı; EPA 316 kendi kolorimetrik analizini kullanır."
+          ],
+          "ordered": true
+        }
+      ],
+      "trains": [
+        {
+          "name": "EPA 323 • Cüce şişeler",
+          "bottles": [
+            {
+              "content": "Boş",
+              "amount": "Sıvı eklenmez",
+              "strength": "",
+              "kind": "empty",
+              "tip": "Cüce impinger"
+            },
+            {
+              "content": "Deiyonize su",
+              "amount": "20 mL",
+              "strength": "",
+              "kind": "water",
+              "tip": "Cüce impinger"
+            },
+            {
+              "content": "Silika jel",
+              "amount": "Ön tartımı yapılmış",
+              "strength": "",
+              "kind": "silica",
+              "tip": "Nem tutucu"
+            }
+          ],
+          "note": "Buz banyosunda soğut.",
+          "method": "EPA Method 323",
+          "sampling": "Sabit debili örnekleme",
+          "flow": "0,2–0,4 L/dakika",
+          "condition": "Düşük debili gaz fazı formaldehit numunesi.",
+          "vesselType": "Cüce impingerler",
+          "steps": [
+            "Beklenen derişime göre debiyi seç; bilgi yoksa 0,4 L/dakika başlangıcını kullan.",
+            "Her noktada en az iki dakika çalış; debiyi 5–10 dakikada bir kaydet.",
+            "Hattı en fazla 10 mL suyla durula; absorpsiyon ve varsa ön şişe kondensatını 40 mL VOA kabına geri kazan."
+          ],
+          "branch": false,
+          "inlet": "Isıtmalı prob → filtre → tren",
+          "filterAfter": 0,
+          "visual": null
+        },
+        {
+          "name": "EPA 316 • İzokinetik",
+          "method": "EPA Method 316",
+          "sampling": "İzokinetik örnekleme",
+          "flow": "Çekiş en fazla 28 L/dakika",
+          "condition": "EPA 5 esaslı izokinetik toplama; EPA 323 ile numune kabı/hacimlerini karıştırma.",
+          "bottles": [
+            {
+              "content": "Saf su",
+              "amount": "100 mL",
+              "strength": "",
+              "kind": "water",
+              "tip": "Modifiye uç"
+            },
+            {
+              "content": "Saf su",
+              "amount": "100 mL",
+              "strength": "",
+              "kind": "water",
+              "tip": "Standart Greenburg–Smith uç"
+            },
+            {
+              "content": "Boş",
+              "amount": "Sıvı eklenmez",
+              "strength": "",
+              "kind": "empty",
+              "tip": "Modifiye uç"
+            },
+            {
+              "content": "Silika jel",
+              "amount": "200–300 g",
+              "strength": "",
+              "kind": "silica",
+              "tip": "Modifiye uç"
+            }
+          ],
+          "steps": [
+            "Yerel hıza göre nozul seç; izokinetikliği ve çekiş üst sınırını birlikte sağlayacak plan oluştur.",
+            "İlk üç şişeyi, prob ve bağlantıların durulamalarını tanımlı sıvı fraksiyonunda topla; toplam geri kazanım hacmi 400 mL’yi aşmasın.",
+            "Silika jel ve saha tanığını ayrı kaplara al; mikrobiyal girişim varsa koruma işlemini analiz planına göre uygula."
+          ],
+          "note": "",
+          "vesselType": "Greenburg–Smith",
+          "branch": false,
+          "inlet": "Isıtmalı prob → filtre → tren",
+          "filterAfter": 0,
+          "visual": null
+        }
+      ],
+      "visual": null
+    },
+    {
+      "id": "hcn",
+      "title": "Hidrojen siyanür • HCN",
+      "method": "CARB Method 426",
+      "domain": "Emisyon",
+      "sections": [
+        {
+          "title": "Bu ölçüm neden yapılır?",
+          "items": [
+            "Siyanürü alkalik çözeltide tutup laboratuvarda analiz ederek baca gazındaki derişimini belirlemek için yapılır."
+          ],
+          "ordered": false
+        },
+        {
+          "title": "Gerekli malzemeler",
+          "items": [
+            "İzokinetik örnekleyici, ısıtmalı cam prob, yöntem filtresi.",
+            "Dört cam impinger; 0,1 N NaOH, silika jel ve buz banyosu.",
+            "Numune kapları, NaOH ile geri kazanım ve koruma reaktifleri."
+          ],
+          "ordered": false
+        },
+        {
+          "title": "Parametreye özgü hazırlık",
+          "items": [
+            "İlk iki şişeye 100’er mL 0,1 N NaOH ekle; üçüncüyü boş bırak, dördüncüye 200–300 g silika jel koy.",
+            "Gazın şişelere giriş sıcaklığını 42 °C’nin altında tutacak soğutmayı kur.",
+            "Yönteme uygun filtreyi hazırlayıp ısıtmalı probu kur.",
+            "Kaçak kontrolünü uygula; debiye bağlı daha sıkı sınır varsa onu esas al."
+          ],
+          "ordered": true
+        },
+        {
+          "title": "Ölçümün uygulanması",
+          "items": [
+            "Hız ve nozuldan izokinetik debiyi belirle.",
+            "Her travers noktasında en az iki dakika örnekle.",
+            "Şişeleri soğuk banyoda tut; alkalik çözelti kaybını ve taşmayı izle.",
+            "Debi, gaz hacmi ve sıcaklıkları kaydet.",
+            "Numune bitince gaz temas yüzeylerini belirtilen alkalik durulama prosedürüyle geri kazan."
+          ],
+          "ordered": true
+        },
+        {
+          "title": "Dikkat edilecek noktalar",
+          "items": [
+            "Numunenin alkalik kalması önemlidir; koruma işleminde pH >12 koşulunu doğrula.",
+            "Siyanür numunesini gelişigüzel asitleştirme; saha koruma kimyası laboratuvar prosedürüyle eşleşmelidir.",
+            "Ön/arka fraksiyonları ve şahidi ayrı tanımla; ölçüm gazının kütlesel debisi için hız/sıcaklık/nem verilerini al."
+          ],
+          "ordered": false
+        },
+        {
+          "title": "Ölçüm sonrası ve numune işlemleri",
+          "items": [
+            "Nozulu 50 mL 0,1 N NaOH ile durula; talimattaki koruma işlemini uygula.",
+            "Prob/bağlantı fraksiyonunu ayrı geri kazan; impinger fraksiyonunu 30 mL 0,1 N NaOH durulamasıyla topla.",
+            "Şahit kabını ayır; numuneleri mümkün olduğunca soğuk tutarak laboratuvara ulaştır."
+          ],
+          "ordered": true
+        }
+      ],
+      "trains": [
+        {
+          "name": "Siyanür • Alkalik toplama",
+          "bottles": [
+            {
+              "content": "NaOH",
+              "amount": "100 mL",
+              "strength": "0,1 N",
+              "kind": "water",
+              "tip": "Modifiye uç"
+            },
+            {
+              "content": "NaOH",
+              "amount": "100 mL",
+              "strength": "0,1 N",
+              "kind": "water",
+              "tip": "Modifiye uç"
+            },
+            {
+              "content": "Boş",
+              "amount": "Sıvı eklenmez",
+              "strength": "",
+              "kind": "empty",
+              "tip": "Modifiye uç"
+            },
+            {
+              "content": "Silika jel",
+              "amount": "200–300 g",
+              "strength": "",
+              "kind": "silica",
+              "tip": "Modifiye uç"
+            }
+          ],
+          "note": "Buz banyosunda soğut.",
+          "method": "CARB Method 426",
+          "sampling": "İzokinetik örnekleme",
+          "flow": "Nozul ve yerel baca hızına göre",
+          "condition": "Alkalik çözeltide siyanür toplama; kaynak kimyası ve pH planına göre.",
+          "vesselType": "Greenburg–Smith",
+          "steps": [],
+          "branch": false,
+          "inlet": "Isıtmalı prob → filtre → tren",
+          "filterAfter": 0,
+          "visual": null
+        }
+      ],
+      "visual": null
+    },
+    {
+      "id": "h2s",
+      "title": "Hidrojen sülfür • H₂S",
+      "method": "EPA Method 11",
+      "domain": "Emisyon",
+      "sections": [
+        {
+          "title": "Bu ölçüm neden yapılır?",
+          "items": [
+            "H₂S’yi kadmiyum sülfat çözeltisinde tutup iyodometrik analizle belirlemek için uygulanır."
+          ],
+          "ordered": false
+        },
+        {
+          "title": "Gerekli malzemeler",
+          "items": [
+            "Düşük debili çekiş sistemi, cam/PTFE prob ve beş cüce impinger.",
+            "%3 H₂O₂, CdSO₄ absorpsiyon çözeltisi, buz banyosu ve nem koruması."
+          ],
+          "ordered": false
+        },
+        {
+          "title": "Parametreye özgü hazırlık",
+          "items": [
+            "İlk şişeye 15 mL %3 H₂O₂ koy; ikinciyi boş bırak; üçüncü, dördüncü ve beşinciye 15’er mL CdSO₄ çözeltisi koy.",
+            "Kadmiyum sülfat çözeltisinin pH 3±1 koşulunu ve hazır reaktifin uygunluğunu doğrula.",
+            "Şişeleri soğuk banyoya yerleştir; nem tutma ekipmanını hazırla.",
+            "Hattın sızdırmazlığını ve düşük debide kararlı çekişi kontrol et."
+          ],
+          "ordered": true
+        },
+        {
+          "title": "Ölçümün uygulanması",
+          "items": [
+            "Gazı ilk peroksit şişesinden, boş koruma şişesinden ve CdSO₄ şişelerinden sırayla geçir.",
+            "Örnekleme debisini yaklaşık 1 L/dakika seç; talimattaki on dakika süreyi uygula.",
+            "Başlangıç/bitiş hacim ve sıcaklıkları kaydet.",
+            "Şişelerde taşma, kabarcık ve çözelti rengini izle."
+          ],
+          "ordered": true
+        },
+        {
+          "title": "Dikkat edilecek noktalar",
+          "items": [
+            "H₂S, CdSO₄ çözeltisinde CdS olarak tutulur. İlk peroksit fraksiyonu H₂S numunesiyle karıştırılmaz.",
+            "Kadmiyum içeren reaktif ve atıkları uygun kimyasal atık prosedürüyle yönet.",
+            "Sülfür bileşikleri girişim yapabilir; yöntem ön tutma şişesini atlama."
+          ],
+          "ordered": false
+        },
+        {
+          "title": "Ölçüm sonrası ve numune işlemleri",
+          "items": [
+            "Üç CdSO₄ şişesinin numunesini ilgili fraksiyonda topla.",
+            "Talimattaki asitlendirilmiş iyotla sabitleme/reaksiyon işlemini laboratuvar hazırlığıyla eşleştir.",
+            "Şahit CdSO₄ çözeltisini ayrı tanımla; taşıma ve analiz gecikmesini azalt."
+          ],
+          "ordered": true
+        }
+      ],
+      "trains": [
+        {
+          "name": "H₂S • Beş cüce şişe",
+          "bottles": [
+            {
+              "content": "H₂O₂",
+              "amount": "15 mL",
+              "strength": "%3",
+              "kind": "water",
+              "tip": "Modifiye uç"
+            },
+            {
+              "content": "Boş",
+              "amount": "Sıvı eklenmez",
+              "strength": "",
+              "kind": "empty",
+              "tip": "Modifiye uç"
+            },
+            {
+              "content": "CdSO₄",
+              "amount": "15 mL",
+              "strength": "pH 3 ±1",
+              "kind": "water",
+              "tip": "Modifiye uç"
+            },
+            {
+              "content": "CdSO₄",
+              "amount": "15 mL",
+              "strength": "pH 3 ±1",
+              "kind": "water",
+              "tip": "Modifiye uç"
+            },
+            {
+              "content": "CdSO₄",
+              "amount": "15 mL",
+              "strength": "pH 3 ±1",
+              "kind": "water",
+              "tip": "Modifiye uç"
+            }
+          ],
+          "note": "Buz banyosunda soğut.",
+          "method": "EPA Method 11",
+          "sampling": "Sabit debili örnekleme",
+          "flow": "Yaklaşık 1 L/dakika",
+          "condition": "H₂S için ön arıtma ve CdSO₄ toplama; talimatta 10 dakika.",
+          "vesselType": "Cüce impingerler",
+          "steps": [],
+          "branch": false,
+          "inlet": "Isıtmalı prob → filtre → tren",
+          "filterAfter": 0,
+          "visual": null
+        }
+      ],
+      "visual": null
+    },
+    {
+      "id": "sulfurik",
+      "title": "Sülfürik asit / SO₃ / SO₂",
+      "method": "EPA Method 8",
+      "domain": "Emisyon",
+      "sections": [
+        {
+          "title": "Bu ölçüm neden yapılır?",
+          "items": [
+            "Asit sisi/SO₃ fraksiyonunu izopropanol bölümünde, SO₂’yi peroksit bölümünde ayrı toplamak için yapılır."
+          ],
+          "ordered": false
+        },
+        {
+          "title": "Gerekli malzemeler",
+          "items": [
+            "Isıtmalı borosilikat/kuvars prob, uygun filtre ve dört cam impinger.",
+            "%80 izopropanol, günlük hazırlanmış %3 H₂O₂ ve silika jel.",
+            "Buz banyosu ve son şişe sıcaklık sensörü; ayrı fraksiyon kapları."
+          ],
+          "ordered": false
+        },
+        {
+          "title": "Parametreye özgü hazırlık",
+          "items": [
+            "İlk şişeye 100 mL %80 izopropanol, ikinci/üçüncüye 100’er mL %3 H₂O₂, dördüncüye 200 g silika jel yerleştir.",
+            "Filtreyi seçilen yöntem düzeninde birinci ve ikinci şişe arasındaki fraksiyon ayrımını koruyacak şekilde kur.",
+            "Probun yoğuşma önleyici 120 °C ısıtmasını hazırla; en az on dakika ısınma payı bırak.",
+            "Şişeleri buz banyosuna al ve numune alma tertibatı tanığını hazırla."
+          ],
+          "ordered": true
+        },
+        {
+          "title": "Ölçümün uygulanması",
+          "items": [
+            "İzokinetik örneklemeye başla; çekişi 30 L/dakikanın üstüne çıkarma.",
+            "Her ölçüm noktasında en az iki dakika örnekle.",
+            "İzopropanol ve peroksit şişelerinde gaz-sıvı temasını, taşma ve soğutmayı izle.",
+            "Hacim, sıcaklık, basınç ve nem bilgilerini kaydet.",
+            "Örnekleme sonunda bütün fraksiyonları ayrı geri kazan."
+          ],
+          "ordered": true
+        },
+        {
+          "title": "Dikkat edilecek noktalar",
+          "items": [
+            "İzopropanol/filtre fraksiyonu ile H₂O₂ fraksiyonunu karıştırma; farklı analitleri temsil ederler.",
+            "%3 H₂O₂ günlük hazırlanır; bütün çözeltilerin lot/uygunluğu kontrol edilir.",
+            "Flor, serbest amonyak ve dimetil anilin girişim oluşturabilir.",
+            "Silika jel nem hesabı için tartılır; absorpsiyon sıvısı gibi numuneye katılmaz."
+          ],
+          "ordered": false
+        },
+        {
+          "title": "Ölçüm sonrası ve numune işlemleri",
+          "items": [
+            "Prob ve ilgili filtre tutucuyu 25 mL %80 izopropanolle durula; ilk fraksiyona ekle ve tanımlı hacme tamamla.",
+            "İkinci/üçüncü şişeleri SO₂ fraksiyonu olarak topla; nihai hacmi kaydet.",
+            "Filtre, reaktif şahit ve silika jel fraksiyonlarını ayrı tanımla.",
+            "Buharlaşmayı önleyen sızdırmaz kaplarla laboratuvara ilet."
+          ],
+          "ordered": true
+        }
+      ],
+      "trains": [
+        {
+          "name": "EPA 8 • Ayrı asit ve SO₂ fraksiyonları",
+          "bottles": [
+            {
+              "content": "İzopropanol",
+              "amount": "100 mL",
+              "strength": "%80",
+              "kind": "water",
+              "tip": "Standart Greenburg–Smith uç"
+            },
+            {
+              "content": "H₂O₂",
+              "amount": "100 mL",
+              "strength": "%3",
+              "kind": "water",
+              "tip": "Modifiye uç"
+            },
+            {
+              "content": "H₂O₂",
+              "amount": "100 mL",
+              "strength": "%3",
+              "kind": "water",
+              "tip": "Standart Greenburg–Smith uç"
+            },
+            {
+              "content": "Silika jel",
+              "amount": "200 g",
+              "strength": "",
+              "kind": "silica",
+              "tip": "Modifiye uç"
+            }
+          ],
+          "note": "Birinci ve üçüncü şişe standart, ikinci ve dördüncü şişe modifiye uçludur. Aradaki filtre tutucuyu ısıtma; probda yoğuşmayı önle.",
+          "method": "EPA Method 8",
+          "sampling": "İzokinetik örnekleme",
+          "flow": "En fazla 30 L/dakika; izokinetiklik korunur",
+          "condition": "Asit sisi/SO₃ ve SO₂ fraksiyonları filtre sınırında ayrılır.",
+          "vesselType": "Greenburg–Smith",
+          "steps": [],
+          "branch": false,
+          "inlet": "Isıtmalı prob → ilk absorber",
+          "filterAfter": 1,
+          "visual": null
+        }
+      ],
+      "visual": null
+    },
+    {
+      "id": "pah",
+      "title": "PAH",
+      "method": "TS ISO 11338-1 • Metot B",
+      "domain": "Emisyon",
+      "sections": [
+        {
+          "title": "Bu ölçüm neden yapılır?",
+          "items": [
+            "Partikül ve gaz fazındaki polisiklik aromatik hidrokarbonları filtre ve reçinede birlikte toplamak için yapılır."
+          ],
+          "ordered": false
+        },
+        {
+          "title": "Gerekli malzemeler",
+          "items": [
+            "Isıtmalı cam/kuvars/titanyum gaz temas yüzeyleri, nozul ve filtre.",
+            "Alüminyum folyo, uygun çözücüyle hazırlanmış cam ekipman, petri ve soğuk taşıma.",
+            "Seçili toplama uygulamasına uygun kondenser, kondensat kabı ve absorpsiyon/adsorpsiyon elemanları."
+          ],
+          "ordered": false
+        },
+        {
+          "title": "Parametreye özgü hazırlık",
+          "items": [
+            "Cam ekipman ve reçinenin laboratuvar temizleme/şartlandırma işlemlerini tamamla; temiz parçaları taşımada kapalı tut.",
+            "Numune alma standardını laboratuvar prosedürüne göre örnekleme öncesi ekle.",
+            "Probun 120 °C ısıtmasını ve filtreyi hazırla.",
+            "1 L toplama şişesini buz banyosuna yerleştir; soğutma 0 °C’nin altına düşmesin. Kondenser çıkış gazı 20 °C altında olacak.",
+            "Bağlantı ve sızıntı kontrolünü yap; kartuş dolumu, cam yünü ve ışık korumasını hazırla."
+          ],
+          "ordered": true
+        },
+        {
+          "title": "Ölçümün uygulanması",
+          "items": [
+            "İzokinetik örneklemeyi başlat ve bütün travers noktalarına eşit süre uygula.",
+            "Ana çekiş 1–6 m³/saat yöntem aralığında planlanır; ana debi ile reçineden geçen debiyi ayrı değerlendir.",
+            "En az bir saat örnekle; beklenen derişim ve tayin sınırı daha yüksek hacim istiyorsa süreyi artır.",
+            "Soğutma çıkışını, kartuş durumunu, debi ve sayaç hacmini izle.",
+            "Tesisin temsil edici çalışma durumunda üç ayrı numune al."
+          ],
+          "ordered": true
+        },
+        {
+          "title": "Dikkat edilecek noktalar",
+          "items": [
+            "Kartuş çapı debiyi belirler. Q(L/dakika) = hız(cm/s) × π × çap²/4 × 0,06. 4 cm iç çap ve 34 cm/s sınırı yaklaşık 25,6 L/dakikadır.",
+            "Bu değer kartuş iç kesiti içindir; dış gövde çapını kullanma.",
+            "Reçine çevresindeki boşluklar gazın yatağı bypass etmesine yol açar; sıkı ve homojen dolum gerekir.",
+            "PAH ile dioksin benzer cam ekipman kullanabilir; numune standardı, saklama ve analiz koşulları aynı kabul edilmez.",
+            "Reçinenin aşırı ısınması uçucu bileşen kaybı oluşturabilir."
+          ],
+          "ordered": false
+        },
+        {
+          "title": "Ölçüm sonrası ve numune işlemleri",
+          "items": [
+            "Filtreyi temiz cam petriye al; reçine ve numune fraksiyonlarını ışığa karşı folyoyla koru.",
+            "Prob ve diğer ilgili gaz temas yüzeylerinin çözücü durulamalarını ayrı tanımlanmış numune fraksiyonlarına ekle.",
+            "PAH numunesini karanlık ortamda yaklaşık −7 °C sakla; mümkünse 24 saatte, en geç bir hafta içinde ekstraksiyona ilet.",
+            "Filtre, reçine, kondensat ve durulamaların hepsinin laboratuvara gittiğini kontrol et."
+          ],
+          "ordered": true
+        },
+        {
+          "title": "Diğer izokinetik yöntem seçenekleri",
+          "items": [
+            "Metot A seyreltme uygulamasında ısıtılmış örnek 40 °C altına soğutulur; örnekleme 2–8 m³/saat aralığında planlanır. Seyreltme havası ve adsorber düzeneği ayrıca doğrulanır.",
+            "Metot C, suyla soğutulmuş prob/adsorber kullanır; gaz 40 °C altına soğutulur ve örnekleme 0,5–2 m³/saat aralığında planlanır.",
+            "A ve C, Metot B’nin impinger dolumunu kullanmaz; bu alternatifler için yetkili yöntem kapsamı ve ekipman uyumu ayrıca belirlenir."
+          ],
+          "ordered": false
+        }
+      ],
+      "trains": [
+        {
+          "name": "Metot B • Dik XAD-2 kartuşu",
+          "method": "TS ISO 11338-1 • Metot B",
+          "sampling": "Yan akışlı izokinetik örnekleme",
+          "flow": "XAD-2 gaz hızı en fazla 34 cm/s",
+          "condition": "İzokinetik ana numuneden soğutulmuş adsorpsiyon kolu; kartuş dik tutulur.",
+          "bottles": [],
+          "steps": [
+            "Ana izokinetik akış ile reçine kolunu ayır; kol hacmini ayrıca kaydet.",
+            "Gaz kartuşun altından girer, reçine yatağından geçip üstten çıkar; soğutma suyu bağlantıları gaz hattı değildir."
+          ],
+          "note": "Reçine: yaklaşık 30 g. Kondensat şişesi: 1 L kap kapasitesi; başlangıçta saf su doldurulmaz.",
+          "vesselType": "Greenburg–Smith",
+          "branch": true,
+          "inlet": "Isıtmalı prob → filtre → tren",
+          "filterAfter": 0,
+          "visual": "resin"
+        },
+        {
+          "name": "Metot B • XAD-2 tam akış",
+          "method": "TS ISO 11338-1 • Metot B",
+          "sampling": "İzokinetik örnekleme",
+          "flow": "XAD-2 gaz hızı en fazla 34 cm/s",
+          "condition": "Ana debi kartuşun izin verilen gaz hızını aşmıyorsa tam akış düzeni.",
+          "bottles": [],
+          "steps": [
+            "Yerel hıza göre izokinetik ana debiyi ve kartuş iç kesitindeki geçiş hızını birlikte doğrula.",
+            "Ana debi kartuş sınırını aşıyorsa yan akışlı uygulamayı seç; izokinetik ana çekişi reçineyi korumak için rastgele azaltma."
+          ],
+          "note": "Reçine: yaklaşık 30 g. Kondensat şişesi: 1 L kap kapasitesi; başlangıçta saf su doldurulmaz.",
+          "vesselType": "Greenburg–Smith",
+          "branch": false,
+          "inlet": "Isıtmalı prob → filtre → tren",
+          "filterAfter": 0,
+          "visual": "resin"
+        },
+        {
+          "name": "Metot B • Dietilen glikol",
+          "method": "TS ISO 11338-1 • Metot B",
+          "sampling": "İzokinetik örnekleme",
+          "flow": "Ana izokinetik çekiş",
+          "condition": "Katı reçine yerine sıvı absorpsiyonla doğrulanmış Metot B uygulaması.",
+          "bottles": [
+            {
+              "content": "Dietilen glikol",
+              "amount": "Doğrulanmış hacim (mL)",
+              "strength": "",
+              "kind": "water",
+              "tip": "Modifiye uç"
+            },
+            {
+              "content": "Dietilen glikol",
+              "amount": "Doğrulanmış hacim (mL)",
+              "strength": "",
+              "kind": "water",
+              "tip": "Modifiye uç"
+            },
+            {
+              "content": "Silika jel",
+              "amount": "Doğrulanmış kütle (g)",
+              "strength": "",
+              "kind": "silica",
+              "tip": "Modifiye uç"
+            }
+          ],
+          "steps": [
+            "Isıtılmış filtre sonrası kondenserde gazı 20 °C altına soğut; kondensatı ayrı toplama kabında tut.",
+            "Soğutulmuş gazı sıvı absorpsiyon bölümünden geçir; bu düzen XAD-2 kartuş dolumu değildir."
+          ],
+          "note": "Bu alternatif düzende iki dietilen glikol absorberi ve kurutucu yer alır; başlangıç mL/g miktarı tanımlanmadığından doğrulanmış hazırlama planından alınır.",
+          "vesselType": "Greenburg–Smith",
+          "branch": false,
+          "inlet": "Isıtmalı filtre → kondenser → kondensat kabı → tren",
+          "filterAfter": 0,
+          "visual": null
+        }
+      ],
+      "visual": null
+    },
+    {
+      "id": "dioksin",
+      "title": "Dioksin / Furan",
+      "method": "TS EN 1948-1 • Metot B / XAD-2",
+      "domain": "Emisyon",
+      "sections": [
+        {
+          "title": "Bu ölçüm neden yapılır?",
+          "items": [
+            "PCDD/PCDF’nin partikül ve gaz/aerosol fazlarını çok düşük derişimlerde toplamak ve 17 ilgili türdeşi analiz etmek için yapılır."
+          ],
+          "ordered": false
+        },
+        {
+          "title": "Gerekli malzemeler",
+          "items": [
+            "Cam/kuvars/titanyum nozul, prob, bağlantılar, ısıtmalı filtre.",
+            "Seçili yönteme uygun kondenser, kondensat kabı ve adsorpsiyon/absorpsiyon elemanları.",
+            "¹³C₁₂ etiketli numune alma standartları, ışık koruması, temiz kaplar."
+          ],
+          "ordered": false
+        },
+        {
+          "title": "Parametreye özgü hazırlık",
+          "items": [
+            "Gaz temas eden hattı deterjan/su, deiyonize su ve uygun çözücü temizliğiyle hazırla.",
+            "Prob dışındaki uygun cam parçaların 400–450 °C fırın şartlandırması laboratuvarda gerçekleştirilir; ekipmanın ısı dayanımını doğrula.",
+            "¹³C₁₂ numune standartlarını toplama öncesi laboratuvar analiz planına uygun ekle.",
+            "Prob/filtreyi 125 °C’nin altında, çiğlenme noktasının en az 10 °C üstünde çalışacak şekilde hazırla.",
+            "Kartuşu homojen doldur, çökmeyi telafi et ve temiz cam yünüyle kapat; folyoyla ışık koruması sağla."
+          ],
+          "ordered": true
+        },
+        {
+          "title": "Ölçümün uygulanması",
+          "items": [
+            "İzokinetik numune alma şartlarını hız/nem/nozul verilerinden oluştur.",
+            "Debi ve toplam kuru gaz hacmini numune standardı/analiz planıyla eşleştir.",
+            "Soğutma, yoğuşma fraksiyonu ve reçine yatağını numune boyunca izle.",
+            "Eğitimde verilen en uzun sekiz saat süresini aşmadan temsil edici örneklemeyi tamamla."
+          ],
+          "ordered": true
+        },
+        {
+          "title": "Dikkat edilecek noktalar",
+          "items": [
+            "İzotop işaretli standart geri kazanım kontrolü içindir; sıradan reaktif şahidi yerine geçmez.",
+            "Aynı reçine kabını hem soğutma suyu hem gaz fraksiyonu olarak kullanma; dış soğutma ceketi ayrıdır."
+          ],
+          "ordered": false
+        },
+        {
+          "title": "Ölçüm sonrası ve numune işlemleri",
+          "items": [
+            "Filtre, reçine, kondensat ve prob durulamalarını fraksiyon kaybı olmadan topla.",
+            "Numuneyi ışıktan koru, 25 °C’nin altında sakla; kapları ve taşımayı kayıtla.",
+            "Reçine/çözücü şişelerini dik biçimde uygun soğutucuda taşı.",
+            "Adsorban saha tanığını analiz ettir; tanık değeri aynı hacim için limitin %10’unu aşmamalıdır.",
+            "Ekstraksiyon/temizleme EN 1948-2, analiz EN 1948-3 aşamasında yapılır; saha standardı geri kazanımı laboratuvarda değerlendirilir."
+          ],
+          "ordered": true
+        }
+      ],
+      "trains": [
+        {
+          "name": "Metot B • Dik XAD-2 kartuşu",
+          "method": "TS EN 1948-1 • Metot B",
+          "sampling": "Yan akışlı izokinetik örnekleme",
+          "flow": "XAD-2 gaz hızı en fazla 34 cm/s",
+          "condition": "İzokinetik ana numuneden soğutulmuş adsorpsiyon kolu; kartuş dik tutulur.",
+          "bottles": [],
+          "steps": [
+            "Ana izokinetik akış ile reçine kolunu ayır; kol hacmini ayrıca kaydet.",
+            "Gaz kartuşun altından girer, reçine yatağından geçip üstten çıkar; soğutma suyu bağlantıları gaz hattı değildir."
+          ],
+          "note": "Reçine kütlesi doğrulanmış kartuş hazırlığına göre belirlenir; PAH’ın gram değeri kopyalanmaz. Kondensat örnekleme sırasında oluşur.",
+          "vesselType": "Greenburg–Smith",
+          "branch": true,
+          "inlet": "Isıtmalı prob → filtre → tren",
+          "filterAfter": 0,
+          "visual": "resin"
+        },
+        {
+          "name": "Metot B • Dietilen glikol",
+          "method": "TS EN 1948-1 • Metot B",
+          "sampling": "İzokinetik örnekleme",
+          "flow": "Ana izokinetik çekiş",
+          "condition": "Katı reçine yerine sıvı absorpsiyonla doğrulanmış Metot B uygulaması.",
+          "bottles": [
+            {
+              "content": "Dietilen glikol",
+              "amount": "Doğrulanmış hacim (mL)",
+              "strength": "",
+              "kind": "water",
+              "tip": "Modifiye uç"
+            },
+            {
+              "content": "Dietilen glikol",
+              "amount": "Doğrulanmış hacim (mL)",
+              "strength": "",
+              "kind": "water",
+              "tip": "Modifiye uç"
+            },
+            {
+              "content": "Silika jel",
+              "amount": "Doğrulanmış kütle (g)",
+              "strength": "",
+              "kind": "silica",
+              "tip": "Modifiye uç"
+            }
+          ],
+          "steps": [
+            "Isıtılmış filtre sonrası kondenserde gazı 20 °C altına soğut; kondensatı ayrı toplama kabında tut.",
+            "Soğutulmuş gazı sıvı absorpsiyon bölümünden geçir; bu düzen XAD-2 kartuş dolumu değildir."
+          ],
+          "note": "Bu alternatif düzende iki dietilen glikol absorberi ve kurutucu yer alır; başlangıç mL/g miktarı tanımlanmadığından doğrulanmış hazırlama planından alınır.",
+          "vesselType": "Greenburg–Smith",
+          "branch": false,
+          "inlet": "Isıtmalı filtre → kondenser → kondensat kabı → tren",
+          "filterAfter": 0,
+          "visual": null
+        }
+      ],
+      "visual": null
+    },
+    {
+      "id": "pm10",
+      "title": "Ortamda PM₁₀",
+      "method": "TS EN 12341 / EPA 40 CFR Part 50 App J",
+      "domain": "İmisyon",
+      "sections": [
+        {
+          "title": "Bu ölçüm neden yapılır?",
+          "items": [
+            "Ortam havasındaki boyut seçilmiş partiküllerin filtrede toplanan kütlesini hacme bölerek hava kalitesini değerlendirmek için yapılır."
+          ],
+          "ordered": false
+        },
+        {
+          "title": "Gerekli malzemeler",
+          "items": [
+            "Seçilen yönteme uygun PM₁₀ başlık ve sabit akışlı örnekleyici.",
+            "Şartlandırılmış/tartılmış filtre, temiz petri ve meteorolojik kayıt ekipmanı."
+          ],
+          "ordered": false
+        },
+        {
+          "title": "Parametreye özgü hazırlık",
+          "items": [
+            "Başlığın kesim karakteristiğini ve cihaz debi kalibrasyonunu kontrol et.",
+            "Yöntemin kendi şartlandırma koşullarında hazırlanmış filtreyi kullan.",
+            "Seçilen yönteme göre debiyi ayarla: TS EN 12341 için 2,3 m³/saat ≈ 38,33 L/dakika; EPA uygulaması için 1 m³/saat ≈ 16,67 L/dakika. Başlık tasarımı ve debi birlikte eşleşmelidir.",
+            "Başlık girişini 1,5–4 m yükseklikte, akışı engelleyen yüzeylerden uzakta kur."
+          ],
+          "ordered": true
+        },
+        {
+          "title": "Ölçümün uygulanması",
+          "items": [
+            "Filtreyi yerleştir; başlık ve hat sızdırmazlığını kontrol et.",
+            "Sayaç/örnekleme başlangıcını ve filtre kimliğini kaydet.",
+            "Hava kalitesi programında 24 saatlik filtre örneklemesini uygula; aylık programda günlük filtreleri ayrı işle.",
+            "Debi, süre ve toplam hacmi kontrol et; meteorolojik olayları kaydet.",
+            "Filtreyi değiştirirken yüzeyine dokunma ve numune kaybı oluşturma.",
+            "Saha tanığını pompa çalıştırmadan aynı taşıma/yerleştirme işlemlerine tabi tut."
+          ],
+          "ordered": true
+        },
+        {
+          "title": "Dikkat edilecek noktalar",
+          "items": [
+            "Spot tesis içi ölçüm ile 24 saatlik ortam hava kalitesi ölçümünü aynı sonuç türü olarak kullanma.",
+            "Debi değişmesi PM₁₀ başlığının boyut seçimini de etkiler.",
+            "Cihazın gösterdiği hacmin ortam mı referans şartlar mı olduğunu doğrula; otomatik düzeltilmiş hacmi ikinci kez düzeltme.",
+            "Filtre şartlandırması TS ve EPA yöntemlerinde farklıdır."
+          ],
+          "ordered": false
+        },
+        {
+          "title": "Ölçüm sonrası ve numune işlemleri",
+          "items": [
+            "Filtreyi kapalı petriye al ve aynı şartlandırma koşullarında son tartıma ilet.",
+            "Net partikül kütlesini örneklenen uygun bazdaki hacme böl.",
+            "Kesinti, taşma ve elektrik arızası olan dönemleri ayrıca değerlendir."
+          ],
+          "ordered": true
+        },
+        {
+          "title": "Filtre şartlandırma koşulları",
+          "items": [
+            "TS EN 12341 eğitim uygulaması: 19–21 °C, %45–50 bağıl nem, 48 saat.",
+            "EPA eğitim uygulaması: 15–30 °C aralığında seçilen sıcaklığın ±3 °C içinde, %20–45 aralığında seçilen nemin ±%5 içinde, 24 saat.",
+            "Başlangıç/son tartım koşullarını eşleştir. Cihaz başlığının çalışma debisini seçilen metoda göre uygula."
+          ],
+          "ordered": false
+        },
+        {
+          "title": "Tesis içi spot ölçüm uygulaması",
+          "items": [
+            "Laboratuvar saha planında spot ölçüm isteniyorsa açık toz kaynağından yaklaşık 3 m uzakta, güncel hakim rüzgâr yönünü dikkate alarak noktayı seç.",
+            "Toz yoğunluğuna göre 15–30 dakika spot ölçüm yap; cihazın seçilen yönteme uygun başlık/debisini koru.",
+            "Spot sonucu 24 saatlik hava kalitesi ortalaması olarak sunma. Kaynak, rüzgâr, gerçek süre ve çekilen hacmi ayrı kaydet.",
+            "Aylık hava kalitesi programında günlük 24 saat filtreleri ve aylık sonuçları kendi programına göre işle."
+          ],
+          "ordered": true
+        }
+      ],
+      "trains": [],
+      "visual": null
+    },
+    {
+      "id": "cokentoz",
+      "title": "Çöken toz",
+      "method": "TS 2342 • Yönlendirilebilir toplama",
+      "domain": "İmisyon",
+      "sections": [
+        {
+          "title": "Bu ölçüm neden yapılır?",
+          "items": [
+            "Havadan yüzeye çöken katı maddenin alan ve gün başına miktarını belirlemek için yapılır. PM₁₀ gibi aktif gaz hacmi çekilmez."
+          ],
+          "ordered": false
+        },
+        {
+          "title": "Gerekli malzemeler",
+          "items": [
+            "Yönlendirilebilir toplama cihazı; kodlanmış temiz kaplar ve görseldeki gravimetrik toplama çözeltisi.",
+            "Sabit zemin/ankraj, konum ve rüzgâr kayıtları; temiz fırça, distile su ve kapaklar."
+          ],
+          "ordered": false
+        },
+        {
+          "title": "Parametreye özgü hazırlık",
+          "items": [
+            "Hakim rüzgâr ve tesis etki alanına göre en az iki temsil edici nokta seç.",
+            "Toplama başlığının doğrulanmış yüzey alanını kaydet; rastgele nominal kap alanını kullanma.",
+            "Gravimetrik toplama çözeltisini temiz kaplara ekle; biyolojik büyümeyi sınırlamak içindir.",
+            "Düz ve güvenli zemine sabitle; A kodlu kabı işletme yönüne çevir.",
+            "Giriş yüksekliğini ve bina/ekili alan uzaklığını kontrol et; talimatta 1,5–4 m yükseklik ve en az 1,5 m yan mesafe vardır."
+          ],
+          "ordered": true
+        },
+        {
+          "title": "Ölçümün uygulanması",
+          "items": [
+            "Başlangıç tarihi/saati, kap kodları, A yönü ve konumu kaydet.",
+            "Birer aylık iki dönem olmak üzere toplam iki aylık programı uygula.",
+            "Her dönemin gerçek maruz kalma gün sayısını hesapla; bütün ayları otomatik 30 gün kabul etme.",
+            "Kap kaybı, devrilme, yaprak/böcek ve olağandışı yağış durumlarını kaydet.",
+            "Dönem sonunda cihazın iç yüzeyine yapışan tozu temiz fırça ve distile suyla numune kabına geri al; bu yıkamayı numune toplanmadan atma.",
+            "Kapları sıkıca kapat ve dönem numunelerini birbirine karıştırmadan laboratuvara gönder."
+          ],
+          "ordered": true
+        },
+        {
+          "title": "Dikkat edilecek noktalar",
+          "items": [
+            "A yönünü her kurulum/değişimde koru; yön bilgisi kaybolursa yönlü karşılaştırma yapılamaz.",
+            "Süzünmeyen katı ve süzüntü kuru kalıntısı toplam numuneyi oluşturur.",
+            "Bakır sülfat ilavesi gravimetrik kütleyi artırır; laboratuvarın doğrulanmış kör/düzeltme değerini uygula.",
+            "Su eklenmişse özellikle yağmur suyunda başka analiz yapılacak olduğunda hacmi kaydet."
+          ],
+          "ordered": false
+        },
+        {
+          "title": "Ölçüm sonrası ve numune işlemleri",
+          "items": [
+            "Numune homojenleştirilip filtrelenir; filtre fraksiyonu ve süzüntü kalıntısı ayrı tartılır.",
+            "Filtre için 110 ±2 °C’de en az bir saat ve desikatörde en az iki saat işlem uygulanır.",
+            "Süzüntü kalıntısı 103–105 °C şartlandırmayla sabit tartıma getirilir.",
+            "Sonuç mg/m²·gün = düzeltilmiş toplam kütle(mg) / [doğrulanmış alan(m²) × gerçek gün]."
+          ],
+          "ordered": true
+        },
+        {
+          "title": "Cihazın bakım ve kullanımı",
+          "items": [
+            "Cihaz ayaklarını zemine sağlam bağla; gerekiyorsa kazıklarla destekle. Devrilme ve yön değişmesini her kap değişiminde kontrol et.",
+            "Numune geri kazanımı tamamlandıktan sonra dış yüzeydeki kir ve tozu nemli bezle sil.",
+            "Bakım talimatı sabit bir periyodik bakım aralığı tanımlamaz; temizlik ihtiyacını sahadaki kirlenmeye göre değerlendir.",
+            "Bu düzenek pasif çökelme toplar; pompa, sabit gaz debisi veya impinger treni kullanılmaz."
+          ],
+          "ordered": false
+        }
+      ],
+      "trains": [],
+      "visual": "settled"
+    },
+    {
+      "id": "cokentoz-metal",
+      "title": "Çöken tozda ağır metal",
+      "method": "VDI 2267-14 • ICP-OES / VDI 2267-7 • Tl için AAS",
+      "domain": "İmisyon",
+      "visual": "settled-metal",
+      "trains": [],
+      "essentials": [
+        "Pasif çökelme örneklemesi: aktif gaz çekişi ve impinger treni yoktur.",
+        "Toplama kabının başlangıç kimyası metal analiz planıyla belirlenir; gravimetrik CuSO₄ ilavesini otomatik uygulama."
+      ],
+      "sections": [
+        {
+          "title": "Bu ölçüm neden yapılır?",
+          "items": [
+            "Çöken tozla yüzeye taşınan metallerin birikimini belirler; sonuç alan ve gerçek örnekleme süresine göre değerlendirilir.",
+            "VDI 2267-14 kapsamında ICP-OES ile Al, As, Ca, Cd, Co, Cr, Cu, Fe, K, Mg, Mn, Na, Ni, Pb, V ve Zn incelenir. Talyum (Tl) için VDI 2267-7 atomik absorpsiyon uygulaması ayrı değerlendirilir."
+          ],
+          "ordered": false
+        },
+        {
+          "title": "Gerekli malzemeler",
+          "items": [
+            "Analiz edilecek metallere uygun, temizlenmiş toplama kapları; yönlü çöken toz düzeneği, kapaklar ve numune geri kazanımı için temiz malzemeler.",
+            "Saha körü ve numune planına uygun kaplar. Fırça, su ve kap malzemelerinin hedef metallere katkısı kontrol edilir."
+          ],
+          "ordered": false
+        },
+        {
+          "title": "Sahada örnekleme sırası",
+          "items": [
+            "Toplama başlığının doğrulanmış alanını ve kap yönlerini kaydet; işletme yönüne bakan kabı belirle.",
+            "Laboratuvarın metal analiz planına göre kapları hazırla. Gönderilen metal talimatı başlangıç koruyucusu için bir mL değeri tanımlamıyor; bu değeri gravimetrik talimattan aktarma.",
+            "Başlangıç tarih ve saatini kaydet; bu talimattaki 30 ±2 günlük toplama dönemini uygula.",
+            "Dönem sonunda iç yüzeydeki birikimi numuneye geri al; eklenen distile su miktarını ve her türlü kayıp/kirlenmeyi kaydet.",
+            "Kapları kapatıp ayrı kodlarla laboratuvara gönder; gerçek başlangıç/bitiş zamanı ve numune durumunu bildir."
+          ],
+          "ordered": true
+        },
+        {
+          "title": "Metale özgü dikkat noktaları",
+          "items": [
+            "Bakır sülfat bakır analizine katkı verebilir; kimyasal ilavesi ancak analiz planı ve doğrulanmış kör/düzeltme uygulamasıyla uyumlu olmalıdır.",
+            "Asit ve peroksit miktarları laboratuvar parçalama işlemine aittir; sahadaki toplama şişesine bu miktarları ekleme.",
+            "Isıtma/şartlandırma yalnızca laboratuvarın belirlediği ısıya dayanıklı hazırlama malzemesine uygulanır; plastik saha kabını otomatik olarak etüve koyma."
+          ],
+          "ordered": false
+        },
+        {
+          "title": "Laboratuvarda numune hazırlama",
+          "items": [
+            "Analiz edilecek numune/fraksiyonu tanımla; kayıp olmadan uygun PTFE parçalama kabına aktar.",
+            "Numuneye 8 mL HNO₃ ekle. Filtre kabını 2 mL H₂O₂ ve 2 mL saf suyla yıka; yıkamayı aynı parçalama kabına aktar.",
+            "Mikrodalga programı: 3 dakikada 130 °C’ye çık, 2 dakika beklet; 3 dakikada 180 °C’ye çık, 2 dakika beklet; 3 dakikada 220 °C’ye çık, 20 dakika beklet. Programı uygun cihaz ve kap basınç sınırlarıyla uygula.",
+            "50 °C’ye soğutma aşaması 20 dakikadan uzundur. Soğuyan kapları çeker ocakta dikkatle aç; oda sıcaklığına gelmesini bekle.",
+            "%1 HNO₃ ile son hacmi 50 mL’ye tamamla. Her seride aynı işlemlerden geçen boş filtre körü hazırla."
+          ],
+          "ordered": true
+        },
+        {
+          "title": "Analiz ve sonuç kontrolü",
+          "items": [
+            "ICP-OES kalibrasyonu, kör ve kontrol numunelerini analiz serisiyle birlikte değerlendir; talyum için ayrı AAS koşullarını kullan.",
+            "Körle düzeltilmiş metal kütlesini, doğrulanmış toplama alanına ve gerçek gün sayısına böl. Seyreltme ve son hacmi hesaba kat; 50 mL = 0,050 L dönüşümünü doğru kullan.",
+            "Süzme ve parçalama sırasında hangi fraksiyonların analiz edildiğini kaydet; yalnızca bir fraksiyon incelenmişse sonucu toplam çöken metal olarak yorumlama."
+          ],
+          "ordered": false
+        }
+      ]
+    },
+    {
+      "id": "pasif",
+      "title": "Ortam havasında gaz • Pasif tüp",
+      "method": "TS EN 13528 • Difüzif örnekleme",
+      "domain": "İmisyon",
+      "sections": [
+        {
+          "title": "Bu ölçüm neden yapılır?",
+          "items": [
+            "Ortam havasındaki gaz/buharları difüzyonla toplayarak belirli bir maruz kalma süresinin ortalama derişimini belirler. Pompalı örnekleme değildir."
+          ],
+          "ordered": false
+        },
+        {
+          "title": "Gerekli malzemeler",
+          "items": [
+            "Hedef gaz ve analiz yöntemine uygun difüzyon tüpü/kartuşu.",
+            "Üretici koruma kabı, kapaklar, soğuk ve çözücüsüz taşıma kutusu.",
+            "Koordinat, meteorolojik kayıt ve yerleştirme ekipmanı."
+          ],
+          "ordered": false
+        },
+        {
+          "title": "Parametreye özgü hazırlık",
+          "items": [
+            "Hedef gaz, beklenen derişim ve maruz kalma süresine uygun tüp seç.",
+            "Üreticinin sıcaklık, nem, rüzgâr ve saklama aralıklarını kontrol et.",
+            "HKKD ve temsil ediciliğe göre noktaları seç; yakın lokal kaynak etkisini değerlendir.",
+            "Tüpleri dış kirlenme, doğrudan güneş ve yağıştan koruyan uygun kaplarla yerleştir."
+          ],
+          "ordered": true
+        },
+        {
+          "title": "Ölçümün uygulanması",
+          "items": [
+            "Tüp kapağını örnekleme başlarken aç ve tarih/saati kaydet.",
+            "Aynı programdaki tüpleri planlanan eşzamanlı dönem boyunca açık tut.",
+            "Yerinde durduğunu, koruma kabını ve çevre şartlarını kontrol et.",
+            "Dönem sonunda kapağı kapatıp bitiş tarih/saati ve gerçek süresini kaydet.",
+            "Saha/taşıma şahitlerini gaz maruziyeti dışındaki aynı koşullara tabi tut."
+          ],
+          "ordered": true
+        },
+        {
+          "title": "Dikkat edilecek noktalar",
+          "items": [
+            "Tüp tipi, badge ve radyal örnekleyicinin rüzgâr hassasiyetleri farklıdır.",
+            "Pompa hacmi olmadığı için sonucu L/dakika × süre ile hesaplama; bileşiğe özgü uptake oranı gerekir.",
+            "Üretici maksimum derişim/süre/kapasite sınırını aşan tüpün sonucu geçerli kabul edilmez.",
+            "Eski mevzuat sürelerini her tesis için evrensel plan gibi uygulama; onaylı ölçüm programını esas al."
+          ],
+          "ordered": false
+        },
+        {
+          "title": "Ölçüm sonrası ve numune işlemleri",
+          "items": [
+            "Kapakları sızdırmaz kapat; soğuk, karanlık ve çözücü bulaşmasından uzak taşı.",
+            "Gaz türü, tüp tipi/lotu, koordinat, süre ve çevre kayıtlarını laboratuvara ilet.",
+            "Üreticinin numune sonrası bekletme ve analiz süresine uy."
+          ],
+          "ordered": true
+        }
+      ],
+      "trains": [],
+      "visual": null
+    },
+    {
+      "id": "hiz",
+      "title": "Hız ve debi",
+      "method": "TS EN ISO 16911-1 / EPA Method 2",
+      "domain": "Emisyon",
+      "sections": [
+        {
+          "title": "Bu ölçüm neden yapılır?",
+          "items": [
+            "Baca gazının kesit ortalama hızını ve hacimsel debisini belirler. Kütlesel emisyon hesabı ve izokinetik nozul/çekiş seçimi bu veriye dayanır."
+          ],
+          "ordered": false
+        },
+        {
+          "title": "Gerekli malzemeler",
+          "items": [
+            "Kalibre edilmiş uygun pitot, fark basınç ölçer ve hortumlar.",
+            "Sıcaklık sensörü, barometre/statik basınç ölçümü, kesit ölçüm araçları.",
+            "Gaz bileşimi ve nem bilgisi; travers işaretleme."
+          ],
+          "ordered": false
+        },
+        {
+          "title": "Parametreye özgü hazırlık",
+          "items": [
+            "Kesiti ölç, hidrolik çapı ve yönteme uygun travers planını belirle.",
+            "Pitot deliklerini temizle; hortumlarda sıvı, çatlak ve tıkanıklık olmadığını kontrol et.",
+            "Fark basınç cihazını sıfırla ve pitot sisteminin kaçak kontrolünü yap.",
+            "Baca basıncı, sıcaklık, nem ve molar kütle verilerini hız hesabı için hazırla."
+          ],
+          "ordered": true
+        },
+        {
+          "title": "Ölçümün uygulanması",
+          "items": [
+            "Pitotu ilk travers noktasına yerleştir ve akışa uygun yönde hizala.",
+            "Fark basıncı ve sıcaklığı kararlı okuma oluşunca kaydet. TS uygulamasında her noktada en az üç saniye bekle; EPA uygulamasında da kararlı ve temsil edici okuma sağla.",
+            "Bütün noktalarda aynı ölçüm yaklaşımını kullan.",
+            "Noktaları tek tek hıza dönüştür; basınçların ortalamasından doğrudan hız üretme.",
+            "Nokta hızlarından kesit ortalamasını hesapla; hacimsel debi Q = ortalama hız × kesit alanıdır.",
+            "Nem/sıcaklık/basınçla gerekli kuru-normal debiyi ayrı hesapla."
+          ],
+          "ordered": true
+        },
+        {
+          "title": "Dikkat edilecek noktalar",
+          "items": [
+            "EN uygulamasında eksene göre akış açısı 15° altında, ters akış bulunmaması ve en büyük/en küçük hız oranının 3:1 altında olması değerlendirilir.",
+            "EPA siklonik akış kontrolünde ortalama açı 20° sınırı dikkate alınır. Uygunsuz düzlemi standart geçerli düzlem gibi sunma.",
+            "Çok düşük fark basıncında cihaz çözünürlüğü ve belirsizliği önemlidir; sırf ekranda hız var diye ölçüm aralığını uygun sayma.",
+            "S tipi pitotun katsayısını ve kalibrasyonunu kullan.",
+            "Akış salınımı varsa uygun sönümlemeyi değerlendir; sistematik etki oluşturmadığını doğrula."
+          ],
+          "ordered": false
+        },
+        {
+          "title": "Ölçüm sonrası ve numune işlemleri",
+          "items": [
+            "Pitotun son kaçak/tıkanıklık kontrolünü yap.",
+            "Nokta konumları, ΔP, sıcaklık, statik/mutlak basınç ve kullanılan katsayıyı kaydet.",
+            "Baca şartlarında ve kuru-normal şartlarda debileri ayrı isimlendir."
+          ],
+          "ordered": true
+        }
+      ],
+      "trains": [],
+      "visual": null
+    },
+    {
+      "id": "nem",
+      "title": "Baca gazı nemi",
+      "method": "EPA Method 4 / EN 14790",
+      "domain": "Emisyon",
+      "sections": [
+        {
+          "title": "Bu ölçüm neden yapılır?",
+          "items": [
+            "Su buharı oranını belirlemek, gazı kuru baza çevirmek ve izokinetik örnekleme hesabını doğru yapmak için yapılır."
+          ],
+          "ordered": false
+        },
+        {
+          "title": "Gerekli malzemeler",
+          "items": [
+            "Yönteme uygun ısıtmalı prob/hat, kondensasyon şişeleri ve nem tutucu.",
+            "Buz banyosu, sıcaklık ölçümü, kuru gaz sayacı, ön/son tartım veya hacim ölçümü."
+          ],
+          "ordered": false
+        },
+        {
+          "title": "Parametreye özgü hazırlık",
+          "items": [
+            "Bağımsız referans, ana ölçümle birlikte nem veya EN yoğuşturma/adsorpsiyon uygulamasından uygun olanı seç.",
+            "Ön tartım/hacim ölçümü ve son şişe sıcaklık izlemesini hazırla.",
+            "Hattı nemin toplama bölümünden önce yoğuşmayacağı şekilde kur."
+          ],
+          "ordered": true
+        },
+        {
+          "title": "Ölçümün uygulanması",
+          "items": [
+            "Seçili uygulamanın özel adımlarıyla numuneyi al; sıcaklık, basınç, sayaç hacmi ve süreyi kaydet.",
+            "Toplanan su hacmini ve kuru gaz hacmini aynı referans şartlarda ifade et.",
+            "Nem oranını su buharı hacminin toplam ıslak gaz hacmine oranından hesapla."
+          ],
+          "ordered": true
+        },
+        {
+          "title": "Dikkat edilecek noktalar",
+          "items": [
+            "Şişe ve silika jel verileri ölçüm öncesi/sonrası farktan elde edilir; yalnız son miktarı kullanma.",
+            "Kuru gaz sayacı nemi uzaklaştırılmış gazı ölçüyorsa bu hacme yeniden nem azaltması yapılmaz.",
+            "Sıvı damlacığı içeren baca ile doymuş gaz/su buharını ayır; sonuç yorumunu seçilen yönteme göre yap.",
+            "Nem oranını başka bir bacadan veya farklı proses döneminden otomatik aktararak izokinetiklik kurma."
+          ],
+          "ordered": false
+        },
+        {
+          "title": "Ölçüm sonrası ve numune işlemleri",
+          "items": [
+            "Numune sıvısı ve silika jel son tartımlarını kaydet.",
+            "Kaçak ve taşıma kaybını değerlendir; sayaç/su referans bazlarını kontrol et.",
+            "Elde edilen nemi aynı proses dönemindeki ana ölçümle eşleştir."
+          ],
+          "ordered": true
+        },
+        {
+          "title": "Referans ölçüm ve ön tahmin ayrımı",
+          "items": [
+            "EPA 4 yaklaşım yöntemi, ana ölçüm öncesi izokinetik ayara yardımcı bir nem tahminidir; referans emisyon hesabının yerine otomatik geçmez.",
+            "Doymuş/damlacıklı gazda toplanan sıvı su buharı sonucunu yükseltebilir; baca sıcaklığı ve doyma koşulunu birlikte değerlendir."
+          ],
+          "ordered": false
+        }
+      ],
+      "trains": [
+        {
+          "name": "EPA 4 • Bağımsız referans nem",
+          "method": "EPA Method 4",
+          "sampling": "Sabit debili örnekleme",
+          "flow": "En fazla 21 L/dakika • Sabit debiden sapma ±%10",
+          "condition": "Bağımsız referans nem tayini; örnekleme süresi hedef standart hacme göre seçilir.",
+          "bottles": [
+            {
+              "content": "Saf su",
+              "amount": "100 mL",
+              "strength": "",
+              "kind": "water",
+              "tip": "Modifiye uç"
+            },
+            {
+              "content": "Saf su",
+              "amount": "100 mL",
+              "strength": "",
+              "kind": "water",
+              "tip": "Standart Greenburg–Smith uç"
+            },
+            {
+              "content": "Boş",
+              "amount": "Sıvı eklenmez",
+              "strength": "",
+              "kind": "empty",
+              "tip": "Modifiye uç"
+            },
+            {
+              "content": "Silika jel",
+              "amount": "200 g",
+              "strength": "",
+              "kind": "silica",
+              "tip": "Modifiye uç"
+            }
+          ],
+          "steps": [
+            "Şişelerin başlangıç hacim/kütlesini ve silika jel ön kütlesini kaydet. Sıcaklık sensörünü son impingerin gaz çıkışına yerleştir; buz banyosunun sıcaklığını gaz çıkış sıcaklığı yerine kullanma.",
+            "Prob ve varsa dış filtre ısıtmasını yoğuşmayı önleyecek biçimde, yöntemde belirtilen yaklaşık 120 °C’ye getir; kararlı hâle gelmesini bekle.",
+            "Sabit çekişle bütün seçilen noktalarda eşit süre örnekle. Sayaç, sıcaklık, basınç ve süreyi kaydet; çıkış sıcaklığı yükselirse banyoya buz ilave et.",
+            "Örnekleme süresini düzeltilmiş hacim hedefini sağlayana kadar sürdür. 20 L/dakika × 30 dakika = 600 L yalnız ham hacim planıdır; tek başına 600 standart litreyi garanti etmez.",
+            "Bitiş sayaç değerini ve son kaçak kontrolünü kaydet; sıvı ve silika jel kütle farkından tutulan suyu belirle."
+          ],
+          "note": "Debi toleransı üst sınırı aşma izni değildir. Referans yöntemde her durum için bağımsız bir 30 dakika asgari süresi tanımlanmıyor; süre hacim ve varsa eşzamanlı ana ölçüm şartına göre belirlenir.",
+          "vesselType": "Greenburg–Smith",
+          "branch": false,
+          "inlet": "Isıtmalı prob → filtre → tren",
+          "filterAfter": 0,
+          "visual": null,
+          "controls": [
+            "Hacim: en az 0,60 standart m³ = 600 standart litre. Sayaçtaki ham litreyi sıcaklık, basınç ve kalibrasyon düzeltmesi yapmadan bu hedefle karşılaştırma.",
+            "Soğutma: impingerleri kırılmış buz + su banyosunda tut. 4. impingerin (silika jel) gaz çıkışı 20 °C’nin ALTINDA olmalı; 20 °C ve üstü uygun değildir."
+          ]
+        },
+        {
+          "name": "EPA 4 • İzokinetik ölçümle birlikte",
+          "method": "EPA Method 4 + EPA Method 5",
+          "sampling": "İzokinetik örnekleme",
+          "flow": "Ana ölçümün izokinetik debisi",
+          "condition": "Toz ölçümüyle aynı tren ve aynı zaman aralığında nem de belirleniyorsa.",
+          "bottles": [
+            {
+              "content": "Saf su",
+              "amount": "100 mL",
+              "strength": "",
+              "kind": "water",
+              "tip": "Modifiye uç"
+            },
+            {
+              "content": "Saf su",
+              "amount": "100 mL",
+              "strength": "",
+              "kind": "water",
+              "tip": "Standart Greenburg–Smith uç"
+            },
+            {
+              "content": "Boş",
+              "amount": "Sıvı eklenmez",
+              "strength": "",
+              "kind": "empty",
+              "tip": "Modifiye uç"
+            },
+            {
+              "content": "Silika jel",
+              "amount": "200 g",
+              "strength": "",
+              "kind": "silica",
+              "tip": "Modifiye uç"
+            }
+          ],
+          "steps": [
+            "Bağımsız EPA 4 sabit debi kuralını ana izokinetik ölçüme uygulama; akışı yerel hız/nozula göre yönet.",
+            "Ana ölçüm süresince başlangıç/son şişe hacimleri ve silika jel kütlelerini kaydet."
+          ],
+          "note": "Başka bir kimyasal parametreyle birlikte nem ölçülüyorsa onun absorpsiyon sıvılarını saf suyla değiştirme; ilgili metot trenini kullan.",
+          "vesselType": "Greenburg–Smith",
+          "branch": false,
+          "inlet": "Isıtmalı prob → filtre → tren",
+          "filterAfter": 0,
+          "visual": null,
+          "controls": [
+            "Soğutma: impingerler kırılmış buz + su banyosunda; silika jel çıkışındaki gaz sıcaklığı 20 °C’nin altında tutulur."
+          ]
+        },
+        {
+          "name": "EN 14790 • Yoğuşturma / adsorpsiyon",
+          "method": "EN 14790",
+          "sampling": "Sabit debili örnekleme",
+          "flow": "Doğrulanmış plan • Örnek çalışma: 4 L/dakika",
+          "condition": "Soğutulmuş su toplama bölümü ve ardından kurutucu ile su buharı tayini.",
+          "bottles": [
+            {
+              "content": "Saf su / kondensat",
+              "amount": "Başlangıç hacmi ölçülür (mL)",
+              "strength": "Doğrulanmış dolum",
+              "kind": "water",
+              "tip": "Modifiye uç"
+            },
+            {
+              "content": "Silika jel",
+              "amount": "Ön kütle ölçülür (g)",
+              "strength": "",
+              "kind": "silica",
+              "tip": "Modifiye uç"
+            }
+          ],
+          "steps": [
+            "Gazı ısıtmalı filtre/prob üzerinden yoğuşturma ve adsorpsiyon bölümlerine geçir; hazneyi bu uygulamada yaklaşık 4 °C’de tut.",
+            "Debi ve süreyi beklenen su yükü/kurutucu kapasitesiyle seç; verilen 30 dakika × 4 L/dakika = 120 L yalnız örnek çalışmadır.",
+            "Su toplama bölümünün ve kurutucunun kütle artışını ayrı ölç; başlangıç dolumunu sonuçtan çıkar."
+          ],
+          "note": "Bu görsel yoğuşturma ve adsorpsiyon bölümlerini gösterir; evrensel bir şişe sayısı veya 100 mL/200 g dolum zorunluluğu değildir. Bölüm sayısı, başlangıç su hacmi ve kurutucu miktarı doğrulanmış düzeneğe göre belirlenir.",
+          "vesselType": "Yönteme uygun yoğuşturucu + adsorpsiyon kabı",
+          "branch": false,
+          "inlet": "Isıtmalı prob → filtre → tren",
+          "filterAfter": 0,
+          "visual": null
+        }
+      ],
+      "visual": null
+    }
+  ]
+}
