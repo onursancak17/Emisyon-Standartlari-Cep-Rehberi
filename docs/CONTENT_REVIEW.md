@@ -38,7 +38,7 @@ Bu dosya APK kullanıcı arayüzüne dahil edilmez.
 
 ## İncelemede çözülen farklar
 
-- TL309: laboratuvarın altı şişeli EPA 26A düzeni; ilk şişe 50 mL 0,1 N H₂SO₄.
+- TL309: yüksek nemde altı şişeli EPA 26A düzeni; temel EPA 26A ve EPA 26 eğitimden ayrı seçenekler olarak tamamlandı.
 - TL90: ilk iki şişe 100 mL saf su; eğitimdeki 10 mL önerisi laboratuvar talimatı yerine kullanılmadı.
 - TL195: Hg için 7 şişe, Hg hariç 4 şişe; TL179 EN düzeniyle karıştırılmadı.
 - Dioksin gram miktarı eğitimde tanımlı değil; PAH miktarı kopyalanmadı.
@@ -47,3 +47,20 @@ Bu dosya APK kullanıcı arayüzüne dahil edilmez.
 - Eğitimdeki partikül akış açısı tablosunda yönü ters büyüklük işaretleri normatif uygunluk olarak kullanılmadı.
 - Uygulama metninde tesis güvenliği ve genel hazırlık tekrarları ortak bölüme taşındı.
 - İki eğitim PDF’i aynı SHA içerdiğinden tek VOC/formaldehit konusu altında birleştirildi.
+
+
+## 2.1.0 — Eğitimden uygulama ve tren varyantlarının tamamlanması
+
+Kaynak repo başı: bff1fc626da9b813198aee908c02ce2468cae3c4. Eğitimdeki 12 PDF yeniden indirildi; iki VOC/formaldehit belgesi aynı Git blobu. Metinlerdeki örnekleme türleri ve tren bilgileri tarandı ve aşağıdaki çizim sayfaları görsel olarak incelendi. Bu dosya uygulama arayüzünde gösterilmez.
+
+- Hız/Nem s.17–24: bağımsız EPA 4 sabit akış ve EN 14790 uygulama ayrımı; EPA 4 eğitim dolumu 100/100 mL, boş, 200 g. EN için 4 L/dakika × 30 dakika örnek çalışması evrensel hacim/debi sınırı değildir.
+- EN 14790 eğitiminde dolum şeması ve sabit mL/g yoktur. EN yoğuşturma + adsorpsiyon prensip görseli, başlangıç su hacmi ve kurutucu kütlesinin doğrulanmış hazırlama planında seçilmesini açıkça gösterir. Su içeren yoğuşturma aşaması, resmi VITO LUC/0/003 (Nisan 2023) metninin EN 14790 8.3 açıklamasıyla çapraz kontrol edildi: https://technical-regulation-information-system.ec.europa.eu/de/notification/24088/text/D/EN (PDF s.11). Çizim iki işlevsel aşamadır; zorunlu toplam şişe sayısı değildir.
+- EPA 4, 8.1.4 notu: eşzamanlı EPA 5’te akış izokinetiktir, bağımsız ölçümün sabit akışı korunmaz. https://www.epa.gov/sites/default/files/2017-08/documents/method_4_0.pdf
+- Metal/Halojen s.14–17: EPA 26A temel 5 şişe; yüksek nemde 50 mL asitli öne kapanla 6 şişe. EPA 26 cüce 30 mL kapasiteli şişelerde 15/15 mL asit ve 15/15 mL baz, 2 L/dakika ±%10. EPA 26A 6.1.6 ve 8.1.3 ile standart uçlu asitli şişeler doğrulandı: https://www.epa.gov/sites/default/files/2019-06/documents/method_26a.pdf
+- Metal/Halojen s.19–22: HCl sabit 2–3 L/dakika, izokinetik tam akış ve T bağlantılı yan akış. Sabit/yan akışta 40 veya 100 mL seçeneği; tam akışta 100 mL. Dolum miktarı ile kap kapasitesi ayrıdır.
+- Metal/Halojen s.6: EN 14385 tam akış üç absorpsiyon, yan akış iki absorpsiyon şişesi. Yan akışın çözelti hacmi ve kurutucu gramı eğitimde bulunmadığından sayısal değer türetilmedi; hazırlama planına göre etiketlendi. Hg bu standardın analit listesine eklenmedi.
+- Metal/Halojen s.26–27: EPA 13A sadece izokinetik, ISO 15713 sabit veya izokinetik. ISO’da 50–100 mL 0,1 N NaOH ve 2–6 L/dakika sabit akış; EPA 13A’da TL90’ın 100 mL saf suyu korunur. EPA 13A filtre konumu ve EPA 8’in birinci/ikinci şişe arası filtre görselde işaretlenir.
+- VOC/Formaldehit s.14–19: EPA 323 sabit debili üç cüce şişe; EPA 316 izokinetik dört şişe ve 28 L/dakika üst sınırı. Kabın toplam hacmi, başlangıç su miktarı ve geri kazanım hacmi karıştırılmadı.
+- PAH/PCDDDF s.6–7,15: dik XAD-2 reçine ve ayrı dietilen glikol Metot B alternatifi. DEG için mL/g tanımlı değil; miktar icat edilmedi. PAH’ın hız sınırını sağlayan tam akış seçeneği ve yan akış seçeneği ayrıdır; dioksin eğitimindeki XAD-2 yan akış şartı korunmuştur. PCDDDF’ye PAH’ın reçine kütlesi aktarılmadı.
+
+26 tren/adsorber seçeneğinin her birinde standart, örnekleme biçimi, akış, kullanım koşulu ve şişe tipi verisi var. Ortak talimatlar tek bölümde; uygulamaya özel adımlar yalnız seçilen tren altında gösterilir. Sesli anlatım seçili trenle birlikte değişir. Aynı makaledeki birebir tekrarlanan talimat cümleleri doğrulamada reddedilir. Metotlar arasındaki gerekli eşit eşik değerleri, yalnız aynı oldukları için silinmez.

@@ -32,7 +32,7 @@ void main(){
   expect(t.takeException(),isNull);await shot(t,key,'home');
   await t.enterText(find.byType(TextField),'klorür');await t.pumpAndSettle();
   await t.tap(find.text('HCl • Gaz hâlindeki klorür'));await t.pumpAndSettle();
-  expect(find.byType(TrainCard),findsOneWidget);expect(find.text('100 mL'),findsNWidgets(2));
+  expect(find.byType(TrainCard),findsOneWidget);expect(find.text('40 veya 100 mL'),findsNWidgets(2));
   expect(find.text('Ortak hazırlığı aç'),findsNothing);expect(find.textContaining('REVİZYON'),findsNothing);
   await t.runAsync(()async{for(final k in ['water','empty','silica']){await precacheImage(AssetImage('assets/equipment/$k.webp'),t.element(find.byType(TrainCard)));}});
   await t.pumpAndSettle();await shot(t,key,'hcl');
@@ -81,6 +81,52 @@ void main(){
    await t.pumpWidget(const SizedBox.shrink());await t.pumpAndSettle();
   }
  },variant:TargetPlatformVariant.only(TargetPlatform.android),timeout:const Timeout(Duration(seconds:90)));
+ testWidgets('Every method train renders on Android at narrow large text', (t) async {
+  t.view.physicalSize=const Size(320,800);t.view.devicePixelRatio=1;
+  addTearDown(t.view.resetPhysicalSize);addTearDown(t.view.resetDevicePixelRatio);
+  await t.runAsync(fonts);final data=(await t.runAsync(Content.load))!;
+  for(final a in data.manuals){for(final train in a.trains){
+   await t.pumpWidget(MaterialApp(home:MediaQuery(data:const MediaQueryData(size:Size(320,800),textScaler:TextScaler.linear(1.4)),child:Scaffold(body:SingleChildScrollView(child:TrainCard(train:train))))));
+   await t.pumpAndSettle();
+   expect(find.text(train.sampling),findsOneWidget,reason:train.name);
+   expect(find.text(train.flow),findsOneWidget);
+   expect(t.takeException(),isNull,reason:'${a.id}: ${train.name}');
+   expect(find.byType(ErrorWidget),findsNothing);
+   await t.pumpWidget(const SizedBox.shrink());await t.pumpAndSettle();
+  }}
+ },variant:TargetPlatformVariant.only(TargetPlatform.android),timeout:const Timeout(Duration(seconds:90)));
+ testWidgets('Train choice switches diagram, conditions and narrated method together', (t) async {
+  t.view.physicalSize=const Size(390,844);t.view.devicePixelRatio=1;
+  addTearDown(t.view.resetPhysicalSize);addTearDown(t.view.resetDevicePixelRatio);
+  await t.runAsync(fonts);final data=(await t.runAsync(Content.load))!;
+  final key=GlobalKey();
+  for(final id in ['nem','halojen','hcl','flor','formaldehit','metal-en','pah','dioksin']){
+   final a=data.manuals.singleWhere((a)=>a.id==id);
+   await t.pumpWidget(RepaintBoundary(key:key,child:MaterialApp(home:DetailPage(article:a))));await t.pumpAndSettle();
+   for(var i=0;i<a.trains.length;i++){
+    final dropdown=find.byType(DropdownButtonFormField<int>);
+    await t.scrollUntilVisible(dropdown,-150,maxScrolls:60,scrollable:find.byType(Scrollable).first);
+    await t.pumpAndSettle();await t.tap(dropdown);await t.pumpAndSettle();
+    await t.tap(find.text(a.trains[i].name).last);await t.pumpAndSettle();
+    final card=t.widget<TrainCard>(find.byType(TrainCard));expect(card.train,a.trains[i]);
+    final audio=t.widget<AudioPanel>(find.byType(AudioPanel));
+    expect(audio.narration,contains(a.trains[i].sampling));
+    expect(audio.narration,contains(a.trains[i].flow));
+    expect(find.byType(BranchView),a.trains[i].branch?findsOneWidget:findsNothing);
+    expect(t.takeException(),isNull,reason:'$id / $i');
+    if(id=='nem'||id=='halojen'){
+     await t.runAsync(()async{for(final asset in ['water','empty','silica','standard']){await precacheImage(AssetImage('assets/equipment/$asset.webp'),t.element(find.byType(TrainCard)));}});
+     final diagram=find.byType(TrainView);
+     await t.scrollUntilVisible(diagram,150,maxScrolls:40,scrollable:find.byType(Scrollable).first);await t.pumpAndSettle();
+     await shot(t,key,'$id-$i');
+    }
+   }
+   await t.pumpWidget(const SizedBox.shrink());await t.pumpAndSettle();
+  }
+  final moisture=data.manuals.singleWhere((a)=>a.id=='nem');
+  expect(moisture.trains[0].bottles.map((b)=>b.amount).toList(),['100 mL','100 mL','Sıvı eklenmez','200 g']);
+  expect(moisture.trains[2].bottles.first.amount,isNot('100 mL'));
+ },variant:TargetPlatformVariant.only(TargetPlatform.android),timeout:const Timeout(Duration(seconds:90)));
  testWidgets('T90, amounts and device TTS use the actual instruction text', (t) async {
   final data=(await t.runAsync(Content.load))!;
   final gas=data.manuals.singleWhere((a)=>a.id=='yanma');expect(gas.sections.any((s)=>s.title.startsWith('T90')),isTrue);
@@ -109,3 +155,4 @@ void main(){
   TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger.setMockMethodCallHandler(channel,null);
  });
 }
+

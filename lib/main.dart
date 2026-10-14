@@ -56,9 +56,22 @@ class Vessel {
 class Train {
   Train.fromJson(Map<String, dynamic> j)
       : name = j['name'] as String, note = j['note'] as String,
+        method = j['method'] as String? ?? '', sampling = j['sampling'] as String? ?? '',
+        flow = j['flow'] as String? ?? '', condition = j['condition'] as String? ?? '',
+        vesselType = j['vesselType'] as String? ?? '', inlet = j['inlet'] as String? ?? '',
+        branch = j['branch'] == true, filterAfter = j['filterAfter'] as int? ?? 0,
+        visual = j['visual'] as String?, steps = ((j['steps'] ?? []) as List).cast<String>(),
         bottles = (j['bottles'] as List).map((x) => Vessel.fromJson(x)).toList();
-  final String name, note;
+  final String name, note, method, sampling, flow, condition, vesselType, inlet;
+  final bool branch;
+  final int filterAfter;
+  final String? visual;
+  final List<String> steps;
   final List<Vessel> bottles;
+  double get canvasWidth => math.max(600, bottles.length*190.0 + (filterAfter>0 ? 100 : 0)).toDouble();
+  List<String> get narration => [method, sampling, flow, condition, vesselType, inlet,
+    for(var i=0;i<bottles.length;i++) '${i+1}. şişe. ${bottles[i].content}. ${bottles[i].amount}. ${bottles[i].strength}. ${bottles[i].tip}.',
+    note, ...steps];
 }
 class Article {
   Article.fromJson(Map<String, dynamic> j)
@@ -71,12 +84,11 @@ class Article {
   final String? visual;
   final List<Section> sections;
   final List<Train> trains;
-  String get searchable => searchKey('$title $method ${sections.map((s) => '${s.title} ${s.items.join(' ')}').join(' ')}');
-  List<String> get narration => [title, method,
-    for (final t in trains) ...[t.name,
-      for (var i=0; i<t.bottles.length; i++)
-        '${i+1}. şişe. ${t.bottles[i].content}. ${t.bottles[i].amount}. ${t.bottles[i].strength}.', t.note],
-    for (final s in sections) ...[s.title, ...s.items]];
+  String get searchable => searchKey('$title $method ${sections.map((s) => '${s.title} ${s.items.join(' ')}').join(' ')} ${trains.map((t)=>t.narration.join(' ')).join(' ')}');
+  List<String> get narration => narrationFor(null);
+  List<String> narrationFor(Train? selected) => [title, method,
+    if(selected!=null) ...selected.narration else for(final t in trains) ...t.narration,
+    for(final s in sections) ...[s.title,...s.items]];
 }
 class Content {
   Content(this.common, this.manuals, this.training);
@@ -171,6 +183,7 @@ class Narrator extends ChangeNotifier {
   }
   Future<void> pause() async { _session++; playing=false; paused=true; await _tts?.stop(); announce(); }
   Future<void> halt() async { _session++; preparing=false;playing=false; paused=false; await _tts?.stop(); announce(); }
+  Future<void> reset() async { await halt();chunks=[];index=0;offset=0;error=null;announce(); }
   Future<void> skip(int direction) async {
     final wasPlaying=playing; await halt();
     index=(index+direction).clamp(0, math.max(0,chunks.length-1)).toInt(); offset=0;
@@ -244,15 +257,20 @@ class DetailPage extends StatefulWidget {
  @override State<DetailPage> createState()=>_DetailState();
 }
 class _DetailState extends State<DetailPage> {
- final narrator=Narrator();
+ final narrator=Narrator();int selectedTrain=0;
  @override void dispose(){narrator.dispose();super.dispose();}
  @override Widget build(BuildContext c){ final a=widget.article;
   return Scaffold(appBar:AppBar(title:Text(a.title),actions:[IconButton(tooltip:'Okuma ve ses ayarları',onPressed:()=>showAppearance(c),icon:const Icon(Icons.tune))]),
    body:ListView(padding:const EdgeInsets.fromLTRB(16,8,16,40),children:[
     Text(a.method,style:Theme.of(c).textTheme.titleMedium?.copyWith(color:teal)),const SizedBox(height:16),
-    AudioPanel(narrator:narrator,article:a),
+    AudioPanel(narrator:narrator,article:a,narration:a.narrationFor(a.trains.isEmpty?null:a.trains[selectedTrain])),
     if(a.trains.isNotEmpty)...[const SizedBox(height:24),Text('Ölçüm düzeneği',style:Theme.of(c).textTheme.titleLarge?.copyWith(fontWeight:FontWeight.bold)),
-      for(final t in a.trains) TrainCard(train:t)],
+      if(a.trains.length>1) ...[const SizedBox(height:12),DropdownButtonFormField<int>(
+        initialValue:selectedTrain,isExpanded:true,itemHeight:null,
+        decoration:const InputDecoration(labelText:'Uygulama ve tren seçimi',border:OutlineInputBorder()),
+        items:[for(var i=0;i<a.trains.length;i++) DropdownMenuItem(value:i,child:Text(a.trains[i].name,maxLines:2))],
+        onChanged:(i){if(i!=null){unawaited(narrator.reset());setState(()=>selectedTrain=i);}})],
+      TrainCard(key:ValueKey('${a.id}-$selectedTrain'),train:a.trains[selectedTrain],onListen:()=>unawaited(narrator.start(a.trains[selectedTrain].narration)))],
     if(a.visual=='resin') ...[const SizedBox(height:20),ImageCard(asset:'assets/equipment/resin.webp',title:'Kondenser ve dik XAD-2 kartuşu'),
      const Padding(padding:EdgeInsets.all(8),child:Text('Gaz girişi kartuşun altında, çıkışı üstündedir. Yan bağlantılar soğutma suyuna aittir.'))],
     if(a.visual=='settled') ...[const SizedBox(height:20),const SettledCard()],
@@ -273,9 +291,9 @@ class _DetailState extends State<DetailPage> {
  }
 }
 class AudioPanel extends StatelessWidget {
- const AudioPanel({super.key,required this.narrator,required this.article});final Narrator narrator;final Article article;
+ const AudioPanel({super.key,required this.narrator,required this.article,this.narration});final Narrator narrator;final Article article;final List<String>? narration;
  @override Widget build(BuildContext c)=>ListenableBuilder(listenable:narrator,builder:(_,__)=>Card(child:Padding(padding:const EdgeInsets.all(12),child:Column(crossAxisAlignment:CrossAxisAlignment.start,children:[
-  Row(children:[IconButton.filled(tooltip:narrator.playing?'Duraklat':'Sesli anlatımı oynat',onPressed:narrator.preparing?null:()=>unawaited(narrator.playing?narrator.pause():narrator.paused?narrator.resume():narrator.start(article.narration)),icon:Icon(narrator.playing?Icons.pause:Icons.play_arrow)),const SizedBox(width:10),
+  Row(children:[IconButton.filled(tooltip:narrator.playing?'Duraklat':'Sesli anlatımı oynat',onPressed:narrator.preparing?null:()=>unawaited(narrator.playing?narrator.pause():narrator.paused?narrator.resume():narrator.start(narration??article.narration)),icon:Icon(narrator.playing?Icons.pause:Icons.play_arrow)),const SizedBox(width:10),
    const Expanded(child:Text('Sesli anlatım',style:TextStyle(fontWeight:FontWeight.w700))),
    IconButton(tooltip:'Önceki madde',onPressed:narrator.chunks.isEmpty?null:()=>unawaited(narrator.skip(-1)),icon:const Icon(Icons.skip_previous)),
    IconButton(tooltip:'Sonraki madde',onPressed:narrator.chunks.isEmpty?null:()=>unawaited(narrator.skip(1)),icon:const Icon(Icons.skip_next)),
@@ -287,38 +305,63 @@ class AudioPanel extends StatelessWidget {
 }
 
 class TrainCard extends StatelessWidget {
- const TrainCard({super.key,required this.train});final Train train;
+ const TrainCard({super.key,required this.train,this.onListen});final Train train;final VoidCallback? onListen;
  @override Widget build(BuildContext c)=>Card(margin:const EdgeInsets.only(top:12),child:Padding(padding:const EdgeInsets.all(12),child:Column(crossAxisAlignment:CrossAxisAlignment.start,children:[
-  Text(train.name,style:const TextStyle(fontWeight:FontWeight.w700)),const SizedBox(height:8),
-  SizedBox(height:400,child:SingleChildScrollView(scrollDirection:Axis.horizontal,child:ColoredBox(color:Colors.white,child:MediaQuery(data:MediaQuery.of(c).copyWith(textScaler:TextScaler.noScaling),child:TrainView(train:train))))),
+  Text(train.name,style:Theme.of(c).textTheme.titleMedium?.copyWith(fontWeight:FontWeight.w700)),const SizedBox(height:8),
+  Text(train.condition),const SizedBox(height:8),
+  Text(train.vesselType,style:Theme.of(c).textTheme.bodySmall),const SizedBox(height:12),
+  if(train.branch) const BranchView(),
+  Text(train.inlet,style:Theme.of(c).textTheme.bodySmall),const SizedBox(height:8),
+  SizedBox(height:620,child:SingleChildScrollView(scrollDirection:Axis.horizontal,child:ColoredBox(color:Colors.white,child:MediaQuery(data:MediaQuery.of(c).copyWith(textScaler:TextScaler.noScaling),child:TrainView(train:train))))),
   TextButton.icon(onPressed:()=>Navigator.push(c,MaterialPageRoute<void>(builder:(_)=>TrainFullScreen(train:train))),icon:const Icon(Icons.open_in_full),label:const Text('Tam ekran • Büyüt')),
-  Text(train.note),
+  if(train.note.isNotEmpty) Text(train.note),
+  if(train.steps.isNotEmpty)...[const SizedBox(height:16),Text('Bu uygulamanın özel adımları',style:Theme.of(c).textTheme.titleMedium),
+   if(onListen!=null) TextButton.icon(onPressed:onListen,icon:const Icon(Icons.volume_up_outlined),label:const Text('Seçili uygulamayı dinle')),
+   for(var i=0;i<train.steps.length;i++) Padding(padding:const EdgeInsets.only(top:10),child:Row(crossAxisAlignment:CrossAxisAlignment.start,children:[
+    Text('${i+1}. ',style:const TextStyle(color:teal,fontWeight:FontWeight.bold)),Expanded(child:Text(train.steps[i]))]))],
  ])));
+}
+class BranchView extends StatelessWidget {
+ const BranchView({super.key});
+ @override Widget build(BuildContext c)=>Container(margin:const EdgeInsets.only(bottom:12),padding:const EdgeInsets.all(12),decoration:BoxDecoration(color:teal.withValues(alpha:.08),borderRadius:BorderRadius.circular(12)),child:Column(crossAxisAlignment:CrossAxisAlignment.start,children:[
+  const Text('Filtre sonrası T bağlantısı',style:TextStyle(fontWeight:FontWeight.w700)),
+  SizedBox(height:70,width:double.infinity,child:CustomPaint(painter:BranchPainter(),child:const Padding(padding:EdgeInsets.only(left:70),child:Column(crossAxisAlignment:CrossAxisAlignment.start,mainAxisAlignment:MainAxisAlignment.spaceBetween,children:[Text('Ana akış • İzokinetik'),Text('Yan akış • Bu trene')])))),
+ ]));
+}
+class BranchPainter extends CustomPainter {
+ @override void paint(Canvas c,Size s){final p=Paint()..color=teal..strokeWidth=3; c.drawLine(const Offset(0,20),const Offset(52,20),p);c.drawLine(const Offset(35,20),const Offset(35,58),p);c.drawLine(const Offset(35,58),const Offset(52,58),p);for(final y in [20.0,58.0]){c.drawLine(Offset(52,y),Offset(46,y-5),p);c.drawLine(Offset(52,y),Offset(46,y+5),p);}}
+ @override bool shouldRepaint(BranchPainter old)=>false;
 }
 class TrainView extends StatelessWidget {
  const TrainView({super.key,required this.train});final Train train;
- @override Widget build(BuildContext c)=>SizedBox(width:train.bottles.length*190.0,height:400,child:Stack(children:[
-  // The bottles are illustrative raster assets. Topology, numbering and quantities are native data.
-  Positioned(top:10,left:0,right:0,child:CustomPaint(size:Size(train.bottles.length*190.0-24,20),painter:ConnectionPainter(train.bottles.length))),
-  Row(crossAxisAlignment:CrossAxisAlignment.start,children:[for(var i=0;i<train.bottles.length;i++) SizedBox(width:190,child:Column(children:[
-   Image.asset('assets/equipment/${train.bottles[i].tip.contains('Standart') ? 'standard' : train.bottles[i].kind}.webp',width:190,height:270,fit:BoxFit.contain,semanticLabel:'${i+1}. şişe: ${train.bottles[i].content}, ${train.bottles[i].amount}, ${train.bottles[i].strength}'),
-   const SizedBox(height:4),Text('${i+1}. şişe',style:const TextStyle(color:teal,fontSize:16,fontWeight:FontWeight.w700)),
-   Text(train.bottles[i].content,textAlign:TextAlign.center,style:const TextStyle(color:navy,fontSize:19,fontWeight:FontWeight.w700)),
-   Text(train.bottles[i].amount,textAlign:TextAlign.center,style:const TextStyle(color:teal,fontSize:20,fontWeight:FontWeight.bold)),
-   if(train.bottles[i].strength.isNotEmpty) Text(train.bottles[i].strength,textAlign:TextAlign.center,style:const TextStyle(color:navy,fontSize:17)),
-  ]))]),
+ @override Widget build(BuildContext c)=>SizedBox(width:train.canvasWidth,height:620,child:Column(crossAxisAlignment:CrossAxisAlignment.start,children:[
+  Padding(padding:const EdgeInsets.fromLTRB(12,10,12,8),child:Column(crossAxisAlignment:CrossAxisAlignment.start,children:[
+   Text(train.method,style:const TextStyle(color:navy,fontSize:20,fontWeight:FontWeight.bold)),
+   Text(train.sampling,style:const TextStyle(color:teal,fontSize:20,fontWeight:FontWeight.bold)),
+   Text(train.flow,style:const TextStyle(color:navy,fontSize:17)),
+  ])),
+  if(train.visual=='resin') Expanded(child:Image.asset('assets/equipment/resin.webp',width:train.canvasWidth,fit:BoxFit.contain,semanticLabel:'Dik XAD-2: gaz girişi alttan, çıkış üstten'))
+  else Expanded(child:Stack(children:[
+   Positioned(top:10,left:0,right:0,child:CustomPaint(size:Size(train.canvasWidth,20),painter:ConnectionPainter(train.bottles.length,train.filterAfter))),
+   Row(crossAxisAlignment:CrossAxisAlignment.start,children:[for(var i=0;i<train.bottles.length;i++) ...[
+    SizedBox(width:190,child:Column(children:[
+     SizedBox(height:270,child:Center(child:Image.asset('assets/equipment/${train.bottles[i].tip.contains('Standart')?'standard':train.bottles[i].kind}.webp',width:train.vesselType.toLowerCase().contains('cüce')?125:190,height:train.vesselType.toLowerCase().contains('cüce')?190:270,fit:BoxFit.contain,semanticLabel:'${i+1}. şişe: ${train.bottles[i].content}, ${train.bottles[i].amount}, ${train.bottles[i].strength}'))),
+     Text('${i+1}. şişe',style:const TextStyle(color:teal,fontSize:16,fontWeight:FontWeight.w700)),
+     Text(train.bottles[i].content,textAlign:TextAlign.center,style:const TextStyle(color:navy,fontSize:19,fontWeight:FontWeight.w700)),
+     Text(train.bottles[i].amount,textAlign:TextAlign.center,style:const TextStyle(color:teal,fontSize:19,fontWeight:FontWeight.bold)),
+     if(train.bottles[i].strength.isNotEmpty) Text(train.bottles[i].strength,textAlign:TextAlign.center,style:const TextStyle(color:navy,fontSize:16)),
+     Text(train.bottles[i].tip,textAlign:TextAlign.center,style:const TextStyle(color:navy,fontSize:14)),
+    ])),
+    if(train.filterAfter==i+1) const SizedBox(width:100,child:Padding(padding:EdgeInsets.only(top:6),child:Column(children:[Icon(Icons.filter_alt_outlined,color:teal,size:36),Text('Filtre',style:TextStyle(color:navy,fontSize:17,fontWeight:FontWeight.bold))]))),
+   ]]),
+  ])),
  ]));
 }
 class ConnectionPainter extends CustomPainter {
- ConnectionPainter(this.count);final int count;
- @override void paint(Canvas canvas,Size size){
-  final p=Paint()..color=teal..strokeWidth=3..style=PaintingStyle.stroke;
-  for(var i=0;i<count-1;i++){
-   final x=167.0+i*190;canvas.drawLine(Offset(x,0),Offset(x+46,0),p);
-   canvas.drawLine(Offset(x+30,0),Offset(x+23,-5),p);canvas.drawLine(Offset(x+30,0),Offset(x+23,5),p);
-  }
- }
- @override bool shouldRepaint(ConnectionPainter old)=>count!=old.count;
+ ConnectionPainter(this.count,this.filterAfter);final int count,filterAfter;
+ @override void paint(Canvas c,Size size){final p=Paint()..color=teal..strokeWidth=3;
+  for(var i=0;i<count-1;i++){final x=167.0+i*190+(filterAfter>0 && i>=filterAfter?100:0);final gap=filterAfter==i+1?146.0:46.0;c.drawLine(Offset(x,0),Offset(x+gap,0),p);c.drawLine(Offset(x+gap-16,0),Offset(x+gap-23,-5),p);c.drawLine(Offset(x+gap-16,0),Offset(x+gap-23,5),p);}}
+ @override bool shouldRepaint(ConnectionPainter old)=>count!=old.count || filterAfter!=old.filterAfter;
 }
 class TrainFullScreen extends StatefulWidget {
  const TrainFullScreen({super.key,required this.train});final Train train;
@@ -326,13 +369,17 @@ class TrainFullScreen extends StatefulWidget {
 }
 class _TrainFullState extends State<TrainFullScreen> {
  final controller=TransformationController();double oldWidth=0;
- @override void didChangeDependencies(){super.didChangeDependencies();final width=MediaQuery.sizeOf(context).width;if(width!=oldWidth){oldWidth=width;controller.value=Matrix4.diagonal3Values((width/(widget.train.bottles.length*190)).clamp(.2,1).toDouble(),(width/(widget.train.bottles.length*190)).clamp(.2,1).toDouble(),1);}}
+ @override void didChangeDependencies(){super.didChangeDependencies();final width=MediaQuery.sizeOf(context).width;if(width!=oldWidth){oldWidth=width;final scale=(width/widget.train.canvasWidth).clamp(.2,1).toDouble();controller.value=Matrix4.diagonal3Values(scale,scale,1);}}
  @override void dispose(){controller.dispose();super.dispose();}
- @override Widget build(BuildContext c){final train=widget.train;return Scaffold(backgroundColor:Colors.white,appBar:AppBar(title:Text(train.name)),body:Column(children:[
-  const Padding(padding:EdgeInsets.all(12),child:Text('Soldan sağa gaz akışı • Kaydır ve iki parmakla büyüt',style:TextStyle(color:navy))),
-  Expanded(child:InteractiveViewer(transformationController:controller,constrained:false,minScale:.2,maxScale:3,child:ColoredBox(color:Colors.white,child:MediaQuery(data:MediaQuery.of(c).copyWith(textScaler:TextScaler.noScaling),child:TrainView(train:train))))),
+ @override Widget build(BuildContext c){final t=widget.train;return Scaffold(backgroundColor:Colors.white,appBar:AppBar(title:Text(t.name)),body:Column(children:[
+  Padding(padding:const EdgeInsets.all(12),child:Text('${t.method} • ${t.sampling}\n${t.flow}',style:const TextStyle(color:navy,fontSize:16))),
+  const Text('Soldan sağa gaz akışı • Kaydır ve iki parmakla büyüt',style:TextStyle(color:navy,fontSize:13)),
+  Expanded(child:InteractiveViewer(transformationController:controller,constrained:false,minScale:.2,maxScale:3,child:ColoredBox(color:Colors.white,child:MediaQuery(data:MediaQuery.of(c).copyWith(textScaler:TextScaler.noScaling),child:TrainView(train:t))))),
   Flexible(child:SingleChildScrollView(padding:const EdgeInsets.all(16),child:Column(crossAxisAlignment:CrossAxisAlignment.start,children:[
-    for(var i=0;i<train.bottles.length;i++) Text('${i+1}. ${train.bottles[i].content} — ${train.bottles[i].amount}${train.bottles[i].strength.isEmpty?'':' • ${train.bottles[i].strength}'}${train.bottles[i].tip.contains('Standart')?' • ${train.bottles[i].tip}':''}',style:const TextStyle(color:navy,fontSize:18,height:1.6)),
+   Text(t.vesselType,style:const TextStyle(color:navy,fontSize:16)),
+   for(var i=0;i<t.bottles.length;i++) Text('${i+1}. ${t.bottles[i].content} — ${t.bottles[i].amount}${t.bottles[i].strength.isEmpty?'':' • ${t.bottles[i].strength}'} • ${t.bottles[i].tip}',style:const TextStyle(color:navy,fontSize:18,height:1.5)),
+   if(t.filterAfter>0)Text('Filtre: ${t.filterAfter}. şişeden sonra.',style:const TextStyle(color:teal,fontSize:18)),
+   if(t.note.isNotEmpty)Text(t.note,style:const TextStyle(color:navy,fontSize:16)),
   ]))),
  ]));}
 }
@@ -373,3 +420,4 @@ class SettledPainter extends CustomPainter {
  }
  @override bool shouldRepaint(SettledPainter old)=>false;
 }
+
