@@ -2891,8 +2891,8 @@
           "name": "EPA 4 • Bağımsız referans nem",
           "method": "EPA Method 4",
           "sampling": "Sabit debili örnekleme",
-          "flow": "En fazla 21 L/dakika • Sapma ±%10",
-          "condition": "Bağımsız su buharı tayini; en az 30 dakika ve en az 600 L birlikte sağlanır.",
+          "flow": "En fazla 21 L/dakika • Sabit debiden sapma ±%10",
+          "condition": "Bağımsız referans nem tayini; örnekleme süresi hedef standart hacme göre seçilir.",
           "bottles": [
             {
               "content": "Saf su",
@@ -2924,16 +2924,22 @@
             }
           ],
           "steps": [
-            "Şişelerin başlangıç hacim/kütlesini ve nem tutucu ön kütlesini kaydet.",
-            "Prob/filtrede yoğuşmayı önle; silika jel çıkışını 20 °C altında tut.",
-            "Sabit çekişle bütün seçilen noktalarda eşit süre örnekle; son sıvı/kütle farkından suyu belirle."
+            "Şişelerin başlangıç hacim/kütlesini ve silika jel ön kütlesini kaydet. Sıcaklık sensörünü son impingerin gaz çıkışına yerleştir; buz banyosunun sıcaklığını gaz çıkış sıcaklığı yerine kullanma.",
+            "Prob ve varsa dış filtre ısıtmasını yoğuşmayı önleyecek biçimde, yöntemde belirtilen yaklaşık 120 °C’ye getir; kararlı hâle gelmesini bekle.",
+            "Sabit çekişle bütün seçilen noktalarda eşit süre örnekle. Sayaç, sıcaklık, basınç ve süreyi kaydet; çıkış sıcaklığı yükselirse banyoya buz ilave et.",
+            "Örnekleme süresini düzeltilmiş hacim hedefini sağlayana kadar sürdür. 20 L/dakika × 30 dakika = 600 L yalnız ham hacim planıdır; tek başına 600 standart litreyi garanti etmez.",
+            "Bitiş sayaç değerini ve son kaçak kontrolünü kaydet; sıvı ve silika jel kütle farkından tutulan suyu belirle."
           ],
-          "note": "Gösterilen su ve silika jel miktarları bu saha uygulamasına aittir.",
+          "note": "Debi toleransı üst sınırı aşma izni değildir. Referans yöntemde her durum için bağımsız bir 30 dakika asgari süresi tanımlanmıyor; süre hacim ve varsa eşzamanlı ana ölçüm şartına göre belirlenir.",
           "vesselType": "Greenburg–Smith",
           "branch": false,
           "inlet": "Isıtmalı prob → filtre → tren",
           "filterAfter": 0,
-          "visual": null
+          "visual": null,
+          "controls": [
+            "Hacim: en az 0,60 standart m³ = 600 standart litre. Sayaçtaki ham litreyi sıcaklık, basınç ve kalibrasyon düzeltmesi yapmadan bu hedefle karşılaştırma.",
+            "Soğutma: impingerleri kırılmış buz + su banyosunda tut. 4. impingerin (silika jel) gaz çıkışı 20 °C’nin ALTINDA olmalı; 20 °C ve üstü uygun değildir."
+          ]
         },
         {
           "name": "EPA 4 • İzokinetik ölçümle birlikte",
@@ -2980,7 +2986,10 @@
           "branch": false,
           "inlet": "Isıtmalı prob → filtre → tren",
           "filterAfter": 0,
-          "visual": null
+          "visual": null,
+          "controls": [
+            "Soğutma: impingerler kırılmış buz + su banyosunda; silika jel çıkışındaki gaz sıcaklığı 20 °C’nin altında tutulur."
+          ]
         },
         {
           "name": "EN 14790 • Yoğuşturma / adsorpsiyon",

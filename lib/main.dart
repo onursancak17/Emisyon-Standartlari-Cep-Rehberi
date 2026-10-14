@@ -60,16 +60,17 @@ class Train {
         flow = j['flow'] as String? ?? '', condition = j['condition'] as String? ?? '',
         vesselType = j['vesselType'] as String? ?? '', inlet = j['inlet'] as String? ?? '',
         branch = j['branch'] == true, filterAfter = j['filterAfter'] as int? ?? 0,
+        controls = ((j['controls'] ?? []) as List).cast<String>(),
         visual = j['visual'] as String?, steps = ((j['steps'] ?? []) as List).cast<String>(),
         bottles = (j['bottles'] as List).map((x) => Vessel.fromJson(x)).toList();
   final String name, note, method, sampling, flow, condition, vesselType, inlet;
   final bool branch;
   final int filterAfter;
   final String? visual;
-  final List<String> steps;
+  final List<String> steps, controls;
   final List<Vessel> bottles;
   double get canvasWidth => math.max(visual=='resin'?600:380, bottles.length*190.0 + (filterAfter>0 ? 100 : 0)).toDouble();
-  List<String> get narration => [method, sampling, flow, condition, vesselType, inlet,
+  List<String> get narration => [method, sampling, flow, condition, vesselType, inlet, ...controls,
     for(var i=0;i<bottles.length;i++) '${i+1}. şişe. ${bottles[i].content}. ${bottles[i].amount}. ${bottles[i].strength}. ${bottles[i].tip}.',
     note, ...steps];
 }
@@ -314,6 +315,8 @@ class TrainCard extends StatelessWidget {
  @override Widget build(BuildContext c)=>Card(margin:const EdgeInsets.only(top:12),child:Padding(padding:const EdgeInsets.all(12),child:Column(crossAxisAlignment:CrossAxisAlignment.start,children:[
   Text(train.name,style:Theme.of(c).textTheme.titleMedium?.copyWith(fontWeight:FontWeight.w700)),const SizedBox(height:8),
   Text(train.condition),const SizedBox(height:8),
+  Text(train.flow,style:const TextStyle(color:teal,fontWeight:FontWeight.w700)),
+  for(final control in train.controls) Padding(padding:const EdgeInsets.symmetric(vertical:8),child:Text(control,style:const TextStyle(fontWeight:FontWeight.w700))),
   Text(train.vesselType,style:Theme.of(c).textTheme.bodySmall),const SizedBox(height:12),
   if(train.branch) const BranchView(),
   Text(train.inlet,style:Theme.of(c).textTheme.bodySmall),const SizedBox(height:8),

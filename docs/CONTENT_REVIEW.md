@@ -76,3 +76,6 @@ EPA 8 6.1.1.3–4 kontrolü: birinci/üçüncü uç standart, ikinci/dördüncü
 - Deposited-dust maintenance integrated into existing gravimetric SOP; separate metal deposition article uses supplied metal SOP. Collection preservative volumes absent from metal SOP are not invented or inherited from CuSO4 gravimetry.
 - Metal laboratory digestion: 8 mL HNO3, 2 mL H2O2, 2 mL water; rendered table 130/180/220 C steps 3+2,3+2,3+20 min; cool to 50 C >20 min; 50 mL final with 1% HNO3. Tl AAS separated from ICP-OES elements.
 - Source upload hashes: EPA17 2e1f65ef2b557a558d5ff0eedbdfe753d727819fae8f66170abaaddc00f99853; EPA1 8f8174fc10c1d1613ba4b1b860aaf15afd45ac0256b0a86a8a26839798c31294; deposited-metal d9e8cf07d08cc527b1036e91e805a5b26f5eac3fb8f91cb5bcdbf79c6614022b; maintenance c3271e7e2384f879201b79e26aba2afdb159f9539807007e952dea8fa5b9d834.
+
+## 2.2.1 EPA 4 visibility and reference basis
+Verified current EPA EMC Method 4 PDF sections 8.1.1.2,8.1.2.2,8.1.4/8.1.4.1. Added visible train-specific controls: >=0.60 scm (600 standard L), <=0.021 m3/min, crushed ice + water bath, silica gel outlet gas <20 C. Clarified sensor location, raw DGM versus standard volume and removed unsupported universal 30-minute minimum. Controls follow selected train and are included in narration; EN and isokinetic modes do not inherit independent constant-flow constraints.

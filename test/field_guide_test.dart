@@ -105,7 +105,7 @@ void main(){
    await t.pumpWidget(MaterialApp(home:MediaQuery(data:const MediaQueryData(size:Size(320,800),textScaler:TextScaler.linear(1.4)),child:Scaffold(body:SingleChildScrollView(child:TrainCard(train:train))))));
    await t.pumpAndSettle();
    expect(find.text(train.sampling),findsOneWidget,reason:train.name);
-   expect(find.text(train.flow),findsOneWidget);
+   expect(find.text(train.flow),findsNWidgets(2));
    expect(t.takeException(),isNull,reason:'${a.id}: ${train.name}');
    expect(find.byType(ErrorWidget),findsNothing);
    await t.pumpWidget(const SizedBox.shrink());await t.pumpAndSettle();

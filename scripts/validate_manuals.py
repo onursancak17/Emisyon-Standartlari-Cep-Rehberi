@@ -48,3 +48,6 @@ print(f'Validated {len(a)} instructions, {len(t)} training chapters, all reagent
 assert by['toz-epa']['filterPlacement']=='outside'
 assert by['toz-epa17']['filterPlacement']=='inside'
 assert by['cokentoz-metal']['visual']=='settled-metal' and not by['cokentoz-metal']['trains']
+
+assert '600 standart litre' in by['nem']['trains'][0]['controls'][0]
+assert '20 °C’nin ALTINDA' in by['nem']['trains'][0]['controls'][1]
