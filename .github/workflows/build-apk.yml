@@ -38,7 +38,9 @@ jobs:
 
       - name: Validate offline APK assets
         run: |
-          python3 scripts/validate_assets.py || true
+          python3 scripts/validate_assets.py
+          python3 scripts/validate_field_guide.py
+          python3 -m unittest discover -s scripts -p 'test_*.py'
 
       - name: Set up Java
         uses: actions/setup-java@v4
@@ -64,6 +66,7 @@ jobs:
           cp -r lib /tmp/mobile_build/lib
           cp -r assets /tmp/mobile_build/assets
           cp pubspec.yaml /tmp/mobile_build/pubspec.yaml
+          cp -r test /tmp/mobile_build/test
 
       - name: Set Android app display name
         run: |
@@ -114,3 +117,4 @@ jobs:
           name: emisyon-imisyon-olcum-standartlari-apk
           path: build-output/emisyon-imisyon-olcum-standartlari.apk
           if-no-files-found: error
+

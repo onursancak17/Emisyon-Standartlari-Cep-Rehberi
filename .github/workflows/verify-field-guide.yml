@@ -1,0 +1,30 @@
+name: Verify field guide
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Validate source references and method profiles
+        run: |
+          python3 scripts/validate_field_guide.py
+          python3 -m unittest discover -s scripts -p 'test_*.py'
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+      - name: Install dependencies and analyze
+        run: |
+          flutter pub get
+          flutter analyze lib test --no-fatal-infos --no-fatal-warnings
+      - name: Test method selection and field calculations
+        run: flutter test

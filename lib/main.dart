@@ -5,6 +5,7 @@ import 'dart:typed_data';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:just_audio/just_audio.dart';
+import 'field_guide.dart';
 
 void main() {
   runApp(const StandardsApp());
@@ -94,6 +95,14 @@ class _StandardsHomePageState extends State<StandardsHomePage> {
 
             return Column(
               children: [
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(16, 12, 16, 0),
+                  child: FilledButton.icon(
+                    icon: const Icon(Icons.science_outlined),
+                    label: const Text('Parametre seç · Numune alma ve impinger rehberi'),
+                    onPressed: () => Navigator.of(context).push(MaterialPageRoute<void>(builder: (_) => const FieldGuidePage())),
+                  ),
+                ),
                 Padding(
                   padding: const EdgeInsets.fromLTRB(16, 12, 16, 8),
                   child: TextField(
@@ -709,7 +718,7 @@ class _UnitInfoBlock extends StatelessWidget {
       margin: const EdgeInsets.only(bottom: 12),
       child: const Padding(
         padding: EdgeInsets.all(14),
-        child: Text('Birim notu: Amerikan kaynaklı scf/scm/cfm ifadeleri Türkiye saha kullanımına uygun Nm³, m³/dk ve L/dk karşılıklarıyla değerlendirilir.'),
+        child: Text('Birim notu: L, m³, L/dk ve °C kullanılır. Gaz hacminde kaynak sıcaklık/basıncı ve kuru/yaş baz korunur. Standart m³, koşulları doğrulanmadan 0 °C Nm³ olarak yeniden adlandırılmaz.'),
       ),
     );
   }
@@ -1060,15 +1069,15 @@ class TurkishUnitText {
   static String normalize(String input) {
     if (input.isEmpty) return input;
     var value = input;
-    value = value.replaceAll(RegExp(r'0[,.]60\s*scm\s*/\s*21\s*scf', caseSensitive: false), '0,60 Nm³');
-    value = value.replaceAll(RegExp(r'21\s*scf', caseSensitive: false), '0,60 Nm³');
+    value = value.replaceAll(RegExp(r'0[,.]60\s*scm\s*/\s*21\s*scf', caseSensitive: false), '0,60 standart m³ (kaynağın referans koşullarında)');
+    value = value.replaceAll(RegExp(r'21\s*scf', caseSensitive: false), 'yaklaşık 0,595 standart m³ (kaynağın referans koşullarında)');
     value = value.replaceAll(RegExp(r'0[,.]75\s*cfm\s*/\s*(yaklaşık\s*)?0[,.]021\s*m3\s*/\s*dk', caseSensitive: false), 'yaklaşık 21 L/dk (0,021 m³/dk)');
     value = value.replaceAll(RegExp(r'0[,.]021\s*m3\s*/\s*dk', caseSensitive: false), '0,021 m³/dk (yaklaşık 21 L/dk)');
     value = value.replaceAll(RegExp(r'0[,.]00057\s*m3\s*/\s*dk\s*/\s*0[,.]020\s*cfm', caseSensitive: false), '0,00057 m³/dk (yaklaşık 0,57 L/dk)');
     value = value.replaceAll(RegExp(r'0[,.]020\s*cfm', caseSensitive: false), '0,57 L/dk (0,00057 m³/dk)');
     value = value.replaceAll(RegExp(r'0[,.]00057\s*m3\s*/\s*dk', caseSensitive: false), '0,00057 m³/dk');
-    value = value.replaceAll(RegExp(r'\bscm\b', caseSensitive: false), 'Nm³');
-    value = value.replaceAll(RegExp(r'\bscf\b', caseSensitive: false), 'standart ft³ (Türkiye karşılığı: Nm³)');
+    value = value.replaceAll(RegExp(r'\bscm\b', caseSensitive: false), 'standart m³ (kaynak koşulları)');
+    value = value.replaceAll(RegExp(r'\bscf\b', caseSensitive: false), 'standart ft³ (kaynak koşulları)');
     value = value.replaceAll(RegExp(r'\bcfm\b', caseSensitive: false), 'ft³/dk (Türkiye karşılığı: m³/dk veya L/dk)');
     value = value.replaceAll(RegExp(r'\bm3\s*/\s*dk\b', caseSensitive: false), 'm³/dk');
     value = value.replaceAll(RegExp(r'\bm3\b', caseSensitive: false), 'm³');
@@ -1076,3 +1085,4 @@ class TurkishUnitText {
     return value;
   }
 }
+

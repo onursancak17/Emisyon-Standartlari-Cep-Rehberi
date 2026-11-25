@@ -1,5 +1,15 @@
 # Emisyon İmisyon Ölçüm Standartları
 
+## 0.5.0 — parametre ve metoda göre saha rehberi
+
+Ana ekrandaki **Parametre seç · Numune alma ve impinger rehberi** düğmesi yeni bölümü açar. 17 metot/varyant kartının 10’unda ayrı tren çizimi bulunur. Metot değişince filtre yeri, şişeler ve miktarlar seçime göre değişir. Şema tam ekranda yakınlaştırılabilir ve çevrimdışı çalışır.
+
+Girdap açısı ölçümü ve EPA Method 1 mutlak açı ortalaması; ölçüm yeri uygunsuzlukları; 23 ortak saha konusu; referans koşullarını koruyan birim dönüşümü eklendi. İncelemesi tamamlanmamış yöntemler açıkça **hazırlanıyor / talimat kaynaklı** görünür. Tam metot onayı veya bütün standartların güncel sürümlerinin eksiksiz işlendiği iddia edilmez.
+
+Kapsam, tamamlananlar ve kalan işler: [Geliştirme planı](docs/GELISTIRME_PLANI.md). Kaynak kimlikleri: [SOURCE_INDEX.json](docs/SOURCE_INDEX.json).
+
+GitHub Actions: **Verify field guide** Python/Flutter kontrolleri; **Build Android APK** APK derlemesi. APK yalnızca başarılı derleme tamamlandıktan sonra Artifacts bölümünden indirilir.
+
 Bu proje, emisyon ve imisyon saha ölçüm personeli için hazırlanmış **tam Türkçe**, offline Android cep rehberi uygulamasıdır.
 
 Android telefonda görünecek APK uygulama adı:
@@ -48,8 +58,8 @@ Uygulama Türkiye saha kullanımına göre hazırlanır. Amerikan/İngiliz kayna
 
 Örnek dönüşümler:
 
-- `scm` yerine `Nm³`
-- `21 scf` yerine yaklaşık `0,60 Nm³`
+- `scm` → kaynağın referans koşullarında standart m³; sıcaklık/basınç ve kuru/yaş baz korunur.
+- `21 scf` → yaklaşık `0,595 standart m³`; tek başına 0 °C Nm³ dönüşümü değildir.
 - `0,75 cfm` yerine yaklaşık `21 L/dk` veya `0,021 m³/dk`
 - `0,020 cfm` yerine yaklaşık `0,57 L/dk` veya `0,00057 m³/dk`
 - `m3` yerine `m³`
@@ -172,3 +182,4 @@ Standart içerikleri `assets/standards.json` ve `assets/standards_extra.json` do
 ## Önemli not
 
 Bu uygulama sahada hızlı kontrol ve eğitim amaçlı Türkçe rehberdir. Resmi raporlama ve denetim işlerinde yürürlükteki standart, mevzuat ve laboratuvar talimatı esas alınmalıdır.
+
