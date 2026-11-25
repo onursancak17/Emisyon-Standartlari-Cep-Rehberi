@@ -258,6 +258,7 @@ class StandardDetailPage extends StatelessWidget {
           Wrap(spacing: 8, runSpacing: 8, children: [_MiniChip(label: item.category), _MiniChip(label: item.subgroup), _MiniChip(label: item.code)]),
           const SizedBox(height: 16),
           const _UnitInfoBlock(),
+          const GuideNotice(text: 'Bu katalogdaki genel notların ayrıntılı kaynak eşleştirmesi sürüyor. Metoda özgü şema ve kontrol durumunu ana ekrandaki parametre rehberinden incele; eski eğitim notları tam yöntem onayı sayılmaz.'),
           _AudioNotesBlock(notes: item.audioNotes),
           _InfoBlock(title: labels.purposeTitle, body: item.purpose),
           _VisualNotesBlock(notes: purposeNotes),
