@@ -131,7 +131,7 @@ class _MethodGuidePageState extends State<MethodGuidePage> {
           Text('Numune alma treni', style: Theme.of(context).textTheme.titleLarge),
           const Text('Akış soldan sağa. Şema ölçekli değildir; şekiller impinger geometrisinin imalat çizimi değildir.'),
           if (train.any((n) => n['optional'] == true)) SwitchListTile.adaptive(
-            contentPadding: EdgeInsets.zero, title: const Text('İsteğe bağlı şişeleri göster'),
+            contentPadding: EdgeInsets.zero, title: const Text('İsteğe bağlı bileşenleri göster'),
             subtitle: const Text('Çıkarma koşulu aşağıdaki hazırlık bölümündedir. Metot şişe numaraları korunur.'),
             value: _includeOptional, onChanged: (v) => setState(() => _includeOptional = v)),
           TrainDiagram(nodes: selectedTrain),

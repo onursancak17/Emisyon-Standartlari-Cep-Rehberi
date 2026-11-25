@@ -52,7 +52,8 @@ class FieldGuideTests(unittest.TestCase):
 
     def test_pending_cannot_display_a_recipe(self):
         bad = copy.deepcopy(DATA)
-        pending=next(p for p in bad['profiles'] if p['reviewState']=='pending')
+        pending=bad['profiles'][0]
+        pending['reviewState']='pending'
         pending['train']=bad['profiles'][0]['train']
         with self.assertRaises(AssertionError):validate(bad,SOURCES)
 
@@ -126,6 +127,20 @@ class FieldGuideTests(unittest.TestCase):
             filled=[n for n in side if n['kind']=='impinger' and 'boş' not in n['content']]
             self.assertEqual(len(filled),count)
             self.assertNotEqual(d['branches'][0]['nodes'][-1]['id'],side[-1]['id'])
+
+    def test_ammonia_small_and_large_trains_keep_different_fills_and_front_filter(self):
+        large=P['ammonia_2071_gs']['train'];small=P['ammonia_2071_mini']['train']
+        self.assertEqual(next(n for n in large if n['id']=='i1')['amount'],'100 mL')
+        self.assertEqual(next(n for n in small if n['id']=='i1')['amount'],'15 mL')
+        self.assertTrue(next(n for n in large if n['id']=='filter')['optional'])
+        self.assertNotIn('filter',[n['id'] for n in small])
+
+    def test_dioxin_condensate_moves_between_specific_variants(self):
+        full=[n['id'] for n in P['dioxin_en1948_filter']['train']]
+        side=[n['id'] for n in P['dioxin_en1948_split']['diagram']['branches'][1]['nodes']]
+        self.assertLess(full.index('adsorber'),full.index('condensate'))
+        self.assertLess(side.index('condensate'),side.index('adsorber'))
+        self.assertEqual([n['amount'] for n in P['dioxin_en1948_liquid']['train'] if n['kind']=='impinger'],['150 mL','150 mL'])
 
 
 if __name__=='__main__':unittest.main()

@@ -199,48 +199,44 @@
       "0.1 N H2SO4",
       "15-30 L/dk"
     ],
-    "purpose": "Baca gazında NH3 numunesinin SCAQMD Method 207.1 ile sabit akışlı, izokinetik olmayan prensipte alınması için saha rehberidir.",
-    "duration": "Sabit tek süre yoktur; kuru gaz sayaç ilk-son değeriyle toplam hacim hesaplanır. Impinger taşması olursa süre ve hacim kayıt edilerek sistem kapatılır.",
-    "flowRate": "Örnekleme debisi 15-30 L/dk arasında olmalıdır.",
+    "purpose": "SCAQMD Method 207.1 — Nisan 2006. Gaz halindeki serbest amonyak hedeflenir; partikül/amonyum tuzu, nem ve kuvvetli baz girişimlerini değerlendir. Baca ve flux odası düzenekleri ayrı seçilir. Nem Method 4.1 bağlantılıdır.",
+    "duration": "PST=PSV/VSR; debi hedefi sağlanmazsa süreyi yeniden hesapla. Saatlik kütle sınırı için ≥1 saat; çevrimli proseste tam çevrim ve aynı fazda başlangıç/son gerekir.",
+    "flowRate": "§3.1.5: 0,015–0,030 m³/dk = 15–30 L/dk. Kaynakta yanındaki 0,50–1,0 cfm yuvarlatılmıştır; Ek B tipik 14,16–21,24 L/dk aralığı ayrıca planlama örneğidir.",
     "equipment": [
-      "4 Greenburg-Smith impinger",
-      "Cam/paslanmaz çelik nozul-prob",
-      "Kuru gaz sayacı",
-      "Buz banyosu",
-      "Silika jel",
-      "500 mL dereceli silindir"
+      "Bu yöntemin şema/numune fraksiyonları ana ekrandaki parametre rehberinde ayrı varyantlarla bulunur."
     ],
     "reagents": [
-      "1. impinger: 100 mL 0,1 N H2SO4",
-      "2. impinger: 100 mL 0,1 N H2SO4",
-      "3. impinger: boş",
-      "4. impinger: ağırlığı bilinen silika jel",
-      "Şahit: 200 mL reaktif H2SO4, numune hacmine kadar seyreltilir"
+      "0,1 N asit hazırla veya belgeli hazır çözelti kullan. N ve mol/L aynı sayı değildir; Şekil 207.1-2 üzerindeki 0,1 M etiketi ile §2.2.2/2.3.4/2.4.2’deki 0,1 N metni çelişir. Bu kart açık metindeki 0,1 N tarifini izler; laboratuvar uygulama planında çelişkiyi çöz.",
+      "En az bir blank tren/test seti ve en az günlük bir blank; örnekle aynı kurulum/geri kazanım. Blank numune sonucundan çıkarılmaz. İki ayrı test koşusu gerekir; eşzamanlı iki tren yazılı özel izin olmadan bu tekrarın yerini almaz.",
+      "İlk iki kap standart uçlu Greenburg–Smith; üçüncü/dördüncü düz uçlu modifiye GS. Düz boru iç çapı yaklaşık 13 mm, tabandan yaklaşık 13 mm yukarıda (§2.2.1.3)."
     ],
     "fieldSteps": [
-      "Düz baca/kanalda uygun nokta seç.",
-      "EPA Method 17 bölüm 4.1.4'e göre kaçak testi yap.",
-      "Debiyi 15-30 L/dk aralığında tut.",
-      "Sayaç sıcaklıklarını ve ilk impinger hacmini izle.",
-      "Ölçüm sonunda impingerleri 0,1 g hassasiyetle tart.",
-      "pH kontrolü yap; pH > 2 ise geçersiz say.",
-      "Sıvıyı 500 mL'ye tamamla ve 1,6-7,2 °C'de sakla."
+      "Ön test: nozül kapalı 380 mmHg ≈50,66 kPa vakum; daha düşük vakum ancak koşu bunu aşmıyorsa. Kaçak hem Q’nun %4’ünü hem yaklaşık 0,57 L/dk’yı aşmamalı (§3.1.4).",
+      "Son test ve parça değişiminde koşuda görülen en yüksek vakum veya üstü. Aşımda yalnız Chapter X §7’nin izin verdiği hacim düzeltmesi veya ret uygulanır. Tıkacı yavaş açıp sonra pompayı kapat; sıvıyı proba geri çekme.",
+      "Debi, başlangıç/son sayaç, süre, banyo ve süreç değişimlerini izle. Baca kütlesel emisyonunda hız ve eşzamanlı sabit gaz ölçümü gerekir; tabakalaşma varsa travers uygulanır.",
+      "Bu gaz yöntemine izokinetik toz nozülü kuralı aktarma. Baca varyantında nozül akışa ters yerleştirilir; isteğe bağlı filtre probun önündedir. Mini varyanta bu filtre eklenmez.",
+      "Numune geri kazanımı alımdan itibaren en geç 7 takvim gününde; rüzgâr/toz/amonyaktan korunmuş ortamda yapılır. Şişeleri 0,1 g hassasiyetle tart; her absorbanın pH’ını kaydet. Herhangi birinde pH>2 ise sonuç geçersizdir.",
+      "Prob/numune hattı, silika dışındaki şişeler ve bağlantıları DI suyla en az üç durulama ile geri kazan. Son hacim 500 mL; gerekirse 1000 mL. Reaktif blankı 200 mL asit çözeltisinden aynı son hacme getir (§4.1.1).",
+      "Son analiz hacmi hedefini yıkama/kondensat nedeniyle aşıyorsan numuneyi kaybetme; gerçek son hacmi laboratuvarla kaydet. NH₃-N sonucunu NH₃’e 17,03/14,01 ile çevir; kütle hesabında gerçek son hacmi kullan."
     ],
     "criticalControls": [
-      "pH > 2 geçersizliktir.",
-      "Numune 7 gün içinde analiz edilmelidir.",
-      "Metot şahidi hazırlanmalıdır."
+      "Ek B: PSV = RL / STC × F, F≥1. Kuru standart hacim, gaz debisiyle aynı referansa getirilir; sıvı son hacmiyle karıştırılmaz.",
+      "Şişeler buz-su banyosunda; su düzeyi absorbanın üstüne çıkar. Geri kazanım sonrası buzdolabı 1,67–7,22 °C (kaynak 35–45 °F).",
+      "Tren açıklıklarını kontaminasyona karşı kapat; soğurken ucu sıkıca kapatıp absorbanı geri yürütme. Numune kaybını ve buharlaşmayı önle; kimlikli, temiz, sızdırmaz laboratuvar kabı kullan.",
+      "Geri kazanım sonrası numune ve metot blankı 1,67–7,22 °C’de saklanır; en çok 4 hafta. Bu dört haftanın başlangıcı geri kazanımdır; alımdan sonraki 7 günlük geri kazanım sınırı ayrı izlenir."
     ],
     "acceptance": [
-      "Debi 15-30 L/dk, pH ≤2, saklama 1,6-7,2 °C olmalıdır."
+      "Kontrol sonucu yalnız seçili yöntem ve kaynak baskısıyla değerlendirilir. Açık kalan kaynak/uygulama ayrıntıları parametre kartında görünür."
     ],
     "reporting": [
-      "Debi, süre, sayaç hacmi, impinger tartımları, pH, şahit ve saklama şartları yazılır."
+      "Tesis, baca/nokta, tarih, başlangıç–bitiş, metot/sürüm, numuneci ve fraksiyon kimliklerini etiketle.",
+      "Numune kabı, kapak, miktar, blank, mühür, taşıma koşulu, teslim saati ve teslim alanı izlenebilir teslim formuna kaydet.",
+      "Hangi trenin kullanıldığı, pH, gerçek son sıvı hacmi, reaktif/saha blankları, iki koşunun ayrı sonuçları, gaz hacmi/bazı ve zaman çizelgesi teslim edilir. SCAQMD uyum değerlendirmesinde en yüksek geçerli koşu kullanılır; yerel mevzuat planını ayrıca doğrula.",
+      "Kaynak: W06:1-49"
     ],
     "mistakes": [
-      "pH kontrolünü atlamak",
-      "H2SO4 yerine yanlış absorban kullanmak",
-      "Metot şahidi hazırlamamak"
+      "Dolum, yüzde türü, blank, süre veya saklama kuralını başka yöntemden aktarmak.",
+      "Eski eğitim notunu yeni standart baskısı diye kullanmak."
     ]
   },
   {

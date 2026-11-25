@@ -774,41 +774,31 @@
       "15-30 L/dk",
       "pH"
     ],
-    "purpose": "Amonyak ölçümünde asidik absorban hattı, yoğuşma kontrolü ve breakthrough takibi için saha rehberidir.",
-    "duration": "Süre hedef hacim, tayin limiti ve proses temsiline göre seçilir; impinger taşması olursa süre/hacim kaydedilerek sistem kapatılır.",
-    "flowRate": "SCAQMD 207.1 uygulamasında örnekleme debisi 15–30 L/dk aralığındadır; genel amonyak absorpsiyonunda debi köpürme/taşma ve verimi bozmayacak seviyede tutulur.",
+    "purpose": "İki ayrı amonyak yöntemi: CTM-027 izokinetik baca örneklemesi; SCAQMD 207.1 izokinetik olmayan baca ve ayrı mini/flux odası varyantı. Parametre rehberinden yöntemi ve varyantı seç.",
+    "duration": "Hedef hacim/proses/mevzuat planı; SCAQMD saatlik kütle sınırında en az 1 saat. CTM ve SCAQMD koşulları ayrı değerlendirilir.",
+    "flowRate": "CTM-027: izokinetik. SCAQMD büyük tren: 15–30 L/dk; mini tren Ek B tipik 0,75–1 L/dk. Aynı debi kuralı değildir.",
     "equipment": [
-      "Asidik absorban impingerleri, buz banyosu, DGM/pompa, pH kontrolü ve blank kapları."
+      "Yönteme özgü baca içi filtre, bağlantı ve kap düzeni parametre rehberinde ayrı çizilir."
     ],
     "reagents": [
-      "1. impinger: 100 mL 0,1 N H2SO4.",
-      "2. impinger: 100 mL 0,1 N H2SO4.",
-      "3. impinger: boş.",
-      "4. impinger: tartımı bilinen silika jel."
+      "CTM-027 üçüncü şişe boş/asitli varyantlıdır. SCAQMD büyük tren iki adet 100 mL, mini tren iki adet 15 mL 0,1 N H₂SO₄ kullanır; kaynak şeklinin M/N çelişkisi kartta belirtilir."
     ],
     "fieldSteps": [
-      "Absorbanları ölçüm öncesi hazırla ve etiketle.",
-      "Kaçak testi yap.",
-      "Debi, köpürme, taşma ve çıkış sıcaklığını takip et.",
-      "Ölçüm sonunda pH kontrolü yap; pH >2 ise geçersiz say.",
-      "Numuneyi 1,6–7,2 °C’de sakla ve kısa sürede analiz et."
+      "Kurulum, kaçak, örnekleme ve geri kazanımı seçili yöntemin ayrı kartından uygula."
     ],
     "criticalControls": [
-      "pH >2 geçersizliktir.",
-      "Numune 7 gün içinde analiz edilmelidir.",
-      "Blank olmadan düşük amonyak sonuçları savunulamaz."
+      "SCAQMD: alımdan itibaren ≤7 günde geri kazanım; geri kazanım sonrası 1,67–7,22 °C ve ≤4 hafta saklama. Bu, 7 günlük analiz sınırı değildir.",
+      "CTM-027 koruma/blank kurallarını kendi kartından izle."
     ],
     "acceptance": [
-      "Kaçak testi, absorban kapasitesi, debi, pH, blank ve saklama şartları uygun olmalıdır."
+      "Kaçak, pH, blank ve verim seçili yöntemle değerlendirilir."
     ],
     "reporting": [
-      "NH3 sonucu hacim, absorban, blank, pH ve saklama koşullarıyla birlikte raporlanır."
+      "Yöntem/sürüm, varyant, gaz/sıvı hacimleri, koşullar ve teslim zincirini kaydet."
     ],
     "mistakes": [
-      "Yanlış absorban kullanmak.",
-      "pH kontrolünü atlamak.",
-      "Blank almamak.",
-      "Köpürme/taşmayı fark etmemek."
+      "İzokinetik CTM-027 ile izokinetik olmayan SCAQMD trenini birleştirmek.",
+      "Geri kazanım ve analiz bekletme sürelerini karıştırmak."
     ]
   },
   {
@@ -1021,40 +1011,41 @@
       "6-8 saat",
       "4 m3"
     ],
-    "purpose": "PCDD/PCDF bileşiklerinin izokinetik örnekleme, filtre, soğutma ve XAD-2 adsorbanla alınmasıdır.",
-    "duration": "Her örnekleme minimum 6 saat, maksimum 8 saat olmalıdır. Minimum baca gazı numunesi 4 m³; minimum örnekleme hızı 0,67 m³/saat yani yaklaşık 11,2 L/dk’dır.",
-    "flowRate": "Örnekleme izokinetik yürütülür; seçilen örnekleme debisi örnek hesapta 11,2 L/dk olabilir.",
+    "purpose": "EN 1948-1 — 2006. Bu çizim akış bölünmesi olmayan filtre–yoğuşturucu–katı adsorban varyantıdır; diğer metotların impinger sayısını buraya aktarma.",
+    "duration": "İlgili mevzuat ve örnekleme planıyla doğrulanacak; bu kartta sabit süre atanmadı.",
+    "flowRate": "Ek B.4 işletim örneği yaklaşık 5–25 L/dk için tasarlanmıştır; gerçek debi izokinetik ve doğrulanmış aralıkta seçilir.",
     "equipment": [
-      "Cam nozul/prob, filtre tutucu, soğutucu, XAD-2 kartuşu, gaz yıkama şişeleri, buz banyosu."
+      "Bu yöntemin şema/numune fraksiyonları ana ekrandaki parametre rehberinde ayrı varyantlarla bulunur."
     ],
     "reagents": [
-      "XAD-2 reçinesi PCDD/PCDF için temizlenmiş ve uygun şekilde korunmuş olmalıdır.",
-      "Örneklemeye başlamadan iki saat önce filtre, gaz yıkama şişesi ve adsorban içine iç standart damlatılır.",
-      "İlk gaz yıkama şişesi boş; 2. ve 3. gaz yıkama şişelerine 100’er mL su; 4. gaz yıkama şişesi boş; son gaz yıkama şişesi silika jel konulur."
+      "Adsorban miktarını, boyutunu ve yakalama verimini ekipmanın doğrulanmış düzeneği ve hedef bileşiklere göre belirle.",
+      "Filtre ve/veya adsorbana ¹³C₁₂ işaretli örnekleme standardı ekleme ve geri kazanım koşullarını §7.2’ye göre planla."
     ],
     "fieldSteps": [
-      "Prob 125 °C’ye kadar ısıtılır ve sıcaklık kaydedilir.",
-      "Filtre tutucu borosilikat cam olmalı ve çiğlenme noktasının 10 °C üstüne kadar ısıtılmalıdır.",
-      "Gaz yıkama şişeleri buz banyosunda tutulur; son şişe sıcaklığı 0–25 °C olmalıdır.",
-      "Numune sonunda filtre, adsorban, bağlantılar, soğutucu ve kondens ayrı fraksiyonlar olarak alınır.",
-      "XAD-2 nemliyse çeker ocakta bekletilir; yüksek su içeriğinde 40–45 °C etüvde kurutulur."
+      "Genel §9.3.3 EN 13284-1 bağlantısı ile kurulum testi; hat değişiminde ve sonda tekrar. Ek B.4 örneği 50 kPa vakumda <0,03 m³/saat =0,5 L/dk verir; bilgi amaçlı örnek genel normatif kabulün yerine geçirilmez.",
+      "İzokinetik koşulları ve yoğuşturucu çıkışını izle. Akış bölücü kullanılan düzenek bu çizimde yoktur; yan kol debisi ana kol debisi yerine kullanılamaz.",
+      "En az 15 dakikada bir baca hızı/sıcaklığı, çekiş, filtre ve adsorban sıcaklığı kaydı; örnekleme boyunca O₂ kaydı (§9.3.4).",
+      "Filtre, adsorban, kondensat ve numuneye temas etmiş yüzeylerin yıkamaları numune bütünlüğüne dahildir; fraksiyonları seçilen yönteme göre etiketle.",
+      "Saha blankı ölçüm serisinden önce aynı yerde kurulur; prob bacaya sokulmaz, gaz çekilmez, kaçak testi yapılır (§7.3).",
+      "Ek B.4: probu toluenle yıka; filtre/reçine kartuşlarını kapat; kondensatı ayrı koru. Kalan cam toluen yıkamalarını prob yıkamasına birleştir. Bu reçete, başka bir varyantın aseton/su yıkaması değildir."
     ],
     "criticalControls": [
-      "Blank ölçümü her seri öncesi alınır; prob bacaya yerleştirilir ama gaz emişi yapılmaz.",
-      "Numune ışıktan korunarak 4 °C altında depolanır.",
-      "Minimum kütle hedefi LOD’nin 50 katı olacak şekilde hacim/süre planlanır."
+      "Hedef derişim / tayin sınırı / geçerli metot planı.",
+      "Filtre çiy noktasının üstünde ve <125 °C; yoğuşturucu sonrası <20 °C.",
+      "Arşiv EN 1948-1:2006 §9.3.5.2: karanlıkta, oda sıcaklığını (yaklaşık 25 °C) aşmadan sakla; tüm kaplar için teslim zinciri tut."
     ],
     "acceptance": [
-      "6–8 saat süre, minimum 4 m³, iç standart, blank, izokinetiklik, soğutma ve soğuk/karanlık taşıma uygun olmalıdır."
+      "Kontrol sonucu yalnız seçili yöntem ve kaynak baskısıyla değerlendirilir. Açık kalan kaynak/uygulama ayrıntıları parametre kartında görünür."
     ],
     "reporting": [
-      "Numune hacmi, süre, debi, iç standart, blank, XAD-2, filtre ve saklama şartları belirtilir."
+      "Tesis, baca/nokta, tarih, başlangıç–bitiş, metot/sürüm, numuneci ve fraksiyon kimliklerini etiketle.",
+      "Numune kabı, kapak, miktar, blank, mühür, taşıma koşulu, teslim saati ve teslim alanı izlenebilir teslim formuna kaydet.",
+      "Adsorban partisi, eklenen işaretli standart / geri kazanım bilgisi ve blankı bildir.",
+      "Kaynak: D25:15,20-26,41-43"
     ],
     "mistakes": [
-      "6 saatten kısa örneklemek.",
-      "İç standart uygulamasını atlamak.",
-      "XAD-2’yi ıslatmak veya ışığa maruz bırakmak.",
-      "Blank almamak."
+      "Dolum, yüzde türü, blank, süre veya saklama kuralını başka yöntemden aktarmak.",
+      "Eski eğitim notunu yeni standart baskısı diye kullanmak."
     ]
   },
   {

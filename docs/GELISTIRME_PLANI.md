@@ -17,9 +17,9 @@ Telefona kurulabilen, çevrimdışı ve Türkçe saha rehberi. Mevcut Flutter pr
 - Personelin bilmesi gereken diğer konular: saha güvenliği, proses temsili, ekipman/kalibrasyon, T90, drift, girişimler, blanklar, kontaminasyon, VOC/TOC, imisyon PM, çöken toz, pasif tüpler, meteoroloji, belirsizlik ve rapor.
 - Tasarım ana programa yakın, telefon kullanımına uygun; şemada tam ekran, kaydırma ve yakınlaştırma.
 
-## Güncel paket: 0.7.0
+## Güncel paket: 0.7.1
 
-29 metot/varyant kartı, 23 çizim, 150 açıklamalı soru. Üç yerel EN nüshasının 191 sayfası OCR ile elde edildi; HCl, 11 metal ve düşük derişimli tozun ilgili saha bölümleri karşılaştırıldı. HCl ve metal yan kol şemaları, yönteme özgü saklama/fraksiyon/blank ayrımları ve 25 yeni soru eklendi. Önceki EPA/CARB/ISO, birim ve kaynak dizini geliştirmeleri korunur. Ayrıntılı tamamlanan/açık iş ayrımı `DOGRULAMA_0_7_0.md` dosyasındadır. Yeni paketin yazılım kabulü ilgili commitin Actions sonucundan izlenir.
+32 metot/varyant kartı, 27 çizim, 160 açıklamalı soru. Üç yerel EN nüshasının 191 sayfası OCR ile elde edildi; HCl, 11 metal ve düşük derişimli tozun ilgili saha bölümleri karşılaştırıldı. HCl ve metal yan kol şemaları, yönteme özgü saklama/fraksiyon/blank ayrımları ve 25 yeni soru eklendi. Önceki EPA/CARB/ISO, birim ve kaynak dizini geliştirmeleri korunur. SCAQMD büyük/mini tren ile dioksin sıvı absorban/yan kol örnekleri de tamamlandı. Ayrıntılı tamamlanan/açık iş ayrımı `DOGRULAMA_0_7_0.md` ve `DOGRULAMA_0_7_1.md` dosyalarındadır. Yeni paketin yazılım kabulü ilgili commitin Actions sonucundan izlenir.
 
 ## Önceki 0.5.1 geliştirme paketi
 
@@ -32,7 +32,7 @@ Telefona kurulabilen, çevrimdışı ve Türkçe saha rehberi. Mevcut Flutter pr
 Bu paket tam bir standart külliyatının onaylandığı anlamına gelmez. 54 kaynak yolu / 53 benzersiz PDF’nin her cümlesi, formülü ve şekli bağımsız olarak doğrulanmış değildir. Ayrıntılı inceleme bitmeden “tüm saha bilgisi eksiksizdir” denmez.
 
 1. Her parametrede arşiv sürümünü güncel resmi katalog/metin ve laboratuvarın geçerli SOP’si ile eşleştirmek.
-2. SCAQMD 207.1 tam prosedürünü, ISO 12141:2024 metnini ve EN 1911’in 2001 tarihli toz atfını karşılaştırmak. Diğer yeni birincil kaynak kartlarının açık uygulama noktaları kendi kartlarında kayıtlıdır.
+2. ISO 12141:2024 metnini ve EN 1911’in 2001 tarihli toz atfını karşılaştırmak. SCAQMD 207.1 saha/numune bölümleri işlendi; onun bağlantılı kalibrasyon/özel hacim düzeltmeleri ve flux odası protokolü ayrıca doğrulanmalı. Diğer yeni birincil kaynak kartlarının açık uygulama noktaları kendi kartlarında kayıtlıdır.
 3. Her sayısal alanı özel madde/sayfa ile eşleştirmek; boş alana varsayılan miktar, sıcaklık, süre veya debi koymamak.
 4. Her metotta tam geri kazanım, bekletme süresi ve taşıma talimatını tamamlamak. PAH arşivinde görülen −7 °C ifadesi görüntüden kontrol edildi; güncel sürüm doğrulaması yapılmadan +4 °C diye değiştirilmez.
 5. Ek PAH/dioksin düzenekleri, sıvı absorban seçenekleri ve diğer geçerli varyantlar için ayrı şemalar hazırlamak.
@@ -50,6 +50,6 @@ Bu paket tam bir standart külliyatının onaylandığı anlamına gelmez. 54 ka
 
 ## Açıklamalı testler
 
-150 soruluk banka; 25 imisyon sorusu. Mevcut 37 katalog başlığının tamamında en az bir soru vardır; bu, her standardın bütün ayrıntılarının sorulduğu anlamına gelmez. Kapsam, konu, parametre ve standart/metot filtreleri, 10/20/40/60/100/tüm soru seçimi, seçeneklerin karıştırılması, doğru/yanlış/boş, konu dökümü, cevap gerekçesi ve kaynak izi sunulur. Sonuçlar mevcut oturum içindedir; kalıcı sınav geçmişi henüz yoktur.
+160 soruluk banka; 25 imisyon sorusu. Mevcut 37 katalog başlığının tamamında en az bir soru vardır; bu, her standardın bütün ayrıntılarının sorulduğu anlamına gelmez. Kapsam, konu, parametre ve standart/metot filtreleri, 10/20/40/60/100/tüm soru seçimi, seçeneklerin karıştırılması, doğru/yanlış/boş, konu dökümü, cevap gerekçesi ve kaynak izi sunulur. Sonuçlar mevcut oturum içindedir; kalıcı sınav geçmişi henüz yoktur.
 
 EN 12341:2023 için PM10 ve PM2,5 imisyon kartları ile TL14/TL15 kaynaklı çöken toz ve pasif örnekleme kartları eklendi.

@@ -4,6 +4,7 @@ import re
 from pathlib import Path
 from quiz_primary import extend
 from quiz_en import extend as extend_en
+from quiz_advanced import extend as extend_advanced
 
 ROOT=Path(__file__).resolve().parents[1]
 catalog={}
@@ -160,6 +161,7 @@ add('İmisyon — hesap ve kayıt',I,['Pasif Örnekleme'],'Pasif tüpte yalnız 
 
 extend(add)
 extend_en(add)
+extend_advanced(add)
 
 payload=dict(schemaVersion=1,title='Emisyon / İmisyon Açıklamalı Testler',
  notice='Eğitim ve öz değerlendirme içindir; mesleki yetki veya standart uygunluk belgesi değildir. Sorular belirtilen kaynak sürümü / kapsamıyla değerlendirilir.',

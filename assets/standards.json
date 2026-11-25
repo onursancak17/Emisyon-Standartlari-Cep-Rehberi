@@ -897,51 +897,41 @@
       "izokinetik",
       "ultra iz"
     ],
-    "purpose": "Baca gazında PCDD/F numunesinin izokinetik ve kontaminasyondan korunmuş şekilde alınması için saha rehberidir. Çok düşük konsantrasyonlar nedeniyle temizlik, blank, süre, hacim ve numune saklama zinciri en kritik konulardır.",
-    "duration": "Ölçüm süresi genellikle uzun planlanır ve gerekli toplam hacim/tayin limiti hedeflenir. Prosesin temsili çalışması ve laboratuvarın minimum hacim şartı ölçüm planında netleştirilmelidir.",
-    "flowRate": "Numune alma izokinetik yaklaşımla yürütülür. Debi baca hızına göre ayarlanır ve toplam hacim dikkatle kayıt edilir.",
+    "purpose": "EN 1948-1 — 2006. Bu çizim akış bölünmesi olmayan filtre–yoğuşturucu–katı adsorban varyantıdır; diğer metotların impinger sayısını buraya aktarma.",
+    "duration": "İlgili mevzuat ve örnekleme planıyla doğrulanacak; bu kartta sabit süre atanmadı.",
+    "flowRate": "Ek B.4 işletim örneği yaklaşık 5–25 L/dk için tasarlanmıştır; gerçek debi izokinetik ve doğrulanmış aralıkta seçilir.",
     "equipment": [
-      "İzokinetik prob, nozül ve filtre bölümü.",
-      "XAD veya metoda uygun adsorban modülü.",
-      "Soğutma ve sıcaklık kontrol düzeni.",
-      "DGM, pompa, orifis, sıcaklık ve basınç ölçer.",
-      "Ön temizlenmiş cam malzeme, folyo/kapak ve soğuk taşıma kabı."
+      "Bu yöntemin şema/numune fraksiyonları ana ekrandaki parametre rehberinde ayrı varyantlarla bulunur."
     ],
     "reagents": [
-      "Adsorban ve filtre laboratuvar tarafından hazırlanmış ve blank kontrolü yapılmış olmalıdır.",
-      "Numune geri alma çözücüleri ve yıkama kapları laboratuvar talimatına göre hazırlanır.",
-      "Saha blankı ve ekipman blankı kritik öneme sahiptir."
+      "Adsorban miktarını, boyutunu ve yakalama verimini ekipmanın doğrulanmış düzeneği ve hedef bileşiklere göre belirle.",
+      "Filtre ve/veya adsorbana ¹³C₁₂ işaretli örnekleme standardı ekleme ve geri kazanım koşullarını §7.2’ye göre planla."
     ],
     "fieldSteps": [
-      "Laboratuvarla minimum hacim, süre, adsorban tipi ve blank düzenini netleştir.",
-      "Ekipmanı kontaminasyondan koruyarak kur; çıplak elle temas ve kirli yüzeylerden kaçın.",
-      "Kaçak testini yap ve izokinetik numune almaya başla.",
-      "Sıcaklık, debi, hacim, vakum ve proses bilgilerini düzenli kaydet.",
-      "Adsorban ve filtre sıcaklıklarını metot yaklaşımına uygun takip et.",
-      "Numune sonunda filtre, adsorban ve yıkama fraksiyonlarını doğru kaplara al.",
-      "Numuneyi karanlık, soğuk ve zincir teslim kurallarına uygun şekilde gönder."
+      "Genel §9.3.3 EN 13284-1 bağlantısı ile kurulum testi; hat değişiminde ve sonda tekrar. Ek B.4 örneği 50 kPa vakumda <0,03 m³/saat =0,5 L/dk verir; bilgi amaçlı örnek genel normatif kabulün yerine geçirilmez.",
+      "İzokinetik koşulları ve yoğuşturucu çıkışını izle. Akış bölücü kullanılan düzenek bu çizimde yoktur; yan kol debisi ana kol debisi yerine kullanılamaz.",
+      "En az 15 dakikada bir baca hızı/sıcaklığı, çekiş, filtre ve adsorban sıcaklığı kaydı; örnekleme boyunca O₂ kaydı (§9.3.4).",
+      "Filtre, adsorban, kondensat ve numuneye temas etmiş yüzeylerin yıkamaları numune bütünlüğüne dahildir; fraksiyonları seçilen yönteme göre etiketle.",
+      "Saha blankı ölçüm serisinden önce aynı yerde kurulur; prob bacaya sokulmaz, gaz çekilmez, kaçak testi yapılır (§7.3).",
+      "Ek B.4: probu toluenle yıka; filtre/reçine kartuşlarını kapat; kondensatı ayrı koru. Kalan cam toluen yıkamalarını prob yıkamasına birleştir. Bu reçete, başka bir varyantın aseton/su yıkaması değildir."
     ],
     "criticalControls": [
-      "Dioksin/furan ölçümünde kontaminasyon sonucu tamamen bozabilir.",
-      "Blanklar olmadan düşük konsantrasyonlu sonuçların savunulması zordur.",
-      "Adsorbanın ıslanması, aşırı ısınması veya yanlış saklanması geçersizlik riski oluşturur.",
-      "Numune fraksiyonları asla karıştırılmamalıdır."
+      "Hedef derişim / tayin sınırı / geçerli metot planı.",
+      "Filtre çiy noktasının üstünde ve <125 °C; yoğuşturucu sonrası <20 °C.",
+      "Arşiv EN 1948-1:2006 §9.3.5.2: karanlıkta, oda sıcaklığını (yaklaşık 25 °C) aşmadan sakla; tüm kaplar için teslim zinciri tut."
     ],
     "acceptance": [
-      "Minimum hacim ve süre şartları sağlanmalıdır.",
-      "Kaçak testi ve izokinetiklik uygun olmalıdır.",
-      "Blank ve numune fraksiyonları eksiksiz olmalıdır.",
-      "Saklama ve taşıma koşulları korunmalıdır."
+      "Kontrol sonucu yalnız seçili yöntem ve kaynak baskısıyla değerlendirilir. Açık kalan kaynak/uygulama ayrıntıları parametre kartında görünür."
     ],
     "reporting": [
-      "Toplam hacim, süre, izokinetiklik, sıcaklıklar, blanklar ve numune fraksiyonları ayrıntılı raporlanır.",
-      "Proses koşulu ve sapmalar özellikle yazılır."
+      "Tesis, baca/nokta, tarih, başlangıç–bitiş, metot/sürüm, numuneci ve fraksiyon kimliklerini etiketle.",
+      "Numune kabı, kapak, miktar, blank, mühür, taşıma koşulu, teslim saati ve teslim alanı izlenebilir teslim formuna kaydet.",
+      "Adsorban partisi, eklenen işaretli standart / geri kazanım bilgisi ve blankı bildir.",
+      "Kaynak: D25:15,20-26,41-43"
     ],
     "mistakes": [
-      "Numune kaplarına çıplak elle veya kirli yüzeyle temas etmek.",
-      "Blank hazırlamamak.",
-      "Adsorbanı sıcak veya güneş altında bekletmek.",
-      "Minimum hacim hedefini netleştirmeden ölçüme başlamak."
+      "Dolum, yüzde türü, blank, süre veya saklama kuralını başka yöntemden aktarmak.",
+      "Eski eğitim notunu yeni standart baskısı diye kullanmak."
     ]
   },
   {

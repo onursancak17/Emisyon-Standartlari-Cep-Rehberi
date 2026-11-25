@@ -5,6 +5,7 @@ from primary_profiles import extend, WEB_SOURCES
 from recovery_details import extend as extend_recovery
 from split_profiles import extend as extend_split
 from en_profiles import extend as extend_en, LOCAL_SOURCES
+from advanced_profiles import extend as extend_advanced, EXTRA_SOURCES
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -221,10 +222,11 @@ for p in data:
 extend_recovery(data)
 extend_split(data,node)
 extend_en(data,profile,node,imp,meter,common_delivery)
+extend_advanced(data,profile,node,imp,meter,common_delivery)
 
 source_index = json.loads((ROOT/'docs/SOURCE_INDEX.json').read_text(encoding='utf-8'))
 source_index['reviewedAt']='2026-11-26'
-source_index['documents'] = [s for s in source_index['documents'] if s['id'][0] not in 'WL'] + WEB_SOURCES + LOCAL_SOURCES
+source_index['documents'] = [s for s in source_index['documents'] if s['id'][0] not in 'WL'] + WEB_SOURCES + LOCAL_SOURCES + EXTRA_SOURCES
 source_index['catalogChecks'] = [
     dict(method='ISO 12141', archiveEdition='2002', currentEdition='2024',
          status='Arşiv metni eski. Yeni sürümün tam koşulları karşılaştırılmadı.', url='https://www.iso.org/standard/85643.html'),
