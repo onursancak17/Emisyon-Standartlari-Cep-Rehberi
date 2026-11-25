@@ -29,6 +29,8 @@ void main() {
     expect(find.text('Sahada doğru metot, doğru düzen'),findsOneWidget);
     final moisture=find.text('Nem');
     await tester.scrollUntilVisible(moisture,400,scrollable:find.byType(Scrollable).first);
+    await tester.ensureVisible(moisture);
+    await tester.pumpAndSettle();
     await tester.tap(moisture);
     await tester.pumpAndSettle();
     expect(find.textContaining('Referans yöntem — dört impinger'),findsOneWidget);

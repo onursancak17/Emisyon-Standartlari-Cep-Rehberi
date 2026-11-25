@@ -2,6 +2,7 @@
 import json
 from pathlib import Path
 from primary_profiles import extend, WEB_SOURCES
+from recovery_details import extend as extend_recovery
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -213,6 +214,9 @@ for pid, param, method, refs, steps in [
     data.append(p)
 
 extend(data, profile, node, imp, meter, common_delivery)
+for p in data:
+    p.setdefault('evidence', [])
+extend_recovery(data)
 
 source_index = json.loads((ROOT/'docs/SOURCE_INDEX.json').read_text(encoding='utf-8'))
 source_index['documents'] = [s for s in source_index['documents'] if not s['id'].startswith('W')] + WEB_SOURCES
