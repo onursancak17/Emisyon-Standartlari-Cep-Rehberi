@@ -40,5 +40,13 @@ class QuizBankTests(unittest.TestCase):
         keys={c['code'] for c in BANK['catalog']}
         for q in BANK['questions']:self.assertTrue(set(q['standards'])<=keys,q['id'])
 
+    def test_method_numbers_do_not_collide_in_parameter_filters(self):
+        for method,param in [('CARB Method 426','Siyanür / HCN'),('CARB Method 425','Krom(VI)')]:
+            qs=[q for q in BANK['questions'] if method in q['standards']]
+            self.assertTrue(qs)
+            for q in qs:
+                self.assertIn(param,q['parameters'])
+                self.assertNotIn('Nem',q['parameters'])
+
 
 if __name__=='__main__':unittest.main()

@@ -1,5 +1,6 @@
 """Açıklamalı, kaynak izli emisyon / imisyon soru bankası."""
 import json
+import re
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[1]
@@ -22,7 +23,7 @@ def parameters(tags):
     result=set()
     for tag in tags:
         for needle, parameter in mapping:
-            if needle in tag:
+            if re.search(re.escape(needle)+r'(?![0-9A-Za-z])',tag):
                 result.add(parameter)
                 break
     return sorted(result) or ['Genel saha']

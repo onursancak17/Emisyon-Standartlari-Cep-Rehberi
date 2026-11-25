@@ -207,7 +207,7 @@ class TrainDiagram extends StatelessWidget {
         for (var i = 0; i < nodes.length; i++) ...[
           SizedBox(width: 150, child: Column(children: [
             SizedBox(width: 110, height: 120, child: CustomPaint(painter: ComponentPainter(
-              kind: nodes[i]['kind'] as String, empty: (nodes[i]['content'] as String).contains('boş')))),
+              kind: nodes[i]['kind'] as String, empty: (nodes[i]['content'] as String).contains('boş'), solid: (nodes[i]['content'] as String).toLowerCase().contains('silika')))),
             Text(nodes[i]['label'] as String, textAlign: TextAlign.center, style: const TextStyle(fontWeight: FontWeight.w800, color: Color(0xFF15364B))),
             const SizedBox(height: 4),
             Text(nodes[i]['amount'] as String, textAlign: TextAlign.center, style: const TextStyle(fontWeight: FontWeight.bold, color: Color(0xFF086F71))),
@@ -223,9 +223,10 @@ class TrainDiagram extends StatelessWidget {
 }
 
 class ComponentPainter extends CustomPainter {
-  const ComponentPainter({required this.kind, required this.empty});
+  const ComponentPainter({required this.kind, required this.empty, this.solid = false});
   final String kind;
   final bool empty;
+  final bool solid;
   @override
   void paint(Canvas canvas, Size size) {
     canvas.save();
@@ -235,6 +236,10 @@ class ComponentPainter extends CustomPainter {
     if (kind == 'impinger' || kind == 'trap') {
       final body = RRect.fromRectAndRadius(const Rect.fromLTWH(23, 30, 64, 78), const Radius.circular(10));
       if (!empty && kind == 'impinger') canvas.drawRRect(RRect.fromRectAndRadius(const Rect.fromLTWH(25, 70, 60, 36), const Radius.circular(8)), fill);
+      if (solid) {
+        canvas.drawRRect(RRect.fromRectAndRadius(const Rect.fromLTWH(25, 70, 60, 36), const Radius.circular(8)), Paint()..color = const Color(0xFFE5CE98));
+        for (var x = 31.0; x < 81; x += 10) for (var y = 77.0; y < 103; y += 10) canvas.drawCircle(Offset(x, y), 1.5, Paint()..color = const Color(0xFF80623E));
+      }
       canvas.drawRRect(body, stroke);
       canvas.drawPath(Path()..moveTo(0, 18)..lineTo(43, 18)..lineTo(43, 94), stroke);
       canvas.drawPath(Path()..moveTo(68, 44)..lineTo(68, 18)..lineTo(110, 18), stroke);
@@ -263,7 +268,7 @@ class ComponentPainter extends CustomPainter {
     canvas.restore();
   }
   @override
-  bool shouldRepaint(covariant ComponentPainter oldDelegate) => oldDelegate.kind != kind || oldDelegate.empty != empty;
+  bool shouldRepaint(covariant ComponentPainter oldDelegate) => oldDelegate.kind != kind || oldDelegate.empty != empty || oldDelegate.solid != solid;
 }
 
 class FieldMath {

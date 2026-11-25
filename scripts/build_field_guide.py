@@ -96,12 +96,12 @@ metal_notes = {
  'Laboratuvara teslim':common_delivery + ['Hedef metal listesi, cıvanın dahil olup olmadığı, filtre ve her yıkama fraksiyonunu açıkça belirt.']}
 for hg in (True, False):
     train = [probe, filt, imp(1, 'Kondensat tutucu; başlangıçta boş', '', True),
-       imp(2, '%5 HNO₃ / %10 H₂O₂', '100 mL'), imp(3, '%5 HNO₃ / %10 H₂O₂', '100 mL')]
+       imp(2, '%5 HNO₃ / %10 H₂O₂ (hacim/hacim)', '100 mL'), imp(3, '%5 HNO₃ / %10 H₂O₂ (hacim/hacim)', '100 mL')]
     if hg:
-        train += [imp(4, 'Başlangıçta boş'), imp(5, '%4 KMnO₄ / %10 H₂SO₄', '100 mL'), imp(6, '%4 KMnO₄ / %10 H₂SO₄', '100 mL')]
+        train += [imp(4, 'Başlangıçta boş'), imp(5, '%4 KMnO₄ (kütle/hacim) / %10 H₂SO₄ (hacim/hacim)', '100 mL'), imp(6, '%4 KMnO₄ (kütle/hacim) / %10 H₂SO₄ (hacim/hacim)', '100 mL')]
     train += [gel(7), meter]
     data.append(profile('metals_epa29_'+('hg' if hg else 'no_hg'), 'Ağır metaller', 'EPA Method 29', '02.08.2017',
-        'Cıva dahil' if hg else 'Cıva analizi yok — 4, 5 ve 6 çıkarılır', ['D07:5-6,11-14'], train,
+        'Cıva dahil' if hg else 'Cıva analizi yok — 4, 5 ve 6 çıkarılır', ['D07:6-7,11-14'], train,
         ['İzokinetik; sabit debi atanmaz.', 'Tayin sınırı ve örnekleme planı; evrensel sabit hacim tanımlanmadı.',
          'Method 5 bağlantılı ısıtma koşulları; sayısal alanın ek doğrulaması bekleniyor.', 'Metot ve hedef hacimle planlanır.'], metal_notes))
 

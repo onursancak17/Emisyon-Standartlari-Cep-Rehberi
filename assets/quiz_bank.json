@@ -678,7 +678,7 @@
       "topic": "İmpinger ve özel metotlar",
       "scope": "Emisyon",
       "parameters": [
-        "Nem"
+        "Siyanür / HCN"
       ],
       "standards": [
         "CARB Method 426"
@@ -699,7 +699,7 @@
       "topic": "İmpinger ve özel metotlar",
       "scope": "Emisyon",
       "parameters": [
-        "Nem"
+        "Siyanür / HCN"
       ],
       "standards": [
         "CARB Method 426"
@@ -741,7 +741,7 @@
       "topic": "İmpinger ve özel metotlar",
       "scope": "Emisyon",
       "parameters": [
-        "Nem"
+        "Krom(VI)"
       ],
       "standards": [
         "CARB Method 425"
@@ -827,8 +827,7 @@
       "topic": "Toz, hız ve gaz ölçümleri",
       "scope": "Emisyon",
       "parameters": [
-        "Partikül madde",
-        "Ölçüm yeri / travers"
+        "Partikül madde"
       ],
       "standards": [
         "EPA Method 5",

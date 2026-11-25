@@ -10,6 +10,8 @@ Girdap açısı ölçümü ve EPA Method 1 mutlak açı ortalaması; ölçüm ye
 
 Kapsam, tamamlananlar ve kalan işler: [Geliştirme planı](docs/GELISTIRME_PLANI.md). Kaynak kimlikleri: [SOURCE_INDEX.json](docs/SOURCE_INDEX.json).
 
+[Metoda göre ilk tren çizimlerini görüntüle](docs/impinger_ornekleri.png).
+
 GitHub Actions: **Verify field guide** Python/Flutter kontrolleri; **Build Android APK** APK derlemesi. APK yalnızca başarılı derleme tamamlandıktan sonra Artifacts bölümünden indirilir.
 
 Bu proje, emisyon ve imisyon saha ölçüm personeli için hazırlanmış **tam Türkçe**, offline Android cep rehberi uygulamasıdır.

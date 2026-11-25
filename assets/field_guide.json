@@ -569,7 +569,7 @@
       "sourceVersion": "02.08.2017",
       "variant": "Cıva dahil",
       "sources": [
-        "D07:5-6,11-14"
+        "D07:6-7,11-14"
       ],
       "reviewState": "train_checked",
       "train": [
@@ -601,7 +601,7 @@
           "id": "i2",
           "kind": "impinger",
           "label": "İmpinger 2",
-          "content": "%5 HNO₃ / %10 H₂O₂",
+          "content": "%5 HNO₃ / %10 H₂O₂ (hacim/hacim)",
           "amount": "100 mL",
           "optional": false
         },
@@ -609,7 +609,7 @@
           "id": "i3",
           "kind": "impinger",
           "label": "İmpinger 3",
-          "content": "%5 HNO₃ / %10 H₂O₂",
+          "content": "%5 HNO₃ / %10 H₂O₂ (hacim/hacim)",
           "amount": "100 mL",
           "optional": false
         },
@@ -625,7 +625,7 @@
           "id": "i5",
           "kind": "impinger",
           "label": "İmpinger 5",
-          "content": "%4 KMnO₄ / %10 H₂SO₄",
+          "content": "%4 KMnO₄ (kütle/hacim) / %10 H₂SO₄ (hacim/hacim)",
           "amount": "100 mL",
           "optional": false
         },
@@ -633,7 +633,7 @@
           "id": "i6",
           "kind": "impinger",
           "label": "İmpinger 6",
-          "content": "%4 KMnO₄ / %10 H₂SO₄",
+          "content": "%4 KMnO₄ (kütle/hacim) / %10 H₂SO₄ (hacim/hacim)",
           "amount": "100 mL",
           "optional": false
         },
@@ -730,7 +730,7 @@
       "sourceVersion": "02.08.2017",
       "variant": "Cıva analizi yok — 4, 5 ve 6 çıkarılır",
       "sources": [
-        "D07:5-6,11-14"
+        "D07:6-7,11-14"
       ],
       "reviewState": "train_checked",
       "train": [
@@ -762,7 +762,7 @@
           "id": "i2",
           "kind": "impinger",
           "label": "İmpinger 2",
-          "content": "%5 HNO₃ / %10 H₂O₂",
+          "content": "%5 HNO₃ / %10 H₂O₂ (hacim/hacim)",
           "amount": "100 mL",
           "optional": false
         },
@@ -770,7 +770,7 @@
           "id": "i3",
           "kind": "impinger",
           "label": "İmpinger 3",
-          "content": "%5 HNO₃ / %10 H₂O₂",
+          "content": "%5 HNO₃ / %10 H₂O₂ (hacim/hacim)",
           "amount": "100 mL",
           "optional": false
         },
