@@ -2824,6 +2824,541 @@
       "correctIndex": 0,
       "explanation": "EPA 29 düzeninde cıva ve diğer fraksiyonlar ayrı işlemler gerektirir. Kap numarası, içerik ve analiz hedefi teslim zincirinde eşleşmelidir.",
       "source": "D07:11-14"
+    },
+    {
+      "id": "q126",
+      "topic": "EN standartları — saha ayrıntıları",
+      "scope": "Emisyon",
+      "parameters": [
+        "HCl"
+      ],
+      "standards": [
+        "TS EN 1911"
+      ],
+      "prompt": "EN 1911:2010’da gaz halindeki klorürler için temel absorpsiyon düzeni hangisidir?",
+      "choices": [
+        "En az iki seri absorberde klorür içermeyen derece 2 su",
+        "Tek şişede 100 mL 0,1 N NaOH",
+        "Üç şişede asitli permanganat",
+        "İki şişede %80 izopropanol"
+      ],
+      "correctIndex": 0,
+      "explanation": "Bu yöntemin absorbanı klorürsüz sudur. Su saflığı, kap geometrisi, dolum ve seçilen debide absorpsiyon verimi birlikte doğrulanır.",
+      "source": "L01:18,20-21; §5.2.1.2.2, §5.2.4"
+    },
+    {
+      "id": "q127",
+      "topic": "EN standartları — saha ayrıntıları",
+      "scope": "Emisyon",
+      "parameters": [
+        "HCl"
+      ],
+      "standards": [
+        "TS EN 1911"
+      ],
+      "prompt": "EN 1911’de belirtilen 40–100 mL dolum nasıl yorumlanır?",
+      "choices": [
+        "Örnek kaplar içindir; kullanılan dolum verim kontrolündekiyle aynı olmalı.",
+        "Her kap için zorunlu tam 100 mL’dir.",
+        "Her kap için zorunlu tam 40 mL’dir.",
+        "Son analiz hacmi mutlaka 100 mL’dir."
+      ],
+      "correctIndex": 0,
+      "explanation": "Kaynak hacim aralığını örnek olarak verir. Başlangıç absorban dolumu ile laboratuvarda ayarlanan son analiz hacmi farklı büyüklüklerdir.",
+      "source": "L01:21,24; §5.3.2.1, §6.2.2"
+    },
+    {
+      "id": "q128",
+      "topic": "EN standartları — saha ayrıntıları",
+      "scope": "Emisyon",
+      "parameters": [
+        "HCl"
+      ],
+      "standards": [
+        "TS EN 1911"
+      ],
+      "prompt": "EN 1911 ölçümünde gazda damlacık olduğu biliniyor veya şüphe ediliyorsa hangi yaklaşım gerekir?",
+      "choices": [
+        "İzokinetik örnekleme",
+        "Her durumda nozulsüz sabit 2 L/dk",
+        "Yalnız tek noktada 5 dakika",
+        "Sadece su miktarını ikiye katlamak"
+      ],
+      "correctIndex": 0,
+      "explanation": "Damlacıklar yüksek klorür taşıyabilir. Probun damlacıkları temsilî toplaması gerekir; yalnızca çözeltinin hacmini değiştirmek bu sorunu çözmez.",
+      "source": "L01:14-15; §5.1.1–5.1.3"
+    },
+    {
+      "id": "q129",
+      "topic": "EN standartları — saha ayrıntıları",
+      "scope": "Emisyon",
+      "parameters": [
+        "HCl"
+      ],
+      "standards": [
+        "TS EN 1911"
+      ],
+      "prompt": "EN 1911’de 0,3 µm aerosol için verilen filtre verimi şartı ne anlama gelir?",
+      "choices": [
+        "Tanımlı test aerosolünde yakalama performansıdır.",
+        "Filtrenin zorunlu gözenek çapıdır.",
+        "Probun iç çapıdır.",
+        "Absorber sıvısındaki iyon çapıdır."
+      ],
+      "correctIndex": 0,
+      "explanation": "Aerosol boyutundaki verim ile filtrenin gözenek boyutu aynı tanım değildir. Birini diğerine çevirerek filtre seçmek yanlış ekipmana yol açabilir.",
+      "source": "L01:17; §5.2.1.1.3"
+    },
+    {
+      "id": "q130",
+      "topic": "EN standartları — saha ayrıntıları",
+      "scope": "Emisyon",
+      "parameters": [
+        "HCl"
+      ],
+      "standards": [
+        "TS EN 1911"
+      ],
+      "prompt": "EN 1911’de son absorber arkasındaki koruma kabına taşınan çözelti hangi fraksiyona eklenir?",
+      "choices": [
+        "Son absorber fraksiyonuna",
+        "İlk absorber fraksiyonuna",
+        "Silika jel kütlesine",
+        "Filtre tartımına"
+      ],
+      "correctIndex": 0,
+      "explanation": "Taşınan sıvının son kademeyle birlikte izlenmesi absorpsiyon verimi değerlendirmesi için gereklidir. İlk kaba eklemek son kademenin payını değiştirebilir.",
+      "source": "L01:18; §5.2.1.2.2"
+    },
+    {
+      "id": "q131",
+      "topic": "EN standartları — saha ayrıntıları",
+      "scope": "Emisyon",
+      "parameters": [
+        "HCl"
+      ],
+      "standards": [
+        "TS EN 1911"
+      ],
+      "prompt": "EN 1911:2010’un EN 13284-1:2001 tarihli atfı nasıl ele alınır?",
+      "choices": [
+        "Atıf yapılan baskı korunur; yeni baskı koşulları otomatik taşınmaz.",
+        "2017 baskısı bütün sayıları kendiliğinden değiştirir.",
+        "Atıf hiçbir uygulama gereği oluşturmaz.",
+        "Dosya adı 2026 ise bütün atıflar 2026 olur."
+      ],
+      "correctIndex": 0,
+      "explanation": "Tarihli normatif atıf belirli baskıyı işaret eder. Bu ayrım süre, kaçak kontrolü ve ekipman gibi uygulama ayrıntılarında sürüm karışmasını önler.",
+      "source": "L01:8; §2"
+    },
+    {
+      "id": "q132",
+      "topic": "EN standartları — saha ayrıntıları",
+      "scope": "Emisyon",
+      "parameters": [
+        "Ağır metaller"
+      ],
+      "standards": [
+        "TS EN 14385"
+      ],
+      "prompt": "EN 14385:2024’te en az kaç dolu absorber seri bağlanır?",
+      "choices": [
+        "Üç",
+        "İki",
+        "Bir",
+        "Yedi"
+      ],
+      "correctIndex": 0,
+      "explanation": "Üç absorber normatif düzendedir. Arkadaki boş koruma veya yüksek nem için öndeki boş kondensat kabı bu üç dolu şişeyle aynı görevde değildir.",
+      "source": "L02:18,20; §6.3, §8.2.3"
+    },
+    {
+      "id": "q133",
+      "topic": "EN standartları — saha ayrıntıları",
+      "scope": "Emisyon",
+      "parameters": [
+        "Ağır metaller"
+      ],
+      "standards": [
+        "TS EN 14385"
+      ],
+      "prompt": "EN 14385:2024 §5.2.8 absorpsiyon çözeltisinin yaklaşık son kütle içerikleri hangisidir?",
+      "choices": [
+        "%4,4 HNO₃ / %1,6 H₂O₂",
+        "%5 HNO₃ / %10 H₂O₂",
+        "%4 KMnO₄ / %10 H₂SO₄",
+        "%80 izopropanol / %3 H₂O₂"
+      ],
+      "correctIndex": 0,
+      "explanation": "Eş hacim stok asit ve peroksit karışımının bir hacmi dokuz hacim suyla seyreltilir. Son yüzde değerlerinin kütle/kütle olması da korunmalıdır.",
+      "source": "L02:16; §5.2.8"
+    },
+    {
+      "id": "q134",
+      "topic": "EN standartları — saha ayrıntıları",
+      "scope": "Emisyon",
+      "parameters": [
+        "Ağır metaller"
+      ],
+      "standards": [
+        "TS EN 14385"
+      ],
+      "prompt": "EN 14385:2024 sıvı numunelerinin laboratuvarda saklanması için hangi sıcaklık verilir?",
+      "choices": [
+        "6 °C altında",
+        "25 °C altında her durumda yeterli",
+        "Tam 20 °C",
+        "−7 °C’de zorunlu dondurma"
+      ],
+      "correctIndex": 0,
+      "explanation": "Saha/taşıma sıcaklığı ile laboratuvar saklaması aynı sınır değildir. Bu metot sıvı numuneler için laboratuvarda 6 °C altını belirtir.",
+      "source": "L02:23; §8.6"
+    },
+    {
+      "id": "q135",
+      "topic": "EN standartları — saha ayrıntıları",
+      "scope": "Emisyon",
+      "parameters": [
+        "Ağır metaller"
+      ],
+      "standards": [
+        "TS EN 14385"
+      ],
+      "prompt": "EN 14385:2024 sıvı numuneleri en geç ne zaman analiz edilmelidir?",
+      "choices": [
+        "Numune alımından itibaren dört hafta içinde",
+        "Laboratuvara teslimden itibaren dört hafta",
+        "Numune alımından itibaren altı ay",
+        "Filtre tartımından itibaren iki hafta"
+      ],
+      "correctIndex": 0,
+      "explanation": "Bekletme süresinin başlangıç olayı önemlidir. Taşıma ve teslim için geçen süreyi analiz süresinden çıkarmak toplam izin verilen beklemeyi uzatır.",
+      "source": "L02:23; §8.6"
+    },
+    {
+      "id": "q136",
+      "topic": "EN standartları — saha ayrıntıları",
+      "scope": "Emisyon",
+      "parameters": [
+        "Ağır metaller"
+      ],
+      "standards": [
+        "TS EN 14385"
+      ],
+      "prompt": "EN 14385:2024’te birden fazla ölçümü temsil eden ön yıkama kütlesi hangi oranla paylaştırılır?",
+      "choices": [
+        "Her ölçümde örneklenen gaz hacmi oranıyla",
+        "Filtredeki toz kütlesi oranıyla",
+        "Ölçüm numarası oranıyla",
+        "Şişe sayısı oranıyla"
+      ],
+      "correctIndex": 0,
+      "explanation": "Bu, metal metodunun ön yıkama kütlesine özgü paylaştırmadır. EN 13284 toz yıkamasında kullanılan filtre kütlesi oranıyla karıştırılmamalıdır.",
+      "source": "L02:21; §8.4.3"
+    },
+    {
+      "id": "q137",
+      "topic": "EN standartları — saha ayrıntıları",
+      "scope": "Emisyon",
+      "parameters": [
+        "Ağır metaller"
+      ],
+      "standards": [
+        "TS EN 14385"
+      ],
+      "prompt": "EN 14385:2024’te saha blankı numune sonucundan çıkarılır mı?",
+      "choices": [
+        "Hayır; ayrı raporlanır.",
+        "Her metalde zorunlu olarak çıkarılır.",
+        "Yalnız Cd ve Tl’den çıkarılır.",
+        "Sadece son absorberden çıkarılır."
+      ],
+      "correctIndex": 0,
+      "explanation": "Bu standardın blank yaklaşımı izlenebilir bir kalite kontrolüdür. Sonucu keyfî düşürmek için blankın numuneden çıkarılması metindeki kuralla uyuşmaz.",
+      "source": "L02:22; §8.5"
+    },
+    {
+      "id": "q138",
+      "topic": "EN standartları — saha ayrıntıları",
+      "scope": "Emisyon",
+      "parameters": [
+        "Ağır metaller"
+      ],
+      "standards": [
+        "TS EN 14385"
+      ],
+      "prompt": "EN 14385’te bir metal son absorberde toplam bireysel metal kütlesinin %10’unu aşıyorsa genel ret kapsamı nedir?",
+      "choices": [
+        "İlgili metal grubunun tamamı; §6.3 istisnaları ayrıca değerlendirilir.",
+        "Yalnız son şişenin sonucu silinir.",
+        "Yalnız numune hacmi düzeltilir.",
+        "İlk iki şişe toplanıp sonuç kesin kabul edilir."
+      ],
+      "correctIndex": 0,
+      "explanation": "Verim koşulunda grup düzeyindeki sonuç etkilenir. Düşük bireysel pay ve düşük grup sonucu istisnaları kaynakta belirli koşullarla tanımlıdır.",
+      "source": "L02:19; §6.3"
+    },
+    {
+      "id": "q139",
+      "topic": "EN standartları — saha ayrıntıları",
+      "scope": "Emisyon",
+      "parameters": [
+        "Ağır metaller"
+      ],
+      "standards": [
+        "TS EN 14385"
+      ],
+      "prompt": "EN 14385 saha blankı hazırlanırken hangi işlem doğrudur?",
+      "choices": [
+        "Platformda kurulur; prob bacaya sokulmaz, ilgili kaçak ve geri kazanım adımları yapılır.",
+        "Prob bacaya sokulup normal ölçüm hacmi çekilir.",
+        "Sadece açılmamış şişe laboratuvarda bırakılır.",
+        "Blankta hiçbir yüzey geri kazanılmaz."
+      ],
+      "correctIndex": 0,
+      "explanation": "Bu blank numune yolunun hazırlık, taşıma ve geri kazanım etkilerini kapsar. Yalnız kullanılmamış bir reaktif şişesi aynı kontrolü sağlamaz.",
+      "source": "L02:22; §8.5"
+    },
+    {
+      "id": "q140",
+      "topic": "EN standartları — saha ayrıntıları",
+      "scope": "Emisyon",
+      "parameters": [
+        "Partikül madde"
+      ],
+      "standards": [
+        "TS EN 13284-1",
+        "TS EN 13284-1 / TS ISO 9096 / ISO 12141"
+      ],
+      "prompt": "EN 13284-1:2017’de izokinetik kabul aralığı hangisidir?",
+      "choices": [
+        "%95–115",
+        "%90–110",
+        "%80–120",
+        "%98–102"
+      ],
+      "correctIndex": 0,
+      "explanation": "Standart −%5 ile +%15 aralığını belirtir. EPA yöntem ailesinden bilinen başka bir izokinetik aralık buraya otomatik uygulanmaz.",
+      "source": "L03:28,43; §9.5"
+    },
+    {
+      "id": "q141",
+      "topic": "EN standartları — saha ayrıntıları",
+      "scope": "Emisyon",
+      "parameters": [
+        "Partikül madde"
+      ],
+      "standards": [
+        "TS EN 13284-1",
+        "TS EN 13284-1 / TS ISO 9096 / ISO 12141"
+      ],
+      "prompt": "EN 13284-1:2017’de tek trenle 12 nokta seri örnekleniyorsa yalnız asgari nokta süresi hesabı kaç dakika verir?",
+      "choices": [
+        "36 dakika",
+        "30 dakika",
+        "24 dakika",
+        "12 dakika"
+      ],
+      "correctIndex": 0,
+      "explanation": "Her noktada en az 3 dakika ve eşit süre gerekir: 12×3=36 dakika. Hacim veya mevzuat daha uzun süre isteyebilir; 30 dakika her planı karşılamaz.",
+      "source": "L03:28; §9.5; boyutsal hesap"
+    },
+    {
+      "id": "q142",
+      "topic": "EN standartları — saha ayrıntıları",
+      "scope": "Emisyon",
+      "parameters": [
+        "Partikül madde"
+      ],
+      "standards": [
+        "TS EN 13284-1",
+        "TS EN 13284-1 / TS ISO 9096 / ISO 12141"
+      ],
+      "prompt": "EN 13284 geri kazanımında filtre önündeki birikimleri mekanik fırçalamak genel prosedür müdür?",
+      "choices": [
+        "Hayır; §9.6.2 bu geri kazanımda mekanik temizleme uygulanmamasını ister.",
+        "Evet, her yüzey metal fırçayla kazınır.",
+        "Evet, filtre kuru fırçayla parçalanır.",
+        "Evet, yalnız su kullanılırsa fırçalama zorunludur."
+      ],
+      "correctIndex": 0,
+      "explanation": "Ekipmanın ölçüm öncesi temizlenebilmesi ile numuneyi geri kazanırken yapılacak işlem ayrıdır. Başka metodun fırçalama talimatı buraya taşınmaz.",
+      "source": "L03:29; §9.6.2"
+    },
+    {
+      "id": "q143",
+      "topic": "EN standartları — saha ayrıntıları",
+      "scope": "Emisyon",
+      "parameters": [
+        "Partikül madde"
+      ],
+      "standards": [
+        "TS EN 13284-1",
+        "TS EN 13284-1 / TS ISO 9096 / ISO 12141"
+      ],
+      "prompt": "EN 13284’te seri boyunca toplanan ön yıkama kütlesi ölçümlere nasıl paylaştırılır?",
+      "choices": [
+        "Her filtrede toplanan kütle oranında",
+        "Gaz hacmi oranında",
+        "Sürelerin kareleri oranında",
+        "Şişelerin başlangıç hacmi oranında"
+      ],
+      "correctIndex": 0,
+      "explanation": "Bu metindeki toz birikimi paylaştırması filtredeki kütlelerle ilişkilidir. Metal standardının gaz hacmine göre paylaştırılması ayrı bir kuraldır.",
+      "source": "L03:29; §9.6.2"
+    },
+    {
+      "id": "q144",
+      "topic": "EN standartları — saha ayrıntıları",
+      "scope": "Emisyon",
+      "parameters": [
+        "Partikül madde"
+      ],
+      "standards": [
+        "TS EN 13284-1",
+        "TS EN 13284-1 / TS ISO 9096 / ISO 12141"
+      ],
+      "prompt": "EN 13284 saha blankı sınırında ELV=2 mg/m³ ise üst sınır hangisidir?",
+      "choices": [
+        "0,5 mg/m³",
+        "0,2 mg/m³",
+        "2 mg/m³",
+        "0,02 mg/m³"
+      ],
+      "correctIndex": 0,
+      "explanation": "Sınır %10 ELV ile 0,5 mg/m³ değerinden büyük olandır. Bu örnekte %10 ELV=0,2 mg/m³ olduğundan 0,5 mg/m³ kullanılır.",
+      "source": "L03:30; §9.7; boyutsal hesap"
+    },
+    {
+      "id": "q145",
+      "topic": "EN standartları — saha ayrıntıları",
+      "scope": "Emisyon",
+      "parameters": [
+        "Partikül madde"
+      ],
+      "standards": [
+        "TS EN 13284-1",
+        "TS EN 13284-1 / TS ISO 9096 / ISO 12141"
+      ],
+      "prompt": "EN 13284 Ek E’de Vmin=10U/E hesabındaki U hangi büyüklüktür?",
+      "choices": [
+        "Tüm tartım prosedürünün genişletilmiş belirsizliği",
+        "Yalnız terazinin ekran çözünürlüğü",
+        "Sadece filtrenin başlangıç kütlesi",
+        "Baca hızının standart sapması"
+      ],
+      "correctIndex": 0,
+      "explanation": "Tartım belirsizliği taşıma, şartlandırma ve işlem etkilerini de içerir. Tek bir çözünürlük rakamını U yerine koymak hacim planını yanıltabilir.",
+      "source": "L03:25,45; §8.6, Ek E"
+    },
+    {
+      "id": "q146",
+      "topic": "EN standartları — saha ayrıntıları",
+      "scope": "Emisyon",
+      "parameters": [
+        "Partikül madde"
+      ],
+      "standards": [
+        "TS EN 13284-1",
+        "TS EN 13284-1 / TS ISO 9096 / ISO 12141"
+      ],
+      "prompt": "U=0,2 mg ve E=5 mg/m³ ise EN 13284 Ek E minimum hacim hesabı kaç m³ verir?",
+      "choices": [
+        "0,4 m³",
+        "0,04 m³",
+        "4 m³",
+        "25 m³"
+      ],
+      "correctIndex": 0,
+      "explanation": "Vmin=10×0,2/5=0,4 m³. Kütle belirsizliği ve sınır değerin birimleri uyumlu tutulur; bu hacim uygun referans koşullarıyla değerlendirilir.",
+      "source": "L03:45; normatif Ek E; boyutsal hesap"
+    },
+    {
+      "id": "q147",
+      "topic": "EN standartları — saha ayrıntıları",
+      "scope": "Emisyon",
+      "parameters": [
+        "Partikül madde"
+      ],
+      "standards": [
+        "TS EN 13284-1",
+        "TS EN 13284-1 / TS ISO 9096 / ISO 12141"
+      ],
+      "prompt": "EN 13284’te son tartımdan önce genel kurutma koşulu hangisidir?",
+      "choices": [
+        "En az 1 saat 160 °C; gerekçeli alternatif Ek H ve raporla",
+        "Her numuneyi 30 dakika 120 °C",
+        "Her numuneyi 4 saat 25 °C",
+        "Her numuneyi 48 saat −7 °C"
+      ],
+      "correctIndex": 0,
+      "explanation": "Sıcaklık seçimi uçucu ve termal olarak kararsız bileşenleri etkiler. Kaynaktaki gerekçeli alternatif yolu olmadan tek sıcaklık bütün proseslere dayatılmaz.",
+      "source": "L03:24-25,63; §8.4–8.5, Ek H"
+    },
+    {
+      "id": "q148",
+      "topic": "EN standartları — saha ayrıntıları",
+      "scope": "Emisyon",
+      "parameters": [
+        "Partikül madde"
+      ],
+      "standards": [
+        "TS EN 13284-1",
+        "TS EN 13284-1 / TS ISO 9096 / ISO 12141"
+      ],
+      "prompt": "EN 13284 örneklemesi sonunda filtrede yırtık veya filtre/tutucuda yoğuşma görülürse ne yapılır?",
+      "choices": [
+        "Ölçüm geçersiz kabul edilir.",
+        "Eksik kütle tahmin edilip eklenir.",
+        "Sayaç hacmi ikiyle çarpılır.",
+        "Filtre kurutulunca olay kayıttan silinir."
+      ],
+      "correctIndex": 0,
+      "explanation": "Kaynak bu iki durumu geçersizlik nedeni olarak tanımlar. Sonradan kurutmak, örnekleme sırasındaki kaybı veya faz ayrımı hatasını kendiliğinden gidermez.",
+      "source": "L03:28; §9.5"
+    },
+    {
+      "id": "q149",
+      "topic": "EN standartları — saha ayrıntıları",
+      "scope": "Emisyon",
+      "parameters": [
+        "Ağır metaller"
+      ],
+      "standards": [
+        "TS EN 14385"
+      ],
+      "prompt": "EN 14385:2024 Ek G’de LoQ altındaki bileşenleri toplama yaklaşımı hangisidir?",
+      "choices": [
+        "Bu yaklaşımda LoQ/2 kullanılır; kütlesel emisyona etkisi ayrıca değerlendirilir.",
+        "Her durumda sıfır kabul edilir.",
+        "Her zaman LOD ile LoQ aynı sayılır.",
+        "Tespit edilmeyen her metal sınır değerine eşit alınır."
+      ],
+      "correctIndex": 0,
+      "explanation": "Ek G yaklaşımı bütün metotlara genellenmez. Özellikle büyük gaz debilerinde bu değerlerden üretilen kütlesel emisyonlar fazla tahmin edilebildiği için raporlama koşulları değerlendirilir.",
+      "source": "L02:71-74; normatif Ek G"
+    },
+    {
+      "id": "q150",
+      "topic": "EN standartları — saha ayrıntıları",
+      "scope": "Emisyon",
+      "parameters": [
+        "Partikül madde"
+      ],
+      "standards": [
+        "TS EN 13284-1",
+        "TS EN 13284-1 / TS ISO 9096 / ISO 12141"
+      ],
+      "prompt": "EN 13284 Ek D’deki hız oranı ölçütü için vmax=12 m/s ve vmin=3 m/s nasıl değerlendirilir?",
+      "choices": [
+        "Oran 4:1; <3:1 ölçütü sağlanmaz.",
+        "Oran 3:1; ölçüt kesin sağlanır.",
+        "Oran 1:4; bütün saha uygun olur.",
+        "Oran 36:1; yalnız sıcaklık düzeltilir."
+      ],
+      "correctIndex": 0,
+      "explanation": "Hız oranı en büyük hızın en küçüğe bölünmesidir. Bu yalnız bir uygunluk ölçütüdür; açı, ters akış, Pitot basıncı ve diğer yer koşulları ayrıca incelenir.",
+      "source": "L03:44; Ek D / EN 15259 özeti"
     }
   ]
 }

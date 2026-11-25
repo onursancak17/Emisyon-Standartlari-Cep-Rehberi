@@ -73,9 +73,10 @@ void main() {
       }
     }
   });
-  testWidgets('Split PAH diagram opens from the offline asset and can be enlarged', (tester) async {
-    final p=Map<String,dynamic>.from((data['profiles'] as List).firstWhere((p)=>p['id']=='pah_iso11338_b_split') as Map);
-    await tester.pumpWidget(MaterialApp(home:MethodGuidePage(profiles:[p])));
+  testWidgets('Each split diagram opens from its offline asset and can be enlarged', (tester) async {
+    for(final raw in (data['profiles'] as List).where((p)=>p['diagram']!=null)) {
+    final p=Map<String,dynamic>.from(raw as Map);
+    await tester.pumpWidget(MaterialApp(key:ValueKey(p['id']),home:MethodGuidePage(profiles:[p])));
     final image=find.byKey(const ValueKey('split-train-image'));
     await tester.scrollUntilVisible(image,250,scrollable:find.byType(Scrollable).first);
     await tester.scrollUntilVisible(find.text('Şemayı tam ekran aç'),200,scrollable:find.byType(Scrollable).first);
@@ -85,5 +86,8 @@ void main() {
     expect(find.byType(AssetTrainPage),findsOneWidget);
     expect(find.byType(InteractiveViewer),findsOneWidget);
     expect(tester.takeException(),isNull);
+    await tester.pageBack();
+    await tester.pumpAndSettle();
+    }
   });
 }

@@ -4,6 +4,7 @@ from pathlib import Path
 from primary_profiles import extend, WEB_SOURCES
 from recovery_details import extend as extend_recovery
 from split_profiles import extend as extend_split
+from en_profiles import extend as extend_en, LOCAL_SOURCES
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -219,15 +220,16 @@ for p in data:
     p.setdefault('evidence', [])
 extend_recovery(data)
 extend_split(data,node)
+extend_en(data,profile,node,imp,meter,common_delivery)
 
 source_index = json.loads((ROOT/'docs/SOURCE_INDEX.json').read_text(encoding='utf-8'))
 source_index['reviewedAt']='2026-11-26'
-source_index['documents'] = [s for s in source_index['documents'] if not s['id'].startswith('W')] + WEB_SOURCES
+source_index['documents'] = [s for s in source_index['documents'] if s['id'][0] not in 'WL'] + WEB_SOURCES + LOCAL_SOURCES
 source_index['catalogChecks'] = [
     dict(method='ISO 12141', archiveEdition='2002', currentEdition='2024',
          status='Arşiv metni eski. Yeni sürümün tam koşulları karşılaştırılmadı.', url='https://www.iso.org/standard/85643.html'),
     dict(method='EN 14385', archiveEdition='TL179:2018', currentEdition='2024',
-         status='2024 baskısının katalog bilgisi doğrulandı; okunabilir tam metin karşılaştırması bekliyor.',
+         status='Yerel BS EN 14385:2024 nüshasında çözelti, üç absorber, verim, geri kazanım ve saklama bölümleri karşılaştırıldı; ulusal TS baskısı eşleştirmesi ayrı doğrulanmalı.',
          url='https://knowledge.bsigroup.com/products/stationary-source-emissions-determination-of-the-total-emission-of-as-cd-cr-co-cu-mn-ni-pb-sb-tl-and-v'),
     dict(method='EPA CTM-022', status='NO, NO₂ ve NOₓ için elektrokimyasal yöntem; SO₂ yöntemi değildir.',
          url='https://www.epa.gov/emc/emc-conditional-test-methods'),

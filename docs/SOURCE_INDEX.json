@@ -416,6 +416,27 @@
       "edition": "28.07.1997",
       "pages": 32,
       "url": "https://ww2.arb.ca.gov/sites/default/files/classic/testmeth/vol1/m_5.pdf"
+    },
+    {
+      "id": "L01",
+      "title": "TS EN 1911:2010 — HCl olarak gaz halindeki klorürler",
+      "edition": "TSE Ocak 2011; EN 1911:2010",
+      "pages": 48,
+      "sha256": "a1e0cb304290cb520fa865382f667867ed5da563bb5b8409595526629f07bd8d"
+    },
+    {
+      "id": "L02",
+      "title": "BS EN 14385:2024 — 11 metalin toplam emisyonu",
+      "edition": "EN 14385:2024 ana metni; yerel dosya adı TS olsa da kapak BS",
+      "pages": 77,
+      "sha256": "e120d09e8396e32162cec4ab0f8267957ab62f331b1f9c18006dfd76aed97311"
+    },
+    {
+      "id": "L03",
+      "title": "TS EN 13284-1 — düşük derişimli toz, manuel gravimetri",
+      "edition": "TSE Ocak 2018; EN 13284-1:2017",
+      "pages": 66,
+      "sha256": "6959ae26b6a6d70cb56a3f521c693021b1fa6beeb642ca808f812e73fdb07f69"
     }
   ],
   "catalogChecks": [
@@ -430,7 +451,7 @@
       "method": "EN 14385",
       "archiveEdition": "TL179:2018",
       "currentEdition": "2024",
-      "status": "2024 baskısının katalog bilgisi doğrulandı; okunabilir tam metin karşılaştırması bekliyor.",
+      "status": "Yerel BS EN 14385:2024 nüshasında çözelti, üç absorber, verim, geri kazanım ve saklama bölümleri karşılaştırıldı; ulusal TS baskısı eşleştirmesi ayrı doğrulanmalı.",
       "url": "https://knowledge.bsigroup.com/products/stationary-source-emissions-determination-of-the-total-emission-of-as-cd-cr-co-cu-mn-ni-pb-sb-tl-and-v"
     },
     {

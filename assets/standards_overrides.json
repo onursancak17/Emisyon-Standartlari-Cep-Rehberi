@@ -345,43 +345,42 @@
       "emicilik verimi",
       "460 nm"
     ],
-    "purpose": "HCl olarak tanımlanan gaz halindeki klorürlerin absorpsiyon metodu ve civa-tiyosiyanat spektrofotometrik tayiniyle belirlenmesidir.",
-    "duration": "Numune alma süresi 30 dakikadan az olmamalıdır. Potansiyel hat kayıpları nedeniyle kısa süreli numune alma HCl için uygun değildir.",
-    "flowRate": "HCl’nin toplandığı yıkama şişelerinden gaz 2–3 L/dk ile geçirilir. İzokinetik ana debi bu değer için fazla yüksekse yan akımlı izokinetik hat kullanılır.",
+    "purpose": "TS EN 1911 — EN 1911:2010 / TSE Ocak 2011. Hedef gaz halindeki uçucu inorganik klorürlerdir; HCl olarak raporlanır. Damlacık biliniyor/şüphe ediliyorsa izokinetik gerekir. Nokta/homojenlik planı EN 15259 bağlantılıdır.",
+    "duration": "Grid örneklemede EN 1911:2010’un tarihli EN 13284-1:2001 atfındaki temsil/süre koşulları uygulanır. 2017 toz standardının süreleri bu eski atfa otomatik taşınmaz; hacim ve ortalama süresini ayrıca planla.",
+    "flowRate": "İzokinetik çekiş; absorber verimi aynı debi/kap/dolumla sağlanmalı.",
     "equipment": [
-      "Isıtmalı prob/sonda, yüksek verimli filtre, en az iki absorpsiyon şişesi, gerekirse T hattı/yan akım, buz/soğutma sistemi, DGM/pompa."
+      "Bu yöntemin şema/numune fraksiyonları ana ekrandaki parametre rehberinde ayrı varyantlarla bulunur."
     ],
     "reagents": [
-      "Absorban: klorür içermeyen, EN ISO 3696 derece 2 saflıkta saf su.",
-      "1. ve 2. yıkama şişesi: 100’er mL absorpsiyon çözeltisi.",
-      "Analizde Hg(SCN)2, HNO3, demir(III) amonyum sülfat ve NaCl standart çözeltileri kullanılır."
+      "En az iki seri absorbere EN ISO 3696 derece 2, klorür içermeyen su koy. Dolum verim deneyindeki hacimle aynı olmalı; 40–100 mL kaynakta örnektir, evrensel sabit dolum değildir.",
+      "Cam/titanyum/PTFE numuneye temas edebilir; absorbere kadar paslanmaz çelik kullanma. Filtre verimi >%99,5 @0,3 µm test aerosolü veya >%99,9 @0,6 µm. Bunlar filtre gözenek çapı değildir."
     ],
     "fieldSteps": [
-      "Bacada damlacık veya nemli kaynak varsa izokinetik örnekleme seç.",
-      "Su damlacığı yok ve akış homojense sabit çekişli/izokinetik olmayan örnekleme yapılabilir.",
-      "Tek nokta için hız std sapması ortalamanın %10’undan, lokal sıcaklık farkı 10 °C’den, O2 std sapması ortalamanın %10’undan az olmalıdır.",
-      "Prob en az 150 °C veya asit çiy noktasının 20 °C üstünde olmalıdır.",
-      "Ölçümden önce kaçak testi yap.",
-      "Ölçüm sonunda bağlantı borularını absorpsiyon reaktifiyle yıka ve 1. şişeye ekle; 2. şişeyi emicilik kontrolü için ayrıca analiz et."
+      "Tam treni işletim sıcaklığında denetle; kaçak beklenen debinin %2’sini aşamaz. Ön/ölçüm sırası testini kaydet; grid ölçümü sonrası test önerilir.",
+      "Saha blankında hazırlık, kurulum, geri kazanım ve analiz izlenir; emme/pompa çalıştırma adımı yapılmaz. Seri/gün sıklığını §5.3.3.3’e göre uygula; sahada yıka-yeniden kullanımda seri sonu blankı da gerekir.",
+      "Prob/filtreyi ön ısıt; başlangıç sayaç değerini kaydet. Debi, sayaç sıcaklık/basıncı ve süreç koşullarını izleyerek seçili noktaları örnekle; port değişiminde hattı/pompayı durdurma prosedürünü uygula.",
+      "Her kampanyada absorpsiyon verimini doğrula. Son absorberde en çok %5 tutulma veya son absorber derişiminin 5×analitik tespit sınırından (LOD) küçük olması koşulunu değerlendir (§5.2.1.2.2).",
+      "Yan kol olmadan kullanım yalnız absorber verimi sağlanıyorsa mümkündür; bir üst sınıra rastgele sabit debi ayarlama.",
+      "Son absorberi kendi kabında ayrı geri kazan; arkasındaki koruma kabına taşınan sıvı bu SON fraksiyona eklenir. Absorberleri kendi klorürsüz suyuyla iyice yıka.",
+      "Filtre–ilk absorber arasındaki ısıtılmayan kısımların su yıkamasını İLK fraksiyona ekle. Verim kontrolü için ilk/son fraksiyonu ayrı analiz ettir; katı klorürleri gaz klorür sonucuna rastgele ekleme. Gereksiz yüksek yıkama hacmiyle tayin sınırını kötüleştirme."
     ],
     "criticalControls": [
-      "2. impingerdeki HCl toplamın %5’inden fazlaysa emicilik yetersizdir.",
-      "Saha şahidi emisyon limit değerinin %10’undan fazlaysa ölçüm geçersizdir.",
-      "130 °C altı filtrasyonda yan reaksiyon/kayıp riski vardır.",
-      "TS EN 1911 ölçüm aralığı 1–5000 mg/Nm³ olarak değerlendirilir."
+      "Hedef derişim, analiz tayin sınırı ve son sıvı hacminden hesapla; kuru gazı kaynak ref. 273 K / 101,3 kPa ile raporla.",
+      "Dış filtre ≥çiy noktası+20 °C; prob/bağlantıda soğuk nokta bırakma. Kuru sayaç önünde artık nem <10 g/m³.",
+      "Numuneyi klorür bulaştırmayan, sızdırmaz ve laboratuvarın onayladığı kapta; fraksiyon kimliği ve sıvı seviyesiyle taşı. İncelenen EN 1911 metninde sayısal taşıma/saklama sıcaklığı veya azami analiz bekletme süresi bulunmadı. Bu alanları teslim öncesi laboratuvarın geçerli numune kabul planıyla belirle."
     ],
     "acceptance": [
-      "Kaçak testi uygun, süre ≥30 dk, absorpsiyon debisi 2–3 L/dk, emicilik verimi ≥%95 ve şahit uygun olmalıdır."
+      "Kontrol sonucu yalnız seçili yöntem ve kaynak baskısıyla değerlendirilir. Açık kalan kaynak/uygulama ayrıntıları parametre kartında görünür."
     ],
     "reporting": [
-      "QHCl = Q × (a/b). Numune 40–100 mL ve +4 °C saklama; analiz 460 nm’de 1 veya 5 cm küvette yapılır.",
-      "Br-, I-, CN-, S2-, SO3 2-, SCN-, nitrit, peroksit ve klor girişim yapabilir."
+      "Tesis, baca/nokta, tarih, başlangıç–bitiş, metot/sürüm, numuneci ve fraksiyon kimliklerini etiketle.",
+      "Numune kabı, kapak, miktar, blank, mühür, taşıma koşulu, teslim saati ve teslim alanı izlenebilir teslim formuna kaydet.",
+      "İlk/son absorber kimliği, gerçek su/yıkama/son hacimler, blank ve verim hesabı için ayrı analiz isteğini bildir. Blank <%10 ELV olmalı; blankı aşmayan sonuç ≤blank olarak raporlanır (§5.3.3.3).",
+      "Kaynak: L01:8,13-24,31"
     ],
     "mistakes": [
-      "2×100 mL saf suyu koymamak.",
-      "30 dakikadan kısa örneklemek.",
-      "Yan akım gereken durumda tüm gazı impingere basmak.",
-      "Emicilik verimini kontrol etmemek."
+      "Dolum, yüzde türü, blank, süre veya saklama kuralını başka yöntemden aktarmak.",
+      "Eski eğitim notunu yeni standart baskısı diye kullanmak."
     ]
   },
   {
@@ -668,41 +667,44 @@
       "V",
       "emicilik verimi"
     ],
-    "purpose": "Sabit kaynak emisyonlarında Sb, As, Cd, Cr, Co, Cu, Pb, Mn, Ni, Tl ve V gibi metallerin izokinetik örnekleme, filtre, absorban ve kontaminasyon kontrolüyle belirlenmesidir.",
-    "duration": "Saha uygulamasında 30 dakikalık 3 örnekleme yaklaşımı kullanılabilir; hedef tayin limiti ve yeterli hacim kontrol edilir.",
-    "flowRate": "Çekiş izokinetik yürütülür. Nozul hıza göre seçilir; DGM, ΔH, sıcaklık, vakum ve süre kayıt edilir.",
+    "purpose": "EN 14385 — 2024 — yerel BS EN nüshası. Bu nüsha EN 14385:2024 ana metninin BS baskısıdır; hedefler As, Cd, Cr, Co, Cu, Mn, Ni, Pb, Sb, Tl ve V. Cıva bu listenin parçası değildir. Numuneye temas eden yüzeyleri ve PE kapları önceden temizle.",
+    "duration": "EN 13284 grid süreleri: ≥3 dk/nokta, ≥30 dk toplam; hedef hacim/ilgili mevzuat daha uzun gerektirebilir.",
+    "flowRate": "İzokinetik, EN 13284 bağlantılı %95–115; sabit L/dk yok. Yan kol varsa iki debi ayrı.",
     "equipment": [
-      "Metal kontaminasyonu düşük cam/kuvars/PTFE yüzeyler.",
-      "Metal analizine uygun filtre ve filtre tutucu.",
-      "Asidik absorban impingerleri, boş impinger/sıçrama tutucu, silika jel.",
-      "Ayrı fraksiyon kapları ve blank kapları."
+      "Bu yöntemin şema/numune fraksiyonları ana ekrandaki parametre rehberinde ayrı varyantlarla bulunur."
     ],
     "reagents": [
-      "Cıva dışı ağır metallerde 5 impinger düzeni kullanılabilir: 1-3. impinger 100’er mL %5 HNO3/%10 H2O2, 4. boş, 5. 200 g silika jel.",
-      "Cıva gerekiyorsa EPA 29 permanganat hattı ayrı değerlendirilir.",
-      "Nozul/prob/filtre önü parçalar 0,1 N HNO3 ile yıkanır."
+      "§5.2.8: yaklaşık %65 (kütle/kütle) HNO₃ ve %30 (kütle/kütle) H₂O₂ stoklarından eş hacimleri karıştır; bu karışımın 1 hacmini 9 hacim suya ekle. Nihai yaklaşık %4,4 HNO₃ / %1,6 H₂O₂ (kütle/kütle). Çözeltiyi taze hazırla veya peroksiti sahada ekleme alternatifini uygula.",
+      "En az üç dolu seri absorber. Uygun dolum, örneğin kap hacminin en az %25’i, gaz–sıvı teması ve verimle belirlenir. Tek bir mL bütün kaplara atanmaz. Sonrasında boş koruma kabı; yüksek nemde ilk dolu öncesi boş kondensat kabı kullanılabilir."
     ],
     "fieldSteps": [
-      "Hedef metal listesi ve cıva gerekip gerekmediğini ölçüm öncesi netleştir.",
-      "Filtre değişimini pensle ve kontaminasyonsuz yap.",
-      "Filtre, prob yıkaması, 1. impinger ve 2. impinger metal kütlelerini ayrı değerlendirerek absorpsiyon verimini kontrol et.",
-      "Taşıma sıcaklığını 25 °C altında tut; kapları soğuk/karanlık taşı."
+      "Her örnekleme başlangıcında tam tren testi: kaçak ≤beklenen Q’nun %2’si. Annex B’deki yöntem/uygun eşdeğer prosedürü uygula; sıvının geriye yürümesini önle.",
+      "O₂ karşılaştırması büyük kaçağı gösterebilir; ana kaçak testinin yerini almaz.",
+      "EN 13284-1 bağlantılı izokinetik/grid örnekleme; gerçek sayaç değerleri, basınç/sıcaklık ve süreleri kaydet. En az bir ölçümde son absorber ayrı tutularak grup bazında verim denetimi yapılır.",
+      "Son absorberde bir metalin kütlesi o metalin filtre+prob+absorber toplamının %10’undan fazlaysa ait olduğu grubun sonuçları reddedilir. Grup içi <%1 kütle veya grup toplamı <%30 ELV istisnaları yalnız §6.3 koşullarıyla değerlendirilir.",
+      "Filtreyi kimlikli taşıma kabına al. Bu varyantta nozül/prob/filtre önünü kendi absorpsiyon çözeltisiyle yıka (§8.4.3). Ön yüzeyler en az seri/günde bir geri kazanılır; birden fazla ölçüme ait yıkama, gaz hacimleri oranında paylaştırılır.",
+      "Filtre arkası ve ilk absorbere bağlantı her ölçümde İLK absorber fraksiyonuna yıkanır. Her şişe/bağlantı yıkaması ilgili absorber kabına eklenir. Ön boş kondensat kabı varsa içerik+yıkaması ilk dolu absorbere katılır.",
+      "En az bir ölçümün son absorberini ayrı analiz ettir. Diğer uygun ölçümlerde absorberler birleşebilir. Gereksiz seyreltmeden kaçın; hacim/kütle ve sıvı düzeylerini kaydet."
     ],
     "criticalControls": [
-      "2. impingerdeki metal kütlesi toplam kütleye göre breakthrough/emicilik verimi açısından değerlendirilir.",
-      "Cd örneğinde %79 verim kriter sağlamaz; gerekirse T hattı/ilave tutma hattı kullanılır.",
-      "EPA29 geri kazanım tablosu TS EN 14385 görseli gibi kullanılmamalıdır."
+      "Analitik LOQ/blank ve mevzuat hedefini sağlayacak kuru standart hacim. Sıvı numune hacmi gaz hacmi değildir.",
+      "Absorberler ≤30 °C. Prob/dış filtre/T: §8.1 gaz T+20 K veya asit çiy+20 K (en çok 180 °C ifadesi), yüksek olan; yüksek baca T uygulaması yazılı planla kesinleştirilir.",
+      "Sıvılar PE kapta; kapak PTFE/PFA/FEP/PP veya renksiz PE. Sahada/taşımada <25 °C; laboratuvarda <6 °C. Analiz numune alımından itibaren en geç 4 hafta içinde (§8.6).",
+      "Peroksit bozunması basınç oluşturabilir: cam absorber/depo şişesini laboratuvarda doldurup bekletme uyarısını §8.2.3’e göre uygula."
     ],
     "acceptance": [
-      "İzokinetiklik, kaçak, fraksiyon ayrımı, blank, emicilik verimi ve kontaminasyon kontrolü uygun olmalıdır."
+      "Kontrol sonucu yalnız seçili yöntem ve kaynak baskısıyla değerlendirilir. Açık kalan kaynak/uygulama ayrıntıları parametre kartında görünür."
     ],
     "reporting": [
-      "Metal listesi, hacim, izokinetiklik, fraksiyonlar, blanklar, emicilik verimi ve belirsizlik bileşenleri belirtilir."
+      "Tesis, baca/nokta, tarih, başlangıç–bitiş, metot/sürüm, numuneci ve fraksiyon kimliklerini etiketle.",
+      "Numune kabı, kapak, miktar, blank, mühür, taşıma koşulu, teslim saati ve teslim alanı izlenebilir teslim formuna kaydet.",
+      "Filtre, ön yıkama, absorberler/son kademe ve blank kimlikleri; kaynak başına verim denetimi; grup A/B hesapları için hacim ve zamanları bildir.",
+      "Saha blankı platformda kurulur, prob bacaya sokulmaz; kurulum/kaçak/geri kazanım kapsanır. Blank numuneden çıkarılmaz; ayrı raporlanır. Blank >%10 düzenleyici sınırsa ilgili kampanya kısmı reddedilir.",
+      "Kaynak: L02:12-23, L03:27-30"
     ],
     "mistakes": [
-      "EPA 29 cıva hattını TS EN 14385 genel hattıyla karıştırmak.",
-      "Emicilik verimini kontrol etmemek.",
-      "Fraksiyon etiketlerini yanlış yapmak."
+      "Dolum, yüzde türü, blank, süre veya saklama kuralını başka yöntemden aktarmak.",
+      "Eski eğitim notunu yeni standart baskısı diye kullanmak."
     ]
   },
   {

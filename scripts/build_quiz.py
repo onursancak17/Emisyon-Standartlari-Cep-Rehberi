@@ -3,6 +3,7 @@ import json
 import re
 from pathlib import Path
 from quiz_primary import extend
+from quiz_en import extend as extend_en
 
 ROOT=Path(__file__).resolve().parents[1]
 catalog={}
@@ -158,6 +159,7 @@ add('İmisyon — hesap ve kayıt',I,['TS EN 12341','TS 2341','Pasif Örnekleme'
 add('İmisyon — hesap ve kayıt',I,['Pasif Örnekleme'],'Pasif tüpte yalnız toplam tutulan kütleyi bilmek ortam derişimini bulmaya her zaman yeterli midir?','Hayır; alım hızı, süre ve yöntem düzeltmeleri de gerekir.',['Evet, kütle daima derişimdir.','Evet, tüpün boyu tek başına yeterlidir.','Evet, yalnız baca çapı eklenir.'],'Kütle derişim değildir. Pasif tüpün bileşik ve koşullara özgü alım modeli, maruziyet ve blank değerlendirmesiyle birlikte kullanılır.','Ortak saha esasları: pasif örnekleme')
 
 extend(add)
+extend_en(add)
 
 payload=dict(schemaVersion=1,title='Emisyon / İmisyon Açıklamalı Testler',
  notice='Eğitim ve öz değerlendirme içindir; mesleki yetki veya standart uygunluk belgesi değildir. Sorular belirtilen kaynak sürümü / kapsamıyla değerlendirilir.',

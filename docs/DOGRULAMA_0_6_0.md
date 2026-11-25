@@ -19,15 +19,9 @@
 - NIST tabanlı ek birimler: inç, ft, psi, grain ve sıcaklık farkı. Gaz referans koşulları otomatik değiştirilmez.
 - Dar ekran/büyük yazı testi; ana ekran yatay görünümde kaydırılabilir. Android kurulum ve internet kapalı etkileşim kabulü GitHub Actions akışına eklendi.
 
-## Açık teknik işler
+## Sonraki sürüm
 
-TS EN 1911, TS EN 14385:2024 ve EN 13284-1 kaynaklarının okunabilir tam metin karşılaştırması; SCAQMD 207.1 tam prosedürü; dioksin akış bölünmeli ve diğer PAH/dioksin varyantları; her metotta bütün fraksiyon, saklama ve kalite ayrıntıları; eski eğitim notları/görseller/seslerin tek tek içerik denetimi devam ediyor. ISO 12141:2024 tam metni ayrıca gerekli.
-
-GitHub yeniden taraması: erişilen altı depo ve EuroMetrics-Rapor TS_EN yükleme geçmişinde bu üç tam standart PDF'si bulunmadı. `standards_sources/Standart PDFler` klasöründe PDF yerine çalışma listeleri var; envanter bu adları BEKLIYOR diye gösteriyor. İlgili saha talimatları gerçek PDF olarak mevcut. Kullanıcıdan asıl PDF'nin GitHub bağlantısı istendi; bir envanter satırı okunmuş PDF diye kaydedilmez.
-
-Kullanıcının İndirilenler klasörünü belirtmesi ve erişim izniyle üç PDF yerel olarak bulundu (48/77/66 sayfa). Taranmış sayfaların okunması ve teknik karşılaştırması başlatıldı; bulunmaları, içeriklerinin tamamının onaylandığı anlamına gelmez.
-
-Bu açık maddeler kapanmadan tam ve nihai saha talimatı onayı verilemez. Yeni kartta belirtilmeyen bir koşul, kaynakta koşul yok demek değildir. Lisanslı standart PDF'leri kamuya açık depoya kopyalanmaz.
+Üç yerel EN PDF'si kullanıcının izniyle bulundu ve 0.7.0'da ilgili saha bölümleri karşılaştırıldı. Güncel açık işler ve kaynak durumu `DOGRULAMA_0_7_0.md` içindedir. Bu dosya 0.6.0 değişiklik tarihçesidir.
 
 ## Kontrolün anlamı
 

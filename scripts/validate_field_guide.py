@@ -29,7 +29,7 @@ def validate(data, source_index):
             assert e['field'] and e['clause'] and e['references']
             refs.extend(e['references'])
         for ref in refs:
-            match = re.fullmatch(r'([DW]\d{2}):([\d,\-]+)', ref)
+            match = re.fullmatch(r'([DWL]\d{2}):([\d,\-]+)', ref)
             assert match, f'Kaynak biçimi: {ref}'
             did, selections = match.groups()
             assert did in sources, ref

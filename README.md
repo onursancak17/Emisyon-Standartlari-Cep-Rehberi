@@ -1,12 +1,14 @@
 # Emisyon İmisyon Ölçüm Standartları
 
-## 0.5.1 — saha rehberi ve açıklamalı bilgi testi
+## 0.7.0 — saha rehberi ve açıklamalı bilgi testi
 
-Ana ekrandaki **Parametre seç · Numune alma ve impinger rehberi** düğmesi yeni bölümü açar. 21 metot/varyant kartının 10’unda ayrı tren çizimi bulunur. Metot değişince filtre yeri, şişeler ve miktarlar seçime göre değişir. Şema tam ekranda yakınlaştırılabilir ve çevrimdışı çalışır. Emisyon / imisyon filtreleri ve PM10, PM2,5, çöken toz, pasif örnekleme kartları vardır.
+Ana ekrandaki **Parametre seç · Numune alma ve impinger rehberi** düğmesi yeni bölümü açar. 29 metot/varyant kartının 23’ünde ayrı tren çizimi bulunur. Metot değişince filtre yeri, şişeler ve miktarlar seçime göre değişir. Ana/yan akış kolları ayrı çizilir. Şema tam ekranda yakınlaştırılabilir ve çevrimdışı çalışır. Emisyon / imisyon filtreleri ve PM10, PM2,5, çöken toz, pasif örnekleme kartları vardır.
 
-**Bilgini sına** bölümünde 100 açıklamalı soru (25 imisyon sorusu) vardır. Mevcut katalogdaki 37 başlığın her birine en az bir soru bağlanmıştır. Karışık / emisyon / imisyon / ortak kapsam; konu / standart-metot / parametre seçimi; 10, 20, 40, 60, 100 veya tüm sorular; soru ve seçenek karıştırma; ileri-geri gezinme; boş bırakma; test sonunda doğru-yanlış-boş sayısı, konu dağılımı, açıklama ve kaynak izi sunulur. Bu ilk bankadır; her standardın bütün ayrıntılarının sorulduğu iddia edilmez.
+**Bilgini sına** bölümünde 150 açıklamalı soru (25 imisyon sorusu) vardır. Mevcut katalogdaki 37 başlığın her birine en az bir soru bağlanmıştır. Karışık / emisyon / imisyon / ortak kapsam; konu / standart-metot / parametre seçimi; 10, 20, 40, 60, 100 veya tüm sorular; soru ve seçenek karıştırma; ileri-geri gezinme; boş bırakma; test sonunda doğru-yanlış-boş sayısı, konu dağılımı, açıklama ve kaynak izi sunulur. Bu ilk bankadır; her standardın bütün ayrıntılarının sorulduğu iddia edilmez.
 
 Girdap açısı ölçümü ve EPA Method 1 mutlak açı ortalaması; ölçüm yeri uygunsuzlukları; 23 ortak saha konusu; referans koşullarını koruyan birim dönüşümü eklendi. İncelemesi tamamlanmamış yöntemler açıkça **hazırlanıyor / talimat kaynaklı** görünür. Tam metot onayı veya bütün standartların güncel sürümlerinin eksiksiz işlendiği iddia edilmez.
+
+Yeni kaynak karşılaştırması: [0.7.0 kontrol kaydı](docs/DOGRULAMA_0_7_0.md).
 
 Kapsam, tamamlananlar ve kalan işler: [Geliştirme planı](docs/GELISTIRME_PLANI.md). Kaynak kimlikleri: [SOURCE_INDEX.json](docs/SOURCE_INDEX.json).
 
@@ -28,7 +30,7 @@ Ana emisyon hesaplama programından tamamen bağımsızdır. Bu repo sadece mobi
 
 Bu uygulama kısa standart özeti olmayacak. Amaç, sahadaki ölçüm personelinin telefondan açıp adım adım kullanabileceği ayrıntılı ve profesyonel bir Türkçe saha rehberi oluşturmaktır.
 
-Uygulama arayüzü tüm emisyoncuların kullanacağı şekilde sade tutulur. Gereksiz test/rapor/arşiv ekranları APK içinde son kullanıcıya gösterilmez.
+Uygulama arayüzü tüm emisyoncuların kullanacağı şekilde sade tutulur. Açıklamalı bilgi testleri ve çevrimdışı kaynak dizini ana ekrandan açılır.
 
 Her standartta mümkün olduğunca şu bilgiler bulunur:
 
@@ -86,6 +88,10 @@ Uygulama Türkiye saha kullanımına göre hazırlanır. Amerikan/İngiliz kayna
 
 Uygulama son kullanıcı APK'sında yalnızca gerekli veri paketlerini okur:
 
+- `assets/field_guide.json`
+- `assets/quiz_bank.json`
+- `assets/source_index.json`
+- `assets/diagrams/`
 - `assets/standards.json`
 - `assets/standards_extra.json`
 - `assets/education_notes.json`

@@ -1438,170 +1438,6 @@
       ]
     },
     {
-      "id": "hcl_tl89",
-      "scope": "Emisyon",
-      "parameter": "Klor / halojenler",
-      "method": "TS EN 1911 — TL89 aktarımı",
-      "sourceVersion": "TL89 rev.09 / 20.01.2026",
-      "variant": "Gaz halindeki klorürler, HCl olarak; Cl₂ ile aynı parametre değildir",
-      "sources": [
-        "D53:5-9"
-      ],
-      "reviewState": "sop_only",
-      "train": [],
-      "limits": [
-        {
-          "label": "Çekiş debisi",
-          "value": "Sabit / izokinetik / yan akış seçimi damlacık ve homojenlik durumuna bağlı."
-        },
-        {
-          "label": "Toplam çekiş hacmi",
-          "value": "Hedef tayin sınırı ve geçerli metot planı."
-        },
-        {
-          "label": "Sıcaklık",
-          "value": "Birincil standartla doğrulanacak."
-        },
-        {
-          "label": "Ölçüm süresi",
-          "value": "Birincil standartla doğrulanacak."
-        }
-      ],
-      "phases": [
-        {
-          "title": "Hazırlık",
-          "items": [
-            "Talimat mevcut; birincil TS EN 1911 metni arşivde yok. Doğrulanmamış tam tren çizimi bu karta atanmadı."
-          ]
-        },
-        {
-          "title": "Kaçak kontrolü",
-          "items": [
-            "Bu aşamanın ayrıntılı kaynak doğrulaması henüz tamamlanmadı."
-          ]
-        },
-        {
-          "title": "Örnekleme",
-          "items": [
-            "Sıvı damlacıkları, gaz homojenliği ve absorpsiyon verimi yöntem seçiminde birlikte değerlendirilir."
-          ]
-        },
-        {
-          "title": "Geri kazanım",
-          "items": [
-            "Bu aşamanın ayrıntılı kaynak doğrulaması henüz tamamlanmadı."
-          ]
-        },
-        {
-          "title": "Saklama ve taşıma",
-          "items": [
-            "Bu aşamanın ayrıntılı kaynak doğrulaması henüz tamamlanmadı."
-          ]
-        },
-        {
-          "title": "Laboratuvara teslim",
-          "items": [
-            "Tesis, baca/nokta, tarih, başlangıç–bitiş, metot/sürüm, numuneci ve fraksiyon kimliklerini etiketle.",
-            "Numune kabı, kapak, miktar, blank, mühür, taşıma koşulu, teslim saati ve teslim alanı izlenebilir teslim formuna kaydet."
-          ]
-        }
-      ],
-      "gaps": [
-        "Birincil standart, impinger tipi, dolum, sıcaklık, verim, geri kazanım ve saklama koşulları karşılaştırılacak."
-      ],
-      "evidence": [],
-      "sourceDetails": [
-        {
-          "reference": "D53:5-9",
-          "title": "TL89-REV.09-BACADA HCl TAYİNİ STANDART İŞLETME TALİMATI.pdf",
-          "edition": "",
-          "url": ""
-        }
-      ]
-    },
-    {
-      "id": "metals_en14385",
-      "scope": "Emisyon",
-      "parameter": "Ağır metaller",
-      "method": "TS EN 14385",
-      "sourceVersion": "Arşiv kaynağı — ayrıntılı inceleme bekliyor",
-      "variant": "Yöntem kartı hazırlanıyor",
-      "sources": [
-        "D47:4-6"
-      ],
-      "reviewState": "pending",
-      "train": [],
-      "limits": [
-        {
-          "label": "Çekiş debisi",
-          "value": "Henüz doğrulanmadı."
-        },
-        {
-          "label": "Toplam çekiş hacmi",
-          "value": "Henüz doğrulanmadı."
-        },
-        {
-          "label": "Sıcaklık",
-          "value": "Henüz doğrulanmadı."
-        },
-        {
-          "label": "Ölçüm süresi",
-          "value": "Henüz doğrulanmadı."
-        }
-      ],
-      "phases": [
-        {
-          "title": "Hazırlık",
-          "items": [
-            "Bu metodun kapsamı, tren düzeni ve sayısal koşulları birincil kaynaktan tamamlanacak. Başka bir metodun şeması burada kullanılmaz."
-          ]
-        },
-        {
-          "title": "Kaçak kontrolü",
-          "items": [
-            "Bu aşamanın ayrıntılı kaynak doğrulaması henüz tamamlanmadı."
-          ]
-        },
-        {
-          "title": "Örnekleme",
-          "items": [
-            "Bu aşamanın ayrıntılı kaynak doğrulaması henüz tamamlanmadı."
-          ]
-        },
-        {
-          "title": "Geri kazanım",
-          "items": [
-            "Bu aşamanın ayrıntılı kaynak doğrulaması henüz tamamlanmadı."
-          ]
-        },
-        {
-          "title": "Saklama ve taşıma",
-          "items": [
-            "Bu aşamanın ayrıntılı kaynak doğrulaması henüz tamamlanmadı."
-          ]
-        },
-        {
-          "title": "Laboratuvara teslim",
-          "items": [
-            "Tesis, baca/nokta, tarih, başlangıç–bitiş, metot/sürüm, numuneci ve fraksiyon kimliklerini etiketle.",
-            "Numune kabı, kapak, miktar, blank, mühür, taşıma koşulu, teslim saati ve teslim alanı izlenebilir teslim formuna kaydet."
-          ]
-        }
-      ],
-      "gaps": [
-        "Şema, reaktif miktarı, debi, hacim, süre, sıcaklık, geri kazanım, saklama ve bekletme süresi kaynakları tamamlanacak."
-      ],
-      "evidence": [],
-      "sourceDetails": [
-        {
-          "reference": "D47:4-6",
-          "title": "TL179-02 BACAGAZINDA AĞIR METAL TAYİNİ STANDART İŞLETME TALİMATI.pdf",
-          "edition": "",
-          "url": ""
-        }
-      ]
-    },
-    {
       "id": "ammonia_2071",
       "scope": "Emisyon",
       "parameter": "Amonyak",
@@ -3305,6 +3141,1298 @@
           "reference": "D27:13-15,25",
           "title": "ISO 11338 1.pdf",
           "edition": "",
+          "url": ""
+        }
+      ]
+    },
+    {
+      "id": "hcl_en1911_noniso",
+      "scope": "Emisyon",
+      "parameter": "Klor / halojenler",
+      "method": "TS EN 1911",
+      "sourceVersion": "EN 1911:2010 / TSE Ocak 2011",
+      "variant": "İzokinetik olmayan; düz prob / dış filtre",
+      "sources": [
+        "L01:8,13-24,31"
+      ],
+      "reviewState": "sections_checked",
+      "train": [
+        {
+          "id": "probe",
+          "kind": "probe",
+          "label": "Düz ısıtılmış prob",
+          "content": "Numuneye uygun cam / titanyum / PTFE",
+          "amount": "",
+          "optional": false
+        },
+        {
+          "id": "filter",
+          "kind": "filter",
+          "label": "Isıtılmış dış filtre",
+          "content": "Çiy noktasının en az 20 °C üstü",
+          "amount": "",
+          "optional": false
+        },
+        {
+          "id": "i1",
+          "kind": "impinger",
+          "label": "İmpinger 1",
+          "content": "Klorür içermeyen derece 2 su",
+          "amount": "Verim deneyindeki dolum; kaynak örneği 40–100 mL",
+          "optional": false
+        },
+        {
+          "id": "i2",
+          "kind": "impinger",
+          "label": "İmpinger 2",
+          "content": "Klorür içermeyen derece 2 su — son absorber ayrı analiz",
+          "amount": "Verim deneyindeki dolum; kaynak örneği 40–100 mL",
+          "optional": false
+        },
+        {
+          "id": "i3",
+          "kind": "impinger",
+          "label": "İmpinger 3",
+          "content": "Başlangıçta boş — taşınan sıvı koruma kabı",
+          "amount": "",
+          "optional": true
+        },
+        {
+          "id": "dryer",
+          "kind": "trap",
+          "label": "Kurutma grubu",
+          "content": "Kuru sayaç için seçilen nem uzaklaştırma sistemi; kaynağın artık nem koşulunu sağla",
+          "amount": "",
+          "optional": false
+        },
+        {
+          "id": "meter",
+          "kind": "meter",
+          "label": "Çekiş ve hacim ölçümü",
+          "content": "Pompa, DGM ve debi kontrol grubu; iç bağlantı sırası cihaz şemasına göre",
+          "amount": "",
+          "optional": false
+        }
+      ],
+      "limits": [
+        {
+          "label": "Çekiş debisi",
+          "value": "Seçili absorbere ve verim testine uygun kontrollü debi; sabit evrensel L/dk yok."
+        },
+        {
+          "label": "Toplam çekiş hacmi",
+          "value": "Hedef derişim, analiz tayin sınırı ve son sıvı hacminden hesapla; kuru gazı kaynak ref. 273 K / 101,3 kPa ile raporla."
+        },
+        {
+          "label": "Sıcaklık",
+          "value": "Dış filtre ≥çiy noktası+20 °C; prob/bağlantıda soğuk nokta bırakma. Kuru sayaç önünde artık nem <10 g/m³."
+        },
+        {
+          "label": "Ölçüm süresi",
+          "value": "Hedef hacim ve gerekli ortalama süresine göre; her gaz ölçümüne sabit 30 dk atanmaz."
+        }
+      ],
+      "phases": [
+        {
+          "title": "Hazırlık",
+          "items": [
+            "Hedef gaz halindeki uçucu inorganik klorürlerdir; HCl olarak raporlanır. Damlacık biliniyor/şüphe ediliyorsa izokinetik gerekir. Nokta/homojenlik planı EN 15259 bağlantılıdır.",
+            "En az iki seri absorbere EN ISO 3696 derece 2, klorür içermeyen su koy. Dolum verim deneyindeki hacimle aynı olmalı; 40–100 mL kaynakta örnektir, evrensel sabit dolum değildir.",
+            "Cam/titanyum/PTFE numuneye temas edebilir; absorbere kadar paslanmaz çelik kullanma. Filtre verimi >%99,5 @0,3 µm test aerosolü veya >%99,9 @0,6 µm. Bunlar filtre gözenek çapı değildir."
+          ]
+        },
+        {
+          "title": "Kaçak kontrolü",
+          "items": [
+            "Tam treni işletim sıcaklığında denetle; kaçak beklenen debinin %2’sini aşamaz. Ön/ölçüm sırası testini kaydet; grid ölçümü sonrası test önerilir.",
+            "Saha blankında hazırlık, kurulum, geri kazanım ve analiz izlenir; emme/pompa çalıştırma adımı yapılmaz. Seri/gün sıklığını §5.3.3.3’e göre uygula; sahada yıka-yeniden kullanımda seri sonu blankı da gerekir."
+          ]
+        },
+        {
+          "title": "Örnekleme",
+          "items": [
+            "Prob/filtreyi ön ısıt; başlangıç sayaç değerini kaydet. Debi, sayaç sıcaklık/basıncı ve süreç koşullarını izleyerek seçili noktaları örnekle; port değişiminde hattı/pompayı durdurma prosedürünü uygula.",
+            "Her kampanyada absorpsiyon verimini doğrula. Son absorberde en çok %5 tutulma veya son absorber derişiminin 5×analitik tespit sınırından (LOD) küçük olması koşulunu değerlendir (§5.2.1.2.2)."
+          ]
+        },
+        {
+          "title": "Geri kazanım",
+          "items": [
+            "Son absorberi kendi kabında ayrı geri kazan; arkasındaki koruma kabına taşınan sıvı bu SON fraksiyona eklenir. Absorberleri kendi klorürsüz suyuyla iyice yıka.",
+            "Filtre–ilk absorber arasındaki ısıtılmayan kısımların su yıkamasını İLK fraksiyona ekle. Verim kontrolü için ilk/son fraksiyonu ayrı analiz ettir; katı klorürleri gaz klorür sonucuna rastgele ekleme. Gereksiz yüksek yıkama hacmiyle tayin sınırını kötüleştirme."
+          ]
+        },
+        {
+          "title": "Saklama ve taşıma",
+          "items": [
+            "Numuneyi klorür bulaştırmayan, sızdırmaz ve laboratuvarın onayladığı kapta; fraksiyon kimliği ve sıvı seviyesiyle taşı. İncelenen EN 1911 metninde sayısal taşıma/saklama sıcaklığı veya azami analiz bekletme süresi bulunmadı. Bu alanları teslim öncesi laboratuvarın geçerli numune kabul planıyla belirle."
+          ]
+        },
+        {
+          "title": "Laboratuvara teslim",
+          "items": [
+            "Tesis, baca/nokta, tarih, başlangıç–bitiş, metot/sürüm, numuneci ve fraksiyon kimliklerini etiketle.",
+            "Numune kabı, kapak, miktar, blank, mühür, taşıma koşulu, teslim saati ve teslim alanı izlenebilir teslim formuna kaydet.",
+            "İlk/son absorber kimliği, gerçek su/yıkama/son hacimler, blank ve verim hesabı için ayrı analiz isteğini bildir. Blank <%10 ELV olmalı; blankı aşmayan sonuç ≤blank olarak raporlanır (§5.3.3.3)."
+          ]
+        }
+      ],
+      "gaps": [
+        "EN 13284-1:2001 tarihli atfının süre koşulları ve laboratuvarın numune kabul/koruma koşulları tamamlanmalı. Seçili absorberin dolumu verimle doğrulanmalı. İç filtre alternatifinin damlacık/sıcaklık koşulları ayrı seçilmelidir."
+      ],
+      "evidence": [
+        {
+          "field": "Metot / düzen / verim",
+          "references": [
+            "L01:13-21"
+          ],
+          "clause": "§4-5.3.2.1"
+        },
+        {
+          "field": "Tarihli atıf",
+          "references": [
+            "L01:8"
+          ],
+          "clause": "§2 — EN 13284-1:2001"
+        },
+        {
+          "field": "Kaçak / blank / geri kazanım",
+          "references": [
+            "L01:18,21-24"
+          ],
+          "clause": "§5.2.1.2.2, §5.3.2–5.3.3, §6.2"
+        },
+        {
+          "field": "Sayaç / sıcaklık",
+          "references": [
+            "L01:17-20"
+          ],
+          "clause": "§5.2.1–5.2.4"
+        }
+      ],
+      "sourceDetails": [
+        {
+          "reference": "L01:8,13-24,31",
+          "title": "TS EN 1911:2010 — HCl olarak gaz halindeki klorürler",
+          "edition": "TSE Ocak 2011; EN 1911:2010",
+          "url": ""
+        }
+      ]
+    },
+    {
+      "id": "hcl_en1911_iso",
+      "scope": "Emisyon",
+      "parameter": "Klor / halojenler",
+      "method": "TS EN 1911",
+      "sourceVersion": "EN 1911:2010 / TSE Ocak 2011",
+      "variant": "İzokinetik; yan kol olmadan",
+      "sources": [
+        "L01:8,13-24,31"
+      ],
+      "reviewState": "sections_checked",
+      "train": [
+        {
+          "id": "probe",
+          "kind": "probe",
+          "label": "Nozül / prob",
+          "content": "Numuneye uygun cam / titanyum / PTFE",
+          "amount": "",
+          "optional": false
+        },
+        {
+          "id": "filter",
+          "kind": "filter",
+          "label": "Isıtılmış dış filtre",
+          "content": "Çiy noktasının en az 20 °C üstü",
+          "amount": "",
+          "optional": false
+        },
+        {
+          "id": "i1",
+          "kind": "impinger",
+          "label": "İmpinger 1",
+          "content": "Klorür içermeyen derece 2 su",
+          "amount": "Verim deneyindeki dolum; kaynak örneği 40–100 mL",
+          "optional": false
+        },
+        {
+          "id": "i2",
+          "kind": "impinger",
+          "label": "İmpinger 2",
+          "content": "Klorür içermeyen derece 2 su — son absorber ayrı analiz",
+          "amount": "Verim deneyindeki dolum; kaynak örneği 40–100 mL",
+          "optional": false
+        },
+        {
+          "id": "i3",
+          "kind": "impinger",
+          "label": "İmpinger 3",
+          "content": "Başlangıçta boş — taşınan sıvı koruma kabı",
+          "amount": "",
+          "optional": true
+        },
+        {
+          "id": "dryer",
+          "kind": "trap",
+          "label": "Kurutma grubu",
+          "content": "Kuru sayaç için seçilen nem uzaklaştırma sistemi; kaynağın artık nem koşulunu sağla",
+          "amount": "",
+          "optional": false
+        },
+        {
+          "id": "meter",
+          "kind": "meter",
+          "label": "Çekiş ve hacim ölçümü",
+          "content": "Pompa, DGM ve debi kontrol grubu; iç bağlantı sırası cihaz şemasına göre",
+          "amount": "",
+          "optional": false
+        }
+      ],
+      "limits": [
+        {
+          "label": "Çekiş debisi",
+          "value": "İzokinetik çekiş; absorber verimi aynı debi/kap/dolumla sağlanmalı."
+        },
+        {
+          "label": "Toplam çekiş hacmi",
+          "value": "Hedef derişim, analiz tayin sınırı ve son sıvı hacminden hesapla; kuru gazı kaynak ref. 273 K / 101,3 kPa ile raporla."
+        },
+        {
+          "label": "Sıcaklık",
+          "value": "Dış filtre ≥çiy noktası+20 °C; prob/bağlantıda soğuk nokta bırakma. Kuru sayaç önünde artık nem <10 g/m³."
+        },
+        {
+          "label": "Ölçüm süresi",
+          "value": "Grid örneklemede EN 1911:2010’un tarihli EN 13284-1:2001 atfındaki temsil/süre koşulları uygulanır. 2017 toz standardının süreleri bu eski atfa otomatik taşınmaz; hacim ve ortalama süresini ayrıca planla."
+        }
+      ],
+      "phases": [
+        {
+          "title": "Hazırlık",
+          "items": [
+            "Hedef gaz halindeki uçucu inorganik klorürlerdir; HCl olarak raporlanır. Damlacık biliniyor/şüphe ediliyorsa izokinetik gerekir. Nokta/homojenlik planı EN 15259 bağlantılıdır.",
+            "En az iki seri absorbere EN ISO 3696 derece 2, klorür içermeyen su koy. Dolum verim deneyindeki hacimle aynı olmalı; 40–100 mL kaynakta örnektir, evrensel sabit dolum değildir.",
+            "Cam/titanyum/PTFE numuneye temas edebilir; absorbere kadar paslanmaz çelik kullanma. Filtre verimi >%99,5 @0,3 µm test aerosolü veya >%99,9 @0,6 µm. Bunlar filtre gözenek çapı değildir."
+          ]
+        },
+        {
+          "title": "Kaçak kontrolü",
+          "items": [
+            "Tam treni işletim sıcaklığında denetle; kaçak beklenen debinin %2’sini aşamaz. Ön/ölçüm sırası testini kaydet; grid ölçümü sonrası test önerilir.",
+            "Saha blankında hazırlık, kurulum, geri kazanım ve analiz izlenir; emme/pompa çalıştırma adımı yapılmaz. Seri/gün sıklığını §5.3.3.3’e göre uygula; sahada yıka-yeniden kullanımda seri sonu blankı da gerekir."
+          ]
+        },
+        {
+          "title": "Örnekleme",
+          "items": [
+            "Prob/filtreyi ön ısıt; başlangıç sayaç değerini kaydet. Debi, sayaç sıcaklık/basıncı ve süreç koşullarını izleyerek seçili noktaları örnekle; port değişiminde hattı/pompayı durdurma prosedürünü uygula.",
+            "Her kampanyada absorpsiyon verimini doğrula. Son absorberde en çok %5 tutulma veya son absorber derişiminin 5×analitik tespit sınırından (LOD) küçük olması koşulunu değerlendir (§5.2.1.2.2).",
+            "Yan kol olmadan kullanım yalnız absorber verimi sağlanıyorsa mümkündür; bir üst sınıra rastgele sabit debi ayarlama."
+          ]
+        },
+        {
+          "title": "Geri kazanım",
+          "items": [
+            "Son absorberi kendi kabında ayrı geri kazan; arkasındaki koruma kabına taşınan sıvı bu SON fraksiyona eklenir. Absorberleri kendi klorürsüz suyuyla iyice yıka.",
+            "Filtre–ilk absorber arasındaki ısıtılmayan kısımların su yıkamasını İLK fraksiyona ekle. Verim kontrolü için ilk/son fraksiyonu ayrı analiz ettir; katı klorürleri gaz klorür sonucuna rastgele ekleme. Gereksiz yüksek yıkama hacmiyle tayin sınırını kötüleştirme."
+          ]
+        },
+        {
+          "title": "Saklama ve taşıma",
+          "items": [
+            "Numuneyi klorür bulaştırmayan, sızdırmaz ve laboratuvarın onayladığı kapta; fraksiyon kimliği ve sıvı seviyesiyle taşı. İncelenen EN 1911 metninde sayısal taşıma/saklama sıcaklığı veya azami analiz bekletme süresi bulunmadı. Bu alanları teslim öncesi laboratuvarın geçerli numune kabul planıyla belirle."
+          ]
+        },
+        {
+          "title": "Laboratuvara teslim",
+          "items": [
+            "Tesis, baca/nokta, tarih, başlangıç–bitiş, metot/sürüm, numuneci ve fraksiyon kimliklerini etiketle.",
+            "Numune kabı, kapak, miktar, blank, mühür, taşıma koşulu, teslim saati ve teslim alanı izlenebilir teslim formuna kaydet.",
+            "İlk/son absorber kimliği, gerçek su/yıkama/son hacimler, blank ve verim hesabı için ayrı analiz isteğini bildir. Blank <%10 ELV olmalı; blankı aşmayan sonuç ≤blank olarak raporlanır (§5.3.3.3)."
+          ]
+        }
+      ],
+      "gaps": [
+        "EN 13284-1:2001 tarihli atfının süre koşulları ve laboratuvarın numune kabul/koruma koşulları tamamlanmalı. Seçili absorberin dolumu verimle doğrulanmalı. İç filtre alternatifinin damlacık/sıcaklık koşulları ayrı seçilmelidir."
+      ],
+      "evidence": [
+        {
+          "field": "Metot / düzen / verim",
+          "references": [
+            "L01:13-21"
+          ],
+          "clause": "§4-5.3.2.1"
+        },
+        {
+          "field": "Tarihli atıf",
+          "references": [
+            "L01:8"
+          ],
+          "clause": "§2 — EN 13284-1:2001"
+        },
+        {
+          "field": "Kaçak / blank / geri kazanım",
+          "references": [
+            "L01:18,21-24"
+          ],
+          "clause": "§5.2.1.2.2, §5.3.2–5.3.3, §6.2"
+        },
+        {
+          "field": "Sayaç / sıcaklık",
+          "references": [
+            "L01:17-20"
+          ],
+          "clause": "§5.2.1–5.2.4"
+        }
+      ],
+      "sourceDetails": [
+        {
+          "reference": "L01:8,13-24,31",
+          "title": "TS EN 1911:2010 — HCl olarak gaz halindeki klorürler",
+          "edition": "TSE Ocak 2011; EN 1911:2010",
+          "url": ""
+        }
+      ]
+    },
+    {
+      "id": "hcl_en1911_split",
+      "scope": "Emisyon",
+      "parameter": "Klor / halojenler",
+      "method": "TS EN 1911",
+      "sourceVersion": "EN 1911:2010 / TSE Ocak 2011",
+      "variant": "İzokinetik; filtre sonrası yan kol",
+      "sources": [
+        "L01:8,13-24,31"
+      ],
+      "reviewState": "sections_checked",
+      "train": [],
+      "limits": [
+        {
+          "label": "Çekiş debisi",
+          "value": "İzokinetik toplam çekiş. Yan kolda yaklaşık 2–3 L/dk kaynakta yaygın örnektir; verim esastır."
+        },
+        {
+          "label": "Toplam çekiş hacmi",
+          "value": "Hedef derişim, analiz tayin sınırı ve son sıvı hacminden hesapla; kuru gazı kaynak ref. 273 K / 101,3 kPa ile raporla."
+        },
+        {
+          "label": "Sıcaklık",
+          "value": "Dış filtre ≥çiy noktası+20 °C; prob/bağlantıda soğuk nokta bırakma. Kuru sayaç önünde artık nem <10 g/m³."
+        },
+        {
+          "label": "Ölçüm süresi",
+          "value": "Grid örneklemede EN 1911:2010’un tarihli EN 13284-1:2001 atfındaki temsil/süre koşulları uygulanır. 2017 toz standardının süreleri bu eski atfa otomatik taşınmaz; hacim ve ortalama süresini ayrıca planla."
+        }
+      ],
+      "phases": [
+        {
+          "title": "Hazırlık",
+          "items": [
+            "Hedef gaz halindeki uçucu inorganik klorürlerdir; HCl olarak raporlanır. Damlacık biliniyor/şüphe ediliyorsa izokinetik gerekir. Nokta/homojenlik planı EN 15259 bağlantılıdır.",
+            "En az iki seri absorbere EN ISO 3696 derece 2, klorür içermeyen su koy. Dolum verim deneyindeki hacimle aynı olmalı; 40–100 mL kaynakta örnektir, evrensel sabit dolum değildir.",
+            "Cam/titanyum/PTFE numuneye temas edebilir; absorbere kadar paslanmaz çelik kullanma. Filtre verimi >%99,5 @0,3 µm test aerosolü veya >%99,9 @0,6 µm. Bunlar filtre gözenek çapı değildir."
+          ]
+        },
+        {
+          "title": "Kaçak kontrolü",
+          "items": [
+            "Tam treni işletim sıcaklığında denetle; kaçak beklenen debinin %2’sini aşamaz. Ön/ölçüm sırası testini kaydet; grid ölçümü sonrası test önerilir.",
+            "Saha blankında hazırlık, kurulum, geri kazanım ve analiz izlenir; emme/pompa çalıştırma adımı yapılmaz. Seri/gün sıklığını §5.3.3.3’e göre uygula; sahada yıka-yeniden kullanımda seri sonu blankı da gerekir."
+          ]
+        },
+        {
+          "title": "Örnekleme",
+          "items": [
+            "Prob/filtreyi ön ısıt; başlangıç sayaç değerini kaydet. Debi, sayaç sıcaklık/basıncı ve süreç koşullarını izleyerek seçili noktaları örnekle; port değişiminde hattı/pompayı durdurma prosedürünü uygula.",
+            "Her kampanyada absorpsiyon verimini doğrula. Son absorberde en çok %5 tutulma veya son absorber derişiminin 5×analitik tespit sınırından (LOD) küçük olması koşulunu değerlendir (§5.2.1.2.2).",
+            "İki kolun sayaç/çekişi ayrıdır. Konsantrasyon homojen değilse EN 15259 yerel hızla orantılı yan kol/örnekleme koşulunu ölçüm kalite hedefiyle değerlendir (§5.1.3.1)."
+          ]
+        },
+        {
+          "title": "Geri kazanım",
+          "items": [
+            "Son absorberi kendi kabında ayrı geri kazan; arkasındaki koruma kabına taşınan sıvı bu SON fraksiyona eklenir. Absorberleri kendi klorürsüz suyuyla iyice yıka.",
+            "Filtre–ilk absorber arasındaki ısıtılmayan kısımların su yıkamasını İLK fraksiyona ekle. Verim kontrolü için ilk/son fraksiyonu ayrı analiz ettir; katı klorürleri gaz klorür sonucuna rastgele ekleme. Gereksiz yüksek yıkama hacmiyle tayin sınırını kötüleştirme."
+          ]
+        },
+        {
+          "title": "Saklama ve taşıma",
+          "items": [
+            "Numuneyi klorür bulaştırmayan, sızdırmaz ve laboratuvarın onayladığı kapta; fraksiyon kimliği ve sıvı seviyesiyle taşı. İncelenen EN 1911 metninde sayısal taşıma/saklama sıcaklığı veya azami analiz bekletme süresi bulunmadı. Bu alanları teslim öncesi laboratuvarın geçerli numune kabul planıyla belirle."
+          ]
+        },
+        {
+          "title": "Laboratuvara teslim",
+          "items": [
+            "Tesis, baca/nokta, tarih, başlangıç–bitiş, metot/sürüm, numuneci ve fraksiyon kimliklerini etiketle.",
+            "Numune kabı, kapak, miktar, blank, mühür, taşıma koşulu, teslim saati ve teslim alanı izlenebilir teslim formuna kaydet.",
+            "İlk/son absorber kimliği, gerçek su/yıkama/son hacimler, blank ve verim hesabı için ayrı analiz isteğini bildir. Blank <%10 ELV olmalı; blankı aşmayan sonuç ≤blank olarak raporlanır (§5.3.3.3)."
+          ]
+        }
+      ],
+      "gaps": [
+        "EN 13284-1:2001 tarihli atfının süre koşulları ve laboratuvarın numune kabul/koruma koşulları tamamlanmalı. Seçili absorberin dolumu verimle doğrulanmalı. İç filtre alternatifinin damlacık/sıcaklık koşulları ayrı seçilmelidir."
+      ],
+      "evidence": [
+        {
+          "field": "Metot / düzen / verim",
+          "references": [
+            "L01:13-21"
+          ],
+          "clause": "§4-5.3.2.1"
+        },
+        {
+          "field": "Tarihli atıf",
+          "references": [
+            "L01:8"
+          ],
+          "clause": "§2 — EN 13284-1:2001"
+        },
+        {
+          "field": "Kaçak / blank / geri kazanım",
+          "references": [
+            "L01:18,21-24"
+          ],
+          "clause": "§5.2.1.2.2, §5.3.2–5.3.3, §6.2"
+        },
+        {
+          "field": "Sayaç / sıcaklık",
+          "references": [
+            "L01:17-20"
+          ],
+          "clause": "§5.2.1–5.2.4"
+        }
+      ],
+      "diagram": {
+        "asset": "assets/diagrams/hcl_en1911_split.png",
+        "shared": [
+          {
+            "id": "probe",
+            "kind": "probe",
+            "label": "Nozül / prob",
+            "content": "Numuneye uygun cam / titanyum / PTFE",
+            "amount": "",
+            "optional": false
+          },
+          {
+            "id": "filter",
+            "kind": "filter",
+            "label": "Isıtılmış dış filtre",
+            "content": "Çiy noktasının en az 20 °C üstü",
+            "amount": "",
+            "optional": false
+          },
+          {
+            "id": "split",
+            "kind": "splitter",
+            "label": "Isıtılmış T parçası",
+            "content": "Filtre sonrası akış ayrımı",
+            "amount": "",
+            "optional": false
+          }
+        ],
+        "branches": [
+          {
+            "id": "main",
+            "label": "Ana kol",
+            "nodes": [
+              {
+                "id": "main_dryer",
+                "kind": "trap",
+                "label": "Ana kol kurutma",
+                "content": "Kuru sayaç için seçilen nem uzaklaştırma sistemi; kaynağın artık nem koşulunu sağla",
+                "amount": "",
+                "optional": false
+              },
+              {
+                "id": "main_meter",
+                "kind": "meter",
+                "label": "Ana kol çekiş ve hacmi",
+                "content": "İzokinetik toplam ayarında yan kolu da hesaba kat",
+                "amount": "",
+                "optional": false
+              }
+            ]
+          },
+          {
+            "id": "side",
+            "label": "Analiz için yan kol",
+            "nodes": [
+              {
+                "id": "side_i1",
+                "kind": "impinger",
+                "label": "İmpinger 1",
+                "content": "Klorür içermeyen derece 2 su",
+                "amount": "Verim deneyindeki dolum; kaynak örneği 40–100 mL",
+                "optional": false
+              },
+              {
+                "id": "side_i2",
+                "kind": "impinger",
+                "label": "İmpinger 2",
+                "content": "Klorür içermeyen derece 2 su — son absorber ayrı analiz",
+                "amount": "Verim deneyindeki dolum; kaynak örneği 40–100 mL",
+                "optional": false
+              },
+              {
+                "id": "side_i3",
+                "kind": "impinger",
+                "label": "İmpinger 3",
+                "content": "Başlangıçta boş — taşınan sıvı koruma kabı",
+                "amount": "",
+                "optional": true
+              },
+              {
+                "id": "side_dryer",
+                "kind": "trap",
+                "label": "Kurutma grubu",
+                "content": "Kuru sayaç için seçilen nem uzaklaştırma sistemi; kaynağın artık nem koşulunu sağla",
+                "amount": "",
+                "optional": false
+              },
+              {
+                "id": "side_meter",
+                "kind": "meter",
+                "label": "Çekiş ve hacim ölçümü",
+                "content": "Pompa, DGM ve debi kontrol grubu; iç bağlantı sırası cihaz şemasına göre",
+                "amount": "",
+                "optional": false
+              }
+            ]
+          }
+        ]
+      },
+      "sourceDetails": [
+        {
+          "reference": "L01:8,13-24,31",
+          "title": "TS EN 1911:2010 — HCl olarak gaz halindeki klorürler",
+          "edition": "TSE Ocak 2011; EN 1911:2010",
+          "url": ""
+        }
+      ]
+    },
+    {
+      "id": "metals_en14385_full",
+      "scope": "Emisyon",
+      "parameter": "Ağır metaller",
+      "method": "EN 14385",
+      "sourceVersion": "2024 — yerel BS EN nüshası",
+      "variant": "Ön boş kondensat kabı olmadan; dış filtre; bütün gaz absorberlerden geçer",
+      "sources": [
+        "L02:12-23",
+        "L03:27-30"
+      ],
+      "reviewState": "sections_checked",
+      "train": [
+        {
+          "id": "probe",
+          "kind": "probe",
+          "label": "Nozül / ısıtılmış prob",
+          "content": "Cam / kuvars / PTFE veya uygun titanyum",
+          "amount": "",
+          "optional": false
+        },
+        {
+          "id": "filter",
+          "kind": "filter",
+          "label": "Isıtılmış dış filtre",
+          "content": "Kuvars elyaf / PTFE; düşük metal blankı",
+          "amount": "",
+          "optional": false
+        },
+        {
+          "id": "i1",
+          "kind": "impinger",
+          "label": "İmpinger 1",
+          "content": "Yaklaşık %4,4 HNO₃ / %1,6 H₂O₂ (kütle/kütle)",
+          "amount": "Kap/verimle belirlenen dolum; sabit 100 mL normu yok",
+          "optional": false
+        },
+        {
+          "id": "i2",
+          "kind": "impinger",
+          "label": "İmpinger 2",
+          "content": "Yaklaşık %4,4 HNO₃ / %1,6 H₂O₂ (kütle/kütle)",
+          "amount": "Kap/verimle belirlenen dolum; sabit 100 mL normu yok",
+          "optional": false
+        },
+        {
+          "id": "i3",
+          "kind": "impinger",
+          "label": "İmpinger 3",
+          "content": "Yaklaşık %4,4 HNO₃ / %1,6 H₂O₂ (kütle/kütle)",
+          "amount": "Kap/verimle belirlenen dolum; sabit 100 mL normu yok",
+          "optional": false
+        },
+        {
+          "id": "i4",
+          "kind": "impinger",
+          "label": "İmpinger 4",
+          "content": "Başlangıçta boş — koruma kabı",
+          "amount": "",
+          "optional": false
+        },
+        {
+          "id": "dryer",
+          "kind": "trap",
+          "label": "Kurutma grubu",
+          "content": "Kuru sayaç için seçilen nem uzaklaştırma sistemi; kaynağın artık nem koşulunu sağla",
+          "amount": "",
+          "optional": false
+        },
+        {
+          "id": "meter",
+          "kind": "meter",
+          "label": "Çekiş ve hacim ölçümü",
+          "content": "Pompa, DGM ve debi kontrol grubu; iç bağlantı sırası cihaz şemasına göre",
+          "amount": "",
+          "optional": false
+        }
+      ],
+      "limits": [
+        {
+          "label": "Çekiş debisi",
+          "value": "İzokinetik, EN 13284 bağlantılı %95–115; sabit L/dk yok. Yan kol varsa iki debi ayrı."
+        },
+        {
+          "label": "Toplam çekiş hacmi",
+          "value": "Analitik LOQ/blank ve mevzuat hedefini sağlayacak kuru standart hacim. Sıvı numune hacmi gaz hacmi değildir."
+        },
+        {
+          "label": "Sıcaklık",
+          "value": "Absorberler ≤30 °C. Prob/dış filtre/T: §8.1 gaz T+20 K veya asit çiy+20 K (en çok 180 °C ifadesi), yüksek olan; yüksek baca T uygulaması yazılı planla kesinleştirilir."
+        },
+        {
+          "label": "Ölçüm süresi",
+          "value": "EN 13284 grid süreleri: ≥3 dk/nokta, ≥30 dk toplam; hedef hacim/ilgili mevzuat daha uzun gerektirebilir."
+        }
+      ],
+      "phases": [
+        {
+          "title": "Hazırlık",
+          "items": [
+            "Bu nüsha EN 14385:2024 ana metninin BS baskısıdır; hedefler As, Cd, Cr, Co, Cu, Mn, Ni, Pb, Sb, Tl ve V. Cıva bu listenin parçası değildir. Numuneye temas eden yüzeyleri ve PE kapları önceden temizle.",
+            "§5.2.8: yaklaşık %65 (kütle/kütle) HNO₃ ve %30 (kütle/kütle) H₂O₂ stoklarından eş hacimleri karıştır; bu karışımın 1 hacmini 9 hacim suya ekle. Nihai yaklaşık %4,4 HNO₃ / %1,6 H₂O₂ (kütle/kütle). Çözeltiyi taze hazırla veya peroksiti sahada ekleme alternatifini uygula.",
+            "En az üç dolu seri absorber. Uygun dolum, örneğin kap hacminin en az %25’i, gaz–sıvı teması ve verimle belirlenir. Tek bir mL bütün kaplara atanmaz. Sonrasında boş koruma kabı; yüksek nemde ilk dolu öncesi boş kondensat kabı kullanılabilir."
+          ]
+        },
+        {
+          "title": "Kaçak kontrolü",
+          "items": [
+            "Her örnekleme başlangıcında tam tren testi: kaçak ≤beklenen Q’nun %2’si. Annex B’deki yöntem/uygun eşdeğer prosedürü uygula; sıvının geriye yürümesini önle.",
+            "O₂ karşılaştırması büyük kaçağı gösterebilir; ana kaçak testinin yerini almaz."
+          ]
+        },
+        {
+          "title": "Örnekleme",
+          "items": [
+            "EN 13284-1 bağlantılı izokinetik/grid örnekleme; gerçek sayaç değerleri, basınç/sıcaklık ve süreleri kaydet. En az bir ölçümde son absorber ayrı tutularak grup bazında verim denetimi yapılır.",
+            "Son absorberde bir metalin kütlesi o metalin filtre+prob+absorber toplamının %10’undan fazlaysa ait olduğu grubun sonuçları reddedilir. Grup içi <%1 kütle veya grup toplamı <%30 ELV istisnaları yalnız §6.3 koşullarıyla değerlendirilir."
+          ]
+        },
+        {
+          "title": "Geri kazanım",
+          "items": [
+            "Filtreyi kimlikli taşıma kabına al. Bu varyantta nozül/prob/filtre önünü kendi absorpsiyon çözeltisiyle yıka (§8.4.3). Ön yüzeyler en az seri/günde bir geri kazanılır; birden fazla ölçüme ait yıkama, gaz hacimleri oranında paylaştırılır.",
+            "Filtre arkası ve ilk absorbere bağlantı her ölçümde İLK absorber fraksiyonuna yıkanır. Her şişe/bağlantı yıkaması ilgili absorber kabına eklenir. Ön boş kondensat kabı varsa içerik+yıkaması ilk dolu absorbere katılır.",
+            "En az bir ölçümün son absorberini ayrı analiz ettir. Diğer uygun ölçümlerde absorberler birleşebilir. Gereksiz seyreltmeden kaçın; hacim/kütle ve sıvı düzeylerini kaydet."
+          ]
+        },
+        {
+          "title": "Saklama ve taşıma",
+          "items": [
+            "Sıvılar PE kapta; kapak PTFE/PFA/FEP/PP veya renksiz PE. Sahada/taşımada <25 °C; laboratuvarda <6 °C. Analiz numune alımından itibaren en geç 4 hafta içinde (§8.6).",
+            "Peroksit bozunması basınç oluşturabilir: cam absorber/depo şişesini laboratuvarda doldurup bekletme uyarısını §8.2.3’e göre uygula."
+          ]
+        },
+        {
+          "title": "Laboratuvara teslim",
+          "items": [
+            "Tesis, baca/nokta, tarih, başlangıç–bitiş, metot/sürüm, numuneci ve fraksiyon kimliklerini etiketle.",
+            "Numune kabı, kapak, miktar, blank, mühür, taşıma koşulu, teslim saati ve teslim alanı izlenebilir teslim formuna kaydet.",
+            "Filtre, ön yıkama, absorberler/son kademe ve blank kimlikleri; kaynak başına verim denetimi; grup A/B hesapları için hacim ve zamanları bildir.",
+            "Saha blankı platformda kurulur, prob bacaya sokulmaz; kurulum/kaçak/geri kazanım kapsanır. Blank numuneden çıkarılmaz; ayrı raporlanır. Blank >%10 düzenleyici sınırsa ilgili kampanya kısmı reddedilir."
+          ]
+        }
+      ],
+      "gaps": [
+        "§8.1’deki 180 °C ifadesinin yüksek baca sıcaklığına uygulanışı ve ulusal TS baskısı/yerel SOP eşleştirmesi doğrulanmalı; uygulama otomatik sıcaklık hedefi üretmez.",
+        "Yıkama asidi §5.2.11 yerine izin verilen kendi absorpsiyon çözeltisiyle yıkama varyantı seçildi. Numune planındaki her fraksiyon laboratuvarla eşleşmeli. Cıva birlikte istenirse kapsamda EN 13211 yan kol seçeneği vardır; onun düzeneği bu karta eklenmiş değildir."
+      ],
+      "evidence": [
+        {
+          "field": "Çözelti / kap / dolum",
+          "references": [
+            "L02:13-20"
+          ],
+          "clause": "§5–6; §8.2"
+        },
+        {
+          "field": "Geri kazanım / saklama / blank",
+          "references": [
+            "L02:21-23"
+          ],
+          "clause": "§8.4–8.6"
+        },
+        {
+          "field": "Sıcaklık / verim",
+          "references": [
+            "L02:18-19"
+          ],
+          "clause": "§6.3, §8.1"
+        },
+        {
+          "field": "Süre / izokinetik",
+          "references": [
+            "L03:27-28"
+          ],
+          "clause": "§9.4–9.5 bağlantısı"
+        }
+      ],
+      "sourceDetails": [
+        {
+          "reference": "L02:12-23",
+          "title": "BS EN 14385:2024 — 11 metalin toplam emisyonu",
+          "edition": "EN 14385:2024 ana metni; yerel dosya adı TS olsa da kapak BS",
+          "url": ""
+        },
+        {
+          "reference": "L03:27-30",
+          "title": "TS EN 13284-1 — düşük derişimli toz, manuel gravimetri",
+          "edition": "TSE Ocak 2018; EN 13284-1:2017",
+          "url": ""
+        }
+      ]
+    },
+    {
+      "id": "metals_en14385_split",
+      "scope": "Emisyon",
+      "parameter": "Ağır metaller",
+      "method": "EN 14385",
+      "sourceVersion": "2024 — yerel BS EN nüshası",
+      "variant": "Ön boş kondensat kabı olmadan; dış filtre; ısıtılmış bölücü ve yan kol",
+      "sources": [
+        "L02:12-23",
+        "L03:27-30"
+      ],
+      "reviewState": "sections_checked",
+      "train": [],
+      "limits": [
+        {
+          "label": "Çekiş debisi",
+          "value": "İzokinetik, EN 13284 bağlantılı %95–115; sabit L/dk yok. Yan kol varsa iki debi ayrı."
+        },
+        {
+          "label": "Toplam çekiş hacmi",
+          "value": "Analitik LOQ/blank ve mevzuat hedefini sağlayacak kuru standart hacim. Sıvı numune hacmi gaz hacmi değildir."
+        },
+        {
+          "label": "Sıcaklık",
+          "value": "Absorberler ≤30 °C. Prob/dış filtre/T: §8.1 gaz T+20 K veya asit çiy+20 K (en çok 180 °C ifadesi), yüksek olan; yüksek baca T uygulaması yazılı planla kesinleştirilir."
+        },
+        {
+          "label": "Ölçüm süresi",
+          "value": "EN 13284 grid süreleri: ≥3 dk/nokta, ≥30 dk toplam; hedef hacim/ilgili mevzuat daha uzun gerektirebilir."
+        }
+      ],
+      "phases": [
+        {
+          "title": "Hazırlık",
+          "items": [
+            "Bu nüsha EN 14385:2024 ana metninin BS baskısıdır; hedefler As, Cd, Cr, Co, Cu, Mn, Ni, Pb, Sb, Tl ve V. Cıva bu listenin parçası değildir. Numuneye temas eden yüzeyleri ve PE kapları önceden temizle.",
+            "§5.2.8: yaklaşık %65 (kütle/kütle) HNO₃ ve %30 (kütle/kütle) H₂O₂ stoklarından eş hacimleri karıştır; bu karışımın 1 hacmini 9 hacim suya ekle. Nihai yaklaşık %4,4 HNO₃ / %1,6 H₂O₂ (kütle/kütle). Çözeltiyi taze hazırla veya peroksiti sahada ekleme alternatifini uygula.",
+            "En az üç dolu seri absorber. Uygun dolum, örneğin kap hacminin en az %25’i, gaz–sıvı teması ve verimle belirlenir. Tek bir mL bütün kaplara atanmaz. Sonrasında boş koruma kabı; yüksek nemde ilk dolu öncesi boş kondensat kabı kullanılabilir."
+          ]
+        },
+        {
+          "title": "Kaçak kontrolü",
+          "items": [
+            "Her örnekleme başlangıcında tam tren testi: kaçak ≤beklenen Q’nun %2’si. Annex B’deki yöntem/uygun eşdeğer prosedürü uygula; sıvının geriye yürümesini önle.",
+            "O₂ karşılaştırması büyük kaçağı gösterebilir; ana kaçak testinin yerini almaz."
+          ]
+        },
+        {
+          "title": "Örnekleme",
+          "items": [
+            "EN 13284-1 bağlantılı izokinetik/grid örnekleme; gerçek sayaç değerleri, basınç/sıcaklık ve süreleri kaydet. En az bir ölçümde son absorber ayrı tutularak grup bazında verim denetimi yapılır.",
+            "Son absorberde bir metalin kütlesi o metalin filtre+prob+absorber toplamının %10’undan fazlaysa ait olduğu grubun sonuçları reddedilir. Grup içi <%1 kütle veya grup toplamı <%30 ELV istisnaları yalnız §6.3 koşullarıyla değerlendirilir."
+          ]
+        },
+        {
+          "title": "Geri kazanım",
+          "items": [
+            "Filtreyi kimlikli taşıma kabına al. Bu varyantta nozül/prob/filtre önünü kendi absorpsiyon çözeltisiyle yıka (§8.4.3). Ön yüzeyler en az seri/günde bir geri kazanılır; birden fazla ölçüme ait yıkama, gaz hacimleri oranında paylaştırılır.",
+            "Filtre arkası ve ilk absorbere bağlantı her ölçümde İLK absorber fraksiyonuna yıkanır. Her şişe/bağlantı yıkaması ilgili absorber kabına eklenir. Ön boş kondensat kabı varsa içerik+yıkaması ilk dolu absorbere katılır.",
+            "En az bir ölçümün son absorberini ayrı analiz ettir. Diğer uygun ölçümlerde absorberler birleşebilir. Gereksiz seyreltmeden kaçın; hacim/kütle ve sıvı düzeylerini kaydet."
+          ]
+        },
+        {
+          "title": "Saklama ve taşıma",
+          "items": [
+            "Sıvılar PE kapta; kapak PTFE/PFA/FEP/PP veya renksiz PE. Sahada/taşımada <25 °C; laboratuvarda <6 °C. Analiz numune alımından itibaren en geç 4 hafta içinde (§8.6).",
+            "Peroksit bozunması basınç oluşturabilir: cam absorber/depo şişesini laboratuvarda doldurup bekletme uyarısını §8.2.3’e göre uygula."
+          ]
+        },
+        {
+          "title": "Laboratuvara teslim",
+          "items": [
+            "Tesis, baca/nokta, tarih, başlangıç–bitiş, metot/sürüm, numuneci ve fraksiyon kimliklerini etiketle.",
+            "Numune kabı, kapak, miktar, blank, mühür, taşıma koşulu, teslim saati ve teslim alanı izlenebilir teslim formuna kaydet.",
+            "Filtre, ön yıkama, absorberler/son kademe ve blank kimlikleri; kaynak başına verim denetimi; grup A/B hesapları için hacim ve zamanları bildir.",
+            "Saha blankı platformda kurulur, prob bacaya sokulmaz; kurulum/kaçak/geri kazanım kapsanır. Blank numuneden çıkarılmaz; ayrı raporlanır. Blank >%10 düzenleyici sınırsa ilgili kampanya kısmı reddedilir."
+          ]
+        }
+      ],
+      "gaps": [
+        "§8.1’deki 180 °C ifadesinin yüksek baca sıcaklığına uygulanışı ve ulusal TS baskısı/yerel SOP eşleştirmesi doğrulanmalı; uygulama otomatik sıcaklık hedefi üretmez.",
+        "Yıkama asidi §5.2.11 yerine izin verilen kendi absorpsiyon çözeltisiyle yıkama varyantı seçildi. Numune planındaki her fraksiyon laboratuvarla eşleşmeli. Cıva birlikte istenirse kapsamda EN 13211 yan kol seçeneği vardır; onun düzeneği bu karta eklenmiş değildir."
+      ],
+      "evidence": [
+        {
+          "field": "Çözelti / kap / dolum",
+          "references": [
+            "L02:13-20"
+          ],
+          "clause": "§5–6; §8.2"
+        },
+        {
+          "field": "Geri kazanım / saklama / blank",
+          "references": [
+            "L02:21-23"
+          ],
+          "clause": "§8.4–8.6"
+        },
+        {
+          "field": "Sıcaklık / verim",
+          "references": [
+            "L02:18-19"
+          ],
+          "clause": "§6.3, §8.1"
+        },
+        {
+          "field": "Süre / izokinetik",
+          "references": [
+            "L03:27-28"
+          ],
+          "clause": "§9.4–9.5 bağlantısı"
+        }
+      ],
+      "diagram": {
+        "asset": "assets/diagrams/metals_en14385_split.png",
+        "shared": [
+          {
+            "id": "probe",
+            "kind": "probe",
+            "label": "Nozül / ısıtılmış prob",
+            "content": "Cam / kuvars / PTFE veya uygun titanyum",
+            "amount": "",
+            "optional": false
+          },
+          {
+            "id": "filter",
+            "kind": "filter",
+            "label": "Isıtılmış dış filtre",
+            "content": "Kuvars elyaf / PTFE; düşük metal blankı",
+            "amount": "",
+            "optional": false
+          },
+          {
+            "id": "split",
+            "kind": "splitter",
+            "label": "Isıtılmış T parçası",
+            "content": "Yalıtım tek başına yeterli değildir",
+            "amount": "",
+            "optional": false
+          }
+        ],
+        "branches": [
+          {
+            "id": "main",
+            "label": "Ana kol",
+            "nodes": [
+              {
+                "id": "main_dryer",
+                "kind": "trap",
+                "label": "Kurutma grubu",
+                "content": "Kuru sayaç için seçilen nem uzaklaştırma sistemi; kaynağın artık nem koşulunu sağla",
+                "amount": "",
+                "optional": false
+              },
+              {
+                "id": "main_meter",
+                "kind": "meter",
+                "label": "Ana kol çekiş ve hacmi",
+                "content": "Toplam izokinetik koşulda yan kol da hesaba katılır",
+                "amount": "",
+                "optional": false
+              }
+            ]
+          },
+          {
+            "id": "side",
+            "label": "Analiz için yan kol",
+            "nodes": [
+              {
+                "id": "side_i1",
+                "kind": "impinger",
+                "label": "İmpinger 1",
+                "content": "Yaklaşık %4,4 HNO₃ / %1,6 H₂O₂ (kütle/kütle)",
+                "amount": "Kap/verimle belirlenen dolum; sabit 100 mL normu yok",
+                "optional": false
+              },
+              {
+                "id": "side_i2",
+                "kind": "impinger",
+                "label": "İmpinger 2",
+                "content": "Yaklaşık %4,4 HNO₃ / %1,6 H₂O₂ (kütle/kütle)",
+                "amount": "Kap/verimle belirlenen dolum; sabit 100 mL normu yok",
+                "optional": false
+              },
+              {
+                "id": "side_i3",
+                "kind": "impinger",
+                "label": "İmpinger 3",
+                "content": "Yaklaşık %4,4 HNO₃ / %1,6 H₂O₂ (kütle/kütle)",
+                "amount": "Kap/verimle belirlenen dolum; sabit 100 mL normu yok",
+                "optional": false
+              },
+              {
+                "id": "side_i4",
+                "kind": "impinger",
+                "label": "İmpinger 4",
+                "content": "Başlangıçta boş — koruma kabı",
+                "amount": "",
+                "optional": false
+              },
+              {
+                "id": "side_dryer",
+                "kind": "trap",
+                "label": "Kurutma grubu",
+                "content": "Kuru sayaç için seçilen nem uzaklaştırma sistemi; kaynağın artık nem koşulunu sağla",
+                "amount": "",
+                "optional": false
+              },
+              {
+                "id": "side_meter",
+                "kind": "meter",
+                "label": "Çekiş ve hacim ölçümü",
+                "content": "Pompa, DGM ve debi kontrol grubu; iç bağlantı sırası cihaz şemasına göre",
+                "amount": "",
+                "optional": false
+              }
+            ]
+          }
+        ]
+      },
+      "sourceDetails": [
+        {
+          "reference": "L02:12-23",
+          "title": "BS EN 14385:2024 — 11 metalin toplam emisyonu",
+          "edition": "EN 14385:2024 ana metni; yerel dosya adı TS olsa da kapak BS",
+          "url": ""
+        },
+        {
+          "reference": "L03:27-30",
+          "title": "TS EN 13284-1 — düşük derişimli toz, manuel gravimetri",
+          "edition": "TSE Ocak 2018; EN 13284-1:2017",
+          "url": ""
+        }
+      ]
+    },
+    {
+      "id": "dust_en13284_out",
+      "scope": "Emisyon",
+      "parameter": "Partikül madde / toz",
+      "method": "TS EN 13284-1",
+      "sourceVersion": "TSE Ocak 2018 / EN 13284-1:2017",
+      "variant": "Baca dışı filtre — kuru gaz hacim sistemi",
+      "sources": [
+        "L03:8,14,16-30,43-45,63"
+      ],
+      "reviewState": "sections_checked",
+      "train": [
+        {
+          "id": "probe",
+          "kind": "probe",
+          "label": "Nozül / ısıtılmış emiş tüpü",
+          "content": "Ön birikim yüzeyleri geri kazanılır",
+          "amount": "",
+          "optional": false
+        },
+        {
+          "id": "filter",
+          "kind": "filter",
+          "label": "Isıtılmış dış filtre",
+          "content": "Filtrasyon sıcaklığı ölçülür / raporlanır",
+          "amount": "",
+          "optional": false
+        },
+        {
+          "id": "dryer",
+          "kind": "condenser",
+          "label": "Soğutma / kurutma grubu",
+          "content": "Kuru gaz ölçüm sistemine uygun; evrensel impinger dolumu belirtilmez",
+          "amount": "",
+          "optional": false
+        },
+        {
+          "id": "meter",
+          "kind": "meter",
+          "label": "Çekiş ve hacim ölçümü",
+          "content": "Pompa, DGM ve debi kontrol grubu; iç bağlantı sırası cihaz şemasına göre",
+          "amount": "",
+          "optional": false
+        }
+      ],
+      "limits": [
+        {
+          "label": "Çekiş debisi",
+          "value": "İzokinetik %95–115; nozül akış yönünden en çok 10° sapmalı. Her noktada gerçek hız, çap, nem, T ve basınçla ayarla."
+        },
+        {
+          "label": "Toplam çekiş hacmi",
+          "value": "Ek E: Vmin=10U/E. U tüm tartım prosedürünün genişletilmiş belirsizliği; E emisyon sınırı. U mg, E mg/m³ ise Vmin m³. Qmin=Vmin/t; nozül/pompa kapasitesini ayrıca kontrol et."
+        },
+        {
+          "label": "Sıcaklık",
+          "value": "Filtrasyon: seçili amaç/gaz koşulu; baca T veya en az önerilen 160 °C yaklaşımı. Yoğuşma olmamalı; uçucu bileşenlerde sıcaklık sonucun tanımını etkiler (Ek H)."
+        },
+        {
+          "label": "Ölçüm süresi",
+          "value": "Her noktada aynı süre ve ≥3 dk; toplam ≥30 dk. N noktada seri tek tren için en az max(3N,30) dk; hacim hedefi daha uzun gerektirebilir."
+        }
+      ],
+      "phases": [
+        {
+          "title": "Hazırlık",
+          "items": [
+            "Yöntem <50 mg/m³ için geliştirilmiş, özellikle yaklaşık 5 mg/m³’te doğrulanmıştır; diğer kaynaklarda kapsam/performansı değerlendir. Ölçüm planı EN 15259 bağlantılıdır.",
+            "Ön tartım: ≥1 saat, örnekleme ve son işlemdeki en yüksek sıcaklıktan ≥20 °C yüksek kurutma. Tartım odasında desikatörde ≥4 saat; büyük parçalarda 12 saat gerekebilir. Terazi/iklim ve aynı tip kontrol parçasıyla tartım prosedürünü doğrula."
+          ]
+        },
+        {
+          "title": "Kaçak kontrolü",
+          "items": [
+            "Her ölçüm öncesinde tam trenin kaçağı ≤beklenen Q’nun %2’si. İşletim sıcaklığında yap; kaçakları araştır ve düzelt."
+          ]
+        },
+        {
+          "title": "Örnekleme",
+          "items": [
+            "Her noktada ve en az 5 dakikada bir hız hesabı parametrelerini kaydet; debiyi buna göre ayarla. Başlangıç/son sayaç, T ve basınç kayıtlarını koru.",
+            "Basit prob/ön hız profili yalnız kararlılığı gösterilmiş proseste; sabit referans Pitot hız değişimi <%10 koşulunu uygula. Aksi halde noktanın gerçek hızıyla izokinetik ayar yapılır.",
+            "Filtre kırığı veya filtre/tutucuda yoğuşma görürsen ölçüm geçersizdir. 30 dk ile kısıtlanan planlarda yeterli hacim ve bütün noktalar için paralel sistem ihtiyacını §6.1’e göre değerlendir."
+          ]
+        },
+        {
+          "title": "Geri kazanım",
+          "items": [
+            "Filtre önündeki tartılmayan numuneye temas eden yüzeyleri suyla, toz özelliğine göre ardından asetonla aynı kaba yıka. Bu geri kazanımda mekanik temizleme uygulama (§9.6.2).",
+            "Aynı düzlemde en az seri/günde bir yıka. Birden çok ölçümün yıkama kütlesi, filtrelerde toplanan kütle oranında paylaştırılır. Dirseksiz baca içi düzenin dar istisnası ancak §9.6.1 validasyonu ile kullanılabilir."
+          ]
+        },
+        {
+          "title": "Saklama ve taşıma",
+          "items": [
+            "Filtre/tutucuyu kimlikli, kapalı, elektrostatik etkiden korunmuş taşıma kabına al. Yıkama kabı asetonla uyumlu ve sızdırmaz olmalı; dış kirlenmeyi ve numune kaybını önle.",
+            "İncelenen metinde sayısal azami bekletme süresi/taşıma sıcaklığı verilmez. Son tartım hazırlığı: ≥1 saat 160 °C, sonra §8.2 soğutması; gerekçeli alternatif sıcaklık Ek H ve raporla. Laboratuvara teslim planını önceden kesinleştir."
+          ]
+        },
+        {
+          "title": "Laboratuvara teslim",
+          "items": [
+            "Tesis, baca/nokta, tarih, başlangıç–bitiş, metot/sürüm, numuneci ve fraksiyon kimliklerini etiketle.",
+            "Numune kabı, kapak, miktar, blank, mühür, taşıma koşulu, teslim saati ve teslim alanı izlenebilir teslim formuna kaydet.",
+            "Filtre ve ön yıkama ayrı kimliklerle, solvent blankı ve saha blanklarıyla teslim edilir. Saha blankı ≤max(%10 ELV; 0,5 mg/m³); her blank ayrı raporlanır.",
+            "Sıcaklıklar, hacim bazları, izokinetik kayıt, tartım belirsizliği ve yıkama paylaştırma verilerini aktar."
+          ]
+        }
+      ],
+      "gaps": [
+        "EN 15259/ISO 16911 bağlantılarının tam ekipman prosedürleri ve kaynağa özgü termal/analitik hedef ayrıca doğrulanmalı."
+      ],
+      "evidence": [
+        {
+          "field": "Süre / debi / kaçak",
+          "references": [
+            "L03:26-30"
+          ],
+          "clause": "§9.3–10"
+        },
+        {
+          "field": "Hacim / belirsizlik",
+          "references": [
+            "L03:45"
+          ],
+          "clause": "Normatif Ek E"
+        },
+        {
+          "field": "Tartım / taşıma / geri kazanım",
+          "references": [
+            "L03:23-30,63"
+          ],
+          "clause": "§7.3–9.7; Ek H"
+        }
+      ],
+      "trainNote": "Bu varyant kuru sayaçlıdır. Nem uzaklaştırmada tek bir EPA tipi şişe sayısı veya mL reçetesi bu standarttan otomatik atanmaz.",
+      "sourceDetails": [
+        {
+          "reference": "L03:8,14,16-30,43-45,63",
+          "title": "TS EN 13284-1 — düşük derişimli toz, manuel gravimetri",
+          "edition": "TSE Ocak 2018; EN 13284-1:2017",
+          "url": ""
+        }
+      ]
+    },
+    {
+      "id": "dust_en13284_in",
+      "scope": "Emisyon",
+      "parameter": "Partikül madde / toz",
+      "method": "TS EN 13284-1",
+      "sourceVersion": "TSE Ocak 2018 / EN 13284-1:2017",
+      "variant": "Baca içi filtre — kuru gaz hacim sistemi",
+      "sources": [
+        "L03:8,14,16-30,43-45,63"
+      ],
+      "reviewState": "sections_checked",
+      "train": [
+        {
+          "id": "probe",
+          "kind": "probe",
+          "label": "Giriş nozülü",
+          "content": "Nozül doğrudan baca içi filtre önünde",
+          "amount": "",
+          "optional": false
+        },
+        {
+          "id": "filter",
+          "kind": "filter",
+          "label": "Baca içi filtre",
+          "content": "Nozülün hemen arkasında",
+          "amount": "",
+          "optional": false
+        },
+        {
+          "id": "line",
+          "kind": "probe",
+          "label": "Destek / çıkış hattı",
+          "content": "Filtre sonrasında",
+          "amount": "",
+          "optional": false
+        },
+        {
+          "id": "dryer",
+          "kind": "condenser",
+          "label": "Soğutma / kurutma grubu",
+          "content": "Kuru gaz ölçüm sistemine uygun; evrensel impinger dolumu belirtilmez",
+          "amount": "",
+          "optional": false
+        },
+        {
+          "id": "meter",
+          "kind": "meter",
+          "label": "Çekiş ve hacim ölçümü",
+          "content": "Pompa, DGM ve debi kontrol grubu; iç bağlantı sırası cihaz şemasına göre",
+          "amount": "",
+          "optional": false
+        }
+      ],
+      "limits": [
+        {
+          "label": "Çekiş debisi",
+          "value": "İzokinetik %95–115; nozül akış yönünden en çok 10° sapmalı. Her noktada gerçek hız, çap, nem, T ve basınçla ayarla."
+        },
+        {
+          "label": "Toplam çekiş hacmi",
+          "value": "Ek E: Vmin=10U/E. U tüm tartım prosedürünün genişletilmiş belirsizliği; E emisyon sınırı. U mg, E mg/m³ ise Vmin m³. Qmin=Vmin/t; nozül/pompa kapasitesini ayrıca kontrol et."
+        },
+        {
+          "label": "Sıcaklık",
+          "value": "Filtrasyon: seçili amaç/gaz koşulu; baca T veya en az önerilen 160 °C yaklaşımı. Yoğuşma olmamalı; uçucu bileşenlerde sıcaklık sonucun tanımını etkiler (Ek H)."
+        },
+        {
+          "label": "Ölçüm süresi",
+          "value": "Her noktada aynı süre ve ≥3 dk; toplam ≥30 dk. N noktada seri tek tren için en az max(3N,30) dk; hacim hedefi daha uzun gerektirebilir."
+        }
+      ],
+      "phases": [
+        {
+          "title": "Hazırlık",
+          "items": [
+            "Yöntem <50 mg/m³ için geliştirilmiş, özellikle yaklaşık 5 mg/m³’te doğrulanmıştır; diğer kaynaklarda kapsam/performansı değerlendir. Ölçüm planı EN 15259 bağlantılıdır.",
+            "Ön tartım: ≥1 saat, örnekleme ve son işlemdeki en yüksek sıcaklıktan ≥20 °C yüksek kurutma. Tartım odasında desikatörde ≥4 saat; büyük parçalarda 12 saat gerekebilir. Terazi/iklim ve aynı tip kontrol parçasıyla tartım prosedürünü doğrula."
+          ]
+        },
+        {
+          "title": "Kaçak kontrolü",
+          "items": [
+            "Her ölçüm öncesinde tam trenin kaçağı ≤beklenen Q’nun %2’si. İşletim sıcaklığında yap; kaçakları araştır ve düzelt."
+          ]
+        },
+        {
+          "title": "Örnekleme",
+          "items": [
+            "Her noktada ve en az 5 dakikada bir hız hesabı parametrelerini kaydet; debiyi buna göre ayarla. Başlangıç/son sayaç, T ve basınç kayıtlarını koru.",
+            "Basit prob/ön hız profili yalnız kararlılığı gösterilmiş proseste; sabit referans Pitot hız değişimi <%10 koşulunu uygula. Aksi halde noktanın gerçek hızıyla izokinetik ayar yapılır.",
+            "Filtre kırığı veya filtre/tutucuda yoğuşma görürsen ölçüm geçersizdir. 30 dk ile kısıtlanan planlarda yeterli hacim ve bütün noktalar için paralel sistem ihtiyacını §6.1’e göre değerlendir."
+          ]
+        },
+        {
+          "title": "Geri kazanım",
+          "items": [
+            "Filtre önündeki tartılmayan numuneye temas eden yüzeyleri suyla, toz özelliğine göre ardından asetonla aynı kaba yıka. Bu geri kazanımda mekanik temizleme uygulama (§9.6.2).",
+            "Aynı düzlemde en az seri/günde bir yıka. Birden çok ölçümün yıkama kütlesi, filtrelerde toplanan kütle oranında paylaştırılır. Dirseksiz baca içi düzenin dar istisnası ancak §9.6.1 validasyonu ile kullanılabilir."
+          ]
+        },
+        {
+          "title": "Saklama ve taşıma",
+          "items": [
+            "Filtre/tutucuyu kimlikli, kapalı, elektrostatik etkiden korunmuş taşıma kabına al. Yıkama kabı asetonla uyumlu ve sızdırmaz olmalı; dış kirlenmeyi ve numune kaybını önle.",
+            "İncelenen metinde sayısal azami bekletme süresi/taşıma sıcaklığı verilmez. Son tartım hazırlığı: ≥1 saat 160 °C, sonra §8.2 soğutması; gerekçeli alternatif sıcaklık Ek H ve raporla. Laboratuvara teslim planını önceden kesinleştir."
+          ]
+        },
+        {
+          "title": "Laboratuvara teslim",
+          "items": [
+            "Tesis, baca/nokta, tarih, başlangıç–bitiş, metot/sürüm, numuneci ve fraksiyon kimliklerini etiketle.",
+            "Numune kabı, kapak, miktar, blank, mühür, taşıma koşulu, teslim saati ve teslim alanı izlenebilir teslim formuna kaydet.",
+            "Filtre ve ön yıkama ayrı kimliklerle, solvent blankı ve saha blanklarıyla teslim edilir. Saha blankı ≤max(%10 ELV; 0,5 mg/m³); her blank ayrı raporlanır.",
+            "Sıcaklıklar, hacim bazları, izokinetik kayıt, tartım belirsizliği ve yıkama paylaştırma verilerini aktar."
+          ]
+        }
+      ],
+      "gaps": [
+        "EN 15259/ISO 16911 bağlantılarının tam ekipman prosedürleri ve kaynağa özgü termal/analitik hedef ayrıca doğrulanmalı."
+      ],
+      "evidence": [
+        {
+          "field": "Süre / debi / kaçak",
+          "references": [
+            "L03:26-30"
+          ],
+          "clause": "§9.3–10"
+        },
+        {
+          "field": "Hacim / belirsizlik",
+          "references": [
+            "L03:45"
+          ],
+          "clause": "Normatif Ek E"
+        },
+        {
+          "field": "Tartım / taşıma / geri kazanım",
+          "references": [
+            "L03:23-30,63"
+          ],
+          "clause": "§7.3–9.7; Ek H"
+        }
+      ],
+      "trainNote": "Bu varyant kuru sayaçlıdır. Nem uzaklaştırmada tek bir EPA tipi şişe sayısı veya mL reçetesi bu standarttan otomatik atanmaz.",
+      "sourceDetails": [
+        {
+          "reference": "L03:8,14,16-30,43-45,63",
+          "title": "TS EN 13284-1 — düşük derişimli toz, manuel gravimetri",
+          "edition": "TSE Ocak 2018; EN 13284-1:2017",
           "url": ""
         }
       ]

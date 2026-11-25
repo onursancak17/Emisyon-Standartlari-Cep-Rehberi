@@ -17,9 +17,9 @@ Telefona kurulabilen, çevrimdışı ve Türkçe saha rehberi. Mevcut Flutter pr
 - Personelin bilmesi gereken diğer konular: saha güvenliği, proses temsili, ekipman/kalibrasyon, T90, drift, girişimler, blanklar, kontaminasyon, VOC/TOC, imisyon PM, çöken toz, pasif tüpler, meteoroloji, belirsizlik ve rapor.
 - Tasarım ana programa yakın, telefon kullanımına uygun; şemada tam ekran, kaydırma ve yakınlaştırma.
 
-## Güncel paket: 0.6.0
+## Güncel paket: 0.7.0
 
-24 metot/varyant kartı, 16 çizim, 125 açıklamalı soru. EPA 11/323, CTM-027, CARB 425/426 ve ISO 7935:2024 için yeni birincil kaynak karşılaştırmaları, çevrimdışı kaynak dizini, akış bölünmeli PAH şeması ve Android kabul akışı eklendi. Ayrıntılı tamamlanan/açık iş ayrımı `DOGRULAMA_0_6_0.md` dosyasındadır. Aşağıdaki 0.5.1 kayıtları önceki kapsamın tarihçesidir; yeni paketin doğrulanma durumu Actions sonuçlarından izlenir.
+29 metot/varyant kartı, 23 çizim, 150 açıklamalı soru. Üç yerel EN nüshasının 191 sayfası OCR ile elde edildi; HCl, 11 metal ve düşük derişimli tozun ilgili saha bölümleri karşılaştırıldı. HCl ve metal yan kol şemaları, yönteme özgü saklama/fraksiyon/blank ayrımları ve 25 yeni soru eklendi. Önceki EPA/CARB/ISO, birim ve kaynak dizini geliştirmeleri korunur. Ayrıntılı tamamlanan/açık iş ayrımı `DOGRULAMA_0_7_0.md` dosyasındadır. Yeni paketin yazılım kabulü ilgili commitin Actions sonucundan izlenir.
 
 ## Önceki 0.5.1 geliştirme paketi
 
@@ -32,11 +32,11 @@ Telefona kurulabilen, çevrimdışı ve Türkçe saha rehberi. Mevcut Flutter pr
 Bu paket tam bir standart külliyatının onaylandığı anlamına gelmez. 54 kaynak yolu / 53 benzersiz PDF’nin her cümlesi, formülü ve şekli bağımsız olarak doğrulanmış değildir. Ayrıntılı inceleme bitmeden “tüm saha bilgisi eksiksizdir” denmez.
 
 1. Her parametrede arşiv sürümünü güncel resmi katalog/metin ve laboratuvarın geçerli SOP’si ile eşleştirmek.
-2. TS EN 1911, TS EN 14385, CARB 425/426, CTM 027, SCAQMD 207.1, EPA 323 ve EPA 11 kartlarının birincil kaynak doğrulamasını tamamlamak.
+2. SCAQMD 207.1 tam prosedürünü, ISO 12141:2024 metnini ve EN 1911’in 2001 tarihli toz atfını karşılaştırmak. Diğer yeni birincil kaynak kartlarının açık uygulama noktaları kendi kartlarında kayıtlıdır.
 3. Her sayısal alanı özel madde/sayfa ile eşleştirmek; boş alana varsayılan miktar, sıcaklık, süre veya debi koymamak.
 4. Her metotta tam geri kazanım, bekletme süresi ve taşıma talimatını tamamlamak. PAH arşivinde görülen −7 °C ifadesi görüntüden kontrol edildi; güncel sürüm doğrulaması yapılmadan +4 °C diye değiştirilmez.
-5. Akış bölünmeli PAH/dioksin düzenekleri, sıvı absorban seçenekleri ve diğer geçerli varyantlar için ayrı şemalar hazırlamak.
-6. EPA alternatif yer prosedürünü 29.03.2023 revizyonu ile değerlendirmek; eski eğitimdeki sayı ve tabloları körlemesine aktarmamak. EN/ISO açı kriterlerini birincil metinden ayrı doğrulamak.
+5. Ek PAH/dioksin düzenekleri, sıvı absorban seçenekleri ve diğer geçerli varyantlar için ayrı şemalar hazırlamak.
+6. EPA 2023 alternatif yer ve EN 13284-1 Ek D karşılaştırması eklendi. Tam EN 15259/ISO 16911 ekipman prosedürleri ve eski eğitim tablolarının ayrıntılı denetimini sürdürmek.
 7. Ana katalogdaki eski serbest metinleri ve eğitim notlarını yeni kaynak denetiminden geçirmek; yeni çizimlerin varlığı eski metinlerin tamamının onaylandığını göstermez.
 8. Android cihazda gerçek ekran, erişilebilirlik, büyük yazı, yatay/dikey görünüm ve çevrimdışı kullanım kabulü.
 
@@ -50,6 +50,6 @@ Bu paket tam bir standart külliyatının onaylandığı anlamına gelmez. 54 ka
 
 ## Açıklamalı testler
 
-100 soruluk ilk banka; 25 imisyon sorusu. Mevcut 37 katalog başlığının tamamında en az bir soru vardır; bu, her standardın bütün ayrıntılarının sorulduğu anlamına gelmez. Kapsam, konu, parametre ve standart/metot filtreleri, 10/20/40/60/100/tüm soru seçimi, seçeneklerin karıştırılması, doğru/yanlış/boş, konu dökümü, cevap gerekçesi ve kaynak izi sunulur. Sonuçlar mevcut oturum içindedir; kalıcı sınav geçmişi henüz yoktur.
+150 soruluk banka; 25 imisyon sorusu. Mevcut 37 katalog başlığının tamamında en az bir soru vardır; bu, her standardın bütün ayrıntılarının sorulduğu anlamına gelmez. Kapsam, konu, parametre ve standart/metot filtreleri, 10/20/40/60/100/tüm soru seçimi, seçeneklerin karıştırılması, doğru/yanlış/boş, konu dökümü, cevap gerekçesi ve kaynak izi sunulur. Sonuçlar mevcut oturum içindedir; kalıcı sınav geçmişi henüz yoktur.
 
 EN 12341:2023 için PM10 ve PM2,5 imisyon kartları ile TL14/TL15 kaynaklı çöken toz ve pasif örnekleme kartları eklendi.

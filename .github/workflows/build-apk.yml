@@ -76,6 +76,7 @@ jobs:
           cp pubspec.yaml /tmp/mobile_build/pubspec.yaml
           cp -r test /tmp/mobile_build/test
           cp -r integration_test /tmp/mobile_build/integration_test
+          cp -r test_driver /tmp/mobile_build/test_driver
 
       - name: Set Android app display name
         run: |

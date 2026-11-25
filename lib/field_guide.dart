@@ -131,7 +131,7 @@ class _MethodGuidePageState extends State<MethodGuidePage> {
           Text('Numune alma treni', style: Theme.of(context).textTheme.titleLarge),
           const Text('Akış soldan sağa. Şema ölçekli değildir; şekiller impinger geometrisinin imalat çizimi değildir.'),
           if (train.any((n) => n['optional'] == true)) SwitchListTile.adaptive(
-            contentPadding: EdgeInsets.zero, title: const Text('İsteğe bağlı ilk şişeyi göster'),
+            contentPadding: EdgeInsets.zero, title: const Text('İsteğe bağlı şişeleri göster'),
             subtitle: const Text('Çıkarma koşulu aşağıdaki hazırlık bölümündedir. Metot şişe numaraları korunur.'),
             value: _includeOptional, onChanged: (v) => setState(() => _includeOptional = v)),
           TrainDiagram(nodes: selectedTrain),
@@ -145,7 +145,7 @@ class _MethodGuidePageState extends State<MethodGuidePage> {
           Text('Ana ve yan kol şeması',style:Theme.of(context).textTheme.titleLarge),
           const Text('Yatay kaydır; ayrıntı için tam ekran açıp iki parmakla büyüt.'),
           SingleChildScrollView(scrollDirection:Axis.horizontal,child:SizedBox(width:1400,child:Image.asset(
-            p['diagram']['asset'] as String,key:const ValueKey('split-train-image'),semanticLabel:'Filtre sonrası ayrılan ana kol ve gaz fazı PAH yan kolu'))),
+            p['diagram']['asset'] as String,key:const ValueKey('split-train-image'),semanticLabel:'${p['method']}: filtre sonrası ayrılan ana ve analiz yan kolu'))),
           OutlinedButton.icon(icon:const Icon(Icons.zoom_in),label:const Text('Şemayı tam ekran aç'),onPressed:()=>Navigator.push(context,
             MaterialPageRoute<void>(builder:(_)=>AssetTrainPage(profile:p)))),
           GuideSection(title:'Ortak giriş',items:_objects(p['diagram']['shared']).map((n)=>'${n['label']}: ${n['content']}').toList()),
@@ -442,6 +442,11 @@ class _SiteChecksPageState extends State<SiteChecksPage> {
         'Pitot delikleri tıkalı mı? Hortumlar ters, ezilmiş veya yoğuşma dolu mu? Manometre sıfırı ve yön referansı doğru mu?',
         'Nozül yönü, nozül çapı, kaçak vakumu, sayaç sıcaklığı/basıncı, kalibrasyon katsayısı ve baca nemi doğru kaydedilmiş mi?',
         'Proses duruşu, filtre tıkanması, absorban taşması, adsorban kırılması, soğutma kaybı ve O₂ driftinin etkisi değerlendirilmiş mi?',
+      ]),
+      const GuideSection(title:'EN ölçüm yeri özeti — EPA null hesabından ayrı',items:[
+        'TS EN 13284-1:2018 / EN 13284-1:2017 Ek D, EN 15259 bağlantılı olarak eksenden akış açısı <15°, ters akış olmaması, Pitot diferansiyel basıncı >5 Pa ve en yüksek/en düşük hız oranı <3:1 özetini verir.',
+        'Akış yönünde düzlemin öncesinde >5 hidrolik çap, sonrasında >2 hidrolik çap düz hat; açık baca çıkışı öncesinde >5 hidrolik çap önerileri ayrı yerleşim koşullarıdır. Noktalar ve ölçme tekniği ilgili EN 15259/ISO 16911 prosedürüyle belirlenir.',
+        'Bu özet, uygun ekipmanla açı/hız incelemesinin yerine geçmez. EPA’nın ±null açısı ortalamasını EN için doğrudan 15° ile karşılaştıran bir hesap uygulanmaz. Kaynak: L03 PDF s.44, Ek D; EN 15259:2007 bağlantısı.',
       ]),
       const SelectableText('Kaynak: US EPA Method 1 (30.05.2023), §11.4–11.5, §12.3. Federal Register 29.03.2023 değişikliği 30.05.2023 yürürlüğe girdi.\nhttps://www.epa.gov/system/files/documents/2023-09/2023%20Final%20MS%20%20Method%201_0.pdf\nhttps://www.epa.gov/system/files/documents/2023-04/2023%20Final%20Revisions%20Rule.pdf'),
     ]));

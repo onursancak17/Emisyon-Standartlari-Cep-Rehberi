@@ -93,5 +93,39 @@ class FieldGuideTests(unittest.TestCase):
         self.assertEqual(d['branches'][0]['nodes'][-1]['id'],'main_meter')
         self.assertEqual(d['branches'][1]['nodes'][-1]['id'],'side_meter')
 
+    def test_en14385_is_not_epa29_reagent_or_bottle_count(self):
+        p=P['metals_en14385_full']
+        filled=[n for n in p['train'] if n['kind']=='impinger' and 'boş' not in n['content']]
+        self.assertEqual(len(filled),3)
+        self.assertTrue(all('kütle/kütle' in n['content'] and '%1,6' in n['content'] for n in filled))
+        self.assertIn('BS EN',next(s for s in SOURCES['documents'] if s['id']=='L02')['title'])
+
+    def test_hcl_dated_reference_is_not_silently_upgraded(self):
+        p=P['hcl_en1911_iso']
+        self.assertIn('2001',p['limits'][3]['value'])
+        self.assertNotIn('≥3 dk',p['limits'][3]['value'])
+        filled=[n for n in p['train'] if n['kind']=='impinger' and 'boş' not in n['content']]
+        self.assertEqual(len(filled),2)
+        self.assertTrue(all('su' in n['content'] for n in filled))
+
+    def test_dust_in_stack_filter_precedes_support_line(self):
+        ids=[n['id'] for n in P['dust_en13284_in']['train']]
+        self.assertEqual(ids[:3],['probe','filter','line'])
+        self.assertIn('≥3 dk',P['dust_en13284_in']['limits'][3]['value'])
+
+    def test_en_split_trains_keep_two_independent_meters_and_absorber_counts(self):
+        for pid, count in (('hcl_en1911_split',2),('metals_en14385_split',3)):
+            p=P[pid]
+            self.assertFalse(p['train'])
+            d=p['diagram']
+            self.assertEqual([n['kind'] for n in d['shared']],['probe','filter','splitter'])
+            self.assertEqual(len(d['branches']),2)
+            for b in d['branches']:
+                self.assertEqual(b['nodes'][-1]['kind'],'meter')
+            side=d['branches'][1]['nodes']
+            filled=[n for n in side if n['kind']=='impinger' and 'boş' not in n['content']]
+            self.assertEqual(len(filled),count)
+            self.assertNotEqual(d['branches'][0]['nodes'][-1]['id'],side[-1]['id'])
+
 
 if __name__=='__main__':unittest.main()
