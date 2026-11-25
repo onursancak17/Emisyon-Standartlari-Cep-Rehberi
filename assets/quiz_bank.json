@@ -998,7 +998,7 @@
       ],
       "correctIndex": 0,
       "explanation": "Ölçüm sistemi başka bileşenlere çapraz cevap verebilir. Kalibrasyonun geçerli olması, seçicilik ve saha gaz matrisi kontrolünü ortadan kaldırmaz.",
-      "source": "Ana katalog: TS ISO 7935 / EPA CTM-022; ortak saha esasları"
+      "source": "Ana katalog: TS ISO 7935; ortak saha esasları"
     },
     {
       "id": "q039",
@@ -2296,6 +2296,471 @@
       "correctIndex": 0,
       "explanation": "Kütle derişim değildir. Pasif tüpün bileşik ve koşullara özgü alım modeli, maruziyet ve blank değerlendirmesiyle birlikte kullanılır.",
       "source": "Ortak saha esasları: pasif örnekleme"
+    },
+    {
+      "id": "q101",
+      "topic": "İmpinger ve özel metotlar",
+      "scope": "Emisyon",
+      "parameters": [
+        "H₂S"
+      ],
+      "standards": [
+        "EPA Method 11"
+      ],
+      "prompt": "EPA 11’de 200–300 g silika jel kullanmak neden yanlış bir aktarım olur?",
+      "choices": [
+        "Bu yöntem kurutma tüpünde en fazla 30 g ister.",
+        "Bütün yöntemler 300 g ister.",
+        "Silika jel bu yöntemde daima yasaktır.",
+        "Gram ile mL tamamen aynıdır."
+      ],
+      "correctIndex": 0,
+      "explanation": "EPA 11’in küçük debili yakıt gazı düzeni büyük Greenburg–Smith treniyle aynı değildir. Fazla kurutucu hidrokarbon tutarak hacim ölçümünü etkileyebilir.",
+      "source": "D04:3,6"
+    },
+    {
+      "id": "q102",
+      "topic": "İmpinger ve özel metotlar",
+      "scope": "Emisyon",
+      "parameters": [
+        "H₂S"
+      ],
+      "standards": [
+        "EPA Method 11"
+      ],
+      "prompt": "EPA 11’de son CdSO₄ şişesi sararırsa ne yapılır?",
+      "choices": [
+        "Ölçüm geçersiz kabul edilir.",
+        "Son şişe numuneye katılmaz ve ölçüm geçerli olur.",
+        "Süre ikiyle çarpılır.",
+        "DGM değeri rastgele düşürülür."
+      ],
+      "correctIndex": 0,
+      "explanation": "Son yakalama kademesindeki sararma, kapasitenin tükenmesine işaret eder. Sonuç seçilerek veya hacim değiştirilerek geçerlilik sağlanamaz.",
+      "source": "D04:7"
+    },
+    {
+      "id": "q103",
+      "topic": "İmpinger ve özel metotlar",
+      "scope": "Emisyon",
+      "parameters": [
+        "Formaldehit"
+      ],
+      "standards": [
+        "EPA Method 323"
+      ],
+      "prompt": "EPA 323:2023 için doğru başlangıç dolumu hangisidir?",
+      "choices": [
+        "Boş / 20 mL reaktif su / silika jel",
+        "100 mL NaOH / 100 mL NaOH / su",
+        "Üç şişede de 100 mL asit",
+        "İlk şişede 200 g silika, diğerleri boş"
+      ],
+      "correctIndex": 0,
+      "explanation": "Kondensat tutucu ilk şişe boştur; su ikinci şişededir. Başka bir formaldehit türevlendirme yönteminin reaktifi bu yönteme aktarılmaz.",
+      "source": "W04:2-4"
+    },
+    {
+      "id": "q104",
+      "topic": "İmpinger ve özel metotlar",
+      "scope": "Emisyon",
+      "parameters": [
+        "Formaldehit"
+      ],
+      "standards": [
+        "EPA Method 323"
+      ],
+      "prompt": "EPA 323’te 0,5 L/dk ayarlanması uygun mudur?",
+      "choices": [
+        "Hayır, 0,4 L/dk üst sınırını aşar.",
+        "Evet, her formaldehit yöntemi 1 L/dk ister.",
+        "Evet, yalnız şişe sayısı önemlidir.",
+        "Ancak 30 dakika olursa uygundur."
+      ],
+      "correctIndex": 0,
+      "explanation": "Bu sınır seçilen yönteme aittir. Daha yüksek debiyle aynı süre çekmek, yakalama performansının geçerli kalacağını tek başına göstermez.",
+      "source": "W04:3-5"
+    },
+    {
+      "id": "q105",
+      "topic": "İmpinger ve özel metotlar",
+      "scope": "Emisyon",
+      "parameters": [
+        "Krom(VI)"
+      ],
+      "standards": [
+        "CARB Method 425"
+      ],
+      "prompt": "CARB 425’te numune filtresi nereye yerleştirilir?",
+      "choices": [
+        "İki alkali impingerden sonra",
+        "Nozülün önüne",
+        "Her zaman ilk impingerin önüne",
+        "DGM egzozuna"
+      ],
+      "correctIndex": 0,
+      "explanation": "CARB 425 düzeni prob, alkali şişeler, PTFE kaplı cam elyaf filtre ve nem tutucu sırasındadır. EPA 29 ön filtre düzeni burada kullanılamaz.",
+      "source": "W02:13,22"
+    },
+    {
+      "id": "q106",
+      "topic": "İmpinger ve özel metotlar",
+      "scope": "Emisyon",
+      "parameters": [
+        "Krom(VI)"
+      ],
+      "standards": [
+        "CARB Method 425"
+      ],
+      "prompt": "CARB 425’te genel olarak impinger yıkaması zorunlu mudur?",
+      "choices": [
+        "§13.3 impinger yıkaması gerektirmez.",
+        "Her şişeye mutlaka 200 mL aseton gerekir.",
+        "Daima saf sülfürik asit gerekir.",
+        "Yıkama sıvısı silikaya dökülür."
+      ],
+      "correctIndex": 0,
+      "explanation": "Prob geri kazanımı ile impinger geri kazanımı farklı adımlardır. Bir yöntemdeki yıkama alışkanlığı başka metoda otomatik taşınmamalıdır.",
+      "source": "W02:23"
+    },
+    {
+      "id": "q107",
+      "topic": "İmpinger ve özel metotlar",
+      "scope": "Emisyon",
+      "parameters": [
+        "Siyanür / HCN"
+      ],
+      "standards": [
+        "CARB Method 426"
+      ],
+      "prompt": "CARB 426’da numune koruması için 2 mL 10 N NaOH hangi temelde verilir?",
+      "choices": [
+        "Numunenin her litresi için; pH ≥12 kontrolüyle",
+        "Her kaba hacimden bağımsız 2 mL",
+        "Her litre çekilen gaz için",
+        "Her metre prob için"
+      ],
+      "correctIndex": 0,
+      "explanation": "Koruyucu dozu sıvı numunenin hacmiyle ilişkilidir. Gaz hacmi ile sıvı numune hacmini karıştırmak yanlış kimyasal dozuna yol açar.",
+      "source": "W03:10-13"
+    },
+    {
+      "id": "q108",
+      "topic": "İmpinger ve özel metotlar",
+      "scope": "Emisyon",
+      "parameters": [
+        "Siyanür / HCN"
+      ],
+      "standards": [
+        "CARB Method 426"
+      ],
+      "prompt": "CARB 426’daki Whatman 42 ifadesi doğrudan saha filtresi seçimi midir?",
+      "choices": [
+        "Hayır, laboratuvar filtrasyon ekipmanı bağlamındadır.",
+        "Evet, her baca filtresi Whatman 42 olmalıdır.",
+        "Hayır, bu bir gaz debisidir.",
+        "Evet, impingerdeki çözelti adıdır."
+      ],
+      "correctIndex": 0,
+      "explanation": "Aynı metindeki laboratuvar ve saha ekipmanları ayrılır. Başlıktaki bağlamı atlayarak filtre adı aktarmak örnekleme sistemini değiştirebilir.",
+      "source": "W03:3-5"
+    },
+    {
+      "id": "q109",
+      "topic": "İmpinger ve özel metotlar",
+      "scope": "Emisyon",
+      "parameters": [
+        "Amonyak"
+      ],
+      "standards": [
+        "EPA CTM 027",
+        "EPA CTM 027 / SCAQMD Method 207.1"
+      ],
+      "prompt": "CTM-027’de filtre hangi konumdadır?",
+      "choices": [
+        "Baca içinde, Method 17 düzeninde",
+        "Üçüncü impingerden sonra",
+        "Pompa çıkışında",
+        "Yalnız laboratuvar hunisinde"
+      ],
+      "correctIndex": 0,
+      "explanation": "Kaynakta in-stack filtre belirtilir. Genel bir ısıtmalı dış filtre simgesi, bu metoda özgü filtre konumunu doğru biçimde göstermez.",
+      "source": "W01:2-4"
+    },
+    {
+      "id": "q110",
+      "topic": "İmpinger ve özel metotlar",
+      "scope": "Emisyon",
+      "parameters": [
+        "Amonyak"
+      ],
+      "standards": [
+        "EPA CTM 027",
+        "EPA CTM 027 / SCAQMD Method 207.1"
+      ],
+      "prompt": "CTM-027’de üçüncü impinger hangi iki başlangıç seçeneğine sahiptir?",
+      "choices": [
+        "Boş veya 100 mL 0,1 N H₂SO₄",
+        "100 mL permanganat veya aseton",
+        "Daima 500 mL su",
+        "Daima 30 g CdSO₄"
+      ],
+      "correctIndex": 0,
+      "explanation": "Yüksek yükte veya yüksek debide ek asit kademesi kullanılabilir. İki düzen aynı parametre altında farklı varyantlar olarak kaydedilmelidir.",
+      "source": "W01:3-4"
+    },
+    {
+      "id": "q111",
+      "topic": "İmpinger ve özel metotlar",
+      "scope": "Emisyon",
+      "parameters": [
+        "NOₓ"
+      ],
+      "standards": [
+        "TS ISO 12039 / TS ISO 7935 / EPA CTM-022"
+      ],
+      "prompt": "EPA CTM-022 hangi bileşenler için elektrokimyasal yöntemdir?",
+      "choices": [
+        "NO, NO₂ ve NOₓ",
+        "Yalnız SO₂",
+        "Yalnız dioksin",
+        "Yalnız çöken toz"
+      ],
+      "correctIndex": 0,
+      "explanation": "Resmî EPA koşullu yöntem listesi CTM-022’yi azot oksitleriyle eşleştirir. SO₂ için ISO 7935 ile aynı yöntem gibi sunulması yanlıştır.",
+      "source": "US EPA EMC Conditional Test Methods: CTM-022"
+    },
+    {
+      "id": "q112",
+      "topic": "İmpinger ve özel metotlar",
+      "scope": "Emisyon",
+      "parameters": [
+        "Partikül madde"
+      ],
+      "standards": [
+        "ISO 12141",
+        "TS EN 13284-1 / TS ISO 9096 / ISO 12141"
+      ],
+      "prompt": "Arşivde ISO 12141:2002 varken katalogda 2024 sürümü bulunursa ne yapılır?",
+      "choices": [
+        "Yeni tam metin karşılaştırılana kadar eski kurallar güncel diye sunulmaz.",
+        "Dosya adına 2024 yazmak yeterlidir.",
+        "Eski PDF otomatik yeni sürüme dönüşür.",
+        "Bütün sayılar mutlaka değişmiştir denir."
+      ],
+      "correctIndex": 0,
+      "explanation": "Sürüm değişikliğini bilmek hangi maddelerin değiştiğini bilmek değildir. Katalog kaydıyla tam prosedürün teknik karşılaştırması ayrı işlemlerdir.",
+      "source": "ISO katalog: https://www.iso.org/standard/85643.html; D31"
+    },
+    {
+      "id": "q113",
+      "topic": "Gaz analizörleri",
+      "scope": "Emisyon",
+      "parameters": [
+        "SO₂"
+      ],
+      "standards": [
+        "TS ISO 12039 / TS ISO 7935 / EPA CTM-022"
+      ],
+      "prompt": "ISO 7935:2024’te ≤200 s tepki süresi kriteri neyi belirtir?",
+      "choices": [
+        "AMS performans koşulunu; her ölçümün toplam süresi değildir.",
+        "Her ölçüm tam 200 saniye sürer.",
+        "Her gazda T90 yerine 200 yazılır.",
+        "Numune 200 saniye içinde laboratuvara ulaşır."
+      ],
+      "correctIndex": 0,
+      "explanation": "Cihaz/sistem cevabı ile temsilî ortalama alma süresi farklı kavramlardır. Bir performans sınırından tek bir saha ölçüm süresi türetilemez.",
+      "source": "D32:12; ISO 7935:2024 Tablo 1"
+    },
+    {
+      "id": "q114",
+      "topic": "Gaz analizörleri",
+      "scope": "Emisyon",
+      "parameters": [
+        "SO₂"
+      ],
+      "standards": [
+        "TS ISO 12039 / TS ISO 7935 / EPA CTM-022"
+      ],
+      "prompt": "ISO 7935:2024’te 24 saat sıfır/span driftinin %2 sınırında payda nedir?",
+      "choices": [
+        "Kullanılan en düşük ölçüm aralığının üst değeri",
+        "Her an ölçülen SO₂ derişimi",
+        "DGM başlangıç hacmi",
+        "Baca çapı"
+      ],
+      "correctIndex": 0,
+      "explanation": "Yüzde bir sınır, paydası belirtilmeden uygulanamaz. Aynı tabloda hat kaybı/kaçak için ölçülen değer kullanılması iki yüzdeyi özdeş yapmaz.",
+      "source": "D32:12; ISO 7935:2024 Tablo 1"
+    },
+    {
+      "id": "q115",
+      "topic": "Birimler ve hacim",
+      "scope": "Emisyon",
+      "parameters": [
+        "Formaldehit"
+      ],
+      "standards": [
+        "EPA Method 323"
+      ],
+      "prompt": "0,4 L/dk sabit debiyle 30 dk çekişin hacmi aynı koşullarda kaçtır?",
+      "choices": [
+        "12 L",
+        "120 L",
+        "0,12 L",
+        "75 L"
+      ],
+      "correctIndex": 0,
+      "explanation": "V=Q×t=0,4×30=12 L. Bu sadece aynı koşullardaki hacim hesabıdır; yöntemin her kaynak için 30 dakika istediği anlamına gelmez.",
+      "source": "Boyutsal hesap; W04:3-5 debi sınırı"
+    },
+    {
+      "id": "q116",
+      "topic": "Birimler ve hacim",
+      "scope": "Emisyon",
+      "parameters": [
+        "Nem"
+      ],
+      "standards": [
+        "EPA Method 4"
+      ],
+      "prompt": "Qort=10 L/dk ise EPA 4’ün %4 ve 0,57 L/dk kıyasından hangi kaçak sınırı çıkar?",
+      "choices": [
+        "0,40 L/dk",
+        "0,57 L/dk",
+        "4 L/dk",
+        "0,97 L/dk"
+      ],
+      "correctIndex": 0,
+      "explanation": "Ortalama debinin %4’ü 0,40 L/dk’dir. İki sınırın küçüğü kullanıldığı için 0,57 L/dk tek başına kabul ölçütü olamaz.",
+      "source": "D08:5; boyutsal hesap"
+    },
+    {
+      "id": "q117",
+      "topic": "Birimler ve hacim",
+      "scope": "Emisyon",
+      "parameters": [
+        "Nem"
+      ],
+      "standards": [
+        "EPA Method 4"
+      ],
+      "prompt": "Qort=20 L/dk iken %4 debi 0,80 L/dk çıkarsa EPA 4 kaçak sınırı nedir?",
+      "choices": [
+        "0,57 L/dk",
+        "0,80 L/dk",
+        "1,37 L/dk",
+        "20 L/dk"
+      ],
+      "correctIndex": 0,
+      "explanation": "Yüzde sınırı 0,80 L/dk olsa da mutlak 0,57 L/dk daha sıkıdır. Karşılaştırma her ölçümün gerçek ortalama debisiyle yapılır.",
+      "source": "D08:5; boyutsal hesap"
+    },
+    {
+      "id": "q118",
+      "topic": "Birimler ve hacim",
+      "scope": "Emisyon",
+      "parameters": [
+        "Nem"
+      ],
+      "standards": [
+        "EPA Method 4"
+      ],
+      "prompt": "21 L/dk × 20 dk hesabı tek başına 0,60 standart m³ şartını kanıtlar mı?",
+      "choices": [
+        "Hayır; 420 L çıkar ve hacimlerin referans koşulları da eşleştirilmelidir.",
+        "Evet, 420 L her zaman 600 L’ye eşittir.",
+        "Evet, süre 20 dakika olunca her yöntem uygundur.",
+        "Evet, referans sıcaklığı önemsizdir."
+      ],
+      "correctIndex": 0,
+      "explanation": "Çarpım yalnız aynı koşullardaki hacmi verir. Hem asgari hacim hem sıcaklık, basınç ve kuru/yaş baz birlikte kontrol edilmelidir.",
+      "source": "D08:4-6; boyutsal hesap"
+    },
+    {
+      "id": "q119",
+      "topic": "Girdap ve uygunsuz yer",
+      "scope": "Emisyon",
+      "parameters": [
+        "Ölçüm yeri / travers"
+      ],
+      "standards": [
+        "TS EN 15259 / EPA Method 1"
+      ],
+      "prompt": "Null açılar +25°, −25° ve 0° ise ortalama mutlak açı kaçtır?",
+      "choices": [
+        "Yaklaşık 16,67°",
+        "0°",
+        "25°",
+        "50°"
+      ],
+      "correctIndex": 0,
+      "explanation": "Mutlak değerler toplamı 50° ve nokta sayısı 3’tür. İşaretlerin birbirini götürmesi, girdap değerlendirmesinin amacına aykırıdır.",
+      "source": "EPA Method 1 §11.4; boyutsal hesap"
+    },
+    {
+      "id": "q120",
+      "topic": "Girdap ve uygunsuz yer",
+      "scope": "Emisyon",
+      "parameters": [
+        "Ölçüm yeri / travers"
+      ],
+      "standards": [
+        "TS EN 15259 / EPA Method 1"
+      ],
+      "prompt": "EPA Method 1 null tekniğinde ortalama mutlak açı tam 20° ise yalnız >20° kuralı bakımından ne söylenir?",
+      "choices": [
+        "Bu eşik aşılmış değildir; diğer uygunluk koşulları ayrıca gerekir.",
+        "Kesinlikle bütün standartlara uygundur.",
+        "20° her durumda 30° sayılır.",
+        "Noktalar hesap dışına çıkarılır."
+      ],
+      "correctIndex": 0,
+      "explanation": "Bir eşik için matematiksel karşılaştırma bütün saha kabulünün yerine geçmez. Akış, konum ve ilgili yöntemin diğer gerekleri de değerlendirilir.",
+      "source": "EPA Method 1 §11.4"
+    },
+    {
+      "id": "q121",
+      "topic": "Kalite ve teslim",
+      "scope": "Emisyon",
+      "parameters": [
+        "Klor / halojenler"
+      ],
+      "standards": [
+        "EPA Method 26A"
+      ],
+      "prompt": "Asitli ve alkali halojen fraksiyonları aynı kaba dökülürse ilk yapılacak değerlendirme nedir?",
+      "choices": [
+        "Fraksiyon bütünlüğünün bozulduğunu kaydetmek ve yöntem geçerliliğini değerlendirmek",
+        "pH’ı rastgele değiştirip olayı gizlemek",
+        "Numune etiketini değiştirerek düzeltmek",
+        "DGM hacmini ikiyle çarpmak"
+      ],
+      "correctIndex": 0,
+      "explanation": "Fraksiyonlar farklı türlerin ölçümüne hizmet eder. Karıştırma, sonradan sayaç veya etiket değiştirilerek giderilebilecek bir kayıt hatası değildir.",
+      "source": "D06:7-8; fraksiyon kontrolü"
+    },
+    {
+      "id": "q122",
+      "topic": "Kalite ve teslim",
+      "scope": "Emisyon",
+      "parameters": [
+        "Ağır metaller"
+      ],
+      "standards": [
+        "EPA Method 29"
+      ],
+      "prompt": "Asitli peroksit ve asitli permanganat şişelerinin aynı kimlikle raporlanması neden yetersizdir?",
+      "choices": [
+        "Farklı metal/cıva fraksiyonlarının geri kazanım ve analiz izi kaybolur.",
+        "Şişe sayısı yalnız estetik amaçlıdır.",
+        "Bütün metaller aynı tek kapta olmak zorundadır.",
+        "Kalibrasyon katsayısı otomatik sıfırlanır."
+      ],
+      "correctIndex": 0,
+      "explanation": "EPA 29 düzeninde cıva ve diğer fraksiyonlar ayrı işlemler gerektirir. Kap numarası, içerik ve analiz hedefi teslim zincirinde eşleşmelidir.",
+      "source": "D07:11-14"
     }
   ]
 }

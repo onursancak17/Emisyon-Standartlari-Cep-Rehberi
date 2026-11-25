@@ -72,6 +72,8 @@ class _FieldGuideCatalogState extends State<FieldGuideCatalog> {
         onPressed: () => Navigator.push(context, MaterialPageRoute<void>(builder: (_) => FundamentalsPage(topics: _objects(widget.data['fundamentals']))))),
       OutlinedButton.icon(icon: const Icon(Icons.straighten), label: const Text('Birim dönüşümleri ve referans koşulları'),
         onPressed: () => Navigator.push(context, MaterialPageRoute<void>(builder: (_) => const UnitsPage()))),
+      OutlinedButton.icon(icon: const Icon(Icons.source_outlined), label: const Text('Kaynaklar ve sürüm kontrolleri'),
+        onPressed: () => Navigator.push(context, MaterialPageRoute<void>(builder: (_) => const SourcesPage()))),
       const SizedBox(height: 12),
       for (final parameter in found)
         Card(child: ListTile(
@@ -110,7 +112,7 @@ class _MethodGuidePageState extends State<MethodGuidePage> {
           key: ValueKey('method-$_selected'), value: _selected, isExpanded: true,
           decoration: const InputDecoration(labelText: 'Standart / metot / varyant', border: OutlineInputBorder()),
           selectedItemBuilder: (context) => [for (final q in widget.profiles) Align(alignment: Alignment.centerLeft,
-            child: Text(q['method'] as String, maxLines: 2, overflow: TextOverflow.ellipsis))],
+            child: Text(q['method'] as String, maxLines: 1, overflow: TextOverflow.ellipsis))],
           items: [for (var i = 0; i < widget.profiles.length; i++) DropdownMenuItem(value: i,
             child: Text('${widget.profiles[i]['method']}\n${widget.profiles[i]['variant']}', style: const TextStyle(fontSize: 13)))],
           onChanged: (v) { if (v != null) setState(() { _selected = v; _includeOptional = true; }); },
@@ -122,6 +124,7 @@ class _MethodGuidePageState extends State<MethodGuidePage> {
         const SizedBox(height: 12),
         GuideNotice(text: pending ? 'İçerik hazırlanıyor. Doğrulanmış sayısal talimat ve çizim henüz yok.' : sop
           ? 'Talimat kaynaklı aktarım. Birincil metotla karşılaştırma tamamlanmadı.'
+          : p['reviewState'] == 'sections_checked' ? 'Belirtilen birincil kaynak bölümleri karşılaştırıldı. Alan ve madde izleri aşağıda. Açık kalan koşulları uygulamadan önce tamamla.'
           : 'Belirtilen arşiv kaynağındaki şema ve maddeler kontrol edildi. Tam yöntem onayı ve güncel yürürlük doğrulaması tamamlanmış değildir.'),
         const SizedBox(height: 12),
         if (train.isNotEmpty) ...[
@@ -143,11 +146,45 @@ class _MethodGuidePageState extends State<MethodGuidePage> {
         for (final limit in _objects(p['limits'])) GuideSection(title: limit['label'] as String, items: [limit['value'] as String]),
         for (final phase in _objects(p['phases'])) GuideSection(title: phase['title'] as String, items: _strings(phase['items'])),
         GuideSection(title: 'Doğrulanacak ayrıntılar', items: _strings(p['gaps'])),
-        GuideSection(title: 'Kaynak ve bölüm izi', items: _strings(p['sources']).map((s) => 'Arşiv $s (PDF sayfa numarası)').toList()),
-        const Text('Kaynak kimlikleri: depodaki docs/SOURCE_INDEX.json. Sayısal bir alanın boş veya hazırlıkta olması, o konuda şart bulunmadığı anlamına gelmez.'),
+        for (final e in _objects(p['evidence'] ?? [])) GuideSection(title: 'Kaynak izi · ${e['field']}',
+          items: ['${e['clause']} · ${_strings(e['references']).join('; ')} (PDF sayfası)']),
+        Text('Kaynaklar', style: Theme.of(context).textTheme.titleLarge),
+        for (final s in _objects(p['sourceDetails'] ?? [])) Padding(padding: const EdgeInsets.symmetric(vertical:8),
+          child: SelectableText('${s['title']}\n${s['edition']}\n${s['reference']} · PDF sayfası${s['url'] == '' ? '' : '\n${s['url']}'}')),
+        const Text('Bir koşulun henüz doğrulanmamış olması, o konuda şart bulunmadığı anlamına gelmez.'),
       ]),
     );
   }
+}
+
+class SourcesPage extends StatefulWidget {
+  const SourcesPage({super.key});
+  @override
+  State<SourcesPage> createState() => _SourcesPageState();
+}
+
+class _SourcesPageState extends State<SourcesPage> {
+  late final Future<Json> _index = rootBundle.loadString('assets/source_index.json').then((s) => jsonDecode(s) as Json);
+  String _query = '';
+  @override
+  Widget build(BuildContext context) => Scaffold(
+    appBar: AppBar(title: const Text('Kaynaklar ve sürümler')),
+    body: FutureBuilder<Json>(future:_index, builder:(context,snapshot) {
+      if (snapshot.hasError) return const Center(child:Text('Kaynak dizini açılamadı.'));
+      if (!snapshot.hasData) return const Center(child:CircularProgressIndicator());
+      final data = snapshot.data!;
+      return ListView(padding:const EdgeInsets.all(16),children:[
+        const GuideNotice(text:'Kaynak adları ve sürüm notları çevrimdışı okunur. Web adresi asıl metne erişim içindir. Bir katalog kaydının güncel olması, arşivdeki eski PDF’nin yenilendiği anlamına gelmez.'),
+        for (final c in _objects(data['catalogChecks'] ?? [])) GuideSection(title:c['method'] as String,
+          items:[if(c['currentEdition']!=null) 'Güncel katalog sürümü: ${c['currentEdition']}',c['status'] as String,c['url'] as String]),
+        TextField(decoration:const InputDecoration(labelText:'Kaynak adı veya kimliği ara',prefixIcon:Icon(Icons.search)),
+          onChanged:(s)=>setState(()=>_query=s)),
+        for (final s in _objects(data['documents']).where((s)=>_fold('${s['id']} ${s['title']}').contains(_fold(_query))))
+          Card(child:Padding(padding:const EdgeInsets.all(12),child:SelectableText(
+            '${s['id']} · ${s['title']}\n${s['edition'] ?? 'Arşiv belgesi'} · ${s['pages']} PDF sayfası${s['url']==null ? '' : '\n${s['url']}'}'))),
+      ]);
+    }),
+  );
 }
 
 class GuideNotice extends StatelessWidget {

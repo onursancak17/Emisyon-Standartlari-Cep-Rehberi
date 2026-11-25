@@ -46,4 +46,23 @@ void main() {
     expect(tester.widget<TrainDiagram>(find.byType(TrainDiagram)).nodes[1]['id'],'filter');
     expect(tester.takeException(),isNull);
   });
+  testWidgets('Every method remains readable on a narrow phone with double text size', (tester) async {
+    tester.view.physicalSize = const Size(390,844);
+    tester.view.devicePixelRatio = 1;
+    addTearDown(tester.view.resetPhysicalSize);
+    addTearDown(tester.view.resetDevicePixelRatio);
+    for (final raw in data['profiles'] as List) {
+      final p = Map<String,dynamic>.from(raw as Map);
+      await tester.pumpWidget(MaterialApp(key:ValueKey(p['id']),builder:(context,child)=>MediaQuery(
+        data:MediaQuery.of(context).copyWith(textScaler:const TextScaler.linear(2)),child:child!),
+        home:MethodGuidePage(profiles:[p])));
+      await tester.pumpAndSettle();
+      expect(tester.takeException(),isNull,reason:p['id'] as String);
+      for(var i=0;i<6;i++) {
+        await tester.drag(find.byType(ListView).first,const Offset(0,-650));
+        await tester.pumpAndSettle();
+        expect(tester.takeException(),isNull,reason:'${p['id']} scroll $i');
+      }
+    }
+  });
 }

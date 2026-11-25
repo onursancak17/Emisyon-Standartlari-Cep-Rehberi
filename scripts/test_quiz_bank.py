@@ -48,6 +48,13 @@ class QuizBankTests(unittest.TestCase):
                 self.assertIn(param,q['parameters'])
                 self.assertNotIn('Nem',q['parameters'])
 
+    def test_ctm022_is_nitrogen_oxides_not_sulfur_dioxide(self):
+        q=next(q for q in BANK['questions'] if q['prompt'].startswith('EPA CTM-022 hangi'))
+        self.assertIn('NOₓ',q['parameters'])
+        self.assertNotIn('SO₂',q['parameters'])
+        so2=next(q for q in BANK['questions'] if q['prompt'].startswith('SO₂ ölçümünde girişim'))
+        self.assertEqual(so2['parameters'],['SO₂'])
+
     def test_method_one_is_not_method_thirteen_or_seventeen(self):
         q=next(q for q in BANK['questions'] if 'açılar +30°' in q['prompt'])
         self.assertIn('TS EN 15259 / EPA Method 1',q['standards'])

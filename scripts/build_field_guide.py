@@ -1,6 +1,7 @@
 """Kaynak kontrollü başlangıç veri paketi; kaynak PDF'leri yayımlamaz."""
 import json
 from pathlib import Path
+from primary_profiles import extend, WEB_SOURCES
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -210,6 +211,28 @@ for pid, param, method, refs, steps in [
     p['scope']='İmisyon'
     p['trainNote']='Bu metoda impinger veya izokinetik baca nozülü atanmaz.'
     data.append(p)
+
+extend(data, profile, node, imp, meter, common_delivery)
+
+source_index = json.loads((ROOT/'docs/SOURCE_INDEX.json').read_text(encoding='utf-8'))
+source_index['documents'] = [s for s in source_index['documents'] if not s['id'].startswith('W')] + WEB_SOURCES
+source_index['catalogChecks'] = [
+    dict(method='ISO 12141', archiveEdition='2002', currentEdition='2024',
+         status='Arşiv metni eski. Yeni sürümün tam koşulları karşılaştırılmadı.', url='https://www.iso.org/standard/85643.html'),
+    dict(method='EN 14385', archiveEdition='TL179:2018', currentEdition='2024',
+         status='Yeni standart bulundu; okunabilir tam metin karşılaştırması sürüyor.',
+         url='https://knowledge.bsigroup.com/products/stationary-source-emissions-determination-of-the-total-emission-of-as-cd-cr-co-cu-mn-ni-pb-sb-tl-and-v'),
+    dict(method='EPA CTM-022', status='NO, NO₂ ve NOₓ için elektrokimyasal yöntem; SO₂ yöntemi değildir.',
+         url='https://www.epa.gov/emc/emc-conditional-test-methods'),
+]
+for s in source_index['documents']:
+    s.setdefault('title', Path(s.get('path','')).name.replace('_',' '))
+for p in data:
+    lookup = {s['id']:s for s in source_index['documents']}
+    p['sourceDetails'] = [dict(reference=r, **{k:lookup[r.split(':')[0]].get(k,'') for k in ('title','edition','url')}) for r in p['sources']]
+    p.setdefault('evidence', [])
+(ROOT/'docs/SOURCE_INDEX.json').write_text(json.dumps(source_index,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
+(ROOT/'assets/source_index.json').write_text(json.dumps(source_index,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 
 topics = [
  ('Planlama ve metot seçimi', ['Emisyon / imisyon ayrımı, hedef kirletici ve fiziksel faz; ilgili mevzuat, metot sürümü ve laboratuvar yeterliliğini eşleştir.', 'Hedef tayin sınırı, beklenen derişim, toplam numune hacmi ve analitik yöntem laboratuvarla birlikte planlanır.']),

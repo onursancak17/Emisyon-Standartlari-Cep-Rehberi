@@ -136,8 +136,8 @@
       "T90",
       "referans O2"
     ],
-    "purpose": "O2, CO, CO2, SO2, NO, NO2 ve NOx gibi standart yanma gazlarının taşınabilir analizörle ölçülmesi ve referans şartlara düzeltilmesi için saha rehberidir.",
-    "duration": "Her ölçüm süresi T90 × 4 olarak planlanır. İki ölçüm arasında en az T90 × 3 beklenir. Her baca için üç ölçüm alınması saha temsili açısından tercih edilir.",
+    "purpose": "Bu başlık bir gaz yöntemleri karşılaştırmasıdır: ISO 12039 O₂/CO/CO₂; ISO 7935 SO₂; EPA CTM-022 elektrokimyasal NO/NO₂/NOₓ. Metotların toleransları birleştirilmez.",
+    "duration": "Sistem tepki süresi, stabilizasyon ve ortalama süresi seçilen metodun kendi sürümünden belirlenir. T90×4 ölçüm ve T90×3 bekleme burada bütün yöntemlere uygulanacak evrensel şart sayılmaz.",
     "flowRate": "Cihazın kendi numune çekiş sistemi kullanılır; yoğuşma olmaması için ısıtmalı hat ve filtreler kontrol edilir.",
     "equipment": [
       "Gaz analizörü, ısıtmalı hat, partikül filtresi, kondens kontrolü ve referans gaz tüpleri.",
@@ -147,21 +147,22 @@
       "Kimyasal absorban yoktur. Sıfır/span ve referans gaz doğrulamaları kullanılır."
     ],
     "fieldSteps": [
-      "Ölçümden önce kalibrasyon geçerliliği ve referans gaz doğrulaması kontrol edilir.",
-      "Yakıt türü, proses yükü, tesis çalışma durumu ve meteorolojik şartlar kaydedilir.",
-      "Kesit içinde gaz derişimi ±%15’ten fazla değişiyorsa alternatif nokta veya çok noktalı ortalama uygulanır.",
-      "Sızıntı/kaçak testi yap, referans gazla T90 belirle, ısıtmalı hattı bağla ve stabil okuma oluşmadan kayıt alma."
+      "Hedef gaz ve metoda uygun ölçüm ilkesini seç; kalibrasyon, referans gaz ve numune hattını kontrol et.",
+      "Proses yükü, yakıt ve arıtma durumunu kaydet.",
+      "Homojenliği ilgili standardın ölçüm planıyla değerlendir; tek bir ±%15 kuralını bütün yöntemlere uygulama.",
+      "Numune hattı dahil sistem tepki süresi, kaçak, sıfır/span ve stabilizasyon kayıtlarını tut."
     ],
     "criticalControls": [
-      "O2/CO/CO2 ve SO2 doğrulama sapması yaklaşık %4; NO/NO2/NOx doğrulama sapması yaklaşık %3 sınırında değerlendirilir.",
-      "CO, O2, CO2 ve SO2’de tepki süresi 200 saniye civarında kontrol edilir.",
-      "Cihaz ölçüm aralığı aşılırsa sensör ve sonuç geçerliliği risk altına girer."
+      "CTM-022 SO₂ yöntemi değildir; NO/NO₂/NOₓ içindir.",
+      "Doğrulama sapması, drift, tepki süresi ve girişim sınırlarını parametre/metot/sürüm bazında seç. Yaklaşık %3/%4 veya 200 s değerlerini toplu kabul ölçütü yapma.",
+      "Ölçüm aralığı ve gaz matrisi uygunluğu ayrıca kontrol edilir."
     ],
     "acceptance": [
       "Referans gaz doğrulamaları uygun, hat kaçaksız, okuma stabil ve proses temsil edici olmalıdır."
     ],
     "reporting": [
-      "ppm→mg/Nm³: mg/Nm³ = ppm × molekül ağırlığı / 22,41. Nem, sıcaklık, basınç, referans O2 ve gerekiyorsa CO2 düzeltmeleri belirtilir."
+      "ppm→mg/m³ dönüşümünde molar hacmin referans sıcaklık/basıncını belirt. Yaklaşık 22,414 L/mol yalnız 0 °C ve 101,325 kPa için idealdir; 20 °C için aynı sayı kullanılmaz. Kuru/yaş baz ve referans O₂ ayrıca yazılır.",
+      "Kaynak: https://www.epa.gov/emc/emc-conditional-test-methods"
     ],
     "mistakes": [
       "T90 beklemeden kayıt almak.",
@@ -311,6 +312,7 @@
       "Düşük tozda mmin = Z × 2 × 10; Vmin = mmin / X; Qmin = Vmin / ts yaklaşımıyla yeterli kütle/hacim planı yap."
     ],
     "criticalControls": [
+      "Sürüm kontrolü: arşiv ISO 12141:2002 metnidir; ISO kataloğunda 2024 ikinci baskı bulunur. Yeni tam metin karşılaştırılmadan eski sayısal kurallar 2024 koşulları diye sunulmaz.",
       "Baca nemi izokinetik hesapta mutlaka dikkate alınmalıdır.",
       "Mutlak nem girilmezse izokinetiklik nem kadar sapabilir.",
       "Şahit kütle ana filtrenin %20’sinden büyük olmamalıdır.",

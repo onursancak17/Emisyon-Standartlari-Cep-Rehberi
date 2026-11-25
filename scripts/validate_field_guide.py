@@ -18,12 +18,18 @@ def validate(data, source_index):
         ids.add(p['id'])
         for key in ('parameter', 'method', 'sourceVersion', 'variant', 'sources', 'gaps'):
             assert p.get(key), f'{p["id"]}: {key}'
-        assert p['reviewState'] in {'train_checked', 'sop_only', 'pending'}
+        assert p['reviewState'] in {'train_checked', 'sections_checked', 'sop_only', 'pending'}
         assert [x['label'] for x in p['limits']] == ['Çekiş debisi', 'Toplam çekiş hacmi', 'Sıcaklık', 'Ölçüm süresi']
         assert all(x['value'].strip() for x in p['limits']), f'{p["id"]}: boş koşul'
         assert len(p['phases']) == 6 and all(x['items'] for x in p['phases'])
-        for ref in p['sources']:
-            match = re.fullmatch(r'(D\d{2}):([\d,\-]+)', ref)
+        refs = list(p['sources'])
+        if p['reviewState'] == 'sections_checked':
+            assert p['evidence'], f'{p["id"]}: alan bazında kaynak izi yok'
+        for e in p.get('evidence', []):
+            assert e['field'] and e['clause'] and e['references']
+            refs.extend(e['references'])
+        for ref in refs:
+            match = re.fullmatch(r'([DW]\d{2}):([\d,\-]+)', ref)
             assert match, f'Kaynak biçimi: {ref}'
             did, selections = match.groups()
             assert did in sources, ref
@@ -39,6 +45,7 @@ def validate(data, source_index):
             assert not nodes, 'Doğrulanmamış metoda komşu metodun şeması atanamaz'
         if nodes:
             assert nodes[0]['kind'] == 'probe' and nodes[-1]['kind'] == 'meter'
+        assert len(p['sourceDetails']) == len(p['sources']), 'Çevrimdışı kaynak açıklaması eksik'
     assert len(data['fundamentals']) >= 20
     return len(ids)
 

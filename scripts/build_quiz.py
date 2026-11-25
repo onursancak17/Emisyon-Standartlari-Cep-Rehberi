@@ -2,6 +2,7 @@
 import json
 import re
 from pathlib import Path
+from quiz_primary import extend
 
 ROOT=Path(__file__).resolve().parents[1]
 catalog={}
@@ -16,7 +17,7 @@ def parameters(tags):
       ('Method 26A','Klor / halojenler'),('1911','HCl'),('Method 29','Ağır metaller'),('14385','Ağır metaller'),
       ('11338','PAH'),('1948','Dioksin / furan'),('426','Siyanür / HCN'),('425','Krom(VI)'),('323','Formaldehit'),
       ('CTM 027','Amonyak'),('207.1','Amonyak'),('Method 11','H₂S'),('Method 8','Sülfürik asit / SO₂'),
-      ('7935','SO₂'),('CTM-022','SO₂'),('13649','VOC'),('12619','TOC / FID'),('25A','TOC / FID'),
+      ('7935','SO₂'),('CTM-022','NOₓ'),('13649','VOC'),('12619','TOC / FID'),('25A','TOC / FID'),
       ('12039','Yanma gazları'),('16911','Hız / debi'),('10780','Hız / debi'),('Method 2','Hız / debi'),
       ('15259','Ölçüm yeri / travers'),('Method 1','Ölçüm yeri / travers'),('9503','İslilik'),('ISDL','ISDL / MID'),
       ('13284','Partikül madde'),('9096','Partikül madde'),('12141','Partikül madde'),('Method 5','Partikül madde'),('Method 17','Partikül madde')]
@@ -76,7 +77,7 @@ add(T,E,['TS ISO 9096'],'TS ISO 9096’da örneklenen toz ile prob/nozül biriki
 add(T,E,['TS EN ISO 16911','TS ISO 10780','EPA Method 2'],'Pitot ile hız hesabında hangi veri grubu anlamlıdır?','Diferansiyel basınç, Pitot katsayısı ve gaz yoğunluğunu belirleyen koşullar',['Yalnız tarih ve operatör adı','Yalnız impingerin rengi','Sadece filtrenin gramajı'],'Pitot basınç farkı hıza çevrilirken katsayı ve gaz yoğunluğu gerekir. Bir sensörün anlık okuması, diğer gerekli koşullar olmadan güvenilir hacimsel debi vermez.','D29; D50-D51; ortak saha esasları: hız')
 add(T,E,['TS EN ISO 16911','TS ISO 10780','EPA Method 2'],'Hacimsel baca debisi için ortalama hız dışında hangi temel büyüklük gerekir?','Baca kesit alanı',['Blank kabının rengi','Ses seviyesi','Filtrenin gözenek sayısının karesi'],'Aynı referans koşullarında hacimsel debi hız ile kesit alanının çarpımıyla ilişkilidir. Birimler ve hız profilinin temsil ediciliği kontrol edilir.','D29; ortak saha esasları: hız / debi')
 add(T,E,['TS ISO 12039','TS EN 14789','TS EN 14792','TS EN 15058'],'Yanma gazı ölçümünde sıfır/span kontrolünün amacı nedir?','Sistemin ölçüm cevabı ve kaymasını kontrol etmek',['Baca alanını ölçmek','İmpinger sırasını otomatik belirlemek','Toz filtresini sabit tartıma getirmek'],'Sıfır/span ve drift kontrolleri gaz ölçüm sisteminin cevabına yöneliktir. Kabul sınırları gaz ve metot için ayrı kontrol edilir.','D30; ortak saha esasları: gaz analizörleri')
-add(T,E,['TS ISO 7935','EPA CTM-022'],'SO₂ ölçümünde girişim ve kalibrasyon neden ayrı değerlendirilir?','Doğru kalibrasyon, bütün girişimlerin yok olduğunu kanıtlamaz.',['Kalibrasyon yapılınca numune hattı gereksizdir.','Girişim yalnız filtre tartımını etkiler.','Her SO₂ yöntemi aynı kimyayla çalışır.'],'Ölçüm sistemi başka bileşenlere çapraz cevap verebilir. Kalibrasyonun geçerli olması, seçicilik ve saha gaz matrisi kontrolünü ortadan kaldırmaz.','Ana katalog: TS ISO 7935 / EPA CTM-022; ortak saha esasları')
+add(T,E,['TS ISO 7935'],'SO₂ ölçümünde girişim ve kalibrasyon neden ayrı değerlendirilir?','Doğru kalibrasyon, bütün girişimlerin yok olduğunu kanıtlamaz.',['Kalibrasyon yapılınca numune hattı gereksizdir.','Girişim yalnız filtre tartımını etkiler.','Her SO₂ yöntemi aynı kimyayla çalışır.'],'Ölçüm sistemi başka bileşenlere çapraz cevap verebilir. Kalibrasyonun geçerli olması, seçicilik ve saha gaz matrisi kontrolünü ortadan kaldırmaz.','Ana katalog: TS ISO 7935; ortak saha esasları')
 add(T,E,['TS EN 12619','EPA Method 25A'],'FID ile toplam organik karbon sonucundan tek bir VOC bileşiğinin derişimi doğrudan çıkarılabilir mi?','Hayır; toplam cevap, tekil bileşik türlemesi değildir.',['Evet, her zaman benzen sonucudur.','Evet, her organik aynı yanıt faktöründedir.','Evet, gaz hacmi bilinmeden çıkarılır.'],'TOC/FID toplam cevap ölçerken tekil bileşik analizi başka bir hedef ve analitik ayrım gerektirir. Kalibrasyon gazı ve karbon eşdeğeri de önemlidir.','D24; D45; ortak saha esasları: VOC / TOC')
 add(T,E,['TS EN 13649','TSE CEN/TS 13649'],'Aktif adsorban tüpünde kırılma neyi anlatır?','Hedef bileşiğin ön toplama bölümünü geçerek kayba / arka bölüme ulaşmasını',['Tüp etiketinin yırtılmasını','Pompa saatinin durmasını','DGM sıcaklığının her zaman sıfır olmasını'],'Adsorban kapasitesi, nem, sıcaklık ve debi yakalama verimini etkiler. Arka bölüm kontrolü ve doğrulanmış hacim/debi aralığı bu nedenle önemlidir.','D37; ortak saha esasları: filtre / adsorban ve VOC')
 add(T,E,['TS 9503'],'Bacada islilik değerlendirmesi ile gravimetrik toz derişimi için hangisi doğrudur?','Farklı ölçülen büyüklüklerdir; otomatik birbirine dönüştürülmez.',['Aynı birim ve sonuçtur.','İslilik daima µg/m³ olarak tartılır.','Filtre koyuluğu bütün metallerin kütlesini verir.'],'Optik / karşılaştırmalı islilik göstergesi, tartılan toz kütlesi değildir. Sonuç ve yöntem kapsamı doğru adlandırılmalıdır.','D35; ana katalog: TS 9503 — kavramsal')
@@ -155,6 +156,8 @@ add('İmisyon — hesap ve kayıt',I,['TS EN 12341'],'Blank ve tartım değerlen
 add('İmisyon — PM10 ve PM2,5',I,['TS EN 12341'],'EN 12341:2023’te numunenin 1 ay içinde tartım odasına alınması ifadesi nasıl yorumlanmalıdır?','Bu adıma özgü sınırdır; tüm parametrelere 1 ay analiz bekletme izni değildir.',['Bütün kimyasal numuneler 1 ay oda sıcaklığında kalabilir.','Tüm filtreler 1 ay dışarıda açık bekletilir.','Saklama koşulları artık uygulanmaz.'],'§6.4.3, gravimetrik analiz için tartım odasına alınmayı belirtir. Süreyi bağlamından çıkarıp bütün saklama ve analiz adımlarına genellemek doğru değildir.','D23:31')
 add('İmisyon — hesap ve kayıt',I,['TS EN 12341','TS 2341','Pasif Örnekleme'],'Nokta koordinatı ile numune kimliğinin eşleşmesi neden kontrol edilir?','Sonucun doğru saha noktasına bağlanması için',['Sonucu otomatik düşürmek için','Bütün noktaları tek nokta saymak için','Sadece dosya boyutunu artırmak için'],'İmisyon değerlendirmesi konuma bağlıdır. Numune ile koordinatın karışması, doğru analiz edilmiş bir sonucun yanlış yer için yorumlanmasına yol açabilir.','Ortak saha esasları: meteoroloji / saha kayıtları')
 add('İmisyon — hesap ve kayıt',I,['Pasif Örnekleme'],'Pasif tüpte yalnız toplam tutulan kütleyi bilmek ortam derişimini bulmaya her zaman yeterli midir?','Hayır; alım hızı, süre ve yöntem düzeltmeleri de gerekir.',['Evet, kütle daima derişimdir.','Evet, tüpün boyu tek başına yeterlidir.','Evet, yalnız baca çapı eklenir.'],'Kütle derişim değildir. Pasif tüpün bileşik ve koşullara özgü alım modeli, maruziyet ve blank değerlendirmesiyle birlikte kullanılır.','Ortak saha esasları: pasif örnekleme')
+
+extend(add)
 
 payload=dict(schemaVersion=1,title='Emisyon / İmisyon Açıklamalı Testler',
  notice='Eğitim ve öz değerlendirme içindir; mesleki yetki veya standart uygunluk belgesi değildir. Sorular belirtilen kaynak sürümü / kapsamıyla değerlendirilir.',

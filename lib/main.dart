@@ -94,8 +94,9 @@ class _StandardsHomePageState extends State<StandardsHomePage> {
             final categories = _categories(items);
             final filteredItems = _filter(items);
 
-            return Column(
-              children: [
+            return CustomScrollView(
+              slivers: [
+                SliverToBoxAdapter(child:Column(children:[
                 Padding(
                   padding: const EdgeInsets.fromLTRB(16, 12, 16, 0),
                   child: FilledButton.icon(
@@ -134,7 +135,7 @@ class _StandardsHomePageState extends State<StandardsHomePage> {
                   ),
                 ),
                 SizedBox(
-                  height: 52,
+                  height: 40 + MediaQuery.textScalerOf(context).scale(18),
                   child: ListView.separated(
                     padding: const EdgeInsets.symmetric(horizontal: 16),
                     scrollDirection: Axis.horizontal,
@@ -161,16 +162,11 @@ class _StandardsHomePageState extends State<StandardsHomePage> {
                     ],
                   ),
                 ),
-                Expanded(
-                  child: filteredItems.isEmpty
-                      ? const Center(child: Text('Sonuç bulunamadı.'))
-                      : ListView.separated(
-                          padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
-                          itemCount: filteredItems.length,
-                          separatorBuilder: (_, __) => const SizedBox(height: 10),
-                          itemBuilder: (context, index) => StandardCard(item: filteredItems[index]),
-                        ),
-                ),
+                ])),
+                if(filteredItems.isEmpty) const SliverToBoxAdapter(child:Padding(padding:EdgeInsets.all(24),child:Text('Sonuç bulunamadı.'))),
+                SliverPadding(padding:const EdgeInsets.fromLTRB(16,0,16,16),sliver:SliverList(delegate:SliverChildBuilderDelegate(
+                  (context,index)=>Padding(padding:const EdgeInsets.only(bottom:10),child:StandardCard(item:filteredItems[index])),
+                  childCount:filteredItems.length))),
               ],
             );
           },

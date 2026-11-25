@@ -137,7 +137,22 @@
       "gaps": [
         "Bu kartın doğrulaması şema ve belirtilen kaynak maddeleriyle sınırlıdır; tam yöntem yeterlilik incelemesi sürüyor.",
         "Kaynak sürümünün güncel yürürlük durumu ve laboratuvarın onaylı uygulaması ayrıca kontrol edilmeli."
-      ]
+      ],
+      "sourceDetails": [
+        {
+          "reference": "D08:4-6",
+          "title": "EPA Method 4.pdf",
+          "edition": "",
+          "url": ""
+        },
+        {
+          "reference": "D09:8",
+          "title": "EPA Method 5.pdf",
+          "edition": "",
+          "url": ""
+        }
+      ],
+      "evidence": []
     },
     {
       "id": "halogen_epa26a",
@@ -287,7 +302,16 @@
       "gaps": [
         "Bu kartın doğrulaması şema ve belirtilen kaynak maddeleriyle sınırlıdır; tam yöntem yeterlilik incelemesi sürüyor.",
         "Kaynak sürümünün güncel yürürlük durumu ve laboratuvarın onaylı uygulaması ayrıca kontrol edilmeli."
-      ]
+      ],
+      "sourceDetails": [
+        {
+          "reference": "D06:4,6-8",
+          "title": "EPA Method 26A.pdf",
+          "edition": "",
+          "url": ""
+        }
+      ],
+      "evidence": []
     },
     {
       "id": "fluoride_epa13a_rear",
@@ -423,7 +447,22 @@
       "gaps": [
         "Bu kartın doğrulaması şema ve belirtilen kaynak maddeleriyle sınırlıdır; tam yöntem yeterlilik incelemesi sürüyor.",
         "Kaynak sürümünün güncel yürürlük durumu ve laboratuvarın onaylı uygulaması ayrıca kontrol edilmeli."
-      ]
+      ],
+      "sourceDetails": [
+        {
+          "reference": "D05:2,5-7",
+          "title": "EPA Method 13A.pdf",
+          "edition": "",
+          "url": ""
+        },
+        {
+          "reference": "D09:8",
+          "title": "EPA Method 5.pdf",
+          "edition": "",
+          "url": ""
+        }
+      ],
+      "evidence": []
     },
     {
       "id": "fluoride_epa13a_front",
@@ -559,7 +598,22 @@
       "gaps": [
         "Bu kartın doğrulaması şema ve belirtilen kaynak maddeleriyle sınırlıdır; tam yöntem yeterlilik incelemesi sürüyor.",
         "Kaynak sürümünün güncel yürürlük durumu ve laboratuvarın onaylı uygulaması ayrıca kontrol edilmeli."
-      ]
+      ],
+      "sourceDetails": [
+        {
+          "reference": "D05:2,5-7",
+          "title": "EPA Method 13A.pdf",
+          "edition": "",
+          "url": ""
+        },
+        {
+          "reference": "D09:8",
+          "title": "EPA Method 5.pdf",
+          "edition": "",
+          "url": ""
+        }
+      ],
+      "evidence": []
     },
     {
       "id": "metals_epa29_hg",
@@ -720,7 +774,16 @@
       "gaps": [
         "Bu kartın doğrulaması şema ve belirtilen kaynak maddeleriyle sınırlıdır; tam yöntem yeterlilik incelemesi sürüyor.",
         "Kaynak sürümünün güncel yürürlük durumu ve laboratuvarın onaylı uygulaması ayrıca kontrol edilmeli."
-      ]
+      ],
+      "sourceDetails": [
+        {
+          "reference": "D07:6-7,11-14",
+          "title": "EPA Method 29.pdf",
+          "edition": "",
+          "url": ""
+        }
+      ],
+      "evidence": []
     },
     {
       "id": "metals_epa29_no_hg",
@@ -857,7 +920,16 @@
       "gaps": [
         "Bu kartın doğrulaması şema ve belirtilen kaynak maddeleriyle sınırlıdır; tam yöntem yeterlilik incelemesi sürüyor.",
         "Kaynak sürümünün güncel yürürlük durumu ve laboratuvarın onaylı uygulaması ayrıca kontrol edilmeli."
-      ]
+      ],
+      "sourceDetails": [
+        {
+          "reference": "D07:6-7,11-14",
+          "title": "EPA Method 29.pdf",
+          "edition": "",
+          "url": ""
+        }
+      ],
+      "evidence": []
     },
     {
       "id": "pah_iso11338_b",
@@ -982,7 +1054,16 @@
       "gaps": [
         "Bu kartın doğrulaması şema ve belirtilen kaynak maddeleriyle sınırlıdır; tam yöntem yeterlilik incelemesi sürüyor.",
         "Kaynak sürümünün güncel yürürlük durumu ve laboratuvarın onaylı uygulaması ayrıca kontrol edilmeli."
-      ]
+      ],
+      "sourceDetails": [
+        {
+          "reference": "D27:13-15",
+          "title": "ISO 11338 1.pdf",
+          "edition": "",
+          "url": ""
+        }
+      ],
+      "evidence": []
     },
     {
       "id": "dioxin_en1948_filter",
@@ -1110,7 +1191,16 @@
       "gaps": [
         "Bu kartın doğrulaması şema ve belirtilen kaynak maddeleriyle sınırlıdır; tam yöntem yeterlilik incelemesi sürüyor.",
         "Kaynak sürümünün güncel yürürlük durumu ve laboratuvarın onaylı uygulaması ayrıca kontrol edilmeli."
-      ]
+      ],
+      "sourceDetails": [
+        {
+          "reference": "D25:15,21-26",
+          "title": "TS EN 1948 1.pdf",
+          "edition": "",
+          "url": ""
+        }
+      ],
+      "evidence": []
     },
     {
       "id": "acid_epa8",
@@ -1243,138 +1333,16 @@
       "gaps": [
         "Bu kartın doğrulaması şema ve belirtilen kaynak maddeleriyle sınırlıdır; tam yöntem yeterlilik incelemesi sürüyor.",
         "Kaynak sürümünün güncel yürürlük durumu ve laboratuvarın onaylı uygulaması ayrıca kontrol edilmeli."
-      ]
-    },
-    {
-      "id": "hcn_tl115",
-      "scope": "Emisyon",
-      "parameter": "Siyanür / HCN",
-      "method": "CARB Method 426 — TL115 aktarımı",
-      "sourceVersion": "TL115 rev.07 / 05.03.2021",
-      "variant": "Talimat kaynaklı dört şişeli düzen",
-      "sources": [
-        "D41:5-7"
       ],
-      "reviewState": "sop_only",
-      "train": [
+      "sourceDetails": [
         {
-          "id": "probe",
-          "kind": "probe",
-          "label": "Nozül ve prob",
-          "content": "Metoda uygun malzeme / sıcaklık",
-          "amount": "",
-          "optional": false
-        },
-        {
-          "id": "filter",
-          "kind": "filter",
-          "label": "Filtre",
-          "content": "Metoda uygun filtre tutucu",
-          "amount": "",
-          "optional": false
-        },
-        {
-          "id": "i1",
-          "kind": "impinger",
-          "label": "İmpinger 1",
-          "content": "0,1 N NaOH",
-          "amount": "100 mL",
-          "optional": false
-        },
-        {
-          "id": "i2",
-          "kind": "impinger",
-          "label": "İmpinger 2",
-          "content": "0,1 N NaOH",
-          "amount": "100 mL",
-          "optional": false
-        },
-        {
-          "id": "i3",
-          "kind": "impinger",
-          "label": "İmpinger 3",
-          "content": "Başlangıçta boş",
-          "amount": "",
-          "optional": false
-        },
-        {
-          "id": "i4",
-          "kind": "impinger",
-          "label": "İmpinger 4",
-          "content": "Ön tartımı yapılmış silika jel",
-          "amount": "yaklaşık 200–300 g",
-          "optional": false
-        },
-        {
-          "id": "meter",
-          "kind": "meter",
-          "label": "Çekiş ve hacim ölçümü",
-          "content": "Pompa, DGM ve debi kontrol grubu; iç bağlantı sırası cihaz şemasına göre",
-          "amount": "",
-          "optional": false
+          "reference": "D10:2,4-7",
+          "title": "EPA Method 8.pdf",
+          "edition": "",
+          "url": ""
         }
       ],
-      "limits": [
-        {
-          "label": "Çekiş debisi",
-          "value": "Talimat izokinetik örnekleme belirtir; sabit debi atanmaz."
-        },
-        {
-          "label": "Toplam çekiş hacmi",
-          "value": "Talimat tablosundaki 500 mL numune miktarı, çekilen gaz hacmi değildir."
-        },
-        {
-          "label": "Sıcaklık",
-          "value": "Talimat: şişelere giren gaz <42 °C; buz banyosu."
-        },
-        {
-          "label": "Ölçüm süresi",
-          "value": "Talimat: her örnekleme noktasında en az 2 dk."
-        }
-      ],
-      "phases": [
-        {
-          "title": "Hazırlık",
-          "items": [
-            "Birincil CARB metniyle karşılaştırma tamamlanmadı. Gösterilen çözelti ve miktarlar TL115 §5.4.1.3 aktarımıdır."
-          ]
-        },
-        {
-          "title": "Kaçak kontrolü",
-          "items": [
-            "TL115’teki 0,57 L/dk ifadesi tek başına evrensel kabul sınırı yapılmadı; birincil metot doğrulaması gerekli."
-          ]
-        },
-        {
-          "title": "Örnekleme",
-          "items": [
-            "Dört şişeli talimat düzenini ve sıcaklığı kaydet; talimat ile laboratuvarın güncel uygulamasını eşleştir."
-          ]
-        },
-        {
-          "title": "Geri kazanım",
-          "items": [
-            "Nozül, prob, şişe içerikleri, filtre ve blank ayrı kimliklerle izlenir. Koruyucu ilavesi ve girişim giderme ayrıntılarının birincil doğrulaması bekleniyor."
-          ]
-        },
-        {
-          "title": "Saklama ve taşıma",
-          "items": [
-            "TL115 soğukta saklama belirtir; sayısal sıcaklık ve azami süre doğrulanmadı. Siyanür numunesi için asitleme yönlendirmesi verilmez."
-          ]
-        },
-        {
-          "title": "Laboratuvara teslim",
-          "items": [
-            "Tesis, baca/nokta, tarih, başlangıç–bitiş, metot/sürüm, numuneci ve fraksiyon kimliklerini etiketle.",
-            "Numune kabı, kapak, miktar, blank, mühür, taşıma koşulu, teslim saati ve teslim alanı izlenebilir teslim formuna kaydet."
-          ]
-        }
-      ],
-      "gaps": [
-        "Bu kartın doğrulaması şema ve belirtilen kaynak maddeleriyle sınırlıdır; tam yöntem yeterlilik incelemesi sürüyor.",
-        "Kaynak sürümünün güncel yürürlük durumu ve laboratuvarın onaylı uygulaması ayrıca kontrol edilmeli."
-      ]
+      "evidence": []
     },
     {
       "id": "hcl_tl89",
@@ -1447,7 +1415,16 @@
       ],
       "gaps": [
         "Birincil standart, impinger tipi, dolum, sıcaklık, verim, geri kazanım ve saklama koşulları karşılaştırılacak."
-      ]
+      ],
+      "sourceDetails": [
+        {
+          "reference": "D53:5-9",
+          "title": "TL89-REV.09-BACADA HCl TAYİNİ STANDART İŞLETME TALİMATI.pdf",
+          "edition": "",
+          "url": ""
+        }
+      ],
+      "evidence": []
     },
     {
       "id": "metals_en14385",
@@ -1520,80 +1497,16 @@
       ],
       "gaps": [
         "Şema, reaktif miktarı, debi, hacim, süre, sıcaklık, geri kazanım, saklama ve bekletme süresi kaynakları tamamlanacak."
-      ]
-    },
-    {
-      "id": "ammonia_ctm027",
-      "scope": "Emisyon",
-      "parameter": "Amonyak",
-      "method": "EPA CTM 027",
-      "sourceVersion": "Arşiv kaynağı — ayrıntılı inceleme bekliyor",
-      "variant": "Yöntem kartı hazırlanıyor",
-      "sources": [
-        "D17:20-24"
       ],
-      "reviewState": "pending",
-      "train": [],
-      "limits": [
+      "sourceDetails": [
         {
-          "label": "Çekiş debisi",
-          "value": "Henüz doğrulanmadı."
-        },
-        {
-          "label": "Toplam çekiş hacmi",
-          "value": "Henüz doğrulanmadı."
-        },
-        {
-          "label": "Sıcaklık",
-          "value": "Henüz doğrulanmadı."
-        },
-        {
-          "label": "Ölçüm süresi",
-          "value": "Henüz doğrulanmadı."
+          "reference": "D47:4-6",
+          "title": "TL179-02 BACAGAZINDA AĞIR METAL TAYİNİ STANDART İŞLETME TALİMATI.pdf",
+          "edition": "",
+          "url": ""
         }
       ],
-      "phases": [
-        {
-          "title": "Hazırlık",
-          "items": [
-            "Bu metodun kapsamı, tren düzeni ve sayısal koşulları birincil kaynaktan tamamlanacak. Başka bir metodun şeması burada kullanılmaz."
-          ]
-        },
-        {
-          "title": "Kaçak kontrolü",
-          "items": [
-            "Bu aşamanın ayrıntılı kaynak doğrulaması henüz tamamlanmadı."
-          ]
-        },
-        {
-          "title": "Örnekleme",
-          "items": [
-            "Bu aşamanın ayrıntılı kaynak doğrulaması henüz tamamlanmadı."
-          ]
-        },
-        {
-          "title": "Geri kazanım",
-          "items": [
-            "Bu aşamanın ayrıntılı kaynak doğrulaması henüz tamamlanmadı."
-          ]
-        },
-        {
-          "title": "Saklama ve taşıma",
-          "items": [
-            "Bu aşamanın ayrıntılı kaynak doğrulaması henüz tamamlanmadı."
-          ]
-        },
-        {
-          "title": "Laboratuvara teslim",
-          "items": [
-            "Tesis, baca/nokta, tarih, başlangıç–bitiş, metot/sürüm, numuneci ve fraksiyon kimliklerini etiketle.",
-            "Numune kabı, kapak, miktar, blank, mühür, taşıma koşulu, teslim saati ve teslim alanı izlenebilir teslim formuna kaydet."
-          ]
-        }
-      ],
-      "gaps": [
-        "Şema, reaktif miktarı, debi, hacim, süre, sıcaklık, geri kazanım, saklama ve bekletme süresi kaynakları tamamlanacak."
-      ]
+      "evidence": []
     },
     {
       "id": "ammonia_2071",
@@ -1666,226 +1579,16 @@
       ],
       "gaps": [
         "Şema, reaktif miktarı, debi, hacim, süre, sıcaklık, geri kazanım, saklama ve bekletme süresi kaynakları tamamlanacak."
-      ]
-    },
-    {
-      "id": "chromium_carb425",
-      "scope": "Emisyon",
-      "parameter": "Krom(VI)",
-      "method": "CARB Method 425",
-      "sourceVersion": "Arşiv kaynağı — ayrıntılı inceleme bekliyor",
-      "variant": "Yöntem kartı hazırlanıyor",
-      "sources": [
-        "D17:12-19"
       ],
-      "reviewState": "pending",
-      "train": [],
-      "limits": [
+      "sourceDetails": [
         {
-          "label": "Çekiş debisi",
-          "value": "Henüz doğrulanmadı."
-        },
-        {
-          "label": "Toplam çekiş hacmi",
-          "value": "Henüz doğrulanmadı."
-        },
-        {
-          "label": "Sıcaklık",
-          "value": "Henüz doğrulanmadı."
-        },
-        {
-          "label": "Ölçüm süresi",
-          "value": "Henüz doğrulanmadı."
+          "reference": "D17:20-24",
+          "title": "Siyanür Örneklemesi, Sülfirik Asit Örneklemesi.pdf",
+          "edition": "",
+          "url": ""
         }
       ],
-      "phases": [
-        {
-          "title": "Hazırlık",
-          "items": [
-            "Bu metodun kapsamı, tren düzeni ve sayısal koşulları birincil kaynaktan tamamlanacak. Başka bir metodun şeması burada kullanılmaz."
-          ]
-        },
-        {
-          "title": "Kaçak kontrolü",
-          "items": [
-            "Bu aşamanın ayrıntılı kaynak doğrulaması henüz tamamlanmadı."
-          ]
-        },
-        {
-          "title": "Örnekleme",
-          "items": [
-            "Bu aşamanın ayrıntılı kaynak doğrulaması henüz tamamlanmadı."
-          ]
-        },
-        {
-          "title": "Geri kazanım",
-          "items": [
-            "Bu aşamanın ayrıntılı kaynak doğrulaması henüz tamamlanmadı."
-          ]
-        },
-        {
-          "title": "Saklama ve taşıma",
-          "items": [
-            "Bu aşamanın ayrıntılı kaynak doğrulaması henüz tamamlanmadı."
-          ]
-        },
-        {
-          "title": "Laboratuvara teslim",
-          "items": [
-            "Tesis, baca/nokta, tarih, başlangıç–bitiş, metot/sürüm, numuneci ve fraksiyon kimliklerini etiketle.",
-            "Numune kabı, kapak, miktar, blank, mühür, taşıma koşulu, teslim saati ve teslim alanı izlenebilir teslim formuna kaydet."
-          ]
-        }
-      ],
-      "gaps": [
-        "Şema, reaktif miktarı, debi, hacim, süre, sıcaklık, geri kazanım, saklama ve bekletme süresi kaynakları tamamlanacak."
-      ]
-    },
-    {
-      "id": "formaldehyde_epa323",
-      "scope": "Emisyon",
-      "parameter": "Formaldehit",
-      "method": "EPA Method 323",
-      "sourceVersion": "Arşiv kaynağı — ayrıntılı inceleme bekliyor",
-      "variant": "Yöntem kartı hazırlanıyor",
-      "sources": [
-        "D39:4-8"
-      ],
-      "reviewState": "pending",
-      "train": [],
-      "limits": [
-        {
-          "label": "Çekiş debisi",
-          "value": "Henüz doğrulanmadı."
-        },
-        {
-          "label": "Toplam çekiş hacmi",
-          "value": "Henüz doğrulanmadı."
-        },
-        {
-          "label": "Sıcaklık",
-          "value": "Henüz doğrulanmadı."
-        },
-        {
-          "label": "Ölçüm süresi",
-          "value": "Henüz doğrulanmadı."
-        }
-      ],
-      "phases": [
-        {
-          "title": "Hazırlık",
-          "items": [
-            "Bu metodun kapsamı, tren düzeni ve sayısal koşulları birincil kaynaktan tamamlanacak. Başka bir metodun şeması burada kullanılmaz."
-          ]
-        },
-        {
-          "title": "Kaçak kontrolü",
-          "items": [
-            "Bu aşamanın ayrıntılı kaynak doğrulaması henüz tamamlanmadı."
-          ]
-        },
-        {
-          "title": "Örnekleme",
-          "items": [
-            "Bu aşamanın ayrıntılı kaynak doğrulaması henüz tamamlanmadı."
-          ]
-        },
-        {
-          "title": "Geri kazanım",
-          "items": [
-            "Bu aşamanın ayrıntılı kaynak doğrulaması henüz tamamlanmadı."
-          ]
-        },
-        {
-          "title": "Saklama ve taşıma",
-          "items": [
-            "Bu aşamanın ayrıntılı kaynak doğrulaması henüz tamamlanmadı."
-          ]
-        },
-        {
-          "title": "Laboratuvara teslim",
-          "items": [
-            "Tesis, baca/nokta, tarih, başlangıç–bitiş, metot/sürüm, numuneci ve fraksiyon kimliklerini etiketle.",
-            "Numune kabı, kapak, miktar, blank, mühür, taşıma koşulu, teslim saati ve teslim alanı izlenebilir teslim formuna kaydet."
-          ]
-        }
-      ],
-      "gaps": [
-        "Şema, reaktif miktarı, debi, hacim, süre, sıcaklık, geri kazanım, saklama ve bekletme süresi kaynakları tamamlanacak."
-      ]
-    },
-    {
-      "id": "h2s_epa11",
-      "scope": "Emisyon",
-      "parameter": "Hidrojen sülfür",
-      "method": "EPA Method 11",
-      "sourceVersion": "Arşiv kaynağı — ayrıntılı inceleme bekliyor",
-      "variant": "Yöntem kartı hazırlanıyor",
-      "sources": [
-        "D04:3-7"
-      ],
-      "reviewState": "pending",
-      "train": [],
-      "limits": [
-        {
-          "label": "Çekiş debisi",
-          "value": "Henüz doğrulanmadı."
-        },
-        {
-          "label": "Toplam çekiş hacmi",
-          "value": "Henüz doğrulanmadı."
-        },
-        {
-          "label": "Sıcaklık",
-          "value": "Henüz doğrulanmadı."
-        },
-        {
-          "label": "Ölçüm süresi",
-          "value": "Henüz doğrulanmadı."
-        }
-      ],
-      "phases": [
-        {
-          "title": "Hazırlık",
-          "items": [
-            "Bu metodun kapsamı, tren düzeni ve sayısal koşulları birincil kaynaktan tamamlanacak. Başka bir metodun şeması burada kullanılmaz."
-          ]
-        },
-        {
-          "title": "Kaçak kontrolü",
-          "items": [
-            "Bu aşamanın ayrıntılı kaynak doğrulaması henüz tamamlanmadı."
-          ]
-        },
-        {
-          "title": "Örnekleme",
-          "items": [
-            "Bu aşamanın ayrıntılı kaynak doğrulaması henüz tamamlanmadı."
-          ]
-        },
-        {
-          "title": "Geri kazanım",
-          "items": [
-            "Bu aşamanın ayrıntılı kaynak doğrulaması henüz tamamlanmadı."
-          ]
-        },
-        {
-          "title": "Saklama ve taşıma",
-          "items": [
-            "Bu aşamanın ayrıntılı kaynak doğrulaması henüz tamamlanmadı."
-          ]
-        },
-        {
-          "title": "Laboratuvara teslim",
-          "items": [
-            "Tesis, baca/nokta, tarih, başlangıç–bitiş, metot/sürüm, numuneci ve fraksiyon kimliklerini etiketle.",
-            "Numune kabı, kapak, miktar, blank, mühür, taşıma koşulu, teslim saati ve teslim alanı izlenebilir teslim formuna kaydet."
-          ]
-        }
-      ],
-      "gaps": [
-        "Şema, reaktif miktarı, debi, hacim, süre, sıcaklık, geri kazanım, saklama ve bekletme süresi kaynakları tamamlanacak."
-      ]
+      "evidence": []
     },
     {
       "id": "ambient_pm10",
@@ -1964,7 +1667,16 @@
         "Bu kartın doğrulaması şema ve belirtilen kaynak maddeleriyle sınırlıdır; tam yöntem yeterlilik incelemesi sürüyor.",
         "Kaynak sürümünün güncel yürürlük durumu ve laboratuvarın onaylı uygulaması ayrıca kontrol edilmeli."
       ],
-      "trainNote": "İmpinger kullanılmaz; boyut ayırıcı giriş → filtre → debi/hacim kontrolü."
+      "trainNote": "İmpinger kullanılmaz; boyut ayırıcı giriş → filtre → debi/hacim kontrolü.",
+      "sourceDetails": [
+        {
+          "reference": "D23:8,30-31",
+          "title": "TS EN 12341.pdf",
+          "edition": "",
+          "url": ""
+        }
+      ],
+      "evidence": []
     },
     {
       "id": "ambient_pm2_5",
@@ -2043,7 +1755,16 @@
         "Bu kartın doğrulaması şema ve belirtilen kaynak maddeleriyle sınırlıdır; tam yöntem yeterlilik incelemesi sürüyor.",
         "Kaynak sürümünün güncel yürürlük durumu ve laboratuvarın onaylı uygulaması ayrıca kontrol edilmeli."
       ],
-      "trainNote": "İmpinger kullanılmaz; boyut ayırıcı giriş → filtre → debi/hacim kontrolü."
+      "trainNote": "İmpinger kullanılmaz; boyut ayırıcı giriş → filtre → debi/hacim kontrolü.",
+      "sourceDetails": [
+        {
+          "reference": "D23:8,30-31",
+          "title": "TS EN 12341.pdf",
+          "edition": "",
+          "url": ""
+        }
+      ],
+      "evidence": []
     },
     {
       "id": "dustfall",
@@ -2119,7 +1840,16 @@
         "Bu kartın doğrulaması şema ve belirtilen kaynak maddeleriyle sınırlıdır; tam yöntem yeterlilik incelemesi sürüyor.",
         "Kaynak sürümünün güncel yürürlük durumu ve laboratuvarın onaylı uygulaması ayrıca kontrol edilmeli."
       ],
-      "trainNote": "Bu metoda impinger veya izokinetik baca nozülü atanmaz."
+      "trainNote": "Bu metoda impinger veya izokinetik baca nozülü atanmaz.",
+      "sourceDetails": [
+        {
+          "reference": "D44:4-6",
+          "title": "TL14-REV07- ORTAM HAVASINDA ÇÖKEN TOZ TAYİNİ STANDART İŞLETME TALİMATI.pdf",
+          "edition": "",
+          "url": ""
+        }
+      ],
+      "evidence": []
     },
     {
       "id": "passive",
@@ -2195,7 +1925,1120 @@
         "Bu kartın doğrulaması şema ve belirtilen kaynak maddeleriyle sınırlıdır; tam yöntem yeterlilik incelemesi sürüyor.",
         "Kaynak sürümünün güncel yürürlük durumu ve laboratuvarın onaylı uygulaması ayrıca kontrol edilmeli."
       ],
-      "trainNote": "Bu metoda impinger veya izokinetik baca nozülü atanmaz."
+      "trainNote": "Bu metoda impinger veya izokinetik baca nozülü atanmaz.",
+      "sourceDetails": [
+        {
+          "reference": "D46:4-5",
+          "title": "TL15-04 ORTAM HAVASINDA GAZ TAYİNİ STANDART İŞLETME TALİMATI.pdf",
+          "edition": "",
+          "url": ""
+        }
+      ],
+      "evidence": []
+    },
+    {
+      "id": "so2_iso7935",
+      "scope": "Emisyon",
+      "parameter": "SO₂ — gaz analizörü",
+      "method": "ISO 7935",
+      "sourceVersion": "2024, ikinci baskı",
+      "variant": "Ekstraktif veya baca içi AMS; absorpsiyon treni değildir",
+      "sources": [
+        "D32:1,11-15"
+      ],
+      "reviewState": "sections_checked",
+      "train": [],
+      "limits": [
+        {
+          "label": "Çekiş debisi",
+          "value": "Seçilen AMS’nin doğrulanmış numune debisi; tek L/dk atanmaz."
+        },
+        {
+          "label": "Toplam çekiş hacmi",
+          "value": "Toplanan sıvı numune hacmi yerine zamanla eşleşen gaz derişimi kaydı vardır."
+        },
+        {
+          "label": "Sıcaklık",
+          "value": "Sistemin sıcak-kuru / sıcak-yaş / seyreltmeli koşullandırmasını gaz matrisine göre seç; yoğuşma ve SO₂ kaybını önle."
+        },
+        {
+          "label": "Ölçüm süresi",
+          "value": "Sistem tepki süresi performans kriteri ≤200 s. Bu, tek ölçümün 200 s sürmesi gerektiği anlamına gelmez."
+        }
+      ],
+      "phases": [
+        {
+          "title": "Hazırlık",
+          "items": [
+            "Su buharı, toz, beklenen SO₂ ve girişim yapan bileşenleri belirle. Isıtmalı filtre gereksinimini ve kısa hattı değerlendir (§8.1)."
+          ]
+        },
+        {
+          "title": "Kaçak kontrolü",
+          "items": [
+            "Tablo 1: hat/koşullandırma kayıp ve kaçağı ölçülen değerin ≤%2’si; deney D.12–D.13. EPA impinger kaçak debisiyle aynı büyüklük değildir."
+          ]
+        },
+        {
+          "title": "Örnekleme",
+          "items": [
+            "Temsilî konum ve gaz homojenliğini doğrula. Ekstraktif ve in situ sistemin ilgili bağlantılarını ayrı uygula.",
+            "24 saatte sıfır/span drift sınırı kullanılan en düşük aralığın üst değerinin ≤%2’sidir. Payda ölçülen derişim değildir."
+          ]
+        },
+        {
+          "title": "Geri kazanım",
+          "items": [
+            "Laboratuvar sıvı geri yıkaması uygulanmaz; ham zaman serisi, sıfır/span, drift, aralık ve olay kayıtlarını koru."
+          ]
+        },
+        {
+          "title": "Saklama ve taşıma",
+          "items": [
+            "Bu düzende kimyasal numune saklama süresi yoktur; veri ve kalibrasyon kayıtlarının bütünlüğünü koru."
+          ]
+        },
+        {
+          "title": "Laboratuvara teslim",
+          "items": [
+            "Derişim, metot/sürüm, QA/QC ve belirsizlik kayıtlarını rapor birimine teslim et. §8.3 kütle dönüşümü 0 °C / 101,325 kPa içindir; kuru/yaş baz ayrıca düzeltilir."
+          ]
+        }
+      ],
+      "gaps": [
+        "Tablo 1’in bütün performans deneyleri ve kurulu/taşınabilir sistemin kullanım planı ayrıca tamamlanmalı."
+      ],
+      "evidence": [
+        {
+          "field": "Performans / drift",
+          "references": [
+            "D32:12-13"
+          ],
+          "clause": "§7; Tablo 1"
+        },
+        {
+          "field": "Yer / koşullandırma / baz",
+          "references": [
+            "D32:11-15"
+          ],
+          "clause": "§6, §8–9"
+        }
+      ],
+      "trainNote": "Bu kartta impinger çizimi yoktur: ekstraktif analizör hattı veya in situ optik sistem seçilir.",
+      "sourceDetails": [
+        {
+          "reference": "D32:1,11-15",
+          "title": "TS ISO 7935.pdf",
+          "edition": "",
+          "url": ""
+        }
+      ]
+    },
+    {
+      "id": "ammonia_ctm027_empty3",
+      "scope": "Emisyon",
+      "parameter": "Amonyak",
+      "method": "EPA CTM 027",
+      "sourceVersion": "14.08.1997 — koşullu / taslak",
+      "variant": "İn-stack filtre; üçüncü şişe boş",
+      "sources": [
+        "W01:1-6"
+      ],
+      "reviewState": "sections_checked",
+      "train": [
+        {
+          "id": "probe",
+          "kind": "probe",
+          "label": "Baca içi başlık",
+          "content": "Cam/kuvars nozül",
+          "amount": "",
+          "optional": false
+        },
+        {
+          "id": "filter",
+          "kind": "filter",
+          "label": "Baca içi filtre",
+          "content": "Bağlayıcısız cam elyaf; Method 17 düzeni",
+          "amount": "",
+          "optional": false
+        },
+        {
+          "id": "line",
+          "kind": "probe",
+          "label": "Prob / bağlantı",
+          "content": "Cam/kuvars numune hattı",
+          "amount": "",
+          "optional": false
+        },
+        {
+          "id": "i1",
+          "kind": "impinger",
+          "label": "İmpinger 1",
+          "content": "0,1 N H₂SO₄",
+          "amount": "100 mL",
+          "optional": false
+        },
+        {
+          "id": "i2",
+          "kind": "impinger",
+          "label": "İmpinger 2",
+          "content": "0,1 N H₂SO₄",
+          "amount": "100 mL",
+          "optional": false
+        },
+        {
+          "id": "i3",
+          "kind": "impinger",
+          "label": "İmpinger 3",
+          "content": "Başlangıçta boş",
+          "amount": "",
+          "optional": false
+        },
+        {
+          "id": "i4",
+          "kind": "impinger",
+          "label": "İmpinger 4",
+          "content": "Ön tartımlı silika jel",
+          "amount": "200–300 g",
+          "optional": false
+        },
+        {
+          "id": "meter",
+          "kind": "meter",
+          "label": "Çekiş ve hacim ölçümü",
+          "content": "Pompa, DGM ve debi kontrol grubu; iç bağlantı sırası cihaz şemasına göre",
+          "amount": "",
+          "optional": false
+        }
+      ],
+      "limits": [
+        {
+          "label": "Çekiş debisi",
+          "value": "İzokinetik; evrensel sabit debi yok."
+        },
+        {
+          "label": "Toplam çekiş hacmi",
+          "value": "Hedef derişim ve analiz tayin sınırından planlanır."
+        },
+        {
+          "label": "Sıcaklık",
+          "value": "Filtre/ön hat baca sıcaklığında veya biraz üzerinde; şişeler buz-su banyosunda."
+        },
+        {
+          "label": "Ölçüm süresi",
+          "value": "Hedef hacme göre; 3 ölçüm. Blankta 1 saat gaz çekilmeden bekletme, ölçüm süresi değildir."
+        }
+      ],
+      "phases": [
+        {
+          "title": "Hazırlık",
+          "items": [
+            "Yöntem kömürlü kazanda doğrulanmıştır; başka kaynakta uygulanabilirlik doğrulaması gerekir. Banyo sıvının en az 10 cm üstüne çıksın; 10 dk soğut."
+          ]
+        },
+        {
+          "title": "Kaçak kontrolü",
+          "items": [
+            "Method 17 §4.1.4 bağlantısını uygula; test vakumu ve sonucu kaydet."
+          ]
+        },
+        {
+          "title": "Örnekleme",
+          "items": [
+            "Üçüncü şişeye asit seçeneğini yüksek NH₃/yüksek debide kırılmayı değerlendirmek için kullan."
+          ]
+        },
+        {
+          "title": "Geri kazanım",
+          "items": [
+            "1–3 numaralı şişeyi ayrı HDPE kaplara, kendi deiyonize su yıkamasıyla al. Her fraksiyonu laboratuvarın 250 mL son hacmi için ≤230 mL tut. Aseton kurutma yıkamasını numuneye katma; filtreyi sakla.",
+            "Filtre arkası/prob bağlantısı ve prob yıkama fraksiyonlarını Tablo A-1’deki asit/su sırasıyla ayrı geri kazan; yalnız şişe sıvılarını teslim etmek tam geri kazanım değildir."
+          ]
+        },
+        {
+          "title": "Saklama ve taşıma",
+          "items": [
+            "Buzlu soğutucuda taşı; 4 °C’de, dondurmadan sakla; 2 hafta içinde analiz et. Filtreyi temiz petride serin/kuru tut."
+          ]
+        },
+        {
+          "title": "Laboratuvara teslim",
+          "items": [
+            "Tesis, baca/nokta, tarih, başlangıç–bitiş, metot/sürüm, numuneci ve fraksiyon kimliklerini etiketle.",
+            "Numune kabı, kapak, miktar, blank, mühür, taşıma koşulu, teslim saati ve teslim alanı izlenebilir teslim formuna kaydet.",
+            "Üç sıvı fraksiyonu, filtre, asit blankı, hacimler ve zamanları bildir."
+          ]
+        }
+      ],
+      "gaps": [
+        "Diğer kaynak tipleri ve tüm Method 17 bağlantılı koşulların uygulama yeterliliği ayrıca doğrulanmalı."
+      ],
+      "evidence": [
+        {
+          "field": "Düzen / dolum",
+          "references": [
+            "W01:2-4"
+          ],
+          "clause": "§1–2"
+        },
+        {
+          "field": "Debi / hacim / süre",
+          "references": [
+            "W01:4-5"
+          ],
+          "clause": "§3.1–3.5"
+        },
+        {
+          "field": "Sıcaklık / geri kazanım",
+          "references": [
+            "W01:4-5"
+          ],
+          "clause": "§3.2–3.4"
+        },
+        {
+          "field": "Saklama / teslim",
+          "references": [
+            "W01:5-7"
+          ],
+          "clause": "§3.4, §4.1; Tablo A-1"
+        }
+      ],
+      "sourceDetails": [
+        {
+          "reference": "W01:1-6",
+          "title": "US EPA CTM-027 — Ammonia",
+          "edition": "Taslak / koşullu yöntem, 14.08.1997",
+          "url": "https://www.epa.gov/sites/default/files/2020-08/documents/ctm-027.pdf"
+        }
+      ]
+    },
+    {
+      "id": "ammonia_ctm027_acid3",
+      "scope": "Emisyon",
+      "parameter": "Amonyak",
+      "method": "EPA CTM 027",
+      "sourceVersion": "14.08.1997 — koşullu / taslak",
+      "variant": "İn-stack filtre; üçüncü şişe asitli — yüksek yük / kırılma kontrolü",
+      "sources": [
+        "W01:1-6"
+      ],
+      "reviewState": "sections_checked",
+      "train": [
+        {
+          "id": "probe",
+          "kind": "probe",
+          "label": "Baca içi başlık",
+          "content": "Cam/kuvars nozül",
+          "amount": "",
+          "optional": false
+        },
+        {
+          "id": "filter",
+          "kind": "filter",
+          "label": "Baca içi filtre",
+          "content": "Bağlayıcısız cam elyaf; Method 17 düzeni",
+          "amount": "",
+          "optional": false
+        },
+        {
+          "id": "line",
+          "kind": "probe",
+          "label": "Prob / bağlantı",
+          "content": "Cam/kuvars numune hattı",
+          "amount": "",
+          "optional": false
+        },
+        {
+          "id": "i1",
+          "kind": "impinger",
+          "label": "İmpinger 1",
+          "content": "0,1 N H₂SO₄",
+          "amount": "100 mL",
+          "optional": false
+        },
+        {
+          "id": "i2",
+          "kind": "impinger",
+          "label": "İmpinger 2",
+          "content": "0,1 N H₂SO₄",
+          "amount": "100 mL",
+          "optional": false
+        },
+        {
+          "id": "i3",
+          "kind": "impinger",
+          "label": "İmpinger 3",
+          "content": "0,1 N H₂SO₄",
+          "amount": "100 mL",
+          "optional": false
+        },
+        {
+          "id": "i4",
+          "kind": "impinger",
+          "label": "İmpinger 4",
+          "content": "Ön tartımlı silika jel",
+          "amount": "200–300 g",
+          "optional": false
+        },
+        {
+          "id": "meter",
+          "kind": "meter",
+          "label": "Çekiş ve hacim ölçümü",
+          "content": "Pompa, DGM ve debi kontrol grubu; iç bağlantı sırası cihaz şemasına göre",
+          "amount": "",
+          "optional": false
+        }
+      ],
+      "limits": [
+        {
+          "label": "Çekiş debisi",
+          "value": "İzokinetik; evrensel sabit debi yok."
+        },
+        {
+          "label": "Toplam çekiş hacmi",
+          "value": "Hedef derişim ve analiz tayin sınırından planlanır."
+        },
+        {
+          "label": "Sıcaklık",
+          "value": "Filtre/ön hat baca sıcaklığında veya biraz üzerinde; şişeler buz-su banyosunda."
+        },
+        {
+          "label": "Ölçüm süresi",
+          "value": "Hedef hacme göre; 3 ölçüm. Blankta 1 saat gaz çekilmeden bekletme, ölçüm süresi değildir."
+        }
+      ],
+      "phases": [
+        {
+          "title": "Hazırlık",
+          "items": [
+            "Yöntem kömürlü kazanda doğrulanmıştır; başka kaynakta uygulanabilirlik doğrulaması gerekir. Banyo sıvının en az 10 cm üstüne çıksın; 10 dk soğut."
+          ]
+        },
+        {
+          "title": "Kaçak kontrolü",
+          "items": [
+            "Method 17 §4.1.4 bağlantısını uygula; test vakumu ve sonucu kaydet."
+          ]
+        },
+        {
+          "title": "Örnekleme",
+          "items": [
+            "Üçüncü şişeye asit seçeneğini yüksek NH₃/yüksek debide kırılmayı değerlendirmek için kullan."
+          ]
+        },
+        {
+          "title": "Geri kazanım",
+          "items": [
+            "1–3 numaralı şişeyi ayrı HDPE kaplara, kendi deiyonize su yıkamasıyla al. Her fraksiyonu laboratuvarın 250 mL son hacmi için ≤230 mL tut. Aseton kurutma yıkamasını numuneye katma; filtreyi sakla.",
+            "Filtre arkası/prob bağlantısı ve prob yıkama fraksiyonlarını Tablo A-1’deki asit/su sırasıyla ayrı geri kazan; yalnız şişe sıvılarını teslim etmek tam geri kazanım değildir."
+          ]
+        },
+        {
+          "title": "Saklama ve taşıma",
+          "items": [
+            "Buzlu soğutucuda taşı; 4 °C’de, dondurmadan sakla; 2 hafta içinde analiz et. Filtreyi temiz petride serin/kuru tut."
+          ]
+        },
+        {
+          "title": "Laboratuvara teslim",
+          "items": [
+            "Tesis, baca/nokta, tarih, başlangıç–bitiş, metot/sürüm, numuneci ve fraksiyon kimliklerini etiketle.",
+            "Numune kabı, kapak, miktar, blank, mühür, taşıma koşulu, teslim saati ve teslim alanı izlenebilir teslim formuna kaydet.",
+            "Üç sıvı fraksiyonu, filtre, asit blankı, hacimler ve zamanları bildir."
+          ]
+        }
+      ],
+      "gaps": [
+        "Diğer kaynak tipleri ve tüm Method 17 bağlantılı koşulların uygulama yeterliliği ayrıca doğrulanmalı."
+      ],
+      "evidence": [
+        {
+          "field": "Düzen / dolum",
+          "references": [
+            "W01:2-4"
+          ],
+          "clause": "§1–2"
+        },
+        {
+          "field": "Debi / hacim / süre",
+          "references": [
+            "W01:4-5"
+          ],
+          "clause": "§3.1–3.5"
+        },
+        {
+          "field": "Sıcaklık / geri kazanım",
+          "references": [
+            "W01:4-5"
+          ],
+          "clause": "§3.2–3.4"
+        },
+        {
+          "field": "Saklama / teslim",
+          "references": [
+            "W01:5-7"
+          ],
+          "clause": "§3.4, §4.1; Tablo A-1"
+        }
+      ],
+      "sourceDetails": [
+        {
+          "reference": "W01:1-6",
+          "title": "US EPA CTM-027 — Ammonia",
+          "edition": "Taslak / koşullu yöntem, 14.08.1997",
+          "url": "https://www.epa.gov/sites/default/files/2020-08/documents/ctm-027.pdf"
+        }
+      ]
+    },
+    {
+      "id": "formaldehyde_epa323",
+      "scope": "Emisyon",
+      "parameter": "Formaldehit",
+      "method": "EPA Method 323",
+      "sourceVersion": "31.05.2023",
+      "variant": "Üç midget impinger; doğalgaz yakılan sabit kaynaklar",
+      "sources": [
+        "W04:1-7"
+      ],
+      "reviewState": "sections_checked",
+      "train": [
+        {
+          "id": "probe",
+          "kind": "probe",
+          "label": "Prob ve hat",
+          "content": "Isıtma zorunlu değil; yoğuşan madde geri kazanılır",
+          "amount": "",
+          "optional": false
+        },
+        {
+          "id": "i1",
+          "kind": "impinger",
+          "label": "İmpinger 1",
+          "content": "Başlangıçta boş — kondensat tutucu",
+          "amount": "",
+          "optional": false
+        },
+        {
+          "id": "i2",
+          "kind": "impinger",
+          "label": "İmpinger 2",
+          "content": "Reaktif su",
+          "amount": "20 mL",
+          "optional": false
+        },
+        {
+          "id": "i3",
+          "kind": "impinger",
+          "label": "İmpinger 3",
+          "content": "Silika jel",
+          "amount": "Metinde sabit gram değeri verilmez",
+          "optional": false
+        },
+        {
+          "id": "meter",
+          "kind": "meter",
+          "label": "Çekiş ve hacim ölçümü",
+          "content": "Pompa, DGM ve debi kontrol grubu; iç bağlantı sırası cihaz şemasına göre",
+          "amount": "",
+          "optional": false
+        }
+      ],
+      "limits": [
+        {
+          "label": "Çekiş debisi",
+          "value": "0,2–0,4 L/dk; 0,4 L/dk aşılmaz."
+        },
+        {
+          "label": "Toplam çekiş hacmi",
+          "value": "Beklenen derişim ve tayin sınırına göre."
+        },
+        {
+          "label": "Sıcaklık",
+          "value": "Isıtılmış numune hattı gerektirmez; numuneyi buz üzerinde koru."
+        },
+        {
+          "label": "Ölçüm süresi",
+          "value": "Hedef hacme göre; sabit 30 dk atanmaz."
+        }
+      ],
+      "phases": [
+        {
+          "title": "Hazırlık",
+          "items": [
+            "Doğalgaz yakılan kaynak kapsamını kontrol et. Şişeleri dolum sonrası 0,5 g hassasiyetle tart."
+          ]
+        },
+        {
+          "title": "Kaçak kontrolü",
+          "items": [
+            "Ön/son kaçak, planlanan/gerçek debinin %2’sinden küçük olmalı."
+          ]
+        },
+        {
+          "title": "Örnekleme",
+          "items": [
+            "Debi ve DGM sıcaklığını 5–10 dakikada bir kaydet; geri yıkamadan önce son tartımı yap."
+          ]
+        },
+        {
+          "title": "Geri kazanım",
+          "items": [
+            "Prob, hat ve kondensatı suyla geri kazan. Yıkama genellikle ≤10 mL; uzun hattın tam geri kazanımı önceliklidir. Amber, PTFE kapaklı 40 mL VOA kullan; gerekirse büyük kap seç, boşluğu reaktif suyla tamamla ve hacmi kaydet."
+          ]
+        },
+        {
+          "title": "Saklama ve taşıma",
+          "items": [
+            "Buz üzerinde taşı/sakla, mümkün olan en kısa sürede analiz et. Bu metinde evrensel sayısal azami bekletme süresi verilmez."
+          ]
+        },
+        {
+          "title": "Laboratuvara teslim",
+          "items": [
+            "Tesis, baca/nokta, tarih, başlangıç–bitiş, metot/sürüm, numuneci ve fraksiyon kimliklerini etiketle.",
+            "Numune kabı, kapak, miktar, blank, mühür, taşıma koşulu, teslim saati ve teslim alanı izlenebilir teslim formuna kaydet.",
+            "Hacim artışı ve tayin sınırı etkisini bildir; en az bir çift numune kontrolünü kaydet."
+          ]
+        }
+      ],
+      "gaps": [
+        "Kapsam dışı prosesler ve bütün analitik kalite kriterleri ayrıca değerlendirilmeli."
+      ],
+      "evidence": [
+        {
+          "field": "Düzen / dolum",
+          "references": [
+            "W04:2-3"
+          ],
+          "clause": "§6–7"
+        },
+        {
+          "field": "Debi / kaçak / kayıt",
+          "references": [
+            "W04:3-5"
+          ],
+          "clause": "§8"
+        },
+        {
+          "field": "Geri kazanım / saklama",
+          "references": [
+            "W04:5-6"
+          ],
+          "clause": "§8.3–8.4"
+        }
+      ],
+      "sourceDetails": [
+        {
+          "reference": "W04:1-7",
+          "title": "US EPA Method 323 — Formaldehyde",
+          "edition": "31.05.2023 revizyonu",
+          "url": "https://www.epa.gov/system/files/documents/2023-06/Method%20323%202023%20revision.pdf"
+        }
+      ]
+    },
+    {
+      "id": "h2s_epa11",
+      "scope": "Emisyon",
+      "parameter": "Hidrojen sülfür",
+      "method": "EPA Method 11",
+      "sourceVersion": "03.08.2017",
+      "variant": "Rafineri yakıt gazı; beş midget impinger",
+      "sources": [
+        "D04:1-8"
+      ],
+      "reviewState": "sections_checked",
+      "train": [
+        {
+          "id": "probe",
+          "kind": "probe",
+          "label": "Yakıt gazı hattı",
+          "content": "Kapsama uygun güvenli basınçlı gaz bağlantısı",
+          "amount": "",
+          "optional": false
+        },
+        {
+          "id": "i1",
+          "kind": "impinger",
+          "label": "İmpinger 1",
+          "content": "%3 H₂O₂",
+          "amount": "15 mL",
+          "optional": false
+        },
+        {
+          "id": "i2",
+          "kind": "impinger",
+          "label": "İmpinger 2",
+          "content": "Başlangıçta boş",
+          "amount": "",
+          "optional": false
+        },
+        {
+          "id": "i3",
+          "kind": "impinger",
+          "label": "İmpinger 3",
+          "content": "Metoda göre hazırlanmış CdSO₄ çözeltisi",
+          "amount": "15 mL",
+          "optional": false
+        },
+        {
+          "id": "i4",
+          "kind": "impinger",
+          "label": "İmpinger 4",
+          "content": "Metoda göre hazırlanmış CdSO₄ çözeltisi",
+          "amount": "15 mL",
+          "optional": false
+        },
+        {
+          "id": "i5",
+          "kind": "impinger",
+          "label": "İmpinger 5",
+          "content": "Metoda göre hazırlanmış CdSO₄ çözeltisi",
+          "amount": "15 mL",
+          "optional": false
+        },
+        {
+          "id": "dryer",
+          "kind": "trap",
+          "label": "Kurutma tüpü",
+          "content": "Silika jel",
+          "amount": "En fazla 30 g",
+          "optional": false
+        },
+        {
+          "id": "meter",
+          "kind": "meter",
+          "label": "Çekiş ve hacim ölçümü",
+          "content": "Pompa, DGM ve debi kontrol grubu; iç bağlantı sırası cihaz şemasına göre",
+          "amount": "",
+          "optional": false
+        }
+      ],
+      "limits": [
+        {
+          "label": "Çekiş debisi",
+          "value": "Yaklaşık 1 L/dk; sabitlik ±%10."
+        },
+        {
+          "label": "Toplam çekiş hacmi",
+          "value": "Gerçek debi ve süreden / sayaçtan belirlenir."
+        },
+        {
+          "label": "Sıcaklık",
+          "value": "İmpingerler buz-su banyosunda."
+        },
+        {
+          "label": "Ölçüm süresi",
+          "value": "En az 10 dk; sonra ayrı 15 dk temiz hava geçirme."
+        }
+      ],
+      "phases": [
+        {
+          "title": "Hazırlık",
+          "items": [
+            "30 mL midget şişeler; ilk şişeye peroksit, 3–5’e CdSO₄. Basınçlı yakıt gazında pompa normalde gerekmez.",
+            "CdSO₄ absorbanı §7.1.1: 41 g 3CdSO₄·8H₂O + 15 mL 0,1 M H₂SO₄, deiyonize/distile suyla 1 L; pH 3 ±0,1. 10 damla Antifoam B; kullanılmazsa §11.2 geri kazanımı değişir."
+          ]
+        },
+        {
+          "title": "Kaçak kontrolü",
+          "items": [
+            "25 cm su sütununda basınç düşüşü 1 dakikada ≤1 cm. Pompa kullanılırsa onun ek kaçak testini de yap."
+          ]
+        },
+        {
+          "title": "Örnekleme",
+          "items": [
+            "Hattı 1–2 dk ön süpür. Son CdSO₄ şişesinde sararma tükenme göstergesidir: ölçüm geçersizdir."
+          ]
+        },
+        {
+          "title": "Geri kazanım",
+          "items": [
+            "Ölçüm sonrası aktif karbonla temizlenmiş havayı 1 L/dk, 15 dk geçir. Peroksit fraksiyonunu ayır; 3–5’i suyla 500 mL iyot balonuna geri kazan; §11.2 alternatifini gerektiğinde kontrol et."
+          ]
+        },
+        {
+          "title": "Saklama ve taşıma",
+          "items": [
+            "Isıdan ve doğrudan güneşten koru. Sayısal azami bekletme süresi bu kartta doğrulanmadı."
+          ]
+        },
+        {
+          "title": "Laboratuvara teslim",
+          "items": [
+            "Tesis, baca/nokta, tarih, başlangıç–bitiş, metot/sürüm, numuneci ve fraksiyon kimliklerini etiketle.",
+            "Numune kabı, kapak, miktar, blank, mühür, taşıma koşulu, teslim saati ve teslim alanı izlenebilir teslim formuna kaydet.",
+            "Son şişenin renk kontrolünü, süpürme süresini ve CdSO₄ fraksiyonunu bildir."
+          ]
+        }
+      ],
+      "gaps": [
+        "CdSO₄ hazırlama ve titrasyon ayrıntıları §7 ve §11 ile; sayısal bekletme süresi laboratuvarla tamamlanmalı."
+      ],
+      "evidence": [
+        {
+          "field": "Kapsam / düzen",
+          "references": [
+            "D04:1-4,6"
+          ],
+          "clause": "§1, §6–8.1"
+        },
+        {
+          "field": "Debi / süre / kaçak",
+          "references": [
+            "D04:6-7"
+          ],
+          "clause": "§8.2–8.4"
+        },
+        {
+          "field": "Geri kazanım / saklama",
+          "references": [
+            "D04:7-8"
+          ],
+          "clause": "§8.5–8.6"
+        }
+      ],
+      "sourceDetails": [
+        {
+          "reference": "D04:1-8",
+          "title": "EPA Method 11.pdf",
+          "edition": "",
+          "url": ""
+        }
+      ]
+    },
+    {
+      "id": "chromium_carb425",
+      "scope": "Emisyon",
+      "parameter": "Krom(VI)",
+      "method": "CARB Method 425",
+      "sourceVersion": "28.07.1997",
+      "variant": "İki alkali şişeden sonra filtre; toplam Cr ve Cr(VI)",
+      "sources": [
+        "W02:12-14,22-24",
+        "W05:9-12"
+      ],
+      "reviewState": "sections_checked",
+      "train": [
+        {
+          "id": "probe",
+          "kind": "probe",
+          "label": "Cam nozül / cam iç prob",
+          "content": "Numuneye temas eden yüzeylerden Cr bulaşmasını önle",
+          "amount": "",
+          "optional": false
+        },
+        {
+          "id": "i1",
+          "kind": "impinger",
+          "label": "İmpinger 1",
+          "content": "0,1 N NaOH",
+          "amount": "100 mL",
+          "optional": false
+        },
+        {
+          "id": "i2",
+          "kind": "impinger",
+          "label": "İmpinger 2",
+          "content": "0,1 N NaOH",
+          "amount": "100 mL",
+          "optional": false
+        },
+        {
+          "id": "filter",
+          "kind": "filter",
+          "label": "Şişelerden sonra filtre",
+          "content": "PTFE kaplı cam elyaf",
+          "amount": "",
+          "optional": false
+        },
+        {
+          "id": "dryer",
+          "kind": "trap",
+          "label": "Silika jel nem tutucu",
+          "content": "CARB Method 5 bağlantılı ön tartımlı silika jel",
+          "amount": "200–300 g",
+          "optional": false
+        },
+        {
+          "id": "meter",
+          "kind": "meter",
+          "label": "Çekiş ve hacim ölçümü",
+          "content": "Pompa, DGM ve debi kontrol grubu; iç bağlantı sırası cihaz şemasına göre",
+          "amount": "",
+          "optional": false
+        }
+      ],
+      "limits": [
+        {
+          "label": "Çekiş debisi",
+          "value": "İzokinetik; sabit debi atanmaz."
+        },
+        {
+          "label": "Toplam çekiş hacmi",
+          "value": "Ön plan: hedef derişim ve tayin sınırı."
+        },
+        {
+          "label": "Sıcaklık",
+          "value": "Buz banyosu; numunenin pH’ı örnekleme/taşımada >8."
+        },
+        {
+          "label": "Ölçüm süresi",
+          "value": "En az 3 ölçüm; CARB 5 §4.1.2’de nokta başına ≥2 dk; gerekli toplam hacim de sağlanır."
+        }
+      ],
+      "phases": [
+        {
+          "title": "Hazırlık",
+          "items": [
+            "Aynı parti taze 0,1 N NaOH kullan; yüksek partiküllü kaynakta uygulanabilirlik gösterilmemiştir."
+          ]
+        },
+        {
+          "title": "Kaçak kontrolü",
+          "items": [
+            "CARB 5 §4.1.4: ön/son test zorunlu; sınır min(%4 ortalama debi, 0,57 L/dk). Vakum koşullarını da uygula."
+          ]
+        },
+        {
+          "title": "Örnekleme",
+          "items": [
+            "Filtre şişelerden sonradır; en az bir saha blankında tüm işlemler yapılır, kaynak gazı çekilmez."
+          ]
+        },
+        {
+          "title": "Geri kazanım",
+          "items": [
+            "24 saat içinde geri kazan. Probu ≥100 mL 0,1 N NaOH ile yıka; ölçüp Cr(VI)/toplam Cr için böl. İmpinger yıkaması gerekmez. Yüksek derişimde iki şişe birleştirilir, filtre ≥30 dk ekstrakte edilip bölünür; düşük derişimde §13.3.2’ye göre ayrı tut."
+          ]
+        },
+        {
+          "title": "Saklama ve taşıma",
+          "items": [
+            "Geri kazanım sonrası ≤4 °C, analiz öncesi en fazla 2 hafta; pH >8 koşulunu koru."
+          ]
+        },
+        {
+          "title": "Laboratuvara teslim",
+          "items": [
+            "Tesis, baca/nokta, tarih, başlangıç–bitiş, metot/sürüm, numuneci ve fraksiyon kimliklerini etiketle.",
+            "Numune kabı, kapak, miktar, blank, mühür, taşıma koşulu, teslim saati ve teslim alanı izlenebilir teslim formuna kaydet.",
+            "pH, geri kazanım zamanı ve her bölüntünün hacmini bildir."
+          ]
+        }
+      ],
+      "gaps": [
+        "Metot bağlantıları ve kaynağa özgü performans protokolü ayrıca uygulanmalı; tüm analitik adımlar bu kartta yoktur."
+      ],
+      "evidence": [
+        {
+          "field": "Düzen / dolum",
+          "references": [
+            "W02:13,22-24",
+            "W05:10"
+          ],
+          "clause": "§7.1, §12–13; CARB 5 §4.1.3"
+        },
+        {
+          "field": "Kaçak / süre",
+          "references": [
+            "W05:9-12"
+          ],
+          "clause": "§4.1.2–4.1.4"
+        },
+        {
+          "field": "Geri kazanım / saklama",
+          "references": [
+            "W02:12,22-24"
+          ],
+          "clause": "§4.1, §12–13"
+        }
+      ],
+      "sourceDetails": [
+        {
+          "reference": "W02:12-14,22-24",
+          "title": "CARB Method 425 — Total Chromium and Hexavalent Chromium",
+          "edition": "28.07.1997",
+          "url": "https://ww2.arb.ca.gov/sites/default/files/classic/testmeth/vol3/m_425.pdf"
+        },
+        {
+          "reference": "W05:9-12",
+          "title": "CARB Method 5 — Particulate Matter",
+          "edition": "28.07.1997",
+          "url": "https://ww2.arb.ca.gov/sites/default/files/classic/testmeth/vol1/m_5.pdf"
+        }
+      ]
+    },
+    {
+      "id": "cyanide_carb426",
+      "scope": "Emisyon",
+      "parameter": "Siyanür / HCN",
+      "method": "CARB Method 426",
+      "sourceVersion": "22.01.1987",
+      "variant": "Gaz ve aerosol siyanürleri; toplam siyanür",
+      "sources": [
+        "W03:2-7,9-13",
+        "W05:9-12"
+      ],
+      "reviewState": "sections_checked",
+      "train": [
+        {
+          "id": "probe",
+          "kind": "probe",
+          "label": "Nozül / prob",
+          "content": "CARB 5 bağlantılı izokinetik düzen",
+          "amount": "",
+          "optional": false
+        },
+        {
+          "id": "filter",
+          "kind": "filter",
+          "label": "Cam elyaf filtre",
+          "content": "Laboratuvardaki Whatman 42 ile karıştırma",
+          "amount": "",
+          "optional": false
+        },
+        {
+          "id": "i1",
+          "kind": "impinger",
+          "label": "İmpinger 1",
+          "content": "0,1 N NaOH",
+          "amount": "100 mL",
+          "optional": false
+        },
+        {
+          "id": "i2",
+          "kind": "impinger",
+          "label": "İmpinger 2",
+          "content": "0,1 N NaOH",
+          "amount": "100 mL",
+          "optional": false
+        },
+        {
+          "id": "i3",
+          "kind": "impinger",
+          "label": "İmpinger 3",
+          "content": "Başlangıçta boş",
+          "amount": "",
+          "optional": false
+        },
+        {
+          "id": "i4",
+          "kind": "impinger",
+          "label": "İmpinger 4",
+          "content": "Ön tartımlı silika jel",
+          "amount": "200–300 g",
+          "optional": false
+        },
+        {
+          "id": "meter",
+          "kind": "meter",
+          "label": "Çekiş ve hacim ölçümü",
+          "content": "Pompa, DGM ve debi kontrol grubu; iç bağlantı sırası cihaz şemasına göre",
+          "amount": "",
+          "optional": false
+        }
+      ],
+      "limits": [
+        {
+          "label": "Çekiş debisi",
+          "value": "İzokinetik; sabit debi atanmaz."
+        },
+        {
+          "label": "Toplam çekiş hacmi",
+          "value": "Gaz hacmi ile geri kazanılan sıvı hacmi farklıdır."
+        },
+        {
+          "label": "Sıcaklık",
+          "value": "CARB 5 bağlantılı ısıtma/soğutma; TL115’teki <42 °C burada bağımsız norm olarak doğrulanmadı."
+        },
+        {
+          "label": "Ölçüm süresi",
+          "value": "CARB 5 §4.1.2: nokta başına ≥2 dk; toplam süre ve hacim kaynak planına bağlı."
+        }
+      ],
+      "phases": [
+        {
+          "title": "Hazırlık",
+          "items": [
+            "Yalnız gaz HCN türlemesi değildir. İlk/üçüncü/dördüncü şişe modifiye, ikinci standart tiptir. Yüksek CO₂’de §4.1.2 alternatifini ayrıca değerlendir."
+          ]
+        },
+        {
+          "title": "Kaçak kontrolü",
+          "items": [
+            "CARB 5 §4.1.4 ön/son ve değişim testlerini uygula; kabul min(%4 Q, 0,57 L/dk)."
+          ]
+        },
+        {
+          "title": "Örnekleme",
+          "items": [
+            "Siyanürü sahada asitleme; korumada pH ≥12 gerekir."
+          ]
+        },
+        {
+          "title": "Geri kazanım",
+          "items": [
+            "Filtreyi 50 mL 0,1 N NaOH içeren cam kaba al. Prob/nozülü 0,1 N NaOH ile geri kazan. İlk üç şişe fraksiyonunu koru; silika jelle karıştırma.",
+            "Oksidanı KI-nişasta kâğıdıyla kontrol et. Mavi sonuçta askorbik asitle gider, ardından 0,6 g/L ekle. Koruyucu 10 N NaOH: numunenin her litresine 2 mL ve pH ≥12 kontrolü."
+          ]
+        },
+        {
+          "title": "Saklama ve taşıma",
+          "items": [
+            "Sızdırmaz, tanımlı kap; sayısal sıcaklık/azami süre bu incelemede doğrulanmadı."
+          ]
+        },
+        {
+          "title": "Laboratuvara teslim",
+          "items": [
+            "Tesis, baca/nokta, tarih, başlangıç–bitiş, metot/sürüm, numuneci ve fraksiyon kimliklerini etiketle.",
+            "Numune kabı, kapak, miktar, blank, mühür, taşıma koşulu, teslim saati ve teslim alanı izlenebilir teslim formuna kaydet.",
+            "pH, oksidan testi, koruyucu dozları ve fraksiyon hacimlerini bildir."
+          ]
+        }
+      ],
+      "gaps": [
+        "§6.2.4 yıkama kabı numarasında metin içi çelişki var: silika jel kabına sıvı eklenmez; fraksiyon planı laboratuvarla çözülmeden uygulama talimatı tamamlanmış sayılmaz.",
+        "Sayısal saklama sıcaklığı ve bekletme süresi ayrıca tamamlanmalı."
+      ],
+      "evidence": [
+        {
+          "field": "Düzen / dolum",
+          "references": [
+            "W03:3-4,9-10"
+          ],
+          "clause": "§4.1, §6.1"
+        },
+        {
+          "field": "Geri kazanım / koruma",
+          "references": [
+            "W03:10-13"
+          ],
+          "clause": "§6.2"
+        },
+        {
+          "field": "Kaçak / süre",
+          "references": [
+            "W05:9-12"
+          ],
+          "clause": "§4.1.2–4.1.4"
+        }
+      ],
+      "sourceDetails": [
+        {
+          "reference": "W03:2-7,9-13",
+          "title": "CARB Method 426 — Cyanide",
+          "edition": "22.01.1987",
+          "url": "https://ww2.arb.ca.gov/sites/default/files/classic/testmeth/vol3/meth426.pdf"
+        },
+        {
+          "reference": "W05:9-12",
+          "title": "CARB Method 5 — Particulate Matter",
+          "edition": "28.07.1997",
+          "url": "https://ww2.arb.ca.gov/sites/default/files/classic/testmeth/vol1/m_5.pdf"
+        }
+      ]
     }
   ],
   "fundamentals": [

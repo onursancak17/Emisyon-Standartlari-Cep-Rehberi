@@ -56,5 +56,33 @@ class FieldGuideTests(unittest.TestCase):
         pending['train']=bad['profiles'][0]['train']
         with self.assertRaises(AssertionError):validate(bad,SOURCES)
 
+    def test_ammonia_uses_in_stack_filter_and_two_third_bottle_variants(self):
+        for pid in ('ammonia_ctm027_empty3','ammonia_ctm027_acid3'):
+            p=P[pid]
+            self.assertEqual([n['id'] for n in p['train']][:3],['probe','filter','line'])
+            self.assertIn('Baca içi',p['train'][1]['label'])
+        third=lambda pid:next(n for n in P[pid]['train'] if n['id']=='i3')
+        self.assertIn('boş',third('ammonia_ctm027_empty3')['content'])
+        self.assertEqual(third('ammonia_ctm027_acid3')['amount'],'100 mL')
+
+    def test_chromium_filter_is_after_alkali_catch(self):
+        ids=[n['id'] for n in P['chromium_carb425']['train']]
+        self.assertEqual(ids[:4],['probe','i1','i2','filter'])
+
+    def test_small_midget_methods_do_not_inherit_large_impinger_recipe(self):
+        h2s=P['h2s_epa11']['train']
+        self.assertEqual([n['amount'] for n in h2s if n['kind']=='impinger'],['15 mL','','15 mL','15 mL','15 mL'])
+        self.assertEqual(next(n for n in h2s if n['id']=='dryer')['amount'],'En fazla 30 g')
+        formal=P['formaldehyde_epa323']['train']
+        self.assertEqual(next(n for n in formal if n['id']=='i2')['amount'],'20 mL')
+        self.assertNotIn('filter',[n['id'] for n in formal])
+
+    def test_offline_source_index_and_evidence_are_consistent(self):
+        bundled=json.loads((ROOT/'assets/source_index.json').read_text(encoding='utf-8'))
+        self.assertEqual(bundled,SOURCES)
+        bad=copy.deepcopy(DATA)
+        next(p for p in bad['profiles'] if p['reviewState']=='sections_checked')['evidence'][0]['references']=['W01:999']
+        with self.assertRaises(AssertionError):validate(bad,SOURCES)
+
 
 if __name__=='__main__':unittest.main()

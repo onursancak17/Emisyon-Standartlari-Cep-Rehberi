@@ -4,169 +4,496 @@
     "code": "ISDL / MID",
     "category": "Emisyon",
     "subgroup": "Kalite Kontrol / Raporlanabilirlik",
-    "keywords": ["ISDL", "MID", "tayin limiti", "minimum hacim", "blank"],
+    "keywords": [
+      "ISDL",
+      "MID",
+      "tayin limiti",
+      "minimum hacim",
+      "blank"
+    ],
     "purpose": "Sahaya çıkmadan önce ölçümün raporlanabilir olup olmayacağını, hedef tayin limiti ve minimum örnekleme hacmi üzerinden kontrol eden kalite planlama bölümüdür.",
     "duration": "Süre sabit değildir; hedef hacim, debi ve tayin limitiyle hesaplanır.",
     "flowRate": "Debi ilgili kirletici metodundan gelir; bu bölüm hacim hedefi ve raporlama limitini kontrol eder.",
-    "equipment": ["Limit değeri", "Laboratuvar tayin limiti", "Blank bilgisi", "Debi ve süre planı"],
-    "reagents": ["Reaktif kullanılmaz; ilgili metodun kendi çözeltisi uygulanır."],
-    "fieldSteps": ["Limit ve hedef raporlama seviyesini belirle.", "Gerekli hacmi hesapla.", "Sahadaki gerçek hacimle karşılaştır.", "Hedef tutmazsa rapora not düş."],
-    "criticalControls": ["Blank seviyesi raporlama limitini etkiler.", "Nm³, m³, mg ve µg birimleri karıştırılmamalıdır."],
-    "acceptance": ["Hedef hacim ve raporlama limiti ölçüm öncesi savunulabilir olmalıdır."],
-    "reporting": ["Hedef hacim, gerçek hacim, blank ve tayin limiti birlikte rapor kontrolünde değerlendirilir."],
-    "mistakes": ["Minimum hacmi işletme şartı hacmiyle karıştırmak", "Blank etkisini dikkate almamak"]
+    "equipment": [
+      "Limit değeri",
+      "Laboratuvar tayin limiti",
+      "Blank bilgisi",
+      "Debi ve süre planı"
+    ],
+    "reagents": [
+      "Reaktif kullanılmaz; ilgili metodun kendi çözeltisi uygulanır."
+    ],
+    "fieldSteps": [
+      "Limit ve hedef raporlama seviyesini belirle.",
+      "Gerekli hacmi hesapla.",
+      "Sahadaki gerçek hacimle karşılaştır.",
+      "Hedef tutmazsa rapora not düş."
+    ],
+    "criticalControls": [
+      "Blank seviyesi raporlama limitini etkiler.",
+      "Nm³, m³, mg ve µg birimleri karıştırılmamalıdır."
+    ],
+    "acceptance": [
+      "Hedef hacim ve raporlama limiti ölçüm öncesi savunulabilir olmalıdır."
+    ],
+    "reporting": [
+      "Hedef hacim, gerçek hacim, blank ve tayin limiti birlikte rapor kontrolünde değerlendirilir."
+    ],
+    "mistakes": [
+      "Minimum hacmi işletme şartı hacmiyle karıştırmak",
+      "Blank etkisini dikkate almamak"
+    ]
   },
   {
     "title": "CARB Method 426 Siyanür Örneklemesi",
     "code": "CARB Method 426",
     "category": "Emisyon",
     "subgroup": "Özel Parametreler / Siyanür",
-    "keywords": ["siyanür", "HCN", "NaOH", "CARB 426", "0.1 N NaOH", "500 mL"],
+    "keywords": [
+      "siyanür",
+      "HCN",
+      "NaOH",
+      "CARB 426",
+      "0.1 N NaOH",
+      "500 mL"
+    ],
     "purpose": "Baca gazındaki HCN/siyanürün izokinetik olarak alınması, cam elyaf filtreden geçirilmesi ve 0,1 N NaOH içinde absorbe edilmesi için saha rehberidir.",
     "duration": "Her örnekleme noktasında minimum 2 dakika örnekleme yapılır; proses ve nokta sayısına göre toplam süre planlanır.",
     "flowRate": "İzokinetik şart korunur; kaçak oranı 0,57 L/dk'yı geçmemelidir.",
-    "equipment": ["Whatman No:42 filtre", "Isıtmalı cam prob", "4 yıkama şişesi", "Buz banyosu", "Silika jel", "DGM/pompa"],
-    "reagents": ["1. ve 2. şişe: 100'er mL 0,1 N NaOH", "3. şişe: boş", "4. şişe: 200-300 g silika jel", "Koruma için KI-nişasta, askorbik asit ve 10 N NaOH"],
-    "fieldSteps": ["Ön kaçak testini yap.", "Nozul/probu izokinetik yerleştir.", "Gazın yıkama şişelerine giriş sıcaklığını 42 °C altında tut.", "Ölçüm sonunda nozul ve probu 0,1 N NaOH ile yıka.", "pH > 12 olacak şekilde koru."],
-    "criticalControls": ["NaOH pH'ı düşmemeli.", "Minimum numune miktarı 500 mL'dir.", "Numune mümkün olduğunca soğuk saklanır."],
-    "acceptance": ["Kaçak testi uygun olmalı.", "0,1 N NaOH hacimleri ve kaplar doğru etiketlenmeli.", "Blank kabı hazırlanmalı."],
-    "reporting": ["Debi, süre, hacim, pH koruması, blank ve hesap terimleri FR45/özel forma yazılır."],
-    "mistakes": ["NaOH hacmini yazmamak", "pH>12 korumasını yapmamak", "Blank almamak"]
+    "equipment": [
+      "Whatman No:42 filtre",
+      "Isıtmalı cam prob",
+      "4 yıkama şişesi",
+      "Buz banyosu",
+      "Silika jel",
+      "DGM/pompa"
+    ],
+    "reagents": [
+      "1. ve 2. şişe: 100'er mL 0,1 N NaOH",
+      "3. şişe: boş",
+      "4. şişe: 200-300 g silika jel",
+      "Koruma için KI-nişasta, askorbik asit ve 10 N NaOH"
+    ],
+    "fieldSteps": [
+      "Ön kaçak testini yap.",
+      "Nozul/probu izokinetik yerleştir.",
+      "Gazın yıkama şişelerine giriş sıcaklığını 42 °C altında tut.",
+      "Ölçüm sonunda nozul ve probu 0,1 N NaOH ile yıka.",
+      "pH > 12 olacak şekilde koru."
+    ],
+    "criticalControls": [
+      "NaOH pH'ı düşmemeli.",
+      "Minimum numune miktarı 500 mL'dir.",
+      "Numune mümkün olduğunca soğuk saklanır."
+    ],
+    "acceptance": [
+      "Kaçak testi uygun olmalı.",
+      "0,1 N NaOH hacimleri ve kaplar doğru etiketlenmeli.",
+      "Blank kabı hazırlanmalı."
+    ],
+    "reporting": [
+      "Debi, süre, hacim, pH koruması, blank ve hesap terimleri FR45/özel forma yazılır."
+    ],
+    "mistakes": [
+      "NaOH hacmini yazmamak",
+      "pH>12 korumasını yapmamak",
+      "Blank almamak"
+    ]
   },
   {
     "title": "CARB Method 425 Krom+6 / Cr(VI) Örneklemesi",
     "code": "CARB Method 425",
     "category": "Emisyon",
     "subgroup": "Özel Parametreler / Krom+6",
-    "keywords": ["Cr(VI)", "krom+6", "CARB 425", "pH", "blank"],
+    "keywords": [
+      "Cr(VI)",
+      "krom+6",
+      "CARB 425",
+      "pH",
+      "blank"
+    ],
     "purpose": "Bacada Cr(VI) türünün pH, tür dönüşümü ve kontaminasyon kontrolüyle örneklenmesi için saha rehberidir.",
     "duration": "Süre hedef hacim ve tayin limitine göre belirlenir.",
     "flowRate": "Partikül faz temsili gerekiyorsa izokinetik şart korunur.",
-    "equipment": ["İzokinetik numune alma treni", "Uygun filtre/prob", "Cr(VI) için uygun kap ve absorban"],
-    "reagents": ["Cr(VI) türünü koruyacak absorban laboratuvar talimatına göre hazırlanır."],
-    "fieldSteps": ["Kap ve reaktif blanklarını hazırla.", "pH ve saklama şartını kontrol et.", "Fraksiyonları hızlı ve ayrı etiketle."],
-    "criticalControls": ["Cr toplamı ile Cr(VI) karıştırılmaz.", "pH ve kontaminasyon sonucu doğrudan etkiler."],
-    "acceptance": ["Blanklar ve saklama şartı uygun olmalıdır."],
-    "reporting": ["Cr(VI) sonucu blank ve saklama bilgisiyle raporlanır."],
-    "mistakes": ["Tür dönüşümünü dikkate almamak", "Blank almamak"]
+    "equipment": [
+      "İzokinetik numune alma treni",
+      "Uygun filtre/prob",
+      "Cr(VI) için uygun kap ve absorban"
+    ],
+    "reagents": [
+      "Cr(VI) türünü koruyacak absorban laboratuvar talimatına göre hazırlanır."
+    ],
+    "fieldSteps": [
+      "Kap ve reaktif blanklarını hazırla.",
+      "pH ve saklama şartını kontrol et.",
+      "Fraksiyonları hızlı ve ayrı etiketle."
+    ],
+    "criticalControls": [
+      "Cr toplamı ile Cr(VI) karıştırılmaz.",
+      "pH ve kontaminasyon sonucu doğrudan etkiler."
+    ],
+    "acceptance": [
+      "Blanklar ve saklama şartı uygun olmalıdır."
+    ],
+    "reporting": [
+      "Cr(VI) sonucu blank ve saklama bilgisiyle raporlanır."
+    ],
+    "mistakes": [
+      "Tür dönüşümünü dikkate almamak",
+      "Blank almamak"
+    ]
   },
   {
     "title": "EPA CTM 027 Amonyak Örneklemesi",
     "code": "EPA CTM 027",
     "category": "Emisyon",
     "subgroup": "Özel Parametreler / Amonyak",
-    "keywords": ["amonyak", "NH3", "CTM 027", "H2SO4"],
+    "keywords": [
+      "amonyak",
+      "NH3",
+      "CTM 027",
+      "H2SO4"
+    ],
     "purpose": "Amonyak ölçümünde asidik absorban hattı, yoğuşma kontrolü ve breakthrough takibi için rehberdir.",
     "duration": "Süre hedef hacim, tayin limiti ve proses temsiline göre seçilir.",
     "flowRate": "Debi absorpsiyon verimini bozmayacak seviyede tutulur.",
-    "equipment": ["Asidik absorban impingerleri", "Buz banyosu", "DGM/pompa"],
-    "reagents": ["H2SO4 asidik absorbanı; kesin hacim metoda göre doğrulanır."],
-    "fieldSteps": ["Absorbanları etiketle.", "Kaçak testi yap.", "Debi ve köpürmeyi izle.", "Fraksiyonları kapatıp taşı."],
-    "criticalControls": ["Aşırı debi absorpsiyon verimini düşürür.", "Yoğuşma ve yüzey tutunması düşük sonuç verebilir."],
-    "acceptance": ["Kaçak testi ve absorban kapasitesi uygun olmalıdır."],
-    "reporting": ["NH3 sonucu hacim, absorban ve blank ile raporlanır."],
-    "mistakes": ["Yoğuşmayı kontrol etmemek", "Blank almamak"]
+    "equipment": [
+      "Asidik absorban impingerleri",
+      "Buz banyosu",
+      "DGM/pompa"
+    ],
+    "reagents": [
+      "H2SO4 asidik absorbanı; kesin hacim metoda göre doğrulanır."
+    ],
+    "fieldSteps": [
+      "Absorbanları etiketle.",
+      "Kaçak testi yap.",
+      "Debi ve köpürmeyi izle.",
+      "Fraksiyonları kapatıp taşı."
+    ],
+    "criticalControls": [
+      "Aşırı debi absorpsiyon verimini düşürür.",
+      "Yoğuşma ve yüzey tutunması düşük sonuç verebilir."
+    ],
+    "acceptance": [
+      "Kaçak testi ve absorban kapasitesi uygun olmalıdır."
+    ],
+    "reporting": [
+      "NH3 sonucu hacim, absorban ve blank ile raporlanır."
+    ],
+    "mistakes": [
+      "Yoğuşmayı kontrol etmemek",
+      "Blank almamak"
+    ]
   },
   {
     "title": "SCAQMD Method 207.1 Amonyak Örneklemesi",
     "code": "SCAQMD Method 207.1",
     "category": "Emisyon",
     "subgroup": "Özel Parametreler / Amonyak",
-    "keywords": ["amonyak", "NH3", "SCAQMD 207.1", "Greenburg-Smith", "0.1 N H2SO4", "15-30 L/dk"],
+    "keywords": [
+      "amonyak",
+      "NH3",
+      "SCAQMD 207.1",
+      "Greenburg-Smith",
+      "0.1 N H2SO4",
+      "15-30 L/dk"
+    ],
     "purpose": "Baca gazında NH3 numunesinin SCAQMD Method 207.1 ile sabit akışlı, izokinetik olmayan prensipte alınması için saha rehberidir.",
     "duration": "Sabit tek süre yoktur; kuru gaz sayaç ilk-son değeriyle toplam hacim hesaplanır. Impinger taşması olursa süre ve hacim kayıt edilerek sistem kapatılır.",
     "flowRate": "Örnekleme debisi 15-30 L/dk arasında olmalıdır.",
-    "equipment": ["4 Greenburg-Smith impinger", "Cam/paslanmaz çelik nozul-prob", "Kuru gaz sayacı", "Buz banyosu", "Silika jel", "500 mL dereceli silindir"],
-    "reagents": ["1. impinger: 100 mL 0,1 N H2SO4", "2. impinger: 100 mL 0,1 N H2SO4", "3. impinger: boş", "4. impinger: ağırlığı bilinen silika jel", "Şahit: 200 mL reaktif H2SO4, numune hacmine kadar seyreltilir"],
-    "fieldSteps": ["Düz baca/kanalda uygun nokta seç.", "EPA Method 17 bölüm 4.1.4'e göre kaçak testi yap.", "Debiyi 15-30 L/dk aralığında tut.", "Sayaç sıcaklıklarını ve ilk impinger hacmini izle.", "Ölçüm sonunda impingerleri 0,1 g hassasiyetle tart.", "pH kontrolü yap; pH > 2 ise geçersiz say.", "Sıvıyı 500 mL'ye tamamla ve 1,6-7,2 °C'de sakla."],
-    "criticalControls": ["pH > 2 geçersizliktir.", "Numune 7 gün içinde analiz edilmelidir.", "Metot şahidi hazırlanmalıdır."],
-    "acceptance": ["Debi 15-30 L/dk, pH ≤2, saklama 1,6-7,2 °C olmalıdır."],
-    "reporting": ["Debi, süre, sayaç hacmi, impinger tartımları, pH, şahit ve saklama şartları yazılır."],
-    "mistakes": ["pH kontrolünü atlamak", "H2SO4 yerine yanlış absorban kullanmak", "Metot şahidi hazırlamamak"]
+    "equipment": [
+      "4 Greenburg-Smith impinger",
+      "Cam/paslanmaz çelik nozul-prob",
+      "Kuru gaz sayacı",
+      "Buz banyosu",
+      "Silika jel",
+      "500 mL dereceli silindir"
+    ],
+    "reagents": [
+      "1. impinger: 100 mL 0,1 N H2SO4",
+      "2. impinger: 100 mL 0,1 N H2SO4",
+      "3. impinger: boş",
+      "4. impinger: ağırlığı bilinen silika jel",
+      "Şahit: 200 mL reaktif H2SO4, numune hacmine kadar seyreltilir"
+    ],
+    "fieldSteps": [
+      "Düz baca/kanalda uygun nokta seç.",
+      "EPA Method 17 bölüm 4.1.4'e göre kaçak testi yap.",
+      "Debiyi 15-30 L/dk aralığında tut.",
+      "Sayaç sıcaklıklarını ve ilk impinger hacmini izle.",
+      "Ölçüm sonunda impingerleri 0,1 g hassasiyetle tart.",
+      "pH kontrolü yap; pH > 2 ise geçersiz say.",
+      "Sıvıyı 500 mL'ye tamamla ve 1,6-7,2 °C'de sakla."
+    ],
+    "criticalControls": [
+      "pH > 2 geçersizliktir.",
+      "Numune 7 gün içinde analiz edilmelidir.",
+      "Metot şahidi hazırlanmalıdır."
+    ],
+    "acceptance": [
+      "Debi 15-30 L/dk, pH ≤2, saklama 1,6-7,2 °C olmalıdır."
+    ],
+    "reporting": [
+      "Debi, süre, sayaç hacmi, impinger tartımları, pH, şahit ve saklama şartları yazılır."
+    ],
+    "mistakes": [
+      "pH kontrolünü atlamak",
+      "H2SO4 yerine yanlış absorban kullanmak",
+      "Metot şahidi hazırlamamak"
+    ]
   },
   {
     "title": "EPA Method 13A Toplam Florür Örneklemesi",
     "code": "EPA Method 13A",
     "category": "Emisyon",
     "subgroup": "Asit Gazları / Florür",
-    "keywords": ["flor", "florür", "HF", "EPA Method 13A", "SPADNS", "100 mL", "28 L/dk"],
+    "keywords": [
+      "flor",
+      "florür",
+      "HF",
+      "EPA Method 13A",
+      "SPADNS",
+      "100 mL",
+      "28 L/dk"
+    ],
     "purpose": "Toplam florür numunesinin EPA Method 13A SPADNS yöntemiyle izokinetik olarak alınması ve tayini için saha rehberidir.",
     "duration": "İki ölçüm çizgisindeki noktalar tamamlanacak şekilde planlanır; minimum absorpsiyon numunesi 200 mL'dir.",
     "flowRate": "Çekiş debisi 28 L/dk'yı geçmemelidir; genellikle 2-6 L/dk kabarcık/verim aralığı yeterlidir ve debi ±%10 tutulur.",
-    "equipment": ["İzokinetik prob/nozul", "4 impinger", "Buz banyosu", "Silika jel", "1 L geniş ağızlı polietilen kap"],
-    "reagents": ["1. impinger: 100 mL saf su", "2. impinger: 100 mL saf su", "3. impinger: boş", "4. impinger: silika jel", "SPADNS ve zirkonil klorür reaktifleri analizde kullanılır"],
-    "fieldSteps": ["Kaçak testi, hız ve çap ölçümünü yap.", "Şahit numuneyi nozul 180° ters çevrilmiş halde pompa çalışmadan al.", "Debiyi 28 L/dk altında tut.", "Filtre/prob yıkamalarını numune kabına aktar.", "Numuneyi +4 °C'de sakla."],
-    "criticalControls": ["Flor toz ölçümüyle birlikte örneklenmemelidir.", "Su üçüncü impingere geçmemelidir.", "3-4. impinger arasındaki filtre laboratuvara gönderilir."],
-    "acceptance": ["İzokinetiklik, kaçak testi, minimum 200 mL ve +4 °C saklama sağlanmalıdır."],
-    "reporting": ["Debi, hacim, impinger hacimleri, şahit, silika jel ve SPADNS analiz bilgileri yazılır."],
-    "mistakes": ["Debiyi 28 L/dk üstüne çıkarmak", "İlk iki impingere 100'er mL saf su koymamak", "Şahit numune almamak"]
+    "equipment": [
+      "İzokinetik prob/nozul",
+      "4 impinger",
+      "Buz banyosu",
+      "Silika jel",
+      "1 L geniş ağızlı polietilen kap"
+    ],
+    "reagents": [
+      "1. impinger: 100 mL saf su",
+      "2. impinger: 100 mL saf su",
+      "3. impinger: boş",
+      "4. impinger: silika jel",
+      "SPADNS ve zirkonil klorür reaktifleri analizde kullanılır"
+    ],
+    "fieldSteps": [
+      "Kaçak testi, hız ve çap ölçümünü yap.",
+      "Şahit numuneyi nozul 180° ters çevrilmiş halde pompa çalışmadan al.",
+      "Debiyi 28 L/dk altında tut.",
+      "Filtre/prob yıkamalarını numune kabına aktar.",
+      "Numuneyi +4 °C'de sakla."
+    ],
+    "criticalControls": [
+      "Flor toz ölçümüyle birlikte örneklenmemelidir.",
+      "Su üçüncü impingere geçmemelidir.",
+      "3-4. impinger arasındaki filtre laboratuvara gönderilir."
+    ],
+    "acceptance": [
+      "İzokinetiklik, kaçak testi, minimum 200 mL ve +4 °C saklama sağlanmalıdır."
+    ],
+    "reporting": [
+      "Debi, hacim, impinger hacimleri, şahit, silika jel ve SPADNS analiz bilgileri yazılır."
+    ],
+    "mistakes": [
+      "Debiyi 28 L/dk üstüne çıkarmak",
+      "İlk iki impingere 100'er mL saf su koymamak",
+      "Şahit numune almamak"
+    ]
   },
   {
     "title": "ISO 12141 Düşük Toz Elle Gravimetrik Ölçüm",
     "code": "ISO 12141",
     "category": "Emisyon",
     "subgroup": "Toz / Partikül",
-    "keywords": ["ISO 12141", "düşük toz", "gravimetrik", "izokinetik", "traverse"],
+    "keywords": [
+      "ISO 12141",
+      "düşük toz",
+      "gravimetrik",
+      "izokinetik",
+      "traverse"
+    ],
     "purpose": "Düşük toz derişimlerinde tanecikli madde kütle derişimini elle gravimetrik ve izokinetik yaklaşımla belirlemek için saha rehberidir.",
     "duration": "Süre yeterli kütle ve hacim sağlayacak şekilde planlanır; filtre aşırı yüklenmemelidir.",
     "flowRate": "Debi baca hızına göre izokinetik ayarlanır ve toplam kuru hacim hesaplanır.",
-    "equipment": ["İzokinetik prob/nozul", "Filtre tutucu", "DGM", "Pitot", "Tartım kabı"],
-    "reagents": ["Temel numune filtrededir; yıkama gerekiyorsa laboratuvar talimatı uygulanır."],
-    "fieldSteps": ["Numune alma düzlemini seç.", "Dairesel/dörtgen nokta sayısını belirle.", "Kaçak testini yap.", "Filtre ve hacmi kaydet."],
-    "criticalControls": ["Düşük kütlede blank ve tartım belirsizliği sonucu etkiler."],
-    "acceptance": ["Kaçak testi, filtre bütünlüğü ve yeterli hacim uygun olmalıdır."],
-    "reporting": ["Filtre kütlesi, blank, kuru hacim, nokta sayısı ve izokinetiklik yazılır."],
-    "mistakes": ["Yetersiz hacim almak", "Saha körünü unutmak"]
+    "equipment": [
+      "İzokinetik prob/nozul",
+      "Filtre tutucu",
+      "DGM",
+      "Pitot",
+      "Tartım kabı"
+    ],
+    "reagents": [
+      "Temel numune filtrededir; yıkama gerekiyorsa laboratuvar talimatı uygulanır."
+    ],
+    "fieldSteps": [
+      "Numune alma düzlemini seç.",
+      "Dairesel/dörtgen nokta sayısını belirle.",
+      "Kaçak testini yap.",
+      "Filtre ve hacmi kaydet."
+    ],
+    "criticalControls": [
+      "Sürüm kontrolü: arşiv ISO 12141:2002 metnidir; ISO kataloğunda 2024 ikinci baskı bulunur. Yeni tam metin karşılaştırılmadan eski sayısal kurallar 2024 koşulları diye sunulmaz.",
+      "Düşük kütlede blank ve tartım belirsizliği sonucu etkiler."
+    ],
+    "acceptance": [
+      "Kaçak testi, filtre bütünlüğü ve yeterli hacim uygun olmalıdır."
+    ],
+    "reporting": [
+      "Filtre kütlesi, blank, kuru hacim, nokta sayısı ve izokinetiklik yazılır."
+    ],
+    "mistakes": [
+      "Yetersiz hacim almak",
+      "Saha körünü unutmak"
+    ]
   },
   {
     "title": "EPA Method 323 Formaldehit Ölçümü",
     "code": "EPA Method 323",
     "category": "Emisyon",
     "subgroup": "Organik Bileşikler / Formaldehit",
-    "keywords": ["formaldehit", "EPA Method 323", "asetil aseton", "0.2-0.4 L/dk", "412 nm"],
+    "keywords": [
+      "formaldehit",
+      "EPA Method 323",
+      "asetil aseton",
+      "0.2-0.4 L/dk",
+      "412 nm"
+    ],
     "purpose": "Baca gazında formaldehitin EPA Method 323 asetil aseton türevlendirme yöntemiyle numune alınması ve tayini için saha rehberidir.",
     "duration": "Her ölçüm noktası için minimum 2 dakika örnekleme yapılır; debi 5-10 dakikada bir kaydedilir.",
     "flowRate": "Örnekleme debisi 0,2-0,4 L/dk; seviye bilinmiyorsa 0,4 L/dk kullanılır.",
-    "equipment": ["Paslanmaz/kuvars prob", "3 cam yıkama şişesi", "Teflon hortum", "Silika jel", "40 mL şişe"],
-    "reagents": ["1. şişe boş", "2. şişe 20 mL deiyonize su", "3. şişe tartımı bilinen silika jel", "Asetil aseton reaktifi: 15,4 g amonyum asetat, 0,20 mL asetil aseton, 0,30 mL asetik asit / 100 mL"],
-    "fieldSteps": ["Kaçak testini yap; kaçak %2'yi aşmamalı.", "Örnekleme sonunda prob ve bağlantıları suyla yıka.", "Durulama suyu 10 mL'yi geçmesin ve 2. şişeyle birleştirilsin.", "Numuneyi buz aküsüyle bekletmeden gönder."],
-    "criticalControls": ["Minimum numune miktarı 20 mL'dir.", "Analizde 412 nm, 1 cm küvet ve 60 °C/10 dk uygulanır.", "Spike geri kazanım %80-120 olmalıdır."],
-    "acceptance": ["Kaçak ≤%2, kalibrasyon korelasyonu ≥0,99, şahit en düşük standardın %50'sinden düşük olmalıdır."],
-    "reporting": ["Debi, süre, hacim, buzla taşıma, reaktif ve analiz şartları yazılır."],
-    "mistakes": ["Durulama suyunu 10 mL üstüne çıkarmak", "Numuneyi bekletmek", "Silika jel tartımını yazmamak"]
+    "equipment": [
+      "Paslanmaz/kuvars prob",
+      "3 cam yıkama şişesi",
+      "Teflon hortum",
+      "Silika jel",
+      "40 mL şişe"
+    ],
+    "reagents": [
+      "1. şişe boş",
+      "2. şişe 20 mL deiyonize su",
+      "3. şişe tartımı bilinen silika jel",
+      "Asetil aseton reaktifi: 15,4 g amonyum asetat, 0,20 mL asetil aseton, 0,30 mL asetik asit / 100 mL"
+    ],
+    "fieldSteps": [
+      "Kaçak testini yap; kaçak %2'yi aşmamalı.",
+      "Örnekleme sonunda prob ve bağlantıları suyla yıka.",
+      "Durulama suyu 10 mL'yi geçmesin ve 2. şişeyle birleştirilsin.",
+      "Numuneyi buz aküsüyle bekletmeden gönder."
+    ],
+    "criticalControls": [
+      "Minimum numune miktarı 20 mL'dir.",
+      "Analizde 412 nm, 1 cm küvet ve 60 °C/10 dk uygulanır.",
+      "Spike geri kazanım %80-120 olmalıdır."
+    ],
+    "acceptance": [
+      "Kaçak ≤%2, kalibrasyon korelasyonu ≥0,99, şahit en düşük standardın %50'sinden düşük olmalıdır."
+    ],
+    "reporting": [
+      "Debi, süre, hacim, buzla taşıma, reaktif ve analiz şartları yazılır."
+    ],
+    "mistakes": [
+      "Durulama suyunu 10 mL üstüne çıkarmak",
+      "Numuneyi bekletmek",
+      "Silika jel tartımını yazmamak"
+    ]
   },
   {
     "title": "TS EN 12619 / EPA Method 25A TOC-FID Ölçümü",
     "code": "TS EN 12619 / EPA Method 25A",
     "category": "Emisyon",
     "subgroup": "Organik Bileşikler / TOC",
-    "keywords": ["TOC", "FID", "TS EN 12619", "EPA Method 25A", "propan", "hidrojen", "azot"],
+    "keywords": [
+      "TOC",
+      "FID",
+      "TS EN 12619",
+      "EPA Method 25A",
+      "propan",
+      "hidrojen",
+      "azot"
+    ],
     "purpose": "Baca gazında gaz halindeki toplam organik karbonun FID cihazı ile ölçülmesi için saha rehberidir.",
     "duration": "Değerler tepki süresi ve stabilizasyon sonrası kaydedilir; anlık kararsız okuma raporlanmaz.",
     "flowRate": "Cihazın kendi pompa/debi sistemi kullanılır; ısıtmalı hat ve filtre tıkanıklığı kontrol edilir.",
-    "equipment": ["Pollution Polaris FID veya eşdeğer FID", "Isıtmalı hat", "Propan kalibrasyon gazı", "%99,998 azot sıfır gazı", "Hidrojen yakıt gazı"],
-    "reagents": ["Çözelti/impinger yoktur; gazlar ve kalibrasyon kontrolleri vardır."],
-    "fieldSteps": ["Isıtmalı hattı 120 °C'ye getir.", "Numune giriş sıcaklığını maksimum 180 °C altında tut.", "Propanla doğrulama yap ve tepki süresini ölç.", "Proba filtre tak ve stabil değerleri kaydet."],
-    "criticalControls": ["Sıfır ve kalibrasyon sapması ±%3'ten düşük olmalıdır.", "TOC/FID ile VOC tüp numunesi karıştırılmamalıdır."],
-    "acceptance": ["Propan kontrolü uygun, cihaz stabil ve hat yoğuşmasız olmalıdır."],
-    "reporting": ["Sonuç propan ppm veya karbon mg/m³ olarak, kullanılan gazlar ve doğrulama sapmasıyla raporlanır."],
-    "mistakes": ["Tepki süresi beklemeden kayıt almak", "Hattı ısıtmamak", "VOC aktif karbon tüpüyle TOC'yi karıştırmak"]
+    "equipment": [
+      "Pollution Polaris FID veya eşdeğer FID",
+      "Isıtmalı hat",
+      "Propan kalibrasyon gazı",
+      "%99,998 azot sıfır gazı",
+      "Hidrojen yakıt gazı"
+    ],
+    "reagents": [
+      "Çözelti/impinger yoktur; gazlar ve kalibrasyon kontrolleri vardır."
+    ],
+    "fieldSteps": [
+      "Isıtmalı hattı 120 °C'ye getir.",
+      "Numune giriş sıcaklığını maksimum 180 °C altında tut.",
+      "Propanla doğrulama yap ve tepki süresini ölç.",
+      "Proba filtre tak ve stabil değerleri kaydet."
+    ],
+    "criticalControls": [
+      "Sıfır ve kalibrasyon sapması ±%3'ten düşük olmalıdır.",
+      "TOC/FID ile VOC tüp numunesi karıştırılmamalıdır."
+    ],
+    "acceptance": [
+      "Propan kontrolü uygun, cihaz stabil ve hat yoğuşmasız olmalıdır."
+    ],
+    "reporting": [
+      "Sonuç propan ppm veya karbon mg/m³ olarak, kullanılan gazlar ve doğrulama sapmasıyla raporlanır."
+    ],
+    "mistakes": [
+      "Tepki süresi beklemeden kayıt almak",
+      "Hattı ısıtmamak",
+      "VOC aktif karbon tüpüyle TOC'yi karıştırmak"
+    ]
   },
   {
     "title": "TS EN 13649 VOC Aktif Karbon Tüp Örneklemesi",
     "code": "TS EN 13649",
     "category": "Emisyon",
     "subgroup": "Organik Bileşikler / VOC",
-    "keywords": ["VOC", "TS EN 13649", "aktif karbon", "CS2", "0.1-0.5 L/dk", "10-50 L", "FR49"],
+    "keywords": [
+      "VOC",
+      "TS EN 13649",
+      "aktif karbon",
+      "CS2",
+      "0.1-0.5 L/dk",
+      "10-50 L",
+      "FR49"
+    ],
     "purpose": "Bacada VOC numunesinin aktif karbon tüp ile alınması, çözücü desorpsiyonu ve GC-MS/GC analizi için saha rehberidir.",
     "duration": "Tipik süre en az 30 dakika; kararsız şartlarda azaltılabilir fakat 20 dakikadan az olmamalıdır. En az 3 numune alınır.",
     "flowRate": "Tipik debi 0,1-0,5 L/dk ve toplam hacim 10-50 L aralığındadır.",
-    "equipment": ["VOC örnekleme cihazı", "Aktif karbon tüp", "Debi kontrolü", "Şahit tüp", "FR49 formu"],
-    "reagents": ["Ana ve emniyet adsorban tabakaları ayrı analiz edilir.", "CS2 veya uygun özütleme çözücüsü kullanılır; 100 mg aktif karbon için genelde 1 mL CS2 yeterlidir."],
-    "fieldSteps": ["Noktayı baca kesitini temsil edecek şekilde seç.", "Ön sızdırmazlık kontrolünü yap.", "Baca gazı 40 °C üstünde ve yoğuşmasız olmalı; gerekiyorsa soğutma/seyreltme kullan.", "Tüpü doğru yönde tak ve debi/süre/hacmi kaydet.", "Her baca için en az 1 şahit tüp al."],
-    "criticalControls": ["Şahit sonucu numunenin %10'undan fazlaysa ölçüm geçersizdir.", "Emniyet tabakasındaki bileşik ana tabakanın %5'inden fazla olmamalıdır.", "Tüpler +4 °C, serin ve karanlıkta saklanır."],
-    "acceptance": ["Sızdırmazlık, debi, toplam hacim, şahit ve breakthrough uygun olmalıdır."],
-    "reporting": ["Debi, süre, hacim, tüp no, şahit, desorpsiyon ve GC analiz bilgisi FR49'a yazılır."],
-    "mistakes": ["Tüp yönünü ters takmak", "Şahit tüp almamak", "TOC/FID ile VOC tüp numunesini karıştırmak"]
+    "equipment": [
+      "VOC örnekleme cihazı",
+      "Aktif karbon tüp",
+      "Debi kontrolü",
+      "Şahit tüp",
+      "FR49 formu"
+    ],
+    "reagents": [
+      "Ana ve emniyet adsorban tabakaları ayrı analiz edilir.",
+      "CS2 veya uygun özütleme çözücüsü kullanılır; 100 mg aktif karbon için genelde 1 mL CS2 yeterlidir."
+    ],
+    "fieldSteps": [
+      "Noktayı baca kesitini temsil edecek şekilde seç.",
+      "Ön sızdırmazlık kontrolünü yap.",
+      "Baca gazı 40 °C üstünde ve yoğuşmasız olmalı; gerekiyorsa soğutma/seyreltme kullan.",
+      "Tüpü doğru yönde tak ve debi/süre/hacmi kaydet.",
+      "Her baca için en az 1 şahit tüp al."
+    ],
+    "criticalControls": [
+      "Şahit sonucu numunenin %10'undan fazlaysa ölçüm geçersizdir.",
+      "Emniyet tabakasındaki bileşik ana tabakanın %5'inden fazla olmamalıdır.",
+      "Tüpler +4 °C, serin ve karanlıkta saklanır."
+    ],
+    "acceptance": [
+      "Sızdırmazlık, debi, toplam hacim, şahit ve breakthrough uygun olmalıdır."
+    ],
+    "reporting": [
+      "Debi, süre, hacim, tüp no, şahit, desorpsiyon ve GC analiz bilgisi FR49'a yazılır."
+    ],
+    "mistakes": [
+      "Tüp yönünü ters takmak",
+      "Şahit tüp almamak",
+      "TOC/FID ile VOC tüp numunesini karıştırmak"
+    ]
   }
 ]

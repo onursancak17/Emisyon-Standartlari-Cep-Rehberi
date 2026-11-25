@@ -17,7 +17,11 @@ Telefona kurulabilen, çevrimdışı ve Türkçe saha rehberi. Mevcut Flutter pr
 - Personelin bilmesi gereken diğer konular: saha güvenliği, proses temsili, ekipman/kalibrasyon, T90, drift, girişimler, blanklar, kontaminasyon, VOC/TOC, imisyon PM, çöken toz, pasif tüpler, meteoroloji, belirsizlik ve rapor.
 - Tasarım ana programa yakın, telefon kullanımına uygun; şemada tam ekran, kaydırma ve yakınlaştırma.
 
-## 0.5.1 geliştirme paketi
+## Güncel paket: 0.6.0
+
+23 metot/varyant kartı, 15 çizim, 122 açıklamalı soru. EPA 11/323, CTM-027, CARB 425/426 ve ISO 7935:2024 için yeni birincil kaynak karşılaştırmaları, çevrimdışı kaynak dizini ve Android kabul akışı eklendi. Ayrıntılı tamamlanan/açık iş ayrımı `DOGRULAMA_0_6_0.md` dosyasındadır. Aşağıdaki 0.5.1 kayıtları önceki kapsamın tarihçesidir; yeni paketin doğrulanma durumu Actions sonuçlarından izlenir.
+
+## Önceki 0.5.1 geliştirme paketi
 
 21 metot/varyant kartı; 10 ayrı çizim. Aynı parametrede farklı metot ve varyantlar birbirine karıştırılmaz. EPA 13A ön/arka filtre; EPA 29 cıva dahil/hariç; EPA 26A isteğe bağlı kondensat şişesi örnekleridir. EPA 8 filtresi ilk iki şişenin arasındadır. PAH/dioksin için katı adsorbanlı, akış bölünmesiz bir varyant seçilmiştir; tüm varyantlar tamamlanmış değildir.
 
