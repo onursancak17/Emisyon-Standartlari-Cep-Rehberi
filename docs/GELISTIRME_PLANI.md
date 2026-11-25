@@ -19,7 +19,7 @@ Telefona kurulabilen, çevrimdışı ve Türkçe saha rehberi. Mevcut Flutter pr
 
 ## Güncel paket: 0.6.0
 
-23 metot/varyant kartı, 15 çizim, 122 açıklamalı soru. EPA 11/323, CTM-027, CARB 425/426 ve ISO 7935:2024 için yeni birincil kaynak karşılaştırmaları, çevrimdışı kaynak dizini ve Android kabul akışı eklendi. Ayrıntılı tamamlanan/açık iş ayrımı `DOGRULAMA_0_6_0.md` dosyasındadır. Aşağıdaki 0.5.1 kayıtları önceki kapsamın tarihçesidir; yeni paketin doğrulanma durumu Actions sonuçlarından izlenir.
+24 metot/varyant kartı, 16 çizim, 125 açıklamalı soru. EPA 11/323, CTM-027, CARB 425/426 ve ISO 7935:2024 için yeni birincil kaynak karşılaştırmaları, çevrimdışı kaynak dizini, akış bölünmeli PAH şeması ve Android kabul akışı eklendi. Ayrıntılı tamamlanan/açık iş ayrımı `DOGRULAMA_0_6_0.md` dosyasındadır. Aşağıdaki 0.5.1 kayıtları önceki kapsamın tarihçesidir; yeni paketin doğrulanma durumu Actions sonuçlarından izlenir.
 
 ## Önceki 0.5.1 geliştirme paketi
 

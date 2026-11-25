@@ -84,5 +84,14 @@ class FieldGuideTests(unittest.TestCase):
         next(p for p in bad['profiles'] if p['reviewState']=='sections_checked')['evidence'][0]['references']=['W01:999']
         with self.assertRaises(AssertionError):validate(bad,SOURCES)
 
+    def test_split_pah_keeps_side_condensate_before_adsorber(self):
+        p=P['pah_iso11338_b_split']
+        self.assertFalse(p['train'])
+        d=p['diagram']
+        self.assertEqual([n['kind'] for n in d['shared']],['probe','filter','splitter'])
+        self.assertEqual([n['kind'] for n in d['branches'][1]['nodes']],['condenser','trap','adsorber','meter'])
+        self.assertEqual(d['branches'][0]['nodes'][-1]['id'],'main_meter')
+        self.assertEqual(d['branches'][1]['nodes'][-1]['id'],'side_meter')
+
 
 if __name__=='__main__':unittest.main()

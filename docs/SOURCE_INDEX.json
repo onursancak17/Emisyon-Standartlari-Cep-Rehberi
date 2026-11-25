@@ -1,7 +1,7 @@
 {
   "repository": "onursancak17/EuroMetrics-Rapor",
   "commit": "2620adb1dca2938a2198fd9bf1d264426fd89bca",
-  "reviewedAt": "2026-11-25",
+  "reviewedAt": "2026-11-26",
   "notice": "Kaynak kimlik/sayfa dizini; tam PDF metni yayımlanmaz. Arşiv sürümü güncel yürürlük iddiası değildir.",
   "documents": [
     {
@@ -430,13 +430,26 @@
       "method": "EN 14385",
       "archiveEdition": "TL179:2018",
       "currentEdition": "2024",
-      "status": "Yeni standart bulundu; okunabilir tam metin karşılaştırması sürüyor.",
+      "status": "2024 baskısının katalog bilgisi doğrulandı; okunabilir tam metin karşılaştırması bekliyor.",
       "url": "https://knowledge.bsigroup.com/products/stationary-source-emissions-determination-of-the-total-emission-of-as-cd-cr-co-cu-mn-ni-pb-sb-tl-and-v"
     },
     {
       "method": "EPA CTM-022",
       "status": "NO, NO₂ ve NOₓ için elektrokimyasal yöntem; SO₂ yöntemi değildir.",
       "url": "https://www.epa.gov/emc/emc-conditional-test-methods"
+    },
+    {
+      "method": "ISO 7935",
+      "archiveEdition": "2024",
+      "currentEdition": "2024",
+      "status": "Arşiv kapağı ve Tablo 1 görüntüsü karşılaştırıldı; ilgili alanlar SO₂ kartındadır.",
+      "url": "https://www.iso.org/standard/83052.html"
+    },
+    {
+      "method": "EPA Method 1",
+      "currentEdition": "30.05.2023",
+      "status": "Alternatif yer prosedürünün sonraki ölçümlerde de 40/42 nokta kullanımı açıklığa kavuşturuldu.",
+      "url": "https://www.epa.gov/system/files/documents/2023-04/2023%20Final%20Revisions%20Rule.pdf"
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "reviewedAt": "2026-11-25",
+  "reviewedAt": "2026-11-26",
   "notice": "Geliştirme sürümü: şema kontrolü, tam yöntem onayı ve güncel yürürlük kontrolü aynı şey değildir. Arşiv kaynaklı bilgi güncel metotla eşleştirilmeden sahada tek başına talimat sayılmaz.",
   "profiles": [
     {
@@ -3130,6 +3130,182 @@
           "title": "CARB Method 5 — Particulate Matter",
           "edition": "28.07.1997",
           "url": "https://ww2.arb.ca.gov/sites/default/files/classic/testmeth/vol1/m_5.pdf"
+        }
+      ]
+    },
+    {
+      "id": "pah_iso11338_b_split",
+      "scope": "Emisyon",
+      "parameter": "PAH",
+      "method": "ISO 11338-1",
+      "sourceVersion": "2003",
+      "variant": "Metot B — filtre sonrası ana / yan akış; Şekil B.3 örnek düzeni",
+      "sources": [
+        "D27:13-15,25"
+      ],
+      "reviewState": "sections_checked",
+      "train": [],
+      "limits": [
+        {
+          "label": "Çekiş debisi",
+          "value": "İzokinetik toplam çekiş. Şekil B.3 örnek cihazında ana kol ≤120 L/dk, yan kol ≤15 L/dk kapasite belirtilir; bunlar her cihaz için ayarlanacak debi değildir."
+        },
+        {
+          "label": "Toplam çekiş hacmi",
+          "value": "Ana ve yan kol sayaç/hacimlerini ayrı kaydet. Partikül ve gaz fazı farklı akış paylarını temsil eder; aynı referans koşullarına getirilmeyen hacimler toplanmaz."
+        },
+        {
+          "label": "Sıcaklık",
+          "value": "Filtre çiy noktasının üstünde, baca sıcaklığından yüksek olmayacak; yoğuşturucu çıkışı <20 °C, soğutucu akışkan ≥0 °C."
+        },
+        {
+          "label": "Ölçüm süresi",
+          "value": "Hedef hacim ve doğrulanmış yakalama verimine göre planlanır."
+        }
+      ],
+      "phases": [
+        {
+          "title": "Hazırlık",
+          "items": [
+            "Bu varyant filtre sonrası akış bölücü kullanır. Yan kol debisini adsorbanın doğrulanmış yakalama aralığında seç; bu cihazın kapasitesini bütün PAH sistemlerine uygulama.",
+            "Filtre ve işaretli standartlar, yoğuşturucu, kondensat, adsorban ve her iki hacim ölçümünü planla."
+          ]
+        },
+        {
+          "title": "Kaçak kontrolü",
+          "items": [
+            "§6.3.2’de iki alternatif test vardır; kaçak normal örnekleme debisinin %5’inden küçük olmalı."
+          ]
+        },
+        {
+          "title": "Örnekleme",
+          "items": [
+            "Toplam çekişte izokinetik koşulu koru; ana ve yan kolu ayrı ölç/kontrol et. Gaz fazı için analiz edilen yan kolun bilinen akış payı kullanılmalıdır.",
+            "Bu çizimde kondensat kabı adsorbandan öncedir; adsorban sonrası kondensat seçeneği ayrı düzendir. Yan kol hacmini bütün filtre hacmi yerine yazma."
+          ]
+        },
+        {
+          "title": "Geri kazanım",
+          "items": [
+            "Filtre, adsorban, kondensat ve numuneye temas etmiş yüzeylerin yıkamaları numune bütünlüğüne dahildir; fraksiyonları seçilen yönteme göre etiketle."
+          ]
+        },
+        {
+          "title": "Saklama ve taşıma",
+          "items": [
+            "Arşiv ISO 11338-1:2003 §6.3.3 metni filtre, adsorban ve ilgili fraksiyonlar için ışıktan koruma ve −7 °C soğuk saklama belirtir. Bu arşiv değeri otomatik +4 °C’ye çevrilmez; geçerli sürüm ve laboratuvar uygulaması doğrulanmalı."
+          ]
+        },
+        {
+          "title": "Laboratuvara teslim",
+          "items": [
+            "Tesis, baca/nokta, tarih, başlangıç–bitiş, metot/sürüm, numuneci ve fraksiyon kimliklerini etiketle.",
+            "Numune kabı, kapak, miktar, blank, mühür, taşıma koşulu, teslim saati ve teslim alanı izlenebilir teslim formuna kaydet.",
+            "Adsorban partisi, eklenen işaretli standart / geri kazanım bilgisi ve blankı bildir."
+          ]
+        }
+      ],
+      "gaps": [
+        "Bu kart Şekil B.3’ün katı adsorbanlı yan kol varyantını gösterir. İmpingerli / sıvı absorbanlı alternatifler ve bütün analitik fraksiyon hesapları ayrıca tamamlanmalı."
+      ],
+      "evidence": [
+        {
+          "field": "Bölücü / kollar / kapasiteler",
+          "references": [
+            "D27:13-14,25"
+          ],
+          "clause": "§6.1–6.3; bilgi amaçlı Şekil B.3"
+        }
+      ],
+      "diagram": {
+        "asset": "assets/diagrams/pah_b_split.png",
+        "shared": [
+          {
+            "id": "probe",
+            "kind": "probe",
+            "label": "Nozül / ısıtılmış prob",
+            "content": "İzokinetik toplam çekiş",
+            "amount": "",
+            "optional": false
+          },
+          {
+            "id": "filter",
+            "kind": "filter",
+            "label": "Partikül filtresi",
+            "content": "Çiy noktası üstü; baca sıcaklığını aşma",
+            "amount": "",
+            "optional": false
+          },
+          {
+            "id": "split",
+            "kind": "splitter",
+            "label": "Akış bölücü",
+            "content": "Filtre sonrasında",
+            "amount": "",
+            "optional": false
+          }
+        ],
+        "branches": [
+          {
+            "id": "main",
+            "label": "Ana kol",
+            "nodes": [
+              {
+                "id": "main_meter",
+                "kind": "meter",
+                "label": "Ana kol çekiş / hacim kontrolü",
+                "content": "İzokinetik toplam akışı sağlar; kaynak şeklinin cihaz kapasitesi ≤120 L/dk",
+                "amount": "",
+                "optional": false
+              }
+            ]
+          },
+          {
+            "id": "side",
+            "label": "Yan kol — gaz fazı PAH",
+            "nodes": [
+              {
+                "id": "side_condenser",
+                "kind": "condenser",
+                "label": "Yoğuşturucu",
+                "content": "Gaz <20 °C; soğutucu akışkan 0–20 °C",
+                "amount": "",
+                "optional": false
+              },
+              {
+                "id": "side_condensate",
+                "kind": "trap",
+                "label": "Kondensat kabı",
+                "content": "Bu varyantta adsorbandan önce",
+                "amount": "",
+                "optional": false
+              },
+              {
+                "id": "side_adsorber",
+                "kind": "adsorber",
+                "label": "Doğrulanmış katı adsorban",
+                "content": "Hedef PAH için verim kontrolü",
+                "amount": "",
+                "optional": false
+              },
+              {
+                "id": "side_meter",
+                "kind": "meter",
+                "label": "Yan kol çekiş / hacim kontrolü",
+                "content": "Kaynak şeklinin cihaz kapasitesi ≤15 L/dk",
+                "amount": "",
+                "optional": false
+              }
+            ]
+          }
+        ]
+      },
+      "sourceDetails": [
+        {
+          "reference": "D27:13-15,25",
+          "title": "ISO 11338 1.pdf",
+          "edition": "",
+          "url": ""
         }
       ]
     }

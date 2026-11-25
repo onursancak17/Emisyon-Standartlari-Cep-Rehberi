@@ -23,6 +23,7 @@ flutter:
   assets:
     - assets/field_guide.json
     - assets/source_index.json
+    - assets/diagrams/
     - assets/quiz_bank.json
     - assets/standards.json
     - assets/standards_extra.json

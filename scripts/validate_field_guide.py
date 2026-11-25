@@ -43,9 +43,22 @@ def validate(data, source_index):
             assert n['label'] and n['content']
         if p['reviewState'] == 'pending':
             assert not nodes, 'Doğrulanmamış metoda komşu metodun şeması atanamaz'
+            assert not p.get('diagram'), 'Doğrulanmamış metoda bölünmeli şema atanamaz'
         if nodes:
             assert nodes[0]['kind'] == 'probe' and nodes[-1]['kind'] == 'meter'
         assert len(p['sourceDetails']) == len(p['sources']), 'Çevrimdışı kaynak açıklaması eksik'
+        if p.get('diagram'):
+            diagram=p['diagram']
+            asset=Path(diagram['asset'])
+            assert asset.parts[:2]==('assets','diagrams') and '..' not in asset.parts and asset.suffix=='.png'
+            assert (ROOT/asset).read_bytes().startswith(b'\x89PNG\r\n\x1a\n'), 'Şema PNG asseti eksik/bozuk'
+            assert not nodes, 'Aynı kartta iki çelişkili tren gösterilemez'
+            assert diagram['shared'][-1]['kind']=='splitter'
+            assert len(diagram['branches'])==2
+            all_nodes=diagram['shared']+sum([b['nodes'] for b in diagram['branches']],[])
+            assert len({n['id'] for n in all_nodes})==len(all_nodes), 'Kol/düğüm kimlikleri çakışıyor'
+            for branch in diagram['branches']:
+                assert branch['label'] and branch['nodes'][-1]['kind']=='meter'
     assert len(data['fundamentals']) >= 20
     return len(ids)
 

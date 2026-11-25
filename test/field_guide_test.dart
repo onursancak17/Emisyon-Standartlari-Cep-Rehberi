@@ -18,6 +18,12 @@ void main() {
     expect(FieldMath.convert(1,'ft3'),closeTo(28.316846592,1e-10));
     expect(FieldMath.convert(32,'f'),0);
     expect(FieldMath.convert(212,'f'),100);
+    expect(FieldMath.convert(25,'fdiff'),closeTo(13.8888888889,1e-9));
+    expect(FieldMath.convert(1,'grain'),64.79891);
+    expect(FieldMath.convert(1,'grain_ft3')*FieldMath.convert(1,'ft3')/1000,closeTo(64.79891,1e-9));
+    expect(FieldMath.convert(2.3,'m3h'),closeTo(38.3333333333,1e-9));
+    expect(FieldMath.convert(24,'inch'),closeTo(609.6,1e-9));
+    expect(()=>FieldMath.convert(-500,'f'),throwsFormatException);
     expect(FieldMath.convert(1,'inhg'),closeTo(33.8638866667,1e-9));
     expect(()=>FieldMath.convert(-1,'cfm'),throwsFormatException);
     expect(()=>FieldMath.convert(double.infinity,'ft3'),throwsFormatException);
@@ -66,5 +72,18 @@ void main() {
         expect(tester.takeException(),isNull,reason:'${p['id']} scroll $i');
       }
     }
+  });
+  testWidgets('Split PAH diagram opens from the offline asset and can be enlarged', (tester) async {
+    final p=Map<String,dynamic>.from((data['profiles'] as List).firstWhere((p)=>p['id']=='pah_iso11338_b_split') as Map);
+    await tester.pumpWidget(MaterialApp(home:MethodGuidePage(profiles:[p])));
+    final image=find.byKey(const ValueKey('split-train-image'));
+    await tester.scrollUntilVisible(image,250,scrollable:find.byType(Scrollable).first);
+    await tester.scrollUntilVisible(find.text('Şemayı tam ekran aç'),200,scrollable:find.byType(Scrollable).first);
+    await tester.ensureVisible(find.text('Şemayı tam ekran aç'));
+    await tester.tap(find.text('Şemayı tam ekran aç'));
+    await tester.pumpAndSettle();
+    expect(find.byType(AssetTrainPage),findsOneWidget);
+    expect(find.byType(InteractiveViewer),findsOneWidget);
+    expect(tester.takeException(),isNull);
   });
 }

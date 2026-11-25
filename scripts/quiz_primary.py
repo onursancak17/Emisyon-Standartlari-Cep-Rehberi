@@ -52,6 +52,18 @@ def extend(add):
         ['Her an ölçülen SO₂ derişimi', 'DGM başlangıç hacmi', 'Baca çapı'],
         'Yüzde bir sınır, paydası belirtilmeden uygulanamaz. Aynı tabloda hat kaybı/kaçak için ölçülen değer kullanılması iki yüzdeyi özdeş yapmaz.', 'D32:12; ISO 7935:2024 Tablo 1')
 
+    add('Girdap ve uygunsuz yer',e,['EPA Method 1'],'EPA 1 §11.5 alternatif prosedüründe dairesel/dikdörtgen için asgari nokta sayıları nedir?',
+        '40 / 42',['12 / 12','8 / 9','4 / 5'],
+        'Bu sayılar özel alternatif yer prosedürünündür. 2023 açıklaması, kabul edilmiş bu yerde sonraki örnekleme ve hız ölçümlerinde de aynı asgari sayıları korur.', 'EPA Method 1:30.05.2023 §11.5.2; Federal Register 88 FR 18396')
+    add('Girdap ve uygunsuz yer',e,['EPA Method 1'],'Alternatif yer prosedüründe yalnız S-tip Pitot null açısı yeterli midir?',
+        'Hayır, yön algılayan probla pitch ve yaw birlikte belirlenir.',
+        ['Evet, her durumda tek bir null ölçümü yeterlidir.', 'Evet, yalnız sıcaklık bilinse yeter.', 'Evet, 40 nokta yerine 4 nokta kullanılır.'],
+        '§11.5 ve §12.3 bileşke açıyı ve dağılımını değerlendirir. Bu değerlendirme §11.4’teki tek eksenli null tekniğinin ortalama mutlak açısıyla aynı hesap değildir.', 'EPA Method 1:30.05.2023 §11.5, §12.3')
+    add('Girdap ve uygunsuz yer',e,['EPA Method 1'],'EPA 1 §12.3 alternatif yer ölçütünde bileşke ortalaması 18°, örnek standart sapması 12° ise ne söylenir?',
+        'İki şart birlikte sağlanmaz; standart sapma sınırı aşılır.',
+        ['Ortalama 20° altında olduğu için kesin kabul edilir.', 'Standart sapma kullanılmaz.', 'İşaretler değiştirilirse kabul edilir.'],
+        'Kabul için bileşke açı ortalaması ≤20° ve örnek standart sapması ≤10° birlikte gerekir. Yalnız ortalamayı kontrol etmek yeterli değildir.', 'EPA Method 1:30.05.2023 §12.3.4')
+
     # Aynı kaynak koşulunun uygulama hesabı; referans koşulları değiştirilmez.
     add('Birimler ve hacim',e,['EPA Method 323'],'0,4 L/dk sabit debiyle 30 dk çekişin hacmi aynı koşullarda kaçtır?',
         '12 L',['120 L','0,12 L','75 L'], 'V=Q×t=0,4×30=12 L. Bu sadece aynı koşullardaki hacim hesabıdır; yöntemin her kaynak için 30 dakika istediği anlamına gelmez.', 'Boyutsal hesap; W04:3-5 debi sınırı')

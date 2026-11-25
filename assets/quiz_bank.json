@@ -2596,6 +2596,69 @@
     },
     {
       "id": "q115",
+      "topic": "Girdap ve uygunsuz yer",
+      "scope": "Emisyon",
+      "parameters": [
+        "Ölçüm yeri / travers"
+      ],
+      "standards": [
+        "TS EN 15259 / EPA Method 1"
+      ],
+      "prompt": "EPA 1 §11.5 alternatif prosedüründe dairesel/dikdörtgen için asgari nokta sayıları nedir?",
+      "choices": [
+        "40 / 42",
+        "12 / 12",
+        "8 / 9",
+        "4 / 5"
+      ],
+      "correctIndex": 0,
+      "explanation": "Bu sayılar özel alternatif yer prosedürünündür. 2023 açıklaması, kabul edilmiş bu yerde sonraki örnekleme ve hız ölçümlerinde de aynı asgari sayıları korur.",
+      "source": "EPA Method 1:30.05.2023 §11.5.2; Federal Register 88 FR 18396"
+    },
+    {
+      "id": "q116",
+      "topic": "Girdap ve uygunsuz yer",
+      "scope": "Emisyon",
+      "parameters": [
+        "Ölçüm yeri / travers"
+      ],
+      "standards": [
+        "TS EN 15259 / EPA Method 1"
+      ],
+      "prompt": "Alternatif yer prosedüründe yalnız S-tip Pitot null açısı yeterli midir?",
+      "choices": [
+        "Hayır, yön algılayan probla pitch ve yaw birlikte belirlenir.",
+        "Evet, her durumda tek bir null ölçümü yeterlidir.",
+        "Evet, yalnız sıcaklık bilinse yeter.",
+        "Evet, 40 nokta yerine 4 nokta kullanılır."
+      ],
+      "correctIndex": 0,
+      "explanation": "§11.5 ve §12.3 bileşke açıyı ve dağılımını değerlendirir. Bu değerlendirme §11.4’teki tek eksenli null tekniğinin ortalama mutlak açısıyla aynı hesap değildir.",
+      "source": "EPA Method 1:30.05.2023 §11.5, §12.3"
+    },
+    {
+      "id": "q117",
+      "topic": "Girdap ve uygunsuz yer",
+      "scope": "Emisyon",
+      "parameters": [
+        "Ölçüm yeri / travers"
+      ],
+      "standards": [
+        "TS EN 15259 / EPA Method 1"
+      ],
+      "prompt": "EPA 1 §12.3 alternatif yer ölçütünde bileşke ortalaması 18°, örnek standart sapması 12° ise ne söylenir?",
+      "choices": [
+        "İki şart birlikte sağlanmaz; standart sapma sınırı aşılır.",
+        "Ortalama 20° altında olduğu için kesin kabul edilir.",
+        "Standart sapma kullanılmaz.",
+        "İşaretler değiştirilirse kabul edilir."
+      ],
+      "correctIndex": 0,
+      "explanation": "Kabul için bileşke açı ortalaması ≤20° ve örnek standart sapması ≤10° birlikte gerekir. Yalnız ortalamayı kontrol etmek yeterli değildir.",
+      "source": "EPA Method 1:30.05.2023 §12.3.4"
+    },
+    {
+      "id": "q118",
       "topic": "Birimler ve hacim",
       "scope": "Emisyon",
       "parameters": [
@@ -2616,7 +2679,7 @@
       "source": "Boyutsal hesap; W04:3-5 debi sınırı"
     },
     {
-      "id": "q116",
+      "id": "q119",
       "topic": "Birimler ve hacim",
       "scope": "Emisyon",
       "parameters": [
@@ -2637,7 +2700,7 @@
       "source": "D08:5; boyutsal hesap"
     },
     {
-      "id": "q117",
+      "id": "q120",
       "topic": "Birimler ve hacim",
       "scope": "Emisyon",
       "parameters": [
@@ -2658,7 +2721,7 @@
       "source": "D08:5; boyutsal hesap"
     },
     {
-      "id": "q118",
+      "id": "q121",
       "topic": "Birimler ve hacim",
       "scope": "Emisyon",
       "parameters": [
@@ -2679,7 +2742,7 @@
       "source": "D08:4-6; boyutsal hesap"
     },
     {
-      "id": "q119",
+      "id": "q122",
       "topic": "Girdap ve uygunsuz yer",
       "scope": "Emisyon",
       "parameters": [
@@ -2700,7 +2763,7 @@
       "source": "EPA Method 1 §11.4; boyutsal hesap"
     },
     {
-      "id": "q120",
+      "id": "q123",
       "topic": "Girdap ve uygunsuz yer",
       "scope": "Emisyon",
       "parameters": [
@@ -2721,7 +2784,7 @@
       "source": "EPA Method 1 §11.4"
     },
     {
-      "id": "q121",
+      "id": "q124",
       "topic": "Kalite ve teslim",
       "scope": "Emisyon",
       "parameters": [
@@ -2742,7 +2805,7 @@
       "source": "D06:7-8; fraksiyon kontrolü"
     },
     {
-      "id": "q122",
+      "id": "q125",
       "topic": "Kalite ve teslim",
       "scope": "Emisyon",
       "parameters": [

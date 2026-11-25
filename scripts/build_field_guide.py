@@ -3,6 +3,7 @@ import json
 from pathlib import Path
 from primary_profiles import extend, WEB_SOURCES
 from recovery_details import extend as extend_recovery
+from split_profiles import extend as extend_split
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -217,17 +218,24 @@ extend(data, profile, node, imp, meter, common_delivery)
 for p in data:
     p.setdefault('evidence', [])
 extend_recovery(data)
+extend_split(data,node)
 
 source_index = json.loads((ROOT/'docs/SOURCE_INDEX.json').read_text(encoding='utf-8'))
+source_index['reviewedAt']='2026-11-26'
 source_index['documents'] = [s for s in source_index['documents'] if not s['id'].startswith('W')] + WEB_SOURCES
 source_index['catalogChecks'] = [
     dict(method='ISO 12141', archiveEdition='2002', currentEdition='2024',
          status='Arşiv metni eski. Yeni sürümün tam koşulları karşılaştırılmadı.', url='https://www.iso.org/standard/85643.html'),
     dict(method='EN 14385', archiveEdition='TL179:2018', currentEdition='2024',
-         status='Yeni standart bulundu; okunabilir tam metin karşılaştırması sürüyor.',
+         status='2024 baskısının katalog bilgisi doğrulandı; okunabilir tam metin karşılaştırması bekliyor.',
          url='https://knowledge.bsigroup.com/products/stationary-source-emissions-determination-of-the-total-emission-of-as-cd-cr-co-cu-mn-ni-pb-sb-tl-and-v'),
     dict(method='EPA CTM-022', status='NO, NO₂ ve NOₓ için elektrokimyasal yöntem; SO₂ yöntemi değildir.',
          url='https://www.epa.gov/emc/emc-conditional-test-methods'),
+    dict(method='ISO 7935',archiveEdition='2024',currentEdition='2024',
+         status='Arşiv kapağı ve Tablo 1 görüntüsü karşılaştırıldı; ilgili alanlar SO₂ kartındadır.',url='https://www.iso.org/standard/83052.html'),
+    dict(method='EPA Method 1',currentEdition='30.05.2023',
+         status='Alternatif yer prosedürünün sonraki ölçümlerde de 40/42 nokta kullanımı açıklığa kavuşturuldu.',
+         url='https://www.epa.gov/system/files/documents/2023-04/2023%20Final%20Revisions%20Rule.pdf'),
 ]
 for s in source_index['documents']:
     s.setdefault('title', Path(s.get('path','')).name.replace('_',' '))
@@ -264,8 +272,8 @@ topics = [
  ('Rapor ve teslim zinciri', ['Metot/sürüm, saha koşulları, gerçek okumalar, düzeltmeler, sapmalar, blanklar ve numune kimlikleri sonuçla izlenebilir olmalı.', 'Konsantrasyon ve kütlesel debiyi doğru kuru/yaş baz ve referans koşullarıyla birlikte raporla.']),
 ]
 
-payload = dict(schemaVersion=1, reviewedAt='2026-11-25',
+payload = dict(schemaVersion=1, reviewedAt='2026-11-26',
  notice='Geliştirme sürümü: şema kontrolü, tam yöntem onayı ve güncel yürürlük kontrolü aynı şey değildir. Arşiv kaynaklı bilgi güncel metotla eşleştirilmeden sahada tek başına talimat sayılmaz.',
  profiles=data, fundamentals=[dict(title=t, items=items) for t, items in topics])
 (ROOT/'assets/field_guide.json').write_text(json.dumps(payload,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
-print(f'{len(data)} yöntem kartı; {sum(bool(x["train"]) for x in data)} çizim; {len(topics)} ortak saha konusu')
+print(f'{len(data)} yöntem kartı; {sum(bool(x["train"]) or bool(x.get("diagram")) for x in data)} çizim; {len(topics)} ortak saha konusu')

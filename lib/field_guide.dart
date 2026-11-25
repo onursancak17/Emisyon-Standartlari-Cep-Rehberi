@@ -141,6 +141,17 @@ class _MethodGuidePageState extends State<MethodGuidePage> {
             ListTile(contentPadding: EdgeInsets.zero, leading: const Icon(Icons.water_drop_outlined),
               title: Text('${n['label']} · ${n['amount']}'), subtitle: Text(n['content'] as String)),
         ],
+        if(p['diagram']!=null)...[
+          Text('Ana ve yan kol şeması',style:Theme.of(context).textTheme.titleLarge),
+          const Text('Yatay kaydır; ayrıntı için tam ekran açıp iki parmakla büyüt.'),
+          SingleChildScrollView(scrollDirection:Axis.horizontal,child:SizedBox(width:1400,child:Image.asset(
+            p['diagram']['asset'] as String,key:const ValueKey('split-train-image'),semanticLabel:'Filtre sonrası ayrılan ana kol ve gaz fazı PAH yan kolu'))),
+          OutlinedButton.icon(icon:const Icon(Icons.zoom_in),label:const Text('Şemayı tam ekran aç'),onPressed:()=>Navigator.push(context,
+            MaterialPageRoute<void>(builder:(_)=>AssetTrainPage(profile:p)))),
+          GuideSection(title:'Ortak giriş',items:_objects(p['diagram']['shared']).map((n)=>'${n['label']}: ${n['content']}').toList()),
+          for(final b in _objects(p['diagram']['branches'])) GuideSection(title:b['label'] as String,
+            items:_objects(b['nodes']).map((n)=>'${n['label']}: ${n['content']}').toList()),
+        ],
         if (p['trainNote'] != null) GuideNotice(text: p['trainNote'] as String),
         const SizedBox(height: 12),
         for (final limit in _objects(p['limits'])) GuideSection(title: limit['label'] as String, items: [limit['value'] as String]),
@@ -233,6 +244,15 @@ class TrainFullScreen extends StatelessWidget {
     ]));
 }
 
+class AssetTrainPage extends StatelessWidget {
+  const AssetTrainPage({super.key,required this.profile});
+  final Json profile;
+  @override
+  Widget build(BuildContext context)=>Scaffold(appBar:AppBar(title:Text(profile['method'] as String)),
+    body:Center(child:InteractiveViewer(minScale:1,maxScale:12,boundaryMargin:const EdgeInsets.all(100),
+      child:Image.asset(profile['diagram']['asset'] as String,semanticLabel:'Akış bölünmeli örnekleme treni'))));
+}
+
 class TrainDiagram extends StatelessWidget {
   const TrainDiagram({super.key, required this.nodes, this.scrollable = true});
   final List<Json> nodes;
@@ -314,11 +334,18 @@ class FieldMath {
     return angles.map((x) => x.abs()).reduce((a, b) => a + b) / angles.length;
   }
   static double convert(double value, String unit) {
-    if (!value.isFinite || (unit != 'f' && value < 0)) throw const FormatException('Geçerli bir değer gir.');
+    if (!value.isFinite || (!{'f','fdiff'}.contains(unit) && value < 0) || (unit=='f' && value < -459.67)) throw const FormatException('Geçerli bir değer gir.');
     return switch(unit) {
       'cfm' => value * 28.316846592,
       'ft3' => value * 28.316846592,
       'f' => (value - 32) * 5 / 9,
+      'fdiff' => value * 5 / 9,
+      'inch' => value * 25.4,
+      'ft' => value * 0.3048,
+      'm3h' => value * 1000 / 60,
+      'psi' => value * 6.894757293168,
+      'grain' => value * 64.79891,
+      'grain_ft3' => value * 64.79891 / 0.028316846592,
       'inhg' => value * 33.8638866667,
       'inh2o' => value * 249.08891,
       _ => throw const FormatException('Bilinmeyen birim.'),
@@ -334,23 +361,33 @@ class UnitsPage extends StatefulWidget {
 class _UnitsPageState extends State<UnitsPage> {
   String _unit = 'cfm';
   String _value = '';
-  static const units = {'cfm':'ft³/dk → L/dk', 'ft3':'ft³ → L', 'f':'°F → °C', 'inhg':'inHg → hPa', 'inh2o':'inH₂O → Pa'};
+  static const units = {'cfm':'ft³/dk → L/dk', 'ft3':'ft³ → L', 'm3h':'m³/saat → L/dk', 'f':'Sıcaklık: °F → °C',
+    'fdiff':'Sıcaklık farkı: Δ°F → Δ°C', 'inch':'inç → mm', 'ft':'ft → m', 'psi':'psi → kPa',
+    'inhg':'inHg → hPa', 'inh2o':'inH₂O → Pa', 'grain':'grain (gr) → mg', 'grain_ft3':'grain/ft³ → mg/m³'};
   @override
   Widget build(BuildContext context) {
     String result = 'Bir değer gir.';
     try {
       final value = double.parse(_value.trim().replaceAll(',', '.'));
       final converted = FieldMath.convert(value, _unit);
-      final target = {'cfm':'L/dk','ft3':'L','f':'°C','inhg':'hPa','inh2o':'Pa'}[_unit];
+      final target = {'cfm':'L/dk','ft3':'L','m3h':'L/dk','f':'°C','fdiff':'Δ°C','inch':'mm','ft':'m','psi':'kPa',
+        'inhg':'hPa','inh2o':'Pa','grain':'mg','grain_ft3':'mg/m³'}[_unit];
       result = '${converted.toStringAsFixed(6).replaceAll('.', ',')} $target';
-    } catch (_) { if (_value.isNotEmpty) result = 'Geçerli bir sayı gir. Debi / hacim / basınç büyüklüğü negatif olamaz.'; }
+    } catch (_) { if (_value.isNotEmpty) result = 'Geçerli bir sayı gir. Debi/hacim/basınç/kütle negatif, sıcaklık mutlak sıfırın altında olamaz.'; }
     return Scaffold(appBar: AppBar(title: const Text('Birim dönüşümü')), body: ListView(padding: const EdgeInsets.all(16), children: [
-      DropdownButtonFormField<String>(value: _unit, isExpanded: true, items: units.entries.map((e) => DropdownMenuItem(value:e.key,child:Text(e.value))).toList(),
+      DropdownButtonFormField<String>(value: _unit, isExpanded: true, itemHeight:null,
+        selectedItemBuilder:(context)=>units.values.map((s)=>Align(alignment:Alignment.centerLeft,child:Text(s,maxLines:1,overflow:TextOverflow.ellipsis))).toList(),
+        items: units.entries.map((e) => DropdownMenuItem(value:e.key,child:Padding(padding:const EdgeInsets.symmetric(vertical:8),child:Text(e.value)))).toList(),
         onChanged: (v) { if (v != null) setState(() => _unit = v); }),
       TextField(decoration: const InputDecoration(labelText:'Kaynak birimdeki değer'), keyboardType: const TextInputType.numberWithOptions(decimal: true, signed: true), onChanged:(v)=>setState(()=>_value=v)),
       Padding(padding: const EdgeInsets.symmetric(vertical:24), child: SelectableText(result, style:Theme.of(context).textTheme.headlineSmall)),
       const GuideNotice(text: 'Bu araç birimi dönüştürür; gazın sıcaklık, basınç, kuru/yaş baz veya referans O₂ koşulunu değiştirmez. scf → L dönüşümünde kaynak koşulları aynen korunur. Nm³ dönüşümü için referans koşulları ayrıca gerekir.'),
       const GuideSection(title:'Basınç dönüşümünün tanımı', items:['inHg için geleneksel 0 °C cıva; inH₂O için geleneksel 4 °C su sütunu karşılığı kullanılır. Cihazın referansı farklıysa kendi kalibrasyon tanımını esas al.']),
+      const GuideSection(title:'Sıcaklık ve kütle ayrımı',items:[
+        'Mutlak sıcaklıkta °F→°C için 32 çıkarılır. Sıcaklık farkında/toleransta bu çıkarma yapılmaz; örneğin 25 Δ°F = yaklaşık 13,89 Δ°C.',
+        'grain (gr), gram (g) değildir: 1 grain = 64,79891 mg. gr/dscf çevrilirken kuru baz ve kaynağın referans koşulları korunur; sonuç kendiliğinden 0 °C Nm³ bazına dönüşmez.',
+        'Kaynak: NIST SP 811, Ek B.8 — https://www.nist.gov/pml/special-publication-811/nist-guide-si-appendix-b-conversion-factors/nist-guide-si-appendix-b8',
+      ]),
     ]));
   }
 }
@@ -394,12 +431,19 @@ class _SiteChecksPageState extends State<SiteChecksPage> {
         'Kaçak, sıcaklık, debi, izokinetik oran veya blank sınırı aşılırsa olay saatini ve etkilenen aralığı kaydet. İlgili metodun izin verdiği düzeltme/tekrar/ret yolunu kullan.',
         'Gerekli alternatif yöntem / yetkili onayını ve sapmanın sonuçlara etkisini ölçüm planında ve raporda açıkça belirt. Veriyi değiştirerek uygun hale getirme.',
       ]),
+      const GuideSection(title:'EPA Method 1 §11.5 — alternatif yer prosedürü (30.05.2023)',items:[
+        'Bozucunun akış yönünde 2D’den veya öncesinde 0,5D’den yakın düzlemler için alternatif prosedürü değerlendir. Uygulama yaklaşık 0,61 m’den büyük çaplarda, blokaj/duvar etkilerinin küçük olduğu kanallarla sınırlanır.',
+        'Kalibre edilmiş yön algılayan probla hem pitch hem yaw ölçülür; tek S-tip Pitot null açısı yeterli değildir.',
+        'Dairesel kanalda en az 40, dikdörtgende 42 nokta gerekir. 2023 açıklaması, kabul edilmiş bu yerde sonraki örnekleme ve hız ölçümlerinde de aynı asgari nokta sayılarını ister.',
+        'Her noktada bileşke açı R=acos(cos(yaw)×cos(pitch)); bileşkelerin ortalaması ≤20° ve örnek standart sapması ≤10° olmalı (§12.3). Bu iki ölçüt, null tekniğinin ortalama mutlak açısıyla karıştırılmaz.',
+        'Nokta yerleşimi, prob kalibrasyonu ve §11.5.3–11.5.4 işlemlerinin tamamını kaydet. Türkiye’deki seçili EN/ISO yöntemine bu EPA alternatifi kendiliğinden uygunluk sağlamaz.',
+      ]),
       const GuideSection(title:'Ek kontroller', items:[
         'Pitot delikleri tıkalı mı? Hortumlar ters, ezilmiş veya yoğuşma dolu mu? Manometre sıfırı ve yön referansı doğru mu?',
         'Nozül yönü, nozül çapı, kaçak vakumu, sayaç sıcaklığı/basıncı, kalibrasyon katsayısı ve baca nemi doğru kaydedilmiş mi?',
         'Proses duruşu, filtre tıkanması, absorban taşması, adsorban kırılması, soğutma kaybı ve O₂ driftinin etkisi değerlendirilmiş mi?',
       ]),
-      const SelectableText('Kaynak: US EPA Method 1 (28.04.2020), §11.4; alternatif yer prosedürü için ayrıca 29.03.2023 revizyonu kontrol edilmeli.\nhttps://www.epa.gov/sites/default/files/2017-08/documents/method_1_3.pdf\nhttps://www.epa.gov/system/files/documents/2023-04/2023%20Final%20Revisions%20Rule.pdf'),
+      const SelectableText('Kaynak: US EPA Method 1 (30.05.2023), §11.4–11.5, §12.3. Federal Register 29.03.2023 değişikliği 30.05.2023 yürürlüğe girdi.\nhttps://www.epa.gov/system/files/documents/2023-09/2023%20Final%20MS%20%20Method%201_0.pdf\nhttps://www.epa.gov/system/files/documents/2023-04/2023%20Final%20Revisions%20Rule.pdf'),
     ]));
   }
 }
