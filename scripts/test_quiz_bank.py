@@ -48,5 +48,14 @@ class QuizBankTests(unittest.TestCase):
                 self.assertIn(param,q['parameters'])
                 self.assertNotIn('Nem',q['parameters'])
 
+    def test_method_one_is_not_method_thirteen_or_seventeen(self):
+        q=next(q for q in BANK['questions'] if 'açılar +30°' in q['prompt'])
+        self.assertIn('TS EN 15259 / EPA Method 1',q['standards'])
+        self.assertNotIn('EPA Method 13A',q['standards'])
+        self.assertNotIn('EPA Method 17',q['standards'])
+        velocity=next(q for q in BANK['questions'] if q['prompt'].startswith('Pitot ile hız hesabında'))
+        self.assertNotIn('EPA Method 26A',velocity['standards'])
+        self.assertNotIn('EPA Method 29',velocity['standards'])
+
 
 if __name__=='__main__':unittest.main()

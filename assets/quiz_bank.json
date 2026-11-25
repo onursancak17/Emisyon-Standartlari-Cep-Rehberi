@@ -920,10 +920,7 @@
         "Hız / debi"
       ],
       "standards": [
-        "EPA Method 2 / TS EN ISO 16911 / TS ISO 10780",
-        "EPA Method 26A",
-        "EPA Method 29",
-        "TS EN 12619 / EPA Method 25A"
+        "EPA Method 2 / TS EN ISO 16911 / TS ISO 10780"
       ],
       "prompt": "Pitot ile hız hesabında hangi veri grubu anlamlıdır?",
       "choices": [
@@ -944,10 +941,7 @@
         "Hız / debi"
       ],
       "standards": [
-        "EPA Method 2 / TS EN ISO 16911 / TS ISO 10780",
-        "EPA Method 26A",
-        "EPA Method 29",
-        "TS EN 12619 / EPA Method 25A"
+        "EPA Method 2 / TS EN ISO 16911 / TS ISO 10780"
       ],
       "prompt": "Hacimsel baca debisi için ortalama hız dışında hangi temel büyüklük gerekir?",
       "choices": [
@@ -1100,11 +1094,7 @@
         "Ölçüm yeri / travers"
       ],
       "standards": [
-        "TS EN 15259 / EPA Method 1",
-        "EPA Method 17",
-        "EPA Method 13A",
-        "EPA Method 5 / EPA Method 17",
-        "EPA Method 11"
+        "TS EN 15259 / EPA Method 1"
       ],
       "prompt": "EPA Method 1 null tekniğinde açılar +30° ve −30° ise ortalama |α| kaçtır?",
       "choices": [
@@ -1125,11 +1115,7 @@
         "Ölçüm yeri / travers"
       ],
       "standards": [
-        "TS EN 15259 / EPA Method 1",
-        "EPA Method 17",
-        "EPA Method 13A",
-        "EPA Method 5 / EPA Method 17",
-        "EPA Method 11"
+        "TS EN 15259 / EPA Method 1"
       ],
       "prompt": "EPA Method 1 §11.4’te ortalama mutlak açı tam 20° ise hangi ifade doğrudur?",
       "choices": [
@@ -1150,11 +1136,7 @@
         "Ölçüm yeri / travers"
       ],
       "standards": [
-        "TS EN 15259 / EPA Method 1",
-        "EPA Method 17",
-        "EPA Method 13A",
-        "EPA Method 5 / EPA Method 17",
-        "EPA Method 11"
+        "TS EN 15259 / EPA Method 1"
       ],
       "prompt": "Açısı ölçülemeyen bir travers noktasına ortalama için 0° yazılmalı mı?",
       "choices": [
@@ -1175,11 +1157,7 @@
         "Ölçüm yeri / travers"
       ],
       "standards": [
-        "TS EN 15259 / EPA Method 1",
-        "EPA Method 17",
-        "EPA Method 13A",
-        "EPA Method 5 / EPA Method 17",
-        "EPA Method 11"
+        "TS EN 15259 / EPA Method 1"
       ],
       "prompt": "EPA null tekniğinde manometre başlangıcında ne yapılır?",
       "choices": [
@@ -1200,11 +1178,7 @@
         "Ölçüm yeri / travers"
       ],
       "standards": [
-        "TS EN 15259 / EPA Method 1",
-        "EPA Method 17",
-        "EPA Method 13A",
-        "EPA Method 5 / EPA Method 17",
-        "EPA Method 11"
+        "TS EN 15259 / EPA Method 1"
       ],
       "prompt": "Girdap veya ters akış saptanınca yalnız nokta sayısını artırmak ne sağlar?",
       "choices": [
@@ -1225,11 +1199,7 @@
         "Ölçüm yeri / travers"
       ],
       "standards": [
-        "TS EN 15259 / EPA Method 1",
-        "EPA Method 17",
-        "EPA Method 13A",
-        "EPA Method 5 / EPA Method 17",
-        "EPA Method 11"
+        "TS EN 15259 / EPA Method 1"
       ],
       "prompt": "Baca krokisinde bozucu etki mesafelerini kaydederken ne mutlaka belirgin olmalıdır?",
       "choices": [
@@ -1250,11 +1220,7 @@
         "Ölçüm yeri / travers"
       ],
       "standards": [
-        "TS EN 15259 / EPA Method 1",
-        "EPA Method 17",
-        "EPA Method 13A",
-        "EPA Method 5 / EPA Method 17",
-        "EPA Method 11"
+        "TS EN 15259 / EPA Method 1"
       ],
       "prompt": "Erişilemeyen travers noktası için doğru işlem nedir?",
       "choices": [
@@ -1296,10 +1262,7 @@
         "Hız / debi"
       ],
       "standards": [
-        "EPA Method 2 / TS EN ISO 16911 / TS ISO 10780",
-        "EPA Method 26A",
-        "EPA Method 29",
-        "TS EN 12619 / EPA Method 25A"
+        "EPA Method 2 / TS EN ISO 16911 / TS ISO 10780"
       ],
       "prompt": "Pitot deliklerinde tıkanma veya hortumda su varsa önce ne yapılır?",
       "choices": [

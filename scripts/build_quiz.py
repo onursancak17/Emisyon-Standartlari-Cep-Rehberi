@@ -30,7 +30,7 @@ def parameters(tags):
 
 
 def add(topic, scope, tags, prompt, right, wrong, explanation, source):
-    standards=[code for code in catalog if any(tag in code for tag in tags)]
+    standards=[code for code in catalog if any(re.search(re.escape(tag)+r'(?![0-9A-Za-z])',code) for tag in tags)]
     assert len(wrong)==3 and len(set([right,*wrong]))==4
     questions.append(dict(id=f'q{len(questions)+1:03}',topic=topic,scope=scope,parameters=parameters(tags),standards=standards,
         prompt=prompt,choices=[right,*wrong],correctIndex=0,explanation=explanation,source=source))
