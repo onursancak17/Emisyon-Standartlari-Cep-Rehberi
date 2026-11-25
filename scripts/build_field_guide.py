@@ -22,7 +22,7 @@ phases = ['Hazırlık', 'Kaçak kontrolü', 'Örnekleme', 'Geri kazanım', 'Sakl
 
 
 def profile(id, parameter, method, version, variant, sources, train, limits, notes, state='train_checked', gaps=None):
-    return dict(id=id, parameter=parameter, method=method, sourceVersion=version, variant=variant,
+    return dict(id=id, scope='Emisyon', parameter=parameter, method=method, sourceVersion=version, variant=variant,
                 sources=sources, reviewState=state, train=train, limits=[dict(label=k, value=v) for k, v in zip(
                     ['Çekiş debisi', 'Toplam çekiş hacmi', 'Sıcaklık', 'Ölçüm süresi'], limits)],
                 phases=[dict(title=t, items=notes.get(t, ['Bu aşamanın ayrıntılı kaynak doğrulaması henüz tamamlanmadı.'])) for t in phases],
@@ -177,6 +177,39 @@ for pid, param, method, src in [
        ['Henüz doğrulanmadı.']*4, {'Hazırlık':['Bu metodun kapsamı, tren düzeni ve sayısal koşulları birincil kaynaktan tamamlanacak. Başka bir metodun şeması burada kullanılmaz.'],
                                'Laboratuvara teslim':common_delivery}, 'pending',
        ['Şema, reaktif miktarı, debi, hacim, süre, sıcaklık, geri kazanım, saklama ve bekletme süresi kaynakları tamamlanacak.']))
+
+for fraction in ('PM10', 'PM2,5'):
+    p = profile('ambient_'+fraction.replace(',','_').lower(), fraction+' — ortam havası', 'EN 12341', '2023', 'Ortam havası — gravimetrik filtre örneklemesi',
+      ['D23:8,30-31'], [], ['Anma debisi 2,3 m³/saat = yaklaşık 38,33 L/dk; giriş yakınındaki ortam koşullarında.',
+       'Anma debisi × 24 saat = 55,2 m³; gerçek geçerli hacim ölçülen debi ve süreden gelir, otomatik sabit kabul edilmez.',
+       'Ön tartım koşullandırması: 19–21 °C, %45–50 bağıl nem.', 'Anma süresi 24 saat; geçerlilik ve veri kaybı kuralları ayrıca kontrol edilir.'],
+      {'Hazırlık':['Doğru boyut ayırıcı başlığı ve temiz giriş sistemini kullan. Filtreyi benzersiz kimlikle, temiz ortamda kasete yerleştir.',
+                  'Arşiv §6.3: ≥48 saat koşullandırma sonrası ilk tartım; ≥12 saat ek koşullandırma sonrası ikinci tartım. İlgili kabul ve belirsizlik istisnalarını standarttan kontrol et.'],
+       'Kaçak kontrolü':['Örnekleyicinin kaçak ve debi doğrulamasını EN 12341 ekipman gereklilikleri / onaylı cihaz prosedürüyle yap. Baca EPA kaçak sınırı buraya otomatik taşınmaz.'],
+       'Örnekleme':['Gerçek debi, başlangıç/bitiş zamanı, kesintiler ve cihaz bayraklarını kaydet. Örneklenen hacim ortam koşullarındadır.',
+                    'Kasette en az bir filtre gaz çekilmeden saha blankı olarak bırakılır (§6.4.2).'],
+       'Geri kazanım':['Örneklenen filtreyi yüzeyine temas etmeden koruyucu tutucusuna / temiz kaba al; filtre ile kaset konumunu eşleştir.'],
+       'Saklama ve taşıma':['Dış kirlenme ve aşırı ısınmadan korunmuş kapalı / yalıtımlı kaplarda taşı; uçucu kayıplarını ve yoğuşmayı önle.',
+                            'Arşiv §6.4.3: gravimetrik analiz için tartım odasına numune alımından itibaren 1 ay içinde alınır. Bu ifade her parametre için 1 ay analiz bekletme izni değildir.'],
+       'Laboratuvara teslim':common_delivery+['Filtre, saha blankı, ortam hacmi, gerçek süre, debi/arıza kayıtları ve meteorolojiyi teslim et.']})
+    p['scope']='İmisyon'
+    p['trainNote']='İmpinger kullanılmaz; boyut ayırıcı giriş → filtre → debi/hacim kontrolü.'
+    data.append(p)
+
+for pid, param, method, refs, steps in [
+ ('dustfall','Çöken toz','TS 2341 / TS 2342 — TL14 aktarımı',['D44:4-6'],
+  ['Toplama alanı, yerleşim, gerçek maruziyet süresi ve saha olaylarını kaydet.', 'Yaprak/böcek gibi yabancı cisimleri ve kap duvarındaki birikintileri talimatın geri kazanım adımlarıyla değerlendir.']),
+ ('passive','Pasif örnekleme / difüzyon tüpü','EN 13528 — TL15 aktarımı',['D46:4-5'],
+  ['Hedef gaza uygun tüp, koruyucu kap, alım hızı, maruziyet aralığı ve üretici koşullarını seç.', 'Açma/kapama tarih-saatini, sıcaklık/nem/rüzgâr koşullarını ve tüp partisini kaydet.'])]:
+    p=profile(pid,param,method,'Arşiv talimatı','İmisyon — pompalı impinger treni kullanılmaz',refs,[],
+      ['Uygulanmaz; bu düzende pompalı gaz çekişi yok.', 'Uygulanmaz; çöken tozda toplama alanı × gün, pasif tüpte doğrulanmış alım hızı × maruziyet esastır.',
+       'Seçilen yöntem / tüp koşullarından doğrulanacak.', 'Seçilen yöntem ve ölçüm planına bağlı; evrensel tek süre atanmaz.'],
+      {'Hazırlık':steps,'Örnekleme':['Konum, süre, meteoroloji ve saha olaylarını kaydet; kaybolan / bozulan numuneyi gizleme.'],
+       'Saklama ve taşıma':['Kap / tüp ağzını kapat; kirlenme ve kaybı önle. Parametreye özgü taşıma sıcaklığı ve azami süreyi geçerli metot/üretici talimatıyla doğrula.'],
+       'Laboratuvara teslim':common_delivery},'sop_only')
+    p['scope']='İmisyon'
+    p['trainNote']='Bu metoda impinger veya izokinetik baca nozülü atanmaz.'
+    data.append(p)
 
 topics = [
  ('Planlama ve metot seçimi', ['Emisyon / imisyon ayrımı, hedef kirletici ve fiziksel faz; ilgili mevzuat, metot sürümü ve laboratuvar yeterliliğini eşleştir.', 'Hedef tayin sınırı, beklenen derişim, toplam numune hacmi ve analitik yöntem laboratuvarla birlikte planlanır.']),

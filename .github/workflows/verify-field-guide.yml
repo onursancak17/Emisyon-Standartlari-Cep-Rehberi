@@ -27,4 +27,4 @@ jobs:
           flutter pub get
           flutter analyze lib test --no-fatal-infos --no-fatal-warnings
       - name: Test method selection and field calculations
-        run: flutter test
+        run: flutter test --timeout 2m

@@ -5,6 +5,7 @@
   "profiles": [
     {
       "id": "moisture_epa4",
+      "scope": "Emisyon",
       "parameter": "Nem",
       "method": "EPA Method 4",
       "sourceVersion": "07.10.2020",
@@ -140,6 +141,7 @@
     },
     {
       "id": "halogen_epa26a",
+      "scope": "Emisyon",
       "parameter": "Klor / halojenler",
       "method": "EPA Method 26A",
       "sourceVersion": "07.10.2020",
@@ -289,6 +291,7 @@
     },
     {
       "id": "fluoride_epa13a_rear",
+      "scope": "Emisyon",
       "parameter": "Flor / florür",
       "method": "EPA Method 13A",
       "sourceVersion": "03.08.2017",
@@ -424,6 +427,7 @@
     },
     {
       "id": "fluoride_epa13a_front",
+      "scope": "Emisyon",
       "parameter": "Flor / florür",
       "method": "EPA Method 13A",
       "sourceVersion": "03.08.2017",
@@ -559,6 +563,7 @@
     },
     {
       "id": "metals_epa29_hg",
+      "scope": "Emisyon",
       "parameter": "Ağır metaller",
       "method": "EPA Method 29",
       "sourceVersion": "02.08.2017",
@@ -719,6 +724,7 @@
     },
     {
       "id": "metals_epa29_no_hg",
+      "scope": "Emisyon",
       "parameter": "Ağır metaller",
       "method": "EPA Method 29",
       "sourceVersion": "02.08.2017",
@@ -855,6 +861,7 @@
     },
     {
       "id": "pah_iso11338_b",
+      "scope": "Emisyon",
       "parameter": "PAH",
       "method": "ISO 11338-1",
       "sourceVersion": "2003",
@@ -979,6 +986,7 @@
     },
     {
       "id": "dioxin_en1948_filter",
+      "scope": "Emisyon",
       "parameter": "Dioksin / furan",
       "method": "EN 1948-1",
       "sourceVersion": "2006",
@@ -1106,6 +1114,7 @@
     },
     {
       "id": "acid_epa8",
+      "scope": "Emisyon",
       "parameter": "Sülfürik asit / SO₂",
       "method": "EPA Method 8",
       "sourceVersion": "14.01.2019",
@@ -1238,6 +1247,7 @@
     },
     {
       "id": "hcn_tl115",
+      "scope": "Emisyon",
       "parameter": "Siyanür / HCN",
       "method": "CARB Method 426 — TL115 aktarımı",
       "sourceVersion": "TL115 rev.07 / 05.03.2021",
@@ -1368,6 +1378,7 @@
     },
     {
       "id": "hcl_tl89",
+      "scope": "Emisyon",
       "parameter": "Klor / halojenler",
       "method": "TS EN 1911 — TL89 aktarımı",
       "sourceVersion": "TL89 rev.09 / 20.01.2026",
@@ -1440,6 +1451,7 @@
     },
     {
       "id": "metals_en14385",
+      "scope": "Emisyon",
       "parameter": "Ağır metaller",
       "method": "TS EN 14385",
       "sourceVersion": "Arşiv kaynağı — ayrıntılı inceleme bekliyor",
@@ -1512,6 +1524,7 @@
     },
     {
       "id": "ammonia_ctm027",
+      "scope": "Emisyon",
       "parameter": "Amonyak",
       "method": "EPA CTM 027",
       "sourceVersion": "Arşiv kaynağı — ayrıntılı inceleme bekliyor",
@@ -1584,6 +1597,7 @@
     },
     {
       "id": "ammonia_2071",
+      "scope": "Emisyon",
       "parameter": "Amonyak",
       "method": "SCAQMD Method 207.1",
       "sourceVersion": "Arşiv kaynağı — ayrıntılı inceleme bekliyor",
@@ -1656,6 +1670,7 @@
     },
     {
       "id": "chromium_carb425",
+      "scope": "Emisyon",
       "parameter": "Krom(VI)",
       "method": "CARB Method 425",
       "sourceVersion": "Arşiv kaynağı — ayrıntılı inceleme bekliyor",
@@ -1728,6 +1743,7 @@
     },
     {
       "id": "formaldehyde_epa323",
+      "scope": "Emisyon",
       "parameter": "Formaldehit",
       "method": "EPA Method 323",
       "sourceVersion": "Arşiv kaynağı — ayrıntılı inceleme bekliyor",
@@ -1800,6 +1816,7 @@
     },
     {
       "id": "h2s_epa11",
+      "scope": "Emisyon",
       "parameter": "Hidrojen sülfür",
       "method": "EPA Method 11",
       "sourceVersion": "Arşiv kaynağı — ayrıntılı inceleme bekliyor",
@@ -1869,6 +1886,316 @@
       "gaps": [
         "Şema, reaktif miktarı, debi, hacim, süre, sıcaklık, geri kazanım, saklama ve bekletme süresi kaynakları tamamlanacak."
       ]
+    },
+    {
+      "id": "ambient_pm10",
+      "scope": "İmisyon",
+      "parameter": "PM10 — ortam havası",
+      "method": "EN 12341",
+      "sourceVersion": "2023",
+      "variant": "Ortam havası — gravimetrik filtre örneklemesi",
+      "sources": [
+        "D23:8,30-31"
+      ],
+      "reviewState": "train_checked",
+      "train": [],
+      "limits": [
+        {
+          "label": "Çekiş debisi",
+          "value": "Anma debisi 2,3 m³/saat = yaklaşık 38,33 L/dk; giriş yakınındaki ortam koşullarında."
+        },
+        {
+          "label": "Toplam çekiş hacmi",
+          "value": "Anma debisi × 24 saat = 55,2 m³; gerçek geçerli hacim ölçülen debi ve süreden gelir, otomatik sabit kabul edilmez."
+        },
+        {
+          "label": "Sıcaklık",
+          "value": "Ön tartım koşullandırması: 19–21 °C, %45–50 bağıl nem."
+        },
+        {
+          "label": "Ölçüm süresi",
+          "value": "Anma süresi 24 saat; geçerlilik ve veri kaybı kuralları ayrıca kontrol edilir."
+        }
+      ],
+      "phases": [
+        {
+          "title": "Hazırlık",
+          "items": [
+            "Doğru boyut ayırıcı başlığı ve temiz giriş sistemini kullan. Filtreyi benzersiz kimlikle, temiz ortamda kasete yerleştir.",
+            "Arşiv §6.3: ≥48 saat koşullandırma sonrası ilk tartım; ≥12 saat ek koşullandırma sonrası ikinci tartım. İlgili kabul ve belirsizlik istisnalarını standarttan kontrol et."
+          ]
+        },
+        {
+          "title": "Kaçak kontrolü",
+          "items": [
+            "Örnekleyicinin kaçak ve debi doğrulamasını EN 12341 ekipman gereklilikleri / onaylı cihaz prosedürüyle yap. Baca EPA kaçak sınırı buraya otomatik taşınmaz."
+          ]
+        },
+        {
+          "title": "Örnekleme",
+          "items": [
+            "Gerçek debi, başlangıç/bitiş zamanı, kesintiler ve cihaz bayraklarını kaydet. Örneklenen hacim ortam koşullarındadır.",
+            "Kasette en az bir filtre gaz çekilmeden saha blankı olarak bırakılır (§6.4.2)."
+          ]
+        },
+        {
+          "title": "Geri kazanım",
+          "items": [
+            "Örneklenen filtreyi yüzeyine temas etmeden koruyucu tutucusuna / temiz kaba al; filtre ile kaset konumunu eşleştir."
+          ]
+        },
+        {
+          "title": "Saklama ve taşıma",
+          "items": [
+            "Dış kirlenme ve aşırı ısınmadan korunmuş kapalı / yalıtımlı kaplarda taşı; uçucu kayıplarını ve yoğuşmayı önle.",
+            "Arşiv §6.4.3: gravimetrik analiz için tartım odasına numune alımından itibaren 1 ay içinde alınır. Bu ifade her parametre için 1 ay analiz bekletme izni değildir."
+          ]
+        },
+        {
+          "title": "Laboratuvara teslim",
+          "items": [
+            "Tesis, baca/nokta, tarih, başlangıç–bitiş, metot/sürüm, numuneci ve fraksiyon kimliklerini etiketle.",
+            "Numune kabı, kapak, miktar, blank, mühür, taşıma koşulu, teslim saati ve teslim alanı izlenebilir teslim formuna kaydet.",
+            "Filtre, saha blankı, ortam hacmi, gerçek süre, debi/arıza kayıtları ve meteorolojiyi teslim et."
+          ]
+        }
+      ],
+      "gaps": [
+        "Bu kartın doğrulaması şema ve belirtilen kaynak maddeleriyle sınırlıdır; tam yöntem yeterlilik incelemesi sürüyor.",
+        "Kaynak sürümünün güncel yürürlük durumu ve laboratuvarın onaylı uygulaması ayrıca kontrol edilmeli."
+      ],
+      "trainNote": "İmpinger kullanılmaz; boyut ayırıcı giriş → filtre → debi/hacim kontrolü."
+    },
+    {
+      "id": "ambient_pm2_5",
+      "scope": "İmisyon",
+      "parameter": "PM2,5 — ortam havası",
+      "method": "EN 12341",
+      "sourceVersion": "2023",
+      "variant": "Ortam havası — gravimetrik filtre örneklemesi",
+      "sources": [
+        "D23:8,30-31"
+      ],
+      "reviewState": "train_checked",
+      "train": [],
+      "limits": [
+        {
+          "label": "Çekiş debisi",
+          "value": "Anma debisi 2,3 m³/saat = yaklaşık 38,33 L/dk; giriş yakınındaki ortam koşullarında."
+        },
+        {
+          "label": "Toplam çekiş hacmi",
+          "value": "Anma debisi × 24 saat = 55,2 m³; gerçek geçerli hacim ölçülen debi ve süreden gelir, otomatik sabit kabul edilmez."
+        },
+        {
+          "label": "Sıcaklık",
+          "value": "Ön tartım koşullandırması: 19–21 °C, %45–50 bağıl nem."
+        },
+        {
+          "label": "Ölçüm süresi",
+          "value": "Anma süresi 24 saat; geçerlilik ve veri kaybı kuralları ayrıca kontrol edilir."
+        }
+      ],
+      "phases": [
+        {
+          "title": "Hazırlık",
+          "items": [
+            "Doğru boyut ayırıcı başlığı ve temiz giriş sistemini kullan. Filtreyi benzersiz kimlikle, temiz ortamda kasete yerleştir.",
+            "Arşiv §6.3: ≥48 saat koşullandırma sonrası ilk tartım; ≥12 saat ek koşullandırma sonrası ikinci tartım. İlgili kabul ve belirsizlik istisnalarını standarttan kontrol et."
+          ]
+        },
+        {
+          "title": "Kaçak kontrolü",
+          "items": [
+            "Örnekleyicinin kaçak ve debi doğrulamasını EN 12341 ekipman gereklilikleri / onaylı cihaz prosedürüyle yap. Baca EPA kaçak sınırı buraya otomatik taşınmaz."
+          ]
+        },
+        {
+          "title": "Örnekleme",
+          "items": [
+            "Gerçek debi, başlangıç/bitiş zamanı, kesintiler ve cihaz bayraklarını kaydet. Örneklenen hacim ortam koşullarındadır.",
+            "Kasette en az bir filtre gaz çekilmeden saha blankı olarak bırakılır (§6.4.2)."
+          ]
+        },
+        {
+          "title": "Geri kazanım",
+          "items": [
+            "Örneklenen filtreyi yüzeyine temas etmeden koruyucu tutucusuna / temiz kaba al; filtre ile kaset konumunu eşleştir."
+          ]
+        },
+        {
+          "title": "Saklama ve taşıma",
+          "items": [
+            "Dış kirlenme ve aşırı ısınmadan korunmuş kapalı / yalıtımlı kaplarda taşı; uçucu kayıplarını ve yoğuşmayı önle.",
+            "Arşiv §6.4.3: gravimetrik analiz için tartım odasına numune alımından itibaren 1 ay içinde alınır. Bu ifade her parametre için 1 ay analiz bekletme izni değildir."
+          ]
+        },
+        {
+          "title": "Laboratuvara teslim",
+          "items": [
+            "Tesis, baca/nokta, tarih, başlangıç–bitiş, metot/sürüm, numuneci ve fraksiyon kimliklerini etiketle.",
+            "Numune kabı, kapak, miktar, blank, mühür, taşıma koşulu, teslim saati ve teslim alanı izlenebilir teslim formuna kaydet.",
+            "Filtre, saha blankı, ortam hacmi, gerçek süre, debi/arıza kayıtları ve meteorolojiyi teslim et."
+          ]
+        }
+      ],
+      "gaps": [
+        "Bu kartın doğrulaması şema ve belirtilen kaynak maddeleriyle sınırlıdır; tam yöntem yeterlilik incelemesi sürüyor.",
+        "Kaynak sürümünün güncel yürürlük durumu ve laboratuvarın onaylı uygulaması ayrıca kontrol edilmeli."
+      ],
+      "trainNote": "İmpinger kullanılmaz; boyut ayırıcı giriş → filtre → debi/hacim kontrolü."
+    },
+    {
+      "id": "dustfall",
+      "scope": "İmisyon",
+      "parameter": "Çöken toz",
+      "method": "TS 2341 / TS 2342 — TL14 aktarımı",
+      "sourceVersion": "Arşiv talimatı",
+      "variant": "İmisyon — pompalı impinger treni kullanılmaz",
+      "sources": [
+        "D44:4-6"
+      ],
+      "reviewState": "sop_only",
+      "train": [],
+      "limits": [
+        {
+          "label": "Çekiş debisi",
+          "value": "Uygulanmaz; bu düzende pompalı gaz çekişi yok."
+        },
+        {
+          "label": "Toplam çekiş hacmi",
+          "value": "Uygulanmaz; çöken tozda toplama alanı × gün, pasif tüpte doğrulanmış alım hızı × maruziyet esastır."
+        },
+        {
+          "label": "Sıcaklık",
+          "value": "Seçilen yöntem / tüp koşullarından doğrulanacak."
+        },
+        {
+          "label": "Ölçüm süresi",
+          "value": "Seçilen yöntem ve ölçüm planına bağlı; evrensel tek süre atanmaz."
+        }
+      ],
+      "phases": [
+        {
+          "title": "Hazırlık",
+          "items": [
+            "Toplama alanı, yerleşim, gerçek maruziyet süresi ve saha olaylarını kaydet.",
+            "Yaprak/böcek gibi yabancı cisimleri ve kap duvarındaki birikintileri talimatın geri kazanım adımlarıyla değerlendir."
+          ]
+        },
+        {
+          "title": "Kaçak kontrolü",
+          "items": [
+            "Bu aşamanın ayrıntılı kaynak doğrulaması henüz tamamlanmadı."
+          ]
+        },
+        {
+          "title": "Örnekleme",
+          "items": [
+            "Konum, süre, meteoroloji ve saha olaylarını kaydet; kaybolan / bozulan numuneyi gizleme."
+          ]
+        },
+        {
+          "title": "Geri kazanım",
+          "items": [
+            "Bu aşamanın ayrıntılı kaynak doğrulaması henüz tamamlanmadı."
+          ]
+        },
+        {
+          "title": "Saklama ve taşıma",
+          "items": [
+            "Kap / tüp ağzını kapat; kirlenme ve kaybı önle. Parametreye özgü taşıma sıcaklığı ve azami süreyi geçerli metot/üretici talimatıyla doğrula."
+          ]
+        },
+        {
+          "title": "Laboratuvara teslim",
+          "items": [
+            "Tesis, baca/nokta, tarih, başlangıç–bitiş, metot/sürüm, numuneci ve fraksiyon kimliklerini etiketle.",
+            "Numune kabı, kapak, miktar, blank, mühür, taşıma koşulu, teslim saati ve teslim alanı izlenebilir teslim formuna kaydet."
+          ]
+        }
+      ],
+      "gaps": [
+        "Bu kartın doğrulaması şema ve belirtilen kaynak maddeleriyle sınırlıdır; tam yöntem yeterlilik incelemesi sürüyor.",
+        "Kaynak sürümünün güncel yürürlük durumu ve laboratuvarın onaylı uygulaması ayrıca kontrol edilmeli."
+      ],
+      "trainNote": "Bu metoda impinger veya izokinetik baca nozülü atanmaz."
+    },
+    {
+      "id": "passive",
+      "scope": "İmisyon",
+      "parameter": "Pasif örnekleme / difüzyon tüpü",
+      "method": "EN 13528 — TL15 aktarımı",
+      "sourceVersion": "Arşiv talimatı",
+      "variant": "İmisyon — pompalı impinger treni kullanılmaz",
+      "sources": [
+        "D46:4-5"
+      ],
+      "reviewState": "sop_only",
+      "train": [],
+      "limits": [
+        {
+          "label": "Çekiş debisi",
+          "value": "Uygulanmaz; bu düzende pompalı gaz çekişi yok."
+        },
+        {
+          "label": "Toplam çekiş hacmi",
+          "value": "Uygulanmaz; çöken tozda toplama alanı × gün, pasif tüpte doğrulanmış alım hızı × maruziyet esastır."
+        },
+        {
+          "label": "Sıcaklık",
+          "value": "Seçilen yöntem / tüp koşullarından doğrulanacak."
+        },
+        {
+          "label": "Ölçüm süresi",
+          "value": "Seçilen yöntem ve ölçüm planına bağlı; evrensel tek süre atanmaz."
+        }
+      ],
+      "phases": [
+        {
+          "title": "Hazırlık",
+          "items": [
+            "Hedef gaza uygun tüp, koruyucu kap, alım hızı, maruziyet aralığı ve üretici koşullarını seç.",
+            "Açma/kapama tarih-saatini, sıcaklık/nem/rüzgâr koşullarını ve tüp partisini kaydet."
+          ]
+        },
+        {
+          "title": "Kaçak kontrolü",
+          "items": [
+            "Bu aşamanın ayrıntılı kaynak doğrulaması henüz tamamlanmadı."
+          ]
+        },
+        {
+          "title": "Örnekleme",
+          "items": [
+            "Konum, süre, meteoroloji ve saha olaylarını kaydet; kaybolan / bozulan numuneyi gizleme."
+          ]
+        },
+        {
+          "title": "Geri kazanım",
+          "items": [
+            "Bu aşamanın ayrıntılı kaynak doğrulaması henüz tamamlanmadı."
+          ]
+        },
+        {
+          "title": "Saklama ve taşıma",
+          "items": [
+            "Kap / tüp ağzını kapat; kirlenme ve kaybı önle. Parametreye özgü taşıma sıcaklığı ve azami süreyi geçerli metot/üretici talimatıyla doğrula."
+          ]
+        },
+        {
+          "title": "Laboratuvara teslim",
+          "items": [
+            "Tesis, baca/nokta, tarih, başlangıç–bitiş, metot/sürüm, numuneci ve fraksiyon kimliklerini etiketle.",
+            "Numune kabı, kapak, miktar, blank, mühür, taşıma koşulu, teslim saati ve teslim alanı izlenebilir teslim formuna kaydet."
+          ]
+        }
+      ],
+      "gaps": [
+        "Bu kartın doğrulaması şema ve belirtilen kaynak maddeleriyle sınırlıdır; tam yöntem yeterlilik incelemesi sürüyor.",
+        "Kaynak sürümünün güncel yürürlük durumu ve laboratuvarın onaylı uygulaması ayrıca kontrol edilmeli."
+      ],
+      "trainNote": "Bu metoda impinger veya izokinetik baca nozülü atanmaz."
     }
   ],
   "fundamentals": [

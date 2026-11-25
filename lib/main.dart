@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:just_audio/just_audio.dart';
 import 'field_guide.dart';
+import 'quiz.dart';
 
 void main() {
   runApp(const StandardsApp());
@@ -101,6 +102,14 @@ class _StandardsHomePageState extends State<StandardsHomePage> {
                     icon: const Icon(Icons.science_outlined),
                     label: const Text('Parametre seç · Numune alma ve impinger rehberi'),
                     onPressed: () => Navigator.of(context).push(MaterialPageRoute<void>(builder: (_) => const FieldGuidePage())),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(16, 8, 16, 0),
+                  child: OutlinedButton.icon(
+                    icon: const Icon(Icons.quiz_outlined),
+                    label: const Text('Bilgini sına · Emisyon / İmisyon açıklamalı testler'),
+                    onPressed: () => Navigator.of(context).push(MaterialPageRoute<void>(builder: (_) => const QuizHomePage())),
                   ),
                 ),
                 Padding(

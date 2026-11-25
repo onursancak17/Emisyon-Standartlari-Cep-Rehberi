@@ -1,0 +1,2339 @@
+{
+  "schemaVersion": 1,
+  "title": "Emisyon / İmisyon Açıklamalı Testler",
+  "notice": "Eğitim ve öz değerlendirme içindir; mesleki yetki veya standart uygunluk belgesi değildir. Sorular belirtilen kaynak sürümü / kapsamıyla değerlendirilir.",
+  "catalog": [
+    {
+      "code": "TS EN 15259 / EPA Method 1",
+      "category": "Emisyon",
+      "title": "Ölçüm Düzlemi, Port Seçimi ve Traverse Planı"
+    },
+    {
+      "code": "EPA Method 2 / TS EN ISO 16911 / TS ISO 10780",
+      "category": "Emisyon",
+      "title": "Baca Gazı Hız ve Debi Ölçümü"
+    },
+    {
+      "code": "EPA Method 5",
+      "category": "Emisyon",
+      "title": "EPA Method 5 Partikül Madde Ölçümü"
+    },
+    {
+      "code": "TS EN 13284-1",
+      "category": "Emisyon",
+      "title": "TS EN 13284-1 Düşük Derişimli Partikül Madde Ölçümü"
+    },
+    {
+      "code": "TS ISO 9096",
+      "category": "Emisyon",
+      "title": "TS ISO 9096 Yüksek Konsantrasyon Partikül Madde Ölçümü"
+    },
+    {
+      "code": "EPA Method 17",
+      "category": "Emisyon",
+      "title": "EPA Method 17 In-Stack Filtre ile Partikül Madde"
+    },
+    {
+      "code": "EPA Method 4",
+      "category": "Emisyon",
+      "title": "EPA Method 4 Nem Tayini"
+    },
+    {
+      "code": "TS ISO 12039 / TS EN 14789 / TS EN 14792 / TS EN 15058",
+      "category": "Emisyon",
+      "title": "TS ISO 12039 ve Yanma Gazı Ölçümleri"
+    },
+    {
+      "code": "TS EN 1911",
+      "category": "Emisyon",
+      "title": "TS EN 1911 Hidrojen Klorür (HCl) Tayini"
+    },
+    {
+      "code": "EPA Method 26A",
+      "category": "Emisyon",
+      "title": "EPA Method 26A Hidrojen Halidler ve Halojenler"
+    },
+    {
+      "code": "EPA Method 29",
+      "category": "Emisyon",
+      "title": "EPA Method 29 Ağır Metal Örneklemesi"
+    },
+    {
+      "code": "TS EN 14385",
+      "category": "Emisyon",
+      "title": "TS EN 14385 Ağır Metal Ölçümü"
+    },
+    {
+      "code": "TS EN 12619 / TSE CEN/TS 13649",
+      "category": "Emisyon",
+      "title": "TOC / VOC Ölçümü"
+    },
+    {
+      "code": "TS ISO 11338 / ilgili PAH saha uygulamaları",
+      "category": "Emisyon",
+      "title": "TS ISO 11338 PAH Örneklemesi"
+    },
+    {
+      "code": "TS EN 1948-1",
+      "category": "Emisyon",
+      "title": "TS EN 1948-1 PCDD/PCDF Dioksin-Furan Örneklemesi"
+    },
+    {
+      "code": "TS EN 12341 / EPA 40 CFR 50-53",
+      "category": "İmisyon",
+      "title": "PM10 / PM2.5 Ortam Havası Ölçümü"
+    },
+    {
+      "code": "TS 2341 / TS 2342 / SKHKKY Ek-2 saha yaklaşımı",
+      "category": "İmisyon",
+      "title": "Çöken Toz İmisyon Ölçümü"
+    },
+    {
+      "code": "ISDL / MID",
+      "category": "Emisyon",
+      "title": "ISDL / MID Hedef Hacim ve Raporlama Limiti Planlaması"
+    },
+    {
+      "code": "CARB Method 426",
+      "category": "Emisyon",
+      "title": "CARB Method 426 Siyanür / HCN Örneklemesi"
+    },
+    {
+      "code": "CARB Method 425",
+      "category": "Emisyon",
+      "title": "CARB Method 425 Krom+6 / Cr(VI) Örneklemesi"
+    },
+    {
+      "code": "EPA CTM 027",
+      "category": "Emisyon",
+      "title": "EPA CTM 027 Amonyak Örneklemesi"
+    },
+    {
+      "code": "SCAQMD Method 207.1",
+      "category": "Emisyon",
+      "title": "SCAQMD Method 207.1 Amonyak Örneklemesi"
+    },
+    {
+      "code": "EPA Method 13A",
+      "category": "Emisyon",
+      "title": "EPA Method 13A Toplam Florür Tayini"
+    },
+    {
+      "code": "ISO 12141",
+      "category": "Emisyon",
+      "title": "ISO 12141 Düşük Toz Elle Gravimetrik Ölçüm"
+    },
+    {
+      "code": "EPA Method 323",
+      "category": "Emisyon",
+      "title": "EPA Method 323 Formaldehit Ölçümü"
+    },
+    {
+      "code": "TS EN 12619 / EPA Method 25A",
+      "category": "Emisyon",
+      "title": "TS EN 12619 / EPA Method 25A TOC-FID Ölçümü"
+    },
+    {
+      "code": "TS EN 13649",
+      "category": "Emisyon",
+      "title": "TS EN 13649 VOC Aktif Karbon Tüp Örneklemesi"
+    },
+    {
+      "code": "TS ISO 12039 / TS ISO 7935 / EPA CTM-022",
+      "category": "Emisyon",
+      "title": "Yanma Gazı Ölçümleri"
+    },
+    {
+      "code": "EPA Method 5 / EPA Method 17",
+      "category": "Emisyon",
+      "title": "EPA Method 5 / EPA Method 17 Partikül Madde Ölçümü"
+    },
+    {
+      "code": "TS EN 13284-1 / TS ISO 9096 / ISO 12141",
+      "category": "Emisyon",
+      "title": "TS EN 13284-1 / TS ISO 9096 / ISO 12141 Toz Ölçümü"
+    },
+    {
+      "code": "EPA Method 8",
+      "category": "Emisyon",
+      "title": "EPA Method 8 Sülfürik Asit ve SO2 Tayini"
+    },
+    {
+      "code": "EPA Method 11",
+      "category": "Emisyon",
+      "title": "EPA Method 11 Hidrojen Sülfür (H2S) Tayini"
+    },
+    {
+      "code": "EPA CTM 027 / SCAQMD Method 207.1",
+      "category": "Emisyon",
+      "title": "EPA CTM 027 / SCAQMD 207.1 Amonyak Örneklemesi"
+    },
+    {
+      "code": "TS EN 12341 / EPA 40 CFR Part 50-53",
+      "category": "İmisyon",
+      "title": "TS EN 12341 / EPA 40 CFR Part 50 PM10 İmisyon Ölçümü"
+    },
+    {
+      "code": "TS 2341 / TS 2342 / SKHKKY Ek-2",
+      "category": "İmisyon",
+      "title": "Çöken Toz İmisyon Ölçümü"
+    },
+    {
+      "code": "Pasif Örnekleme / Difüzyon Tüpü",
+      "category": "İmisyon",
+      "title": "Pasif Tüp ile İmisyon Ölçümleri"
+    },
+    {
+      "code": "TS 9503 / Bacada İslilik Ölçümü",
+      "category": "Emisyon",
+      "title": "TS 9503 Bacada İslilik Ölçümü"
+    }
+  ],
+  "questions": [
+    {
+      "id": "q001",
+      "topic": "İmpinger ve özel metotlar",
+      "scope": "Emisyon",
+      "parameters": [
+        "Nem"
+      ],
+      "standards": [
+        "EPA Method 4"
+      ],
+      "prompt": "EPA Method 4 referans düzeninde üçüncü impingerin başlangıç durumu nedir?",
+      "choices": [
+        "Boştur.",
+        "100 mL asit içerir.",
+        "100 mL NaOH içerir.",
+        "Silika jel içerir."
+      ],
+      "correctIndex": 0,
+      "explanation": "İlk iki şişe suyla, dördüncü şişe silika jelle hazırlanır; üçüncü şişe başlangıçta boştur. Bu başlangıç düzeni ölçüm sonunda şişenin boş kalacağı anlamına gelmez.",
+      "source": "D08:4; D09:8"
+    },
+    {
+      "id": "q002",
+      "topic": "İmpinger ve özel metotlar",
+      "scope": "Emisyon",
+      "parameters": [
+        "Nem"
+      ],
+      "standards": [
+        "EPA Method 4"
+      ],
+      "prompt": "EPA Method 4’te silika jel çıkış sıcaklığı için hangi koşul aranır?",
+      "choices": [
+        "20 °C altında",
+        "120 °C üstünde",
+        "Tam 42 °C",
+        "Ortam sıcaklığıyla daima aynı"
+      ],
+      "correctIndex": 0,
+      "explanation": "Buz-su banyosu kullanılarak silika jel çıkışı 20 °C altında tutulur. Probun yaklaşık 120 °C olması başka bir sensör ve başka bir amaçla ilgilidir.",
+      "source": "D08:4,6"
+    },
+    {
+      "id": "q003",
+      "topic": "İmpinger ve özel metotlar",
+      "scope": "Emisyon",
+      "parameters": [
+        "Nem"
+      ],
+      "standards": [
+        "EPA Method 4"
+      ],
+      "prompt": "EPA Method 4’te son kaçak sınırı hangisidir?",
+      "choices": [
+        "Ortalama debinin %4’ü ile 0,57 L/dk değerinden küçük olanı",
+        "Her koşulda 0,57 L/dk",
+        "İki değerden büyük olanı",
+        "Her koşulda debinin %10’u"
+      ],
+      "correctIndex": 0,
+      "explanation": "Sınır iki koşuldan daha sıkı olanıdır. Küçük debide yalnız 0,57 L/dk sınırını kullanmak aşırı kaçağı kabul edebilir.",
+      "source": "D08:5"
+    },
+    {
+      "id": "q004",
+      "topic": "İmpinger ve özel metotlar",
+      "scope": "Emisyon",
+      "parameters": [
+        "Nem"
+      ],
+      "standards": [
+        "EPA Method 4"
+      ],
+      "prompt": "EPA Method 4’te 0,60 scm asgari hacmi Türkçe arayüzde nasıl korunmalıdır?",
+      "choices": [
+        "Kaynağın referans koşullarında 0,60 standart m³",
+        "Her durumda 0 °C’de 0,60 Nm³",
+        "Ham DGM’de mutlaka 0,60 m³",
+        "Baca koşullarında mutlaka 600 L"
+      ],
+      "correctIndex": 0,
+      "explanation": "Hacim birimi ile gazın referans koşulu farklıdır. DGM, baca koşulları ve standart koşullardaki hacimler birbirinin yerine kullanılamaz.",
+      "source": "D08:4; ortak saha esasları: referans koşulları"
+    },
+    {
+      "id": "q005",
+      "topic": "İmpinger ve özel metotlar",
+      "scope": "Emisyon",
+      "parameters": [
+        "Flor / florür"
+      ],
+      "standards": [
+        "EPA Method 13A"
+      ],
+      "prompt": "EPA Method 13A ana düzeninde filtre nerededir?",
+      "choices": [
+        "Üçüncü ve dördüncü impinger arasında",
+        "Daima tüm impingerlerden sonra",
+        "İkinci şişenin sıvısının içinde",
+        "Pompanın egzozunda"
+      ],
+      "correctIndex": 0,
+      "explanation": "Arşiv §8.3 bu düzeni verir; uygun destek koşuluyla prob–ilk impinger arasında alternatif de vardır. Filtre konumu kayıt altına alınır.",
+      "source": "D05:2,5"
+    },
+    {
+      "id": "q006",
+      "topic": "İmpinger ve özel metotlar",
+      "scope": "Emisyon",
+      "parameters": [
+        "Flor / florür"
+      ],
+      "standards": [
+        "EPA Method 13A"
+      ],
+      "prompt": "EPA Method 13A için örnekleme debisi hangi koşulu sağlar?",
+      "choices": [
+        "İzokinetik ve 28 L/dk altında",
+        "Her bacada sabit 28 L/dk",
+        "En az 28 L/dk",
+        "Yalnız 2 L/dk"
+      ],
+      "correctIndex": 0,
+      "explanation": "28 L/dk bir üst sınırdır; cihazı her noktada 28 L/dk’ye ayarlama talimatı değildir. İzokinetik koşul korunmalıdır.",
+      "source": "D05:5"
+    },
+    {
+      "id": "q007",
+      "topic": "İmpinger ve özel metotlar",
+      "scope": "Emisyon",
+      "parameters": [
+        "Flor / florür"
+      ],
+      "standards": [
+        "EPA Method 13A"
+      ],
+      "prompt": "EPA Method 13A ön filtre alternatifinde hangi ayrıntı önemlidir?",
+      "choices": [
+        "20-mesh paslanmaz filtre desteği koşulu",
+        "Cam fritin her durumda zorunlu oluşu",
+        "Filtrenin mutlaka tartılmış olması",
+        "Filtrenin silika jel yerine kullanılması"
+      ],
+      "correctIndex": 0,
+      "explanation": "Metot, ön filtre ile üçüncü/dördüncü şişe arası filtre için farklı tutucu/destek koşulları belirtir. Yalnız filtreyi taşımak yeterli değildir.",
+      "source": "D05:2,5"
+    },
+    {
+      "id": "q008",
+      "topic": "İmpinger ve özel metotlar",
+      "scope": "Emisyon",
+      "parameters": [
+        "Klor / halojenler"
+      ],
+      "standards": [
+        "EPA Method 26A"
+      ],
+      "prompt": "EPA Method 26A’da isteğe bağlı kondensat şişesi kullanılırsa başlangıç içeriği nedir?",
+      "choices": [
+        "50 mL 0,1 N H₂SO₄",
+        "100 mL 0,1 N NaOH",
+        "200 mL su",
+        "200 g silika jel"
+      ],
+      "correctIndex": 0,
+      "explanation": "Kondensat tutucu opsiyoneldir. Sonraki iki asit şişesinin her birindeki 100 mL dolumla karıştırılmamalıdır.",
+      "source": "D06:4,6"
+    },
+    {
+      "id": "q009",
+      "topic": "İmpinger ve özel metotlar",
+      "scope": "Emisyon",
+      "parameters": [
+        "Klor / halojenler"
+      ],
+      "standards": [
+        "EPA Method 26A"
+      ],
+      "prompt": "EPA Method 26A asit ve alkali fraksiyonları geri alınırken doğru yaklaşım nedir?",
+      "choices": [
+        "Ayrı fraksiyonlar halinde korunur.",
+        "Hepsi tek kaba birleştirilir.",
+        "Asit fraksiyonu atılır.",
+        "Alkali fraksiyonu silika jelle karıştırılır."
+      ],
+      "correctIndex": 0,
+      "explanation": "Hidrojen halojenür ve halojen toplama fraksiyonları farklıdır. Birleştirmek yöntemin analitik ayrımını bozar.",
+      "source": "D06:8"
+    },
+    {
+      "id": "q010",
+      "topic": "İmpinger ve özel metotlar",
+      "scope": "Emisyon",
+      "parameters": [
+        "Klor / halojenler"
+      ],
+      "standards": [
+        "EPA Method 26A"
+      ],
+      "prompt": "EPA Method 26A standart prob/filtre ısıtma aralığı hangisidir?",
+      "choices": [
+        "120–134 °C",
+        "0–20 °C",
+        "42–60 °C",
+        "Her bacada baca sıcaklığı kadar"
+      ],
+      "correctIndex": 0,
+      "explanation": "Bu aralık, incelenen kaynakta prob ve filtre çevresi içindir. İlgili alt düzenleme veya yetkili onayındaki istisnalar ayrıca kontrol edilir.",
+      "source": "D06:4,6-7"
+    },
+    {
+      "id": "q011",
+      "topic": "İmpinger ve özel metotlar",
+      "scope": "Emisyon",
+      "parameters": [
+        "Ağır metaller"
+      ],
+      "standards": [
+        "EPA Method 29"
+      ],
+      "prompt": "EPA Method 29’da cıva analizi yapılmayacaksa hangi şişeler gerekmeyebilir?",
+      "choices": [
+        "Metot şemasındaki 4, 5 ve 6",
+        "Her zaman 2 ve 3",
+        "Yalnız silika jel şişesi",
+        "Bütün şişeler"
+      ],
+      "correctIndex": 0,
+      "explanation": "§8.1.3.3 cıva için eklenen bu üç şişeyi kaldırma olanağı verir. Cıvasız düzenin yine diğer metal fraksiyonlarını toplaması gerekir.",
+      "source": "D07:11"
+    },
+    {
+      "id": "q012",
+      "topic": "İmpinger ve özel metotlar",
+      "scope": "Emisyon",
+      "parameters": [
+        "Ağır metaller"
+      ],
+      "standards": [
+        "EPA Method 29"
+      ],
+      "prompt": "EPA Method 29’da ilk boş şişenin çıkarılması neye bağlıdır?",
+      "choices": [
+        "Toplanacak nemin yaklaşık 100 mL’den az olmasına ve metot koşullarına",
+        "Cihaz markasına",
+        "Her ölçümün 30 dakika olmasına",
+        "Yalnızca operatör tercihine"
+      ],
+      "correctIndex": 0,
+      "explanation": "İlk kondensat şişesinin kaldırılması koşulsuz değildir. Bu seçenek, cıva ek şişelerinin kaldırılmasıyla aynı karar değildir.",
+      "source": "D07:11"
+    },
+    {
+      "id": "q013",
+      "topic": "İmpinger ve özel metotlar",
+      "scope": "Emisyon",
+      "parameters": [
+        "Ağır metaller"
+      ],
+      "standards": [
+        "EPA Method 29"
+      ],
+      "prompt": "EPA Method 29’da ikinci ve üçüncü impingerin her birine ne konur?",
+      "choices": [
+        "100 mL HNO₃/H₂O₂ absorbanı",
+        "100 mL asitli permanganat",
+        "50 mL NaOH",
+        "Yalnız saf su"
+      ],
+      "correctIndex": 0,
+      "explanation": "İkinci/üçüncü şişeler metal toplama asitli peroksit fraksiyonudur. Cıva için asitli permanganat farklı şişelerde yer alır.",
+      "source": "D07:11"
+    },
+    {
+      "id": "q014",
+      "topic": "İmpinger ve özel metotlar",
+      "scope": "Emisyon",
+      "parameters": [
+        "Ağır metaller"
+      ],
+      "standards": [
+        "EPA Method 29"
+      ],
+      "prompt": "EPA Method 29 cıva düzeninde peroksit ve permanganat için hangi yaklaşım doğrudur?",
+      "choices": [
+        "Ayrı tutulur; birbirine karıştırılmaz.",
+        "Ölçümden önce eşit hacimde karıştırılır.",
+        "Tek ortak blank yeterli sayılır.",
+        "Mangan analizi için permanganat her yere sürülür."
+      ],
+      "correctIndex": 0,
+      "explanation": "Metot hem kimyasal reaksiyon hem de Mn bulaşması nedeniyle fraksiyon ayrımını vurgular. Ortak kaba toplama güvenilir geri kazanım değildir.",
+      "source": "D07:11,13-14"
+    },
+    {
+      "id": "q015",
+      "topic": "İmpinger ve özel metotlar",
+      "scope": "Emisyon",
+      "parameters": [
+        "Sülfürik asit / SO₂"
+      ],
+      "standards": [
+        "EPA Method 8"
+      ],
+      "prompt": "EPA Method 8’de filtre nereye yerleştirilir?",
+      "choices": [
+        "Birinci ve ikinci impinger arasına; ısıtılmaz.",
+        "Prob ile ilk şişe arasına; her zaman 180 °C",
+        "Dördüncü şişeden sonra; ısıtılır.",
+        "İlk şişenin içine tamamen daldırılır."
+      ],
+      "correctIndex": 0,
+      "explanation": "Method 8’in filtre yeri Method 5 ile aynı değildir. Özel sıra, toplanan fraksiyonların ayrılması için önemlidir.",
+      "source": "D10:2"
+    },
+    {
+      "id": "q016",
+      "topic": "İmpinger ve özel metotlar",
+      "scope": "Emisyon",
+      "parameters": [
+        "Sülfürik asit / SO₂"
+      ],
+      "standards": [
+        "EPA Method 8"
+      ],
+      "prompt": "EPA Method 8 ilk impingerinin dolumu hangisidir?",
+      "choices": [
+        "100 mL %80 izopropanol",
+        "100 mL %3 H₂O₂",
+        "200 mL 0,1 N NaOH",
+        "Başlangıçta boş"
+      ],
+      "correctIndex": 0,
+      "explanation": "İkinci ve üçüncü şişeler %3 H₂O₂ içerir. İlk şişenin içeriğini sonraki şişelerle karıştırmak yöntem seçiciliğini bozar.",
+      "source": "D10:4"
+    },
+    {
+      "id": "q017",
+      "topic": "İmpinger ve özel metotlar",
+      "scope": "Emisyon",
+      "parameters": [
+        "Sülfürik asit / SO₂"
+      ],
+      "standards": [
+        "EPA Method 8"
+      ],
+      "prompt": "EPA Method 8’de 15 dakikalık temiz hava geçirme işlemi ne zaman yapılır?",
+      "choices": [
+        "Örneklemeden sonra, prob ayrılarak kalan trenden",
+        "Ana örnekleme başlamadan tüm saha süresi yerine",
+        "Numune yerine bacaya ters yönde",
+        "Yalnız DGM kalibrasyonu sırasında"
+      ],
+      "correctIndex": 0,
+      "explanation": "Bu işlem ana örnekleme süresinden ayrı bir ölçüm sonrası aşamadır. Kaynakta örnekleme ortalama debisinde 15 dakika belirtilir.",
+      "source": "D10:5"
+    },
+    {
+      "id": "q018",
+      "topic": "İmpinger ve özel metotlar",
+      "scope": "Emisyon",
+      "parameters": [
+        "Dioksin / furan"
+      ],
+      "standards": [
+        "TS EN 1948-1"
+      ],
+      "prompt": "EN 1948-1:2006 filtre/yoğuşturucu yönteminde filtre sıcaklığı nasıl olmalıdır?",
+      "choices": [
+        "Çiy noktasının üstünde ve 125 °C altında",
+        "Her zaman 180 °C",
+        "Çiy noktasının altında",
+        "Daima 20 °C altında"
+      ],
+      "correctIndex": 0,
+      "explanation": "Filtrede istenmeyen yoğuşma ve sıcaklıkta oluşabilecek reaksiyonlar birlikte kontrol edilir. Yoğuşturucu sonrası <20 °C koşulu farklı noktaya aittir.",
+      "source": "D25:15,22"
+    },
+    {
+      "id": "q019",
+      "topic": "İmpinger ve özel metotlar",
+      "scope": "Emisyon",
+      "parameters": [
+        "Dioksin / furan"
+      ],
+      "standards": [
+        "TS EN 1948-1"
+      ],
+      "prompt": "EN 1948-1 arşiv metnindeki saha blankında gaz çekişi nasıl olur?",
+      "choices": [
+        "Gaz çekilmez; kurulum ve kaçak testi yapılır.",
+        "Üç saat baca gazı çekilir.",
+        "Prob mutlaka bacaya sokulur.",
+        "Kaçak testi de kesinlikle yapılmaz."
+      ],
+      "correctIndex": 0,
+      "explanation": "§7.3 blankın aynı sahada kurulmasını, probun bacaya sokulmamasını ve gaz çekilmemesini tarif eder. Bu kural tüm başka metot blanklarına otomatik uygulanmaz.",
+      "source": "D25:21"
+    },
+    {
+      "id": "q020",
+      "topic": "İmpinger ve özel metotlar",
+      "scope": "Emisyon",
+      "parameters": [
+        "Dioksin / furan"
+      ],
+      "standards": [
+        "TS EN 1948-1"
+      ],
+      "prompt": "EN 1948-1:2006’da numune saklama için incelenen koşul hangisidir?",
+      "choices": [
+        "Karanlıkta, yaklaşık 25 °C oda sıcaklığını aşmadan",
+        "Güneşte, 60 °C’de",
+        "Her durumda −80 °C’de",
+        "Ağzı açık, havalandırılarak"
+      ],
+      "correctIndex": 0,
+      "explanation": "Arşiv §9.3.5.2 bu koşulu ve teslim zincirini ister. Bu sorunun cevabı PAH standardının saklama koşuluna kopyalanamaz.",
+      "source": "D25:25"
+    },
+    {
+      "id": "q021",
+      "topic": "İmpinger ve özel metotlar",
+      "scope": "Emisyon",
+      "parameters": [
+        "PAH"
+      ],
+      "standards": [
+        "TS ISO 11338 / ilgili PAH saha uygulamaları"
+      ],
+      "prompt": "ISO 11338-1 Metot B’de yoğuşturucu sonrası gaz sıcaklığı ne olmalıdır?",
+      "choices": [
+        "20 °C altında",
+        "125 °C üstünde",
+        "Baca sıcaklığıyla aynı",
+        "Sadece ortamdan 10 °C yüksek"
+      ],
+      "correctIndex": 0,
+      "explanation": "Metot B filtre sonrasında gazı soğutup gaz fazı PAH’ları adsorban/absorbanla toplar. Filtre ve yoğuşturucu aynı sıcaklıkta çalıştırılmaz.",
+      "source": "D27:13-14"
+    },
+    {
+      "id": "q022",
+      "topic": "İmpinger ve özel metotlar",
+      "scope": "Emisyon",
+      "parameters": [
+        "PAH"
+      ],
+      "standards": [
+        "TS ISO 11338 / ilgili PAH saha uygulamaları"
+      ],
+      "prompt": "PAH düzeneğinde izokinetik debi adsorban için fazla yüksekse ne değerlendirilir?",
+      "choices": [
+        "Doğrulanmış akış bölünmesi ve ayrı ana/yan kol ölçümü",
+        "Kartuşun sınırını dikkate almadan bütün gazı geçirmek",
+        "Ana kol hacmini rastgele yarıya indirmek",
+        "Yoğuşturucuyu kaldırmak"
+      ],
+      "correctIndex": 0,
+      "explanation": "ISO 11338-1, akış bölünmesinin yakalama verimi amacıyla kullanılabileceğini açıklar. Ana kol ve yan kol hacimleri ölçülmeli; birbirinin yerine geçmemelidir.",
+      "source": "D27:13-14"
+    },
+    {
+      "id": "q023",
+      "topic": "İmpinger ve özel metotlar",
+      "scope": "Emisyon",
+      "parameters": [
+        "HCl"
+      ],
+      "standards": [
+        "TS EN 1911"
+      ],
+      "prompt": "TS EN 1911’de HCl olarak ifade edilen gaz klorürler, Cl₂ ile aynı parametre midir?",
+      "choices": [
+        "Hayır; parametre ve metot kapsamları ayrıdır.",
+        "Evet, bütün koşullar ve sonuçlar özdeştir.",
+        "Yalnız birim harfi farklıdır.",
+        "İkisi de sadece toplam metal yöntemidir."
+      ],
+      "correctIndex": 0,
+      "explanation": "Gaz halindeki klorürün HCl olarak raporlanması elementel klorla özdeş değildir. Kimyasal tür ve fraksiyon ayrımı doğru metot seçiminin parçasıdır.",
+      "source": "D53:5; D06:4,8"
+    },
+    {
+      "id": "q024",
+      "topic": "İmpinger ve özel metotlar",
+      "scope": "Emisyon",
+      "parameters": [
+        "Nem"
+      ],
+      "standards": [
+        "CARB Method 426"
+      ],
+      "prompt": "TL115 aktarımındaki HCN düzeninde ilk iki şişenin her birindeki dolum nedir?",
+      "choices": [
+        "100 mL 0,1 N NaOH",
+        "100 mL %80 izopropanol",
+        "50 mL H₂SO₄",
+        "200 g silika jel"
+      ],
+      "correctIndex": 0,
+      "explanation": "Bu miktar TL115 §5.4.1.3 kaynaklıdır. Birincil CARB 426 doğrulaması henüz tamamlanmamıştır; soru güncel tüm sürümler adına evrensel koşul iddia etmez.",
+      "source": "D41:6 — talimat kaynaklı"
+    },
+    {
+      "id": "q025",
+      "topic": "İmpinger ve özel metotlar",
+      "scope": "Emisyon",
+      "parameters": [
+        "Nem"
+      ],
+      "standards": [
+        "CARB Method 426"
+      ],
+      "prompt": "HCN talimatında yazan 500 mL numune miktarı neyle karıştırılmamalıdır?",
+      "choices": [
+        "Çekilen gazın toplam hacmiyle",
+        "Numune kabındaki sıvı miktarıyla",
+        "Teslim edilen örnek miktarıyla",
+        "Laboratuvar numune miktarıyla"
+      ],
+      "correctIndex": 0,
+      "explanation": "Sıvı numune miktarı ile örneklenen gaz hacmi farklı boyutlardadır. 500 mL sıvı bilgisi gaz çekişini 0,5 L yapma talimatı değildir.",
+      "source": "D41:7"
+    },
+    {
+      "id": "q026",
+      "topic": "İmpinger ve özel metotlar",
+      "scope": "Emisyon",
+      "parameters": [
+        "Ağır metaller"
+      ],
+      "standards": [
+        "TS EN 14385"
+      ],
+      "prompt": "TS EN 14385 metal çalışmasında cıva da istenirse doğru ilk adım nedir?",
+      "choices": [
+        "Cıvanın seçilen metodun kapsamında olup olmadığını ve uygun yöntemi kontrol etmek",
+        "Mevcut trene rastgele permanganat eklemek",
+        "Bütün metal sonuçlarını cıva kabul etmek",
+        "Sadece filtre renginden cıva hesaplamak"
+      ],
+      "correctIndex": 0,
+      "explanation": "Cıva diğer metallere göre farklı toplama fraksiyonları gerektirebilir. TL179 da cıva için EPA 29 düzenine yönlendirir; farklı metotların parçaları doğrulanmadan birleştirilmez.",
+      "source": "D47:5-6 — kapsam / talimat karşılaştırması"
+    },
+    {
+      "id": "q027",
+      "topic": "İmpinger ve özel metotlar",
+      "scope": "Emisyon",
+      "parameters": [
+        "Nem"
+      ],
+      "standards": [
+        "CARB Method 425"
+      ],
+      "prompt": "Krom(VI) ölçümü ile toplam krom ölçümü için hangisi doğrudur?",
+      "choices": [
+        "Aynı analit tanımı değildir; türleşme ve numune koruması önemlidir.",
+        "Her zaman aynı sayısal sonucu verir.",
+        "Toplam metal filtresi görünümü yeterlidir.",
+        "Krom(VI), yalnızca gaz debisinin adıdır."
+      ],
+      "correctIndex": 0,
+      "explanation": "Kromun oksidasyon basamağının korunması türleşme ölçümünün temelidir. Toplam metal miktarından otomatik Krom(VI) üretilemez; ayrıntılı CARB 425 koşulları ayrıca doğrulanır.",
+      "source": "D17:12-19 — eğitim / kavramsal"
+    },
+    {
+      "id": "q028",
+      "topic": "İmpinger ve özel metotlar",
+      "scope": "Emisyon",
+      "parameters": [
+        "Amonyak"
+      ],
+      "standards": [
+        "EPA CTM 027",
+        "SCAQMD Method 207.1",
+        "EPA CTM 027 / SCAQMD Method 207.1"
+      ],
+      "prompt": "Amonyak için CTM 027 ile SCAQMD 207.1 bilgileri nasıl kullanılmalıdır?",
+      "choices": [
+        "Her metodun kendi ekipman, debi ve fraksiyon koşulları ayrı korunur.",
+        "Biri süre, diğeri çözelti seçilerek rastgele birleştirilir.",
+        "İsim farkı dışında her ayrıntı aynıdır.",
+        "Her ikisine de HCN reçetesi atanır."
+      ],
+      "correctIndex": 0,
+      "explanation": "Aynı parametreyi hedeflemek metotların bütün koşullarını eşitlemez. Reçete ve debi, belirli düzenek ve metot sürümüyle birlikte seçilmelidir.",
+      "source": "D17:20-24 — eğitim / metot seçimi"
+    },
+    {
+      "id": "q029",
+      "topic": "İmpinger ve özel metotlar",
+      "scope": "Emisyon",
+      "parameters": [
+        "Formaldehit"
+      ],
+      "standards": [
+        "EPA Method 323"
+      ],
+      "prompt": "Formaldehit için başka bir VOC yönteminin örnekleme koşulu doğrudan aktarılabilir mi?",
+      "choices": [
+        "Hayır; hedef analit, toplama kimyası ve metot kapsamı eşleştirilir.",
+        "Evet, tüm organikler aynı tüple toplanır.",
+        "Evet, yalnız süreyi ikiye katlamak yeterlidir.",
+        "Evet, blank gereksizdir."
+      ],
+      "correctIndex": 0,
+      "explanation": "Formaldehit için doğrulanmış toplama ve analitik yöntem gerekir. Toplam organik karbon veya genel VOC yöntemi tek başına formaldehit yönteminin eşdeğeri değildir.",
+      "source": "D39:4-8 — talimat / kavramsal"
+    },
+    {
+      "id": "q030",
+      "topic": "İmpinger ve özel metotlar",
+      "scope": "Emisyon",
+      "parameters": [
+        "H₂S"
+      ],
+      "standards": [
+        "EPA Method 11"
+      ],
+      "prompt": "EPA Method 11’in H₂S ölçümü için metot seçerken hangisi mutlaka kontrol edilir?",
+      "choices": [
+        "Kaynak türü ve metot kapsamına uygunluk",
+        "Yalnız impingerlerin görünüşü",
+        "Yalnız cihazın markası",
+        "Her bacada aynı uygulanacağı varsayımı"
+      ],
+      "correctIndex": 0,
+      "explanation": "Method 11’in kapsamı rafineri yakıt gazı bağlamını içerir. Bir yöntemin hedef bileşiği ölçmesi, her baca gazına koşulsuz uygulanabileceği anlamına gelmez.",
+      "source": "D04:1 — birincil kapsam"
+    },
+    {
+      "id": "q031",
+      "topic": "Toz, hız ve gaz ölçümleri",
+      "scope": "Emisyon",
+      "parameters": [
+        "Partikül madde",
+        "Ölçüm yeri / travers"
+      ],
+      "standards": [
+        "EPA Method 5",
+        "EPA Method 17",
+        "EPA Method 5 / EPA Method 17"
+      ],
+      "prompt": "EPA Method 5 ile Method 17 karşılaştırmasında temel fark hangi ekipmanla ilgilidir?",
+      "choices": [
+        "Filtrenin baca içi / dışı konumu",
+        "DGM’nin hiç kullanılmaması",
+        "Bütün tozun çözünmüş gaz sayılması",
+        "Her ikisinin yalnız imisyon ölçmesi"
+      ],
+      "correctIndex": 0,
+      "explanation": "Method 17 baca içi filtre yaklaşımıdır. Filtre konumunu değiştirip diğer bütün sıcaklık, kapsam ve geri kazanım koşullarını aynı varsaymak doğru değildir.",
+      "source": "Ana katalog: EPA Method 5 / Method 17 — kavramsal kapsam"
+    },
+    {
+      "id": "q032",
+      "topic": "Toz, hız ve gaz ölçümleri",
+      "scope": "Emisyon",
+      "parameters": [
+        "Partikül madde"
+      ],
+      "standards": [
+        "EPA Method 5",
+        "EPA Method 5 / EPA Method 17"
+      ],
+      "prompt": "İzokinetik toz örneklemesinde tek bir sabit debi bütün bacalara neden atanamaz?",
+      "choices": [
+        "Gerekli debi baca hızı, nozül ve gaz koşullarına bağlıdır.",
+        "Süre hiçbir zaman ölçülmediği için",
+        "Hacim yerine yalnız saat yazıldığı için",
+        "Filtre rengi debiyi belirlediği için"
+      ],
+      "correctIndex": 0,
+      "explanation": "Temsili partikül alımı, nozül giriş hızının yerel gaz hızıyla ilişkisine bağlıdır. Debi hesabında sıcaklık, basınç ve nem koşulları da tutarlı tutulur.",
+      "source": "D09:8-11; ortak saha esasları: izokinetik"
+    },
+    {
+      "id": "q033",
+      "topic": "Toz, hız ve gaz ölçümleri",
+      "scope": "Emisyon",
+      "parameters": [
+        "Partikül madde"
+      ],
+      "standards": [
+        "TS EN 13284-1",
+        "ISO 12141",
+        "TS EN 13284-1 / TS ISO 9096 / ISO 12141"
+      ],
+      "prompt": "TS EN 13284-1 ve ISO 12141 hangi tür çalışmayla ilişkilidir?",
+      "choices": [
+        "Düşük toz derişiminde manuel gravimetrik ölçüm",
+        "Yalnız pasif gaz tüpü",
+        "Yalnız dioksin toksisite analizi",
+        "Yağış miktarı ölçümü"
+      ],
+      "correctIndex": 0,
+      "explanation": "Bu metotlar düşük toz derişimindeki manuel gravimetrik ölçüm bağlamındadır. Metot seçimi kaynak ve çalışma aralığıyla doğrulanmalıdır; sayısal koşullar özdeş varsayılmaz.",
+      "source": "D31:1-4; ana katalog TS EN 13284-1 — kapsam"
+    },
+    {
+      "id": "q034",
+      "topic": "Toz, hız ve gaz ölçümleri",
+      "scope": "Emisyon",
+      "parameters": [
+        "Partikül madde"
+      ],
+      "standards": [
+        "TS ISO 9096",
+        "TS EN 13284-1 / TS ISO 9096 / ISO 12141"
+      ],
+      "prompt": "TS ISO 9096’da örneklenen toz ile prob/nozül birikintileri için doğru yaklaşım nedir?",
+      "choices": [
+        "Metodun geri kazanım kapsamına göre birlikte izlenir.",
+        "Filtre dışındaki birikintiler her zaman atılır.",
+        "Sadece dış yüzey tozu toplanır.",
+        "Yıkama gerekip gerekmediği rastgele seçilir."
+      ],
+      "correctIndex": 0,
+      "explanation": "Numune yalnız görünen filtre lekesinden ibaret değildir. Numuneye temas eden yüzeylerin geri kazanımı ve blank etkisi seçilen gravimetrik metoda göre değerlendirilir.",
+      "source": "Ana katalog TS ISO 9096; ortak saha esasları: geri kazanım"
+    },
+    {
+      "id": "q035",
+      "topic": "Toz, hız ve gaz ölçümleri",
+      "scope": "Emisyon",
+      "parameters": [
+        "Hız / debi"
+      ],
+      "standards": [
+        "EPA Method 2 / TS EN ISO 16911 / TS ISO 10780",
+        "EPA Method 26A",
+        "EPA Method 29",
+        "TS EN 12619 / EPA Method 25A"
+      ],
+      "prompt": "Pitot ile hız hesabında hangi veri grubu anlamlıdır?",
+      "choices": [
+        "Diferansiyel basınç, Pitot katsayısı ve gaz yoğunluğunu belirleyen koşullar",
+        "Yalnız tarih ve operatör adı",
+        "Yalnız impingerin rengi",
+        "Sadece filtrenin gramajı"
+      ],
+      "correctIndex": 0,
+      "explanation": "Pitot basınç farkı hıza çevrilirken katsayı ve gaz yoğunluğu gerekir. Bir sensörün anlık okuması, diğer gerekli koşullar olmadan güvenilir hacimsel debi vermez.",
+      "source": "D29; D50-D51; ortak saha esasları: hız"
+    },
+    {
+      "id": "q036",
+      "topic": "Toz, hız ve gaz ölçümleri",
+      "scope": "Emisyon",
+      "parameters": [
+        "Hız / debi"
+      ],
+      "standards": [
+        "EPA Method 2 / TS EN ISO 16911 / TS ISO 10780",
+        "EPA Method 26A",
+        "EPA Method 29",
+        "TS EN 12619 / EPA Method 25A"
+      ],
+      "prompt": "Hacimsel baca debisi için ortalama hız dışında hangi temel büyüklük gerekir?",
+      "choices": [
+        "Baca kesit alanı",
+        "Blank kabının rengi",
+        "Ses seviyesi",
+        "Filtrenin gözenek sayısının karesi"
+      ],
+      "correctIndex": 0,
+      "explanation": "Aynı referans koşullarında hacimsel debi hız ile kesit alanının çarpımıyla ilişkilidir. Birimler ve hız profilinin temsil ediciliği kontrol edilir.",
+      "source": "D29; ortak saha esasları: hız / debi"
+    },
+    {
+      "id": "q037",
+      "topic": "Toz, hız ve gaz ölçümleri",
+      "scope": "Emisyon",
+      "parameters": [
+        "CO",
+        "NOₓ",
+        "O₂",
+        "Yanma gazları"
+      ],
+      "standards": [
+        "TS ISO 12039 / TS EN 14789 / TS EN 14792 / TS EN 15058",
+        "TS ISO 12039 / TS ISO 7935 / EPA CTM-022"
+      ],
+      "prompt": "Yanma gazı ölçümünde sıfır/span kontrolünün amacı nedir?",
+      "choices": [
+        "Sistemin ölçüm cevabı ve kaymasını kontrol etmek",
+        "Baca alanını ölçmek",
+        "İmpinger sırasını otomatik belirlemek",
+        "Toz filtresini sabit tartıma getirmek"
+      ],
+      "correctIndex": 0,
+      "explanation": "Sıfır/span ve drift kontrolleri gaz ölçüm sisteminin cevabına yöneliktir. Kabul sınırları gaz ve metot için ayrı kontrol edilir.",
+      "source": "D30; ortak saha esasları: gaz analizörleri"
+    },
+    {
+      "id": "q038",
+      "topic": "Toz, hız ve gaz ölçümleri",
+      "scope": "Emisyon",
+      "parameters": [
+        "SO₂"
+      ],
+      "standards": [
+        "TS ISO 12039 / TS ISO 7935 / EPA CTM-022"
+      ],
+      "prompt": "SO₂ ölçümünde girişim ve kalibrasyon neden ayrı değerlendirilir?",
+      "choices": [
+        "Doğru kalibrasyon, bütün girişimlerin yok olduğunu kanıtlamaz.",
+        "Kalibrasyon yapılınca numune hattı gereksizdir.",
+        "Girişim yalnız filtre tartımını etkiler.",
+        "Her SO₂ yöntemi aynı kimyayla çalışır."
+      ],
+      "correctIndex": 0,
+      "explanation": "Ölçüm sistemi başka bileşenlere çapraz cevap verebilir. Kalibrasyonun geçerli olması, seçicilik ve saha gaz matrisi kontrolünü ortadan kaldırmaz.",
+      "source": "Ana katalog: TS ISO 7935 / EPA CTM-022; ortak saha esasları"
+    },
+    {
+      "id": "q039",
+      "topic": "Toz, hız ve gaz ölçümleri",
+      "scope": "Emisyon",
+      "parameters": [
+        "TOC / FID"
+      ],
+      "standards": [
+        "TS EN 12619 / TSE CEN/TS 13649",
+        "TS EN 12619 / EPA Method 25A"
+      ],
+      "prompt": "FID ile toplam organik karbon sonucundan tek bir VOC bileşiğinin derişimi doğrudan çıkarılabilir mi?",
+      "choices": [
+        "Hayır; toplam cevap, tekil bileşik türlemesi değildir.",
+        "Evet, her zaman benzen sonucudur.",
+        "Evet, her organik aynı yanıt faktöründedir.",
+        "Evet, gaz hacmi bilinmeden çıkarılır."
+      ],
+      "correctIndex": 0,
+      "explanation": "TOC/FID toplam cevap ölçerken tekil bileşik analizi başka bir hedef ve analitik ayrım gerektirir. Kalibrasyon gazı ve karbon eşdeğeri de önemlidir.",
+      "source": "D24; D45; ortak saha esasları: VOC / TOC"
+    },
+    {
+      "id": "q040",
+      "topic": "Toz, hız ve gaz ölçümleri",
+      "scope": "Emisyon",
+      "parameters": [
+        "VOC"
+      ],
+      "standards": [
+        "TS EN 12619 / TSE CEN/TS 13649",
+        "TS EN 13649"
+      ],
+      "prompt": "Aktif adsorban tüpünde kırılma neyi anlatır?",
+      "choices": [
+        "Hedef bileşiğin ön toplama bölümünü geçerek kayba / arka bölüme ulaşmasını",
+        "Tüp etiketinin yırtılmasını",
+        "Pompa saatinin durmasını",
+        "DGM sıcaklığının her zaman sıfır olmasını"
+      ],
+      "correctIndex": 0,
+      "explanation": "Adsorban kapasitesi, nem, sıcaklık ve debi yakalama verimini etkiler. Arka bölüm kontrolü ve doğrulanmış hacim/debi aralığı bu nedenle önemlidir.",
+      "source": "D37; ortak saha esasları: filtre / adsorban ve VOC"
+    },
+    {
+      "id": "q041",
+      "topic": "Toz, hız ve gaz ölçümleri",
+      "scope": "Emisyon",
+      "parameters": [
+        "İslilik"
+      ],
+      "standards": [
+        "TS 9503 / Bacada İslilik Ölçümü"
+      ],
+      "prompt": "Bacada islilik değerlendirmesi ile gravimetrik toz derişimi için hangisi doğrudur?",
+      "choices": [
+        "Farklı ölçülen büyüklüklerdir; otomatik birbirine dönüştürülmez.",
+        "Aynı birim ve sonuçtur.",
+        "İslilik daima µg/m³ olarak tartılır.",
+        "Filtre koyuluğu bütün metallerin kütlesini verir."
+      ],
+      "correctIndex": 0,
+      "explanation": "Optik / karşılaştırmalı islilik göstergesi, tartılan toz kütlesi değildir. Sonuç ve yöntem kapsamı doğru adlandırılmalıdır.",
+      "source": "D35; ana katalog: TS 9503 — kavramsal"
+    },
+    {
+      "id": "q042",
+      "topic": "Toz, hız ve gaz ölçümleri",
+      "scope": "Emisyon",
+      "parameters": [
+        "ISDL / MID"
+      ],
+      "standards": [
+        "ISDL / MID"
+      ],
+      "prompt": "ISDL planlamasında gerekli gaz hacmi hangi verilere bağlıdır?",
+      "choices": [
+        "Analitik tayin sınırı, numune son hacmi ve hedef raporlama derişimi",
+        "Yalnız kullanıcı adı",
+        "Yalnız impinger dış çapı",
+        "Yalnız saha sıcaklığının işareti"
+      ],
+      "correctIndex": 0,
+      "explanation": "Sıvıdaki tayin sınırı ile gazdaki hedef derişim aynı birim değildir. Hedef hacim hesaplandıktan sonra metot asgari süre/hacim koşulları da ayrıca sağlanır.",
+      "source": "D11; ortak saha esasları: hedef tayin sınırı"
+    },
+    {
+      "id": "q043",
+      "topic": "Ölçüm yeri, girdap ve uygunsuzluk",
+      "scope": "Emisyon",
+      "parameters": [
+        "Ölçüm yeri / travers"
+      ],
+      "standards": [
+        "TS EN 15259 / EPA Method 1",
+        "EPA Method 17",
+        "EPA Method 13A",
+        "EPA Method 5 / EPA Method 17",
+        "EPA Method 11"
+      ],
+      "prompt": "EPA Method 1 null tekniğinde açılar +30° ve −30° ise ortalama |α| kaçtır?",
+      "choices": [
+        "30°",
+        "0°",
+        "60°",
+        "15°"
+      ],
+      "correctIndex": 0,
+      "explanation": "Mutlak değerler ortalanır: (30+30)/2=30°. İşaretli açıları toplamak girdabı yanlış biçimde sıfır gösterir.",
+      "source": "EPA Method 1 §11.4; resmi EPA 28.04.2020 metni"
+    },
+    {
+      "id": "q044",
+      "topic": "Ölçüm yeri, girdap ve uygunsuzluk",
+      "scope": "Emisyon",
+      "parameters": [
+        "Ölçüm yeri / travers"
+      ],
+      "standards": [
+        "TS EN 15259 / EPA Method 1",
+        "EPA Method 17",
+        "EPA Method 13A",
+        "EPA Method 5 / EPA Method 17",
+        "EPA Method 11"
+      ],
+      "prompt": "EPA Method 1 §11.4’te ortalama mutlak açı tam 20° ise hangi ifade doğrudur?",
+      "choices": [
+        "Bu maddede >20° eşiği aşılmamıştır; diğer koşullar ayrıca değerlendirilir.",
+        "Mutlaka bütün saha uygundur.",
+        "20° ve üstü daima aynı maddede reddir.",
+        "Sıfır açı sayılır."
+      ],
+      "correctIndex": 0,
+      "explanation": "Kaynak ifadesi 20°’den büyük ortalamadır. Eşik değerlendirmesi tam hassasiyetle yapılır; tek açı testi bütün saha uygunluğunu kanıtlamaz.",
+      "source": "EPA Method 1 §11.4"
+    },
+    {
+      "id": "q045",
+      "topic": "Ölçüm yeri, girdap ve uygunsuzluk",
+      "scope": "Emisyon",
+      "parameters": [
+        "Ölçüm yeri / travers"
+      ],
+      "standards": [
+        "TS EN 15259 / EPA Method 1",
+        "EPA Method 17",
+        "EPA Method 13A",
+        "EPA Method 5 / EPA Method 17",
+        "EPA Method 11"
+      ],
+      "prompt": "Açısı ölçülemeyen bir travers noktasına ortalama için 0° yazılmalı mı?",
+      "choices": [
+        "Hayır; eksik ölçüm sıfır ölçüm değildir.",
+        "Evet, sonuç daha dengeli olur.",
+        "Evet, yalnız negatif açı yerine",
+        "Evet, bütün noktalara 0 yazılabilir."
+      ],
+      "correctIndex": 0,
+      "explanation": "0° ancak geçerli null ölçümünün sonucudur. Eksik noktayı sıfırla doldurmak ortalamayı düşürür ve ham veriyi değiştirir.",
+      "source": "EPA Method 1 §11.4; ortak saha esasları: izlenebilirlik"
+    },
+    {
+      "id": "q046",
+      "topic": "Ölçüm yeri, girdap ve uygunsuzluk",
+      "scope": "Emisyon",
+      "parameters": [
+        "Ölçüm yeri / travers"
+      ],
+      "standards": [
+        "TS EN 15259 / EPA Method 1",
+        "EPA Method 17",
+        "EPA Method 13A",
+        "EPA Method 5 / EPA Method 17",
+        "EPA Method 11"
+      ],
+      "prompt": "EPA null tekniğinde manometre başlangıcında ne yapılır?",
+      "choices": [
+        "Terazileme, sıfırlama ve bağlantı / kaçak kontrolü",
+        "Yalnız pompayı maksimuma çıkarma",
+        "Şişelere asit ekleyip açı varsayma",
+        "Pitot deliklerini bantla kapatma"
+      ],
+      "correctIndex": 0,
+      "explanation": "Manometre sıfırı ve bağlantı kaçağı yanlışsa null açısı da yanlış bulunabilir. Temel cihaz hazırlığı açı hesabından önce gelir.",
+      "source": "EPA Method 1 §11.4.2"
+    },
+    {
+      "id": "q047",
+      "topic": "Ölçüm yeri, girdap ve uygunsuzluk",
+      "scope": "Emisyon",
+      "parameters": [
+        "Ölçüm yeri / travers"
+      ],
+      "standards": [
+        "TS EN 15259 / EPA Method 1",
+        "EPA Method 17",
+        "EPA Method 13A",
+        "EPA Method 5 / EPA Method 17",
+        "EPA Method 11"
+      ],
+      "prompt": "Girdap veya ters akış saptanınca yalnız nokta sayısını artırmak ne sağlar?",
+      "choices": [
+        "Tek başına uygunluk sağlamaz; geçerli alternatif prosedür gerekir.",
+        "Her standarda otomatik uygunluk sağlar.",
+        "Kalibrasyon ihtiyacını kaldırır.",
+        "Metot sürümünü değiştirmiş sayılır."
+      ],
+      "correctIndex": 0,
+      "explanation": "Yer ve akış uygunsuzluğu, yalnız daha çok veri toplamakla ortadan kalkmaz. Alternatif yöntemin uygulanabilirliği ve gereken onaylar kontrol edilir.",
+      "source": "Ortak saha esasları: uygunsuz ölçüm yeri"
+    },
+    {
+      "id": "q048",
+      "topic": "Ölçüm yeri, girdap ve uygunsuzluk",
+      "scope": "Emisyon",
+      "parameters": [
+        "Ölçüm yeri / travers"
+      ],
+      "standards": [
+        "TS EN 15259 / EPA Method 1",
+        "EPA Method 17",
+        "EPA Method 13A",
+        "EPA Method 5 / EPA Method 17",
+        "EPA Method 11"
+      ],
+      "prompt": "Baca krokisinde bozucu etki mesafelerini kaydederken ne mutlaka belirgin olmalıdır?",
+      "choices": [
+        "Akış yönü ve ölçüm düzleminin bozucuya göre konumu",
+        "Yalnız tesis logosu",
+        "Yalnız kovanın rengi",
+        "Sadece ölçüm gününün haftası"
+      ],
+      "correctIndex": 0,
+      "explanation": "Akışa göre öncesi/sonrası belirsiz bir mesafe notu farklı yorumlanabilir. Kroki, kesit ve bozucu etkiler birlikte kaydedilir.",
+      "source": "D21; ortak saha esasları: port / travers"
+    },
+    {
+      "id": "q049",
+      "topic": "Ölçüm yeri, girdap ve uygunsuzluk",
+      "scope": "Emisyon",
+      "parameters": [
+        "Ölçüm yeri / travers"
+      ],
+      "standards": [
+        "TS EN 15259 / EPA Method 1",
+        "EPA Method 17",
+        "EPA Method 13A",
+        "EPA Method 5 / EPA Method 17",
+        "EPA Method 11"
+      ],
+      "prompt": "Erişilemeyen travers noktası için doğru işlem nedir?",
+      "choices": [
+        "Eksik erişimi kaydetmek ve metotla uyumlu çözümü değerlendirmek",
+        "Noktayı kayıt bırakmadan silmek",
+        "Yakın noktayı iki kez yazıp gizlemek",
+        "Rastgele hız üretmek"
+      ],
+      "correctIndex": 0,
+      "explanation": "Nokta planı kesiti temsil etmek içindir. Erişim problemi kayıt altına alınmadan nokta azaltılması temsil kabiliyetini ve değerlendirmeyi bozar.",
+      "source": "Ortak saha esasları: ölçüm düzlemi / sapmalar"
+    },
+    {
+      "id": "q050",
+      "topic": "Ölçüm yeri, girdap ve uygunsuzluk",
+      "scope": "Emisyon",
+      "parameters": [
+        "Ölçüm yeri / travers"
+      ],
+      "standards": [
+        "TS EN 15259 / EPA Method 1"
+      ],
+      "prompt": "EPA açı kabul eşiği EN/ISO metoduna otomatik uygulanabilir mi?",
+      "choices": [
+        "Hayır; ölçülen açı tanımı ve standardın kendi kriteri kontrol edilir.",
+        "Evet, bütün sayılar evrenseldir.",
+        "Yalnız cihaz aynı renkteyse",
+        "Yalnız bütün açılar pozitifse"
+      ],
+      "correctIndex": 0,
+      "explanation": "Farklı metotların açı tanımı, nokta bazlı veya ortalama kriterleri ve ekipmanı farklı olabilir. Sadece aynı derece birimini görmek eşdeğerlik değildir.",
+      "source": "Ortak saha esasları: girdap / metot seçimi"
+    },
+    {
+      "id": "q051",
+      "topic": "Ölçüm yeri, girdap ve uygunsuzluk",
+      "scope": "Emisyon",
+      "parameters": [
+        "Hız / debi"
+      ],
+      "standards": [
+        "EPA Method 2 / TS EN ISO 16911 / TS ISO 10780",
+        "EPA Method 26A",
+        "EPA Method 29",
+        "TS EN 12619 / EPA Method 25A"
+      ],
+      "prompt": "Pitot deliklerinde tıkanma veya hortumda su varsa önce ne yapılır?",
+      "choices": [
+        "Ölçümü etkileyen arızayı giderip uygun doğrulamayı yapmak",
+        "Hızı otomatik %10 artırmak",
+        "Eksik basıncı rastgele tamamlamak",
+        "Sadece sonuç birimini değiştirmek"
+      ],
+      "correctIndex": 0,
+      "explanation": "Basınç iletimi bozulduğunda okuma güvenilmez olabilir. Sayısal bir düzeltme uydurmak yerine cihaz durumu ve etkilenen ölçüm aralığı değerlendirilir.",
+      "source": "Ortak saha esasları: kalibrasyon / uygunsuzluk"
+    },
+    {
+      "id": "q052",
+      "topic": "Ölçüm yeri, girdap ve uygunsuzluk",
+      "scope": "Emisyon",
+      "parameters": [
+        "Genel saha"
+      ],
+      "standards": [],
+      "prompt": "Güvensiz platform veya erişim koşulunda doğru yaklaşım nedir?",
+      "choices": [
+        "Güvenli çalışma koşulu sağlanmadan başlamamak",
+        "Süreyi kısaltıp yine ölçmek",
+        "Yalnız fotoğraf çekip her koşulda sürdürmek",
+        "Bütün noktalara ulaşılabildiğini varsaymak"
+      ],
+      "correctIndex": 0,
+      "explanation": "Ölçüm kalitesi güvenli erişimin yerine geçmez. Saha sorumlusuyla risk ve gerekli önlem değerlendirilmeli; çalışan tehlikeye maruz bırakılmamalıdır.",
+      "source": "Ortak saha esasları: saha güvenliği"
+    },
+    {
+      "id": "q053",
+      "topic": "Birim, hacim ve hesap",
+      "scope": "Ortak",
+      "parameters": [
+        "Genel saha"
+      ],
+      "standards": [],
+      "prompt": "Aynı koşullara ait sabit 2 L/dk debiyle 30 dk çekiş hacmi kaç litredir?",
+      "choices": [
+        "60 L",
+        "15 L",
+        "0,067 L",
+        "600 L"
+      ],
+      "correctIndex": 0,
+      "explanation": "V=Q×t=2×30=60 L. Bu çarpım yalnız aynı koşullardaki debi için geçerlidir; farklı gaz referanslarına otomatik geçiş değildir.",
+      "source": "Ortak saha esasları: debi / hacim"
+    },
+    {
+      "id": "q054",
+      "topic": "Birim, hacim ve hesap",
+      "scope": "Ortak",
+      "parameters": [
+        "Genel saha"
+      ],
+      "standards": [],
+      "prompt": "1 ft³, kaynak gaz koşulları korunarak yaklaşık kaç litredir?",
+      "choices": [
+        "28,31685 L",
+        "2,831685 L",
+        "0,0283 L",
+        "1000 L"
+      ],
+      "correctIndex": 0,
+      "explanation": "1 ft=0,3048 m tanımından 1 ft³=0,028316846592 m³ elde edilir. Bu geometrik dönüşüm sıcaklık ve basıncı değiştirmez.",
+      "source": "Birim dönüştürücü: ft³ → L"
+    },
+    {
+      "id": "q055",
+      "topic": "Birim, hacim ve hesap",
+      "scope": "Ortak",
+      "parameters": [
+        "Genel saha"
+      ],
+      "standards": [],
+      "prompt": "1 cfm kaynak koşullarında yaklaşık hangi debidir?",
+      "choices": [
+        "28,31685 L/dk",
+        "28,31685 L/s",
+        "1 L/dk",
+        "1000 L/dk"
+      ],
+      "correctIndex": 0,
+      "explanation": "cfm ft³/dakika demektir. Hacim birimi dönüştürülürken dakika aynı kalır; saniyeye geçiş ayrıca 60 katsayısı gerektirir.",
+      "source": "Birim dönüştürücü: cfm → L/dk"
+    },
+    {
+      "id": "q056",
+      "topic": "Birim, hacim ve hesap",
+      "scope": "Ortak",
+      "parameters": [
+        "Genel saha"
+      ],
+      "standards": [],
+      "prompt": "68 °F kaç °C’dir?",
+      "choices": [
+        "20 °C",
+        "68 °C",
+        "37,8 °C",
+        "−20 °C"
+      ],
+      "correctIndex": 0,
+      "explanation": "C=(F−32)×5/9 olduğundan (68−32)×5/9=20 °C. Yalnız 5/9 ile çarpmak ofseti atlar; sıcaklık dönüşümü hacim dönüşümü gibi tek bir çarpanla yapılmaz.",
+      "source": "Birim dönüştürücü: °F → °C"
+    },
+    {
+      "id": "q057",
+      "topic": "Birim, hacim ve hesap",
+      "scope": "Ortak",
+      "parameters": [
+        "Genel saha"
+      ],
+      "standards": [],
+      "prompt": "Sayaç başlangıcı 1,250 m³, bitişi 1,870 m³ ise ham fark nedir?",
+      "choices": [
+        "0,620 m³",
+        "3,120 m³",
+        "1,496 m³",
+        "620 m³"
+      ],
+      "correctIndex": 0,
+      "explanation": "Ham sayaç hacmi bitiş eksi başlangıçtır. Bu değer henüz sıcaklık, basınç ve kuru/yaş baza göre düzeltilmiş hacim olarak adlandırılmaz.",
+      "source": "Ortak saha esasları: DGM / referans hacmi"
+    },
+    {
+      "id": "q058",
+      "topic": "Birim, hacim ve hesap",
+      "scope": "Ortak",
+      "parameters": [
+        "Genel saha"
+      ],
+      "standards": [],
+      "prompt": "0,5 mg kaç µg’dır?",
+      "choices": [
+        "500 µg",
+        "5 µg",
+        "50 µg",
+        "0,0005 µg"
+      ],
+      "correctIndex": 0,
+      "explanation": "1 mg=1000 µg olduğundan 0,5×1000=500 µg. Derişim hesabından önce kütle birimleri eşlenmelidir.",
+      "source": "Ortak saha esasları: birim tutarlılığı"
+    },
+    {
+      "id": "q059",
+      "topic": "Birim, hacim ve hesap",
+      "scope": "Ortak",
+      "parameters": [
+        "Genel saha"
+      ],
+      "standards": [],
+      "prompt": "600 L kaç m³’tür?",
+      "choices": [
+        "0,600 m³",
+        "600 000 m³",
+        "6 m³",
+        "0,006 m³"
+      ],
+      "correctIndex": 0,
+      "explanation": "1 m³=1000 L, dolayısıyla 600/1000=0,600 m³. Hacim birimini değiştirmek referans sıcaklığını ve basıncını değiştirmek değildir.",
+      "source": "Birim dönüştürücü / ortak saha esasları"
+    },
+    {
+      "id": "q060",
+      "topic": "Birim, hacim ve hesap",
+      "scope": "Ortak",
+      "parameters": [
+        "Genel saha"
+      ],
+      "standards": [],
+      "prompt": "Gaz derişimindeki kuru ve yaş baz neden ayrı belirtilir?",
+      "choices": [
+        "Su buharının hacme dahil edilmesi sonucu değiştirir.",
+        "Yalnız yazı tipi değişir.",
+        "Kuru baz her zaman sayaç hacmidir.",
+        "Yaş bazın birimi daima gramdır."
+      ],
+      "correctIndex": 0,
+      "explanation": "Aynı kirletici kütlesi, su dahil ve su hariç farklı hacimlere bölünebilir. Baz belirtilmeden sonuçlar doğrudan karşılaştırılmaz.",
+      "source": "Ortak saha esasları: nem / referans koşulları"
+    },
+    {
+      "id": "q061",
+      "topic": "Birim, hacim ve hesap",
+      "scope": "Ortak",
+      "parameters": [
+        "Genel saha"
+      ],
+      "standards": [],
+      "prompt": "İzokinetik çekiş sırasında debi değişiyorsa tek başlangıç debisi × süre yeterli midir?",
+      "choices": [
+        "Hayır; gerçek sayaç farkı veya uygun aralıklı hacimler değerlendirilir.",
+        "Evet, tüm değişimler yok sayılır.",
+        "Yalnız en yüksek debi kullanılır.",
+        "Yalnız en düşük debi kullanılır."
+      ],
+      "correctIndex": 0,
+      "explanation": "Değişken debide hacim debinin zamana göre toplamıdır. Tek bir anlık debi tüm örnekleme koşullarını temsil etmez.",
+      "source": "Ortak saha esasları: debi / hacim"
+    },
+    {
+      "id": "q062",
+      "topic": "Birim, hacim ve hesap",
+      "scope": "Ortak",
+      "parameters": [
+        "Genel saha"
+      ],
+      "standards": [],
+      "prompt": "Geleneksel 1 inHg yaklaşık kaç hPa’dır?",
+      "choices": [
+        "33,8639 hPa",
+        "3,38639 hPa",
+        "1013,25 hPa",
+        "249,09 hPa"
+      ],
+      "correctIndex": 0,
+      "explanation": "Bu araç geleneksel cıva sütunu tanımını kullanır. Su sütunu ile cıva sütunu aynı dönüşüm katsayısına sahip değildir; cihaz referansı kontrol edilir.",
+      "source": "Birim dönüştürücü: inHg → hPa"
+    },
+    {
+      "id": "q063",
+      "topic": "Kalite, numune ve teslim",
+      "scope": "Ortak",
+      "parameters": [
+        "Genel saha"
+      ],
+      "standards": [],
+      "prompt": "Saha blankı ile reaktif blankı için hangisi doğrudur?",
+      "choices": [
+        "Farklı bulaşma yollarını kontrol edebilirler.",
+        "Her zaman aynı işlemdir.",
+        "İkisi de zorunlu olarak baca gazı çeker.",
+        "Reaktif blankı yalnız debi kalibrasyonudur."
+      ],
+      "correctIndex": 0,
+      "explanation": "Blank türleri kontrol ettikleri aşamaya göre ayrılır. Bir blankın varlığı diğer kontrolün otomatik yerine geçtiğini göstermez.",
+      "source": "Ortak saha esasları: kalite / numune / teslim"
+    },
+    {
+      "id": "q064",
+      "topic": "Kalite, numune ve teslim",
+      "scope": "Ortak",
+      "parameters": [
+        "Genel saha"
+      ],
+      "standards": [],
+      "prompt": "Numune etiketinde hangi kimlik grubu temel önemdedir?",
+      "choices": [
+        "Tesis/nokta, tarih-saat, metot ve fraksiyon kimliği",
+        "Yalnız numunecinin adı",
+        "Yalnız sıvının rengi",
+        "Sadece cihaz fiyatı"
+      ],
+      "correctIndex": 0,
+      "explanation": "Teslim zinciri numunenin nereden, ne zaman ve hangi fraksiyon olarak alındığını takip edebilmelidir. Aynı bacanın farklı yıkamaları karıştırılmamalıdır.",
+      "source": "Ortak saha esasları: kalite / numune / teslim"
+    },
+    {
+      "id": "q065",
+      "topic": "Kalite, numune ve teslim",
+      "scope": "Ortak",
+      "parameters": [
+        "Genel saha"
+      ],
+      "standards": [],
+      "prompt": "Metotta saklama süresi bulunamadığında ne yapılır?",
+      "choices": [
+        "Geçerli kaynak ve laboratuvar koşulu doğrulanır.",
+        "Her zaman 48 saat atanır.",
+        "Bütün numunelere 6 ay verilir.",
+        "Süre alanı dolsun diye rastgele sayı yazılır."
+      ],
+      "correctIndex": 0,
+      "explanation": "Belirsiz alanı varsayılan sayıyla doldurmak bir gerekliliği yanlış belirlemek olabilir. Eksik kaynak bilgisi açıkça izlenmeli ve tamamlanmalıdır.",
+      "source": "Ortak saha esasları: kalite / numune / teslim"
+    },
+    {
+      "id": "q066",
+      "topic": "Kalite, numune ve teslim",
+      "scope": "Ortak",
+      "parameters": [
+        "Genel saha"
+      ],
+      "standards": [],
+      "prompt": "Numune kabındaki sıvı seviyesinin işaretlenmesi ne işe yarar?",
+      "choices": [
+        "Taşıma sırasında sıvı kaybı / sızıntı kontrolüne",
+        "Numunenin kimyasal türünü tek başına bulmaya",
+        "Baca hızını hesaplamaya",
+        "T90 belirlemeye"
+      ],
+      "correctIndex": 0,
+      "explanation": "Seviye izi teslimde olası hacim kaybının değerlendirilmesini destekler. Etiket ve kap kontrolüyle birlikte kullanılır.",
+      "source": "Ortak saha esasları: kalite / numune / teslim"
+    },
+    {
+      "id": "q067",
+      "topic": "Kalite, numune ve teslim",
+      "scope": "Ortak",
+      "parameters": [
+        "Genel saha"
+      ],
+      "standards": [],
+      "prompt": "Kalibrasyon belgesinin olması neyi ortadan kaldırmaz?",
+      "choices": [
+        "Saha işlev, sıfır, kaçak ve gerekli ara kontrollerini",
+        "Bütün kayıt ihtiyacını kaldırır.",
+        "Operatör eğitimini gereksiz yapar.",
+        "Yanlış bağlantıyı otomatik düzeltir."
+      ],
+      "correctIndex": 0,
+      "explanation": "Kalibrasyon belirli koşullarda ölçüm izlenebilirliği sağlar. Sahadaki bağlantı, arıza veya drift ayrıca kontrol edilmelidir.",
+      "source": "Ortak saha esasları: kalite / numune / teslim"
+    },
+    {
+      "id": "q068",
+      "topic": "Kalite, numune ve teslim",
+      "scope": "Ortak",
+      "parameters": [
+        "Genel saha"
+      ],
+      "standards": [],
+      "prompt": "Ölçümde proses duruşu olursa doğru kayıt nedir?",
+      "choices": [
+        "Duruş zamanı, süre ve etkilenen örnekleme aralığı",
+        "Kesintiyi gizleyip kesintisiz yazmak",
+        "Başlangıç saatini değiştirmek",
+        "Sonucu uygun bir sayıya yuvarlamak"
+      ],
+      "correctIndex": 0,
+      "explanation": "Proses koşulu numunenin temsil ediciliğini etkiler. Olay kaydı, ilgili metodun durdurma/tekrar ve raporlama değerlendirmesini mümkün kılar.",
+      "source": "Ortak saha esasları: kalite / numune / teslim"
+    },
+    {
+      "id": "q069",
+      "topic": "Kalite, numune ve teslim",
+      "scope": "Ortak",
+      "parameters": [
+        "Genel saha"
+      ],
+      "standards": [],
+      "prompt": "Başlangıç dolum hacmi ile laboratuvar son hacmi aynı alan mıdır?",
+      "choices": [
+        "Hayır; farklı aşamaların miktarlarıdır.",
+        "Evet, her zaman eşittir.",
+        "Son hacim çekilen gaz hacmidir.",
+        "Dolum hacmi sadece DGM farkıdır."
+      ],
+      "correctIndex": 0,
+      "explanation": "Dolum, yıkama ve son hacim ayrı kaydedilir. Analitik son hacim gaz örnekleme hacmi değildir ve birbirine kopyalanamaz.",
+      "source": "Ortak saha esasları: kalite / numune / teslim"
+    },
+    {
+      "id": "q070",
+      "topic": "Kalite, numune ve teslim",
+      "scope": "Ortak",
+      "parameters": [
+        "Genel saha"
+      ],
+      "standards": [],
+      "prompt": "Aynı ölçüm serisinde aynı etiketi iki numuneye vermek neden sakıncalıdır?",
+      "choices": [
+        "Fraksiyon ve sonuç izlenebilirliği kaybolabilir.",
+        "Yalnız yazıcı mürekkebi azalır.",
+        "Sonuç mutlaka iki kat doğru olur.",
+        "Hiçbir etkisi yoktur."
+      ],
+      "correctIndex": 0,
+      "explanation": "Benzersiz kimlikler filtre, kartuş, çözelti ve blankın doğru sonuçla eşlenmesini sağlar. Tekrarlı etiket, teslim zincirini belirsizleştirir.",
+      "source": "Ortak saha esasları: kalite / numune / teslim"
+    },
+    {
+      "id": "q071",
+      "topic": "Kalite, numune ve teslim",
+      "scope": "Ortak",
+      "parameters": [
+        "Genel saha"
+      ],
+      "standards": [],
+      "prompt": "Saklamada yalnız sıcaklığı kontrol etmek yeterli midir?",
+      "choices": [
+        "Hayır; kap, kapak, ışık, süre ve bulaşma da kontrol edilir.",
+        "Evet, diğer her şey önemsizdir.",
+        "Yalnız kap renginin aynı olması yeterlidir.",
+        "Sıcaklık bilinirse etiket gerekmez."
+      ],
+      "correctIndex": 0,
+      "explanation": "Numune bütünlüğü çok sayıda etkene bağlıdır. Isı kontrolü yanlış kap malzemesi veya açık kapaktan kaynaklanan kaybı tek başına önlemez.",
+      "source": "Ortak saha esasları: kalite / numune / teslim"
+    },
+    {
+      "id": "q072",
+      "topic": "Kalite, numune ve teslim",
+      "scope": "Ortak",
+      "parameters": [
+        "Genel saha"
+      ],
+      "standards": [],
+      "prompt": "Saha verisi kabul sınırını aşınca ne yapılır?",
+      "choices": [
+        "Metodun izin verdiği düzeltme, tekrar veya ret yolu değerlendirilir.",
+        "Sınırın altına rastgele sayı yazılır.",
+        "Ham veri silinir.",
+        "Yalnız sonuç başlığı değiştirilir."
+      ],
+      "correctIndex": 0,
+      "explanation": "Uygunsuzluk gerçek verisiyle korunur. Düzeltme yalnız yöntem izin veriyorsa, gerekçesi ve etkisi izlenebilir şekilde uygulanabilir.",
+      "source": "Ortak saha esasları: kalite / numune / teslim"
+    },
+    {
+      "id": "q073",
+      "topic": "İmisyon — PM10 ve PM2,5",
+      "scope": "İmisyon",
+      "parameters": [
+        "PM10 / PM2,5"
+      ],
+      "standards": [
+        "TS EN 12341 / EPA 40 CFR 50-53",
+        "TS EN 12341 / EPA 40 CFR Part 50-53"
+      ],
+      "prompt": "EN 12341:2023 hangi ortamda PM kütle derişimi ölçümünü tarif eder?",
+      "choices": [
+        "Ortam havasında",
+        "Yalnız baca içinde izokinetik",
+        "Yalnız içme suyunda",
+        "Yalnız çöken toz kabında"
+      ],
+      "correctIndex": 0,
+      "explanation": "EN 12341 ortam havası PM10/PM2,5 gravimetrik yöntemidir. Baca toz metotlarının nozül ve travers kuralları doğrudan bu yönteme aktarılmaz.",
+      "source": "D23:8"
+    },
+    {
+      "id": "q074",
+      "topic": "İmisyon — PM10 ve PM2,5",
+      "scope": "İmisyon",
+      "parameters": [
+        "PM10 / PM2,5"
+      ],
+      "standards": [
+        "TS EN 12341 / EPA 40 CFR 50-53",
+        "TS EN 12341 / EPA 40 CFR Part 50-53"
+      ],
+      "prompt": "EN 12341:2023 anma debisi hangisidir?",
+      "choices": [
+        "2,3 m³/saat",
+        "2,3 L/dk",
+        "21 L/dk",
+        "30 m³/dk"
+      ],
+      "correctIndex": 0,
+      "explanation": "Kaynak 2,3 m³/saat verir; yaklaşık 38,33 L/dk karşılığıdır. Saat ve dakika birimlerini karıştırmak debiyi 60 kat değiştirebilir.",
+      "source": "D23:8"
+    },
+    {
+      "id": "q075",
+      "topic": "İmisyon — PM10 ve PM2,5",
+      "scope": "İmisyon",
+      "parameters": [
+        "PM10 / PM2,5"
+      ],
+      "standards": [
+        "TS EN 12341 / EPA 40 CFR 50-53",
+        "TS EN 12341 / EPA 40 CFR Part 50-53"
+      ],
+      "prompt": "EN 12341:2023 anma örnekleme süresi hangisidir?",
+      "choices": [
+        "24 saat",
+        "Her durumda 30 dakika",
+        "2 dakika",
+        "7 saniye"
+      ],
+      "correctIndex": 0,
+      "explanation": "24 saat anma süresidir. Gerçek süre, kesinti ve cihaz durum bayrakları ayrıca kaydedilir; anma süre gerçek geçerliliğin otomatik kanıtı değildir.",
+      "source": "D23:8,25"
+    },
+    {
+      "id": "q076",
+      "topic": "İmisyon — PM10 ve PM2,5",
+      "scope": "İmisyon",
+      "parameters": [
+        "PM10 / PM2,5"
+      ],
+      "standards": [
+        "TS EN 12341 / EPA 40 CFR 50-53",
+        "TS EN 12341 / EPA 40 CFR Part 50-53"
+      ],
+      "prompt": "2,3 m³/saat anma debisi 24 saat korunursa teorik ortam hacmi kaçtır?",
+      "choices": [
+        "55,2 m³",
+        "5,52 m³",
+        "552 m³",
+        "24 m³"
+      ],
+      "correctIndex": 0,
+      "explanation": "2,3×24=55,2 m³ hesaplanır. Gerçek sonuçta cihazın ölçtüğü geçerli debi ve süre esas alınır; bu sayı otomatik doldurulmaz.",
+      "source": "D23:8; aynı koşullarda Q×t hesabı"
+    },
+    {
+      "id": "q077",
+      "topic": "İmisyon — PM10 ve PM2,5",
+      "scope": "İmisyon",
+      "parameters": [
+        "PM10 / PM2,5"
+      ],
+      "standards": [
+        "TS EN 12341 / EPA 40 CFR 50-53",
+        "TS EN 12341 / EPA 40 CFR Part 50-53"
+      ],
+      "prompt": "EN 12341’de raporlanan PM hacim bazının özelliği nedir?",
+      "choices": [
+        "Giriş yakınındaki örnekleme anı ortam koşullarındaki hava hacmi",
+        "Her zaman 0 °C kuru Nm³",
+        "Her zaman baca şartları",
+        "Daima 20 °C’de baca gazı"
+      ],
+      "correctIndex": 0,
+      "explanation": "Kaynak kapsamı hacmi giriş yakınındaki ortam koşullarında tanımlar. Standart hacim etiketi eklemek metot bazını değiştirebilir.",
+      "source": "D23:8"
+    },
+    {
+      "id": "q078",
+      "topic": "İmisyon — PM10 ve PM2,5",
+      "scope": "İmisyon",
+      "parameters": [
+        "PM10 / PM2,5"
+      ],
+      "standards": [
+        "TS EN 12341 / EPA 40 CFR 50-53",
+        "TS EN 12341 / EPA 40 CFR Part 50-53"
+      ],
+      "prompt": "PM10 ve PM2,5 başlığı seçiminde ne önemlidir?",
+      "choices": [
+        "Hedef fraksiyon ve başlığın doğrulanmış debisi",
+        "Yalnız başlık renginin aynı olması",
+        "Her iki başlığın da tüm debilerde aynı kesim yapması",
+        "Baca nozülü çapının aynen kullanılması"
+      ],
+      "correctIndex": 0,
+      "explanation": "Boyut ayırmanın performansı başlık tasarımı ve debiye bağlıdır. Hedef PM fraksiyonu için doğru başlık/örnekleyici eşleşmesi gerekir.",
+      "source": "D23:8,14-21 — ekipman kapsamı"
+    },
+    {
+      "id": "q079",
+      "topic": "İmisyon — PM10 ve PM2,5",
+      "scope": "İmisyon",
+      "parameters": [
+        "PM10 / PM2,5"
+      ],
+      "standards": [
+        "TS EN 12341 / EPA 40 CFR 50-53",
+        "TS EN 12341 / EPA 40 CFR Part 50-53"
+      ],
+      "prompt": "EN 12341:2023 ön koşullandırma sıcaklık ve nem aralığı hangisidir?",
+      "choices": [
+        "19–21 °C ve %45–50 bağıl nem",
+        "105 °C ve %0 nem",
+        "0–5 °C ve %100 nem",
+        "Ortam neyse o"
+      ],
+      "correctIndex": 0,
+      "explanation": "Filtreler tartım öncesi belirli iklim koşullarında dengeye getirilir. Baca toz filtre kurutma sıcaklıklarını bu koşula kopyalamak doğru değildir.",
+      "source": "D23:30"
+    },
+    {
+      "id": "q080",
+      "topic": "İmisyon — PM10 ve PM2,5",
+      "scope": "İmisyon",
+      "parameters": [
+        "PM10 / PM2,5"
+      ],
+      "standards": [
+        "TS EN 12341 / EPA 40 CFR 50-53",
+        "TS EN 12341 / EPA 40 CFR Part 50-53"
+      ],
+      "prompt": "EN 12341:2023 ilk ön tartımdan önce en az ne kadar koşullandırma tarif eder?",
+      "choices": [
+        "48 saat",
+        "48 dakika",
+        "5 dakika",
+        "Süre şartı yoktur."
+      ],
+      "correctIndex": 0,
+      "explanation": "Arşiv §6.3 en az 48 saat koşullandırma ve ardından ilk tartımı belirtir. İkinci tartım ve kabul kuralları da ayrı uygulanır.",
+      "source": "D23:30"
+    },
+    {
+      "id": "q081",
+      "topic": "İmisyon — PM10 ve PM2,5",
+      "scope": "İmisyon",
+      "parameters": [
+        "PM10 / PM2,5"
+      ],
+      "standards": [
+        "TS EN 12341 / EPA 40 CFR 50-53",
+        "TS EN 12341 / EPA 40 CFR Part 50-53"
+      ],
+      "prompt": "EN 12341 saha blankı için kasetteki en az bir filtre nasıl kullanılır?",
+      "choices": [
+        "Örnekleme yapılmadan kasette kalır.",
+        "Bütün süre boyunca aktif çekiş yapılır.",
+        "Filtre kasetten çıkarılıp açıkta bırakılır.",
+        "Numune filtreleriyle etiketleri birleştirilir."
+      ],
+      "correctIndex": 0,
+      "explanation": "§6.4.2 en az bir örneklenmeyen filtrenin saha blankı olarak kasette bulunmasını tarif eder. Blank, aktif numune filtresi gibi gaz çekmez.",
+      "source": "D23:31"
+    },
+    {
+      "id": "q082",
+      "topic": "İmisyon — PM10 ve PM2,5",
+      "scope": "İmisyon",
+      "parameters": [
+        "PM10 / PM2,5"
+      ],
+      "standards": [
+        "TS EN 12341 / EPA 40 CFR 50-53",
+        "TS EN 12341 / EPA 40 CFR Part 50-53"
+      ],
+      "prompt": "Örneklenmiş PM filtrelerinin taşınmasında hangi amaç birlikte gözetilir?",
+      "choices": [
+        "Kirlenme, aşırı ısınma, uçucu kaybı ve yoğuşmayı önlemek",
+        "Filtreyi güneşte kurutmak",
+        "Tartım öncesi filtre yüzeyini fırçalamak",
+        "Kaba isimsiz koymak"
+      ],
+      "correctIndex": 0,
+      "explanation": "Kapalı/yalıtımlı koruma ve uygun sıcaklık yönetimi gerekir. Soğutma uygulanırken filtre üzerinde yoğuşmaya da yol açılmamalıdır.",
+      "source": "D23:31"
+    },
+    {
+      "id": "q083",
+      "topic": "İmisyon — çöken toz ve pasif örnekleme",
+      "scope": "İmisyon",
+      "parameters": [
+        "Çöken toz"
+      ],
+      "standards": [
+        "TS 2341 / TS 2342 / SKHKKY Ek-2 saha yaklaşımı",
+        "TS 2341 / TS 2342 / SKHKKY Ek-2"
+      ],
+      "prompt": "Çöken toz hesabında temel örnekleme büyüklükleri hangileridir?",
+      "choices": [
+        "Toplanan kütle, toplama alanı ve maruziyet süresi",
+        "Yalnız DGM hacmi",
+        "Yalnız baca nozül hızı",
+        "Yalnız impinger sayısı"
+      ],
+      "correctIndex": 0,
+      "explanation": "Çökelme akısı alan ve zaman başına kütleyle ilişkilidir. Pompayla çekilmiş hava hacmini payda yapmak farklı bir ölçüm yaklaşımını karıştırır.",
+      "source": "D44:5; ortak saha esasları: çöken toz"
+    },
+    {
+      "id": "q084",
+      "topic": "İmisyon — çöken toz ve pasif örnekleme",
+      "scope": "İmisyon",
+      "parameters": [
+        "Çöken toz"
+      ],
+      "standards": [
+        "TS 2341 / TS 2342 / SKHKKY Ek-2 saha yaklaşımı",
+        "TS 2341 / TS 2342 / SKHKKY Ek-2"
+      ],
+      "prompt": "Çöken toz kabı için gerçek maruziyet süresi neden yazılır?",
+      "choices": [
+        "Alan-zaman başına sonucun paydasını etkiler.",
+        "Yalnız cihazın garantisini etkiler.",
+        "Süre her koşulda 30 kabul edilebilir.",
+        "Yağmur varsa süre tamamen silinir."
+      ],
+      "correctIndex": 0,
+      "explanation": "Gerçek başlangıç ve bitiş, toplama süresini izlenebilir kılar. Eksik/kayıp numune veya farklı takvim süresi otomatik sabit günle gizlenmez.",
+      "source": "D44:4-5; ortak saha esasları"
+    },
+    {
+      "id": "q085",
+      "topic": "İmisyon — çöken toz ve pasif örnekleme",
+      "scope": "İmisyon",
+      "parameters": [
+        "Çöken toz"
+      ],
+      "standards": [
+        "TS 2341 / TS 2342 / SKHKKY Ek-2 saha yaklaşımı",
+        "TS 2341 / TS 2342 / SKHKKY Ek-2"
+      ],
+      "prompt": "Çöken toz kabının devrilmesi veya kaybolması ne gerektirir?",
+      "choices": [
+        "Olay ve geçerlilik etkisinin kaydını",
+        "Kütleyi komşu kaptan kopyalamayı",
+        "Kabı hiç kurulmamış sayıp kaydı silmeyi",
+        "Rastgele bir tartım üretmeyi"
+      ],
+      "correctIndex": 0,
+      "explanation": "Numune bütünlüğünü etkileyen olaylar değerlendirmeye dahil edilir. Kayıp verinin başka noktayla doldurulması ham ölçüm değildir.",
+      "source": "Ortak saha esasları: imisyon saha olayları"
+    },
+    {
+      "id": "q086",
+      "topic": "İmisyon — çöken toz ve pasif örnekleme",
+      "scope": "İmisyon",
+      "parameters": [
+        "Çöken toz"
+      ],
+      "standards": [
+        "TS 2341 / TS 2342 / SKHKKY Ek-2 saha yaklaşımı",
+        "TS 2341 / TS 2342 / SKHKKY Ek-2"
+      ],
+      "prompt": "Çöken toz numunesinde kap duvarına yapışan materyal nasıl ele alınır?",
+      "choices": [
+        "Metodun nicel geri kazanım adımlarına göre değerlendirilir.",
+        "Her zaman tamamen atılır.",
+        "Yalnız renk değerlendirilir.",
+        "Açık havada üflenerek temizlenir."
+      ],
+      "correctIndex": 0,
+      "explanation": "Numune toplama yüzeyindeki birikim, yöntem kapsamına göre geri alınır. Yıkamada eklenen miktar ve yabancı cisim işlemleri izlenebilir tutulur.",
+      "source": "D44:6 — talimat aktarımı"
+    },
+    {
+      "id": "q087",
+      "topic": "İmisyon — çöken toz ve pasif örnekleme",
+      "scope": "İmisyon",
+      "parameters": [
+        "Pasif örnekleme"
+      ],
+      "standards": [
+        "Pasif Örnekleme / Difüzyon Tüpü"
+      ],
+      "prompt": "Pasif difüzyon tüpünde pompa debisi girilir mi?",
+      "choices": [
+        "Hayır; doğrulanmış alım hızı ve maruziyet koşulları kullanılır.",
+        "Evet, her tüpe 21 L/dk",
+        "Evet, baca izokinetik debisi",
+        "Evet, her koşulda 100 L/dk"
+      ],
+      "correctIndex": 0,
+      "explanation": "Pasif örnekleme pompaya dayanmaz. Alım hızı, tüp ve hedef bileşiğe özgü tanımdır; aktif çekiş debisiyle aynı büyüklük gibi kullanılmaz.",
+      "source": "D46; ortak saha esasları: pasif tüp"
+    },
+    {
+      "id": "q088",
+      "topic": "İmisyon — çöken toz ve pasif örnekleme",
+      "scope": "İmisyon",
+      "parameters": [
+        "Pasif örnekleme"
+      ],
+      "standards": [
+        "Pasif Örnekleme / Difüzyon Tüpü"
+      ],
+      "prompt": "Pasif tüpün açılma ve kapanma saatleri neden kaydedilir?",
+      "choices": [
+        "Gerçek maruziyet süresini belirlemek için",
+        "DGM farkını hesaplamak için",
+        "Nozül çapını seçmek için",
+        "Girdap açısını ölçmek için"
+      ],
+      "correctIndex": 0,
+      "explanation": "Maruziyet süresi pasif örneklemenin temel girdisidir. Etiket ve zaman hatası, ölçülen kütlenin yanlış süreyle ilişkilendirilmesine yol açabilir.",
+      "source": "D46:4-5"
+    },
+    {
+      "id": "q089",
+      "topic": "İmisyon — çöken toz ve pasif örnekleme",
+      "scope": "İmisyon",
+      "parameters": [
+        "Pasif örnekleme"
+      ],
+      "standards": [
+        "Pasif Örnekleme / Difüzyon Tüpü"
+      ],
+      "prompt": "Pasif tüp için saklama ve analiz süresi nasıl seçilir?",
+      "choices": [
+        "Tüp / hedef bileşik ve geçerli üretici-metot koşullarına göre",
+        "Bütün tüplere evrensel 6 ay",
+        "Bütün tüplere 48 dakika",
+        "Sadece tüpün rengine göre"
+      ],
+      "correctIndex": 0,
+      "explanation": "Farklı adsorban ve hedef gazlar aynı stabiliteye sahip değildir. Eski bir talimattaki tek süre bütün tüplere koşulsuz uygulanmaz.",
+      "source": "D46:5; ortak saha esasları: saklama"
+    },
+    {
+      "id": "q090",
+      "topic": "İmisyon — çöken toz ve pasif örnekleme",
+      "scope": "İmisyon",
+      "parameters": [
+        "Pasif örnekleme"
+      ],
+      "standards": [
+        "Pasif Örnekleme / Difüzyon Tüpü"
+      ],
+      "prompt": "Pasif tüp için sıcaklık, nem ve rüzgâr neden kaydedilir?",
+      "choices": [
+        "Uygulanabilirlik ve alım performansını etkileyebilir.",
+        "Yalnız fotoğrafın güzel çıkması için",
+        "Baca alanı bunlardan hesaplandığı için",
+        "Hiçbir etkisi yoktur."
+      ],
+      "correctIndex": 0,
+      "explanation": "Tüpün doğrulanmış kullanım aralığı ve koruyucu kap koşulları değerlendirilir. Çevresel kayıt, maruziyetin uygunluğunu izlemeyi sağlar.",
+      "source": "D46:5"
+    },
+    {
+      "id": "q091",
+      "topic": "İmisyon — çöken toz ve pasif örnekleme",
+      "scope": "İmisyon",
+      "parameters": [
+        "PM10 / PM2,5",
+        "Pasif örnekleme",
+        "Çöken toz"
+      ],
+      "standards": [
+        "TS EN 12341 / EPA 40 CFR 50-53",
+        "TS 2341 / TS 2342 / SKHKKY Ek-2 saha yaklaşımı",
+        "TS EN 12341 / EPA 40 CFR Part 50-53",
+        "TS 2341 / TS 2342 / SKHKKY Ek-2",
+        "Pasif Örnekleme / Difüzyon Tüpü"
+      ],
+      "prompt": "İmisyon noktasında çevre kaynak ve engellerin kaydı neye hizmet eder?",
+      "choices": [
+        "Ölçümün temsil ettiği ortamın yorumlanmasına",
+        "Bütün sonuçların otomatik düzeltilmesine",
+        "Numunenin adının gereksiz olmasına",
+        "Konsantrasyonu sıfıra eşitlemeye"
+      ],
+      "correctIndex": 0,
+      "explanation": "Yakın kaynak, engel ve meteoroloji ölçümün temsil ediciliğini etkiler. Bunları kaydetmek, bir katsayı uydurup sonucu değiştirme yetkisi vermez.",
+      "source": "Ortak saha esasları: imisyon / yerleşim / meteoroloji"
+    },
+    {
+      "id": "q092",
+      "topic": "İmisyon — çöken toz ve pasif örnekleme",
+      "scope": "İmisyon",
+      "parameters": [
+        "PM10 / PM2,5",
+        "Pasif örnekleme",
+        "Çöken toz"
+      ],
+      "standards": [
+        "TS EN 12341 / EPA 40 CFR 50-53",
+        "TS 2341 / TS 2342 / SKHKKY Ek-2 saha yaklaşımı",
+        "TS EN 12341 / EPA 40 CFR Part 50-53",
+        "TS 2341 / TS 2342 / SKHKKY Ek-2",
+        "Pasif Örnekleme / Difüzyon Tüpü"
+      ],
+      "prompt": "Emisyon baca metodu ile imisyon metodu neden ayrı seçilir?",
+      "choices": [
+        "Ölçülen ortam, örnekleme ilkesi ve sonuç bazları farklıdır.",
+        "Yalnız uygulama logosu değiştiği için",
+        "İmisyonda hiçbir kalite kontrol olmadığı için",
+        "Emisyon sonuçları her zaman imisyon yerine geçtiği için"
+      ],
+      "correctIndex": 0,
+      "explanation": "Baca içindeki kütlesel çıkış ile ortam havası maruziyeti farklı hedeflerdir. Aynı kirleticinin adı örnekleme yöntemlerini özdeş yapmaz.",
+      "source": "Ortak saha esasları: emisyon / imisyon ayrımı"
+    },
+    {
+      "id": "q093",
+      "topic": "Yanma gazı standartları",
+      "scope": "Emisyon",
+      "parameters": [
+        "O₂"
+      ],
+      "standards": [
+        "TS ISO 12039 / TS EN 14789 / TS EN 14792 / TS EN 15058"
+      ],
+      "prompt": "TS EN 14789 hangi gazın referans ölçüm yöntemiyle ilişkilidir?",
+      "choices": [
+        "O₂",
+        "CO",
+        "NOₓ",
+        "PM2,5"
+      ],
+      "correctIndex": 0,
+      "explanation": "Oksijen ölçümü, diğer kirleticilerin referans oksijene göre değerlendirilmesinde de gerekli olabilir. O₂ ölçümü ile düzeltme hesabı farklı aşamalardır.",
+      "source": "Ana katalog: TS EN 14789 — kapsam"
+    },
+    {
+      "id": "q094",
+      "topic": "Yanma gazı standartları",
+      "scope": "Emisyon",
+      "parameters": [
+        "NOₓ"
+      ],
+      "standards": [
+        "TS ISO 12039 / TS EN 14789 / TS EN 14792 / TS EN 15058"
+      ],
+      "prompt": "TS EN 14792 hangi gaz grubuyla ilişkilidir?",
+      "choices": [
+        "NOₓ",
+        "CO",
+        "HCl",
+        "PAH"
+      ],
+      "correctIndex": 0,
+      "explanation": "Azot oksitleri için kullanılan standart ile CO ve HCl yöntemleri farklı hedef ve ölçüm ilkelerine sahiptir. Kalibrasyon ve girişim kontrolleri doğru gaz metoduna göre seçilir.",
+      "source": "Ana katalog: TS EN 14792 — kapsam"
+    },
+    {
+      "id": "q095",
+      "topic": "Yanma gazı standartları",
+      "scope": "Emisyon",
+      "parameters": [
+        "CO"
+      ],
+      "standards": [
+        "TS ISO 12039 / TS EN 14789 / TS EN 14792 / TS EN 15058"
+      ],
+      "prompt": "TS EN 15058 hangi bileşiğin ölçümüyle ilişkilidir?",
+      "choices": [
+        "CO",
+        "O₂",
+        "HF",
+        "PCDD/F"
+      ],
+      "correctIndex": 0,
+      "explanation": "Karbonmonoksit yöntemi toplam organik karbon veya oksijen yöntemi değildir. Parametre kodu, cihazın ölçüm kanalı ve raporlanan birim eşleştirilmelidir.",
+      "source": "Ana katalog: TS EN 15058 — kapsam"
+    },
+    {
+      "id": "q096",
+      "topic": "İmisyon — hesap ve kayıt",
+      "scope": "İmisyon",
+      "parameters": [
+        "Çöken toz"
+      ],
+      "standards": [
+        "TS 2341 / TS 2342 / SKHKKY Ek-2 saha yaklaşımı",
+        "TS 2341 / TS 2342 / SKHKKY Ek-2"
+      ],
+      "prompt": "10 mg çöken toz, 0,1 m² alanda 10 günde toplanmışsa (blank düzeltmesi sonrası) akı kaçtır?",
+      "choices": [
+        "10 mg/(m²·gün)",
+        "1 mg/(m²·gün)",
+        "100 mg/(m²·gün)",
+        "1000 mg/(m²·gün)"
+      ],
+      "correctIndex": 0,
+      "explanation": "Akı=10/(0,1×10)=10 mg/(m²·gün). Kütle, alan ve gün ayrı kontrol edilir; hava hacmi bu paydada yer almaz.",
+      "source": "D44:5; boyutsal hesap"
+    },
+    {
+      "id": "q097",
+      "topic": "İmisyon — hesap ve kayıt",
+      "scope": "İmisyon",
+      "parameters": [
+        "PM10 / PM2,5"
+      ],
+      "standards": [
+        "TS EN 12341 / EPA 40 CFR 50-53",
+        "TS EN 12341 / EPA 40 CFR Part 50-53"
+      ],
+      "prompt": "Blank ve tartım değerlendirmesi tamamlanmış 110,4 µg PM, 55,2 m³ ortam hacminden toplanırsa derişim kaçtır?",
+      "choices": [
+        "2 µg/m³",
+        "0,5 µg/m³",
+        "20 µg/m³",
+        "6094,08 µg/m³"
+      ],
+      "correctIndex": 0,
+      "explanation": "C=m/V=110,4/55,2=2 µg/m³. Hacmin ortam koşullarında olması ve geçerli ölçülen hacim kullanımı korunur.",
+      "source": "D23:8; boyutsal hesap"
+    },
+    {
+      "id": "q098",
+      "topic": "İmisyon — PM10 ve PM2,5",
+      "scope": "İmisyon",
+      "parameters": [
+        "PM10 / PM2,5"
+      ],
+      "standards": [
+        "TS EN 12341 / EPA 40 CFR 50-53",
+        "TS EN 12341 / EPA 40 CFR Part 50-53"
+      ],
+      "prompt": "EN 12341:2023’te numunenin 1 ay içinde tartım odasına alınması ifadesi nasıl yorumlanmalıdır?",
+      "choices": [
+        "Bu adıma özgü sınırdır; tüm parametrelere 1 ay analiz bekletme izni değildir.",
+        "Bütün kimyasal numuneler 1 ay oda sıcaklığında kalabilir.",
+        "Tüm filtreler 1 ay dışarıda açık bekletilir.",
+        "Saklama koşulları artık uygulanmaz."
+      ],
+      "correctIndex": 0,
+      "explanation": "§6.4.3, gravimetrik analiz için tartım odasına alınmayı belirtir. Süreyi bağlamından çıkarıp bütün saklama ve analiz adımlarına genellemek doğru değildir.",
+      "source": "D23:31"
+    },
+    {
+      "id": "q099",
+      "topic": "İmisyon — hesap ve kayıt",
+      "scope": "İmisyon",
+      "parameters": [
+        "PM10 / PM2,5",
+        "Pasif örnekleme",
+        "Çöken toz"
+      ],
+      "standards": [
+        "TS EN 12341 / EPA 40 CFR 50-53",
+        "TS 2341 / TS 2342 / SKHKKY Ek-2 saha yaklaşımı",
+        "TS EN 12341 / EPA 40 CFR Part 50-53",
+        "TS 2341 / TS 2342 / SKHKKY Ek-2",
+        "Pasif Örnekleme / Difüzyon Tüpü"
+      ],
+      "prompt": "Nokta koordinatı ile numune kimliğinin eşleşmesi neden kontrol edilir?",
+      "choices": [
+        "Sonucun doğru saha noktasına bağlanması için",
+        "Sonucu otomatik düşürmek için",
+        "Bütün noktaları tek nokta saymak için",
+        "Sadece dosya boyutunu artırmak için"
+      ],
+      "correctIndex": 0,
+      "explanation": "İmisyon değerlendirmesi konuma bağlıdır. Numune ile koordinatın karışması, doğru analiz edilmiş bir sonucun yanlış yer için yorumlanmasına yol açabilir.",
+      "source": "Ortak saha esasları: meteoroloji / saha kayıtları"
+    },
+    {
+      "id": "q100",
+      "topic": "İmisyon — hesap ve kayıt",
+      "scope": "İmisyon",
+      "parameters": [
+        "Pasif örnekleme"
+      ],
+      "standards": [
+        "Pasif Örnekleme / Difüzyon Tüpü"
+      ],
+      "prompt": "Pasif tüpte yalnız toplam tutulan kütleyi bilmek ortam derişimini bulmaya her zaman yeterli midir?",
+      "choices": [
+        "Hayır; alım hızı, süre ve yöntem düzeltmeleri de gerekir.",
+        "Evet, kütle daima derişimdir.",
+        "Evet, tüpün boyu tek başına yeterlidir.",
+        "Evet, yalnız baca çapı eklenir."
+      ],
+      "correctIndex": 0,
+      "explanation": "Kütle derişim değildir. Pasif tüpün bileşik ve koşullara özgü alım modeli, maruziyet ve blank değerlendirmesiyle birlikte kullanılır.",
+      "source": "Ortak saha esasları: pasif örnekleme"
+    }
+  ]
+}

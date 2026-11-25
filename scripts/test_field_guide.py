@@ -52,7 +52,8 @@ class FieldGuideTests(unittest.TestCase):
 
     def test_pending_cannot_display_a_recipe(self):
         bad = copy.deepcopy(DATA)
-        bad['profiles'][-1]['train']=bad['profiles'][0]['train']
+        pending=next(p for p in bad['profiles'] if p['reviewState']=='pending')
+        pending['train']=bad['profiles'][0]['train']
         with self.assertRaises(AssertionError):validate(bad,SOURCES)
 
 

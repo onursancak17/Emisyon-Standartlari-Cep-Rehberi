@@ -1,8 +1,10 @@
 # Emisyon İmisyon Ölçüm Standartları
 
-## 0.5.0 — parametre ve metoda göre saha rehberi
+## 0.5.1 — saha rehberi ve açıklamalı bilgi testi
 
-Ana ekrandaki **Parametre seç · Numune alma ve impinger rehberi** düğmesi yeni bölümü açar. 17 metot/varyant kartının 10’unda ayrı tren çizimi bulunur. Metot değişince filtre yeri, şişeler ve miktarlar seçime göre değişir. Şema tam ekranda yakınlaştırılabilir ve çevrimdışı çalışır.
+Ana ekrandaki **Parametre seç · Numune alma ve impinger rehberi** düğmesi yeni bölümü açar. 21 metot/varyant kartının 10’unda ayrı tren çizimi bulunur. Metot değişince filtre yeri, şişeler ve miktarlar seçime göre değişir. Şema tam ekranda yakınlaştırılabilir ve çevrimdışı çalışır. Emisyon / imisyon filtreleri ve PM10, PM2,5, çöken toz, pasif örnekleme kartları vardır.
+
+**Bilgini sına** bölümünde 100 açıklamalı soru (25 imisyon sorusu) vardır. Mevcut katalogdaki 37 başlığın her birine en az bir soru bağlanmıştır. Karışık / emisyon / imisyon / ortak kapsam; konu / standart-metot / parametre seçimi; 10, 20, 40, 60, 100 veya tüm sorular; soru ve seçenek karıştırma; ileri-geri gezinme; boş bırakma; test sonunda doğru-yanlış-boş sayısı, konu dağılımı, açıklama ve kaynak izi sunulur. Bu ilk bankadır; her standardın bütün ayrıntılarının sorulduğu iddia edilmez.
 
 Girdap açısı ölçümü ve EPA Method 1 mutlak açı ortalaması; ölçüm yeri uygunsuzlukları; 23 ortak saha konusu; referans koşullarını koruyan birim dönüşümü eklendi. İncelemesi tamamlanmamış yöntemler açıkça **hazırlanıyor / talimat kaynaklı** görünür. Tam metot onayı veya bütün standartların güncel sürümlerinin eksiksiz işlendiği iddia edilmez.
 

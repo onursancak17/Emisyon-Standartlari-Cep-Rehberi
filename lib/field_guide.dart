@@ -48,11 +48,12 @@ class FieldGuideCatalog extends StatefulWidget {
 
 class _FieldGuideCatalogState extends State<FieldGuideCatalog> {
   String _query = '';
+  String _scope = 'Tümü';
   @override
   Widget build(BuildContext context) {
     final profiles = _objects(widget.data['profiles']);
     final parameters = profiles.map((e) => e['parameter'] as String).toSet().toList();
-    final found = parameters.where((parameter) => profiles.where((p) => p['parameter'] == parameter).any(
+    final found = parameters.where((parameter) => profiles.where((p) => p['parameter'] == parameter && (_scope == 'Tümü' || p['scope'] == _scope)).any(
       (p) => _fold('$parameter ${p['method']} ${p['variant']}').contains(_fold(_query)))).toList();
     return ListView(padding: const EdgeInsets.all(16), children: [
       Text('Sahada doğru metot, doğru düzen', style: Theme.of(context).textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.w800)),
@@ -61,6 +62,7 @@ class _FieldGuideCatalogState extends State<FieldGuideCatalog> {
       const SizedBox(height: 12),
       GuideNotice(text: widget.data['notice'] as String),
       const SizedBox(height: 12),
+      Wrap(spacing: 8, children: [for (final s in ['Tümü', 'Emisyon', 'İmisyon']) ChoiceChip(label: Text(s), selected: _scope == s, onSelected: (_) => setState(() => _scope = s))]),
       TextField(decoration: const InputDecoration(labelText: 'Parametre veya metot ara', prefixIcon: Icon(Icons.search), border: OutlineInputBorder()),
         onChanged: (v) => setState(() => _query = v)),
       const SizedBox(height: 12),
@@ -136,6 +138,7 @@ class _MethodGuidePageState extends State<MethodGuidePage> {
             ListTile(contentPadding: EdgeInsets.zero, leading: const Icon(Icons.water_drop_outlined),
               title: Text('${n['label']} · ${n['amount']}'), subtitle: Text(n['content'] as String)),
         ],
+        if (p['trainNote'] != null) GuideNotice(text: p['trainNote'] as String),
         const SizedBox(height: 12),
         for (final limit in _objects(p['limits'])) GuideSection(title: limit['label'] as String, items: [limit['value'] as String]),
         for (final phase in _objects(p['phases'])) GuideSection(title: phase['title'] as String, items: _strings(phase['items'])),

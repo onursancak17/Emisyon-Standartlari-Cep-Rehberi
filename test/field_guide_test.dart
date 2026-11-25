@@ -5,6 +5,8 @@ import 'package:emisyon_standartlari_cep_rehberi/main.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
+  late Map<String, dynamic> data;
+  setUpAll(() async { data = await FieldGuideRepository.load(); });
   test('Signed angles cannot cancel each other; zero points count', () {
     expect(FieldMath.averageAbsoluteAngles([25, -25, 0]), closeTo(50/3, 1e-12));
     expect(FieldMath.averageAbsoluteAngles([20, -20]),20);
@@ -23,7 +25,6 @@ void main() {
     expect(TurkishUnitText.normalize('21 scf'),isNot(contains('Nm³')));
   });
   testWidgets('Offline catalog opens and renders the moisture method with zoom', (tester) async {
-    final data=await FieldGuideRepository.load();
     await tester.pumpWidget(MaterialApp(home:Scaffold(body:FieldGuideCatalog(data:data))));
     expect(find.text('Sahada doğru metot, doğru düzen'),findsOneWidget);
     final moisture=find.text('Nem');
@@ -35,7 +36,6 @@ void main() {
     expect(tester.takeException(),isNull);
   });
   testWidgets('Changing method replaces the filter topology', (tester) async {
-    final data=await FieldGuideRepository.load();
     final profiles=(data['profiles'] as List).where((x)=>x['parameter']=='Flor / florür').map((x)=>Map<String,dynamic>.from(x as Map)).toList();
     await tester.pumpWidget(MaterialApp(home:MethodGuidePage(profiles:profiles)));
     expect(tester.widget<TrainDiagram>(find.byType(TrainDiagram)).nodes[4]['id'],'filter');

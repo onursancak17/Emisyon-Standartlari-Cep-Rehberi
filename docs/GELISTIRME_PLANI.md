@@ -17,9 +17,9 @@ Telefona kurulabilen, çevrimdışı ve Türkçe saha rehberi. Mevcut Flutter pr
 - Personelin bilmesi gereken diğer konular: saha güvenliği, proses temsili, ekipman/kalibrasyon, T90, drift, girişimler, blanklar, kontaminasyon, VOC/TOC, imisyon PM, çöken toz, pasif tüpler, meteoroloji, belirsizlik ve rapor.
 - Tasarım ana programa yakın, telefon kullanımına uygun; şemada tam ekran, kaydırma ve yakınlaştırma.
 
-## 0.5.0 geliştirme paketi
+## 0.5.1 geliştirme paketi
 
-17 metot/varyant kartı; 10 ayrı çizim. Aynı parametrede farklı metot ve varyantlar birbirine karıştırılmaz. EPA 13A ön/arka filtre; EPA 29 cıva dahil/hariç; EPA 26A isteğe bağlı kondensat şişesi örnekleridir. EPA 8 filtresi ilk iki şişenin arasındadır. PAH/dioksin için katı adsorbanlı, akış bölünmesiz bir varyant seçilmiştir; tüm varyantlar tamamlanmış değildir.
+21 metot/varyant kartı; 10 ayrı çizim. Aynı parametrede farklı metot ve varyantlar birbirine karıştırılmaz. EPA 13A ön/arka filtre; EPA 29 cıva dahil/hariç; EPA 26A isteğe bağlı kondensat şişesi örnekleridir. EPA 8 filtresi ilk iki şişenin arasındadır. PAH/dioksin için katı adsorbanlı, akış bölünmesiz bir varyant seçilmiştir; tüm varyantlar tamamlanmış değildir.
 
 23 ortak saha konusu, EPA Method 1 §11.4 null tekniği, mutlak açı ortalaması ve sınır değerlendirmesi, gazın referans koşullarını değiştirmeyen birim dönüştürücü eklendi.
 
@@ -43,3 +43,9 @@ Bu paket tam bir standart külliyatının onaylandığı anlamına gelmez. 54 ka
 `scripts/validate_field_guide.py` kaynak/sayfa, yöntem kimliği, zorunlu koşullar, aşamalar ve çizim durumunu kontrol eder. Python testleri kritik şema farklılıklarını; Flutter testleri yöntem seçimi, çizim değişimi, açı ve birim hesaplarını denetler. Bu testler bilimsel içerik onayının yerine geçmez.
 
 `Verify field guide` akışı Python + Flutter kontrollerini çalıştırır. `Build Android APK` akışı mevcut çevrimdışı içerik ve ses paketini koruyarak APK üretir. Hazırlık/dogrulama durumu kullanıcı arayüzünde görünür kalır.
+
+## Açıklamalı testler
+
+100 soruluk ilk banka; 25 imisyon sorusu. Mevcut 37 katalog başlığının tamamında en az bir soru vardır; bu, her standardın bütün ayrıntılarının sorulduğu anlamına gelmez. Kapsam, konu, parametre ve standart/metot filtreleri, 10/20/40/60/100/tüm soru seçimi, seçeneklerin karıştırılması, doğru/yanlış/boş, konu dökümü, cevap gerekçesi ve kaynak izi sunulur. Sonuçlar mevcut oturum içindedir; kalıcı sınav geçmişi henüz yoktur.
+
+EN 12341:2023 için PM10 ve PM2,5 imisyon kartları ile TL14/TL15 kaynaklı çöken toz ve pasif örnekleme kartları eklendi.
