@@ -403,43 +403,48 @@
       "NaOH",
       "izokinetik"
     ],
-    "purpose": "HCl, HBr, HF, Cl2 ve Br2 gibi hidrojen halidler ve halojenlerin izokinetik hatla absorpsiyon çözeltilerinde toplanmasıdır.",
-    "duration": "Her travers noktasında minimum 2 dakika; toplam örnekleme süresi en az 30 dakika olmalıdır.",
-    "flowRate": "İzokinetik oran %90–110 arasında tutulur. H2SO4/NaOH impinger hattı absorpsiyon verimini bozmayacak şekilde işletilir.",
+    "purpose": "EPA Method 26A — EMC 14.01.2019 nüshası / arşiv D06 başlığı 07.10.2020. İsteğe bağlı ilk kondensat şişesi kısaltılmış giriş boruludur; asit şişeleri standart, alkali ve silika şişeleri modifiye Greenburg–Smith tipindedir.",
+    "duration": "Method 5 bağlantılı eşit nokta süreleri ve ≥2 dk/nokta; ilgili kaynak mevzuatının toplam süre/hacmi ayrıca gerekir. Kurutma/purge süresi örnekleme süresi değildir.",
+    "flowRate": "Method 5 bağlantılı izokinetik %90–110; kaynak hızı/nozül/nem/T/P ile belirlenir. Sabit L/dk atanmaz.",
     "equipment": [
-      "İzokinetik prob/nozul, filtre, 6 impinger, buz banyosu, silika jel, DGM/pompa."
+      "Bu yöntemin şema/numune fraksiyonları ana ekrandaki parametre rehberinde ayrı varyantlarla bulunur."
     ],
     "reagents": [
-      "1. impinger: 50 mL 0,1 N H2SO4.",
-      "2. impinger: 100 mL 0,1 N H2SO4.",
-      "3. impinger: 100 mL 0,1 N H2SO4.",
-      "4. impinger: 100 mL 0,1 N NaOH.",
-      "5. impinger: 100 mL 0,1 N NaOH.",
-      "6. impinger: 200 g silika jel."
+      "Prob/filtre bölümünü 120–134 °C aralığında tut; uygun alt mevzuat veya onaylı istisnayı ayrıca kontrol et.",
+      "Nozül/prob numuneye temasında cam/kuvars kullan; metal iç prob kullanma. Baca >210 °C ise tek parça cam nozül/iç prob düzeni gerekir (§6.1.1).",
+      "Doymuş nemli gazda siklon §6.1.4’e göre gerekir; damlacığa karşı diğer durumlarda da önerilir. Bu kartın düz çizimi siklonsuz seçenektir, doymuş kaynağa aynen atanmaz.",
+      "Cam/kuvars nozül ve metal olmayan iç prob kullanılır. Baca >210 °C ise tek parça cam nozül/iç prob gerekir; filtrede kuvars alternatifini §7.1.1 ile değerlendir. Yeni PTFE’den HF çıkışı hedef florür ölçümünü etkileyebilir."
     ],
     "fieldSteps": [
-      "EPA Method 1’e göre nokta sayısını ve hidrolik çapı belirle.",
-      "Prob 120 ±14 °C’ye ısıtılır.",
-      "Bacadan gelen hat ile 1. impinger arasına filtre yerleştir.",
-      "Ölçüm sonunda ön/son kaçak testini yap.",
-      "1-3. impingerleri ve 4-5. impingerleri ayrı kaplara al; durulamaları kendi fraksiyonlarına ekle.",
-      "NaOH fraksiyonuna beklenen her ppm için yaklaşık 25 mg sodyum tiyosülfat eklenebilir."
+      "Ön kaçak testi önerilir; parça değişiminden hemen önce ve ölçüm sonunda test zorunludur. Sonda/ara testte koşuda görülen en yüksek vakum veya üstü kullanılır.",
+      "Method 5 §8.4: kabul edilen kaçak ≤min(ortalama Q ×0,04; 0,57 L/dk). 380 mmHg yaklaşık 50,66 kPa vakumdur; düşük ön test vakumu ancak ölçüm sırasında aşılmıyorsa kullanılabilir. Aşımda yalnız §12.3 hacim düzeltmesi veya ölçümün reddi uygulanır.",
+      "İzokinetik çekişi koru. Kondensat şişesi dolarsa boşaltılan numuneyi koru; yeniden eklenen 50 mL absorbanı nem hesabında dikkate al.",
+      "Filtrede/siklonda sıvı varsa metottaki ölçüm sonrası nem uzaklaştırma koşulunu değerlendir.",
+      "§8.1.6: siklon kullanılmışsa veya filtrede sıvı görülüyorsa prob girişinden koşullandırılmış hava geçir; filtre 120–134 °C. Önce 30 dk, hâlâ sıvı varsa 15 dk aralıklarla kuruluğu kontrol et. Bu süre numune gazı çekiş süresi değildir.",
+      "Kondensat + asit şişelerini hidrojen halojenür fraksiyonu olarak; alkali şişeleri halojen fraksiyonu olarak ayrı geri kazan. Asit ve alkali fraksiyonları birleştirme.",
+      "Kap 3: kondensat + asit şişeleri ve filtre arkasından asit şişelerine kadar bağlantıların su yıkaması. Kap 4: iki alkali şişe ve kendi bağlantılarının su yıkaması. Nem için dolum öncesi/sonrası hacim veya kütleyi yıkamadan önce belirle.",
+      "§8.2.4 alkali fraksiyonuna sodyum tiyosülfat: 25 mg × beklenen halojen (ppm) × örneklenen kuru standart gaz hacmi (dscm). Beklenen derişim ve kaynak referansındaki gerçek hacim olmadan sabit mg atanmaz.",
+      "Alkali reaktif blankına numuneyle aynı oranda tiyosülfat ekle. Asit, alkali, su ve gerekiyorsa aseton blanklarını ayrı tut; partikül isteniyorsa filtre/ön yıkama ayrı kaplardır."
     ],
     "criticalControls": [
-      "Örnekleme dizisi çıkış gaz sıcaklığı 20 °C’yi aşmamalıdır.",
-      "Asit ve baz fraksiyonları karıştırılmamalıdır.",
-      "ISDL/hedef hacim ölçüm öncesi değerlendirilmelidir."
+      "Hedef tayin sınırı, koşullar ve metot planıyla belirlenir.",
+      "Prob / filtre 120–134 °C; ilgili onaylı istisnalar saklıdır.",
+      "Numune impinger sıvıları PTFE astarlı kapaklı HDPE veya camda; fraksiyon kimliği ve sıvı seviyesi korunur. Kapak çevresi PTFE bantla emniyete alınır; sıvılar dik, filtre tortu yüzü yukarıda taşınır (§6.2.4, §8.2.7).",
+      "§13.2: HCl ve Cl₂ analizi için toplanan Cl⁻ numuneleri en çok 4 hafta saklanabilir. Bu kararlılık süresi HF, HBr veya Br₂ için otomatik atanmaz. Metin burada sayısal saklama sıcaklığı vermez; laboratuvar kabul/koruma planı ayrıca tanımlanır. §7.2.3’teki 1 ay ise stok standardın raf ömrüdür."
     ],
     "acceptance": [
-      "Süre, izokinetiklik, çıkış sıcaklığı, kaçak testi, fraksiyon ayrımı ve silika jel kaydı uygun olmalıdır."
+      "Kontrol sonucu yalnız seçili yöntem ve kaynak baskısıyla değerlendirilir. Açık kalan kaynak/uygulama ayrıntıları parametre kartında görünür."
     ],
     "reporting": [
-      "CHX,X2 = K × M / Vm(std). Nem, Bws, kuru gaz hacmi ve fraksiyon hacimleri belirtilir."
+      "Tesis, baca/nokta, tarih, başlangıç–bitiş, metot/sürüm, numuneci ve fraksiyon kimliklerini etiketle.",
+      "Numune kabı, kapak, miktar, blank, mühür, taşıma koşulu, teslim saati ve teslim alanı izlenebilir teslim formuna kaydet.",
+      "Asit/alkali fraksiyonları, yıkamalar ve reaktif blanklarını ayrı kimlikle bildir.",
+      "Asit/alkali numune ve bunlara eş koşullarda hazırlanmış blanklar ayrı analiz edilir. Kaynak halojenür blankı ≤1 µg/mL sınırını §12.1’de tanımlar; bu değer gaz ELV’si değildir.",
+      "Kaynak: W11:1-10,12, D09:7-10,22-23"
     ],
     "mistakes": [
-      "H2SO4 ve NaOH fraksiyonlarını karıştırmak.",
-      "2 dk/nokta ve 30 dk toplam süreyi sağlamamak.",
-      "Çıkış sıcaklığını yüksek bırakmak."
+      "Dolum, yüzde türü, blank, süre veya saklama kuralını başka yöntemden aktarmak.",
+      "Eski eğitim notunu yeni standart baskısı diye kullanmak."
     ]
   },
   {
@@ -993,42 +998,48 @@
       "1 m3",
       "-7 °C"
     ],
-    "purpose": "PAH bileşiklerinin gaz ve partikül fazda filtre, kondens ve XAD-2 adsorbanla izokinetik olarak örneklenmesidir.",
-    "duration": "Minimum örnekleme süresi 1 saattir. Proses tam kapasite çalışırken bacadan 3 ölçüm alınabilir.",
-    "flowRate": "Örnekleme akış hızı en az 1 m³/saat yani yaklaşık 16,6 L/dk; en fazla 6 m³/saat yani yaklaşık 100 L/dk. XAD-2 reçinesinden geçiş hızı 34 cm/sn’den az olmalıdır.",
+    "purpose": "ISO 11338-1 — ISO 11338-1:2003; Part 2:2003 hazırlık/saklama bağlantısı. Bu çizim akış bölünmesi olmayan filtre–yoğuşturucu–katı adsorban varyantıdır; diğer metotların impinger sayısını buraya aktarma.",
+    "duration": "Hedef hacim ve doğrulanmış yakalama verimine göre planlanır.",
+    "flowRate": "İzokinetik; cihaz düzenine bağlı. Metindeki 1–6 m³/saat olası cihaz aralığıdır, tüm XAD kartuşlarına uygulanacak debi değildir.",
     "equipment": [
-      "Prob ve numune hattı, örnekleme ana ünitesi, PAH adsorblama ünitesi, soğutma/soğurma ünitesi, geri soğutucu, XAD-2 kartuşu, filtre."
+      "Bu yöntemin şema/numune fraksiyonları ana ekrandaki parametre rehberinde ayrı varyantlarla bulunur."
     ],
     "reagents": [
-      "Her ölçüm için yaklaşık 30 g XAD-2 kullanılır.",
-      "XAD-2 ilk kullanımda su, metanol ve metilen klorürle yıkanır; Soxhlet’te 48 saat ekstrakte edilir; kalıntı çözücü uzaklaştırılır.",
-      "Filtre ve adsorban alüminyum folyaya sarılır."
+      "Adsorban miktarını, boyutunu ve yakalama verimini ekipmanın doğrulanmış düzeneği ve hedef bileşiklere göre belirle.",
+      "Örnekleme öncesi HPLC veya GC-MS analitik yolu, hedef PAH ve sahada eklenen iç standart ile laboratuvarda eklenen geri kazanım standardı ayrı planlanır. Filtreye saha iç standardı eklenmişse çekişten önce ≥2 saat bekletilir (§6.3.2).",
+      "Filtre ve adsorban yakalama verimi hedef bileşiklerle doğrulanır. 1–6 m³/saat = yaklaşık 16,7–100 L/dk, Part1 B’de cihaz tasarım aralığıdır; her XAD-2 kartuşuna veya yan kola otomatik hedef debi değildir."
     ],
     "fieldSteps": [
-      "Cam malzemeyi temizle ve alüminyum folyo ile koru.",
-      "TS ISO 11338-1 Metot B’ye göre, TS ISO 9096 veya TS EN 13284’e uygun izokinetik örnekleme yap.",
-      "Numune alma doğrultusunu en az bir kez değiştir.",
-      "Kondensat ünitesini terk eden gaz sıcaklığını 20 °C altında tut.",
-      "Prob 120 °C’ye ısıtılır.",
-      "1 L geri soğutucu şişesini buz banyosuna koy; sıcaklık 0 °C altına düşmemelidir.",
-      "Numuneyi ışıktan koru ve -7 °C altında sakla."
+      "§6.3.2’de iki alternatif test vardır; kaçak normal örnekleme debisinin %5’inden küçük olmalı.",
+      "İzokinetik koşulları ve yoğuşturucu çıkışını izle. Akış bölücü kullanılan düzenek bu çizimde yoktur; yan kol debisi ana kol debisi yerine kullanılamaz.",
+      "Filtre, adsorban, kondensat ve numuneye temas etmiş yüzeylerin yıkamaları numune bütünlüğüne dahildir; fraksiyonları seçilen yönteme göre etiketle.",
+      "Part1 §6.3.3: probu sırasıyla aseton, hekzan ve toluenle dikkatle yıka; yapışmış parçacıkları önceden temizlenmiş cam/kuvars yünü sürüntüsüyle al. Bu B varyantında “100 mL aseton+100 mL su” veya “yalnız 200 mL aseton” evrensel standart tarifi verilmez.",
+      "Filtre kapalı cam kapta; yoğuşturucu ve adsorban gres kullanılmamış cam tıpalarla kapalı tutulur. İmpinger kullanılmışsa sıvı kahverengi şişeye; aseton/hekzan/toluen yıkamaları bu sıvıya eklenir. Fraksiyonları laboratuvarın analitik planına göre kimliklendir."
     ],
     "criticalControls": [
-      "Minimum numune miktarı 1 m³’tür.",
-      "Baca gazı sıcaklığı <800 °C, H2O <600 g/m³, toz <2 g/m³, PAH 0,1–6000 µg/Nm³ aralığında olmalıdır.",
-      "Her seri öncesi blank alınır; prob bacaya yerleştirilir fakat gaz emişi yapılmaz."
+      "Hedef PAH listesi ve tayin sınırına göre.",
+      "Filtre çiy noktasının üstünde, baca sıcaklığından yüksek olmayacak; yoğuşturucu çıkışı <20 °C, soğutucu akışkan ≥0 °C.",
+      "Part1 §6.3.3 B saha geri kazanımında filtre, adsorban ve ilgili fraksiyonlar için karanlıkta −7 °C belirtir; bu değer kaynak görüntüsünden kontrol edildi.",
+      "Part2 §6.1.4.1 (HPLC) ve §6.2.4.1 (GC-MS): kapalı/ışıktan korunmuş ham numune 0–4 °C’deyse alım bitiminden itibaren 1 hafta içinde EKSTRAKSİYON; −15 °C veya altındaysa 1 ay içinde ekstraksiyon. Bu süreler doğrudan analiz son tarihi değildir.",
+      "Part2 kondensatın HCl ile yaklaşık pH2’ye asitlenmesini ve bu durumda en çok 14 gün saklamayı tarif eder. Bu koruma PAH kondensatı içindir; başka parametrelerin koruma işlemi diye genellenmez.",
+      "Yoğunlaştırılmış ekstrakt ayrı aşamadır: kapalı kahverengi vial, ışıktan koruma ve <4 °C; 30 gün içinde analiz. Bu 30 gün ham filtre/kartuşa bekletme izni vermez.",
+      "Part1’in −7 °C saha ifadesi ile Part2’nin analize hazırlık seçenekleri birbirinin yerine sessizce geçirilmez. Sahadan laboratuvara aşamalar, sıcaklık ve bütün süre başlangıçları numune planında birlikte belirlenir."
     ],
     "acceptance": [
-      "Minimum 1 saat, minimum 1 m³, izokinetiklik, soğutma, XAD-2 koruma, blank ve soğuk/karanlık taşıma uygun olmalıdır."
+      "Kontrol sonucu yalnız seçili yöntem ve kaynak baskısıyla değerlendirilir. Açık kalan kaynak/uygulama ayrıntıları parametre kartında görünür."
     ],
     "reporting": [
-      "Seçilen debi 16,6 L/dk ve hedef 769 L olsa bile minimum 1 saat şartı nedeniyle saha süresi 1 saatten az tutulmaz."
+      "Tesis, baca/nokta, tarih, başlangıç–bitiş, metot/sürüm, numuneci ve fraksiyon kimliklerini etiketle.",
+      "Numune kabı, kapak, miktar, blank, mühür, taşıma koşulu, teslim saati ve teslim alanı izlenebilir teslim formuna kaydet.",
+      "Adsorban partisi, eklenen işaretli standart / geri kazanım bilgisi ve blankı bildir.",
+      "Ham numune/ekstrakt/kondensat ayrımı, alım bitimi/ekstraksiyon/yoğunlaştırma/analiz zamanları, sıcaklık geçmişi, pH ve iç/geri kazanım standartları kaydedilir.",
+      "Part2 §6.1.7 HPLC geri kazanımını %50–150 aralığında ister; dışındaysa sonuç reddedilir. Bu HPLC harici standardı PAH sonucuna düzeltme faktörü yapılmaz. GC-MS izotop seyreltme yaklaşımı farklı değerlendirilir.",
+      "D28 PDF14’ün normal koşul satırında 1013,25 kPa yazımı görüntüden doğrulandı. Bu, 1013,25 hPa ile aynı basınç değildir: 1,01325 bar=101,325 kPa=1013,25 hPa. Yazım otomatik hesap referansı yapılmaz; uygulanacak normal referans ve kaynak düzeltmesi yazılı planla kesinleştirilir.",
+      "Kaynak: D27:13-15, D28:8-11,14-18"
     ],
     "mistakes": [
-      "XAD-2’yi ıslak/sıcak bırakmak.",
-      "Blank almamak.",
-      "Numuneyi ışıkta veya sıcak ortamda taşımak.",
-      "1 saatten kısa örneklemek."
+      "Dolum, yüzde türü, blank, süre veya saklama kuralını başka yöntemden aktarmak.",
+      "Eski eğitim notunu yeni standart baskısı diye kullanmak."
     ]
   },
   {

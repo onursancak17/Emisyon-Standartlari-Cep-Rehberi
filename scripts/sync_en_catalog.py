@@ -12,6 +12,8 @@ mapping={'TS EN 1911':'hcl_en1911_iso','TS EN 14385':'metals_en14385_full','TS E
          'TS EN 12341 / EPA 40 CFR 50-53':'ambient_pm10','TS EN 12341 / EPA 40 CFR Part 50-53':'ambient_pm10',
          'EPA Method 5 / EPA Method 17':'dust_epa5'}
 mapping['TS ISO 9096']='dust_iso9096_out'
+mapping['EPA Method 26A']='halogen_epa26a'
+mapping['TS ISO 11338 / ilgili PAH saha uygulamaları']='pah_iso11338_b'
 for filename in ('standards.json','standards_extra.json','standards_overrides.json'):
     path=ROOT/'assets'/filename;items=json.loads(path.read_text(encoding='utf-8'))
     for item in items:

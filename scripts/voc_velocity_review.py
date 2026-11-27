@@ -118,3 +118,24 @@ def extend(data,profile,node,imp,meter,delivery):
         p['gaps']=['Yerleşim/temsil edicilik ve ulusal izleme planı ölçüm noktasına göre seçilir. İkinci tartımdan vazgeçme ancak laboratuvarın ek belirsizliği hesaplayıp uygunluğunu göstermesiyle mümkündür; bu kart çift tartımlı prosedürü kullanır.']
         p['evidence']=[dict(field='Başlık / debi / süre / veri kaydı',references=['D23:18-25'],clause='§5.1.2–5.1.15'),
             dict(field='Tartım / saklama / blank / sürekli kalite',references=['D23:28-37'],clause='§6–7; Tablo 3–5')]
+
+    for p in data:
+        if p['id'] not in ('pah_iso11338_b','pah_iso11338_b_split'):continue
+        p['reviewState']='sections_checked';p['sourceVersion']='ISO 11338-1:2003; Part 2:2003 hazırlık/saklama bağlantısı'
+        p['sources']=list(dict.fromkeys(p['sources']+['D27:13-15','D28:8-11,14-18']))
+        phase=lambda title:next(s['items'] for s in p['phases'] if s['title']==title)
+        phase('Hazırlık')[:] += ['Örnekleme öncesi HPLC veya GC-MS analitik yolu, hedef PAH ve sahada eklenen iç standart ile laboratuvarda eklenen geri kazanım standardı ayrı planlanır. Filtreye saha iç standardı eklenmişse çekişten önce ≥2 saat bekletilir (§6.3.2).',
+            'Filtre ve adsorban yakalama verimi hedef bileşiklerle doğrulanır. 1–6 m³/saat = yaklaşık 16,7–100 L/dk, Part1 B’de cihaz tasarım aralığıdır; her XAD-2 kartuşuna veya yan kola otomatik hedef debi değildir.']
+        phase('Geri kazanım')[:] += ['Part1 §6.3.3: probu sırasıyla aseton, hekzan ve toluenle dikkatle yıka; yapışmış parçacıkları önceden temizlenmiş cam/kuvars yünü sürüntüsüyle al. Bu B varyantında “100 mL aseton+100 mL su” veya “yalnız 200 mL aseton” evrensel standart tarifi verilmez.',
+            'Filtre kapalı cam kapta; yoğuşturucu ve adsorban gres kullanılmamış cam tıpalarla kapalı tutulur. İmpinger kullanılmışsa sıvı kahverengi şişeye; aseton/hekzan/toluen yıkamaları bu sıvıya eklenir. Fraksiyonları laboratuvarın analitik planına göre kimliklendir.']
+        phase('Saklama ve taşıma')[:]=['Part1 §6.3.3 B saha geri kazanımında filtre, adsorban ve ilgili fraksiyonlar için karanlıkta −7 °C belirtir; bu değer kaynak görüntüsünden kontrol edildi.',
+            'Part2 §6.1.4.1 (HPLC) ve §6.2.4.1 (GC-MS): kapalı/ışıktan korunmuş ham numune 0–4 °C’deyse alım bitiminden itibaren 1 hafta içinde EKSTRAKSİYON; −15 °C veya altındaysa 1 ay içinde ekstraksiyon. Bu süreler doğrudan analiz son tarihi değildir.',
+            'Part2 kondensatın HCl ile yaklaşık pH2’ye asitlenmesini ve bu durumda en çok 14 gün saklamayı tarif eder. Bu koruma PAH kondensatı içindir; başka parametrelerin koruma işlemi diye genellenmez.',
+            'Yoğunlaştırılmış ekstrakt ayrı aşamadır: kapalı kahverengi vial, ışıktan koruma ve <4 °C; 30 gün içinde analiz. Bu 30 gün ham filtre/kartuşa bekletme izni vermez.',
+            'Part1’in −7 °C saha ifadesi ile Part2’nin analize hazırlık seçenekleri birbirinin yerine sessizce geçirilmez. Sahadan laboratuvara aşamalar, sıcaklık ve bütün süre başlangıçları numune planında birlikte belirlenir.']
+        phase('Laboratuvara teslim')[:] += ['Ham numune/ekstrakt/kondensat ayrımı, alım bitimi/ekstraksiyon/yoğunlaştırma/analiz zamanları, sıcaklık geçmişi, pH ve iç/geri kazanım standartları kaydedilir.',
+            'Part2 §6.1.7 HPLC geri kazanımını %50–150 aralığında ister; dışındaysa sonuç reddedilir. Bu HPLC harici standardı PAH sonucuna düzeltme faktörü yapılmaz. GC-MS izotop seyreltme yaklaşımı farklı değerlendirilir.',
+            'D28 PDF14’ün normal koşul satırında 1013,25 kPa yazımı görüntüden doğrulandı. Bu, 1013,25 hPa ile aynı basınç değildir: 1,01325 bar=101,325 kPa=1013,25 hPa. Yazım otomatik hesap referansı yapılmaz; uygulanacak normal referans ve kaynak düzeltmesi yazılı planla kesinleştirilir.']
+        p['evidence'] += [dict(field='B geri kazanım / saha iç standardı',references=['D27:14-15'],clause='Part1 §6.3.2–6.3.3'),
+            dict(field='Ekstraksiyon / analiz / kondensat saklama',references=['D28:10-11,14-18'],clause='Part2 §6.1.4, §6.1.7; §6.2.4')]
+        p['gaps']=['Part1 B kartıdır; A seyreltme ve C soğutulmuş prob varyantları burada tamamlanmış sayılmaz. Part1 ve Part2 sıcaklık hükümleri, seçilen laboratuvar analitik yolu ve fraksiyon planıyla yazılı eşleştirilmelidir; uygulama tek otomatik saklama hedefi atamaz.']

@@ -127,3 +127,33 @@ def extend(add):
        'ISO12039 genel AMS performans standardıdır ve birden fazla O₂ ilkesini anlatır. EN14789 paramanyetik SRM’dir; alternatif tekniğin uygunluğuna ayrıca kanıt gerekir.','D30:11-13,25; EN14789 resmî kapsam'),
     ]
     for code,q,a,wrong,ex,source in iso:add('ISO saha uygulaması — yöntem ayrımları','Emisyon',[code],q,a,wrong,ex,source)
+    add('Halojenler — numune kararlılığı','Emisyon',['EPA Method 26A'],
+        'EPA26A §13.2’nin dört haftalık numune kararlılığı hangi analizler için belirtilmiştir?',
+        'HCl ve Cl₂ için toplanan Cl⁻ numuneleri',
+        ['Bütün HF/HBr/Br₂ numuneleri koşulsuz','Yalnız silika jel tartımı','Yalnız kalibrasyon gazı tüpleri'],
+        'Kaynak dört haftayı klorür numunelerinin HCl/Cl₂ analizine bağlar. Diğer halojenlere genellenmez; stok standardın bir aylık raf ömrü de ayrı bir hükümdür.',
+        'W11:12 — §13.2; W11:6 — §7.2.3')
+    add('Krom — numune kararlılığı','Emisyon',['CARB Method 425'],
+        'CARB425’te geri kazanım ve geri kazanım sonrası saklama için hangi iki süre ayrıdır?',
+        'Alımdan geri kazanıma ≤24 saat; sonra ≤4 °C’de ≤2 hafta',
+        ['Alımdan geri kazanıma 4 hafta; sonra oda sıcaklığında 24 saat','Her iki süre de daima 30 gün','Kromda pH ve bekletme süresi sonucu etkilemez.'],
+        'Krom değerlik değiştirebilir. §4.1, geri kazanımı 24 saatle ve geri kazanım sonrası analiz öncesi saklamayı iki hafta/≤4 °C ile sınırlar; zamanların başlangıçları korunur.',
+        'W02:11 — §4.1')
+    add('PAH — ekstraksiyon ve analiz','Emisyon',['TS ISO 11338'],
+        'ISO11338-2’de 0–4 °C saklanan ham PAH numunesi için 1 hafta hangi işlemin süresidir?',
+        'Numune alımı bitiminden ekstraksiyona kadar',
+        ['Her durumda son cihaz analizine kadar','Yalnız pompa kalibrasyonuna kadar','Yalnız yoğunlaştırılmış ekstraktın raf ömrü'],
+        'HPLC §6.1.4.1 ve GC-MS §6.2.4.1 ham numunenin ekstraksiyon süresini tanımlar. Yoğunlaştırılmış ekstraktın <4 °C/30 gün analiz aşaması farklıdır; saatler birleştirilmez.',
+        'D28:10-11,16-17')
+    add('PAH — geri kazanım','Emisyon',['TS ISO 11338'],
+        'ISO11338-1 B varyantının §6.3.3 prob yıkaması hangi çözücü sırasını verir?',
+        'Aseton, hekzan, ardından toluen',
+        ['Her zaman 100 mL aseton+100 mL su','Her zaman yalnız 200 mL aseton','Her durumda önce nitrik asit, sonra permanganat'],
+        'Bu B prosedürü belirtilen çözücüleri ve cam/kuvars yünüyle birikinti geri kazanımını tanımlar. Başka laboratuvarın alternatif tarifi, bu maddenin evrensel hacim kuralı diye sunulamaz.',
+        'D27:15 — §6.3.3')
+    add('PAH — birim ve kaynak kontrolü','Emisyon',['TS ISO 11338'],
+        '1013,25 hPa kaç kPa eder?',
+        '101,325 kPa',
+        ['1013,25 kPa','10,1325 kPa','1,01325 kPa'],
+        '1 kPa=10 hPa. D28 PDF14’teki 1013,25 kPa normal koşul yazımı görüntüde de vardır; hPa ile aynı sayı kabul edilmez. Kaynak yazımı hesap referansı yapılmadan kontrol edilir.',
+        'D28:14; SI basınç ön ekleri')

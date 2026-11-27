@@ -1,12 +1,12 @@
 # Emisyon İmisyon Ölçüm Standartları
 
-## 0.8.1 — kaynak karşılaştırmaları ve yöntem ayrımları
+## 0.8.2 — kaynak karşılaştırmaları ve yöntem ayrımları
 
-45 metot/varyant kartı, 37 çizim ve 200 açıklamalı soru (31 imisyon). Yeni kartlar: aktif karbon VOC, TD VOC, dinamik seyreltme, EN ISO 16911-1 Pitot, EPA2, EPA5, EPA17, EN12619, EPA25A, ISO9096 iç/dış filtre, ISO10780 ve ISO12039 dışarı çekişli AMS. Dinamik seyreltme çiziminde temiz gaz girişi, baca gazı girişi, analiz kolu ve fazla karışım çıkışı ayrı gösterilir.
+45 metot/varyant kartı, 37 çizim ve 205 açıklamalı soru (31 imisyon). Yeni kartlar: aktif karbon VOC, TD VOC, dinamik seyreltme, EN ISO 16911-1 Pitot, EPA2, EPA5, EPA17, EN12619, EPA25A, ISO9096 iç/dış filtre, ISO10780 ve ISO12039 dışarı çekişli AMS. Dinamik seyreltme çiziminde temiz gaz girişi, baca gazı girişi, analiz kolu ve fazla karışım çıkışı ayrı gösterilir.
 
 VOC debi/hacim/sıcaklık ve tüp saklama, Pitot/girdap/yoğunluk ve kuru normal debi, EPA kimyasal kap/blank/geri kazanım, PM10/PM2,5 tartım ve kalite koşulları kaynak maddeleriyle karşılaştırıldı. Kaynak türleri (standart, kurum talimatı, eğitim sunumu, cihaz kılavuzu) uygulamada ayrılır. 0.7.2’de cıvasız metal kartına cıva geri kazanımının karışmasını engelleyen düzeltme korunur.
 
-**Bütün standartların nihai teknik doğrulaması tamamlanmadı.** Uygulamadaki “Kaynaklar ve sürümler → 37 başlığın teknik doğrulama durumu” ekranı ve [teknik doğrulama matrisi](docs/TEKNIK_DOGRULAMA_MATRISI.md) her başlıktaki açık işi gösterir. Katalog kapsamı ve test sayısı nihai yöntem onayı değildir. [0.8.0](docs/DOGRULAMA_0_8_0.md) ve [0.8.1 değişiklikleri](docs/DOGRULAMA_0_8_1.md).
+**Bütün standartların nihai teknik doğrulaması tamamlanmadı.** Uygulamadaki “Kaynaklar ve sürümler → 37 başlığın teknik doğrulama durumu” ekranı ve [teknik doğrulama matrisi](docs/TEKNIK_DOGRULAMA_MATRISI.md) her başlıktaki açık işi gösterir. Katalog kapsamı ve test sayısı nihai yöntem onayı değildir. [0.8.0](docs/DOGRULAMA_0_8_0.md) ve [0.8.1](docs/DOGRULAMA_0_8_1.md) ve [0.8.2 değişiklikleri](docs/DOGRULAMA_0_8_2.md).
 
 ## Önceki 0.7.1 kapsamı
 

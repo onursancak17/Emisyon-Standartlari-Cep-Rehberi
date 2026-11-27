@@ -178,12 +178,13 @@
       "scope": "Emisyon",
       "parameter": "Klor / halojenler",
       "method": "EPA Method 26A",
-      "sourceVersion": "07.10.2020",
+      "sourceVersion": "EMC 14.01.2019 nüshası / arşiv D06 başlığı 07.10.2020",
       "variant": "Hidrojen halojenürler ve halojenler; kondensat şişesi isteğe bağlı",
       "sources": [
-        "D06:3-4,6-9"
+        "W11:1-10,12",
+        "D09:7-10,22-23"
       ],
-      "reviewState": "train_checked",
+      "reviewState": "sections_checked",
       "train": [
         {
           "id": "probe",
@@ -261,7 +262,7 @@
       "limits": [
         {
           "label": "Çekiş debisi",
-          "value": "İzokinetik; sabit bir L/dk değeri atanmaz."
+          "value": "Method 5 bağlantılı izokinetik %90–110; kaynak hızı/nozül/nem/T/P ile belirlenir. Sabit L/dk atanmaz."
         },
         {
           "label": "Toplam çekiş hacmi",
@@ -273,7 +274,7 @@
         },
         {
           "label": "Ölçüm süresi",
-          "value": "Bu kartta evrensel sabit süre tanımlanmadı."
+          "value": "Method 5 bağlantılı eşit nokta süreleri ve ≥2 dk/nokta; ilgili kaynak mevzuatının toplam süre/hacmi ayrıca gerekir. Kurutma/purge süresi örnekleme süresi değildir."
         }
       ],
       "phases": [
@@ -282,13 +283,16 @@
           "items": [
             "İsteğe bağlı ilk kondensat şişesi kısaltılmış giriş boruludur; asit şişeleri standart, alkali ve silika şişeleri modifiye Greenburg–Smith tipindedir.",
             "Prob/filtre bölümünü 120–134 °C aralığında tut; uygun alt mevzuat veya onaylı istisnayı ayrıca kontrol et.",
-            "Nozül/prob numuneye temasında cam/kuvars kullan; metal iç prob kullanma. Baca >210 °C ise tek parça cam nozül/iç prob düzeni gerekir (§6.1.1)."
+            "Nozül/prob numuneye temasında cam/kuvars kullan; metal iç prob kullanma. Baca >210 °C ise tek parça cam nozül/iç prob düzeni gerekir (§6.1.1).",
+            "Doymuş nemli gazda siklon §6.1.4’e göre gerekir; damlacığa karşı diğer durumlarda da önerilir. Bu kartın düz çizimi siklonsuz seçenektir, doymuş kaynağa aynen atanmaz.",
+            "Cam/kuvars nozül ve metal olmayan iç prob kullanılır. Baca >210 °C ise tek parça cam nozül/iç prob gerekir; filtrede kuvars alternatifini §7.1.1 ile değerlendir. Yeni PTFE’den HF çıkışı hedef florür ölçümünü etkileyebilir."
           ]
         },
         {
           "title": "Kaçak kontrolü",
           "items": [
-            "EPA Method 5 §8.4.2–8.4.4 bağlantılı ön, değişim ve son kaçak prosedürlerini uygula."
+            "Ön kaçak testi önerilir; parça değişiminden hemen önce ve ölçüm sonunda test zorunludur. Sonda/ara testte koşuda görülen en yüksek vakum veya üstü kullanılır.",
+            "Method 5 §8.4: kabul edilen kaçak ≤min(ortalama Q ×0,04; 0,57 L/dk). 380 mmHg yaklaşık 50,66 kPa vakumdur; düşük ön test vakumu ancak ölçüm sırasında aşılmıyorsa kullanılabilir. Aşımda yalnız §12.3 hacim düzeltmesi veya ölçümün reddi uygulanır."
           ]
         },
         {
@@ -311,8 +315,8 @@
         {
           "title": "Saklama ve taşıma",
           "items": [
-            "Metotta belirtilen sızdırmaz numune kaplarını kullan; sıvı seviyesini işaretle. Sayısal saklama sıcaklığı ve analiz bekletme süresinin bu kartta doğrulaması tamamlanmadı.",
-            "§8.2.7: kapak çevresini PTFE bantla emniyete al; sıvıları dik, filtre tortulu yüzü yukarıda taşı."
+            "Numune impinger sıvıları PTFE astarlı kapaklı HDPE veya camda; fraksiyon kimliği ve sıvı seviyesi korunur. Kapak çevresi PTFE bantla emniyete alınır; sıvılar dik, filtre tortu yüzü yukarıda taşınır (§6.2.4, §8.2.7).",
+            "§13.2: HCl ve Cl₂ analizi için toplanan Cl⁻ numuneleri en çok 4 hafta saklanabilir. Bu kararlılık süresi HF, HBr veya Br₂ için otomatik atanmaz. Metin burada sayısal saklama sıcaklığı vermez; laboratuvar kabul/koruma planı ayrıca tanımlanır. §7.2.3’teki 1 ay ise stok standardın raf ömrüdür."
           ]
         },
         {
@@ -320,34 +324,41 @@
           "items": [
             "Tesis, baca/nokta, tarih, başlangıç–bitiş, metot/sürüm, numuneci ve fraksiyon kimliklerini etiketle.",
             "Numune kabı, kapak, miktar, blank, mühür, taşıma koşulu, teslim saati ve teslim alanı izlenebilir teslim formuna kaydet.",
-            "Asit/alkali fraksiyonları, yıkamalar ve reaktif blanklarını ayrı kimlikle bildir."
+            "Asit/alkali fraksiyonları, yıkamalar ve reaktif blanklarını ayrı kimlikle bildir.",
+            "Asit/alkali numune ve bunlara eş koşullarda hazırlanmış blanklar ayrı analiz edilir. Kaynak halojenür blankı ≤1 µg/mL sınırını §12.1’de tanımlar; bu değer gaz ELV’si değildir."
           ]
         }
       ],
       "gaps": [
-        "Bu kartın doğrulaması şema ve belirtilen kaynak maddeleriyle sınırlıdır; tam yöntem yeterlilik incelemesi sürüyor.",
-        "Kaynak sürümünün güncel yürürlük durumu ve laboratuvarın onaylı uygulaması ayrıca kontrol edilmeli."
+        "Siklonlu doymuş kaynak varyantının ayrı çizimi bu kartta yoktur; doymuş gazda düz çizim aynen uygulanmaz. Hedef halojenler, potansiyel HBr/Cl₂ girişimi ve laboratuvarın sıcaklık/analit kararlılık planı tamamlanmalıdır."
       ],
       "evidence": [
         {
-          "field": "Malzeme / nem uzaklaştırma",
+          "field": "Tren / cihaz / süre / ısıtma",
           "references": [
-            "D06:3,7"
+            "W11:1-8",
+            "D09:7-10,22-23"
           ],
-          "clause": "§6.1.1–6.1.2; §8.1.6"
+          "clause": "§1–8; Method 5 bağlantısı"
         },
         {
-          "field": "Fraksiyon / tiyosülfat / taşıma",
+          "field": "Klor numunesi kararlılığı / blank",
           "references": [
-            "D06:8"
+            "W11:10,12"
           ],
-          "clause": "§8.2.3–8.2.7"
+          "clause": "§12.1, §13.2"
         }
       ],
       "sourceDetails": [
         {
-          "reference": "D06:3-4,6-9",
-          "title": "EPA Method 26A.pdf",
+          "reference": "W11:1-10,12",
+          "title": "US EPA Method 26A — Hydrogen halides / halogens",
+          "edition": "EMC bağlantısındaki 14.01.2019 nüshası; D06 arşiv başlığı 07.10.2020",
+          "url": "https://www.epa.gov/sites/default/files/2019-06/documents/method_26a.pdf"
+        },
+        {
+          "reference": "D09:7-10,22-23",
+          "title": "EPA Method 5.pdf",
           "edition": "",
           "url": ""
         }
@@ -1129,12 +1140,13 @@
       "scope": "Emisyon",
       "parameter": "PAH",
       "method": "ISO 11338-1",
-      "sourceVersion": "2003",
+      "sourceVersion": "ISO 11338-1:2003; Part 2:2003 hazırlık/saklama bağlantısı",
       "variant": "Filtre / yoğuşturucu / katı adsorban; akış bölünmesiz",
       "sources": [
-        "D27:13-15"
+        "D27:13-15",
+        "D28:8-11,14-18"
       ],
-      "reviewState": "train_checked",
+      "reviewState": "sections_checked",
       "train": [
         {
           "id": "probe",
@@ -1208,7 +1220,9 @@
           "title": "Hazırlık",
           "items": [
             "Bu çizim akış bölünmesi olmayan filtre–yoğuşturucu–katı adsorban varyantıdır; diğer metotların impinger sayısını buraya aktarma.",
-            "Adsorban miktarını, boyutunu ve yakalama verimini ekipmanın doğrulanmış düzeneği ve hedef bileşiklere göre belirle."
+            "Adsorban miktarını, boyutunu ve yakalama verimini ekipmanın doğrulanmış düzeneği ve hedef bileşiklere göre belirle.",
+            "Örnekleme öncesi HPLC veya GC-MS analitik yolu, hedef PAH ve sahada eklenen iç standart ile laboratuvarda eklenen geri kazanım standardı ayrı planlanır. Filtreye saha iç standardı eklenmişse çekişten önce ≥2 saat bekletilir (§6.3.2).",
+            "Filtre ve adsorban yakalama verimi hedef bileşiklerle doğrulanır. 1–6 m³/saat = yaklaşık 16,7–100 L/dk, Part1 B’de cihaz tasarım aralığıdır; her XAD-2 kartuşuna veya yan kola otomatik hedef debi değildir."
           ]
         },
         {
@@ -1226,13 +1240,19 @@
         {
           "title": "Geri kazanım",
           "items": [
-            "Filtre, adsorban, kondensat ve numuneye temas etmiş yüzeylerin yıkamaları numune bütünlüğüne dahildir; fraksiyonları seçilen yönteme göre etiketle."
+            "Filtre, adsorban, kondensat ve numuneye temas etmiş yüzeylerin yıkamaları numune bütünlüğüne dahildir; fraksiyonları seçilen yönteme göre etiketle.",
+            "Part1 §6.3.3: probu sırasıyla aseton, hekzan ve toluenle dikkatle yıka; yapışmış parçacıkları önceden temizlenmiş cam/kuvars yünü sürüntüsüyle al. Bu B varyantında “100 mL aseton+100 mL su” veya “yalnız 200 mL aseton” evrensel standart tarifi verilmez.",
+            "Filtre kapalı cam kapta; yoğuşturucu ve adsorban gres kullanılmamış cam tıpalarla kapalı tutulur. İmpinger kullanılmışsa sıvı kahverengi şişeye; aseton/hekzan/toluen yıkamaları bu sıvıya eklenir. Fraksiyonları laboratuvarın analitik planına göre kimliklendir."
           ]
         },
         {
           "title": "Saklama ve taşıma",
           "items": [
-            "Arşiv ISO 11338-1:2003 §6.3.3 metni filtre, adsorban ve ilgili fraksiyonlar için ışıktan koruma ve −7 °C soğuk saklama belirtir. Bu arşiv değeri otomatik +4 °C’ye çevrilmez; geçerli sürüm ve laboratuvar uygulaması doğrulanmalı."
+            "Part1 §6.3.3 B saha geri kazanımında filtre, adsorban ve ilgili fraksiyonlar için karanlıkta −7 °C belirtir; bu değer kaynak görüntüsünden kontrol edildi.",
+            "Part2 §6.1.4.1 (HPLC) ve §6.2.4.1 (GC-MS): kapalı/ışıktan korunmuş ham numune 0–4 °C’deyse alım bitiminden itibaren 1 hafta içinde EKSTRAKSİYON; −15 °C veya altındaysa 1 ay içinde ekstraksiyon. Bu süreler doğrudan analiz son tarihi değildir.",
+            "Part2 kondensatın HCl ile yaklaşık pH2’ye asitlenmesini ve bu durumda en çok 14 gün saklamayı tarif eder. Bu koruma PAH kondensatı içindir; başka parametrelerin koruma işlemi diye genellenmez.",
+            "Yoğunlaştırılmış ekstrakt ayrı aşamadır: kapalı kahverengi vial, ışıktan koruma ve <4 °C; 30 gün içinde analiz. Bu 30 gün ham filtre/kartuşa bekletme izni vermez.",
+            "Part1’in −7 °C saha ifadesi ile Part2’nin analize hazırlık seçenekleri birbirinin yerine sessizce geçirilmez. Sahadan laboratuvara aşamalar, sıcaklık ve bütün süre başlangıçları numune planında birlikte belirlenir."
           ]
         },
         {
@@ -1240,19 +1260,42 @@
           "items": [
             "Tesis, baca/nokta, tarih, başlangıç–bitiş, metot/sürüm, numuneci ve fraksiyon kimliklerini etiketle.",
             "Numune kabı, kapak, miktar, blank, mühür, taşıma koşulu, teslim saati ve teslim alanı izlenebilir teslim formuna kaydet.",
-            "Adsorban partisi, eklenen işaretli standart / geri kazanım bilgisi ve blankı bildir."
+            "Adsorban partisi, eklenen işaretli standart / geri kazanım bilgisi ve blankı bildir.",
+            "Ham numune/ekstrakt/kondensat ayrımı, alım bitimi/ekstraksiyon/yoğunlaştırma/analiz zamanları, sıcaklık geçmişi, pH ve iç/geri kazanım standartları kaydedilir.",
+            "Part2 §6.1.7 HPLC geri kazanımını %50–150 aralığında ister; dışındaysa sonuç reddedilir. Bu HPLC harici standardı PAH sonucuna düzeltme faktörü yapılmaz. GC-MS izotop seyreltme yaklaşımı farklı değerlendirilir.",
+            "D28 PDF14’ün normal koşul satırında 1013,25 kPa yazımı görüntüden doğrulandı. Bu, 1013,25 hPa ile aynı basınç değildir: 1,01325 bar=101,325 kPa=1013,25 hPa. Yazım otomatik hesap referansı yapılmaz; uygulanacak normal referans ve kaynak düzeltmesi yazılı planla kesinleştirilir."
           ]
         }
       ],
       "gaps": [
-        "Bu kartın doğrulaması şema ve belirtilen kaynak maddeleriyle sınırlıdır; tam yöntem yeterlilik incelemesi sürüyor.",
-        "Kaynak sürümünün güncel yürürlük durumu ve laboratuvarın onaylı uygulaması ayrıca kontrol edilmeli."
+        "Part1 B kartıdır; A seyreltme ve C soğutulmuş prob varyantları burada tamamlanmış sayılmaz. Part1 ve Part2 sıcaklık hükümleri, seçilen laboratuvar analitik yolu ve fraksiyon planıyla yazılı eşleştirilmelidir; uygulama tek otomatik saklama hedefi atamaz."
       ],
-      "evidence": [],
+      "evidence": [
+        {
+          "field": "B geri kazanım / saha iç standardı",
+          "references": [
+            "D27:14-15"
+          ],
+          "clause": "Part1 §6.3.2–6.3.3"
+        },
+        {
+          "field": "Ekstraksiyon / analiz / kondensat saklama",
+          "references": [
+            "D28:10-11,14-18"
+          ],
+          "clause": "Part2 §6.1.4, §6.1.7; §6.2.4"
+        }
+      ],
       "sourceDetails": [
         {
           "reference": "D27:13-15",
           "title": "ISO 11338 1.pdf",
+          "edition": "",
+          "url": ""
+        },
+        {
+          "reference": "D28:8-11,14-18",
+          "title": "ISO 11338 2.pdf",
           "edition": "",
           "url": ""
         }
@@ -2762,7 +2805,7 @@
       "sourceVersion": "28.07.1997",
       "variant": "İki alkali şişeden sonra filtre; toplam Cr ve Cr(VI)",
       "sources": [
-        "W02:12-14,22-24",
+        "W02:11-14,22-24",
         "W05:9-12"
       ],
       "reviewState": "sections_checked",
@@ -2896,14 +2939,14 @@
         {
           "field": "Geri kazanım / saklama",
           "references": [
-            "W02:12,22-24"
+            "W02:11,22-24"
           ],
           "clause": "§4.1, §12–13"
         }
       ],
       "sourceDetails": [
         {
-          "reference": "W02:12-14,22-24",
+          "reference": "W02:11-14,22-24",
           "title": "CARB Method 425 — Total Chromium and Hexavalent Chromium",
           "edition": "28.07.1997",
           "url": "https://ww2.arb.ca.gov/sites/default/files/classic/testmeth/vol3/m_425.pdf"
@@ -3033,7 +3076,8 @@
         {
           "title": "Saklama ve taşıma",
           "items": [
-            "Sızdırmaz, tanımlı kap; sayısal sıcaklık/azami süre bu incelemede doğrulanmadı."
+            "§4.2.3 alkaliye dayanıklı yaklaşık 1 L PE kap ve uygun PTFE/alkali dayanımlı kapak astarı verir; filtre ve ön prob yıkaması için §6.2.1–2 cam kap belirtir. Fraksiyonları kendi kap kuralıyla tut, seviyeyi işaretle ve sızdırmaz kapat.",
+            "İncelenen Method 426 numune/koruma maddelerinde sayısal saklama sıcaklığı ve azami bekletme süresi verilmez. Kaynak pH≥12 ve oksidan giderme koşulları korunur; analiz yönteminin/laboratuvarın kabul planı süre ve sıcaklığı ayrıca tanımlamalıdır. Başka siyanür yönteminin 14/28 gününü otomatik aktarma."
           ]
         },
         {
@@ -3047,7 +3091,7 @@
       ],
       "gaps": [
         "§6.2.4 yıkama kabı numarasında metin içi çelişki var: silika jel kabına sıvı eklenmez; fraksiyon planı laboratuvarla çözülmeden uygulama talimatı tamamlanmış sayılmaz.",
-        "Sayısal saklama sıcaklığı ve bekletme süresi ayrıca tamamlanmalı."
+        "Metnin sayısal vermediği saklama T/süre koşulları geçerli analitik yöntem ve laboratuvar kabul planıyla belirlenmelidir."
       ],
       "evidence": [
         {
@@ -3092,10 +3136,12 @@
       "scope": "Emisyon",
       "parameter": "PAH",
       "method": "ISO 11338-1",
-      "sourceVersion": "2003",
+      "sourceVersion": "ISO 11338-1:2003; Part 2:2003 hazırlık/saklama bağlantısı",
       "variant": "Metot B — filtre sonrası ana / yan akış; Şekil B.3 örnek düzeni",
       "sources": [
-        "D27:13-15,25"
+        "D27:13-15,25",
+        "D27:13-15",
+        "D28:8-11,14-18"
       ],
       "reviewState": "sections_checked",
       "train": [],
@@ -3122,7 +3168,9 @@
           "title": "Hazırlık",
           "items": [
             "Bu varyant filtre sonrası akış bölücü kullanır. Yan kol debisini adsorbanın doğrulanmış yakalama aralığında seç; bu cihazın kapasitesini bütün PAH sistemlerine uygulama.",
-            "Filtre ve işaretli standartlar, yoğuşturucu, kondensat, adsorban ve her iki hacim ölçümünü planla."
+            "Filtre ve işaretli standartlar, yoğuşturucu, kondensat, adsorban ve her iki hacim ölçümünü planla.",
+            "Örnekleme öncesi HPLC veya GC-MS analitik yolu, hedef PAH ve sahada eklenen iç standart ile laboratuvarda eklenen geri kazanım standardı ayrı planlanır. Filtreye saha iç standardı eklenmişse çekişten önce ≥2 saat bekletilir (§6.3.2).",
+            "Filtre ve adsorban yakalama verimi hedef bileşiklerle doğrulanır. 1–6 m³/saat = yaklaşık 16,7–100 L/dk, Part1 B’de cihaz tasarım aralığıdır; her XAD-2 kartuşuna veya yan kola otomatik hedef debi değildir."
           ]
         },
         {
@@ -3141,13 +3189,19 @@
         {
           "title": "Geri kazanım",
           "items": [
-            "Filtre, adsorban, kondensat ve numuneye temas etmiş yüzeylerin yıkamaları numune bütünlüğüne dahildir; fraksiyonları seçilen yönteme göre etiketle."
+            "Filtre, adsorban, kondensat ve numuneye temas etmiş yüzeylerin yıkamaları numune bütünlüğüne dahildir; fraksiyonları seçilen yönteme göre etiketle.",
+            "Part1 §6.3.3: probu sırasıyla aseton, hekzan ve toluenle dikkatle yıka; yapışmış parçacıkları önceden temizlenmiş cam/kuvars yünü sürüntüsüyle al. Bu B varyantında “100 mL aseton+100 mL su” veya “yalnız 200 mL aseton” evrensel standart tarifi verilmez.",
+            "Filtre kapalı cam kapta; yoğuşturucu ve adsorban gres kullanılmamış cam tıpalarla kapalı tutulur. İmpinger kullanılmışsa sıvı kahverengi şişeye; aseton/hekzan/toluen yıkamaları bu sıvıya eklenir. Fraksiyonları laboratuvarın analitik planına göre kimliklendir."
           ]
         },
         {
           "title": "Saklama ve taşıma",
           "items": [
-            "Arşiv ISO 11338-1:2003 §6.3.3 metni filtre, adsorban ve ilgili fraksiyonlar için ışıktan koruma ve −7 °C soğuk saklama belirtir. Bu arşiv değeri otomatik +4 °C’ye çevrilmez; geçerli sürüm ve laboratuvar uygulaması doğrulanmalı."
+            "Part1 §6.3.3 B saha geri kazanımında filtre, adsorban ve ilgili fraksiyonlar için karanlıkta −7 °C belirtir; bu değer kaynak görüntüsünden kontrol edildi.",
+            "Part2 §6.1.4.1 (HPLC) ve §6.2.4.1 (GC-MS): kapalı/ışıktan korunmuş ham numune 0–4 °C’deyse alım bitiminden itibaren 1 hafta içinde EKSTRAKSİYON; −15 °C veya altındaysa 1 ay içinde ekstraksiyon. Bu süreler doğrudan analiz son tarihi değildir.",
+            "Part2 kondensatın HCl ile yaklaşık pH2’ye asitlenmesini ve bu durumda en çok 14 gün saklamayı tarif eder. Bu koruma PAH kondensatı içindir; başka parametrelerin koruma işlemi diye genellenmez.",
+            "Yoğunlaştırılmış ekstrakt ayrı aşamadır: kapalı kahverengi vial, ışıktan koruma ve <4 °C; 30 gün içinde analiz. Bu 30 gün ham filtre/kartuşa bekletme izni vermez.",
+            "Part1’in −7 °C saha ifadesi ile Part2’nin analize hazırlık seçenekleri birbirinin yerine sessizce geçirilmez. Sahadan laboratuvara aşamalar, sıcaklık ve bütün süre başlangıçları numune planında birlikte belirlenir."
           ]
         },
         {
@@ -3155,12 +3209,15 @@
           "items": [
             "Tesis, baca/nokta, tarih, başlangıç–bitiş, metot/sürüm, numuneci ve fraksiyon kimliklerini etiketle.",
             "Numune kabı, kapak, miktar, blank, mühür, taşıma koşulu, teslim saati ve teslim alanı izlenebilir teslim formuna kaydet.",
-            "Adsorban partisi, eklenen işaretli standart / geri kazanım bilgisi ve blankı bildir."
+            "Adsorban partisi, eklenen işaretli standart / geri kazanım bilgisi ve blankı bildir.",
+            "Ham numune/ekstrakt/kondensat ayrımı, alım bitimi/ekstraksiyon/yoğunlaştırma/analiz zamanları, sıcaklık geçmişi, pH ve iç/geri kazanım standartları kaydedilir.",
+            "Part2 §6.1.7 HPLC geri kazanımını %50–150 aralığında ister; dışındaysa sonuç reddedilir. Bu HPLC harici standardı PAH sonucuna düzeltme faktörü yapılmaz. GC-MS izotop seyreltme yaklaşımı farklı değerlendirilir.",
+            "D28 PDF14’ün normal koşul satırında 1013,25 kPa yazımı görüntüden doğrulandı. Bu, 1013,25 hPa ile aynı basınç değildir: 1,01325 bar=101,325 kPa=1013,25 hPa. Yazım otomatik hesap referansı yapılmaz; uygulanacak normal referans ve kaynak düzeltmesi yazılı planla kesinleştirilir."
           ]
         }
       ],
       "gaps": [
-        "Bu kart Şekil B.3’ün katı adsorbanlı yan kol varyantını gösterir. İmpingerli / sıvı absorbanlı alternatifler ve bütün analitik fraksiyon hesapları ayrıca tamamlanmalı."
+        "Part1 B kartıdır; A seyreltme ve C soğutulmuş prob varyantları burada tamamlanmış sayılmaz. Part1 ve Part2 sıcaklık hükümleri, seçilen laboratuvar analitik yolu ve fraksiyon planıyla yazılı eşleştirilmelidir; uygulama tek otomatik saklama hedefi atamaz."
       ],
       "evidence": [
         {
@@ -3169,6 +3226,20 @@
             "D27:13-14,25"
           ],
           "clause": "§6.1–6.3; bilgi amaçlı Şekil B.3"
+        },
+        {
+          "field": "B geri kazanım / saha iç standardı",
+          "references": [
+            "D27:14-15"
+          ],
+          "clause": "Part1 §6.3.2–6.3.3"
+        },
+        {
+          "field": "Ekstraksiyon / analiz / kondensat saklama",
+          "references": [
+            "D28:10-11,14-18"
+          ],
+          "clause": "Part2 §6.1.4, §6.1.7; §6.2.4"
         }
       ],
       "diagram": {
@@ -3258,6 +3329,18 @@
         {
           "reference": "D27:13-15,25",
           "title": "ISO 11338 1.pdf",
+          "edition": "",
+          "url": ""
+        },
+        {
+          "reference": "D27:13-15",
+          "title": "ISO 11338 1.pdf",
+          "edition": "",
+          "url": ""
+        },
+        {
+          "reference": "D28:8-11,14-18",
+          "title": "ISO 11338 2.pdf",
           "edition": "",
           "url": ""
         }

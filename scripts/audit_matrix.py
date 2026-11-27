@@ -38,11 +38,13 @@ def attach(index,data):
             if state!='source_missing':state='comparison_open'
             reasons+=['ISO 9096:2017 D33 saha/tartım/blank/yıkama bölümleri ve iki filtre varyantı karşılaştırıldı. Ana metin ±%10 iken Tablo 3 −%5/+%15 izokinetik bant veriyor; bu metin içi fark çözülmeden tek otomatik kabul eşiği uygulanmaz.']
         if '11338' in code:
-            state='comparison_open';reasons+=['ISO 11338-1:2003 katalogda 2026’da teyitli. B varyantı ve -7 °C saklama görüntüden kontrol edildi; A/C varyantları ve Part 2 analitik bağlantılarının tamamı henüz kartlaştırılmadı.']
+            state='comparison_open';reasons+=['ISO 11338-1:2003 katalogda 2026’da teyitli. B geri kazanımı, −7 °C saha ifadesi ve Part2 HPLC/GC-MS saklama/ekstraksiyon süreleri karşılaştırıldı. İki bölümün sıcaklık hükümleri birlikte planlanmalı; A/C varyantları ve bütün analitik hükümler henüz kapanmadı.']
         if '1948' in code:
             state='comparison_open';reasons+=['Filtre/yoğuşturucu düzeninin seçili Ek B örnekleri ayrı çizildi. Seyreltme/soğutulmuş prob alternatiflerinin bütün koşulları ve Parts 2–3 bağlantısı henüz kapanmadı.']
-        if '425' in code or '426' in code:
-            state='comparison_open';reasons+=['Birincil CARB düzeni ve koruma bölümleri karşılaştırıldı. Kartta görünen numune saklama/süre ve metin içi kap numarası çelişkileri henüz kapanmadı.']
+        if '425' in code:
+            state='field_sections_checked';reasons+=['CARB425 düzen, pH, blank ve geri kazanım karşılaştırıldı: alımdan geri kazanıma ≤24 saat; geri kazanım sonrası ≤4 °C ve ≤2 hafta. Bu seçili saha karşılaştırması bütün analitik prosedürün nihai onayı değildir.']
+        if '426' in code:
+            state='comparison_open';reasons+=['CARB426 düzen ve koruma bölümleri karşılaştırıldı. §6.2.4 içindeki yıkama kabı numarası çelişkisi çözülmemiştir; silika jel kabına sıvı eklenmez. Metnin sayısal vermediği saklama T/süre koşulları laboratuvar kabul planıyla belirlenir.']
         if '2341' in code or 'Pasif' in code or '9503' in code or 'ISDL' in code:
             state='source_missing';reasons+=['İlgili tam birincil yöntem/mevzuat nüshası yeterli değil. Eğitim notu, kurum içi talimat ve yaklaşım özeti birincil standart yerine geçmez.']
         if '10780' in code:

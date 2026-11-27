@@ -102,7 +102,7 @@ def extend(data, profile, node, imp, meter, delivery):
                   'Geri kazanım / saklama':(['D04:7-8'],'§8.5–8.6')})
 
     add('chromium_carb425','Krom(VI)','CARB Method 425','28.07.1997','İki alkali şişeden sonra filtre; toplam Cr ve Cr(VI)',
-        ['W02:12-14,22-24','W05:9-12'],[node('probe','probe','Cam nozül / cam iç prob','Numuneye temas eden yüzeylerden Cr bulaşmasını önle'),
+        ['W02:11-14,22-24','W05:9-12'],[node('probe','probe','Cam nozül / cam iç prob','Numuneye temas eden yüzeylerden Cr bulaşmasını önle'),
          imp(1,'0,1 N NaOH','100 mL'),imp(2,'0,1 N NaOH','100 mL'),
          node('filter','filter','Şişelerden sonra filtre','PTFE kaplı cam elyaf'),
          node('dryer','trap','Silika jel nem tutucu','CARB Method 5 bağlantılı ön tartımlı silika jel','200–300 g'),meter],
@@ -116,7 +116,7 @@ def extend(data, profile, node, imp, meter, delivery):
          'Laboratuvara teslim':delivery+['pH, geri kazanım zamanı ve her bölüntünün hacmini bildir.']},
         gaps=['Metot bağlantıları ve kaynağa özgü performans protokolü ayrıca uygulanmalı; tüm analitik adımlar bu kartta yoktur.'],
         evidence={'Düzen / dolum':(['W02:13,22-24','W05:10'],'§7.1, §12–13; CARB 5 §4.1.3'),
-                  'Kaçak / süre':(['W05:9-12'],'§4.1.2–4.1.4'),'Geri kazanım / saklama':(['W02:12,22-24'],'§4.1, §12–13')})
+                  'Kaçak / süre':(['W05:9-12'],'§4.1.2–4.1.4'),'Geri kazanım / saklama':(['W02:11,22-24'],'§4.1, §12–13')})
 
     add('cyanide_carb426','Siyanür / HCN','CARB Method 426','22.01.1987','Gaz ve aerosol siyanürleri; toplam siyanür',
         ['W03:2-7,9-13','W05:9-12'],[node('probe','probe','Nozül / prob','CARB 5 bağlantılı izokinetik düzen'),
@@ -131,9 +131,10 @@ def extend(data, profile, node, imp, meter, delivery):
          'Örnekleme':['Siyanürü sahada asitleme; korumada pH ≥12 gerekir.'],
          'Geri kazanım':['Filtreyi 50 mL 0,1 N NaOH içeren cam kaba al. Prob/nozülü 0,1 N NaOH ile geri kazan. İlk üç şişe fraksiyonunu koru; silika jelle karıştırma.',
                          'Oksidanı KI-nişasta kâğıdıyla kontrol et. Mavi sonuçta askorbik asitle gider, ardından 0,6 g/L ekle. Koruyucu 10 N NaOH: numunenin her litresine 2 mL ve pH ≥12 kontrolü.'],
-         'Saklama ve taşıma':['Sızdırmaz, tanımlı kap; sayısal sıcaklık/azami süre bu incelemede doğrulanmadı.'],
+         'Saklama ve taşıma':['§4.2.3 alkaliye dayanıklı yaklaşık 1 L PE kap ve uygun PTFE/alkali dayanımlı kapak astarı verir; filtre ve ön prob yıkaması için §6.2.1–2 cam kap belirtir. Fraksiyonları kendi kap kuralıyla tut, seviyeyi işaretle ve sızdırmaz kapat.',
+             'İncelenen Method 426 numune/koruma maddelerinde sayısal saklama sıcaklığı ve azami bekletme süresi verilmez. Kaynak pH≥12 ve oksidan giderme koşulları korunur; analiz yönteminin/laboratuvarın kabul planı süre ve sıcaklığı ayrıca tanımlamalıdır. Başka siyanür yönteminin 14/28 gününü otomatik aktarma.'],
          'Laboratuvara teslim':delivery+['pH, oksidan testi, koruyucu dozları ve fraksiyon hacimlerini bildir.']},
         gaps=['§6.2.4 yıkama kabı numarasında metin içi çelişki var: silika jel kabına sıvı eklenmez; fraksiyon planı laboratuvarla çözülmeden uygulama talimatı tamamlanmış sayılmaz.',
-              'Sayısal saklama sıcaklığı ve bekletme süresi ayrıca tamamlanmalı.'],
+              'Metnin sayısal vermediği saklama T/süre koşulları geçerli analitik yöntem ve laboratuvar kabul planıyla belirlenmelidir.'],
         evidence={'Düzen / dolum':(['W03:3-4,9-10'],'§4.1, §6.1'),'Geri kazanım / koruma':(['W03:10-13'],'§6.2'),
                   'Kaçak / süre':(['W05:9-12'],'§4.1.2–4.1.4')})

@@ -6,6 +6,7 @@ SOURCES=[
  dict(id='W08',title='US EPA Method 17 — In-stack particulate',edition='03.08.2017',pages=7,url='https://www.epa.gov/sites/default/files/2017-08/documents/method_17.pdf'),
  dict(id='W09',title='US EPA Method 2 — S-type Pitot velocity',edition='02.08.2017',pages=22,url='https://www.epa.gov/sites/default/files/2017-08/documents/method_2.pdf'),
  dict(id='W10',title='US EPA Method 25A — FID',edition='03.08.2017',pages=7,url='https://www.epa.gov/sites/default/files/2017-08/documents/method_25a.pdf'),
+ dict(id='W11',title='US EPA Method 26A — Hydrogen halides / halogens',edition='EMC bağlantısındaki 14.01.2019 nüshası; D06 arşiv başlığı 07.10.2020',pages=13,url='https://www.epa.gov/sites/default/files/2019-06/documents/method_26a.pdf'),
 ]
 
 def extend(data,profile,node,imp,meter,delivery):
@@ -14,6 +15,21 @@ def extend(data,profile,node,imp,meter,delivery):
     def evidence(p,field,refs,clause):p['evidence'].append(dict(field=field,references=refs,clause=clause))
     leak=['Ön kaçak testi önerilir; parça değişiminden hemen önce ve ölçüm sonunda test zorunludur. Sonda/ara testte koşuda görülen en yüksek vakum veya üstü kullanılır.',
           'Method 5 §8.4: kabul edilen kaçak ≤min(ortalama Q ×0,04; 0,57 L/dk). 380 mmHg yaklaşık 50,66 kPa vakumdur; düşük ön test vakumu ancak ölçüm sırasında aşılmıyorsa kullanılabilir. Aşımda yalnız §12.3 hacim düzeltmesi veya ölçümün reddi uygulanır.']
+
+    p=byid['halogen_epa26a'];p['reviewState']='sections_checked'
+    p['sourceVersion']='EMC 14.01.2019 nüshası / arşiv D06 başlığı 07.10.2020'
+    p['sources']=['W11:1-10,12','D09:7-10,22-23']
+    phase(p,'Hazırlık')[:] += ['Doymuş nemli gazda siklon §6.1.4’e göre gerekir; damlacığa karşı diğer durumlarda da önerilir. Bu kartın düz çizimi siklonsuz seçenektir, doymuş kaynağa aynen atanmaz.',
+        'Cam/kuvars nozül ve metal olmayan iç prob kullanılır. Baca >210 °C ise tek parça cam nozül/iç prob gerekir; filtrede kuvars alternatifini §7.1.1 ile değerlendir. Yeni PTFE’den HF çıkışı hedef florür ölçümünü etkileyebilir.']
+    phase(p,'Kaçak kontrolü')[:]=deepcopy(leak)
+    p['limits'][0]['value']='Method 5 bağlantılı izokinetik %90–110; kaynak hızı/nozül/nem/T/P ile belirlenir. Sabit L/dk atanmaz.'
+    p['limits'][3]['value']='Method 5 bağlantılı eşit nokta süreleri ve ≥2 dk/nokta; ilgili kaynak mevzuatının toplam süre/hacmi ayrıca gerekir. Kurutma/purge süresi örnekleme süresi değildir.'
+    phase(p,'Saklama ve taşıma')[:]=['Numune impinger sıvıları PTFE astarlı kapaklı HDPE veya camda; fraksiyon kimliği ve sıvı seviyesi korunur. Kapak çevresi PTFE bantla emniyete alınır; sıvılar dik, filtre tortu yüzü yukarıda taşınır (§6.2.4, §8.2.7).',
+        '§13.2: HCl ve Cl₂ analizi için toplanan Cl⁻ numuneleri en çok 4 hafta saklanabilir. Bu kararlılık süresi HF, HBr veya Br₂ için otomatik atanmaz. Metin burada sayısal saklama sıcaklığı vermez; laboratuvar kabul/koruma planı ayrıca tanımlanır. §7.2.3’teki 1 ay ise stok standardın raf ömrüdür.']
+    phase(p,'Laboratuvara teslim')[:] += ['Asit/alkali numune ve bunlara eş koşullarda hazırlanmış blanklar ayrı analiz edilir. Kaynak halojenür blankı ≤1 µg/mL sınırını §12.1’de tanımlar; bu değer gaz ELV’si değildir.']
+    p['gaps']=['Siklonlu doymuş kaynak varyantının ayrı çizimi bu kartta yoktur; doymuş gazda düz çizim aynen uygulanmaz. Hedef halojenler, potansiyel HBr/Cl₂ girişimi ve laboratuvarın sıcaklık/analit kararlılık planı tamamlanmalıdır.']
+    p['evidence']=[dict(field='Tren / cihaz / süre / ısıtma',references=['W11:1-8','D09:7-10,22-23'],clause='§1–8; Method 5 bağlantısı'),
+        dict(field='Klor numunesi kararlılığı / blank',references=['W11:10,12'],clause='§12.1, §13.2')]
 
     p=byid['moisture_epa4'];p['sourceVersion']='EMC 30.05.2023 etiketli nüsha';p['sources']=['W07:1-10','D09:3,8'];p['reviewState']='sections_checked'
     p['variant']='Referans yöntem — dış partikül filtresi ve dört impinger'
