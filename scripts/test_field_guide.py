@@ -27,6 +27,13 @@ class FieldGuideTests(unittest.TestCase):
         self.assertEqual(len(no_hg),4)
         self.assertEqual(set(hg)-set(no_hg),{'i4','i5','i6'})
 
+    def test_mercury_recovery_instructions_do_not_leak_into_mercury_free_variant(self):
+        hg=' '.join(P['metals_epa29_hg']['phases'][3]['items'])
+        no_hg=' '.join(P['metals_epa29_no_hg']['phases'][3]['items'])
+        self.assertIn('Kap 5C:',hg)
+        for marker in ('Kap 5A:','Kap 5B:','Kap 5C:'):
+            self.assertNotIn(marker,no_hg)
+
     def test_acid_filter_is_between_bottles(self):
         ids = [x['id'] for x in P['acid_epa8']['train']]
         self.assertEqual(ids[ids.index('filter')-1:ids.index('filter')+2],['i1','filter','i2'])

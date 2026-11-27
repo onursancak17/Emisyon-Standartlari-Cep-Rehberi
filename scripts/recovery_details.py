@@ -25,6 +25,9 @@ def extend(profiles):
                 dict(field='Fraksiyon / tiyosülfat / taşıma',references=['D06:8'],clause='§8.2.3–8.2.7')])
         if p['id'].startswith('metals_epa29_'):
             hg=p['id'].endswith('_hg') and not p['id'].endswith('no_hg')
+            if not hg:
+                phases['Geri kazanım'][:]=[x.replace(' ve cıva fraksiyonlarını',' fraksiyonlarını') for x in phases['Geri kazanım']]
+                phases['Örnekleme'][:]=[x for x in phases['Örnekleme'] if not x.startswith('Cıva varsa')]
             p['sources']=['D07:3-7,11-15']
             phases['Geri kazanım'][:]=[x for x in phases['Geri kazanım'] if not x.startswith('Cıva geri kazanımında')]
             phases['Geri kazanım'] += [

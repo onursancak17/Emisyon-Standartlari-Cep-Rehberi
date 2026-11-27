@@ -1,5 +1,6 @@
 """Kaynak kontrollü başlangıç veri paketi; kaynak PDF'leri yayımlamaz."""
 import json
+from copy import deepcopy
 from pathlib import Path
 from primary_profiles import extend, WEB_SOURCES
 from recovery_details import extend as extend_recovery
@@ -27,6 +28,8 @@ phases = ['Hazırlık', 'Kaçak kontrolü', 'Örnekleme', 'Geri kazanım', 'Sakl
 
 
 def profile(id, parameter, method, version, variant, sources, train, limits, notes, state='train_checked', gaps=None):
+    train=deepcopy(train)
+    notes=deepcopy(notes)
     return dict(id=id, scope='Emisyon', parameter=parameter, method=method, sourceVersion=version, variant=variant,
                 sources=sources, reviewState=state, train=train, limits=[dict(label=k, value=v) for k, v in zip(
                     ['Çekiş debisi', 'Toplam çekiş hacmi', 'Sıcaklık', 'Ölçüm süresi'], limits)],

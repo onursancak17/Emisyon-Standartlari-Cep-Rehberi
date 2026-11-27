@@ -22,6 +22,8 @@ def validate(data, source_index):
         assert [x['label'] for x in p['limits']] == ['Çekiş debisi', 'Toplam çekiş hacmi', 'Sıcaklık', 'Ölçüm süresi']
         assert all(x['value'].strip() for x in p['limits']), f'{p["id"]}: boş koşul'
         assert len(p['phases']) == 6 and all(x['items'] for x in p['phases'])
+        for phase in p['phases']:
+            assert len(phase['items'])==len(set(phase['items'])), f'{p["id"]}: tekrarlı aşama talimatı {phase["title"]}'
         refs = list(p['sources'])
         if p['reviewState'] == 'sections_checked':
             assert p['evidence'], f'{p["id"]}: alan bazında kaynak izi yok'

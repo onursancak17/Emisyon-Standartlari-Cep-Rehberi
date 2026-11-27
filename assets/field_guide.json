@@ -449,8 +449,6 @@
             "Filtre ve numuneye temas eden prob / ilk üç impinger / uygun filtre tutucu yüzeylerini metottaki suyla yıkama prosedürüne göre nicel geri kazan.",
             "Numune polietilen kabında toplanır. Kullanılmamış filtre ve eş hacim su ile numune blankı hazırlanır.",
             "§8.6.4.1: bütün numuneye temas eden yüzeylerin toplam su yıkaması <500 mL. İlk üç şişeyi ve bağlantıları üç ayrı küçük porsiyonla yıka; probu fırçala, görünür kalıntı bırakma.",
-            "Filtre 3–4 arasındaysa tutucunun ön yarısını geri kazan. Silika jeli sıvıyla aktarma; net kütle artışı nem hesabındadır.",
-            "§8.6.4.1: bütün numuneye temas eden yüzeylerin toplam su yıkaması <500 mL. İlk üç şişeyi ve bağlantıları üç ayrı küçük porsiyonla yıka; probu fırçala, görünür kalıntı bırakma.",
             "Filtre 3–4 arasındaysa tutucunun ön yarısını geri kazan. Silika jeli sıvıyla aktarma; net kütle artışı nem hesabındadır."
           ]
         },
@@ -611,8 +609,6 @@
           "items": [
             "Filtre ve numuneye temas eden prob / ilk üç impinger / uygun filtre tutucu yüzeylerini metottaki suyla yıkama prosedürüne göre nicel geri kazan.",
             "Numune polietilen kabında toplanır. Kullanılmamış filtre ve eş hacim su ile numune blankı hazırlanır.",
-            "§8.6.4.1: bütün numuneye temas eden yüzeylerin toplam su yıkaması <500 mL. İlk üç şişeyi ve bağlantıları üç ayrı küçük porsiyonla yıka; probu fırçala, görünür kalıntı bırakma.",
-            "Filtre 3–4 arasındaysa tutucunun ön yarısını geri kazan. Silika jeli sıvıyla aktarma; net kütle artışı nem hesabındadır.",
             "§8.6.4.1: bütün numuneye temas eden yüzeylerin toplam su yıkaması <500 mL. İlk üç şişeyi ve bağlantıları üç ayrı küçük porsiyonla yıka; probu fırçala, görünür kalıntı bırakma.",
             "Filtre 3–4 arasındaysa tutucunun ön yarısını geri kazan. Silika jeli sıvıyla aktarma; net kütle artışı nem hesabındadır."
           ]
@@ -777,7 +773,6 @@
           "items": [
             "Cam ekipmanın temizlik / asit yıkama işlemini Method 29 §8.1.1’e göre tamamla; filtre ve bağlantılarda metal bulaşmasını önle.",
             "İlk boş şişe, beklenen nem toplaması yaklaşık 100 mL altında ise metot koşullarıyla çıkarılabilir.",
-            "§8.2.12–17 blank planı: 0,1 N HNO₃ 300 mL; su 100 mL; asitli peroksit 200 mL; aynı partiden 3 boş filtre. Cıva varsa asitli permanganat 100 mL ve 200 mL su + 25 mL 8 N HCl blankı da ayrı hazırlanır. Partikül/aseton kullanılıyorsa 100 mL aseton blankı.",
             "§8.2.12–17 blank planı: 0,1 N HNO₃ 300 mL; su 100 mL; asitli peroksit 200 mL; aynı partiden 3 boş filtre. Cıva varsa asitli permanganat 100 mL ve 200 mL su + 25 mL 8 N HCl blankı da ayrı hazırlanır. Partikül/aseton kullanılıyorsa 100 mL aseton blankı."
           ]
         },
@@ -804,9 +799,6 @@
             "Kap 5A: 4. boş şişede biriken sıvı + tam 100 mL 0,1 N HNO₃ yıkaması.",
             "Kap 5B: iki permanganat şişesi sıvısı + her iki şişe/bağlantı için toplam tam 100 mL yeni asitli permanganatla ≥3 yıkama + toplam 100 mL suyla ≥3 yıkama.",
             "Kap 5C: önce kaba 200 mL su koy. İki permanganat şişesini toplam yalnız 25 mL 8 N HCl ile sırayla yıka; aynı yıkamayı ikinci şişeden geçirip su bulunan kaba dikkatle aktar. 5A, 5B ve 5C birleştirilmez.",
-            "Silika jel ayrı kaba, sıvı kullanmadan aktarılır veya sahada 0,5 g hassasiyetle tartılır. Bütün sıvı düzeylerini, hacimleri ve fraksiyon kimliklerini kaydet.",
-            "Kap 1: filtreyi asitle temizlenmiş metal içermeyen aletle petriye al; tortuyu koru. Yalnız eşzamanlı partikül tayininde kap 2’ye ön yüzeylerden tam 100 mL aseton yıkaması yapılır.",
-            "Kap 3: ön yüzeylerin tam 100 mL 0,1 N HNO₃ yıkaması. Son temizlikteki su/aseton yıkamasını numuneye ekleme. Kap 4: ilk üç şişe sıvısı + filtre arkası/bağlantıların ayrı tam 100 mL 0,1 N HNO₃ yıkaması.",
             "Silika jel ayrı kaba, sıvı kullanmadan aktarılır veya sahada 0,5 g hassasiyetle tartılır. Bütün sıvı düzeylerini, hacimleri ve fraksiyon kimliklerini kaydet."
           ]
         },
@@ -942,7 +934,6 @@
           "items": [
             "Cam ekipmanın temizlik / asit yıkama işlemini Method 29 §8.1.1’e göre tamamla; filtre ve bağlantılarda metal bulaşmasını önle.",
             "İlk boş şişe, beklenen nem toplaması yaklaşık 100 mL altında ise metot koşullarıyla çıkarılabilir.",
-            "§8.2.12–17 blank planı: 0,1 N HNO₃ 300 mL; su 100 mL; asitli peroksit 200 mL; aynı partiden 3 boş filtre. Cıva varsa asitli permanganat 100 mL ve 200 mL su + 25 mL 8 N HCl blankı da ayrı hazırlanır. Partikül/aseton kullanılıyorsa 100 mL aseton blankı.",
             "§8.2.12–17 blank planı: 0,1 N HNO₃ 300 mL; su 100 mL; asitli peroksit 200 mL; aynı partiden 3 boş filtre. Cıva varsa asitli permanganat 100 mL ve 200 mL su + 25 mL 8 N HCl blankı da ayrı hazırlanır. Partikül/aseton kullanılıyorsa 100 mL aseton blankı."
           ]
         },
@@ -955,21 +946,14 @@
         {
           "title": "Örnekleme",
           "items": [
-            "İzokinetik örnekle; debi, toplam hacim, sıcaklık, vakum ve noktaları kaydet.",
-            "Cıva varsa permanganat yakalama durumunu izle. Asitli peroksit ile asitli permanganatı karıştırma."
+            "İzokinetik örnekle; debi, toplam hacim, sıcaklık, vakum ve noktaları kaydet."
           ]
         },
         {
           "title": "Geri kazanım",
           "items": [
-            "Filtre, prob yıkaması, ilk üç impinger fraksiyonu ve cıva fraksiyonlarını metot numaralarıyla ayır.",
+            "Filtre, prob yıkaması, ilk üç impinger fraksiyonu fraksiyonlarını metot numaralarıyla ayır.",
             "Prob / ön yüzey yıkamasında toplam 100 mL 0,1 N HNO₃; ilk üç şişe ve bağlantı yıkamasında ayrı toplam 100 mL 0,1 N HNO₃ kullanımı §8.2.7–8.2.8’dendir.",
-            "Kap 1: filtreyi asitle temizlenmiş metal içermeyen aletle petriye al; tortuyu koru. Yalnız eşzamanlı partikül tayininde kap 2’ye ön yüzeylerden tam 100 mL aseton yıkaması yapılır.",
-            "Kap 3: ön yüzeylerin tam 100 mL 0,1 N HNO₃ yıkaması. Son temizlikteki su/aseton yıkamasını numuneye ekleme. Kap 4: ilk üç şişe sıvısı + filtre arkası/bağlantıların ayrı tam 100 mL 0,1 N HNO₃ yıkaması.",
-            "Kap 5A: 4. boş şişede biriken sıvı + tam 100 mL 0,1 N HNO₃ yıkaması.",
-            "Kap 5B: iki permanganat şişesi sıvısı + her iki şişe/bağlantı için toplam tam 100 mL yeni asitli permanganatla ≥3 yıkama + toplam 100 mL suyla ≥3 yıkama.",
-            "Kap 5C: önce kaba 200 mL su koy. İki permanganat şişesini toplam yalnız 25 mL 8 N HCl ile sırayla yıka; aynı yıkamayı ikinci şişeden geçirip su bulunan kaba dikkatle aktar. 5A, 5B ve 5C birleştirilmez.",
-            "Silika jel ayrı kaba, sıvı kullanmadan aktarılır veya sahada 0,5 g hassasiyetle tartılır. Bütün sıvı düzeylerini, hacimleri ve fraksiyon kimliklerini kaydet.",
             "Kap 1: filtreyi asitle temizlenmiş metal içermeyen aletle petriye al; tortuyu koru. Yalnız eşzamanlı partikül tayininde kap 2’ye ön yüzeylerden tam 100 mL aseton yıkaması yapılır.",
             "Kap 3: ön yüzeylerin tam 100 mL 0,1 N HNO₃ yıkaması. Son temizlikteki su/aseton yıkamasını numuneye ekleme. Kap 4: ilk üç şişe sıvısı + filtre arkası/bağlantıların ayrı tam 100 mL 0,1 N HNO₃ yıkaması.",
             "Silika jel ayrı kaba, sıvı kullanmadan aktarılır veya sahada 0,5 g hassasiyetle tartılır. Bütün sıvı düzeylerini, hacimleri ve fraksiyon kimliklerini kaydet."
@@ -979,8 +963,7 @@
           "title": "Saklama ve taşıma",
           "items": [
             "Sıvı seviyelerini işaretle, kap kimliklerini ve reaktif blanklarını koru. Cıva kaplarının kapanma/taşıma düzenini metot ve laboratuvarla doğrula.",
-            "Bu kartta sayısal saklama sıcaklığı / bekletme süresi tamamlanmadı.",
-            "Permanganat kaplarında basınç oluşabilir: kabı ağzına kadar doldurma; §7.3.2 ve §8.2.9.2’deki basınç tahliye/taşıma düzenini laboratuvarla uygula."
+            "Bu kartta sayısal saklama sıcaklığı / bekletme süresi tamamlanmadı."
           ]
         },
         {
