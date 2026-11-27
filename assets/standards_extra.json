@@ -253,45 +253,47 @@
       "100 mL",
       "28 L/dk"
     ],
-    "purpose": "Toplam florür numunesinin EPA Method 13A SPADNS yöntemiyle izokinetik olarak alınması ve tayini için saha rehberidir.",
-    "duration": "İki ölçüm çizgisindeki noktalar tamamlanacak şekilde planlanır; minimum absorpsiyon numunesi 200 mL'dir.",
-    "flowRate": "Çekiş debisi 28 L/dk'yı geçmemelidir; genellikle 2-6 L/dk kabarcık/verim aralığı yeterlidir ve debi ±%10 tutulur.",
+    "purpose": "EPA Method 13A — 03.08.2017. Dört impinger kullanılır. Dolumlar Method 5 §8.3 bağlantısına göre: 100 mL su + 100 mL su + boş + tartılmış silika jel.",
+    "duration": "Süre, hedef hacim ve izokinetik çekişe göre planlanır.",
+    "flowRate": "İzokinetik, <28 L/dk.",
     "equipment": [
-      "İzokinetik prob/nozul",
-      "4 impinger",
-      "Buz banyosu",
-      "Silika jel",
-      "1 L geniş ağızlı polietilen kap"
+      "Bu yöntemin şema/numune fraksiyonları ana ekrandaki parametre rehberinde ayrı varyantlarla bulunur."
     ],
     "reagents": [
-      "1. impinger: 100 mL saf su",
-      "2. impinger: 100 mL saf su",
-      "3. impinger: boş",
-      "4. impinger: silika jel",
-      "SPADNS ve zirkonil klorür reaktifleri analizde kullanılır"
+      "Filtre konumunu saha formuna yaz. Ön filtre seçeneğinde 20-mesh paslanmaz destek koşulunu kontrol et.",
+      "Hedef toplam inorganik florürdür; florokarbon/Freon ölçümü değildir. Yüksek klorür girişimi ve numuneye temas eden gresin düşük sonuç oluşturması değerlendirilir (§1, §4).",
+      "Arka filtre Whatman No.1 veya eşdeğeridir.",
+      "1/3/4 modifiye GS; 2 standart GS uçlu. Ön filtrede 20-mesh çelik destek; cam frit/sinter metal destek kullanılmaz. Arka filtrede cam frit destek mümkündür (§6.1)."
     ],
     "fieldSteps": [
-      "Kaçak testi, hız ve çap ölçümünü yap.",
-      "Şahit numuneyi nozul 180° ters çevrilmiş halde pompa çalışmadan al.",
-      "Debiyi 28 L/dk altında tut.",
-      "Filtre/prob yıkamalarını numune kabına aktar.",
-      "Numuneyi +4 °C'de sakla."
+      "Ön kaçak testi önerilir; parça değişiminden hemen önce ve ölçüm sonunda test zorunludur. Sonda/ara testte koşuda görülen en yüksek vakum veya üstü kullanılır.",
+      "Method 5 §8.4: kabul edilen kaçak ≤min(ortalama Q ×0,04; 0,57 L/dk). 380 mmHg yaklaşık 50,66 kPa vakumdur; düşük ön test vakumu ancak ölçüm sırasında aşılmıyorsa kullanılabilir. Aşımda yalnız §12.3 hacim düzeltmesi veya ölçümün reddi uygulanır.",
+      "İzokinetik debi 28 L/dk altında olmalıdır. Gerekli ısıtmada prob / filtre 120 ±14 °C sınırını aşma.",
+      "Florür numunesi ile silika jel nem fraksiyonunu ayrı tut.",
+      "Filtre ve numuneye temas eden prob / ilk üç impinger / uygun filtre tutucu yüzeylerini metottaki suyla yıkama prosedürüne göre nicel geri kazan.",
+      "Numune polietilen kabında toplanır. Kullanılmamış filtre ve eş hacim su ile numune blankı hazırlanır.",
+      "§8.6.4.1: bütün numuneye temas eden yüzeylerin toplam su yıkaması <500 mL. İlk üç şişeyi ve bağlantıları üç ayrı küçük porsiyonla yıka; probu fırçala, görünür kalıntı bırakma.",
+      "Filtre 3–4 arasındaysa tutucunun ön yarısını geri kazan. Silika jeli sıvıyla aktarma; net kütle artışı nem hesabındadır."
     ],
     "criticalControls": [
-      "Flor toz ölçümüyle birlikte örneklenmemelidir.",
-      "Su üçüncü impingere geçmemelidir.",
-      "3-4. impinger arasındaki filtre laboratuvara gönderilir."
+      "Tayin sınırı ve örnekleme planına bağlı; bu kartta sabit asgari hacim doğrulanmadı.",
+      "Gerekli ısıtmada 120 ±14 °C; yoğuşma kontrolü.",
+      "Sıvı numune geniş ağızlı, yaklaşık 1 L HDPE kapta; filtre, ilk üç şişe ve bütün su yıkamaları aynı numuneye alınır. Filtreyi ayrı işleme yalnız izin verilen alternatif prosedürle yap (§6.2.2, §8.6.4).",
+      "Kap sızdırmaz kapatılır, seviye işaretlenir. İncelenen Method 13A numune bölümünde sayısal saklama sıcaklığı/azami bekletme süresi verilmez; bunlar laboratuvarın geçerli kabul planında tanımlanmalıdır. Reaktifin raf ömrü numune bekletme süresi değildir."
     ],
     "acceptance": [
-      "İzokinetiklik, kaçak testi, minimum 200 mL ve +4 °C saklama sağlanmalıdır."
+      "Kontrol sonucu yalnız seçili yöntem ve kaynak baskısıyla değerlendirilir. Açık kalan kaynak/uygulama ayrıntıları parametre kartında görünür."
     ],
     "reporting": [
-      "Debi, hacim, impinger hacimleri, şahit, silika jel ve SPADNS analiz bilgileri yazılır."
+      "Tesis, baca/nokta, tarih, başlangıç–bitiş, metot/sürüm, numuneci ve fraksiyon kimliklerini etiketle.",
+      "Numune kabı, kapak, miktar, blank, mühür, taşıma koşulu, teslim saati ve teslim alanı izlenebilir teslim formuna kaydet.",
+      "Numune, blank ve silika jel kayıtlarını birbirinden ayır.",
+      "Numune blankı: kullanılmamış filtre ve numuneyle eşit toplam su hacmi; aynı analiz prosedürü. Ön filtre lot blankı ile bu numune blankı ayrı kontrollerdir (§7.1.1.2, §8.6.4.2).",
+      "Kaynak: D05:1-7, D09:7-10,15-18,22-23"
     ],
     "mistakes": [
-      "Debiyi 28 L/dk üstüne çıkarmak",
-      "İlk iki impingere 100'er mL saf su koymamak",
-      "Şahit numune almamak"
+      "Dolum, yüzde türü, blank, süre veya saklama kuralını başka yöntemden aktarmak.",
+      "Eski eğitim notunu yeni standart baskısı diye kullanmak."
     ]
   },
   {
@@ -405,43 +407,45 @@
       "hidrojen",
       "azot"
     ],
-    "purpose": "Baca gazında gaz halindeki toplam organik karbonun FID cihazı ile ölçülmesi için saha rehberidir.",
-    "duration": "Değerler tepki süresi ve stabilizasyon sonrası kaydedilir; anlık kararsız okuma raporlanmaz.",
-    "flowRate": "Cihazın kendi pompa/debi sistemi kullanılır; ısıtmalı hat ve filtre tıkanıklığı kontrol edilir.",
+    "purpose": "EN 12619 ve EPA25A ayrı FID yöntemleridir. Isıtma, T90/T95 ve drift sınırları farklıdır. Bu katalog özeti EN 12619 kartını gösterir; parametre rehberinde EPA25A ayrıca seçilir.",
+    "duration": "Süre ve temsil EN 15259/ölçüm planından gelir. Hat gaz kalış süresi <60 s; seri başına sistem T90≤200 s. T90 toplam ölçüm süresi değildir.",
+    "flowRate": "Cihazın doğrulanmış debisi; sabit evrensel L/dk yok. Yan akış/haricî pompa varsa analizör gereksinimini karşılamalı.",
     "equipment": [
-      "Pollution Polaris FID veya eşdeğer FID",
-      "Isıtmalı hat",
-      "Propan kalibrasyon gazı",
-      "%99,998 azot sıfır gazı",
-      "Hidrojen yakıt gazı"
+      "Bu yöntemin şema/numune fraksiyonları ana ekrandaki parametre rehberinde ayrı varyantlarla bulunur."
     ],
     "reagents": [
-      "Çözelti/impinger yoktur; gazlar ve kalibrasyon kontrolleri vardır."
+      "Sıfır ve sertifikalı span gazı, gaz matrisi/O₂ etkisi, FID yakıtı ve aralık cihazın/yöntemin koşullarıyla seçilir. Propan kalibrasyonu diğer bileşiklerin farklı yanıt faktörlerini ortadan kaldırmaz.",
+      "Span propan, yaklaşık yarım saatlik ELV veya ölçüm aralığının %50–90’ı; sertifikalı derişim belirsizliği ≤%2. Yakıt/yanma havası ve sıfır gazı için kaynak saflık koşulları uygulanır."
     ],
     "fieldSteps": [
-      "Isıtmalı hattı 120 °C'ye getir.",
-      "Numune giriş sıcaklığını maksimum 180 °C altında tut.",
-      "Propanla doğrulama yap ve tepki süresini ölç.",
-      "Proba filtre tak ve stabil değerleri kaydet."
+      "Önce doğrudan analizör sıfır/span ayarı; sonra filtre önündeki prob girişine yakın noktadan aynı gazlarla bütün sistem kontrolü. Doğrudan ve hat üzerinden yanıt farkı spanın <%2’si olmalı (§6.2.1–2).",
+      "Hat/filtre/bağlantıların tümünü kontrol et; yalnız analizöre gaz vermek hattın sızdırmazlığını ve bellek etkisini göstermez.",
+      "Sistem T90 ve hat kalış süresini ayrı değerlendir. Seri başına tepki/sampling kontrolü; yıllık ve onarım sonrası doğrusallık/girişim kontrolleri Tablo 1’e göre. O₂ sinerjisi yaklaşık %10 O₂ civarında önemlidir.",
+      "Başlangıç/son ve en az günlük sıfır-span kontrolü. Drift >%2 span ise sıfır ve span için düzeltme; drift <%5 span olmalı, aksi halde sonuç geçersiz (§6.2.3). Düzeltmeden önce değerleri kaydet.",
+      "Bu yöntemde kimyasal yıkama fraksiyonu laboratuvara gönderilmez. Ham derişim zaman serisi, kalibrasyon, drift, tepki, nem/O₂ ve proses kayıtları korunur.",
+      "Kaynak 273 K/101,3 kPa’da propan ppmv → mg C/m³ için 3×12/22,4 katsayısını verir. Kuru ve O₂ referans düzeltmeleri ayrı; nem <%2 ise nem izleme/düzeltme istisnasını §6.3.2’ye göre değerlendir."
     ],
     "criticalControls": [
-      "Sıfır ve kalibrasyon sapması ±%3'ten düşük olmalıdır.",
-      "TOC/FID ile VOC tüp numunesi karıştırılmamalıdır."
+      "Şişede/tüpte toplanan gaz hacmi yoktur; sonuç eşzamanlı analizle üretilir. Seyreltme varsa doğrulanmış oranla değerlendirilir.",
+      "Örnekleme sistemi boyunca ≥180 °C; PTFE hattın üst sıcaklığı 200 °C. Hat/filtrede soğuk nokta ve yoğuşma olmamalı.",
+      "Numune şişesi için kimyasal bekletme sıcaklığı/süresi uygulanmaz; analiz alımla eşzamanlıdır. Ham veri, cihaz/hat ayarı ve kalibrasyon gazı sertifikaları raporla izlenebilir saklanır."
     ],
     "acceptance": [
-      "Propan kontrolü uygun, cihaz stabil ve hat yoğuşmasız olmalıdır."
+      "Kontrol sonucu yalnız seçili yöntem ve kaynak baskısıyla değerlendirilir. Açık kalan kaynak/uygulama ayrıntıları parametre kartında görünür."
     ],
     "reporting": [
-      "Sonuç propan ppm veya karbon mg/m³ olarak, kullanılan gazlar ve doğrulama sapmasıyla raporlanır."
+      "Tesis, baca/nokta, tarih, başlangıç–bitiş, metot/sürüm, numuneci ve fraksiyon kimliklerini etiketle.",
+      "Numune kabı, kapak, miktar, blank, mühür, taşıma koşulu, teslim saati ve teslim alanı izlenebilir teslim formuna kaydet.",
+      "Zaman serisi, aralık, kalibrasyon gazı/sertifika/matris, kontrol sonuçları, kullanılan düzeltmeler, referans koşulları ve temsil edilen proses dönemleri rapor birimine verilir.",
+      "Kaynak: D24:8-15"
     ],
     "mistakes": [
-      "Tepki süresi beklemeden kayıt almak",
-      "Hattı ısıtmamak",
-      "VOC aktif karbon tüpüyle TOC'yi karıştırmak"
+      "Dolum, yüzde türü, blank, süre veya saklama kuralını başka yöntemden aktarmak.",
+      "Eski eğitim notunu yeni standart baskısı diye kullanmak."
     ]
   },
   {
-    "title": "TS EN 13649 VOC Aktif Karbon Tüp Örneklemesi",
+    "title": "Tekil VOC — CEN/TS 13649:2014; aktif karbon / TD / seyreltme",
     "code": "TS EN 13649",
     "category": "Emisyon",
     "subgroup": "Organik Bileşikler / VOC",
@@ -454,42 +458,46 @@
       "10-50 L",
       "FR49"
     ],
-    "purpose": "Bacada VOC numunesinin aktif karbon tüp ile alınması, çözücü desorpsiyonu ve GC-MS/GC analizi için saha rehberidir.",
-    "duration": "Tipik süre en az 30 dakika; kararsız şartlarda azaltılabilir fakat 20 dakikadan az olmamalıdır. En az 3 numune alınır.",
-    "flowRate": "Tipik debi 0,1-0,5 L/dk ve toplam hacim 10-50 L aralığındadır.",
+    "purpose": "CEN/TS 13649 — 2014 / TSE Şubat 2015. Bu yöntem gaz fazındaki tekil VOC içindir; FID ile toplam organik karbon ölçümü değildir. CEN/TS 13649:2014 eski EN 13649:2001’in yerini alır; dosya adındaki yalnız aktif karbon ifadesi TD seçeneğini dışlamaz.",
+    "duration": "Süre, hedef gaz hacmi/Q ve prosesin temsil edilen ortalama süresiyle belirlenir; her VOC için sabit 30 dk yok. Küçük hacim nedeniyle çok kısa örnekleme gerekiyorsa zaman ağırlıklı seyreltme planını değerlendir.",
+    "flowRate": "Tablo 1: 0,1–0,5 L/dk; Q belirsizliği <%5. Hedef bileşik, sıcaklık, kapasite ve tayin sınırıyla seçilir.",
     "equipment": [
-      "VOC örnekleme cihazı",
-      "Aktif karbon tüp",
-      "Debi kontrolü",
-      "Şahit tüp",
-      "FR49 formu"
+      "Bu yöntemin şema/numune fraksiyonları ana ekrandaki parametre rehberinde ayrı varyantlarla bulunur."
     ],
     "reagents": [
-      "Ana ve emniyet adsorban tabakaları ayrı analiz edilir.",
-      "CS2 veya uygun özütleme çözücüsü kullanılır; 100 mg aktif karbon için genelde 1 mL CS2 yeterlidir."
+      "Su/solvent yoğuşması riski için bileşim, nem, sıcaklık ve sorbent kapasitesini değerlendir. Sorbent önüne Na₂SO₄ gibi kurutucu yerleştirme; VOC kaybı yapabilir. Tüpte sıvı birikmesine izin verilmez.",
+      "Açılmış/kullanılmış aktif karbon tüpü tekrar kullanılmaz. Tüpün yönü, ana/yedek yatağı ve lotu işaretlenir; çözücü geri kazanımının her hedef/karbon lotu için >%80 olması gerekir.",
+      "Saha blankı en az 1/gün; günlük >6 numunede 2, >10 numunede 3 blank. Aynı lot ve açma/kapama işlemi, prob bacaya sokulmadan ve gaz çekilmeden. Analitik blank ile saha blankını ayır."
     ],
     "fieldSteps": [
-      "Noktayı baca kesitini temsil edecek şekilde seç.",
-      "Ön sızdırmazlık kontrolünü yap.",
-      "Baca gazı 40 °C üstünde ve yoğuşmasız olmalı; gerekiyorsa soğutma/seyreltme kullan.",
-      "Tüpü doğru yönde tak ve debi/süre/hacmi kaydet.",
-      "Her baca için en az 1 şahit tüp al."
+      "Her örneklemeden önce ve sonra probdan hacim ölçere kadar bütün birleşik tren sınanır. Ölçümün en yüksek vakumunda kaçak örnekleme Q’sunun <%5’i veya hacim ölçümü belirsizliğinin altında olmalıdır (Ek A.1.3).",
+      "Örnek: 0,1 L/dk için %5, 0,005 L/dk=5 mL/dk eder; 0,57 L/dk EPA büyük tren sınırı bu tüplere uygulanmaz.",
+      "Tüp yönü, Q, sayaç başlangıç/sonu, örnekleme süresi ve sayaç T/P kaydedilir; otomatik kompanzasyon yoksa ölçülen hacim T/P ile ilişkilendirilir. Küçük hacimlerde sistem ölü hacmini çekiş öncesi gazla süpür; hacim hesabına gerçek tüp örneklemesini al.",
+      "İyi tanımlanmış gazda en az her 10 numunenin 1’inde ve kampanya başına en az 1 numunede yedek kademe ile kırılmayı kontrol et. Bileşimi belirsiz kaynakta daha sık kontrol gerekir; yedek kademe bütün koşullarda keyfi çıkarılmaz.",
+      "Tablo 1’e göre arka kademe kütlesi iki kademenin toplamının <%5’i olmalı. §6.2’de “en çok %5” ifadesi de vardır; kart tabloda verilen daha sıkı <%5 kabulünü gösterir. Aşımda sonucu geçerli nicel sonuç gibi kullanma; §9.1/§10 rapor koşullarını uygula.",
+      "Tüpü iki ucundan hemen kapat. Laboratuvarda ana ve yedek karbon yatakları ayrı viallere alınır; bunları sahada su/asetonla geri yıkama. Tipik CS₂ hacmi 100 mg karbon için 1 mL’dir; bu laboratuvar ekstraksiyon hacmidir.",
+      "Partiye/hedefe özgü desorpsiyon verimi ve blank analizi gerekir; kaynağa uygun olmayan çözücüyle standart tarifini genelleme."
     ],
     "criticalControls": [
-      "Şahit sonucu numunenin %10'undan fazlaysa ölçüm geçersizdir.",
-      "Emniyet tabakasındaki bileşik ana tabakanın %5'inden fazla olmamalıdır.",
-      "Tüpler +4 °C, serin ve karanlıkta saklanır."
+      "Tipik 10–50 L; zorunlu evrensel asgari/azami hacim değildir. Hacim belirsizliği <%5; her hedef bileşik için V≤%70 Vbreakthrough veya ≤%50 Vretention ve geçerli sıcaklık şartı değerlendirilir.",
+      "Tablo 1: tüpte numune gazı <40 °C, sıcaklık belirsizliği <2,5 °C. Isıtılan prob kullanılıyorsa baca T+10 °C, en çok 180 °C. Yoğuşma riski varsa doğrudan tren yerine seyreltme varyantı.",
+      "Temiz, hava sızdırmaz ve VOC yaymayan kapta, güneşten uzak, <25 °C. Ahşap, VOC yayan plastik ve yapışkan bant gibi bulaşma kaynaklarından kaçın.",
+      "7 gün içinde analiz edilmeyecekse tüpler hava sızdırmaz kapta <4 °C’de tutulur (§6.5.1). Yedi gün mutlak analiz son tarihi değildir; kaynak bu cümlede soğuk saklama şartını başlatır.",
+      "Soğuk kap oda sıcaklığına gelmeden açılmaz; kapalı halde dengelenir, ardından tüp çıkarılıp kapağı açılır. TD kapakları en düşük soğutma sıcaklığına ulaşıldığında yeniden sıkılır (§6.5.3)."
     ],
     "acceptance": [
-      "Sızdırmazlık, debi, toplam hacim, şahit ve breakthrough uygun olmalıdır."
+      "Kontrol sonucu yalnız seçili yöntem ve kaynak baskısıyla değerlendirilir. Açık kalan kaynak/uygulama ayrıntıları parametre kartında görünür."
     ],
     "reporting": [
-      "Debi, süre, hacim, tüp no, şahit, desorpsiyon ve GC analiz bilgisi FR49'a yazılır."
+      "Tesis, baca/nokta, tarih, başlangıç–bitiş, metot/sürüm, numuneci ve fraksiyon kimliklerini etiketle.",
+      "Numune kabı, kapak, miktar, blank, mühür, taşıma koşulu, teslim saati ve teslim alanı izlenebilir teslim formuna kaydet.",
+      "Tüp/lot/sorbent, ana-yedek yönü, Q/V/T/P/süre, blanklar, seyreltme varsa ölçülen oran, saklama sıcaklığı ve zamanlar ile ayrı kademe analiz isteğini bildir.",
+      "Saha blankı numuneden çıkarılmaz. Tablo 1’de <%10 emisyon sınırı; §9.1’de sonuç/ELV değerlendirmesi vardır. Numune blankın altındaysa ≤blank raporlanır; birden fazla blankta en yüksek değer esas alınır. Analitik blankın uygulanabilir düzeltmesi ayrı işlemdir.",
+      "Kaynak: L05:8-20,21,25-28"
     ],
     "mistakes": [
-      "Tüp yönünü ters takmak",
-      "Şahit tüp almamak",
-      "TOC/FID ile VOC tüp numunesini karıştırmak"
+      "Dolum, yüzde türü, blank, süre veya saklama kuralını başka yöntemden aktarmak.",
+      "Eski eğitim notunu yeni standart baskısı diye kullanmak."
     ]
   }
 ]

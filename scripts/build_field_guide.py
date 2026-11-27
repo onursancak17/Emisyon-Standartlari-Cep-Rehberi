@@ -7,6 +7,10 @@ from recovery_details import extend as extend_recovery
 from split_profiles import extend as extend_split
 from en_profiles import extend as extend_en, LOCAL_SOURCES
 from advanced_profiles import extend as extend_advanced, EXTRA_SOURCES
+from epa_field_review import extend as extend_epa_review, SOURCES as EPA_REVIEW_SOURCES
+from voc_velocity_review import extend as extend_voc_velocity, SOURCES as NEW_LOCAL_SOURCES
+from instrument_review import extend as extend_instruments
+from audit_matrix import attach as attach_audit, write_report as write_audit_report
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -226,11 +230,22 @@ extend_recovery(data)
 extend_split(data,node)
 extend_en(data,profile,node,imp,meter,common_delivery)
 extend_advanced(data,profile,node,imp,meter,common_delivery)
+extend_epa_review(data,profile,node,imp,meter,common_delivery)
+extend_voc_velocity(data,profile,node,imp,meter,common_delivery)
+extend_instruments(data,profile,node,imp,meter,common_delivery)
 
 source_index = json.loads((ROOT/'docs/SOURCE_INDEX.json').read_text(encoding='utf-8'))
-source_index['reviewedAt']='2026-11-26'
-source_index['documents'] = [s for s in source_index['documents'] if s['id'][0] not in 'WL'] + WEB_SOURCES + LOCAL_SOURCES + EXTRA_SOURCES
+source_index['reviewedAt']='2026-11-27'
+source_index['documents'] = [s for s in source_index['documents'] if s['id'][0] not in 'WL'] + WEB_SOURCES + LOCAL_SOURCES + EXTRA_SOURCES + EPA_REVIEW_SOURCES + NEW_LOCAL_SOURCES
 source_index['catalogChecks'] = [
+    dict(method='ISO 16911-1',archiveEdition='2013',currentEdition='2013; ikinci baskı yayım aşamasında',
+         status='27.11.2026: ISO ikinci baskısı 60.00 (under publication), planlanan 2026-12. Henüz yayımlanmış/yürürlükte yeni baskı diye uygulanmaz. L04 2013 metnidir; EN ve TS kabul tarihleri ayrıca izlenir.',url='https://www.iso.org/standard/85707.html'),
+    dict(method='CEN/TS 13649',archiveEdition='2014 / TSE 2015',currentEdition='2014',
+         status='L05 tam metninde aktif karbon ve TD ayrı; Ek A.2.1 dinamik seyreltme iki giriş/iki çıkışlı çizildi. EN 13649:2001 adı güncel teknik şartnamenin tüm kapsamını anlatmaz.',url='https://knowledge.bsigroup.com/products/stationary-source-emissions-determination-of-the-mass-concentration-of-individual-gaseous-organic-compounds-sorptive-sampling-method-followed-by-solvent-extraction-or-thermal-desorption'),
+    dict(method='EN 14789 / EN 14792 / EN 15058',currentEdition='2017',
+         status='Resmî katalog/kapsam ve yetkili ön izlemeler bulundu. Tam metinlere erişilemedi; bunların sayısal saha/performans koşullarının nihai doğrulaması tamamlanmadı. Paramanyetik O₂, kemilüminesans NOₓ ve NDIR CO ayrı referans tekniklerdir.',url='https://knowledge.bsigroup.com/products/stationary-source-emissions-determination-of-volume-concentration-of-oxygen-standard-reference-method-paramagnetism'),
+    dict(method='EN 12341',archiveEdition='BS EN 12341:2023',currentEdition='2023',
+         status='D23 kapağı ve saha/tartım/blank/saklama/kalite bölümleri karşılaştırıldı. Arşiv dosya adındaki TS ibaresi, belgenin BS kapağını değiştirmez.',url='https://www.dinmedia.de/en/standard/din-en-12341/370722891'),
     dict(method='ISO 12141', archiveEdition='2002', currentEdition='2024',
          status='Arşiv metni eski. Yeni sürümün tam koşulları karşılaştırılmadı.', url='https://www.iso.org/standard/85643.html'),
     dict(method='EN 14385', archiveEdition='TL179:2018', currentEdition='2024',
@@ -246,10 +261,20 @@ source_index['catalogChecks'] = [
 ]
 for s in source_index['documents']:
     s.setdefault('title', Path(s.get('path','')).name.replace('_',' '))
+    n=int(s['id'][1:])
+    s['sourceKind']=('Saha formu' if s['id']=='D01' else 'Cihaz kullanım kılavuzu' if s['id']=='D02' else
+        'Eğitim sunumu' if s['id']=='D03' or s['id']=='D26' or (s['id'][0]=='D' and 11<=n<=22) else
+        'Kurum içi ölçüm talimatı' if s['id'][0]=='D' and n>=34 else 'Birincil standart / yöntem metni')
+    if s['id']=='D26':
+        s['title']='EN ISO 16911 hakkında eğitim sunumu — standart tam metni değildir'
+    if s['id']=='D23':s.update(title='BS EN 12341:2023 — ortam PM10 / PM2,5',edition='EN 12341:2023; arşiv dosya adında TS yazmasına rağmen BS baskısı')
+    if s['id']=='D31':s.update(edition='TS ISO 12141:2004, esas ISO 12141:2002; ISO 2024 sürümü değildir')
 for p in data:
     lookup = {s['id']:s for s in source_index['documents']}
     p['sourceDetails'] = [dict(reference=r, **{k:lookup[r.split(':')[0]].get(k,'') for k in ('title','edition','url')}) for r in p['sources']]
     p.setdefault('evidence', [])
+rows=attach_audit(source_index,data)
+write_audit_report(rows)
 (ROOT/'docs/SOURCE_INDEX.json').write_text(json.dumps(source_index,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 (ROOT/'assets/source_index.json').write_text(json.dumps(source_index,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 
@@ -279,7 +304,7 @@ topics = [
  ('Rapor ve teslim zinciri', ['Metot/sürüm, saha koşulları, gerçek okumalar, düzeltmeler, sapmalar, blanklar ve numune kimlikleri sonuçla izlenebilir olmalı.', 'Konsantrasyon ve kütlesel debiyi doğru kuru/yaş baz ve referans koşullarıyla birlikte raporla.']),
 ]
 
-payload = dict(schemaVersion=1, reviewedAt='2026-11-26',
+payload = dict(schemaVersion=1, reviewedAt='2026-11-27',
  notice='Geliştirme sürümü: şema kontrolü, tam yöntem onayı ve güncel yürürlük kontrolü aynı şey değildir. Arşiv kaynaklı bilgi güncel metotla eşleştirilmeden sahada tek başına talimat sayılmaz.',
  profiles=data, fundamentals=[dict(title=t, items=items) for t, items in topics])
 (ROOT/'assets/field_guide.json').write_text(json.dumps(payload,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')

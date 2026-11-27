@@ -24,6 +24,8 @@ def lines_for(n,w):
     if n.get('amount'):parts.append((n['amount'],26,True))
     return [(line,size,b) for text,size,b in parts for line in wrap(text,w-40,font(size,b))]
 def render(p):
+    if p['diagram'].get('type')=='dilution':
+        return render_dilution(p)
     diagram=p['diagram'];bw=340;gap=40;prefix_x=70;branch_x=1370
     rows=diagram['branches'];maxn=max(len(r['nodes']) for r in rows)
     w=max(2800,branch_x+maxn*(bw+gap)+50)
@@ -57,6 +59,43 @@ def render(p):
             if j<len(row['nodes'])-1:arrow([(x+bw,flow_y[i]),(x+bw+gap,flow_y[i])])
     text('Kolların debisi ve hacmi ayrı kaydedilir. Şema ölçekli ekipman çizimi değildir; seçili varyantı gösterir.',70,h-160,w-140,31,True)
     text('Kaynak: '+', '.join(p['sources'])+' · Koşullar ve kaynak maddeleri uygulamadaki yöntem kartındadır.',70,h-90,w-140,26)
+    target=ROOT/diagram['asset'];target.parent.mkdir(parents=True,exist_ok=True);im.save(target,optimize=True)
+    print(target)
+
+def render_dilution(p):
+    diagram=p['diagram'];w=2460;h=1530;bw=370
+    im=Image.new('RGB',(w,h),'#f3f7fa');d=ImageDraw.Draw(im)
+    def text(s,x,y,width,size=30,b=False):
+        for line in wrap(s,width,font(size,b)):
+            d.text((x,y),line,font=font(size,b),fill=navy);y+=size+10
+    def box(n,x,y):
+        content=lines_for(n,bw);bh=max(290,sum(size+12 for _,size,_ in content)+40)
+        d.rounded_rectangle((x,y,x+bw,y+bh),22,fill='white',outline=teal,width=3)
+        yy=y+18
+        for line,size,b in content:d.text((x+20,yy),line,font=font(size,b),fill=navy);yy+=size+12
+        return bh
+    def arrow(points,down=False):
+        d.line(points,fill=teal,width=7,joint='curve');x,y=points[-1]
+        d.polygon([(x,y),(x-10,y-18),(x+10,y-18)] if down else [(x,y),(x-18,y-10),(x-18,y+10)],fill=teal)
+    text('VOC · Dinamik seyreltme',70,35,w-140,55,True)
+    text('CEN/TS 13649:2014 · Ek A.2.1 · İki giriş, iki farklı çıkış',70,125,w-140,35)
+    box(diagram['shared'][0],70,680)
+    box(diagram['shared'][1],570,680)
+    dh=box(diagram['dilution'],570,250)
+    arrow([(440,740),(570,740)])
+    arrow([(755,250+dh),(755,680)],down=True)
+    # Fazla karışım üstte; ölçülen tüp kolu altta. Oklar gerçek yönü korur.
+    arrow([(940,740),(1030,740),(1030,350),(1140,350)])
+    box(diagram['branches'][0]['nodes'][0],1140,290)
+    text('FAZLA KARIŞIM',1140,220,800,30,True)
+    arrow([(940,740),(1030,740),(1030,920),(1140,920)])
+    text('ÖLÇÜLEN ANALİZ KOLU · Vout',1140,780,1200,30,True)
+    for i,n in enumerate(diagram['branches'][1]['nodes']):
+        x=1140+i*420;box(n,x,860)
+        if i<2:arrow([(x+bw,920),(x+420,920)])
+    text('Fd=(Vr+Vin)/Vin · Debiler aynı sıcaklık/basınç bazında olmalıdır.',70,1240,w-140,36,True)
+    text('Vout toplam karışımın yalnız tüpten geçen bölümüdür; fazla çıkış ayrı olduğu için Vin=Vout−Vr genellikle kullanılamaz.',70,1310,w-140,30)
+    text('Özgün ilke şeması; ölçekli imalat çizimi değildir. Kaynak: L05 PDF 22, Ek A.2.1.',70,1420,w-140,28)
     target=ROOT/diagram['asset'];target.parent.mkdir(parents=True,exist_ok=True);im.save(target,optimize=True)
     print(target)
 if __name__=='__main__':

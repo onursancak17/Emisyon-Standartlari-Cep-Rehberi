@@ -39,7 +39,7 @@ void main() {
     await tester.pumpAndSettle();
     await tester.tap(moisture);
     await tester.pumpAndSettle();
-    expect(find.textContaining('Referans yöntem — dört impinger'),findsOneWidget);
+    expect(find.textContaining('Referans yöntem — dış partikül filtresi ve dört impinger'),findsOneWidget);
     expect(find.byType(TrainDiagram),findsOneWidget);
     expect(tester.takeException(),isNull);
   });

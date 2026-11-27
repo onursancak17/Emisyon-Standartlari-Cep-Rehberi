@@ -136,7 +136,7 @@
     {
       "code": "TS EN 13649",
       "category": "Emisyon",
-      "title": "TS EN 13649 VOC Aktif Karbon Tüp Örneklemesi"
+      "title": "Tekil VOC — CEN/TS 13649:2014; aktif karbon / TD / seyreltme"
     },
     {
       "code": "TS ISO 12039 / TS ISO 7935 / EPA CTM-022",
@@ -3575,6 +3575,648 @@
       "correctIndex": 0,
       "explanation": "B.2.9’daki çözücü çifti bu sıvı absorbanlı varyanta aittir. B.3’teki aseton/toluen ve B.4’teki toluen geri kazanımları ayrı tariflerdir; birbirinin yerine otomatik kullanılmaz.",
       "source": "D25:20-25,32-38; §B.2.9"
+    },
+    {
+      "id": "q161",
+      "topic": "Kaynak karşılaştırması — kritik farklar",
+      "scope": "Emisyon",
+      "parameters": [
+        "VOC"
+      ],
+      "standards": [
+        "TS EN 13649"
+      ],
+      "prompt": "VOC tüpleri 7 gün içinde analiz edilemeyecekse CEN/TS 13649:2014 ne ister?",
+      "choices": [
+        "Hava sızdırmaz kapta <4 °C saklama",
+        "Bütün numuneleri yedinci gün imha",
+        "Koşulsuz 30 gün açıkta saklama",
+        "Tüpe asit ekleme"
+      ],
+      "correctIndex": 0,
+      "explanation": "§6.5.1’in yedi günlük ifadesi soğuk saklama şartını başlatır; mutlak analiz son tarihi değildir. Kararlılık ve analiz planı ayrıca değerlendirilir.",
+      "source": "L05:13 — §6.5.1"
+    },
+    {
+      "id": "q162",
+      "topic": "Kaynak karşılaştırması — kritik farklar",
+      "scope": "Emisyon",
+      "parameters": [
+        "VOC"
+      ],
+      "standards": [
+        "TS EN 13649"
+      ],
+      "prompt": "Buzdolabından çıkan VOC tüpünün kabı ne zaman açılır?",
+      "choices": [
+        "Kapalı kap oda sıcaklığına dengelendikten sonra",
+        "Soğukken hemen",
+        "İçine ortam havası üflendikten sonra",
+        "Tüpün karbonu suyla yıkandıktan sonra"
+      ],
+      "correctIndex": 0,
+      "explanation": "Kapalı halde sıcaklık dengesi, soğuk tüpte ortam neminin yoğuşmasını önler. Tüpü ısıtıp analit kaybettirecek keyfi işlem yapılmaz.",
+      "source": "L05:13 — §6.5.1"
+    },
+    {
+      "id": "q163",
+      "topic": "Kaynak karşılaştırması — kritik farklar",
+      "scope": "Emisyon",
+      "parameters": [
+        "VOC"
+      ],
+      "standards": [
+        "TS EN 13649"
+      ],
+      "prompt": "Sorbent önüne Na₂SO₄ kurutucu koymak neden uygun değildir?",
+      "choices": [
+        "VOC kaybı yapabilir ve standart bu ön kurutmayı yasaklar.",
+        "Sorbentin hiç dolmamasını sağlar.",
+        "Sadece sayaç ekranını değiştirir.",
+        "Bu işlem her VOC yönteminde zorunludur."
+      ],
+      "correctIndex": 0,
+      "explanation": "Kurutma konumu önemlidir: gazdaki hedef VOC tutulmadan önce kaybedilebilir. Pompa/sayaç koruyucu kurutucu ise tüpten sonra çizilir.",
+      "source": "L05:8-9,21 — §5.1; Ek A.1"
+    },
+    {
+      "id": "q164",
+      "topic": "Kaynak karşılaştırması — kritik farklar",
+      "scope": "Emisyon",
+      "parameters": [
+        "VOC"
+      ],
+      "standards": [
+        "TS EN 13649"
+      ],
+      "prompt": "TD tüpleri için Tablo 1’deki 10–100 mL/dk hangi L/dk aralığıdır?",
+      "choices": [
+        "0,010–0,100 L/dk",
+        "0,1–1 L/dk",
+        "10–100 L/dk",
+        "1–10 L/dk"
+      ],
+      "correctIndex": 0,
+      "explanation": "1 L=1000 mL; mL/dk değeri 1000’e bölünür. Aktif karbon tüpünün 0,1–0,5 L/dk aralığı TD aralığıyla aynı değildir.",
+      "source": "L05:19 — Tablo 1"
+    },
+    {
+      "id": "q165",
+      "topic": "Kaynak karşılaştırması — kritik farklar",
+      "scope": "Emisyon",
+      "parameters": [
+        "VOC"
+      ],
+      "standards": [
+        "TS EN 13649"
+      ],
+      "prompt": "Yedek kademede 4 µg, ana kademede 96 µg bulunursa kırılma oranı kaçtır?",
+      "choices": [
+        "%4",
+        "%4,17",
+        "%96",
+        "%25"
+      ],
+      "correctIndex": 0,
+      "explanation": "Oran=4/(96+4)×100=%4. Payda yalnız ana yatak değildir; iki kademenin toplam kütlesidir. Tablo 1’de <%5 istenir.",
+      "source": "L05:19 — Tablo 1"
+    },
+    {
+      "id": "q166",
+      "topic": "Kaynak karşılaştırması — kritik farklar",
+      "scope": "Emisyon",
+      "parameters": [
+        "VOC"
+      ],
+      "standards": [
+        "TS EN 13649"
+      ],
+      "prompt": "Tek günde 11 VOC numunesi alınırsa en az kaç saha blankı gerekir?",
+      "choices": [
+        "3",
+        "1",
+        "2",
+        "11"
+      ],
+      "correctIndex": 0,
+      "explanation": "En az 1/gün; >6 numunede 2, >10 numunede 3 blank. Eşik tam olarak aşılma durumuna göre okunur.",
+      "source": "L05:14 — §6.6"
+    },
+    {
+      "id": "q167",
+      "topic": "Kaynak karşılaştırması — kritik farklar",
+      "scope": "Emisyon",
+      "parameters": [
+        "VOC"
+      ],
+      "standards": [
+        "TS EN 13649"
+      ],
+      "prompt": "İyi tanımlanmış kaynakta 3 VOC numunesi alınan kampanyada yedek kademe kontrolü tamamen atlanabilir mi?",
+      "choices": [
+        "Hayır; kampanya başına en az bir numune gerekir.",
+        "Evet, 10 numuneye kadar hiç gerekmez.",
+        "Evet, yalnız yılda bir gerekir.",
+        "Yalnız numunenin renginden karar verilir."
+      ],
+      "correctIndex": 0,
+      "explanation": "Her 10 numunenin en az birine ek olarak kampanya başına en az bir koşul vardır; bileşimi belirsiz kaynakta daha sık denetim gerekir.",
+      "source": "L05:18 — §9.1"
+    },
+    {
+      "id": "q168",
+      "topic": "Kaynak karşılaştırması — kritik farklar",
+      "scope": "Emisyon",
+      "parameters": [
+        "VOC"
+      ],
+      "standards": [
+        "TS EN 13649"
+      ],
+      "prompt": "Vr=9 L/dk ve Vin=1 L/dk aynı koşullardaysa dinamik seyreltme faktörü kaçtır?",
+      "choices": [
+        "10",
+        "9",
+        "0,1",
+        "8"
+      ],
+      "correctIndex": 0,
+      "explanation": "Fd=(Vr+Vin)/Vin=(9+1)/1=10. Hesap aynı sıcaklık ve basınç bazındaki debilerle yapılır. Tüp kolu Vout toplam karışımın yalnız bir bölümünü alabilir.",
+      "source": "L05:22 — Ek A.2.1, Denklem A.1"
+    },
+    {
+      "id": "q169",
+      "topic": "Kaynak karşılaştırması — kritik farklar",
+      "scope": "Emisyon",
+      "parameters": [
+        "VOC"
+      ],
+      "standards": [
+        "TS EN 13649"
+      ],
+      "prompt": "Dinamik seyreltmede fazla karışım çıkışı varken Vin=Vout−Vr her zaman kullanılabilir mi?",
+      "choices": [
+        "Hayır; Vout bütün karışım debisi olmayabilir.",
+        "Evet, bütün karıştırıcılar aynıdır.",
+        "Evet, fazla çıkıştaki gaz hesaba girmez.",
+        "Evet, debilerin T/P bazına bakılmaz."
+      ],
+      "correctIndex": 0,
+      "explanation": "Giren baca ve seyreltme gazı, analiz kolu ile fazla çıkış arasında bölünür. Fazla çıkışın ihmal edilmesi baca gazı hacmini yanlış verir.",
+      "source": "L05:22 — Ek A.2.1"
+    },
+    {
+      "id": "q170",
+      "topic": "Kaynak karşılaştırması — kritik farklar",
+      "scope": "Emisyon",
+      "parameters": [
+        "Partikül madde"
+      ],
+      "standards": [
+        "EPA Method 5",
+        "EPA Method 5 / EPA Method 17"
+      ],
+      "prompt": "Method 5’te ön ve son filtre kütle kararlılığı nasıl farklıdır?",
+      "choices": [
+        "Ön tartım ≤0,5 mg; son tartım ≤max(0,5 mg, net kütlenin %1’i).",
+        "İkisinde de daima 60 µg",
+        "Ön 1 g; son 10 g",
+        "Tartım aralığı hiçbirinde önemli değildir."
+      ],
+      "correctIndex": 0,
+      "explanation": "Ön şartlandırma ile numune sonrası sabit kütle sınırı ayrı hükümlerdir. Method 5’te ≥6 saat aralıklı tartım koşulu da korunur.",
+      "source": "D09:7,13 — §8.1.1, §11.2"
+    },
+    {
+      "id": "q171",
+      "topic": "Kaynak karşılaştırması — kritik farklar",
+      "scope": "Emisyon",
+      "parameters": [
+        "Partikül madde"
+      ],
+      "standards": [
+        "EPA Method 5",
+        "EPA Method 5 / EPA Method 17"
+      ],
+      "prompt": "Method 5 ön yarı aseton yıkamasına Method 29’daki 100 mL otomatik aktarılır mı?",
+      "choices": [
+        "Hayır; nicel geri kazanım ve gerçek kullanılan hacim esas alınır.",
+        "Evet, her yöntemde tam 100 mL",
+        "Hayır, hiçbir yıkama yapılmaz.",
+        "Evet, yalnız filtre çapı yeterlidir."
+      ],
+      "correctIndex": 0,
+      "explanation": "Method 29’un belirli fraksiyonunda sabit hacim tarifi vardır. Method 5 ön yıkamasında aynı sabit zorunluluk yoktur; her aseton tedarik kabından 200 mL blank ayrılır.",
+      "source": "D09:11-13 — §8.7"
+    },
+    {
+      "id": "q172",
+      "topic": "Kaynak karşılaştırması — kritik farklar",
+      "scope": "Emisyon",
+      "parameters": [
+        "Partikül madde"
+      ],
+      "standards": [
+        "EPA Method 17",
+        "EPA Method 5 / EPA Method 17"
+      ],
+      "prompt": "Method 17’de filtre sonrası uzatma borusu yıkaması ön PM numunesine eklenir mi?",
+      "choices": [
+        "Hayır; filtre sonrası uzatma ön yarı değildir.",
+        "Evet, bütün yüzeyler aynı ön yarıdır.",
+        "Yalnız 120 °C altında eklenir.",
+        "Bütün impingerler de mutlaka ön PM’ye eklenir."
+      ],
+      "correctIndex": 0,
+      "explanation": "Baca içi filtrenin yeri, numunenin ön/arka yüzey sınırını değiştirir. Method 5’te filtre önündeki prob ile Method 17’de filtre arkasındaki uzatma aynı fraksiyon değildir.",
+      "source": "W08:3-5 — §8"
+    },
+    {
+      "id": "q173",
+      "topic": "Kaynak karşılaştırması — kritik farklar",
+      "scope": "Emisyon",
+      "parameters": [
+        "Nem"
+      ],
+      "standards": [
+        "EPA Method 4"
+      ],
+      "prompt": "EPA Method 4’ün 0,60 standart m³ değeri otomatik 0 °C Nm³ müdür?",
+      "choices": [
+        "Hayır; kaynak referansı 20 °C / 101,325 kPa’dır.",
+        "Evet; bütün standart hacimler 0 °C’dir.",
+        "Evet; sayaç sıcaklığının önemi yoktur.",
+        "Hayır; hacim her zaman sıvı hacmidir."
+      ],
+      "correctIndex": 0,
+      "explanation": "Birim değişimi gazın fiziksel referans koşulunu değiştirmez. 20 °C ile 0 °C bazları ayrıca ideal gaz bağıntısıyla dönüştürülür.",
+      "source": "W07:8-10 — §12"
+    },
+    {
+      "id": "q174",
+      "topic": "Kaynak karşılaştırması — kritik farklar",
+      "scope": "Emisyon",
+      "parameters": [
+        "Nem"
+      ],
+      "standards": [
+        "EPA Method 4"
+      ],
+      "prompt": "Damlacıklı/doymuş gazda Method 4 iki nem tayinini nasıl değerlendirir?",
+      "choices": [
+        "Toplama ve doygunluk/psikrometri tayinlerinin düşüğünü kullanır.",
+        "İkisinin büyüğünü kullanır.",
+        "İkisini her zaman toplar.",
+        "Damlacıkları koşulsuz su buharı sayar."
+      ],
+      "correctIndex": 0,
+      "explanation": "Toplama treni sıvı damlacıkları da yakalayabilir. Doygunluk karşılaştırması bu pozitif hatanın değerlendirilmesi içindir.",
+      "source": "W07:1,9 — §4.1, §12.1.6"
+    },
+    {
+      "id": "q175",
+      "topic": "Kaynak karşılaştırması — kritik farklar",
+      "scope": "Emisyon",
+      "parameters": [
+        "Ağır metaller"
+      ],
+      "standards": [
+        "EPA Method 29"
+      ],
+      "prompt": "Metal filtresinin kabul değeri 1,3 µg/in² ile ön blank düzeltmesindeki 1,4 µg/in² aynı sınır mıdır?",
+      "choices": [
+        "Hayır; farklı amaçlı iki ayrı hükümdür.",
+        "Evet; biri yuvarlama hatasıdır.",
+        "Evet; ikisi 1,4 mg/cm² demektir.",
+        "Hayır; ikisi de yalnız gaz debisidir."
+      ],
+      "correctIndex": 0,
+      "explanation": "1,3 µg/in² filtre saflığı/kabulü içindir; 1,4 µg/in²×filtre alanı Method 29 ön yarı blank düzeltme algoritmasındaki eşiği kurar.",
+      "source": "D07:6,24 — §7.2.1, §12.6.1"
+    },
+    {
+      "id": "q176",
+      "topic": "Kaynak karşılaştırması — kritik farklar",
+      "scope": "Emisyon",
+      "parameters": [
+        "H₂S"
+      ],
+      "standards": [
+        "EPA Method 11"
+      ],
+      "prompt": "Asitlendirilmiş iyot eklenen Method 11 numunesi daha sonra analiz için saklanabilir mi?",
+      "choices": [
+        "Hayır; kaynak bu aşamadaki saklamaya izin vermez.",
+        "Evet, 4 hafta oda sıcaklığında",
+        "Evet, koşulsuz 30 gün",
+        "Evet, yalnız kapağı açık bırakılır."
+      ],
+      "correctIndex": 0,
+      "explanation": "İyot eklenmesinden sonra yaklaşık 30 dakika karanlıkta bekleme ve titrasyon takvimi uygulanır. Bu analiz işlem süresi numune saklama izni değildir.",
+      "source": "D04:7-9 — §8.7, §11.3"
+    },
+    {
+      "id": "q177",
+      "topic": "Kaynak karşılaştırması — kritik farklar",
+      "scope": "Emisyon",
+      "parameters": [
+        "Hız / debi"
+      ],
+      "standards": [
+        "EPA Method 2 / TS EN ISO 16911 / TS ISO 10780"
+      ],
+      "prompt": "Method 2’de 100 °C baca için %1,5 sıcaklık doğruluğunun bazı nedir?",
+      "choices": [
+        "373,15 K; yaklaşık 5,60 K",
+        "100 °C; tam 1,5 °C",
+        "273,15 K; tam 0 °C",
+        "Yalnız ortam sıcaklığı"
+      ],
+      "correctIndex": 0,
+      "explanation": "Şart minimum mutlak baca sıcaklığı üzerinden verilir. Kelvin ile Celsius aralıklarının büyüklüğü aynıdır, ancak yüzde hesabında mutlak sıcaklık kullanılmalıdır.",
+      "source": "W09:3 — §6.3"
+    },
+    {
+      "id": "q178",
+      "topic": "Kaynak karşılaştırması — kritik farklar",
+      "scope": "Emisyon",
+      "parameters": [
+        "Hız / debi"
+      ],
+      "standards": [
+        "EPA Method 2 / TS EN ISO 16911 / TS ISO 10780"
+      ],
+      "prompt": "EN ISO 16911-1 §9.5’te her noktada ΔP nasıl ortalanır?",
+      "choices": [
+        "≥1 dk içinde en az 3 anlık okuma veya ≥1 dk elektronik ortalama",
+        "Yalnız tek anlık fotoğraf",
+        "Her noktada zorunlu 30 dk",
+        "Bütün noktaların basıncını önce tek değerde birleştirerek"
+      ],
+      "correctIndex": 0,
+      "explanation": "Önce her noktanın zaman ortalaması ve yerel hızı belirlenir; sonra eş alan gridindeki hızların mekânsal ortalaması alınır.",
+      "source": "L04:27 — §9.5"
+    },
+    {
+      "id": "q179",
+      "topic": "Kaynak karşılaştırması — kritik farklar",
+      "scope": "Emisyon",
+      "parameters": [
+        "Hız / debi"
+      ],
+      "standards": [
+        "EPA Method 2 / TS EN ISO 16911 / TS ISO 10780"
+      ],
+      "prompt": "EN ISO 16911-1’de bir noktada 18° teğetsel akış açısı nasıl ele alınır?",
+      "choices": [
+        "Yön ve hız ölçebilen yöntemle noktasal değerlendirme ve uygun yön düzeltmesi gerekir.",
+        "EPA ortalaması 20° altında diye otomatik kabul edilir.",
+        "Açı rapordan silinir.",
+        "Doğrudan bütün hızlar sıfır yapılır."
+      ],
+      "correctIndex": 0,
+      "explanation": "Herhangi bir noktada >15° koşulu EPA Method 1’in ortalama mutlak açı kuralı değildir. Cosθ yön düzeltmesi ölçüm düzlemini otomatik uygun hale getirmez.",
+      "source": "L04:26-27 — §9.3.5"
+    },
+    {
+      "id": "q180",
+      "topic": "Kaynak karşılaştırması — kritik farklar",
+      "scope": "Emisyon",
+      "parameters": [
+        "Hız / debi"
+      ],
+      "standards": [
+        "EPA Method 2 / TS EN ISO 16911 / TS ISO 10780"
+      ],
+      "prompt": "O₂ referansına hacimsel debi ve derişim düzeltmeleri aynı çarpanla mı yapılır?",
+      "choices": [
+        "Hayır; aynı bazda birbirinin tersidir ve kütlesel debi korunur.",
+        "Evet; ikisini de daima 21 ile çarp",
+        "Evet; debi ve derişim aynı büyüklüktür.",
+        "Hiçbir yöntemde referans O₂ gerekmez."
+      ],
+      "correctIndex": 0,
+      "explanation": "Debi çarpanı (21−Ogerçek)/(21−Oref), derişim çarpanı tersidir. Aynı bazda C×q değişmez; farklı kuru/yaş bazlar karıştırılmaz.",
+      "source": "L04:30 — §10.6"
+    },
+    {
+      "id": "q181",
+      "topic": "Kaynak karşılaştırması — kritik farklar",
+      "scope": "Emisyon",
+      "parameters": [
+        "TOC / FID"
+      ],
+      "standards": [
+        "TS EN 12619 / TSE CEN/TS 13649",
+        "TS EN 12619 / EPA Method 25A"
+      ],
+      "prompt": "EN 12619 sistem T90 ve EPA25A tepki süresi aynı yüzdeyi mi kullanır?",
+      "choices": [
+        "Hayır; EN T90, EPA25A %95 seviyesini kullanır.",
+        "Evet; ikisi de %50",
+        "Evet; ikisi de daima 30 dk",
+        "Hayır; hiçbiri cihaz yanıtını ölçmez."
+      ],
+      "correctIndex": 0,
+      "explanation": "Tepki tanımı yönteme özgüdür. EN 12619 Tablo 1 T90≤200 s ister; EPA25A üç T95 ölçümünün ortalamasını tarif eder.",
+      "source": "D24:10,14; W10:2,4"
+    },
+    {
+      "id": "q182",
+      "topic": "Kaynak karşılaştırması — kritik farklar",
+      "scope": "Emisyon",
+      "parameters": [
+        "TOC / FID"
+      ],
+      "standards": [
+        "TS EN 12619 / TSE CEN/TS 13649",
+        "TS EN 12619 / EPA Method 25A"
+      ],
+      "prompt": "EN 12619’da sıfır/span drifti %3 span ise hangi yaklaşım gerekir?",
+      "choices": [
+        "Sıfır ve span için düzeltme; <%5 geçerlilik sınırı ayrıca korunur.",
+        "Hiç kontrol gerekmez.",
+        "Bütün ölçüm koşulsuz geçersizdir.",
+        "Drift numuneye asit ekleyerek giderilir."
+      ],
+      "correctIndex": 0,
+      "explanation": "§6.2.3 >%2 span durumunda düzeltme ister; drift <%5 span olmalıdır. EPA25A’nın <%3 sınırı bu kuralla birleştirilmez.",
+      "source": "D24:12 — §6.2.3"
+    },
+    {
+      "id": "q183",
+      "topic": "Kaynak karşılaştırması — kritik farklar",
+      "scope": "Emisyon",
+      "parameters": [
+        "TOC / FID"
+      ],
+      "standards": [
+        "TS EN 12619 / TSE CEN/TS 13649",
+        "TS EN 12619 / EPA Method 25A"
+      ],
+      "prompt": "EN 12619 örnekleme hattının ısıtması EPA25A ile aynı mıdır?",
+      "choices": [
+        "Hayır; EN boyunca ≥180 °C, EPA25A analizöre kadar ≥110 °C ister.",
+        "Evet; ikisi de oda sıcaklığı",
+        "Evet; ikisi de <40 °C tüp sınırı",
+        "Hayır; EN 12619 hiç filtre kullanmaz."
+      ],
+      "correctIndex": 0,
+      "explanation": "Ayrıca EPA25A FID bloğu >120 °C’dir. Sorbent VOC tüpü, hat ve FID bloğu sıcaklıkları ayrı bileşenlere aittir.",
+      "source": "D24:9; W10:2-3"
+    },
+    {
+      "id": "q184",
+      "topic": "Kaynak karşılaştırması — kritik farklar",
+      "scope": "Emisyon",
+      "parameters": [
+        "VOC"
+      ],
+      "standards": [
+        "TS EN 13649"
+      ],
+      "prompt": "CEN/TS 13649:2014 yalnız çözücü desorpsiyonlu aktif karbonu mu kapsar?",
+      "choices": [
+        "Hayır; termal desorpsiyon tüpleri de kapsamdadır.",
+        "Evet; TD kesinlikle yoktur.",
+        "Yalnız baca debisini ölçer.",
+        "Yalnız çöken toz toplar."
+      ],
+      "correctIndex": 0,
+      "explanation": "Eski dosya adı veya önceki EN 13649:2001 başlığı yeni teknik şartnamenin kapsamını daraltmaz. TD’nin sorbent, debi, hacim ve geri kazanımı ayrı seçilir.",
+      "source": "L05:8-10 — §5"
+    },
+    {
+      "id": "q185",
+      "topic": "İmisyon — gravimetri ve kalite",
+      "scope": "İmisyon",
+      "parameters": [
+        "PM10 / PM2,5"
+      ],
+      "standards": [
+        "TS EN 12341 / EPA 40 CFR 50-53",
+        "TS EN 12341 / EPA 40 CFR Part 50-53"
+      ],
+      "prompt": "EN 12341 ön tartımında iki kütle arasındaki sınır nedir?",
+      "choices": [
+        "≤40 µg",
+        "≤60 µg",
+        "≤0,5 g",
+        "≤100 mg"
+      ],
+      "correctIndex": 0,
+      "explanation": "Ön filtre en az 48 saat ve ardından en az 12 saat şartlandırılıp tartılır; son iki kütle ortalaması kullanılır.",
+      "source": "D23:30 — §6.3"
+    },
+    {
+      "id": "q186",
+      "topic": "İmisyon — gravimetri ve kalite",
+      "scope": "İmisyon",
+      "parameters": [
+        "PM10 / PM2,5"
+      ],
+      "standards": [
+        "TS EN 12341 / EPA 40 CFR 50-53",
+        "TS EN 12341 / EPA 40 CFR Part 50-53"
+      ],
+      "prompt": "EN 12341 son tartımındaki iki kütle arasındaki sınır nedir?",
+      "choices": [
+        "≤60 µg",
+        "≤40 mg",
+        "≤1 g",
+        "≤25 mg"
+      ],
+      "correctIndex": 0,
+      "explanation": "Numuneli filtre ≥48 saatten sonra tartılır; ikinci tartım 24–72 saat ek şartlandırmadan sonradır. Ön tartımın 40 µg sınırıyla karıştırılmaz.",
+      "source": "D23:31-32 — §6.5"
+    },
+    {
+      "id": "q187",
+      "topic": "İmisyon — gravimetri ve kalite",
+      "scope": "İmisyon",
+      "parameters": [
+        "PM10 / PM2,5"
+      ],
+      "standards": [
+        "TS EN 12341 / EPA 40 CFR 50-53",
+        "TS EN 12341 / EPA 40 CFR Part 50-53"
+      ],
+      "prompt": "EN 12341 bireysel saha blankı PM kütlesinden çıkarılır mı?",
+      "choices": [
+        "Hayır; bireysel saha blankı bu düzeltme için kullanılmaz.",
+        "Evet; her numuneden koşulsuz çıkarılır.",
+        "Yalnız blank büyükse sınırsız çıkarılır.",
+        "Blank daima sıfır varsayılır."
+      ],
+      "correctIndex": 0,
+      "explanation": "Hava akışının numune filtresine etkisi ile çekiş yapılmayan blankın süreçleri aynı olmayabilir. Saha blankının mutlak kütle farkı ≤60 µg olmalıdır.",
+      "source": "D23:33 — §6.7.3"
+    },
+    {
+      "id": "q188",
+      "topic": "İmisyon — gravimetri ve kalite",
+      "scope": "İmisyon",
+      "parameters": [
+        "PM10 / PM2,5"
+      ],
+      "standards": [
+        "TS EN 12341 / EPA 40 CFR 50-53",
+        "TS EN 12341 / EPA 40 CFR Part 50-53"
+      ],
+      "prompt": "EN 12341’de 2,3 m³/saat hangi hacim koşullarındadır?",
+      "choices": [
+        "Başlık yakınındaki ortam koşullarında",
+        "Her zaman 0 °C kuru normal",
+        "Her zaman 20 °C standart",
+        "Baca koşullarında"
+      ],
+      "correctIndex": 0,
+      "explanation": "Boyut seçici giriş doğru gerçek ortam debisini gerektirir. Pompa sonrası ölçülen debi T/P ile ortam koşullarına getirilir.",
+      "source": "D23:20-21 — §5.1.6"
+    },
+    {
+      "id": "q189",
+      "topic": "İmisyon — gravimetri ve kalite",
+      "scope": "İmisyon",
+      "parameters": [
+        "PM10 / PM2,5"
+      ],
+      "standards": [
+        "TS EN 12341 / EPA 40 CFR 50-53",
+        "TS EN 12341 / EPA 40 CFR Part 50-53"
+      ],
+      "prompt": "PM2,5 impaksiyon bakımı için üretici aralığı yoksa EN 12341 ne belirtir?",
+      "choices": [
+        "En az her 15. numunede; koşula göre daha sık",
+        "Her 300. numunede",
+        "Yalnız cihaz bozulunca",
+        "Her zaman 4 haftalık bekletmeden sonra"
+      ],
+      "correctIndex": 0,
+      "explanation": "Aynı kaynak PM10 için her 30. numuneyi belirtir. Yerel yük ve üretici gereği daha sık bakım gerekebilir.",
+      "source": "D23:35 — §7.4"
+    },
+    {
+      "id": "q190",
+      "topic": "İmisyon — gravimetri ve kalite",
+      "scope": "İmisyon",
+      "parameters": [
+        "PM10 / PM2,5"
+      ],
+      "standards": [
+        "TS EN 12341 / EPA 40 CFR 50-53",
+        "TS EN 12341 / EPA 40 CFR Part 50-53"
+      ],
+      "prompt": "EN 12341 yer değiştiren örnekleyicide kaçak kontrolü gerekir mi?",
+      "choices": [
+        "Evet; kurulum/yer değiştirmede ve yıllık kontrolde",
+        "Hayır; yalnız ilk imalatta",
+        "Yalnız bir önceki sonuç yüksekse",
+        "Sadece filtre rengi değişirse"
+      ],
+      "correctIndex": 0,
+      "explanation": "Kaçak >%1 ise bakım ve yeniden kontrol gerekir. Yıllık kontrol yeni kurulumdaki kontrolü ortadan kaldırmaz.",
+      "source": "D23:36 — §7.9"
     }
   ]
 }

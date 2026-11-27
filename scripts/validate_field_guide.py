@@ -58,9 +58,15 @@ def validate(data, source_index):
             assert diagram['shared'][-1]['kind']=='splitter'
             assert len(diagram['branches'])==2
             all_nodes=diagram['shared']+sum([b['nodes'] for b in diagram['branches']],[])
+            if diagram.get('type')=='dilution':
+                assert diagram['dilution']['id'] not in {n['id'] for n in all_nodes}
+                assert diagram['dilution']['content'] and diagram['dilution']['label']
+                assert diagram['branches'][0]['id']=='excess' and diagram['branches'][0]['nodes'][-1]['kind']=='trap'
             assert len({n['id'] for n in all_nodes})==len(all_nodes), 'Kol/düğüm kimlikleri çakışıyor'
             for branch in diagram['branches']:
-                assert branch['label'] and branch['nodes'][-1]['kind']=='meter'
+                assert branch['label']
+                if diagram.get('type')!='dilution' or branch['id']!='excess':
+                    assert branch['nodes'][-1]['kind']=='meter'
     assert len(data['fundamentals']) >= 20
     return len(ids)
 

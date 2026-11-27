@@ -1,7 +1,7 @@
 {
   "repository": "onursancak17/EuroMetrics-Rapor",
   "commit": "2620adb1dca2938a2198fd9bf1d264426fd89bca",
-  "reviewedAt": "2026-11-26",
+  "reviewedAt": "2026-11-27",
   "notice": "Kaynak kimlik/sayfa dizini; tam PDF metni yayımlanmaz. Arşiv sürümü güncel yürürlük iddiası değildir.",
   "documents": [
     {
@@ -9,444 +9,584 @@
       "sha": "c311aabc6dc131911a1f73a67ae3cac90c312553",
       "id": "D01",
       "pages": 2,
-      "title": "FR45.pdf"
+      "title": "FR45.pdf",
+      "sourceKind": "Saha formu"
     },
     {
       "path": "standards_sources/DIGER/M5PMAx BACADA TOZ ÖRNEKLEME CİHAZIr.1.3_kopyası.pdf",
       "sha": "c76e5ca9626383b3ace6b928642d4481790ff372",
       "id": "D02",
       "pages": 32,
-      "title": "M5PMAx BACADA TOZ ÖRNEKLEME CİHAZIr.1.3 kopyası.pdf"
+      "title": "M5PMAx BACADA TOZ ÖRNEKLEME CİHAZIr.1.3 kopyası.pdf",
+      "sourceKind": "Cihaz kullanım kılavuzu"
     },
     {
       "path": "standards_sources/DIGER/N5 Atıkların Yakılmasına İlişkin Yönetmelik M AKA.pdf",
       "sha": "52702f2598db936cc63680e9ca38e986f56ad51a",
       "id": "D03",
       "pages": 17,
-      "title": "N5 Atıkların Yakılmasına İlişkin Yönetmelik M AKA.pdf"
+      "title": "N5 Atıkların Yakılmasına İlişkin Yönetmelik M AKA.pdf",
+      "sourceKind": "Eğitim sunumu"
     },
     {
       "path": "standards_sources/EPA/EPA_Method_11.pdf",
       "sha": "305a262b418eb5e033fa0fa6c0fe1bf84d3c9220",
       "id": "D04",
       "pages": 13,
-      "title": "EPA Method 11.pdf"
+      "title": "EPA Method 11.pdf",
+      "sourceKind": "Birincil standart / yöntem metni"
     },
     {
       "path": "standards_sources/EPA/EPA_Method_13A.pdf",
       "sha": "8c23a33537df59980c70890d84e1d2dd1574ab1c",
       "id": "D05",
       "pages": 14,
-      "title": "EPA Method 13A.pdf"
+      "title": "EPA Method 13A.pdf",
+      "sourceKind": "Birincil standart / yöntem metni"
     },
     {
       "path": "standards_sources/EPA/EPA_Method_26A.pdf",
       "sha": "420e4bdbed082251f0500ea16c72f96af74696ad",
       "id": "D06",
       "pages": 13,
-      "title": "EPA Method 26A.pdf"
+      "title": "EPA Method 26A.pdf",
+      "sourceKind": "Birincil standart / yöntem metni"
     },
     {
       "path": "standards_sources/EPA/EPA_Method_29.pdf",
       "sha": "c9969f1a4fc37d966c24c11732eab331d57ebd76",
       "id": "D07",
       "pages": 37,
-      "title": "EPA Method 29.pdf"
+      "title": "EPA Method 29.pdf",
+      "sourceKind": "Birincil standart / yöntem metni"
     },
     {
       "path": "standards_sources/EPA/EPA_Method_4.pdf",
       "sha": "5249b5817fa3fcf3f011eb42bb25ec11de6509f9",
       "id": "D08",
       "pages": 18,
-      "title": "EPA Method 4.pdf"
+      "title": "EPA Method 4.pdf",
+      "sourceKind": "Birincil standart / yöntem metni"
     },
     {
       "path": "standards_sources/EPA/EPA_Method_5.pdf",
       "sha": "4d9ad55ca15c5535e531941055ef732e053d1ae2",
       "id": "D09",
       "pages": 42,
-      "title": "EPA Method 5.pdf"
+      "title": "EPA Method 5.pdf",
+      "sourceKind": "Birincil standart / yöntem metni"
     },
     {
       "path": "standards_sources/EPA/EPA_Method_8.pdf",
       "sha": "a1d327cf8a358ab60a8444f9764ab3ced8a1389a",
       "id": "D10",
       "pages": 10,
-      "title": "EPA Method 8.pdf"
+      "title": "EPA Method 8.pdf",
+      "sourceKind": "Birincil standart / yöntem metni"
     },
     {
       "path": "standards_sources/Emisyon-İmisyon Eğitim Dokümanları/Dedeksiyon Limitleri Ölçüm Süreleri.pdf",
       "sha": "ca28eb8fdd2d14f2b1a9e62c4e61ccf6c2ddaccf",
       "id": "D11",
       "pages": 15,
-      "title": "Dedeksiyon Limitleri Ölçüm Süreleri.pdf"
+      "title": "Dedeksiyon Limitleri Ölçüm Süreleri.pdf",
+      "sourceKind": "Eğitim sunumu"
     },
     {
       "path": "standards_sources/Emisyon-İmisyon Eğitim Dokümanları/Hava Kalitesi Ölçümleri.pdf",
       "sha": "4e2555ca13731749b47ca8570e0886d1f065686a",
       "id": "D12",
       "pages": 21,
-      "title": "Hava Kalitesi Ölçümleri.pdf"
+      "title": "Hava Kalitesi Ölçümleri.pdf",
+      "sourceKind": "Eğitim sunumu"
     },
     {
       "path": "standards_sources/Emisyon-İmisyon Eğitim Dokümanları/Hız Tayini,  Nem Tayini.pdf",
       "sha": "80a15615e39a48907132f178a83d9940d3e55438",
       "id": "D13",
       "pages": 27,
-      "title": "Hız Tayini,  Nem Tayini.pdf"
+      "title": "Hız Tayini,  Nem Tayini.pdf",
+      "sourceKind": "Eğitim sunumu"
     },
     {
       "path": "standards_sources/Emisyon-İmisyon Eğitim Dokümanları/Metal Örneklemesi, Halojen Örneklemesi.pdf",
       "sha": "7042952c179a6052a35c4169cba7885f8582ced2",
       "id": "D14",
       "pages": 30,
-      "title": "Metal Örneklemesi, Halojen Örneklemesi.pdf"
+      "title": "Metal Örneklemesi, Halojen Örneklemesi.pdf",
+      "sourceKind": "Eğitim sunumu"
     },
     {
       "path": "standards_sources/Emisyon-İmisyon Eğitim Dokümanları/PAH Örneklemesi, PCDDDF Örneklemesi.pdf",
       "sha": "ea57d07d0699884694b9212b1bbbf5c4c45a77fa",
       "id": "D15",
       "pages": 22,
-      "title": "PAH Örneklemesi, PCDDDF Örneklemesi.pdf"
+      "title": "PAH Örneklemesi, PCDDDF Örneklemesi.pdf",
+      "sourceKind": "Eğitim sunumu"
     },
     {
       "path": "standards_sources/Emisyon-İmisyon Eğitim Dokümanları/Partiküler Madde  (Toz) Ölçümü.pdf",
       "sha": "23586d1117d7f751bcc37d5f42cc38494cf228f3",
       "id": "D16",
       "pages": 32,
-      "title": "Partiküler Madde  (Toz) Ölçümü.pdf"
+      "title": "Partiküler Madde  (Toz) Ölçümü.pdf",
+      "sourceKind": "Eğitim sunumu"
     },
     {
       "path": "standards_sources/Emisyon-İmisyon Eğitim Dokümanları/Siyanür Örneklemesi, Sülfirik Asit Örneklemesi.pdf",
       "sha": "8b3cb60d099897463db65d1ce45c968cffd5ce8b",
       "id": "D17",
       "pages": 24,
-      "title": "Siyanür Örneklemesi, Sülfirik Asit Örneklemesi.pdf"
+      "title": "Siyanür Örneklemesi, Sülfirik Asit Örneklemesi.pdf",
+      "sourceKind": "Eğitim sunumu"
     },
     {
       "path": "standards_sources/Emisyon-İmisyon Eğitim Dokümanları/VOC Parametresinde Metot Seçimi.pdf",
       "sha": "a43d98e1ff69846d2df4ba3b92f60840663fa0b4",
       "id": "D18",
       "pages": 23,
-      "title": "VOC Parametresinde Metot Seçimi.pdf"
+      "title": "VOC Parametresinde Metot Seçimi.pdf",
+      "sourceKind": "Eğitim sunumu"
     },
     {
       "path": "standards_sources/Emisyon-İmisyon Eğitim Dokümanları/VOC Örneklemesi, Formaldehit Örneklemesi-1.pdf",
       "sha": "ba9f792fd7efd5374232ecceebc2ad7a95a1e82d",
       "id": "D19",
       "pages": 21,
-      "title": "VOC Örneklemesi, Formaldehit Örneklemesi-1.pdf"
+      "title": "VOC Örneklemesi, Formaldehit Örneklemesi-1.pdf",
+      "sourceKind": "Eğitim sunumu"
     },
     {
       "path": "standards_sources/Emisyon-İmisyon Eğitim Dokümanları/Yanma Gazları Ölçümü.pdf",
       "sha": "6bca4388fe72434ed6cd6c93714192caa9b6cdae",
       "id": "D20",
       "pages": 16,
-      "title": "Yanma Gazları Ölçümü.pdf"
+      "title": "Yanma Gazları Ölçümü.pdf",
+      "sourceKind": "Eğitim sunumu"
     },
     {
       "path": "standards_sources/Emisyon-İmisyon Eğitim Dokümanları/Ölçme Bölgeleri, Yerleri ve Ölçümün Amacı.pdf",
       "sha": "05edb091f42738df3d8a9e686984b0103e0ea3b5",
       "id": "D21",
       "pages": 22,
-      "title": "Ölçme Bölgeleri, Yerleri ve Ölçümün Amacı.pdf"
+      "title": "Ölçme Bölgeleri, Yerleri ve Ölçümün Amacı.pdf",
+      "sourceKind": "Eğitim sunumu"
     },
     {
       "path": "standards_sources/Emisyon-İmisyon Eğitim Dokümanları/Örneklemesi, Formaldehit Örneklemesi.pdf",
       "sha": "ba9f792fd7efd5374232ecceebc2ad7a95a1e82d",
       "id": "D22",
       "pages": 21,
-      "title": "Örneklemesi, Formaldehit Örneklemesi.pdf"
+      "title": "Örneklemesi, Formaldehit Örneklemesi.pdf",
+      "sourceKind": "Eğitim sunumu"
     },
     {
       "path": "standards_sources/TS_EN/TS_EN_12341.pdf",
       "sha": "67df30201f15c50e0ca48d86617c53c4cf38e84f",
       "id": "D23",
       "pages": 64,
-      "title": "TS EN 12341.pdf"
+      "title": "BS EN 12341:2023 — ortam PM10 / PM2,5",
+      "sourceKind": "Birincil standart / yöntem metni",
+      "edition": "EN 12341:2023; arşiv dosya adında TS yazmasına rağmen BS baskısı"
     },
     {
       "path": "standards_sources/TS_EN/TS_EN_12619.pdf",
       "sha": "bc69036dbbd28c205b3fec687532f0a8cee8e25f",
       "id": "D24",
       "pages": 24,
-      "title": "TS EN 12619.pdf"
+      "title": "TS EN 12619.pdf",
+      "sourceKind": "Birincil standart / yöntem metni"
     },
     {
       "path": "standards_sources/TS_EN/TS_EN_1948_1.pdf",
       "sha": "9dc62a3d682002728198ee53287897d083f4320b",
       "id": "D25",
       "pages": 66,
-      "title": "TS EN 1948 1.pdf"
+      "title": "TS EN 1948 1.pdf",
+      "sourceKind": "Birincil standart / yöntem metni"
     },
     {
       "path": "standards_sources/TS_EN/TS_EN_ISO_16911.pdf",
       "sha": "1be0b902d486f1722aa975170de0906d105ff08e",
       "id": "D26",
       "pages": 20,
-      "title": "TS EN ISO 16911.pdf"
+      "title": "EN ISO 16911 hakkında eğitim sunumu — standart tam metni değildir",
+      "sourceKind": "Eğitim sunumu"
     },
     {
       "path": "standards_sources/TS_ISO/ISO_11338_1.pdf",
       "sha": "b4b4ef7544d69534493dbda5f683653337c6e94d",
       "id": "D27",
       "pages": 32,
-      "title": "ISO 11338 1.pdf"
+      "title": "ISO 11338 1.pdf",
+      "sourceKind": "Birincil standart / yöntem metni"
     },
     {
       "path": "standards_sources/TS_ISO/ISO_11338_2.pdf",
       "sha": "aa643af02472a0f505a33d6f307f2c9cd6f93d19",
       "id": "D28",
       "pages": 30,
-      "title": "ISO 11338 2.pdf"
+      "title": "ISO 11338 2.pdf",
+      "sourceKind": "Birincil standart / yöntem metni"
     },
     {
       "path": "standards_sources/TS_ISO/TS_ISO_10780.pdf",
       "sha": "ae5dfc1e3870002016766da772fa5d9a42d8f37e",
       "id": "D29",
       "pages": 21,
-      "title": "TS ISO 10780.pdf"
+      "title": "TS ISO 10780.pdf",
+      "sourceKind": "Birincil standart / yöntem metni"
     },
     {
       "path": "standards_sources/TS_ISO/TS_ISO_12039.pdf",
       "sha": "aff755159a7cf0f71cc289998661304ea1b405c2",
       "id": "D30",
       "pages": 58,
-      "title": "TS ISO 12039.pdf"
+      "title": "TS ISO 12039.pdf",
+      "sourceKind": "Birincil standart / yöntem metni"
     },
     {
       "path": "standards_sources/TS_ISO/TS_ISO_12141.pdf",
       "sha": "0ac553701e7e973f7f52991b91076fdacddc5a27",
       "id": "D31",
       "pages": 43,
-      "title": "TS ISO 12141.pdf"
+      "title": "TS ISO 12141.pdf",
+      "sourceKind": "Birincil standart / yöntem metni",
+      "edition": "TS ISO 12141:2004, esas ISO 12141:2002; ISO 2024 sürümü değildir"
     },
     {
       "path": "standards_sources/TS_ISO/TS_ISO_7935.pdf",
       "sha": "80cf1becd65b478ddbf7eac245b702490d7641c1",
       "id": "D32",
       "pages": 50,
-      "title": "TS ISO 7935.pdf"
+      "title": "TS ISO 7935.pdf",
+      "sourceKind": "Birincil standart / yöntem metni"
     },
     {
       "path": "standards_sources/TS_ISO/TS_ISO_9096.pdf",
       "sha": "1fbe782948277d61ea68647555899e5c4e257c1c",
       "id": "D33",
       "pages": 53,
-      "title": "TS ISO 9096.pdf"
+      "title": "TS ISO 9096.pdf",
+      "sourceKind": "Birincil standart / yöntem metni"
     },
     {
       "path": "standards_sources/Ölçüm Talimatları/TL07-REV.10-BACADA STANDART YANMA GAZLARI ÖLÇÜM TALİMATI.pdf",
       "sha": "a2ae971be207c14380947ff724b4132ccbbb646d",
       "id": "D34",
       "pages": 13,
-      "title": "TL07-REV.10-BACADA STANDART YANMA GAZLARI ÖLÇÜM TALİMATI.pdf"
+      "title": "TL07-REV.10-BACADA STANDART YANMA GAZLARI ÖLÇÜM TALİMATI.pdf",
+      "sourceKind": "Kurum içi ölçüm talimatı"
     },
     {
       "path": "standards_sources/Ölçüm Talimatları/TL08-04 BACADA İSLİLİK ÖLÇÜM TALİMATI.pdf",
       "sha": "919950f5f24ac4cf7d210555cc6254f6fc6d0e19",
       "id": "D35",
       "pages": 5,
-      "title": "TL08-04 BACADA İSLİLİK ÖLÇÜM TALİMATI.pdf"
+      "title": "TL08-04 BACADA İSLİLİK ÖLÇÜM TALİMATI.pdf",
+      "sourceKind": "Kurum içi ölçüm talimatı"
     },
     {
       "path": "standards_sources/Ölçüm Talimatları/TL09-REV.12-BACADA TOZ ÖRNEKLEMESİ STANDART İŞLETME TALİMATI.pdf",
       "sha": "ed262ec34949e00f5cbd65f595f90a9619d241f5",
       "id": "D36",
       "pages": 38,
-      "title": "TL09-REV.12-BACADA TOZ ÖRNEKLEMESİ STANDART İŞLETME TALİMATI.pdf"
+      "title": "TL09-REV.12-BACADA TOZ ÖRNEKLEMESİ STANDART İŞLETME TALİMATI.pdf",
+      "sourceKind": "Kurum içi ölçüm talimatı"
     },
     {
       "path": "standards_sources/Ölçüm Talimatları/TL11-15 BACADA VOC ÖRNEKLEMESİ STANDART İŞLETME TALİMATI.pdf",
       "sha": "b7aeb546549861acf4c180cf6ba729afca4814f0",
       "id": "D37",
       "pages": 11,
-      "title": "TL11-15 BACADA VOC ÖRNEKLEMESİ STANDART İŞLETME TALİMATI.pdf"
+      "title": "TL11-15 BACADA VOC ÖRNEKLEMESİ STANDART İŞLETME TALİMATI.pdf",
+      "sourceKind": "Kurum içi ölçüm talimatı"
     },
     {
       "path": "standards_sources/Ölçüm Talimatları/TL112-07 BACADA  SÜLFÜRİK ASİT TAYİNİ STANDART İŞLETME TALİMATI.pdf",
       "sha": "70c9d22e258d817ae818913a53c9dbe1274b6263",
       "id": "D38",
       "pages": 11,
-      "title": "TL112-07 BACADA  SÜLFÜRİK ASİT TAYİNİ STANDART İŞLETME TALİMATI.pdf"
+      "title": "TL112-07 BACADA  SÜLFÜRİK ASİT TAYİNİ STANDART İŞLETME TALİMATI.pdf",
+      "sourceKind": "Kurum içi ölçüm talimatı"
     },
     {
       "path": "standards_sources/Ölçüm Talimatları/TL113-REV.11-BACADA  FORMALDEHİT TAYİNİ STANDART İŞLETME TALİMATI.pdf",
       "sha": "911798195d4beb3a49ff71ddc0ea931be1538140",
       "id": "D39",
       "pages": 12,
-      "title": "TL113-REV.11-BACADA  FORMALDEHİT TAYİNİ STANDART İŞLETME TALİMATI.pdf"
+      "title": "TL113-REV.11-BACADA  FORMALDEHİT TAYİNİ STANDART İŞLETME TALİMATI.pdf",
+      "sourceKind": "Kurum içi ölçüm talimatı"
     },
     {
       "path": "standards_sources/Ölçüm Talimatları/TL114-07 BACADA HİDROJEN SÜLFÜR TAYİNİ STANDART İŞLETME TALİMATI.pdf",
       "sha": "24e31de68c6cdaf68f9a0efb801c634291fa41ba",
       "id": "D40",
       "pages": 14,
-      "title": "TL114-07 BACADA HİDROJEN SÜLFÜR TAYİNİ STANDART İŞLETME TALİMATI.pdf"
+      "title": "TL114-07 BACADA HİDROJEN SÜLFÜR TAYİNİ STANDART İŞLETME TALİMATI.pdf",
+      "sourceKind": "Kurum içi ölçüm talimatı"
     },
     {
       "path": "standards_sources/Ölçüm Talimatları/TL115-07 BACADA  HİDROJENSİYANÜR TAYİNİ STANDART İŞLETME TALİMATI.pdf",
       "sha": "c53ca1de56ed18b988775e72ced63d6ff2a18b31",
       "id": "D41",
       "pages": 13,
-      "title": "TL115-07 BACADA  HİDROJENSİYANÜR TAYİNİ STANDART İŞLETME TALİMATI.pdf"
+      "title": "TL115-07 BACADA  HİDROJENSİYANÜR TAYİNİ STANDART İŞLETME TALİMATI.pdf",
+      "sourceKind": "Kurum içi ölçüm talimatı"
     },
     {
       "path": "standards_sources/Ölçüm Talimatları/TL119-04 BACADA   PAH ÖRNEKLEMESİ STANDART İŞLETME TALİMATI.pdf",
       "sha": "bfc4cd53c38762c3befcaf258cc38583de2df795",
       "id": "D42",
       "pages": 11,
-      "title": "TL119-04 BACADA   PAH ÖRNEKLEMESİ STANDART İŞLETME TALİMATI.pdf"
+      "title": "TL119-04 BACADA   PAH ÖRNEKLEMESİ STANDART İŞLETME TALİMATI.pdf",
+      "sourceKind": "Kurum içi ölçüm talimatı"
     },
     {
       "path": "standards_sources/Ölçüm Talimatları/TL13-08 ORTAM HAVASINDA SOLUNABİLİR TOZ TAYİNİ STANDART İŞLETME TALİMATI.pdf",
       "sha": "b43e8724c2820aff90e67fc674380053578fa1d6",
       "id": "D43",
       "pages": 8,
-      "title": "TL13-08 ORTAM HAVASINDA SOLUNABİLİR TOZ TAYİNİ STANDART İŞLETME TALİMATI.pdf"
+      "title": "TL13-08 ORTAM HAVASINDA SOLUNABİLİR TOZ TAYİNİ STANDART İŞLETME TALİMATI.pdf",
+      "sourceKind": "Kurum içi ölçüm talimatı"
     },
     {
       "path": "standards_sources/Ölçüm Talimatları/TL14-REV07- ORTAM HAVASINDA ÇÖKEN TOZ TAYİNİ STANDART İŞLETME TALİMATI.pdf",
       "sha": "ec82a274dea0c42af3f1d571556fbd27b81156cc",
       "id": "D44",
       "pages": 7,
-      "title": "TL14-REV07- ORTAM HAVASINDA ÇÖKEN TOZ TAYİNİ STANDART İŞLETME TALİMATI.pdf"
+      "title": "TL14-REV07- ORTAM HAVASINDA ÇÖKEN TOZ TAYİNİ STANDART İŞLETME TALİMATI.pdf",
+      "sourceKind": "Kurum içi ölçüm talimatı"
     },
     {
       "path": "standards_sources/Ölçüm Talimatları/TL144-REV.02-BACADA TOPLAM ORGANİK KARBONUN(TOC) TAYİNİ STANDART İŞLETME TALİMATI (2).pdf",
       "sha": "612874fb15579206524dbdfbff97d4bda7b531ab",
       "id": "D45",
       "pages": 8,
-      "title": "TL144-REV.02-BACADA TOPLAM ORGANİK KARBONUN(TOC) TAYİNİ STANDART İŞLETME TALİMATI (2).pdf"
+      "title": "TL144-REV.02-BACADA TOPLAM ORGANİK KARBONUN(TOC) TAYİNİ STANDART İŞLETME TALİMATI (2).pdf",
+      "sourceKind": "Kurum içi ölçüm talimatı"
     },
     {
       "path": "standards_sources/Ölçüm Talimatları/TL15-04 ORTAM HAVASINDA GAZ TAYİNİ STANDART İŞLETME TALİMATI.pdf",
       "sha": "fe942c8b3a3119384bfe016424942f96f33f64f9",
       "id": "D46",
       "pages": 5,
-      "title": "TL15-04 ORTAM HAVASINDA GAZ TAYİNİ STANDART İŞLETME TALİMATI.pdf"
+      "title": "TL15-04 ORTAM HAVASINDA GAZ TAYİNİ STANDART İŞLETME TALİMATI.pdf",
+      "sourceKind": "Kurum içi ölçüm talimatı"
     },
     {
       "path": "standards_sources/Ölçüm Talimatları/TL179-02 BACAGAZINDA AĞIR METAL TAYİNİ STANDART İŞLETME TALİMATI.pdf",
       "sha": "4a9b3de6de1ddfa4cf45892e281831e8baa1061a",
       "id": "D47",
       "pages": 12,
-      "title": "TL179-02 BACAGAZINDA AĞIR METAL TAYİNİ STANDART İŞLETME TALİMATI.pdf"
+      "title": "TL179-02 BACAGAZINDA AĞIR METAL TAYİNİ STANDART İŞLETME TALİMATI.pdf",
+      "sourceKind": "Kurum içi ölçüm talimatı"
     },
     {
       "path": "standards_sources/Ölçüm Talimatları/TL195-01  EPA METHOD 29 BACA GAZINDAN AĞIR METAL NUMUNESİ ALMA TALİMATI.pdf",
       "sha": "61e3d7d4d0413d04f57db95f5900465c7f7ace0b",
       "id": "D48",
       "pages": 7,
-      "title": "TL195-01  EPA METHOD 29 BACA GAZINDAN AĞIR METAL NUMUNESİ ALMA TALİMATI.pdf"
+      "title": "TL195-01  EPA METHOD 29 BACA GAZINDAN AĞIR METAL NUMUNESİ ALMA TALİMATI.pdf",
+      "sourceKind": "Kurum içi ölçüm talimatı"
     },
     {
       "path": "standards_sources/Ölçüm Talimatları/TL200 -01 EPA BACAGAZI TOZ ÖLÇÜMLERİ STANDART İŞLETME TALİMATI.pdf",
       "sha": "bd9eadec84b91fad01a1fc8eb0f9e0b3dcd40133",
       "id": "D49",
       "pages": 17,
-      "title": "TL200 -01 EPA BACAGAZI TOZ ÖLÇÜMLERİ STANDART İŞLETME TALİMATI.pdf"
+      "title": "TL200 -01 EPA BACAGAZI TOZ ÖLÇÜMLERİ STANDART İŞLETME TALİMATI.pdf",
+      "sourceKind": "Kurum içi ölçüm talimatı"
     },
     {
       "path": "standards_sources/Ölçüm Talimatları/TL297-REV.01-BACADA TS EN ISO 16911-1 İLE HIZ VE DEBİ STANDART İŞLETME TALİMATI.pdf",
       "sha": "1b9202c14958aa1bc7be1a66fcf90dc16fecea7e",
       "id": "D50",
       "pages": 11,
-      "title": "TL297-REV.01-BACADA TS EN ISO 16911-1 İLE HIZ VE DEBİ STANDART İŞLETME TALİMATI.pdf"
+      "title": "TL297-REV.01-BACADA TS EN ISO 16911-1 İLE HIZ VE DEBİ STANDART İŞLETME TALİMATI.pdf",
+      "sourceKind": "Kurum içi ölçüm talimatı"
     },
     {
       "path": "standards_sources/Ölçüm Talimatları/TL298-REV.01-BACADA EPA-2 İLE HIZ ÖLÇÜMLERİ STANDART İŞLETME TALİMATI.pdf",
       "sha": "2fca2703c0c04e407dd4baf9b34c1478f49a84ef",
       "id": "D51",
       "pages": 10,
-      "title": "TL298-REV.01-BACADA EPA-2 İLE HIZ ÖLÇÜMLERİ STANDART İŞLETME TALİMATI.pdf"
+      "title": "TL298-REV.01-BACADA EPA-2 İLE HIZ ÖLÇÜMLERİ STANDART İŞLETME TALİMATI.pdf",
+      "sourceKind": "Kurum içi ölçüm talimatı"
     },
     {
       "path": "standards_sources/Ölçüm Talimatları/TL309-REV.00-BACA GAZI HALOJEN ÖLÇÜMÜ EPA 26A STANDART İŞLETME TALİMATI.pdf",
       "sha": "8303b1eeeee790fe12f7fbd14a6d653d4eed185e",
       "id": "D52",
       "pages": 12,
-      "title": "TL309-REV.00-BACA GAZI HALOJEN ÖLÇÜMÜ EPA 26A STANDART İŞLETME TALİMATI.pdf"
+      "title": "TL309-REV.00-BACA GAZI HALOJEN ÖLÇÜMÜ EPA 26A STANDART İŞLETME TALİMATI.pdf",
+      "sourceKind": "Kurum içi ölçüm talimatı"
     },
     {
       "path": "standards_sources/Ölçüm Talimatları/TL89-REV.09-BACADA HCl TAYİNİ STANDART İŞLETME TALİMATI.pdf",
       "sha": "5173049298a9cddd5f6405f17c343b922d65a6f9",
       "id": "D53",
       "pages": 12,
-      "title": "TL89-REV.09-BACADA HCl TAYİNİ STANDART İŞLETME TALİMATI.pdf"
+      "title": "TL89-REV.09-BACADA HCl TAYİNİ STANDART İŞLETME TALİMATI.pdf",
+      "sourceKind": "Kurum içi ölçüm talimatı"
     },
     {
       "path": "standards_sources/Ölçüm Talimatları/TL90-08 BACADA TOPLAM FLORÜR TAYİNİ STANDART İŞLETME TALİMATI.pdf",
       "sha": "682c543cd9fef94256ab5e0859b21be5099b97b3",
       "id": "D54",
       "pages": 11,
-      "title": "TL90-08 BACADA TOPLAM FLORÜR TAYİNİ STANDART İŞLETME TALİMATI.pdf"
+      "title": "TL90-08 BACADA TOPLAM FLORÜR TAYİNİ STANDART İŞLETME TALİMATI.pdf",
+      "sourceKind": "Kurum içi ölçüm talimatı"
     },
     {
       "id": "W01",
       "title": "US EPA CTM-027 — Ammonia",
       "edition": "Taslak / koşullu yöntem, 14.08.1997",
       "pages": 10,
-      "url": "https://www.epa.gov/sites/default/files/2020-08/documents/ctm-027.pdf"
+      "url": "https://www.epa.gov/sites/default/files/2020-08/documents/ctm-027.pdf",
+      "sourceKind": "Birincil standart / yöntem metni"
     },
     {
       "id": "W02",
       "title": "CARB Method 425 — Total Chromium and Hexavalent Chromium",
       "edition": "28.07.1997",
       "pages": 38,
-      "url": "https://ww2.arb.ca.gov/sites/default/files/classic/testmeth/vol3/m_425.pdf"
+      "url": "https://ww2.arb.ca.gov/sites/default/files/classic/testmeth/vol3/m_425.pdf",
+      "sourceKind": "Birincil standart / yöntem metni"
     },
     {
       "id": "W03",
       "title": "CARB Method 426 — Cyanide",
       "edition": "22.01.1987",
       "pages": 23,
-      "url": "https://ww2.arb.ca.gov/sites/default/files/classic/testmeth/vol3/meth426.pdf"
+      "url": "https://ww2.arb.ca.gov/sites/default/files/classic/testmeth/vol3/meth426.pdf",
+      "sourceKind": "Birincil standart / yöntem metni"
     },
     {
       "id": "W04",
       "title": "US EPA Method 323 — Formaldehyde",
       "edition": "31.05.2023 revizyonu",
       "pages": 12,
-      "url": "https://www.epa.gov/system/files/documents/2023-06/Method%20323%202023%20revision.pdf"
+      "url": "https://www.epa.gov/system/files/documents/2023-06/Method%20323%202023%20revision.pdf",
+      "sourceKind": "Birincil standart / yöntem metni"
     },
     {
       "id": "W05",
       "title": "CARB Method 5 — Particulate Matter",
       "edition": "28.07.1997",
       "pages": 32,
-      "url": "https://ww2.arb.ca.gov/sites/default/files/classic/testmeth/vol1/m_5.pdf"
+      "url": "https://ww2.arb.ca.gov/sites/default/files/classic/testmeth/vol1/m_5.pdf",
+      "sourceKind": "Birincil standart / yöntem metni"
     },
     {
       "id": "L01",
       "title": "TS EN 1911:2010 — HCl olarak gaz halindeki klorürler",
       "edition": "TSE Ocak 2011; EN 1911:2010",
       "pages": 48,
-      "sha256": "a1e0cb304290cb520fa865382f667867ed5da563bb5b8409595526629f07bd8d"
+      "sha256": "a1e0cb304290cb520fa865382f667867ed5da563bb5b8409595526629f07bd8d",
+      "sourceKind": "Birincil standart / yöntem metni"
     },
     {
       "id": "L02",
       "title": "BS EN 14385:2024 — 11 metalin toplam emisyonu",
       "edition": "EN 14385:2024 ana metni; yerel dosya adı TS olsa da kapak BS",
       "pages": 77,
-      "sha256": "e120d09e8396e32162cec4ab0f8267957ab62f331b1f9c18006dfd76aed97311"
+      "sha256": "e120d09e8396e32162cec4ab0f8267957ab62f331b1f9c18006dfd76aed97311",
+      "sourceKind": "Birincil standart / yöntem metni"
     },
     {
       "id": "L03",
       "title": "TS EN 13284-1 — düşük derişimli toz, manuel gravimetri",
       "edition": "TSE Ocak 2018; EN 13284-1:2017",
       "pages": 66,
-      "sha256": "6959ae26b6a6d70cb56a3f521c693021b1fa6beeb642ca808f812e73fdb07f69"
+      "sha256": "6959ae26b6a6d70cb56a3f521c693021b1fa6beeb642ca808f812e73fdb07f69",
+      "sourceKind": "Birincil standart / yöntem metni"
     },
     {
       "id": "W06",
       "title": "SCAQMD Method 207.1 — Ammonia",
       "edition": "Nisan 2006; madde ve basılı sayfa izleri",
       "pages": 49,
-      "url": "https://www.aqmd.gov/docs/default-source/laboratory-procedures/methods-procedures/stm-207-1.pdf"
+      "url": "https://www.aqmd.gov/docs/default-source/laboratory-procedures/methods-procedures/stm-207-1.pdf",
+      "sourceKind": "Birincil standart / yöntem metni"
+    },
+    {
+      "id": "W07",
+      "title": "US EPA Method 4 — Moisture",
+      "edition": "EMC sayfasında 30.05.2023 etiketli 15 sayfalık nüsha",
+      "pages": 15,
+      "url": "https://www.epa.gov/sites/default/files/2020-12/documents/method_4.pdf",
+      "sourceKind": "Birincil standart / yöntem metni"
+    },
+    {
+      "id": "W08",
+      "title": "US EPA Method 17 — In-stack particulate",
+      "edition": "03.08.2017",
+      "pages": 7,
+      "url": "https://www.epa.gov/sites/default/files/2017-08/documents/method_17.pdf",
+      "sourceKind": "Birincil standart / yöntem metni"
+    },
+    {
+      "id": "W09",
+      "title": "US EPA Method 2 — S-type Pitot velocity",
+      "edition": "02.08.2017",
+      "pages": 22,
+      "url": "https://www.epa.gov/sites/default/files/2017-08/documents/method_2.pdf",
+      "sourceKind": "Birincil standart / yöntem metni"
+    },
+    {
+      "id": "W10",
+      "title": "US EPA Method 25A — FID",
+      "edition": "03.08.2017",
+      "pages": 7,
+      "url": "https://www.epa.gov/sites/default/files/2017-08/documents/method_25a.pdf",
+      "sourceKind": "Birincil standart / yöntem metni"
+    },
+    {
+      "id": "L04",
+      "title": "TS EN ISO 16911-1 — elle hız ve debi referans yöntemi",
+      "edition": "TSE Haziran 2013; ISO 16911-1:2013",
+      "pages": 97,
+      "sha256": "5458b8dab8c87c6989782d3aecdd7d1adba145919cd30d360863a975d39a5246",
+      "sourceKind": "Birincil standart / yöntem metni"
+    },
+    {
+      "id": "L05",
+      "title": "TSE CEN/TS 13649 — tekil gaz VOC, sorbent tüp",
+      "edition": "TSE Şubat 2015; CEN/TS 13649:2014",
+      "pages": 49,
+      "sha256": "38a1530489b3969090ce84f02b6f4e02a54fe0ab788906beb2969db1219ccba1",
+      "sourceKind": "Birincil standart / yöntem metni"
     }
   ],
   "catalogChecks": [
+    {
+      "method": "ISO 16911-1",
+      "archiveEdition": "2013",
+      "currentEdition": "2013; ikinci baskı yayım aşamasında",
+      "status": "27.11.2026: ISO ikinci baskısı 60.00 (under publication), planlanan 2026-12. Henüz yayımlanmış/yürürlükte yeni baskı diye uygulanmaz. L04 2013 metnidir; EN ve TS kabul tarihleri ayrıca izlenir.",
+      "url": "https://www.iso.org/standard/85707.html"
+    },
+    {
+      "method": "CEN/TS 13649",
+      "archiveEdition": "2014 / TSE 2015",
+      "currentEdition": "2014",
+      "status": "L05 tam metninde aktif karbon ve TD ayrı; Ek A.2.1 dinamik seyreltme iki giriş/iki çıkışlı çizildi. EN 13649:2001 adı güncel teknik şartnamenin tüm kapsamını anlatmaz.",
+      "url": "https://knowledge.bsigroup.com/products/stationary-source-emissions-determination-of-the-mass-concentration-of-individual-gaseous-organic-compounds-sorptive-sampling-method-followed-by-solvent-extraction-or-thermal-desorption"
+    },
+    {
+      "method": "EN 14789 / EN 14792 / EN 15058",
+      "currentEdition": "2017",
+      "status": "Resmî katalog/kapsam ve yetkili ön izlemeler bulundu. Tam metinlere erişilemedi; bunların sayısal saha/performans koşullarının nihai doğrulaması tamamlanmadı. Paramanyetik O₂, kemilüminesans NOₓ ve NDIR CO ayrı referans tekniklerdir.",
+      "url": "https://knowledge.bsigroup.com/products/stationary-source-emissions-determination-of-volume-concentration-of-oxygen-standard-reference-method-paramagnetism"
+    },
+    {
+      "method": "EN 12341",
+      "archiveEdition": "BS EN 12341:2023",
+      "currentEdition": "2023",
+      "status": "D23 kapağı ve saha/tartım/blank/saklama/kalite bölümleri karşılaştırıldı. Arşiv dosya adındaki TS ibaresi, belgenin BS kapağını değiştirmez.",
+      "url": "https://www.dinmedia.de/en/standard/din-en-12341/370722891"
+    },
     {
       "method": "ISO 12141",
       "archiveEdition": "2002",
@@ -479,5 +619,559 @@
       "status": "Alternatif yer prosedürünün sonraki ölçümlerde de 40/42 nokta kullanımı açıklığa kavuşturuldu.",
       "url": "https://www.epa.gov/system/files/documents/2023-04/2023%20Final%20Revisions%20Rule.pdf"
     }
-  ]
+  ],
+  "auditMatrix": {
+    "asOf": "2026-11-27",
+    "allStandardsFinallyVerified": false,
+    "meaning": "Saha bölümü karşılaştırması, kaynak erişimi ve nihai teknik onay ayrı durumlardır.",
+    "labels": {
+      "field_sections_checked": "Seçili saha bölümleri karşılaştırıldı",
+      "comparison_open": "Teknik karşılaştırma açık",
+      "source_missing": "Tam birincil kaynak eksik"
+    },
+    "rows": [
+      {
+        "code": "TS EN 15259 / EPA Method 1",
+        "title": "Ölçüm Düzlemi, Port Seçimi ve Traverse Planı",
+        "state": "source_missing",
+        "profileIds": [],
+        "sourceReferences": [],
+        "remaining": [
+          "EN 15259:2007 tam metni yok. EPA Method 1 null açı/alternatif yer koşulları ayrı kontrol edildi; EN koşullarının yerine geçirilmez."
+        ]
+      },
+      {
+        "code": "EPA Method 2 / TS EN ISO 16911 / TS ISO 10780",
+        "title": "Baca Gazı Hız ve Debi Ölçümü",
+        "state": "comparison_open",
+        "profileIds": [
+          "velocity_epa2",
+          "velocity_iso16911_pitot"
+        ],
+        "sourceReferences": [
+          "W09:1-6",
+          "L04:21-31,33-44"
+        ],
+        "remaining": [
+          "ISO 10780:1994 tam D29 mevcut ve ISO’da 2022 teyitli; EN ISO Pitot ve EPA2 kartları bu ayrı standardın nihai karşılaştırması sayılmaz."
+        ]
+      },
+      {
+        "code": "EPA Method 5",
+        "title": "EPA Method 5 Partikül Madde Ölçümü",
+        "state": "field_sections_checked",
+        "profileIds": [
+          "dust_epa5"
+        ],
+        "sourceReferences": [
+          "D09:1-18,21-23"
+        ],
+        "remaining": [
+          "Belirtilen yöntem kartlarının kaynak izli saha bölümleri karşılaştırıldı. Bu durum bütün standardın, tüm analitik işlemlerin veya güncel ulusal uygulamanın nihai onayı değildir."
+        ]
+      },
+      {
+        "code": "TS EN 13284-1",
+        "title": "TS EN 13284-1 Düşük Derişimli Partikül Madde Ölçümü",
+        "state": "field_sections_checked",
+        "profileIds": [
+          "dust_en13284_in",
+          "dust_en13284_out"
+        ],
+        "sourceReferences": [
+          "L03:8,14,16-30,43-45,63"
+        ],
+        "remaining": [
+          "Belirtilen yöntem kartlarının kaynak izli saha bölümleri karşılaştırıldı. Bu durum bütün standardın, tüm analitik işlemlerin veya güncel ulusal uygulamanın nihai onayı değildir."
+        ]
+      },
+      {
+        "code": "TS ISO 9096",
+        "title": "TS ISO 9096 Yüksek Konsantrasyon Partikül Madde Ölçümü",
+        "state": "comparison_open",
+        "profileIds": [],
+        "sourceReferences": [],
+        "remaining": [
+          "ISO 9096:2017 tam D33 mevcut; bütün saha sayısal koşullarının yeni parametre kartına madde madde aktarımı henüz tamamlanmadı."
+        ]
+      },
+      {
+        "code": "EPA Method 17",
+        "title": "EPA Method 17 In-Stack Filtre ile Partikül Madde",
+        "state": "field_sections_checked",
+        "profileIds": [
+          "dust_epa17"
+        ],
+        "sourceReferences": [
+          "W08:1-7",
+          "D09:6-18,21-23"
+        ],
+        "remaining": [
+          "Belirtilen yöntem kartlarının kaynak izli saha bölümleri karşılaştırıldı. Bu durum bütün standardın, tüm analitik işlemlerin veya güncel ulusal uygulamanın nihai onayı değildir."
+        ]
+      },
+      {
+        "code": "EPA Method 4",
+        "title": "EPA Method 4 Nem Tayini",
+        "state": "field_sections_checked",
+        "profileIds": [
+          "moisture_epa4"
+        ],
+        "sourceReferences": [
+          "W07:1-10",
+          "D09:3,8"
+        ],
+        "remaining": [
+          "Belirtilen yöntem kartlarının kaynak izli saha bölümleri karşılaştırıldı. Bu durum bütün standardın, tüm analitik işlemlerin veya güncel ulusal uygulamanın nihai onayı değildir."
+        ]
+      },
+      {
+        "code": "TS ISO 12039 / TS EN 14789 / TS EN 14792 / TS EN 15058",
+        "title": "TS ISO 12039 ve Yanma Gazı Ölçümleri",
+        "state": "source_missing",
+        "profileIds": [],
+        "sourceReferences": [],
+        "remaining": [
+          "EN 14789:2017 / EN 14792:2017 / EN 15058:2017 tam metinleri yok. Resmî kapsam ve yetkili ön izlemeler bulundu; sayısal saha kabul hükümlerinin tamamı bunlardan doğrulanamaz. ISO 12039:2019 tam metni mevcut, ayrıntılı karşılaştırması açık."
+        ]
+      },
+      {
+        "code": "TS EN 1911",
+        "title": "TS EN 1911 Hidrojen Klorür (HCl) Tayini",
+        "state": "comparison_open",
+        "profileIds": [
+          "hcl_en1911_noniso",
+          "hcl_en1911_iso",
+          "hcl_en1911_split"
+        ],
+        "sourceReferences": [
+          "L01:8,13-24,31"
+        ],
+        "remaining": [
+          "HCl kaynak maddeleri karşılaştırıldı; EN 13284-1:2001 tarihli atfının tam metniyle süre koşulları henüz kapanmadı. 2017 baskısının süreleri eski atfa otomatik uygulanmaz."
+        ]
+      },
+      {
+        "code": "EPA Method 26A",
+        "title": "EPA Method 26A Hidrojen Halidler ve Halojenler",
+        "state": "comparison_open",
+        "profileIds": [
+          "halogen_epa26a"
+        ],
+        "sourceReferences": [
+          "D06:3-4,6-9"
+        ],
+        "remaining": [
+          "Belirtilen yöntem kartlarının kaynak izli saha bölümleri karşılaştırıldı. Bu durum bütün standardın, tüm analitik işlemlerin veya güncel ulusal uygulamanın nihai onayı değildir."
+        ]
+      },
+      {
+        "code": "EPA Method 29",
+        "title": "EPA Method 29 Ağır Metal Örneklemesi",
+        "state": "field_sections_checked",
+        "profileIds": [
+          "metals_epa29_hg",
+          "metals_epa29_no_hg"
+        ],
+        "sourceReferences": [
+          "D07:3-7,10-15,24-26",
+          "D09:1-3,7-10,15-18,22-23"
+        ],
+        "remaining": [
+          "Belirtilen yöntem kartlarının kaynak izli saha bölümleri karşılaştırıldı. Bu durum bütün standardın, tüm analitik işlemlerin veya güncel ulusal uygulamanın nihai onayı değildir."
+        ]
+      },
+      {
+        "code": "TS EN 14385",
+        "title": "TS EN 14385 Ağır Metal Ölçümü",
+        "state": "comparison_open",
+        "profileIds": [
+          "metals_en14385_full",
+          "metals_en14385_split"
+        ],
+        "sourceReferences": [
+          "L02:12-23",
+          "L03:27-30"
+        ],
+        "remaining": [
+          "Çözelti, kap, verim, yıkama ve <25 °C saha / <6 °C laboratuvar / 4 hafta karşılaştırıldı. §8.1’de 180 °C yazımının yüksek baca sıcaklığına uygulanışı ve ulusal TS baskısı eşleşmesi açık."
+        ]
+      },
+      {
+        "code": "TS EN 12619 / TSE CEN/TS 13649",
+        "title": "TOC / VOC Ölçümü",
+        "state": "field_sections_checked",
+        "profileIds": [
+          "toc_en12619",
+          "voc_13649_charcoal",
+          "voc_13649_td",
+          "voc_13649_dynamic"
+        ],
+        "sourceReferences": [
+          "D24:8-15",
+          "L05:8-20,21,25-28",
+          "L05:8-22,25"
+        ],
+        "remaining": [
+          "Belirtilen yöntem kartlarının kaynak izli saha bölümleri karşılaştırıldı. Bu durum bütün standardın, tüm analitik işlemlerin veya güncel ulusal uygulamanın nihai onayı değildir."
+        ]
+      },
+      {
+        "code": "TS ISO 11338 / ilgili PAH saha uygulamaları",
+        "title": "TS ISO 11338 PAH Örneklemesi",
+        "state": "comparison_open",
+        "profileIds": [
+          "pah_iso11338_b",
+          "pah_iso11338_b_split"
+        ],
+        "sourceReferences": [
+          "D27:13-15",
+          "D27:13-15,25"
+        ],
+        "remaining": [
+          "ISO 11338-1:2003 katalogda 2026’da teyitli. B varyantı ve -7 °C saklama görüntüden kontrol edildi; A/C varyantları ve Part 2 analitik bağlantılarının tamamı henüz kartlaştırılmadı."
+        ]
+      },
+      {
+        "code": "TS EN 1948-1",
+        "title": "TS EN 1948-1 PCDD/PCDF Dioksin-Furan Örneklemesi",
+        "state": "comparison_open",
+        "profileIds": [
+          "dioxin_en1948_filter",
+          "dioxin_en1948_liquid",
+          "dioxin_en1948_split"
+        ],
+        "sourceReferences": [
+          "D25:15,20-26,41-43",
+          "D25:15-26,32-38"
+        ],
+        "remaining": [
+          "Filtre/yoğuşturucu düzeninin seçili Ek B örnekleri ayrı çizildi. Seyreltme/soğutulmuş prob alternatiflerinin bütün koşulları ve Parts 2–3 bağlantısı henüz kapanmadı."
+        ]
+      },
+      {
+        "code": "TS EN 12341 / EPA 40 CFR 50-53",
+        "title": "PM10 / PM2.5 Ortam Havası Ölçümü",
+        "state": "source_missing",
+        "profileIds": [
+          "ambient_pm10",
+          "ambient_pm2_5",
+          "dustfall"
+        ],
+        "sourceReferences": [
+          "D23:8,18-25,28-37",
+          "D44:4-6"
+        ],
+        "remaining": [
+          "İlgili tam birincil yöntem/mevzuat nüshası yeterli değil. Eğitim notu, kurum içi talimat ve yaklaşım özeti birincil standart yerine geçmez."
+        ]
+      },
+      {
+        "code": "TS 2341 / TS 2342 / SKHKKY Ek-2 saha yaklaşımı",
+        "title": "Çöken Toz İmisyon Ölçümü",
+        "state": "source_missing",
+        "profileIds": [
+          "dustfall"
+        ],
+        "sourceReferences": [
+          "D44:4-6"
+        ],
+        "remaining": [
+          "İlgili tam birincil yöntem/mevzuat nüshası yeterli değil. Eğitim notu, kurum içi talimat ve yaklaşım özeti birincil standart yerine geçmez."
+        ]
+      },
+      {
+        "code": "ISDL / MID",
+        "title": "ISDL / MID Hedef Hacim ve Raporlama Limiti Planlaması",
+        "state": "source_missing",
+        "profileIds": [],
+        "sourceReferences": [],
+        "remaining": [
+          "İlgili tam birincil yöntem/mevzuat nüshası yeterli değil. Eğitim notu, kurum içi talimat ve yaklaşım özeti birincil standart yerine geçmez."
+        ]
+      },
+      {
+        "code": "CARB Method 426",
+        "title": "CARB Method 426 Siyanür / HCN Örneklemesi",
+        "state": "comparison_open",
+        "profileIds": [
+          "cyanide_carb426"
+        ],
+        "sourceReferences": [
+          "W03:2-7,9-13",
+          "W05:9-12"
+        ],
+        "remaining": [
+          "Birincil CARB düzeni ve koruma bölümleri karşılaştırıldı. Kartta görünen numune saklama/süre ve metin içi kap numarası çelişkileri henüz kapanmadı."
+        ]
+      },
+      {
+        "code": "CARB Method 425",
+        "title": "CARB Method 425 Krom+6 / Cr(VI) Örneklemesi",
+        "state": "comparison_open",
+        "profileIds": [
+          "chromium_carb425"
+        ],
+        "sourceReferences": [
+          "W02:12-14,22-24",
+          "W05:9-12"
+        ],
+        "remaining": [
+          "Birincil CARB düzeni ve koruma bölümleri karşılaştırıldı. Kartta görünen numune saklama/süre ve metin içi kap numarası çelişkileri henüz kapanmadı."
+        ]
+      },
+      {
+        "code": "EPA CTM 027",
+        "title": "EPA CTM 027 Amonyak Örneklemesi",
+        "state": "field_sections_checked",
+        "profileIds": [
+          "ammonia_ctm027_empty3",
+          "ammonia_ctm027_acid3"
+        ],
+        "sourceReferences": [
+          "W01:1-6"
+        ],
+        "remaining": [
+          "Belirtilen yöntem kartlarının kaynak izli saha bölümleri karşılaştırıldı. Bu durum bütün standardın, tüm analitik işlemlerin veya güncel ulusal uygulamanın nihai onayı değildir."
+        ]
+      },
+      {
+        "code": "SCAQMD Method 207.1",
+        "title": "SCAQMD Method 207.1 Amonyak Örneklemesi",
+        "state": "field_sections_checked",
+        "profileIds": [
+          "ammonia_2071_gs",
+          "ammonia_2071_mini"
+        ],
+        "sourceReferences": [
+          "W06:1-49"
+        ],
+        "remaining": [
+          "Belirtilen yöntem kartlarının kaynak izli saha bölümleri karşılaştırıldı. Bu durum bütün standardın, tüm analitik işlemlerin veya güncel ulusal uygulamanın nihai onayı değildir."
+        ]
+      },
+      {
+        "code": "EPA Method 13A",
+        "title": "EPA Method 13A Toplam Florür Tayini",
+        "state": "field_sections_checked",
+        "profileIds": [
+          "fluoride_epa13a_front",
+          "fluoride_epa13a_rear"
+        ],
+        "sourceReferences": [
+          "D05:1-7",
+          "D09:7-10,15-18,22-23"
+        ],
+        "remaining": [
+          "Belirtilen yöntem kartlarının kaynak izli saha bölümleri karşılaştırıldı. Bu durum bütün standardın, tüm analitik işlemlerin veya güncel ulusal uygulamanın nihai onayı değildir."
+        ]
+      },
+      {
+        "code": "ISO 12141",
+        "title": "ISO 12141 Düşük Toz Elle Gravimetrik Ölçüm",
+        "state": "source_missing",
+        "profileIds": [],
+        "sourceReferences": [],
+        "remaining": [
+          "D31 ve yeni gönderilen aynı PDF, TS ISO 12141:2004 / ISO 12141:2002 esaslıdır. Güncel ISO 12141:2024 tam metni yok; eski sayılar yeni sürüm diye sunulmaz."
+        ]
+      },
+      {
+        "code": "EPA Method 323",
+        "title": "EPA Method 323 Formaldehit Ölçümü",
+        "state": "field_sections_checked",
+        "profileIds": [
+          "formaldehyde_epa323"
+        ],
+        "sourceReferences": [
+          "W04:1-7"
+        ],
+        "remaining": [
+          "Belirtilen yöntem kartlarının kaynak izli saha bölümleri karşılaştırıldı. Bu durum bütün standardın, tüm analitik işlemlerin veya güncel ulusal uygulamanın nihai onayı değildir."
+        ]
+      },
+      {
+        "code": "TS EN 12619 / EPA Method 25A",
+        "title": "TS EN 12619 / EPA Method 25A TOC-FID Ölçümü",
+        "state": "field_sections_checked",
+        "profileIds": [
+          "toc_en12619",
+          "toc_epa25a"
+        ],
+        "sourceReferences": [
+          "D24:8-15",
+          "W10:1-6"
+        ],
+        "remaining": [
+          "Belirtilen yöntem kartlarının kaynak izli saha bölümleri karşılaştırıldı. Bu durum bütün standardın, tüm analitik işlemlerin veya güncel ulusal uygulamanın nihai onayı değildir."
+        ]
+      },
+      {
+        "code": "TS EN 13649",
+        "title": "Tekil VOC — CEN/TS 13649:2014; aktif karbon / TD / seyreltme",
+        "state": "field_sections_checked",
+        "profileIds": [
+          "voc_13649_charcoal",
+          "voc_13649_td",
+          "voc_13649_dynamic"
+        ],
+        "sourceReferences": [
+          "L05:8-20,21,25-28",
+          "L05:8-22,25"
+        ],
+        "remaining": [
+          "Belirtilen yöntem kartlarının kaynak izli saha bölümleri karşılaştırıldı. Bu durum bütün standardın, tüm analitik işlemlerin veya güncel ulusal uygulamanın nihai onayı değildir."
+        ]
+      },
+      {
+        "code": "TS ISO 12039 / TS ISO 7935 / EPA CTM-022",
+        "title": "Yanma Gazı Ölçümleri",
+        "state": "comparison_open",
+        "profileIds": [
+          "so2_iso7935"
+        ],
+        "sourceReferences": [
+          "D32:1,11-15"
+        ],
+        "remaining": [
+          "ISO 7935 seçili SO₂ koşulları kontrol edildi; ISO 12039 ve CTM-022’nin tüm saha yeterlilik hükümleri henüz kapanmadı."
+        ]
+      },
+      {
+        "code": "EPA Method 5 / EPA Method 17",
+        "title": "EPA Method 5 / EPA Method 17 Partikül Madde Ölçümü",
+        "state": "field_sections_checked",
+        "profileIds": [
+          "dust_epa5",
+          "dust_epa17"
+        ],
+        "sourceReferences": [
+          "D09:1-18,21-23",
+          "W08:1-7",
+          "D09:6-18,21-23"
+        ],
+        "remaining": [
+          "Belirtilen yöntem kartlarının kaynak izli saha bölümleri karşılaştırıldı. Bu durum bütün standardın, tüm analitik işlemlerin veya güncel ulusal uygulamanın nihai onayı değildir."
+        ]
+      },
+      {
+        "code": "TS EN 13284-1 / TS ISO 9096 / ISO 12141",
+        "title": "TS EN 13284-1 / TS ISO 9096 / ISO 12141 Toz Ölçümü",
+        "state": "source_missing",
+        "profileIds": [
+          "dust_en13284_in",
+          "dust_en13284_out"
+        ],
+        "sourceReferences": [
+          "L03:8,14,16-30,43-45,63"
+        ],
+        "remaining": [
+          "D31 ve yeni gönderilen aynı PDF, TS ISO 12141:2004 / ISO 12141:2002 esaslıdır. Güncel ISO 12141:2024 tam metni yok; eski sayılar yeni sürüm diye sunulmaz.",
+          "ISO 9096:2017 tam D33 mevcut; bütün saha sayısal koşullarının yeni parametre kartına madde madde aktarımı henüz tamamlanmadı."
+        ]
+      },
+      {
+        "code": "EPA Method 8",
+        "title": "EPA Method 8 Sülfürik Asit ve SO2 Tayini",
+        "state": "field_sections_checked",
+        "profileIds": [
+          "acid_epa8"
+        ],
+        "sourceReferences": [
+          "D10:2-7",
+          "D09:7-10,22-23"
+        ],
+        "remaining": [
+          "Belirtilen yöntem kartlarının kaynak izli saha bölümleri karşılaştırıldı. Bu durum bütün standardın, tüm analitik işlemlerin veya güncel ulusal uygulamanın nihai onayı değildir."
+        ]
+      },
+      {
+        "code": "EPA Method 11",
+        "title": "EPA Method 11 Hidrojen Sülfür (H2S) Tayini",
+        "state": "field_sections_checked",
+        "profileIds": [
+          "h2s_epa11"
+        ],
+        "sourceReferences": [
+          "D04:1-8"
+        ],
+        "remaining": [
+          "Belirtilen yöntem kartlarının kaynak izli saha bölümleri karşılaştırıldı. Bu durum bütün standardın, tüm analitik işlemlerin veya güncel ulusal uygulamanın nihai onayı değildir."
+        ]
+      },
+      {
+        "code": "EPA CTM 027 / SCAQMD Method 207.1",
+        "title": "EPA CTM 027 / SCAQMD 207.1 Amonyak Örneklemesi",
+        "state": "field_sections_checked",
+        "profileIds": [
+          "ammonia_ctm027_empty3",
+          "ammonia_ctm027_acid3",
+          "ammonia_2071_gs",
+          "ammonia_2071_mini"
+        ],
+        "sourceReferences": [
+          "W01:1-6",
+          "W06:1-49"
+        ],
+        "remaining": [
+          "Belirtilen yöntem kartlarının kaynak izli saha bölümleri karşılaştırıldı. Bu durum bütün standardın, tüm analitik işlemlerin veya güncel ulusal uygulamanın nihai onayı değildir."
+        ]
+      },
+      {
+        "code": "TS EN 12341 / EPA 40 CFR Part 50-53",
+        "title": "TS EN 12341 / EPA 40 CFR Part 50 PM10 İmisyon Ölçümü",
+        "state": "source_missing",
+        "profileIds": [
+          "ambient_pm10",
+          "ambient_pm2_5",
+          "dustfall"
+        ],
+        "sourceReferences": [
+          "D23:8,18-25,28-37",
+          "D44:4-6"
+        ],
+        "remaining": [
+          "İlgili tam birincil yöntem/mevzuat nüshası yeterli değil. Eğitim notu, kurum içi talimat ve yaklaşım özeti birincil standart yerine geçmez."
+        ]
+      },
+      {
+        "code": "TS 2341 / TS 2342 / SKHKKY Ek-2",
+        "title": "Çöken Toz İmisyon Ölçümü",
+        "state": "source_missing",
+        "profileIds": [
+          "dustfall"
+        ],
+        "sourceReferences": [
+          "D44:4-6"
+        ],
+        "remaining": [
+          "İlgili tam birincil yöntem/mevzuat nüshası yeterli değil. Eğitim notu, kurum içi talimat ve yaklaşım özeti birincil standart yerine geçmez."
+        ]
+      },
+      {
+        "code": "Pasif Örnekleme / Difüzyon Tüpü",
+        "title": "Pasif Tüp ile İmisyon Ölçümleri",
+        "state": "source_missing",
+        "profileIds": [
+          "passive"
+        ],
+        "sourceReferences": [
+          "D46:4-5"
+        ],
+        "remaining": [
+          "İlgili tam birincil yöntem/mevzuat nüshası yeterli değil. Eğitim notu, kurum içi talimat ve yaklaşım özeti birincil standart yerine geçmez."
+        ]
+      },
+      {
+        "code": "TS 9503 / Bacada İslilik Ölçümü",
+        "title": "TS 9503 Bacada İslilik Ölçümü",
+        "state": "source_missing",
+        "profileIds": [],
+        "sourceReferences": [],
+        "remaining": [
+          "İlgili tam birincil yöntem/mevzuat nüshası yeterli değil. Eğitim notu, kurum içi talimat ve yaklaşım özeti birincil standart yerine geçmez."
+        ]
+      }
+    ]
+  }
 }

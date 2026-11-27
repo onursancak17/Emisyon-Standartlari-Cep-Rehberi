@@ -142,13 +142,14 @@ class _MethodGuidePageState extends State<MethodGuidePage> {
               title: Text('${n['label']} · ${n['amount']}'), subtitle: Text(n['content'] as String)),
         ],
         if(p['diagram']!=null)...[
-          Text('Ana ve yan kol şeması',style:Theme.of(context).textTheme.titleLarge),
+          Text(p['diagram']['type']=='dilution' ? 'Seyreltme ve analiz akışı' : 'Ana ve yan kol şeması',style:Theme.of(context).textTheme.titleLarge),
           const Text('Yatay kaydır; ayrıntı için tam ekran açıp iki parmakla büyüt.'),
           SingleChildScrollView(scrollDirection:Axis.horizontal,child:SizedBox(width:1400,child:Image.asset(
-            p['diagram']['asset'] as String,key:const ValueKey('split-train-image'),semanticLabel:'${p['method']}: filtre sonrası ayrılan ana ve analiz yan kolu'))),
+            p['diagram']['asset'] as String,key:const ValueKey('split-train-image'),semanticLabel:'${p['method']}: ${p['variant']}'))),
           OutlinedButton.icon(icon:const Icon(Icons.zoom_in),label:const Text('Şemayı tam ekran aç'),onPressed:()=>Navigator.push(context,
             MaterialPageRoute<void>(builder:(_)=>AssetTrainPage(profile:p)))),
           GuideSection(title:'Ortak giriş',items:_objects(p['diagram']['shared']).map((n)=>'${n['label']}: ${n['content']}').toList()),
+          if(p['diagram']['dilution']!=null) GuideSection(title:'Seyreltme gazı',items:[p['diagram']['dilution']['content'] as String]),
           for(final b in _objects(p['diagram']['branches'])) GuideSection(title:b['label'] as String,
             items:_objects(b['nodes']).map((n)=>'${n['label']}: ${n['content']}').toList()),
         ],
@@ -186,16 +187,45 @@ class _SourcesPageState extends State<SourcesPage> {
       final data = snapshot.data!;
       return ListView(padding:const EdgeInsets.all(16),children:[
         const GuideNotice(text:'Kaynak adları ve sürüm notları çevrimdışı okunur. Web adresi asıl metne erişim içindir. Bir katalog kaydının güncel olması, arşivdeki eski PDF’nin yenilendiği anlamına gelmez.'),
+        if(data['auditMatrix']!=null) FilledButton.tonalIcon(icon:const Icon(Icons.fact_check),label:const Text('37 başlığın teknik doğrulama durumu'),
+          onPressed:()=>Navigator.push(context,MaterialPageRoute<void>(builder:(_)=>AuditMatrixPage(audit:Map<String,dynamic>.from(data['auditMatrix'] as Map))))),
         for (final c in _objects(data['catalogChecks'] ?? [])) GuideSection(title:c['method'] as String,
           items:[if(c['currentEdition']!=null) 'Güncel katalog sürümü: ${c['currentEdition']}',c['status'] as String,c['url'] as String]),
         TextField(decoration:const InputDecoration(labelText:'Kaynak adı veya kimliği ara',prefixIcon:Icon(Icons.search)),
           onChanged:(s)=>setState(()=>_query=s)),
         for (final s in _objects(data['documents']).where((s)=>_fold('${s['id']} ${s['title']}').contains(_fold(_query))))
           Card(child:Padding(padding:const EdgeInsets.all(12),child:SelectableText(
-            '${s['id']} · ${s['title']}\n${s['edition'] ?? 'Arşiv belgesi'} · ${s['pages']} PDF sayfası${s['url']==null ? '' : '\n${s['url']}'}'))),
+            '${s['id']} · ${s['title']}\n${s['sourceKind'] ?? 'Kaynak belgesi'}\n${s['edition'] ?? 'Arşiv belgesi'} · ${s['pages']} PDF sayfası${s['url']==null ? '' : '\n${s['url']}'}'))),
       ]);
     }),
   );
+}
+
+class AuditMatrixPage extends StatefulWidget {
+  const AuditMatrixPage({super.key,required this.audit});
+  final Json audit;
+  @override
+  State<AuditMatrixPage> createState()=>_AuditMatrixPageState();
+}
+class _AuditMatrixPageState extends State<AuditMatrixPage> {
+  String _query='';
+  @override
+  Widget build(BuildContext context) {
+    final rows=_objects(widget.audit['rows']);
+    final labels=Map<String,dynamic>.from(widget.audit['labels'] as Map);
+    return Scaffold(appBar:AppBar(title:const Text('Teknik doğrulama durumu')),body:ListView(padding:const EdgeInsets.all(16),children:[
+      GuideNotice(text:'${widget.audit['asOf']} · Tüm standartların nihai teknik doğrulaması tamamlanmadı. ${widget.audit['meaning']}'),
+      for(final state in labels.keys) Padding(padding:const EdgeInsets.only(top:8),child:Text('${labels[state]}: ${rows.where((r)=>r['state']==state).length} başlık')),
+      TextField(decoration:const InputDecoration(labelText:'Başlık veya metot ara',prefixIcon:Icon(Icons.search)),onChanged:(s)=>setState(()=>_query=s)),
+      for(final row in rows.where((r)=>_fold('${r['code']} ${r['title']}').contains(_fold(_query)))) Card(child:ExpansionTile(
+        title:Text(row['code'] as String),subtitle:Text(labels[row['state']] as String),children:[
+          Padding(padding:const EdgeInsets.all(12),child:Column(crossAxisAlignment:CrossAxisAlignment.stretch,children:[
+            for(final note in _strings(row['remaining'])) Padding(padding:const EdgeInsets.only(bottom:8),child:Text(note)),
+            if(_strings(row['sourceReferences']).isNotEmpty) SelectableText('Kaynak / PDF sayfası: ${_strings(row['sourceReferences']).join('; ')}'),
+          ])),
+        ])),
+    ]));
+  }
 }
 
 class GuideNotice extends StatelessWidget {
@@ -447,6 +477,11 @@ class _SiteChecksPageState extends State<SiteChecksPage> {
         'TS EN 13284-1:2018 / EN 13284-1:2017 Ek D, EN 15259 bağlantılı olarak eksenden akış açısı <15°, ters akış olmaması, Pitot diferansiyel basıncı >5 Pa ve en yüksek/en düşük hız oranı <3:1 özetini verir.',
         'Akış yönünde düzlemin öncesinde >5 hidrolik çap, sonrasında >2 hidrolik çap düz hat; açık baca çıkışı öncesinde >5 hidrolik çap önerileri ayrı yerleşim koşullarıdır. Noktalar ve ölçme tekniği ilgili EN 15259/ISO 16911 prosedürüyle belirlenir.',
         'Bu özet, uygun ekipmanla açı/hız incelemesinin yerine geçmez. EPA’nın ±null açısı ortalamasını EN için doğrudan 15° ile karşılaştıran bir hesap uygulanmaz. Kaynak: L03 PDF s.44, Ek D; EN 15259:2007 bağlantısı.',
+      ]),
+      const GuideSection(title:'EN ISO 16911-1:2013 — yön ve hız değerlendirmesi',items:[
+        '§9.3.5 herhangi bir noktada teğetsel açı >15° ise yönün hız ölçümünü etkilediğini belirtir. Hız ve açı ölçebilen uygun S/2D/3D cihazla noktasal değerlendirme gerekir.',
+        'vc=völçülen×cosθ yön düzeltmesidir; cihazın açısal okuma hatasını ortadan kaldırmaz ve uygunsuz düzlemi otomatik onaylamaz.',
+        'Tablo 4 sensör/akış açısı <15° ile probun ölçüm düzlemine pitch açısı ≤10° şartlarını ayrı verir. Bunlar EPA ortalama mutlak açı hesabının 15° ile tekrarı değildir. Kaynak: L04 PDF 26–27.',
       ]),
       const SelectableText('Kaynak: US EPA Method 1 (30.05.2023), §11.4–11.5, §12.3. Federal Register 29.03.2023 değişikliği 30.05.2023 yürürlüğe girdi.\nhttps://www.epa.gov/system/files/documents/2023-09/2023%20Final%20MS%20%20Method%201_0.pdf\nhttps://www.epa.gov/system/files/documents/2023-04/2023%20Final%20Revisions%20Rule.pdf'),
     ]));

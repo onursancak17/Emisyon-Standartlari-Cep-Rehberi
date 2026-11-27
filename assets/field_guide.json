@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "reviewedAt": "2026-11-26",
+  "reviewedAt": "2026-11-27",
   "notice": "Geliştirme sürümü: şema kontrolü, tam yöntem onayı ve güncel yürürlük kontrolü aynı şey değildir. Arşiv kaynaklı bilgi güncel metotla eşleştirilmeden sahada tek başına talimat sayılmaz.",
   "profiles": [
     {
@@ -8,27 +8,27 @@
       "scope": "Emisyon",
       "parameter": "Nem",
       "method": "EPA Method 4",
-      "sourceVersion": "07.10.2020",
-      "variant": "Referans yöntem — dört impinger",
+      "sourceVersion": "EMC 30.05.2023 etiketli nüsha",
+      "variant": "Referans yöntem — dış partikül filtresi ve dört impinger",
       "sources": [
-        "D08:4-6",
-        "D09:8"
+        "W07:1-10",
+        "D09:3,8"
       ],
-      "reviewState": "train_checked",
+      "reviewState": "sections_checked",
       "train": [
         {
           "id": "probe",
           "kind": "probe",
-          "label": "Nozül ve prob",
-          "content": "Metoda uygun malzeme / sıcaklık",
+          "label": "Isıtılmış numune probu",
+          "content": "Yoğuşma önlenir; bu bağımsız nem varyantı izokinetik nozül gerektirmez",
           "amount": "",
           "optional": false
         },
         {
           "id": "filter",
           "kind": "filter",
-          "label": "Filtre (gerektiğinde)",
-          "content": "Yoğuşmayı önleyen ısıtma",
+          "label": "Isıtılmış dış partikül filtresi",
+          "content": "Alternatif baca içi filtre §6.1.1’de tanımlıdır",
           "amount": "",
           "optional": false
         },
@@ -80,7 +80,7 @@
         },
         {
           "label": "Toplam çekiş hacmi",
-          "value": "En az 0,60 standart m³. DGM hacmi ile referans koşullara düzeltilmiş hacmi ayrı tut; doğrudan 0 °C Nm³ diye yeniden etiketleme."
+          "value": "En az 0,60 standart m³; kaynak standardı 20 °C / 101,325 kPa. Ham DGM ile kuru standart hacim ayrı; 0 °C Nm³ değildir."
         },
         {
           "label": "Sıcaklık",
@@ -88,41 +88,45 @@
         },
         {
           "label": "Ölçüm süresi",
-          "value": "Asgari hacmi sağlayacak süreyi planla. Kirleticiyle eşzamanlı belirlemede, ilgili istisnalar dışında aynı toplam süre."
+          "value": "Hedef standart hacim ve eşit nokta süreleriyle planla. Kirletici ölçümüyle eşzamanlı tayinde aynı toplam süre ve eşzamanlı örnekleme gerekir; 16–20 dk gibi otomatik sabit süre atanmaz."
         }
       ],
       "phases": [
         {
           "title": "Hazırlık",
           "items": [
-            "İlk iki şişeye su, üçüncüye sıvı koyma, dördüncüye tartılmış silika jel yerleştir. 100 mL dolumları Method 5 §8.3.1 bağlantısındandır.",
-            "Başlangıç impinger kütlelerini en az 0,5 g çözünürlükle kaydet; DGM başlangıcı, kalibrasyon, sıcaklık ve basıncı kontrol et."
+            "Dört GS impinger: 1/3/4 modifiye düz uçlu, 2 standart uçlu; ilk ikide 100’er mL su, üçüncü boş, sonuncuda yaklaşık 200–300 g silika jel. Başlangıç ve son tartımları en az 0,5 g hassasiyetle kaydet.",
+            "Bağımsız nem referansında: dairesel D<0,61 m için en az 8; dikdörtgen eşdeğer çap<0,61 m için en az 9; diğerlerinde en az 12 travers noktası. Konumlar Method 1; daha az nokta özel yetkili onayı gerektirir (§8.1.1.1).",
+            "Günlük saha terazisi kontrolü: en az 500 g veya dolu impinger kütlesine ±50 g yakın, ASTM E617 Class 6 veya iyi ağırlık; sertifikalı değere ±0,5 g içinde. Uygunsuzsa düzeltip kontrolü tekrar et (§10.3)."
           ]
         },
         {
           "title": "Kaçak kontrolü",
           "items": [
-            "Ön kaçak testi önerilir; son kaçak testi zorunludur. Parça değiştirmeden önce test yap.",
-            "Kabul sınırı: ortalama örnekleme debisinin %4’ü ile 0,57 L/dk değerinden küçük olanı. Son testi ölçümde ulaşılan en yüksek vakuma eşit veya daha yüksek vakumda yap."
+            "Sayaç kutusunun pompa sonrası bölümü ilk kullanım ve her sevkten sonra denetlenir; 13–18 cm su sütunu basınçta 1 dk basınç kaybı kontrol edilir.",
+            "Ön kaçak testi önerilir; parça değişiminden hemen önce ve ölçüm sonunda test zorunludur. Sonda/ara testte koşuda görülen en yüksek vakum veya üstü kullanılır.",
+            "Method 5 §8.4: kabul edilen kaçak ≤min(ortalama Q ×0,04; 0,57 L/dk). 380 mmHg yaklaşık 50,66 kPa vakumdur; düşük ön test vakumu ancak ölçüm sırasında aşılmıyorsa kullanılabilir. Aşımda yalnız §12.3 hacim düzeltmesi veya ölçümün reddi uygulanır."
           ]
         },
         {
           "title": "Örnekleme",
           "items": [
-            "Metoda uygun travers noktalarında eşit süre çekiş yap; her süre aralığında DGM okumalarını kaydet.",
-            "Prob önünde yoğuşmayı önle, soğutmayı ve silika jel çıkış sıcaklığını izle. Debi, süre ve hacmi ayrı kaydet."
+            "Prob/ısıtılan filtreyi yaklaşık 120 °C’ye getirip kararlı hale gelmesini bekle; ön yoğuşmayı önle. Silika jel çıkış gazı <20 °C tutulur; banyo sıcaklığı ile çıkış gazı sıcaklığı aynı büyüklük değildir.",
+            "Bağımsız ölçümde debi ≤21 L/dk ve sabit değerin ±%10’u içinde; eşzamanlı izokinetik yöntemde sabit debi yerine izokinetik koşul izlenir. Başlangıç/son ve her nokta-zaman aralığı sayaç/T/P okumaları korunur.",
+            "Gaz doymuşsa veya damlacık şüphesi varsa eşzamanlı sıcaklık ve doygunluk buhar basıncı/psikrometriyle ikinci nem tayini yap. İki nemden düşük olanı kullan; damlacıkları su buharı diye sayma (§4.1, §12.1.6)."
           ]
         },
         {
           "title": "Geri kazanım",
           "items": [
-            "Son DGM okumasını ve son kaçak sonucunu kaydet; su ve silika jel kütle artışını belirle."
+            "İmpinger ve silika jel son kütlelerini yıkama yapmadan belirle; her ikisinin net kütle artışı nem hesabına dahildir. Silika jeli aktarırken su/çözelti ekleme.",
+            "Kaynakta su buharı dönüşümü 0,001335 m³/g (20 °C referansı); Vw,std toplam su kütle artışından, Vm,std DGM/Y/T/P’den hesaplanır. Bws=Vw,std/(Vm,std+Vw,std). Ham DGM hacmi bu kesrin paydasında düzeltilmiş hacmin yerine kullanılmaz."
           ]
         },
         {
           "title": "Saklama ve taşıma",
           "items": [
-            "Sadece nem tayininde sonuç sahada kütle/hacim ölçümüyle belirlenebilir. Kirleticiyle birlikte örneklenmişse o kirleticinin fraksiyon ve taşıma kurallarını uygula."
+            "Bu ölçümde laboratuvara kimyasal analiz için bekletilen bir kirletici çözeltisi yoktur; nem kütlesi/tartım verileri saha prosedüründe belirlenir. Tartım gecikecekse nem alımı/kaybı önlenecek kapama ve izlenebilirlik gerekir. Kimyasal numunelerin bekletme sürelerini nem verisine aktarma."
           ]
         },
         {
@@ -130,24 +134,39 @@
           "items": [
             "Tesis, baca/nokta, tarih, başlangıç–bitiş, metot/sürüm, numuneci ve fraksiyon kimliklerini etiketle.",
             "Numune kabı, kapak, miktar, blank, mühür, taşıma koşulu, teslim saati ve teslim alanı izlenebilir teslim formuna kaydet.",
-            "Ham sayaç hacmi, referans koşullardaki hacim, tartımlar, gaz sıcaklığı/basıncı ve kaçak sonuçlarını aktar."
+            "Başlangıç/son impinger ve silika kütleleri, terazi günlük kontrolü, sayaç/Y/T/P, kaçaklar, nokta/süreler ve doygunluk karşılaştırması rapor birimine verilir."
           ]
         }
       ],
       "gaps": [
-        "Bu kartın doğrulaması şema ve belirtilen kaynak maddeleriyle sınırlıdır; tam yöntem yeterlilik incelemesi sürüyor.",
-        "Kaynak sürümünün güncel yürürlük durumu ve laboratuvarın onaylı uygulaması ayrıca kontrol edilmeli."
+        "Uygulanacak mevzuatın ve eşzamanlı kirletici metodunun özel şartları ölçüm planında seçilmelidir. Bu kart referans nem yöntemidir; yaklaşık nem yöntemi aynı amaçla kullanılamaz."
       ],
-      "evidence": [],
-      "sourceDetails": [
+      "evidence": [
         {
-          "reference": "D08:4-6",
-          "title": "EPA Method 4.pdf",
-          "edition": "",
-          "url": ""
+          "field": "Tren / nokta / debi / süre",
+          "references": [
+            "W07:2-5",
+            "D09:3,8"
+          ],
+          "clause": "§6.1, §8.1"
         },
         {
-          "reference": "D09:8",
+          "field": "Kaçak / tartım / hesap / doygunluk",
+          "references": [
+            "W07:2-10"
+          ],
+          "clause": "§4.1, §8.1.3–4, §10.3, §11–12"
+        }
+      ],
+      "sourceDetails": [
+        {
+          "reference": "W07:1-10",
+          "title": "US EPA Method 4 — Moisture",
+          "edition": "EMC sayfasında 30.05.2023 etiketli 15 sayfalık nüsha",
+          "url": "https://www.epa.gov/sites/default/files/2020-12/documents/method_4.pdf"
+        },
+        {
+          "reference": "D09:3,8",
           "title": "EPA Method 5.pdf",
           "edition": "",
           "url": ""
@@ -342,10 +361,10 @@
       "sourceVersion": "03.08.2017",
       "variant": "Filtre 3. ve 4. impinger arasında",
       "sources": [
-        "D05:2,5-7",
-        "D09:8"
+        "D05:1-7",
+        "D09:7-10,15-18,22-23"
       ],
-      "reviewState": "train_checked",
+      "reviewState": "sections_checked",
       "train": [
         {
           "id": "probe",
@@ -427,13 +446,17 @@
           "title": "Hazırlık",
           "items": [
             "Dört impinger kullanılır. Dolumlar Method 5 §8.3 bağlantısına göre: 100 mL su + 100 mL su + boş + tartılmış silika jel.",
-            "Filtre konumunu saha formuna yaz. Ön filtre seçeneğinde 20-mesh paslanmaz destek koşulunu kontrol et."
+            "Filtre konumunu saha formuna yaz. Ön filtre seçeneğinde 20-mesh paslanmaz destek koşulunu kontrol et.",
+            "Hedef toplam inorganik florürdür; florokarbon/Freon ölçümü değildir. Yüksek klorür girişimi ve numuneye temas eden gresin düşük sonuç oluşturması değerlendirilir (§1, §4).",
+            "Arka filtre Whatman No.1 veya eşdeğeridir.",
+            "1/3/4 modifiye GS; 2 standart GS uçlu. Ön filtrede 20-mesh çelik destek; cam frit/sinter metal destek kullanılmaz. Arka filtrede cam frit destek mümkündür (§6.1)."
           ]
         },
         {
           "title": "Kaçak kontrolü",
           "items": [
-            "Method 5 §8.4 bağlantılı kaçak testlerini uygula."
+            "Ön kaçak testi önerilir; parça değişiminden hemen önce ve ölçüm sonunda test zorunludur. Sonda/ara testte koşuda görülen en yüksek vakum veya üstü kullanılır.",
+            "Method 5 §8.4: kabul edilen kaçak ≤min(ortalama Q ×0,04; 0,57 L/dk). 380 mmHg yaklaşık 50,66 kPa vakumdur; düşük ön test vakumu ancak ölçüm sırasında aşılmıyorsa kullanılabilir. Aşımda yalnız §12.3 hacim düzeltmesi veya ölçümün reddi uygulanır."
           ]
         },
         {
@@ -455,7 +478,8 @@
         {
           "title": "Saklama ve taşıma",
           "items": [
-            "Kabı sızdırmaz kapat, sıvı seviyesini işaretle. Bu kartta sayısal bekletme süresi doğrulanmadı; başka bir metodun süresini aktarma."
+            "Sıvı numune geniş ağızlı, yaklaşık 1 L HDPE kapta; filtre, ilk üç şişe ve bütün su yıkamaları aynı numuneye alınır. Filtreyi ayrı işleme yalnız izin verilen alternatif prosedürle yap (§6.2.2, §8.6.4).",
+            "Kap sızdırmaz kapatılır, seviye işaretlenir. İncelenen Method 13A numune bölümünde sayısal saklama sıcaklığı/azami bekletme süresi verilmez; bunlar laboratuvarın geçerli kabul planında tanımlanmalıdır. Reaktifin raf ömrü numune bekletme süresi değildir."
           ]
         },
         {
@@ -463,13 +487,13 @@
           "items": [
             "Tesis, baca/nokta, tarih, başlangıç–bitiş, metot/sürüm, numuneci ve fraksiyon kimliklerini etiketle.",
             "Numune kabı, kapak, miktar, blank, mühür, taşıma koşulu, teslim saati ve teslim alanı izlenebilir teslim formuna kaydet.",
-            "Numune, blank ve silika jel kayıtlarını birbirinden ayır."
+            "Numune, blank ve silika jel kayıtlarını birbirinden ayır.",
+            "Numune blankı: kullanılmamış filtre ve numuneyle eşit toplam su hacmi; aynı analiz prosedürü. Ön filtre lot blankı ile bu numune blankı ayrı kontrollerdir (§7.1.1.2, §8.6.4.2)."
           ]
         }
       ],
       "gaps": [
-        "Bu kartın doğrulaması şema ve belirtilen kaynak maddeleriyle sınırlıdır; tam yöntem yeterlilik incelemesi sürüyor.",
-        "Kaynak sürümünün güncel yürürlük durumu ve laboratuvarın onaylı uygulaması ayrıca kontrol edilmeli."
+        "Metot bağlantılı Method 1/2/3 saha geometrisi ve gaz yoğunluğu, ilgili ölçüm planında tamamlanır; numune kabul koşulları laboratuvarca yazılı tanımlanır."
       ],
       "evidence": [
         {
@@ -478,17 +502,31 @@
             "D05:6-7"
           ],
           "clause": "§8.6.4"
+        },
+        {
+          "field": "Kapsam / filtre türü / destek / kap",
+          "references": [
+            "D05:1-6"
+          ],
+          "clause": "§1, §4, §6–8"
+        },
+        {
+          "field": "Kaçak / izokinetik / süre",
+          "references": [
+            "D09:7-10,22-23"
+          ],
+          "clause": "Method 5 §8.2, §8.4–5, §12.11 bağlantısı"
         }
       ],
       "sourceDetails": [
         {
-          "reference": "D05:2,5-7",
+          "reference": "D05:1-7",
           "title": "EPA Method 13A.pdf",
           "edition": "",
           "url": ""
         },
         {
-          "reference": "D09:8",
+          "reference": "D09:7-10,15-18,22-23",
           "title": "EPA Method 5.pdf",
           "edition": "",
           "url": ""
@@ -503,10 +541,10 @@
       "sourceVersion": "03.08.2017",
       "variant": "Filtre probdan sonra — alternatif",
       "sources": [
-        "D05:2,5-7",
-        "D09:8"
+        "D05:1-7",
+        "D09:7-10,15-18,22-23"
       ],
-      "reviewState": "train_checked",
+      "reviewState": "sections_checked",
       "train": [
         {
           "id": "probe",
@@ -588,13 +626,17 @@
           "title": "Hazırlık",
           "items": [
             "Dört impinger kullanılır. Dolumlar Method 5 §8.3 bağlantısına göre: 100 mL su + 100 mL su + boş + tartılmış silika jel.",
-            "Filtre konumunu saha formuna yaz. Ön filtre seçeneğinde 20-mesh paslanmaz destek koşulunu kontrol et."
+            "Filtre konumunu saha formuna yaz. Ön filtre seçeneğinde 20-mesh paslanmaz destek koşulunu kontrol et.",
+            "Hedef toplam inorganik florürdür; florokarbon/Freon ölçümü değildir. Yüksek klorür girişimi ve numuneye temas eden gresin düşük sonuç oluşturması değerlendirilir (§1, §4).",
+            "Ön filtre ≥%95 verim @0,3 µm test aerosolü, <0,015 mg F/cm² blank ve 135 °C’ye dayanım şartlıdır. En az 3 filtreden lot blank ortalaması belirlenir; cam elyaf genellikle yüksek/değişken flor blankı nedeniyle uygun değildir.",
+            "1/3/4 modifiye GS; 2 standart GS uçlu. Ön filtrede 20-mesh çelik destek; cam frit/sinter metal destek kullanılmaz. Arka filtrede cam frit destek mümkündür (§6.1)."
           ]
         },
         {
           "title": "Kaçak kontrolü",
           "items": [
-            "Method 5 §8.4 bağlantılı kaçak testlerini uygula."
+            "Ön kaçak testi önerilir; parça değişiminden hemen önce ve ölçüm sonunda test zorunludur. Sonda/ara testte koşuda görülen en yüksek vakum veya üstü kullanılır.",
+            "Method 5 §8.4: kabul edilen kaçak ≤min(ortalama Q ×0,04; 0,57 L/dk). 380 mmHg yaklaşık 50,66 kPa vakumdur; düşük ön test vakumu ancak ölçüm sırasında aşılmıyorsa kullanılabilir. Aşımda yalnız §12.3 hacim düzeltmesi veya ölçümün reddi uygulanır."
           ]
         },
         {
@@ -616,7 +658,8 @@
         {
           "title": "Saklama ve taşıma",
           "items": [
-            "Kabı sızdırmaz kapat, sıvı seviyesini işaretle. Bu kartta sayısal bekletme süresi doğrulanmadı; başka bir metodun süresini aktarma."
+            "Sıvı numune geniş ağızlı, yaklaşık 1 L HDPE kapta; filtre, ilk üç şişe ve bütün su yıkamaları aynı numuneye alınır. Filtreyi ayrı işleme yalnız izin verilen alternatif prosedürle yap (§6.2.2, §8.6.4).",
+            "Kap sızdırmaz kapatılır, seviye işaretlenir. İncelenen Method 13A numune bölümünde sayısal saklama sıcaklığı/azami bekletme süresi verilmez; bunlar laboratuvarın geçerli kabul planında tanımlanmalıdır. Reaktifin raf ömrü numune bekletme süresi değildir."
           ]
         },
         {
@@ -624,13 +667,13 @@
           "items": [
             "Tesis, baca/nokta, tarih, başlangıç–bitiş, metot/sürüm, numuneci ve fraksiyon kimliklerini etiketle.",
             "Numune kabı, kapak, miktar, blank, mühür, taşıma koşulu, teslim saati ve teslim alanı izlenebilir teslim formuna kaydet.",
-            "Numune, blank ve silika jel kayıtlarını birbirinden ayır."
+            "Numune, blank ve silika jel kayıtlarını birbirinden ayır.",
+            "Numune blankı: kullanılmamış filtre ve numuneyle eşit toplam su hacmi; aynı analiz prosedürü. Ön filtre lot blankı ile bu numune blankı ayrı kontrollerdir (§7.1.1.2, §8.6.4.2)."
           ]
         }
       ],
       "gaps": [
-        "Bu kartın doğrulaması şema ve belirtilen kaynak maddeleriyle sınırlıdır; tam yöntem yeterlilik incelemesi sürüyor.",
-        "Kaynak sürümünün güncel yürürlük durumu ve laboratuvarın onaylı uygulaması ayrıca kontrol edilmeli."
+        "Metot bağlantılı Method 1/2/3 saha geometrisi ve gaz yoğunluğu, ilgili ölçüm planında tamamlanır; numune kabul koşulları laboratuvarca yazılı tanımlanır."
       ],
       "evidence": [
         {
@@ -639,17 +682,31 @@
             "D05:6-7"
           ],
           "clause": "§8.6.4"
+        },
+        {
+          "field": "Kapsam / filtre türü / destek / kap",
+          "references": [
+            "D05:1-6"
+          ],
+          "clause": "§1, §4, §6–8"
+        },
+        {
+          "field": "Kaçak / izokinetik / süre",
+          "references": [
+            "D09:7-10,22-23"
+          ],
+          "clause": "Method 5 §8.2, §8.4–5, §12.11 bağlantısı"
         }
       ],
       "sourceDetails": [
         {
-          "reference": "D05:2,5-7",
+          "reference": "D05:1-7",
           "title": "EPA Method 13A.pdf",
           "edition": "",
           "url": ""
         },
         {
-          "reference": "D09:8",
+          "reference": "D09:7-10,15-18,22-23",
           "title": "EPA Method 5.pdf",
           "edition": "",
           "url": ""
@@ -664,15 +721,16 @@
       "sourceVersion": "02.08.2017",
       "variant": "Cıva dahil",
       "sources": [
-        "D07:3-7,11-15"
+        "D07:3-7,10-15,24-26",
+        "D09:1-3,7-10,15-18,22-23"
       ],
-      "reviewState": "train_checked",
+      "reviewState": "sections_checked",
       "train": [
         {
           "id": "probe",
           "kind": "probe",
           "label": "Nozül ve prob",
-          "content": "Metoda uygun malzeme / sıcaklık",
+          "content": "Cam nozül / borosilikat veya kuvars iç prob; hedef metal bulaşması yapmayan bağlantı",
           "amount": "",
           "optional": false
         },
@@ -680,7 +738,7 @@
           "id": "filter",
           "kind": "filter",
           "label": "Filtre",
-          "content": "Metoda uygun filtre tutucu",
+          "content": "Organik bağlayıcısız, metal blankı uygun filtre; metal içermeyen PTFE destek",
           "amount": "",
           "optional": false
         },
@@ -752,7 +810,7 @@
       "limits": [
         {
           "label": "Çekiş debisi",
-          "value": "İzokinetik; sabit debi atanmaz."
+          "value": "Method 5 bağlantılı izokinetik: genel kabul %90–110. Sabit L/dk atanmaz; EN toz standardının %95–115 bandı buraya taşınmaz."
         },
         {
           "label": "Toplam çekiş hacmi",
@@ -760,11 +818,11 @@
         },
         {
           "label": "Sıcaklık",
-          "value": "Method 5 bağlantılı ısıtma koşulları; sayısal alanın ek doğrulaması bekleniyor."
+          "value": "Method 5 bağlantılı prob/filtre 120±14 °C; farklı uygulama sıcaklığı özel hüküm/onay gerektirir. Son impinger çıkış gazı <20 °C."
         },
         {
           "label": "Ölçüm süresi",
-          "value": "Metot ve hedef hacimle planlanır."
+          "value": "Method 5: noktalarda eşit süre ve en az 2 dk/nokta; mevzuatın toplam süre/hacmi ayrıca sağlanır. Her bacaya evrensel 30 dk/3 tekrar atanmaz."
         }
       ],
       "phases": [
@@ -773,13 +831,18 @@
           "items": [
             "Cam ekipmanın temizlik / asit yıkama işlemini Method 29 §8.1.1’e göre tamamla; filtre ve bağlantılarda metal bulaşmasını önle.",
             "İlk boş şişe, beklenen nem toplaması yaklaşık 100 mL altında ise metot koşullarıyla çıkarılabilir.",
-            "§8.2.12–17 blank planı: 0,1 N HNO₃ 300 mL; su 100 mL; asitli peroksit 200 mL; aynı partiden 3 boş filtre. Cıva varsa asitli permanganat 100 mL ve 200 mL su + 25 mL 8 N HCl blankı da ayrı hazırlanır. Partikül/aseton kullanılıyorsa 100 mL aseton blankı."
+            "§8.2.12–17 blank planı: 0,1 N HNO₃ 300 mL; su 100 mL; asitli peroksit 200 mL; aynı partiden 3 boş filtre. Cıva varsa asitli permanganat 100 mL ve 200 mL su + 25 mL 8 N HCl blankı da ayrı hazırlanır. Partikül/aseton kullanılıyorsa 100 mL aseton blankı.",
+            "Camlar: sıcak su/sabun, musluk ve uygun saf suyla üçer durulama, ≥4 saat %10 hacim/hacim HNO₃ içinde bekletme, su ve son aseton durulaması, hava kurutması (§8.1.1).",
+            "Filtre hedef metal başına <1,3 µg/in² =yaklaşık 0,2015 µg/cm²; üretici verisi yoksa lot blank analizi. Su hedef metal başına <1 µg/L; absorpsiyon çözeltisi <2 µg/L hedef metal saflığında (§7.2–7.3).",
+            "Asitli peroksit tarifi: yaklaşık 500 mL suya 50 mL derişik HNO₃, sonra 333 mL %30 H₂O₂ stok çözeltisi; son hacim 1 L. Stok yüzde tanımı kaynağın hacim/hacim tarifidir; EN 14385 kütle/kütle reçetesiyle değiştirme.",
+            "Asitli permanganat taze günlük hazırlanır: %4 kütle/hacim KMnO₄, %10 hacim/hacim H₂SO₄ ortamında. Camda hazırlanıp saklanır; §7.3.2 filtreleme ve basınç önlemleri uygulanır."
           ]
         },
         {
           "title": "Kaçak kontrolü",
           "items": [
-            "Method 5 bağlantılı ön, parça değişimi ve son testlerini uygula; PTFE veya bulaşma yapmayan sızdırmazlık kullan."
+            "Ön kaçak testi önerilir; parça değişiminden hemen önce ve ölçüm sonunda test zorunludur. Sonda/ara testte koşuda görülen en yüksek vakum veya üstü kullanılır.",
+            "Method 5 §8.4: kabul edilen kaçak ≤min(ortalama Q ×0,04; 0,57 L/dk). 380 mmHg yaklaşık 50,66 kPa vakumdur; düşük ön test vakumu ancak ölçüm sırasında aşılmıyorsa kullanılabilir. Aşımda yalnız §12.3 hacim düzeltmesi veya ölçümün reddi uygulanır."
           ]
         },
         {
@@ -805,9 +868,9 @@
         {
           "title": "Saklama ve taşıma",
           "items": [
-            "Sıvı seviyelerini işaretle, kap kimliklerini ve reaktif blanklarını koru. Cıva kaplarının kapanma/taşıma düzenini metot ve laboratuvarla doğrula.",
-            "Bu kartta sayısal saklama sıcaklığı / bekletme süresi tamamlanmadı.",
-            "Permanganat kaplarında basınç oluşabilir: kabı ağzına kadar doldurma; §7.3.2 ve §8.2.9.2’deki basınç tahliye/taşıma düzenini laboratuvarla uygula."
+            "Cıva/permanganat numune ve blankları oksitleyiciye dayanıklı PTFE astarlı kapaklı 500/1000 mL camda; diğer fraksiyonlarda cam veya PE kap kullanılabilir (§6.2.2).",
+            "Kaplar etiketli ve dik; sıvı seviyeleri işaretli. Method 29 saha bölümü sayısal genel saklama sıcaklığı/azami bekletme süresi vermez. Analitik yöntem ve numune matrisiyle uyumlu laboratuvar kabul/koruma planı ayrıca gerekir. EN 14385’in dört haftasını buraya otomatik aktarma.",
+            "Permanganat kaplarında basınç oluşabilir; ağzına kadar doldurma, bulaşmaya izin vermeyen basınç tahliyesini §5.3/§8.2.9.2 ve laboratuvar taşıma planıyla uygula."
           ]
         },
         {
@@ -815,13 +878,15 @@
           "items": [
             "Tesis, baca/nokta, tarih, başlangıç–bitiş, metot/sürüm, numuneci ve fraksiyon kimliklerini etiketle.",
             "Numune kabı, kapak, miktar, blank, mühür, taşıma koşulu, teslim saati ve teslim alanı izlenebilir teslim formuna kaydet.",
-            "Hedef metal listesi, cıvanın dahil olup olmadığı, filtre ve her yıkama fraksiyonunu açıkça belirt."
+            "Hedef metal listesi, cıvanın dahil olup olmadığı, filtre ve her yıkama fraksiyonunu açıkça belirt.",
+            "Blank düzeltmesi EN 14385 ile aynı değildir. Method 29 §12.6–12.7, fraksiyon ve hedefe göre sınırlı düzeltmeler verir; ölçülen blankı sınırsız çıkarma. Ön/arka fraksiyonları ayrı analize ve hesaba izlenebilir teslim et.",
+            "Cıva dışı metalde: ön yarı eşiği A=1,4 µg/in² × toplam filtre alanı(in²), arka yarı A=1 µg. Blank B≤A ise B çıkarılır; B>A ise çıkarılacak miktar max(A; min(B; numune kütlesinin %5’i)). Filtre kabulündeki 1,3 µg/in² ile bu 1,4 düzeltme eşiğini karıştırma.",
+            "Cıvada bütün fraksiyonlar için toplam blank eşiği 0,6 µg: blank bunun altındaysa tamamı, üstündeyse max(0,6 µg; min(toplam blank; toplam numune Hg kütlesinin %5’i)) çıkarılır (§12.7)."
           ]
         }
       ],
       "gaps": [
-        "Bu kartın doğrulaması şema ve belirtilen kaynak maddeleriyle sınırlıdır; tam yöntem yeterlilik incelemesi sürüyor.",
-        "Kaynak sürümünün güncel yürürlük durumu ve laboratuvarın onaylı uygulaması ayrıca kontrol edilmeli."
+        "Hedef metal listesi, analitik tayin sınırı, blank düzeltmesi ve laboratuvarın numune kabul koşulları numune planında eşleştirilmelidir. Cıva istenirse cıva içeren varyant kullanılmalıdır."
       ],
       "evidence": [
         {
@@ -830,12 +895,40 @@
             "D07:12-15"
           ],
           "clause": "§8.2.5–8.2.17"
+        },
+        {
+          "field": "Sıcaklık / süre / izokinetik",
+          "references": [
+            "D07:4,11,26",
+            "D09:1-3,7-10,22-23"
+          ],
+          "clause": "§6.1.4, §8.1.4–6, §12.9; Method 5 bağlantıları"
+        },
+        {
+          "field": "Kap / reaktif / saflık / taşıma",
+          "references": [
+            "D07:3-7,10-15"
+          ],
+          "clause": "§5.3, §6.2.2, §7.2–7.4, §8.1–8.2"
+        },
+        {
+          "field": "Blank düzeltmesinin ayrımı",
+          "references": [
+            "D07:24-26"
+          ],
+          "clause": "§12.6–12.7"
         }
       ],
       "sourceDetails": [
         {
-          "reference": "D07:3-7,11-15",
+          "reference": "D07:3-7,10-15,24-26",
           "title": "EPA Method 29.pdf",
+          "edition": "",
+          "url": ""
+        },
+        {
+          "reference": "D09:1-3,7-10,15-18,22-23",
+          "title": "EPA Method 5.pdf",
           "edition": "",
           "url": ""
         }
@@ -849,15 +942,16 @@
       "sourceVersion": "02.08.2017",
       "variant": "Cıva analizi yok — 4, 5 ve 6 çıkarılır",
       "sources": [
-        "D07:3-7,11-15"
+        "D07:3-7,10-15,24-26",
+        "D09:1-3,7-10,15-18,22-23"
       ],
-      "reviewState": "train_checked",
+      "reviewState": "sections_checked",
       "train": [
         {
           "id": "probe",
           "kind": "probe",
           "label": "Nozül ve prob",
-          "content": "Metoda uygun malzeme / sıcaklık",
+          "content": "Cam nozül / borosilikat veya kuvars iç prob; hedef metal bulaşması yapmayan bağlantı",
           "amount": "",
           "optional": false
         },
@@ -865,7 +959,7 @@
           "id": "filter",
           "kind": "filter",
           "label": "Filtre",
-          "content": "Metoda uygun filtre tutucu",
+          "content": "Organik bağlayıcısız, metal blankı uygun filtre; metal içermeyen PTFE destek",
           "amount": "",
           "optional": false
         },
@@ -913,7 +1007,7 @@
       "limits": [
         {
           "label": "Çekiş debisi",
-          "value": "İzokinetik; sabit debi atanmaz."
+          "value": "Method 5 bağlantılı izokinetik: genel kabul %90–110. Sabit L/dk atanmaz; EN toz standardının %95–115 bandı buraya taşınmaz."
         },
         {
           "label": "Toplam çekiş hacmi",
@@ -921,11 +1015,11 @@
         },
         {
           "label": "Sıcaklık",
-          "value": "Method 5 bağlantılı ısıtma koşulları; sayısal alanın ek doğrulaması bekleniyor."
+          "value": "Method 5 bağlantılı prob/filtre 120±14 °C; farklı uygulama sıcaklığı özel hüküm/onay gerektirir. Son impinger çıkış gazı <20 °C."
         },
         {
           "label": "Ölçüm süresi",
-          "value": "Metot ve hedef hacimle planlanır."
+          "value": "Method 5: noktalarda eşit süre ve en az 2 dk/nokta; mevzuatın toplam süre/hacmi ayrıca sağlanır. Her bacaya evrensel 30 dk/3 tekrar atanmaz."
         }
       ],
       "phases": [
@@ -934,13 +1028,17 @@
           "items": [
             "Cam ekipmanın temizlik / asit yıkama işlemini Method 29 §8.1.1’e göre tamamla; filtre ve bağlantılarda metal bulaşmasını önle.",
             "İlk boş şişe, beklenen nem toplaması yaklaşık 100 mL altında ise metot koşullarıyla çıkarılabilir.",
-            "§8.2.12–17 blank planı: 0,1 N HNO₃ 300 mL; su 100 mL; asitli peroksit 200 mL; aynı partiden 3 boş filtre. Cıva varsa asitli permanganat 100 mL ve 200 mL su + 25 mL 8 N HCl blankı da ayrı hazırlanır. Partikül/aseton kullanılıyorsa 100 mL aseton blankı."
+            "§8.2.12–17 blank planı: 0,1 N HNO₃ 300 mL; su 100 mL; asitli peroksit 200 mL; aynı partiden 3 boş filtre. Cıva varsa asitli permanganat 100 mL ve 200 mL su + 25 mL 8 N HCl blankı da ayrı hazırlanır. Partikül/aseton kullanılıyorsa 100 mL aseton blankı.",
+            "Camlar: sıcak su/sabun, musluk ve uygun saf suyla üçer durulama, ≥4 saat %10 hacim/hacim HNO₃ içinde bekletme, su ve son aseton durulaması, hava kurutması (§8.1.1).",
+            "Filtre hedef metal başına <1,3 µg/in² =yaklaşık 0,2015 µg/cm²; üretici verisi yoksa lot blank analizi. Su hedef metal başına <1 µg/L; absorpsiyon çözeltisi <2 µg/L hedef metal saflığında (§7.2–7.3).",
+            "Asitli peroksit tarifi: yaklaşık 500 mL suya 50 mL derişik HNO₃, sonra 333 mL %30 H₂O₂ stok çözeltisi; son hacim 1 L. Stok yüzde tanımı kaynağın hacim/hacim tarifidir; EN 14385 kütle/kütle reçetesiyle değiştirme."
           ]
         },
         {
           "title": "Kaçak kontrolü",
           "items": [
-            "Method 5 bağlantılı ön, parça değişimi ve son testlerini uygula; PTFE veya bulaşma yapmayan sızdırmazlık kullan."
+            "Ön kaçak testi önerilir; parça değişiminden hemen önce ve ölçüm sonunda test zorunludur. Sonda/ara testte koşuda görülen en yüksek vakum veya üstü kullanılır.",
+            "Method 5 §8.4: kabul edilen kaçak ≤min(ortalama Q ×0,04; 0,57 L/dk). 380 mmHg yaklaşık 50,66 kPa vakumdur; düşük ön test vakumu ancak ölçüm sırasında aşılmıyorsa kullanılabilir. Aşımda yalnız §12.3 hacim düzeltmesi veya ölçümün reddi uygulanır."
           ]
         },
         {
@@ -962,8 +1060,8 @@
         {
           "title": "Saklama ve taşıma",
           "items": [
-            "Sıvı seviyelerini işaretle, kap kimliklerini ve reaktif blanklarını koru. Cıva kaplarının kapanma/taşıma düzenini metot ve laboratuvarla doğrula.",
-            "Bu kartta sayısal saklama sıcaklığı / bekletme süresi tamamlanmadı."
+            "Cıva içermeyen bu varyantın fraksiyonları için cam veya PE numune kapları kullanılır (§6.2.2).",
+            "Kaplar etiketli ve dik; sıvı seviyeleri işaretli. Method 29 saha bölümü sayısal genel saklama sıcaklığı/azami bekletme süresi vermez. Analitik yöntem ve numune matrisiyle uyumlu laboratuvar kabul/koruma planı ayrıca gerekir. EN 14385’in dört haftasını buraya otomatik aktarma."
           ]
         },
         {
@@ -971,13 +1069,14 @@
           "items": [
             "Tesis, baca/nokta, tarih, başlangıç–bitiş, metot/sürüm, numuneci ve fraksiyon kimliklerini etiketle.",
             "Numune kabı, kapak, miktar, blank, mühür, taşıma koşulu, teslim saati ve teslim alanı izlenebilir teslim formuna kaydet.",
-            "Hedef metal listesi, cıvanın dahil olup olmadığı, filtre ve her yıkama fraksiyonunu açıkça belirt."
+            "Hedef metal listesi, cıvanın dahil olup olmadığı, filtre ve her yıkama fraksiyonunu açıkça belirt.",
+            "Blank düzeltmesi EN 14385 ile aynı değildir. Method 29 §12.6–12.7, fraksiyon ve hedefe göre sınırlı düzeltmeler verir; ölçülen blankı sınırsız çıkarma. Ön/arka fraksiyonları ayrı analize ve hesaba izlenebilir teslim et.",
+            "Cıva dışı metalde: ön yarı eşiği A=1,4 µg/in² × toplam filtre alanı(in²), arka yarı A=1 µg. Blank B≤A ise B çıkarılır; B>A ise çıkarılacak miktar max(A; min(B; numune kütlesinin %5’i)). Filtre kabulündeki 1,3 µg/in² ile bu 1,4 düzeltme eşiğini karıştırma."
           ]
         }
       ],
       "gaps": [
-        "Bu kartın doğrulaması şema ve belirtilen kaynak maddeleriyle sınırlıdır; tam yöntem yeterlilik incelemesi sürüyor.",
-        "Kaynak sürümünün güncel yürürlük durumu ve laboratuvarın onaylı uygulaması ayrıca kontrol edilmeli."
+        "Hedef metal listesi, analitik tayin sınırı, blank düzeltmesi ve laboratuvarın numune kabul koşulları numune planında eşleştirilmelidir. Cıva istenirse cıva içeren varyant kullanılmalıdır."
       ],
       "evidence": [
         {
@@ -986,12 +1085,40 @@
             "D07:12-15"
           ],
           "clause": "§8.2.5–8.2.17"
+        },
+        {
+          "field": "Sıcaklık / süre / izokinetik",
+          "references": [
+            "D07:4,11,26",
+            "D09:1-3,7-10,22-23"
+          ],
+          "clause": "§6.1.4, §8.1.4–6, §12.9; Method 5 bağlantıları"
+        },
+        {
+          "field": "Kap / reaktif / saflık / taşıma",
+          "references": [
+            "D07:3-7,10-15"
+          ],
+          "clause": "§5.3, §6.2.2, §7.2–7.4, §8.1–8.2"
+        },
+        {
+          "field": "Blank düzeltmesinin ayrımı",
+          "references": [
+            "D07:24-26"
+          ],
+          "clause": "§12.6–12.7"
         }
       ],
       "sourceDetails": [
         {
-          "reference": "D07:3-7,11-15",
+          "reference": "D07:3-7,10-15,24-26",
           "title": "EPA Method 29.pdf",
+          "edition": "",
+          "url": ""
+        },
+        {
+          "reference": "D09:1-3,7-10,15-18,22-23",
+          "title": "EPA Method 5.pdf",
           "edition": "",
           "url": ""
         }
@@ -1285,9 +1412,10 @@
       "sourceVersion": "14.01.2019",
       "variant": "Filtre ilk ve ikinci impinger arasında",
       "sources": [
-        "D10:2,4-7"
+        "D10:2-7",
+        "D09:7-10,22-23"
       ],
-      "reviewState": "train_checked",
+      "reviewState": "sections_checked",
       "train": [
         {
           "id": "probe",
@@ -1301,7 +1429,7 @@
           "id": "i1",
           "kind": "impinger",
           "label": "İmpinger 1",
-          "content": "%80 izopropanol",
+          "content": "%80 izopropanol (hacim/hacim); standart GS uç",
           "amount": "100 mL",
           "optional": false
         },
@@ -1317,7 +1445,7 @@
           "id": "i2",
           "kind": "impinger",
           "label": "İmpinger 2",
-          "content": "%3 H₂O₂",
+          "content": "%3 H₂O₂ (hacim/hacim); modifiye GS uç",
           "amount": "100 mL",
           "optional": false
         },
@@ -1325,7 +1453,7 @@
           "id": "i3",
           "kind": "impinger",
           "label": "İmpinger 3",
-          "content": "%3 H₂O₂",
+          "content": "%3 H₂O₂ (hacim/hacim); standart GS uç",
           "amount": "100 mL",
           "optional": false
         },
@@ -1368,13 +1496,16 @@
         {
           "title": "Hazırlık",
           "items": [
-            "Metal iç prob kullanma; filtreyi kesinlikle ilk impingerin önüne yerleştirme. Reaktif blanklarını ayır."
+            "Metal iç prob kullanma; filtreyi kesinlikle ilk impingerin önüne yerleştirme. Reaktif blanklarını ayır.",
+            "İlk ve üçüncü şişe standart, ikinci/dördüncü modifiye GS uçludur. İzopropanolün peroksit safsızlığı kontrol edilir; %3 H₂O₂ günlük taze hazırlanır. Florür, serbest NH₃ veya dimetil anilin varsa girişim için onaylı alternatif gerekir (§4.1, §6.1, §7.1)."
           ]
         },
         {
           "title": "Kaçak kontrolü",
           "items": [
-            "Ön test önerilir; parça değişiminden önce ve ölçüm sonunda ilgili kaçak testleri yapılır."
+            "Ön kaçak testi önerilir; parça değişiminden hemen önce ve ölçüm sonunda test zorunludur. Sonda/ara testte koşuda görülen en yüksek vakum veya üstü kullanılır.",
+            "Method 5 §8.4: kabul edilen kaçak ≤min(ortalama Q ×0,04; 0,57 L/dk). 380 mmHg yaklaşık 50,66 kPa vakumdur; düşük ön test vakumu ancak ölçüm sırasında aşılmıyorsa kullanılabilir. Aşımda yalnız §12.3 hacim düzeltmesi veya ölçümün reddi uygulanır.",
+            "Ön testte filtre girişi yerine ilk impinger girişi tıkanır; prob yalnız yoğuşmayı önleyecek kadar ısıtılır; filtre tutucusu ısıtılmaz."
           ]
         },
         {
@@ -1395,7 +1526,8 @@
         {
           "title": "Saklama ve taşıma",
           "items": [
-            "Sızdırmaz kap, fraksiyon kimliği ve sıvı seviyesi kaydı; sayısal saklama sıcaklığı / süre doğrulaması bekleniyor."
+            "Her ölçümün iki fraksiyonu ayrı, sızdırmaz yaklaşık 1 L PE şişede; buharlaşma önlenir, seviye işaretlenir ve kaplar dik taşınır (§6.2.3, §8.8).",
+            "Method 8 saha bölümünde sayısal genel saklama sıcaklığı/azami bekletme süresi belirtilmez; laboratuvarın matris/analiz kabul koşulları önceden yazılı belirlenir. 15 dakikalık temiz hava süpürmesi analiz bekletme süresi değildir."
           ]
         },
         {
@@ -1408,8 +1540,7 @@
         }
       ],
       "gaps": [
-        "Bu kartın doğrulaması şema ve belirtilen kaynak maddeleriyle sınırlıdır; tam yöntem yeterlilik incelemesi sürüyor.",
-        "Kaynak sürümünün güncel yürürlük durumu ve laboratuvarın onaylı uygulaması ayrıca kontrol edilmeli."
+        "İlgili uygulamanın toplam süre/hacmi ve laboratuvar numune kabul planı gerekir; kaynakta bulunmayan sayısal saklama süresi atanmaz."
       ],
       "evidence": [
         {
@@ -1418,12 +1549,33 @@
             "D10:5-7"
           ],
           "clause": "§8.8; §12.1"
+        },
+        {
+          "field": "Girişimler / uç tipleri / reaktif / kap",
+          "references": [
+            "D10:2-4"
+          ],
+          "clause": "§4, §6–7"
+        },
+        {
+          "field": "Kaçak / süre / izokinetik",
+          "references": [
+            "D10:4-6",
+            "D09:7-10,22-23"
+          ],
+          "clause": "§8.4–8.7; Method 5 bağlantısı"
         }
       ],
       "sourceDetails": [
         {
-          "reference": "D10:2,4-7",
+          "reference": "D10:2-7",
           "title": "EPA Method 8.pdf",
+          "edition": "",
+          "url": ""
+        },
+        {
+          "reference": "D09:7-10,22-23",
+          "title": "EPA Method 5.pdf",
           "edition": "",
           "url": ""
         }
@@ -1434,12 +1586,12 @@
       "scope": "İmisyon",
       "parameter": "PM10 — ortam havası",
       "method": "EN 12341",
-      "sourceVersion": "2023",
+      "sourceVersion": "EN 12341:2023 — arşivde BS EN baskısı",
       "variant": "Ortam havası — gravimetrik filtre örneklemesi",
       "sources": [
-        "D23:8,30-31"
+        "D23:8,18-25,28-37"
       ],
-      "reviewState": "train_checked",
+      "reviewState": "sections_checked",
       "train": [],
       "limits": [
         {
@@ -1464,20 +1616,27 @@
           "title": "Hazırlık",
           "items": [
             "Doğru boyut ayırıcı başlığı ve temiz giriş sistemini kullan. Filtreyi benzersiz kimlikle, temiz ortamda kasete yerleştir.",
-            "Arşiv §6.3: ≥48 saat koşullandırma sonrası ilk tartım; ≥12 saat ek koşullandırma sonrası ikinci tartım. İlgili kabul ve belirsizlik istisnalarını standarttan kontrol et."
+            "Arşiv §6.3: ≥48 saat koşullandırma sonrası ilk tartım; ≥12 saat ek koşullandırma sonrası ikinci tartım. İlgili kabul ve belirsizlik istisnalarını standarttan kontrol et.",
+            "Örnekleme başlığına uygun 2,3 m³/saat = 38,333… L/dk nominal ORTAM debisi. Dikey bağlantı borusu kıvrımsız, ≤3 m; filtre açık örnekleme çapı 34–44 mm. Filtre en az %99,5 verim @0,3 µm ve uygulamaya uygun malzemede olmalı.",
+            "Ön tartım: 19–21 °C / %45–50 RH’de ≥48 saat şartlandır, tart; ≥12 saat sonra tekrar tart. Fark ≤40 µg. Başarısızsa ≥24 saat ek şartlandırma/son kontrol; yine başarısızsa filtreyi reddet. Son iki tartım ortalaması ön kütledir.",
+            "En az iki tartım odası blankı tutulur; her tartım oturumunda kütle değişimi ≤40 µg. Terazi çözünürlüğü ≤10 µg, 0–200 mg aralığında kalibrasyon belirsizliği ≤25 µg; her oturumda referans kütle kontrolü yapılır."
           ]
         },
         {
           "title": "Kaçak kontrolü",
           "items": [
-            "Örnekleyicinin kaçak ve debi doğrulamasını EN 12341 ekipman gereklilikleri / onaylı cihaz prosedürüyle yap. Baca EPA kaçak sınırı buraya otomatik taşınmaz."
+            "Tüm örnekleme hattı yılda bir ve her yeni kurulum/yer değişiminde kaçak kontrolünden geçer. Kaçak >%1 ise bakım ve yeniden test gerekir (§7.9).",
+            "§5.1.10 düşük basınç yönteminde sistem ölü hacmi ve basınçtan hesaplanan süre (en çok 2 dk) kullanılır; test üç kez, en yüksek kaçakla değerlendirilir. Hacimsel yöntem yalnız düşük basınç ölçümü teknik olarak yapılamıyorsa kullanılır. Evrensel EPA 0,57 L/dk sınırı atanmaz."
           ]
         },
         {
           "title": "Örnekleme",
           "items": [
             "Gerçek debi, başlangıç/bitiş zamanı, kesintiler ve cihaz bayraklarını kaydet. Örneklenen hacim ortam koşullarındadır.",
-            "Kasette en az bir filtre gaz çekilmeden saha blankı olarak bırakılır (§6.4.2)."
+            "Kasette en az bir filtre gaz çekilmeden saha blankı olarak bırakılır (§6.4.2).",
+            "Anlık ortam debisi nominalin ±%5’i, örnekleme ortalaması ±%2’si içinde. En az saatlik debi, süre/hacim, filtre hava T’si, ortam T/P ve filtre depolama T’si kayıtları bulunmalı; filtreler cihazda beklerken de kayıt sürer.",
+            "Hedef 24 saat; filtre değişim kaybı, enerji kesintisi, erken tıkanma ve gerçek çalışma süresi kaydedilir. Tıkanmayla erken biten günlük numunede >18 saat kaynakta öneridir; her uygulamada otomatik geçerlilik onayı değildir.",
+            "Üretici aralığı yoksa impaksiyon yüzeyi/nozül bakımı PM10’da en az her 30., PM2,5’te her 15. numunede; yüksek yükte daha sık olabilir. Debi kontrolü 3 ayda bir, kalibrasyonu yılda bir; sensor/clock kontrolleri Tablo 5’teki ayrı sıklıklarla."
           ]
         },
         {
@@ -1489,8 +1648,9 @@
         {
           "title": "Saklama ve taşıma",
           "items": [
-            "Dış kirlenme ve aşırı ısınmadan korunmuş kapalı / yalıtımlı kaplarda taşı; uçucu kayıplarını ve yoğuşmayı önle.",
-            "Arşiv §6.4.3: gravimetrik analiz için tartım odasına numune alımından itibaren 1 ay içinde alınır. Bu ifade her parametre için 1 ay analiz bekletme izni değildir."
+            "Filtre ve saha blankını temiz kapalı tutucu/petri, örtülü ve yalıtımlı taşıma kabında koru. Uçucu kaybını ve filtre üzerinde yoğuşmayı önle; sıcaklık kaydını koru. ≤23 °C depolama kaynakta bir seçenektir, bütün numunelere zorunlu evrensel +4 °C kuralı değildir.",
+            "Gravimetrik analiz için alımdan itibaren 1 ay içinde tartım odasına al. Tablo 4: örneklenmemiş tartılmış filtre için 2 ay (blank uygun kalırsa daha uzun), cihazdaki örneklenmiş filtre/saha blankı için 1 ay, tartım odasında tartım öncesi 1 ay. Bu farklı adımlar birleştirilerek keyfi toplam analiz süresi oluşturulmaz.",
+            "Son tartım: ≥48 saat şartlandırma, ilk tartım; 24–72 saat ek şartlandırma, ikinci tartım. Fark ≤60 µg. Aşımda ≥24 saat ek şartlandır/yeniden tart veya sonucu geçersiz say; tekrar aşım geçersizdir. Son iki tartım ortalaması son kütledir."
           ]
         },
         {
@@ -1498,21 +1658,36 @@
           "items": [
             "Tesis, baca/nokta, tarih, başlangıç–bitiş, metot/sürüm, numuneci ve fraksiyon kimliklerini etiketle.",
             "Numune kabı, kapak, miktar, blank, mühür, taşıma koşulu, teslim saati ve teslim alanı izlenebilir teslim formuna kaydet.",
-            "Filtre, saha blankı, ortam hacmi, gerçek süre, debi/arıza kayıtları ve meteorolojiyi teslim et."
+            "Filtre, saha blankı, ortam hacmi, gerçek süre, debi/arıza kayıtları ve meteorolojiyi teslim et.",
+            "Saha blankı her noktada ve filtre kasetinde en az bir çekiş yapılmamış filtreyle yürütülür. |Son−ilk blank kütlesi|≤60 µg; bireysel saha blankı PM kütlesinden çıkarılmaz (§6.7.3)."
           ]
         }
       ],
       "gaps": [
-        "Bu kartın doğrulaması şema ve belirtilen kaynak maddeleriyle sınırlıdır; tam yöntem yeterlilik incelemesi sürüyor.",
-        "Kaynak sürümünün güncel yürürlük durumu ve laboratuvarın onaylı uygulaması ayrıca kontrol edilmeli."
+        "Yerleşim/temsil edicilik ve ulusal izleme planı ölçüm noktasına göre seçilir. İkinci tartımdan vazgeçme ancak laboratuvarın ek belirsizliği hesaplayıp uygunluğunu göstermesiyle mümkündür; bu kart çift tartımlı prosedürü kullanır."
       ],
       "trainNote": "İmpinger kullanılmaz; boyut ayırıcı giriş → filtre → debi/hacim kontrolü.",
-      "evidence": [],
+      "evidence": [
+        {
+          "field": "Başlık / debi / süre / veri kaydı",
+          "references": [
+            "D23:18-25"
+          ],
+          "clause": "§5.1.2–5.1.15"
+        },
+        {
+          "field": "Tartım / saklama / blank / sürekli kalite",
+          "references": [
+            "D23:28-37"
+          ],
+          "clause": "§6–7; Tablo 3–5"
+        }
+      ],
       "sourceDetails": [
         {
-          "reference": "D23:8,30-31",
-          "title": "TS EN 12341.pdf",
-          "edition": "",
+          "reference": "D23:8,18-25,28-37",
+          "title": "BS EN 12341:2023 — ortam PM10 / PM2,5",
+          "edition": "EN 12341:2023; arşiv dosya adında TS yazmasına rağmen BS baskısı",
           "url": ""
         }
       ]
@@ -1522,12 +1697,12 @@
       "scope": "İmisyon",
       "parameter": "PM2,5 — ortam havası",
       "method": "EN 12341",
-      "sourceVersion": "2023",
+      "sourceVersion": "EN 12341:2023 — arşivde BS EN baskısı",
       "variant": "Ortam havası — gravimetrik filtre örneklemesi",
       "sources": [
-        "D23:8,30-31"
+        "D23:8,18-25,28-37"
       ],
-      "reviewState": "train_checked",
+      "reviewState": "sections_checked",
       "train": [],
       "limits": [
         {
@@ -1552,20 +1727,27 @@
           "title": "Hazırlık",
           "items": [
             "Doğru boyut ayırıcı başlığı ve temiz giriş sistemini kullan. Filtreyi benzersiz kimlikle, temiz ortamda kasete yerleştir.",
-            "Arşiv §6.3: ≥48 saat koşullandırma sonrası ilk tartım; ≥12 saat ek koşullandırma sonrası ikinci tartım. İlgili kabul ve belirsizlik istisnalarını standarttan kontrol et."
+            "Arşiv §6.3: ≥48 saat koşullandırma sonrası ilk tartım; ≥12 saat ek koşullandırma sonrası ikinci tartım. İlgili kabul ve belirsizlik istisnalarını standarttan kontrol et.",
+            "Örnekleme başlığına uygun 2,3 m³/saat = 38,333… L/dk nominal ORTAM debisi. Dikey bağlantı borusu kıvrımsız, ≤3 m; filtre açık örnekleme çapı 34–44 mm. Filtre en az %99,5 verim @0,3 µm ve uygulamaya uygun malzemede olmalı.",
+            "Ön tartım: 19–21 °C / %45–50 RH’de ≥48 saat şartlandır, tart; ≥12 saat sonra tekrar tart. Fark ≤40 µg. Başarısızsa ≥24 saat ek şartlandırma/son kontrol; yine başarısızsa filtreyi reddet. Son iki tartım ortalaması ön kütledir.",
+            "En az iki tartım odası blankı tutulur; her tartım oturumunda kütle değişimi ≤40 µg. Terazi çözünürlüğü ≤10 µg, 0–200 mg aralığında kalibrasyon belirsizliği ≤25 µg; her oturumda referans kütle kontrolü yapılır."
           ]
         },
         {
           "title": "Kaçak kontrolü",
           "items": [
-            "Örnekleyicinin kaçak ve debi doğrulamasını EN 12341 ekipman gereklilikleri / onaylı cihaz prosedürüyle yap. Baca EPA kaçak sınırı buraya otomatik taşınmaz."
+            "Tüm örnekleme hattı yılda bir ve her yeni kurulum/yer değişiminde kaçak kontrolünden geçer. Kaçak >%1 ise bakım ve yeniden test gerekir (§7.9).",
+            "§5.1.10 düşük basınç yönteminde sistem ölü hacmi ve basınçtan hesaplanan süre (en çok 2 dk) kullanılır; test üç kez, en yüksek kaçakla değerlendirilir. Hacimsel yöntem yalnız düşük basınç ölçümü teknik olarak yapılamıyorsa kullanılır. Evrensel EPA 0,57 L/dk sınırı atanmaz."
           ]
         },
         {
           "title": "Örnekleme",
           "items": [
             "Gerçek debi, başlangıç/bitiş zamanı, kesintiler ve cihaz bayraklarını kaydet. Örneklenen hacim ortam koşullarındadır.",
-            "Kasette en az bir filtre gaz çekilmeden saha blankı olarak bırakılır (§6.4.2)."
+            "Kasette en az bir filtre gaz çekilmeden saha blankı olarak bırakılır (§6.4.2).",
+            "Anlık ortam debisi nominalin ±%5’i, örnekleme ortalaması ±%2’si içinde. En az saatlik debi, süre/hacim, filtre hava T’si, ortam T/P ve filtre depolama T’si kayıtları bulunmalı; filtreler cihazda beklerken de kayıt sürer.",
+            "Hedef 24 saat; filtre değişim kaybı, enerji kesintisi, erken tıkanma ve gerçek çalışma süresi kaydedilir. Tıkanmayla erken biten günlük numunede >18 saat kaynakta öneridir; her uygulamada otomatik geçerlilik onayı değildir.",
+            "Üretici aralığı yoksa impaksiyon yüzeyi/nozül bakımı PM10’da en az her 30., PM2,5’te her 15. numunede; yüksek yükte daha sık olabilir. Debi kontrolü 3 ayda bir, kalibrasyonu yılda bir; sensor/clock kontrolleri Tablo 5’teki ayrı sıklıklarla."
           ]
         },
         {
@@ -1577,8 +1759,9 @@
         {
           "title": "Saklama ve taşıma",
           "items": [
-            "Dış kirlenme ve aşırı ısınmadan korunmuş kapalı / yalıtımlı kaplarda taşı; uçucu kayıplarını ve yoğuşmayı önle.",
-            "Arşiv §6.4.3: gravimetrik analiz için tartım odasına numune alımından itibaren 1 ay içinde alınır. Bu ifade her parametre için 1 ay analiz bekletme izni değildir."
+            "Filtre ve saha blankını temiz kapalı tutucu/petri, örtülü ve yalıtımlı taşıma kabında koru. Uçucu kaybını ve filtre üzerinde yoğuşmayı önle; sıcaklık kaydını koru. ≤23 °C depolama kaynakta bir seçenektir, bütün numunelere zorunlu evrensel +4 °C kuralı değildir.",
+            "Gravimetrik analiz için alımdan itibaren 1 ay içinde tartım odasına al. Tablo 4: örneklenmemiş tartılmış filtre için 2 ay (blank uygun kalırsa daha uzun), cihazdaki örneklenmiş filtre/saha blankı için 1 ay, tartım odasında tartım öncesi 1 ay. Bu farklı adımlar birleştirilerek keyfi toplam analiz süresi oluşturulmaz.",
+            "Son tartım: ≥48 saat şartlandırma, ilk tartım; 24–72 saat ek şartlandırma, ikinci tartım. Fark ≤60 µg. Aşımda ≥24 saat ek şartlandır/yeniden tart veya sonucu geçersiz say; tekrar aşım geçersizdir. Son iki tartım ortalaması son kütledir."
           ]
         },
         {
@@ -1586,21 +1769,36 @@
           "items": [
             "Tesis, baca/nokta, tarih, başlangıç–bitiş, metot/sürüm, numuneci ve fraksiyon kimliklerini etiketle.",
             "Numune kabı, kapak, miktar, blank, mühür, taşıma koşulu, teslim saati ve teslim alanı izlenebilir teslim formuna kaydet.",
-            "Filtre, saha blankı, ortam hacmi, gerçek süre, debi/arıza kayıtları ve meteorolojiyi teslim et."
+            "Filtre, saha blankı, ortam hacmi, gerçek süre, debi/arıza kayıtları ve meteorolojiyi teslim et.",
+            "Saha blankı her noktada ve filtre kasetinde en az bir çekiş yapılmamış filtreyle yürütülür. |Son−ilk blank kütlesi|≤60 µg; bireysel saha blankı PM kütlesinden çıkarılmaz (§6.7.3)."
           ]
         }
       ],
       "gaps": [
-        "Bu kartın doğrulaması şema ve belirtilen kaynak maddeleriyle sınırlıdır; tam yöntem yeterlilik incelemesi sürüyor.",
-        "Kaynak sürümünün güncel yürürlük durumu ve laboratuvarın onaylı uygulaması ayrıca kontrol edilmeli."
+        "Yerleşim/temsil edicilik ve ulusal izleme planı ölçüm noktasına göre seçilir. İkinci tartımdan vazgeçme ancak laboratuvarın ek belirsizliği hesaplayıp uygunluğunu göstermesiyle mümkündür; bu kart çift tartımlı prosedürü kullanır."
       ],
       "trainNote": "İmpinger kullanılmaz; boyut ayırıcı giriş → filtre → debi/hacim kontrolü.",
-      "evidence": [],
+      "evidence": [
+        {
+          "field": "Başlık / debi / süre / veri kaydı",
+          "references": [
+            "D23:18-25"
+          ],
+          "clause": "§5.1.2–5.1.15"
+        },
+        {
+          "field": "Tartım / saklama / blank / sürekli kalite",
+          "references": [
+            "D23:28-37"
+          ],
+          "clause": "§6–7; Tablo 3–5"
+        }
+      ],
       "sourceDetails": [
         {
-          "reference": "D23:8,30-31",
-          "title": "TS EN 12341.pdf",
-          "edition": "",
+          "reference": "D23:8,18-25,28-37",
+          "title": "BS EN 12341:2023 — ortam PM10 / PM2,5",
+          "edition": "EN 12341:2023; arşiv dosya adında TS yazmasına rağmen BS baskısı",
           "url": ""
         }
       ]
@@ -2447,7 +2645,7 @@
           "id": "meter",
           "kind": "meter",
           "label": "Çekiş ve hacim ölçümü",
-          "content": "Pompa, DGM ve debi kontrol grubu; iç bağlantı sırası cihaz şemasına göre",
+          "content": "DGM / debi ve basınç kaydı; pompa basınçlı yakıt gazı örneklemesinde normalde gerekmez",
           "amount": "",
           "optional": false
         }
@@ -2475,7 +2673,8 @@
           "title": "Hazırlık",
           "items": [
             "30 mL midget şişeler; ilk şişeye peroksit, 3–5’e CdSO₄. Basınçlı yakıt gazında pompa normalde gerekmez.",
-            "CdSO₄ absorbanı §7.1.1: 41 g 3CdSO₄·8H₂O + 15 mL 0,1 M H₂SO₄, deiyonize/distile suyla 1 L; pH 3 ±0,1. 10 damla Antifoam B; kullanılmazsa §11.2 geri kazanımı değişir."
+            "CdSO₄ absorbanı §7.1.1: 41 g 3CdSO₄·8H₂O + 15 mL 0,1 M H₂SO₄, deiyonize/distile suyla 1 L; pH 3 ±0,1. 10 damla Antifoam B; kullanılmazsa §11.2 geri kazanımı değişir.",
+            "DGM ilk kalibrasyonu üç bağımsız koşuda ≥5 devir; Y değerleri ortalamadan en çok %2 sapmalı. Seri sonu iki koşu ≥3 devir kontrol; başlangıçtan >%5 farkta yeniden kalibrasyon ve düşük gaz hacmini veren katsayı (§10.1.1)."
           ]
         },
         {
@@ -2493,13 +2692,15 @@
         {
           "title": "Geri kazanım",
           "items": [
-            "Ölçüm sonrası aktif karbonla temizlenmiş havayı 1 L/dk, 15 dk geçir. Peroksit fraksiyonunu ayır; 3–5’i suyla 500 mL iyot balonuna geri kazan; §11.2 alternatifini gerektiğinde kontrol et."
+            "Ölçüm sonrası aktif karbonla temizlenmiş havayı 1 L/dk, 15 dk geçir. Peroksit fraksiyonunu ayır; 3–5’i suyla 500 mL iyot balonuna geri kazan; §11.2 alternatifini gerektiğinde kontrol et.",
+            "Antifoam B kullanılmadıysa veya şişede belirgin sarı CdS kaldıysa §11.2 asitlendirilmiş iyotla alternatif ekstraksiyon gerekir; yıkama bir impingerden diğerine aktarılmaz, doğrudan iyot balonuna alınır."
           ]
         },
         {
           "title": "Saklama ve taşıma",
           "items": [
-            "Isıdan ve doğrudan güneşten koru. Sayısal azami bekletme süresi bu kartta doğrulanmadı."
+            "Geri kazanım temiz, ısı kaynağından uzak ve doğrudan güneş almayan yerde. Açıklıklar kapatılır; CdSO₄/CdS fraksiyonu ve peroksit fraksiyonu ayrıdır.",
+            "Asitlendirilmiş iyot eklenmiş numune saklanamaz: yaklaşık 30 dk karanlıkta absorpsiyon sonrası §11.3 titrasyon takvimi uygulanır. İyot eklenmeden önce keyfi 24 saat/7 gün bekletme kuralı bu metotta verilmez."
           ]
         },
         {
@@ -2512,7 +2713,7 @@
         }
       ],
       "gaps": [
-        "CdSO₄ hazırlama ve titrasyon ayrıntıları §7 ve §11 ile; sayısal bekletme süresi laboratuvarla tamamlanmalı."
+        "Bu yöntem rafineri yakıt gazı kapsamlıdır. Farklı kaynağa uygulanabilirlik ve laboratuvar/yerinde titrasyon planı önceden doğrulanmalıdır."
       ],
       "evidence": [
         {
@@ -2535,6 +2736,13 @@
             "D04:7-8"
           ],
           "clause": "§8.5–8.6"
+        },
+        {
+          "field": "Saklama yasağı / alternatif geri kazanım",
+          "references": [
+            "D04:7-9"
+          ],
+          "clause": "§8.6–8.7, §10.1.1, §11.2–11.3"
         }
       ],
       "sourceDetails": [
@@ -5042,6 +5250,1393 @@
           "title": "TS EN 1948 1.pdf",
           "edition": "",
           "url": ""
+        }
+      ]
+    },
+    {
+      "id": "dust_epa5",
+      "scope": "Emisyon",
+      "parameter": "Partikül madde / toz",
+      "method": "EPA Method 5",
+      "sourceVersion": "07.12.2020",
+      "variant": "Isıtılmış dış filtre; dört impingerle nem",
+      "sources": [
+        "D09:1-18,21-23"
+      ],
+      "reviewState": "sections_checked",
+      "train": [
+        {
+          "id": "probe",
+          "kind": "probe",
+          "label": "Nozül / ısıtılmış prob",
+          "content": "İzokinetik; 120±14 °C",
+          "amount": "",
+          "optional": false
+        },
+        {
+          "id": "filter",
+          "kind": "filter",
+          "label": "Isıtılmış dış filtre",
+          "content": "Filtre çıkış gazı 120±14 °C",
+          "amount": "",
+          "optional": false
+        },
+        {
+          "id": "i1",
+          "kind": "impinger",
+          "label": "İmpinger 1",
+          "content": "Su; modifiye GS",
+          "amount": "100 mL",
+          "optional": false
+        },
+        {
+          "id": "i2",
+          "kind": "impinger",
+          "label": "İmpinger 2",
+          "content": "Su; standart GS",
+          "amount": "100 mL",
+          "optional": false
+        },
+        {
+          "id": "i3",
+          "kind": "impinger",
+          "label": "İmpinger 3",
+          "content": "Başlangıçta boş; modifiye GS",
+          "amount": "",
+          "optional": false
+        },
+        {
+          "id": "i4",
+          "kind": "impinger",
+          "label": "İmpinger 4",
+          "content": "Ön tartımlı silika jel; modifiye GS",
+          "amount": "Yaklaşık 200–300 g",
+          "optional": false
+        },
+        {
+          "id": "meter",
+          "kind": "meter",
+          "label": "Çekiş ve hacim ölçümü",
+          "content": "Pompa, DGM ve debi kontrol grubu; iç bağlantı sırası cihaz şemasına göre",
+          "amount": "",
+          "optional": false
+        }
+      ],
+      "limits": [
+        {
+          "label": "Çekiş debisi",
+          "value": "İzokinetik %90–110; anlık hedef baca hızı/nozül/nem/T/P ile belirlenir. Sabit L/dk yok."
+        },
+        {
+          "label": "Toplam çekiş hacmi",
+          "value": "Uygulanacak kaynak mevzuatının asgari kuru standart hacmi. Sayaç hacmi/Y/T/P ve kaçak düzeltmeleri birlikte; standart 20 °C bazını 0 °C Nm³ ile karıştırma."
+        },
+        {
+          "label": "Sıcaklık",
+          "value": "Prob ve filtre çıkış gazı 120±14 °C; özel alt düzenleme/onay farklı koşul getirebilir. Son nem tutucu çıkış gazı <20 °C."
+        },
+        {
+          "label": "Ölçüm süresi",
+          "value": "Eşit süreli noktalar, en az 2 dk/nokta; kaynak mevzuatının toplam süresi/hacmi ayrıca. Daha kısa örnekleme özel yetkili onayı gerektirir."
+        }
+      ],
+      "phases": [
+        {
+          "title": "Hazırlık",
+          "items": [
+            "Method 1 yer/nokta, Method 2 hız/yoğunluk ve uygun nem tayiniyle nozül seç. Koşu içinde nozül çapını değiştirme. Nozül üç eksende 0,025 mm çözünürlükle ölçülür; en büyük-küçük fark ≤0,1 mm (§10.1).",
+            "Bağlayıcısız cam elyaf filtre: ≥%99,95 yakalama @0,3 µm; SO₂/SO₃’e reaksiyon vermemeli. Aseton reaktif saflığında, kalıntı ≤%0,001; saha öncesi blankı kontrol et.",
+            "Ön filtre şartlandırma: 20±5,6 °C’de ≥24 saat desikatör; ≥6 saat aralıklı tartımlarda fark ≤0,5 mg, kayıt 0,1 mg. Her tartımda laboratuvar havasına maruz kalma <2 dk; izin verilen fırın alternatifi ayrı prosedürdür.",
+            "Saha terazisi günlük ±0,5 g kontrolü; analitik terazi kullanım öncesi ve altı aylık çok noktalı kalibrasyon, günlük sertifikalı kütle kontrolü (§10.7–10.8)."
+          ]
+        },
+        {
+          "title": "Kaçak kontrolü",
+          "items": [
+            "Ön kaçak testi önerilir; parça değişiminden hemen önce ve ölçüm sonunda test zorunludur. Sonda/ara testte koşuda görülen en yüksek vakum veya üstü kullanılır.",
+            "Method 5 §8.4: kabul edilen kaçak ≤min(ortalama Q ×0,04; 0,57 L/dk). 380 mmHg yaklaşık 50,66 kPa vakumdur; düşük ön test vakumu ancak ölçüm sırasında aşılmıyorsa kullanılabilir. Aşımda yalnız §12.3 hacim düzeltmesi veya ölçümün reddi uygulanır."
+          ]
+        },
+        {
+          "title": "Örnekleme",
+          "items": [
+            "Filtre/prob koşulunu kararlı hale getir. Her nokta-zaman aralığında sayaç, sıcaklık, vakum, hız basıncı ve gerekli gaz verilerini kaydet; hız basıncında %20 değişimde ek debi ayarı/kayıt gerekir.",
+            "Nozül akışa bakar; porta/duvara çarpıp birikinti toplama. Port boşluğunu çevre hava ile seyrelmeyi önleyecek şekilde kapat. Pompa/vanaları geri sıvı yürümeyecek sırayla yönet.",
+            "Filtre değişecekse önce kaçak testi; bütün filtrelerin PM kütlesi numuneye dahildir. Seri sonu DGM kontrolünde Y farkı >%5 ise tam kalibrasyon; ret veya düşük toplam hacmi veren katsayı (§10.3.2–3)."
+          ]
+        },
+        {
+          "title": "Geri kazanım",
+          "items": [
+            "Filtreyi etiketli petriye, tortu içe bakacak şekilde al. Nozül ve filtre önündeki numuneye temas eden yüzeyleri asetonla nicel geri kazan; cam kapta ayrı topla, seviye işaretle. Dış yüzey tozunu numuneye karıştırma.",
+            "Temizlikte kullanılan her aseton deposundan 200 mL blank ayır. Method 5 ön yıkamasına Method 29’daki sabit 100 mL zorunluluğunu aktarma; kullanılan gerçek yıkama hacmini kaydet.",
+            "İlk üç impingerin nem kütlesini ≥0,5 g doğrulukla belirle. Silika jeli sıvı eklemeden ayrı kaba al veya yerinde tart. İmpinger çözeltisi ayrıca istenmiyorsa filtre edilebilir PM sonucuna otomatik eklenmez."
+          ]
+        },
+        {
+          "title": "Saklama ve taşıma",
+          "items": [
+            "Filtre kimlikli kapalı petride; aseton fraksiyonu sızdırmaz cam kapta; seviye çizgisi, kap kimliği ve dik taşıma korunur. Bu metotta bütün numunelere uygulanacak genel sayısal azami taşıma/analiz süresi verilmez; laboratuvar planı bunu tamamlar.",
+            "Son filtre tartımı: ≥24 saat desikatör; ≥6 saat aralıklı iki tartımda fark ≤max(0,5 mg; net kütlenin %1’i). Bu son tartım kriteri ön tartımdaki sabit ≤0,5 mg ile karıştırılmaz."
+          ]
+        },
+        {
+          "title": "Laboratuvara teslim",
+          "items": [
+            "Tesis, baca/nokta, tarih, başlangıç–bitiş, metot/sürüm, numuneci ve fraksiyon kimliklerini etiketle.",
+            "Numune kabı, kapak, miktar, blank, mühür, taşıma koşulu, teslim saati ve teslim alanı izlenebilir teslim formuna kaydet.",
+            "Filtre(ler), ön aseton yıkaması, aseton blankı, varsa ayrı impinger analizi, nem/Y/T/P/kaçak/izokinetik ve süreç kayıtları birlikte teslim edilir. Numune kütlesi filtre+ön yıkama−izin verilen aseton blankıdır."
+          ]
+        }
+      ],
+      "gaps": [
+        "Kaynak mevzuatının asgari süre/hacmi, sıcaklık istisnası ve varsa kondanse olabilir PM için ayrı yöntem ölçüm planında belirlenmelidir."
+      ],
+      "evidence": [
+        {
+          "field": "Saha / geri kazanım / taşıma",
+          "references": [
+            "D09:6-13"
+          ],
+          "clause": "§7–8"
+        },
+        {
+          "field": "Kalibrasyon / tartım / kabul",
+          "references": [
+            "D09:15-18,21-23"
+          ],
+          "clause": "§10–12"
+        }
+      ],
+      "sourceDetails": [
+        {
+          "reference": "D09:1-18,21-23",
+          "title": "EPA Method 5.pdf",
+          "edition": "",
+          "url": ""
+        }
+      ]
+    },
+    {
+      "id": "dust_epa17",
+      "scope": "Emisyon",
+      "parameter": "Partikül madde / toz",
+      "method": "EPA Method 17",
+      "sourceVersion": "03.08.2017",
+      "variant": "Baca içi filtre",
+      "sources": [
+        "W08:1-7",
+        "D09:6-18,21-23"
+      ],
+      "reviewState": "sections_checked",
+      "train": [
+        {
+          "id": "nozzle",
+          "kind": "probe",
+          "label": "Giriş nozülü",
+          "content": "Akışa dönük",
+          "amount": "",
+          "optional": false
+        },
+        {
+          "id": "filter",
+          "kind": "filter",
+          "label": "Baca içi filtre",
+          "content": "Baca sıcaklığında",
+          "amount": "",
+          "optional": false
+        },
+        {
+          "id": "probe",
+          "kind": "probe",
+          "label": "Filtre sonrası uzatma",
+          "content": "Toplanan PM’nin önünde prob yok",
+          "amount": "",
+          "optional": false
+        },
+        {
+          "id": "i1",
+          "kind": "impinger",
+          "label": "İmpinger 1",
+          "content": "Su; modifiye GS",
+          "amount": "100 mL",
+          "optional": false
+        },
+        {
+          "id": "i2",
+          "kind": "impinger",
+          "label": "İmpinger 2",
+          "content": "Su; standart GS",
+          "amount": "100 mL",
+          "optional": false
+        },
+        {
+          "id": "i3",
+          "kind": "impinger",
+          "label": "İmpinger 3",
+          "content": "Başlangıçta boş; modifiye GS",
+          "amount": "",
+          "optional": false
+        },
+        {
+          "id": "i4",
+          "kind": "impinger",
+          "label": "İmpinger 4",
+          "content": "Ön tartımlı silika jel; modifiye GS",
+          "amount": "Yaklaşık 200–300 g",
+          "optional": false
+        },
+        {
+          "id": "meter",
+          "kind": "meter",
+          "label": "Çekiş ve hacim ölçümü",
+          "content": "Pompa, DGM ve debi kontrol grubu; iç bağlantı sırası cihaz şemasına göre",
+          "amount": "",
+          "optional": false
+        }
+      ],
+      "limits": [
+        {
+          "label": "Çekiş debisi",
+          "value": "İzokinetik %90–110; anlık hedef baca hızı/nozül/nem/T/P ile belirlenir. Sabit L/dk yok."
+        },
+        {
+          "label": "Toplam çekiş hacmi",
+          "value": "Uygulanacak kaynak mevzuatının asgari kuru standart hacmi. Sayaç hacmi/Y/T/P ve kaçak düzeltmeleri birlikte; standart 20 °C bazını 0 °C Nm³ ile karıştırma."
+        },
+        {
+          "label": "Sıcaklık",
+          "value": "Baca içi filtrasyon baca sıcaklığında; doymuş/damlacıklı gazda uygulanmaz. Son nem tutucu çıkış gazı <20 °C."
+        },
+        {
+          "label": "Ölçüm süresi",
+          "value": "Eşit süreli noktalar, en az 2 dk/nokta; kaynak mevzuatının toplam süresi/hacmi ayrıca. Daha kısa örnekleme özel yetkili onayı gerektirir."
+        }
+      ],
+      "phases": [
+        {
+          "title": "Hazırlık",
+          "items": [
+            "Method 1 yer/nokta, Method 2 hız/yoğunluk ve uygun nem tayiniyle nozül seç. Koşu içinde nozül çapını değiştirme. Nozül üç eksende 0,025 mm çözünürlükle ölçülür; en büyük-küçük fark ≤0,1 mm (§10.1).",
+            "Bağlayıcısız cam elyaf filtre: ≥%99,95 yakalama @0,3 µm; SO₂/SO₃’e reaksiyon vermemeli. Aseton reaktif saflığında, kalıntı ≤%0,001; saha öncesi blankı kontrol et.",
+            "Ön filtre şartlandırma: 20±5,6 °C’de ≥24 saat desikatör; ≥6 saat aralıklı tartımlarda fark ≤0,5 mg, kayıt 0,1 mg. Her tartımda laboratuvar havasına maruz kalma <2 dk; izin verilen fırın alternatifi ayrı prosedürdür.",
+            "Saha terazisi günlük ±0,5 g kontrolü; analitik terazi kullanım öncesi ve altı aylık çok noktalı kalibrasyon, günlük sertifikalı kütle kontrolü (§10.7–10.8).",
+            "PM’nin normal kaynak sıcaklık aralığında sıcaklıktan bağımsız olduğu ve Method 17 kullanımına izin verildiği doğrulanır. Prob uzatma/filtre tutucu izdüşüm alanı baca kesitinin >%5’i ise standart düzen olduğu gibi kullanılamaz; dış filtre veya onaylı ayrı hız/örnekleme düzeni gerekir (§1.2, §8.1.2)."
+          ]
+        },
+        {
+          "title": "Kaçak kontrolü",
+          "items": [
+            "Ön kaçak testi önerilir; parça değişiminden hemen önce ve ölçüm sonunda test zorunludur. Sonda/ara testte koşuda görülen en yüksek vakum veya üstü kullanılır.",
+            "Method 5 §8.4: kabul edilen kaçak ≤min(ortalama Q ×0,04; 0,57 L/dk). 380 mmHg yaklaşık 50,66 kPa vakumdur; düşük ön test vakumu ancak ölçüm sırasında aşılmıyorsa kullanılabilir. Aşımda yalnız §12.3 hacim düzeltmesi veya ölçümün reddi uygulanır.",
+            "Filtre tutucusu nozül sıcaklığa dayanıklı tıkaçla kapalıyken bacaya yerleştirilir; yaklaşık 5 dk veya kararlı hale gelene kadar beklenip kaçak testi yapılır (§8.1.4)."
+          ]
+        },
+        {
+          "title": "Örnekleme",
+          "items": [
+            "Filtre/prob koşulunu kararlı hale getir. Her nokta-zaman aralığında sayaç, sıcaklık, vakum, hız basıncı ve gerekli gaz verilerini kaydet; hız basıncında %20 değişimde ek debi ayarı/kayıt gerekir.",
+            "Nozül akışa bakar; porta/duvara çarpıp birikinti toplama. Port boşluğunu çevre hava ile seyrelmeyi önleyecek şekilde kapat. Pompa/vanaları geri sıvı yürümeyecek sırayla yönet.",
+            "Filtre değişecekse önce kaçak testi; bütün filtrelerin PM kütlesi numuneye dahildir. Seri sonu DGM kontrolünde Y farkı >%5 ise tam kalibrasyon; ret veya düşük toplam hacmi veren katsayı (§10.3.2–3)."
+          ]
+        },
+        {
+          "title": "Geri kazanım",
+          "items": [
+            "Filtreyi etiketli petriye, tortu içe bakacak şekilde al. Nozül ve filtre önündeki numuneye temas eden yüzeyleri asetonla nicel geri kazan; cam kapta ayrı topla, seviye işaretle. Dış yüzey tozunu numuneye karıştırma.",
+            "Temizlikte kullanılan her aseton deposundan 200 mL blank ayır. Method 5 ön yıkamasına Method 29’daki sabit 100 mL zorunluluğunu aktarma; kullanılan gerçek yıkama hacmini kaydet.",
+            "İlk üç impingerin nem kütlesini ≥0,5 g doğrulukla belirle. Silika jeli sıvı eklemeden ayrı kaba al veya yerinde tart. İmpinger çözeltisi ayrıca istenmiyorsa filtre edilebilir PM sonucuna otomatik eklenmez.",
+            "Method 17 ön yarısı nozül/filtre tutucudur; filtre SONRASI uzatma borusunu ön PM yıkamasına katma. Kaynağın eski Method 5 madde numaraları, güncel Method 5’in ilgili başlığıyla eşleştirilir."
+          ]
+        },
+        {
+          "title": "Saklama ve taşıma",
+          "items": [
+            "Filtre kimlikli kapalı petride; aseton fraksiyonu sızdırmaz cam kapta; seviye çizgisi, kap kimliği ve dik taşıma korunur. Bu metotta bütün numunelere uygulanacak genel sayısal azami taşıma/analiz süresi verilmez; laboratuvar planı bunu tamamlar.",
+            "Son filtre tartımı: ≥24 saat desikatör; ≥6 saat aralıklı iki tartımda fark ≤max(0,5 mg; net kütlenin %1’i). Bu son tartım kriteri ön tartımdaki sabit ≤0,5 mg ile karıştırılmaz."
+          ]
+        },
+        {
+          "title": "Laboratuvara teslim",
+          "items": [
+            "Tesis, baca/nokta, tarih, başlangıç–bitiş, metot/sürüm, numuneci ve fraksiyon kimliklerini etiketle.",
+            "Numune kabı, kapak, miktar, blank, mühür, taşıma koşulu, teslim saati ve teslim alanı izlenebilir teslim formuna kaydet.",
+            "Filtre(ler), ön aseton yıkaması, aseton blankı, varsa ayrı impinger analizi, nem/Y/T/P/kaçak/izokinetik ve süreç kayıtları birlikte teslim edilir. Numune kütlesi filtre+ön yıkama−izin verilen aseton blankıdır."
+          ]
+        }
+      ],
+      "gaps": [
+        "Kaynak mevzuatının asgari süre/hacmi, sıcaklık istisnası ve varsa kondanse olabilir PM için ayrı yöntem ölçüm planında belirlenmelidir."
+      ],
+      "evidence": [
+        {
+          "field": "Saha / geri kazanım / taşıma",
+          "references": [
+            "D09:6-13"
+          ],
+          "clause": "§7–8"
+        },
+        {
+          "field": "Kalibrasyon / tartım / kabul",
+          "references": [
+            "D09:15-18,21-23"
+          ],
+          "clause": "§10–12"
+        },
+        {
+          "field": "Baca içi varyantın özel koşulları",
+          "references": [
+            "W08:1-5"
+          ],
+          "clause": "§1.2, §6, §8"
+        }
+      ],
+      "sourceDetails": [
+        {
+          "reference": "W08:1-7",
+          "title": "US EPA Method 17 — In-stack particulate",
+          "edition": "03.08.2017",
+          "url": "https://www.epa.gov/sites/default/files/2017-08/documents/method_17.pdf"
+        },
+        {
+          "reference": "D09:6-18,21-23",
+          "title": "EPA Method 5.pdf",
+          "edition": "",
+          "url": ""
+        }
+      ]
+    },
+    {
+      "id": "voc_13649_charcoal",
+      "scope": "Emisyon",
+      "parameter": "VOC — tekil organik bileşikler",
+      "method": "CEN/TS 13649",
+      "sourceVersion": "2014 / TSE Şubat 2015",
+      "variant": "Doğrudan örnekleme — aktif karbon / çözücü desorpsiyonu",
+      "sources": [
+        "L05:8-20,21,25-28"
+      ],
+      "reviewState": "sections_checked",
+      "train": [
+        {
+          "id": "probe",
+          "kind": "probe",
+          "label": "Numune probu",
+          "content": "Uygulamaya göre ısıtılır; kısa inert bağlantı",
+          "amount": "",
+          "optional": false
+        },
+        {
+          "id": "filter",
+          "kind": "filter",
+          "label": "Partikül filtresi",
+          "content": "Sorbent önünde; gerekiyorsa ısıtılmış dış filtre",
+          "amount": "",
+          "optional": false
+        },
+        {
+          "id": "charcoal",
+          "kind": "adsorber",
+          "label": "İki yataklı aktif karbon tüp",
+          "content": "Ön ve arka yatak ayrı analiz edilir",
+          "amount": "Tipik 100 mg + 50 mg",
+          "optional": false
+        },
+        {
+          "id": "dryer",
+          "kind": "trap",
+          "label": "Pompa / sayaç koruması",
+          "content": "Nemli gazda önerilen kurutucu sorbentten SONRA; hedef VOC’yi toplamadan önce kurutma yapılmaz",
+          "amount": "",
+          "optional": false
+        },
+        {
+          "id": "meter",
+          "kind": "meter",
+          "label": "Çekiş ve hacim ölçümü",
+          "content": "Pompa, DGM ve debi kontrol grubu; iç bağlantı sırası cihaz şemasına göre",
+          "amount": "",
+          "optional": false
+        }
+      ],
+      "limits": [
+        {
+          "label": "Çekiş debisi",
+          "value": "Tablo 1: 0,1–0,5 L/dk; Q belirsizliği <%5. Hedef bileşik, sıcaklık, kapasite ve tayin sınırıyla seçilir."
+        },
+        {
+          "label": "Toplam çekiş hacmi",
+          "value": "Tipik 10–50 L; zorunlu evrensel asgari/azami hacim değildir. Hacim belirsizliği <%5; her hedef bileşik için V≤%70 Vbreakthrough veya ≤%50 Vretention ve geçerli sıcaklık şartı değerlendirilir."
+        },
+        {
+          "label": "Sıcaklık",
+          "value": "Tablo 1: tüpte numune gazı <40 °C, sıcaklık belirsizliği <2,5 °C. Isıtılan prob kullanılıyorsa baca T+10 °C, en çok 180 °C. Yoğuşma riski varsa doğrudan tren yerine seyreltme varyantı."
+        },
+        {
+          "label": "Ölçüm süresi",
+          "value": "Süre, hedef gaz hacmi/Q ve prosesin temsil edilen ortalama süresiyle belirlenir; her VOC için sabit 30 dk yok. Küçük hacim nedeniyle çok kısa örnekleme gerekiyorsa zaman ağırlıklı seyreltme planını değerlendir."
+        }
+      ],
+      "phases": [
+        {
+          "title": "Hazırlık",
+          "items": [
+            "Bu yöntem gaz fazındaki tekil VOC içindir; FID ile toplam organik karbon ölçümü değildir. CEN/TS 13649:2014 eski EN 13649:2001’in yerini alır; dosya adındaki yalnız aktif karbon ifadesi TD seçeneğini dışlamaz.",
+            "Su/solvent yoğuşması riski için bileşim, nem, sıcaklık ve sorbent kapasitesini değerlendir. Sorbent önüne Na₂SO₄ gibi kurutucu yerleştirme; VOC kaybı yapabilir. Tüpte sıvı birikmesine izin verilmez.",
+            "Açılmış/kullanılmış aktif karbon tüpü tekrar kullanılmaz. Tüpün yönü, ana/yedek yatağı ve lotu işaretlenir; çözücü geri kazanımının her hedef/karbon lotu için >%80 olması gerekir.",
+            "Saha blankı en az 1/gün; günlük >6 numunede 2, >10 numunede 3 blank. Aynı lot ve açma/kapama işlemi, prob bacaya sokulmadan ve gaz çekilmeden. Analitik blank ile saha blankını ayır."
+          ]
+        },
+        {
+          "title": "Kaçak kontrolü",
+          "items": [
+            "Her örneklemeden önce ve sonra probdan hacim ölçere kadar bütün birleşik tren sınanır. Ölçümün en yüksek vakumunda kaçak örnekleme Q’sunun <%5’i veya hacim ölçümü belirsizliğinin altında olmalıdır (Ek A.1.3).",
+            "Örnek: 0,1 L/dk için %5, 0,005 L/dk=5 mL/dk eder; 0,57 L/dk EPA büyük tren sınırı bu tüplere uygulanmaz."
+          ]
+        },
+        {
+          "title": "Örnekleme",
+          "items": [
+            "Tüp yönü, Q, sayaç başlangıç/sonu, örnekleme süresi ve sayaç T/P kaydedilir; otomatik kompanzasyon yoksa ölçülen hacim T/P ile ilişkilendirilir. Küçük hacimlerde sistem ölü hacmini çekiş öncesi gazla süpür; hacim hesabına gerçek tüp örneklemesini al.",
+            "İyi tanımlanmış gazda en az her 10 numunenin 1’inde ve kampanya başına en az 1 numunede yedek kademe ile kırılmayı kontrol et. Bileşimi belirsiz kaynakta daha sık kontrol gerekir; yedek kademe bütün koşullarda keyfi çıkarılmaz.",
+            "Tablo 1’e göre arka kademe kütlesi iki kademenin toplamının <%5’i olmalı. §6.2’de “en çok %5” ifadesi de vardır; kart tabloda verilen daha sıkı <%5 kabulünü gösterir. Aşımda sonucu geçerli nicel sonuç gibi kullanma; §9.1/§10 rapor koşullarını uygula."
+          ]
+        },
+        {
+          "title": "Geri kazanım",
+          "items": [
+            "Tüpü iki ucundan hemen kapat. Laboratuvarda ana ve yedek karbon yatakları ayrı viallere alınır; bunları sahada su/asetonla geri yıkama. Tipik CS₂ hacmi 100 mg karbon için 1 mL’dir; bu laboratuvar ekstraksiyon hacmidir.",
+            "Partiye/hedefe özgü desorpsiyon verimi ve blank analizi gerekir; kaynağa uygun olmayan çözücüyle standart tarifini genelleme."
+          ]
+        },
+        {
+          "title": "Saklama ve taşıma",
+          "items": [
+            "Temiz, hava sızdırmaz ve VOC yaymayan kapta, güneşten uzak, <25 °C. Ahşap, VOC yayan plastik ve yapışkan bant gibi bulaşma kaynaklarından kaçın.",
+            "7 gün içinde analiz edilmeyecekse tüpler hava sızdırmaz kapta <4 °C’de tutulur (§6.5.1). Yedi gün mutlak analiz son tarihi değildir; kaynak bu cümlede soğuk saklama şartını başlatır.",
+            "Soğuk kap oda sıcaklığına gelmeden açılmaz; kapalı halde dengelenir, ardından tüp çıkarılıp kapağı açılır. TD kapakları en düşük soğutma sıcaklığına ulaşıldığında yeniden sıkılır (§6.5.3)."
+          ]
+        },
+        {
+          "title": "Laboratuvara teslim",
+          "items": [
+            "Tesis, baca/nokta, tarih, başlangıç–bitiş, metot/sürüm, numuneci ve fraksiyon kimliklerini etiketle.",
+            "Numune kabı, kapak, miktar, blank, mühür, taşıma koşulu, teslim saati ve teslim alanı izlenebilir teslim formuna kaydet.",
+            "Tüp/lot/sorbent, ana-yedek yönü, Q/V/T/P/süre, blanklar, seyreltme varsa ölçülen oran, saklama sıcaklığı ve zamanlar ile ayrı kademe analiz isteğini bildir.",
+            "Saha blankı numuneden çıkarılmaz. Tablo 1’de <%10 emisyon sınırı; §9.1’de sonuç/ELV değerlendirmesi vardır. Numune blankın altındaysa ≤blank raporlanır; birden fazla blankta en yüksek değer esas alınır. Analitik blankın uygulanabilir düzeltmesi ayrı işlemdir."
+          ]
+        }
+      ],
+      "gaps": [
+        "Her hedef VOC için güvenli hacim, sorbent, desorpsiyon verimi ve laboratuvarın gerçek saklama kararlılığı doğrulanmalıdır. Tablo 1’de <40 °C, §6.2 metninde 40 °C’yi aşmama yazımı vardır; kart tablo sınırını korur."
+      ],
+      "evidence": [
+        {
+          "field": "Seçim / debi / hacim / sıcaklık",
+          "references": [
+            "L05:8-13,19"
+          ],
+          "clause": "§5–6, Tablo 1"
+        },
+        {
+          "field": "Kaçak / doğrudan tren",
+          "references": [
+            "L05:13,21-22"
+          ],
+          "clause": "§6.4, Ek A.1"
+        },
+        {
+          "field": "Saklama / blank / kabul",
+          "references": [
+            "L05:13-14,18-20"
+          ],
+          "clause": "§6.5–6.6, §9–10"
+        },
+        {
+          "field": "Geri kazanım / sorbent",
+          "references": [
+            "L05:15-17,25-28"
+          ],
+          "clause": "§7.2, Ek B–C"
+        }
+      ],
+      "sourceDetails": [
+        {
+          "reference": "L05:8-20,21,25-28",
+          "title": "TSE CEN/TS 13649 — tekil gaz VOC, sorbent tüp",
+          "edition": "TSE Şubat 2015; CEN/TS 13649:2014",
+          "url": ""
+        }
+      ]
+    },
+    {
+      "id": "voc_13649_td",
+      "scope": "Emisyon",
+      "parameter": "VOC — tekil organik bileşikler",
+      "method": "CEN/TS 13649",
+      "sourceVersion": "2014 / TSE Şubat 2015",
+      "variant": "Doğrudan örnekleme — termal desorpsiyon (TD)",
+      "sources": [
+        "L05:8-20,21,25-28"
+      ],
+      "reviewState": "sections_checked",
+      "train": [
+        {
+          "id": "probe",
+          "kind": "probe",
+          "label": "Numune probu",
+          "content": "Uygulamaya göre ısıtılır; kısa inert bağlantı",
+          "amount": "",
+          "optional": false
+        },
+        {
+          "id": "filter",
+          "kind": "filter",
+          "label": "Partikül filtresi",
+          "content": "Sorbent önünde; gerekiyorsa ısıtılmış dış filtre",
+          "amount": "",
+          "optional": false
+        },
+        {
+          "id": "primary",
+          "kind": "adsorber",
+          "label": "Ana TD tüpü",
+          "content": "Hedef VOC için seçilmiş ve şartlandırılmış sorbent",
+          "amount": "",
+          "optional": false
+        },
+        {
+          "id": "backup",
+          "kind": "adsorber",
+          "label": "Aynı tip yedek TD tüpü",
+          "content": "Kırılma kontrolünde seri bağlanır; ayrı analiz",
+          "amount": "",
+          "optional": false
+        },
+        {
+          "id": "dryer",
+          "kind": "trap",
+          "label": "Pompa / sayaç koruması",
+          "content": "Nemli gazda önerilen kurutucu sorbentten SONRA; hedef VOC’yi toplamadan önce kurutma yapılmaz",
+          "amount": "",
+          "optional": false
+        },
+        {
+          "id": "meter",
+          "kind": "meter",
+          "label": "Çekiş ve hacim ölçümü",
+          "content": "Pompa, DGM ve debi kontrol grubu; iç bağlantı sırası cihaz şemasına göre",
+          "amount": "",
+          "optional": false
+        }
+      ],
+      "limits": [
+        {
+          "label": "Çekiş debisi",
+          "value": "Tablo 1: TD için 10–100 mL/dk = 0,010–0,100 L/dk; Q belirsizliği <%5. Ek C’deki başka pompa aralıkları bu tipik aralığın yerine otomatik geçirilmez."
+        },
+        {
+          "label": "Toplam çekiş hacmi",
+          "value": "Tipik 1–5 L; zorunlu evrensel asgari/azami hacim değildir. Hacim belirsizliği <%5; her hedef bileşik için V≤%70 Vbreakthrough veya ≤%50 Vretention ve geçerli sıcaklık şartı değerlendirilir."
+        },
+        {
+          "label": "Sıcaklık",
+          "value": "Tablo 1: tüpte numune gazı <40 °C, sıcaklık belirsizliği <2,5 °C. Isıtılan prob kullanılıyorsa baca T+10 °C, en çok 180 °C. Yoğuşma riski varsa doğrudan tren yerine seyreltme varyantı."
+        },
+        {
+          "label": "Ölçüm süresi",
+          "value": "Süre, hedef gaz hacmi/Q ve prosesin temsil edilen ortalama süresiyle belirlenir; her VOC için sabit 30 dk yok. Küçük hacim nedeniyle çok kısa örnekleme gerekiyorsa zaman ağırlıklı seyreltme planını değerlendir."
+        }
+      ],
+      "phases": [
+        {
+          "title": "Hazırlık",
+          "items": [
+            "Bu yöntem gaz fazındaki tekil VOC içindir; FID ile toplam organik karbon ölçümü değildir. CEN/TS 13649:2014 eski EN 13649:2001’in yerini alır; dosya adındaki yalnız aktif karbon ifadesi TD seçeneğini dışlamaz.",
+            "Su/solvent yoğuşması riski için bileşim, nem, sıcaklık ve sorbent kapasitesini değerlendir. Sorbent önüne Na₂SO₄ gibi kurutucu yerleştirme; VOC kaybı yapabilir. Tüpte sıvı birikmesine izin verilmez.",
+            "TD tüpü sorbent bileşimi hedef volatiliteye göre seçilir. Çoklu sorbentte örnekleme yönünde zayıf sorbent önce gelir. İki ayrı seri tüp kırılma denetiminde aynı tiptedir; inert bağlantı ve PTFE ferrül kullanılır.",
+            "Saha blankı en az 1/gün; günlük >6 numunede 2, >10 numunede 3 blank. Aynı lot ve açma/kapama işlemi, prob bacaya sokulmadan ve gaz çekilmeden. Analitik blank ile saha blankını ayır."
+          ]
+        },
+        {
+          "title": "Kaçak kontrolü",
+          "items": [
+            "Her örneklemeden önce ve sonra probdan hacim ölçere kadar bütün birleşik tren sınanır. Ölçümün en yüksek vakumunda kaçak örnekleme Q’sunun <%5’i veya hacim ölçümü belirsizliğinin altında olmalıdır (Ek A.1.3).",
+            "Örnek: 0,1 L/dk için %5, 0,005 L/dk=5 mL/dk eder; 0,57 L/dk EPA büyük tren sınırı bu tüplere uygulanmaz."
+          ]
+        },
+        {
+          "title": "Örnekleme",
+          "items": [
+            "Tüp yönü, Q, sayaç başlangıç/sonu, örnekleme süresi ve sayaç T/P kaydedilir; otomatik kompanzasyon yoksa ölçülen hacim T/P ile ilişkilendirilir. Küçük hacimlerde sistem ölü hacmini çekiş öncesi gazla süpür; hacim hesabına gerçek tüp örneklemesini al.",
+            "İyi tanımlanmış gazda en az her 10 numunenin 1’inde ve kampanya başına en az 1 numunede yedek kademe ile kırılmayı kontrol et. Bileşimi belirsiz kaynakta daha sık kontrol gerekir; yedek kademe bütün koşullarda keyfi çıkarılmaz.",
+            "Tablo 1’e göre arka kademe kütlesi iki kademenin toplamının <%5’i olmalı. §6.2’de “en çok %5” ifadesi de vardır; kart tabloda verilen daha sıkı <%5 kabulünü gösterir. Aşımda sonucu geçerli nicel sonuç gibi kullanma; §9.1/§10 rapor koşullarını uygula."
+          ]
+        },
+        {
+          "title": "Geri kazanım",
+          "items": [
+            "Tüpleri ayırıp inert sızdırmaz kapaklarla hemen kapat. Laboratuvarda desorpsiyon, örnekleme yönünün tersinedir; gerekiyorsa kuru gazla purge örnekleme yönündedir. Numune+purge hacmi kapasiteyi aşmamalı.",
+            "En az her 10 numunenin 1’i ve kampanya başına en az 1 tüp ikinci kez desorbe edilerek geri kazanım denetlenir. İkinci desorpsiyonda ≥%5 analit varsa işlem eksiktir; sorbent/analiz koşulları değiştirilir (Ek C.1)."
+          ]
+        },
+        {
+          "title": "Saklama ve taşıma",
+          "items": [
+            "Temiz, hava sızdırmaz ve VOC yaymayan kapta, güneşten uzak, <25 °C. Ahşap, VOC yayan plastik ve yapışkan bant gibi bulaşma kaynaklarından kaçın.",
+            "7 gün içinde analiz edilmeyecekse tüpler hava sızdırmaz kapta <4 °C’de tutulur (§6.5.1). Yedi gün mutlak analiz son tarihi değildir; kaynak bu cümlede soğuk saklama şartını başlatır.",
+            "Soğuk kap oda sıcaklığına gelmeden açılmaz; kapalı halde dengelenir, ardından tüp çıkarılıp kapağı açılır. TD kapakları en düşük soğutma sıcaklığına ulaşıldığında yeniden sıkılır (§6.5.3)."
+          ]
+        },
+        {
+          "title": "Laboratuvara teslim",
+          "items": [
+            "Tesis, baca/nokta, tarih, başlangıç–bitiş, metot/sürüm, numuneci ve fraksiyon kimliklerini etiketle.",
+            "Numune kabı, kapak, miktar, blank, mühür, taşıma koşulu, teslim saati ve teslim alanı izlenebilir teslim formuna kaydet.",
+            "Tüp/lot/sorbent, ana-yedek yönü, Q/V/T/P/süre, blanklar, seyreltme varsa ölçülen oran, saklama sıcaklığı ve zamanlar ile ayrı kademe analiz isteğini bildir.",
+            "Saha blankı numuneden çıkarılmaz. Tablo 1’de <%10 emisyon sınırı; §9.1’de sonuç/ELV değerlendirmesi vardır. Numune blankın altındaysa ≤blank raporlanır; birden fazla blankta en yüksek değer esas alınır. Analitik blankın uygulanabilir düzeltmesi ayrı işlemdir."
+          ]
+        }
+      ],
+      "gaps": [
+        "Her hedef VOC için güvenli hacim, sorbent, desorpsiyon verimi ve laboratuvarın gerçek saklama kararlılığı doğrulanmalıdır. Tablo 1’de <40 °C, §6.2 metninde 40 °C’yi aşmama yazımı vardır; kart tablo sınırını korur."
+      ],
+      "evidence": [
+        {
+          "field": "Seçim / debi / hacim / sıcaklık",
+          "references": [
+            "L05:8-13,19"
+          ],
+          "clause": "§5–6, Tablo 1"
+        },
+        {
+          "field": "Kaçak / doğrudan tren",
+          "references": [
+            "L05:13,21-22"
+          ],
+          "clause": "§6.4, Ek A.1"
+        },
+        {
+          "field": "Saklama / blank / kabul",
+          "references": [
+            "L05:13-14,18-20"
+          ],
+          "clause": "§6.5–6.6, §9–10"
+        },
+        {
+          "field": "Geri kazanım / sorbent",
+          "references": [
+            "L05:15-17,25-28"
+          ],
+          "clause": "§7.2, Ek B–C"
+        }
+      ],
+      "trainNote": "Bu çizim kırılma kontrolü yapılan seri iki tüplü TD koşusudur. Rutin koşuda yedek tüp kullanımı §9.1’deki kontrol sıklığı ve kaynak bilgisine göre planlanır.",
+      "sourceDetails": [
+        {
+          "reference": "L05:8-20,21,25-28",
+          "title": "TSE CEN/TS 13649 — tekil gaz VOC, sorbent tüp",
+          "edition": "TSE Şubat 2015; CEN/TS 13649:2014",
+          "url": ""
+        }
+      ]
+    },
+    {
+      "id": "voc_13649_dynamic",
+      "scope": "Emisyon",
+      "parameter": "VOC — tekil organik bileşikler",
+      "method": "CEN/TS 13649",
+      "sourceVersion": "2014 / TSE Şubat 2015",
+      "variant": "Dinamik seyreltme — aktif karbon; Ek A.2.1",
+      "sources": [
+        "L05:8-22,25"
+      ],
+      "reviewState": "sections_checked",
+      "train": [],
+      "limits": [
+        {
+          "label": "Çekiş debisi",
+          "value": "Tüp kolu 0,1–0,5 L/dk tipik aralığında; baca Vin, seyreltme Vr ve tüp Vout ayrı ölçülür. Vr/Vin her koşulda sabit 0,5/1,0 kabul edilmez."
+        },
+        {
+          "label": "Toplam çekiş hacmi",
+          "value": "Tüpün seçilen güvenli hacmi ve ölçülen seyreltme faktörü birlikte. Fd=(Vr+Vin)/Vin. Vout bütün karışım debisi değildir; fazla karışım çıkışı nedeniyle Vin=Vout−Vr varsayımı genellikle yanlıştır."
+        },
+        {
+          "label": "Sıcaklık",
+          "value": "Tablo 1: tüpte numune gazı <40 °C, sıcaklık belirsizliği <2,5 °C. Isıtılan prob kullanılıyorsa baca T+10 °C, en çok 180 °C. Yoğuşma riski varsa doğrudan tren yerine seyreltme varyantı."
+        },
+        {
+          "label": "Ölçüm süresi",
+          "value": "Süre, hedef gaz hacmi/Q ve prosesin temsil edilen ortalama süresiyle belirlenir; her VOC için sabit 30 dk yok. Küçük hacim nedeniyle çok kısa örnekleme gerekiyorsa zaman ağırlıklı seyreltme planını değerlendir."
+        }
+      ],
+      "phases": [
+        {
+          "title": "Hazırlık",
+          "items": [
+            "Bu yöntem gaz fazındaki tekil VOC içindir; FID ile toplam organik karbon ölçümü değildir. CEN/TS 13649:2014 eski EN 13649:2001’in yerini alır; dosya adındaki yalnız aktif karbon ifadesi TD seçeneğini dışlamaz.",
+            "Su/solvent yoğuşması riski için bileşim, nem, sıcaklık ve sorbent kapasitesini değerlendir. Sorbent önüne Na₂SO₄ gibi kurutucu yerleştirme; VOC kaybı yapabilir. Tüpte sıvı birikmesine izin verilmez.",
+            "Açılmış/kullanılmış aktif karbon tüpü tekrar kullanılmaz. Tüpün yönü, ana/yedek yatağı ve lotu işaretlenir; çözücü geri kazanımının her hedef/karbon lotu için >%80 olması gerekir.",
+            "Saha blankı en az 1/gün; günlük >6 numunede 2, >10 numunede 3 blank. Aynı lot ve açma/kapama işlemi, prob bacaya sokulmadan ve gaz çekilmeden. Analitik blank ile saha blankını ayır.",
+            "Temiz kuru seyreltme gazı kaynağını bağla, Vr’yi bilinen sabit debiye ayarla; ölçülen Vin baca gazı ile karıştır. Vout kontrollü tüp koluna, kalan karışım ayrı çıkışa gider. Yoğuşmayı önleyecek oranı kaynağa göre doğrula (Ek A.2.1)."
+          ]
+        },
+        {
+          "title": "Kaçak kontrolü",
+          "items": [
+            "Her örneklemeden önce ve sonra probdan hacim ölçere kadar bütün birleşik tren sınanır. Ölçümün en yüksek vakumunda kaçak örnekleme Q’sunun <%5’i veya hacim ölçümü belirsizliğinin altında olmalıdır (Ek A.1.3).",
+            "Örnek: 0,1 L/dk için %5, 0,005 L/dk=5 mL/dk eder; 0,57 L/dk EPA büyük tren sınırı bu tüplere uygulanmaz."
+          ]
+        },
+        {
+          "title": "Örnekleme",
+          "items": [
+            "Tüp yönü, Q, sayaç başlangıç/sonu, örnekleme süresi ve sayaç T/P kaydedilir; otomatik kompanzasyon yoksa ölçülen hacim T/P ile ilişkilendirilir. Küçük hacimlerde sistem ölü hacmini çekiş öncesi gazla süpür; hacim hesabına gerçek tüp örneklemesini al.",
+            "İyi tanımlanmış gazda en az her 10 numunenin 1’inde ve kampanya başına en az 1 numunede yedek kademe ile kırılmayı kontrol et. Bileşimi belirsiz kaynakta daha sık kontrol gerekir; yedek kademe bütün koşullarda keyfi çıkarılmaz.",
+            "Tablo 1’e göre arka kademe kütlesi iki kademenin toplamının <%5’i olmalı. §6.2’de “en çok %5” ifadesi de vardır; kart tabloda verilen daha sıkı <%5 kabulünü gösterir. Aşımda sonucu geçerli nicel sonuç gibi kullanma; §9.1/§10 rapor koşullarını uygula.",
+            "Seyreltme oranı, debi/T/P ve blank doğrulanır. Tüp gazından bulunan sonuç seyreltme faktörüyle baca gazına geri hesaplanır; kuru/yaş ve referans koşulları aynı bazda ele alınır."
+          ]
+        },
+        {
+          "title": "Geri kazanım",
+          "items": [
+            "Tüpü iki ucundan hemen kapat. Laboratuvarda ana ve yedek karbon yatakları ayrı viallere alınır; bunları sahada su/asetonla geri yıkama. Tipik CS₂ hacmi 100 mg karbon için 1 mL’dir; bu laboratuvar ekstraksiyon hacmidir.",
+            "Partiye/hedefe özgü desorpsiyon verimi ve blank analizi gerekir; kaynağa uygun olmayan çözücüyle standart tarifini genelleme."
+          ]
+        },
+        {
+          "title": "Saklama ve taşıma",
+          "items": [
+            "Temiz, hava sızdırmaz ve VOC yaymayan kapta, güneşten uzak, <25 °C. Ahşap, VOC yayan plastik ve yapışkan bant gibi bulaşma kaynaklarından kaçın.",
+            "7 gün içinde analiz edilmeyecekse tüpler hava sızdırmaz kapta <4 °C’de tutulur (§6.5.1). Yedi gün mutlak analiz son tarihi değildir; kaynak bu cümlede soğuk saklama şartını başlatır.",
+            "Soğuk kap oda sıcaklığına gelmeden açılmaz; kapalı halde dengelenir, ardından tüp çıkarılıp kapağı açılır. TD kapakları en düşük soğutma sıcaklığına ulaşıldığında yeniden sıkılır (§6.5.3)."
+          ]
+        },
+        {
+          "title": "Laboratuvara teslim",
+          "items": [
+            "Tesis, baca/nokta, tarih, başlangıç–bitiş, metot/sürüm, numuneci ve fraksiyon kimliklerini etiketle.",
+            "Numune kabı, kapak, miktar, blank, mühür, taşıma koşulu, teslim saati ve teslim alanı izlenebilir teslim formuna kaydet.",
+            "Tüp/lot/sorbent, ana-yedek yönü, Q/V/T/P/süre, blanklar, seyreltme varsa ölçülen oran, saklama sıcaklığı ve zamanlar ile ayrı kademe analiz isteğini bildir.",
+            "Saha blankı numuneden çıkarılmaz. Tablo 1’de <%10 emisyon sınırı; §9.1’de sonuç/ELV değerlendirmesi vardır. Numune blankın altındaysa ≤blank raporlanır; birden fazla blankta en yüksek değer esas alınır. Analitik blankın uygulanabilir düzeltmesi ayrı işlemdir."
+          ]
+        }
+      ],
+      "gaps": [
+        "Her hedef VOC için güvenli hacim, sorbent, desorpsiyon verimi ve laboratuvarın gerçek saklama kararlılığı doğrulanmalıdır. Tablo 1’de <40 °C, §6.2 metninde 40 °C’yi aşmama yazımı vardır; kart tablo sınırını korur.",
+        "Statik torba/lung yöntemi Ek A.2.2’de ayrı bir yöntemdir; bu dinamik çizimin torbalı karşılığı sayılmaz. Karıştırıcının gerçek debi ve örnekleme doğrulaması gerekir."
+      ],
+      "evidence": [
+        {
+          "field": "Seçim / debi / hacim / sıcaklık",
+          "references": [
+            "L05:8-13,19"
+          ],
+          "clause": "§5–6, Tablo 1"
+        },
+        {
+          "field": "Kaçak / doğrudan tren",
+          "references": [
+            "L05:13,21-22"
+          ],
+          "clause": "§6.4, Ek A.1"
+        },
+        {
+          "field": "Saklama / blank / kabul",
+          "references": [
+            "L05:13-14,18-20"
+          ],
+          "clause": "§6.5–6.6, §9–10"
+        },
+        {
+          "field": "Geri kazanım / sorbent",
+          "references": [
+            "L05:15-17,25-28"
+          ],
+          "clause": "§7.2, Ek B–C"
+        },
+        {
+          "field": "Seyreltme topolojisi ve oranı",
+          "references": [
+            "L05:22"
+          ],
+          "clause": "Ek A.2.1, Denklem A.1"
+        }
+      ],
+      "diagram": {
+        "type": "dilution",
+        "asset": "assets/diagrams/voc_13649_dynamic.png",
+        "shared": [
+          {
+            "id": "source",
+            "kind": "probe",
+            "label": "Baca gazı girişi",
+            "content": "Ölçülen Vin; uygun partikül/ısıtma düzeni",
+            "amount": "",
+            "optional": false
+          },
+          {
+            "id": "mixer",
+            "kind": "splitter",
+            "label": "Dinamik karıştırıcı",
+            "content": "Temiz kuru gaz ile baca gazı burada birleşir",
+            "amount": "",
+            "optional": false
+          }
+        ],
+        "dilution": {
+          "id": "diluent",
+          "kind": "meter",
+          "label": "Seyreltme gazı girişi",
+          "content": "Temiz kuru hava veya N₂; ölçülen sabit Vr",
+          "amount": "",
+          "optional": false
+        },
+        "branches": [
+          {
+            "id": "excess",
+            "label": "Fazla karışım çıkışı",
+            "nodes": [
+              {
+                "id": "exhaust",
+                "kind": "trap",
+                "label": "Fazla karışım",
+                "content": "Vr + Vin − Vout; güvenli uygun çıkış",
+                "amount": "",
+                "optional": false
+              }
+            ]
+          },
+          {
+            "id": "sample",
+            "label": "Ölçülen analiz kolu",
+            "nodes": [
+              {
+                "id": "tube",
+                "kind": "adsorber",
+                "label": "İki yataklı aktif karbon",
+                "content": "Ana ve yedek yatak ayrı analiz",
+                "amount": "Tipik 100 + 50 mg",
+                "optional": false
+              },
+              {
+                "id": "dryer",
+                "kind": "trap",
+                "label": "Pompa / sayaç koruması",
+                "content": "Tüpten sonra uygun kurutma",
+                "amount": "",
+                "optional": false
+              },
+              {
+                "id": "meter",
+                "kind": "meter",
+                "label": "Çekiş ve hacim ölçümü",
+                "content": "Pompa, DGM ve debi kontrol grubu; iç bağlantı sırası cihaz şemasına göre",
+                "amount": "",
+                "optional": false
+              }
+            ]
+          }
+        ]
+      },
+      "trainNote": "Ek A.2.1’in dinamik karıştırma ilkesini gösterir; seyreltme girişi ile fazla karışım çıkışı farklı bağlantılardır. Tüm debiler aynı T/P bazında ifade edilir. TD ile kullanım ayrıca kendi sorbent/kapasite koşullarını gerektirir.",
+      "sourceDetails": [
+        {
+          "reference": "L05:8-22,25",
+          "title": "TSE CEN/TS 13649 — tekil gaz VOC, sorbent tüp",
+          "edition": "TSE Şubat 2015; CEN/TS 13649:2014",
+          "url": ""
+        }
+      ]
+    },
+    {
+      "id": "velocity_iso16911_pitot",
+      "scope": "Emisyon",
+      "parameter": "Hız ve debi",
+      "method": "EN ISO 16911-1",
+      "sourceVersion": "2013 / TSE Haziran 2013",
+      "variant": "Ek A — kalibre Pitot ile noktasal hız",
+      "sources": [
+        "L04:21-31,33-44"
+      ],
+      "reviewState": "sections_checked",
+      "train": [],
+      "limits": [
+        {
+          "label": "Çekiş debisi",
+          "value": "Ölçülen baca hızı m/s; hacimsel debi q=vort×A. Bu ölçümde impingerle sabit L/dk gaz çekişi ayarlanmaz."
+        },
+        {
+          "label": "Toplam çekiş hacmi",
+          "value": "Numune çekiş hacmi yoktur. Gerçek yaş q ve kuru normal q ayrı hesaplanır; normal referans 273,15 K / 101,325 kPa."
+        },
+        {
+          "label": "Sıcaklık",
+          "value": "Her noktanın baca T’si yoğunluk hesabına girer. Mutlak basınç=Pbar+işaretli statik P; T(K)=T(°C)+273,15."
+        },
+        {
+          "label": "Ölçüm süresi",
+          "value": "Her noktada ≥1 dk boyunca en az 3 anlık ΔP okumasının ortalaması veya ≥1 dk elektronik ortalama. Süreç dalgalanması/ortalama hedefi ayrıca planlanır."
+        }
+      ],
+      "phases": [
+        {
+          "title": "Hazırlık",
+          "items": [
+            "Kesit alanını gerçek iç ölçülerle doğrula; dairesel kesitte en az iki çap. Çizimi ölçmeden doğru kabul etme. Duvar kalınlığı, port derinliği ve sıcaklık etkisini kaydet; alan performans kriteri %2.",
+            "Grid ve eş alan noktaları EN 15259’a göre belirlenir. Düz prob yaklaşımı dairesel kesitte teğetseldir. Prob/ekipman kesit tıkanması ≤%5 olmalıdır.",
+            "Pitot katsayısı izlenebilir ve kullanım hız aralığını kapsayan kalibrasyondan gelir; tasarım sabiti yeterli değildir. Aynı prob/ekipman birleşimi kalibrasyonda korunur. S-tip için her ölçümde otomatik 0,84 atama.",
+            "ΔP<5 Pa veya hız <5 m/s koşullarında Ek B kanatlı anemometre gibi daha düşük belirsizlikli uygun yöntem değerlendirilebilir. Ek A Tablo A.1 minimum ΔP=5 Pa; ölçüm alt sınırının altında kullanma."
+          ]
+        },
+        {
+          "title": "Kaçak kontrolü",
+          "items": [
+            "Seri öncesi ve bağlantı açıldığında Pitot/basınç devresini kontrol et. En az baca statik basıncı kadar basınçlandırılıp tapalar kapatıldığında 5 dk basınç kaybı olmamalıdır (§9.3.3).",
+            "S-tip ağızlar akışa dik, statik konumdayken iki port farkı <10 Pa olmalıdır. Hasar/çapak/tıkanma/kaçak/çarpılma kalibrasyonu geçersiz kılabilir; ölçüm öncesi ve sonrası gözle kontrol yapılır."
+          ]
+        },
+        {
+          "title": "Örnekleme",
+          "items": [
+            "Saha tekrarlanabilirliği önceden sınanır: iki cihaz varsa aynı noktada 5 eşli okuma; tek cihazda art arda 5 adet 1 dakikalık okuma. Tablo 4 hız tekrarlanabilirliği ≤%5.",
+            "Herhangi bir noktada teğetsel akış açısı >15° ise etkili girdap kabul edilir; hız ve yönü ölçebilen S/2D/3D cihazla her nokta değerlendirilir. Yön düzeltmesi vc=völçülen×cosθ; bu, cihazın açısal okuma hatasını kendiliğinden düzeltmez ve uygunsuz düzlemi otomatik onaylamaz.",
+            "Tablo 4: sensör/akış açısı <15°, probun ölçüm düzlemine pitch açısı ≤10°, konum hatası komşu nokta aralığının ≤%10’u, yoğunluk belirsizliği ≤0,05 kg/m³. Sabit referans prob varsa traversle eşzamanlı kaydet.",
+            "S-tip dışındaki ΔP cihazlarında tıkanma kontrolü gerekir. Temizlik öncesi/sonrası ΔP farkı ≤%5; referans debi değişimi ≤%2 veya varyasyon düzeltmesi. Başarısızlık son başarılı kontrolden sonraki ölçümleri geçersiz kılar (§9.6)."
+          ]
+        },
+        {
+          "title": "Geri kazanım",
+          "items": [
+            "Kimyasal numune fraksiyonu yoktur; ham hız basıncı, nokta konumu, açı, T/P, nem ve gaz bileşimi ile kalibrasyon kayıtları korunur.",
+            "Önce her noktada ΔP ortalamasından vi=K√(2ΔPi/ρi) hesapla. Sonra yalnız eş alan gridinde nokta hızlarının aritmetik ortalamasını al. Bütün noktaların ΔP’sini önce ortalayıp tek karekök almak aynı işlem değildir."
+          ]
+        },
+        {
+          "title": "Saklama ve taşıma",
+          "items": [
+            "Numune saklama sıcaklığı/analiz bekletme süresi uygulanmaz. Sensörleri temiz, kuru, darbeye karşı korunmuş taşı; saha verisini ham haliyle ve cihaz kimliğiyle sakla.",
+            "Kuru normal debi: qn,dry=qwet×Pabs/101,325×273,15/TK×(1−H₂O/100); bu ifadede Pabs kPa’dır. O₂’ye göre debi dönüşümü (21−Ogerçek)/(21−Oref); derişim düzeltmesi bunun tersidir. Aynı bazda kütlesel debi korunur (§10.6)."
+          ]
+        },
+        {
+          "title": "Laboratuvara teslim",
+          "items": [
+            "Tesis, baca/nokta, tarih, başlangıç–bitiş, metot/sürüm, numuneci ve fraksiyon kimliklerini etiketle.",
+            "Numune kabı, kapak, miktar, blank, mühür, taşıma koşulu, teslim saati ve teslim alanı izlenebilir teslim formuna kaydet.",
+            "Kesit/kroki, noktalar, kalibrasyon katsayıları ve aralık, hasar/kaçak/tekrarlanabilirlik/tıkanma kontrolleri, açılar, tüm ham ΔP/T/P/nem/bileşim ve belirsizlik bütçesi rapora aktarılır.",
+            "Tablo 4 basınç okuma cihazı kalibrasyon belirsizliğine ≤%1 verirken Tablo A.1 ≤%1 veya 20 Pa’dan büyük olanı yazar. Bu iki farklı ifadeyi tek otomatik kabul eşiğine indirme; ölçüm kalite hedefi ve belirsizlik bütçesinde yazılı değerlendir."
+          ]
+        }
+      ],
+      "gaps": [
+        "Bu kart Ek A Pitot uygulamasıdır. Ek B anemometre, Ek C iz gazı ve Ek D enerji hesabı ayrı tekniklerdir; bu karta aynı kabul şartlarıyla birleştirilmez. EN 15259 tam metniyle düzlem/grid koşullarının nihai eşleştirmesi eksiktir."
+      ],
+      "evidence": [
+        {
+          "field": "Kurulum / saha kalite / girdap",
+          "references": [
+            "L04:23-28"
+          ],
+          "clause": "§7, §9; Tablo 3–4"
+        },
+        {
+          "field": "Hesap / referans koşulları / belirsizlik",
+          "references": [
+            "L04:29-31"
+          ],
+          "clause": "§10–11"
+        },
+        {
+          "field": "Pitot kalibrasyonu / ΔP / yoğunluk",
+          "references": [
+            "L04:33-44"
+          ],
+          "clause": "Ek A.1–A.3; Tablo A.1"
+        }
+      ],
+      "sourceDetails": [
+        {
+          "reference": "L04:21-31,33-44",
+          "title": "TS EN ISO 16911-1 — elle hız ve debi referans yöntemi",
+          "edition": "TSE Haziran 2013; ISO 16911-1:2013",
+          "url": ""
+        }
+      ]
+    },
+    {
+      "id": "velocity_epa2",
+      "scope": "Emisyon",
+      "parameter": "Hız ve debi",
+      "method": "EPA Method 2",
+      "sourceVersion": "02.08.2017",
+      "variant": "S-tip Pitot — Method 1 bağlantılı",
+      "sources": [
+        "W09:1-6"
+      ],
+      "reviewState": "sections_checked",
+      "train": [],
+      "limits": [
+        {
+          "label": "Çekiş debisi",
+          "value": "Hız m/s, baca debisi m³/saat gibi hacim/zaman birimlerinde hesaplanır; L/dk kimyasal numune çekişi bu ölçüm değildir."
+        },
+        {
+          "label": "Toplam çekiş hacmi",
+          "value": "Çekilen numune gazı hacmi yoktur; kesit×ortalama hız ve gerekiyorsa kuru standart debi hesaplanır."
+        },
+        {
+          "label": "Sıcaklık",
+          "value": "T ölçer hata sınırı en düşük MUTLAK baca sıcaklığının %1,5’i. Örneğin 100 °C için esas 373,15 K’dir; 100’ün %1,5’i değildir."
+        },
+        {
+          "label": "Ölçüm süresi",
+          "value": "Her Method 1 noktasında hız basıncı ve sıcaklık; manometre seviye/sıfır kontrolü travers sırasında en az saatte bir. EN/ISO’nun 1 dk/nokta şartı buraya kendiliğinden aktarılmaz."
+        }
+      ],
+      "phases": [
+        {
+          "title": "Hazırlık",
+          "items": [
+            "Method 1’e uygun düzlem/grid ve girdap değerlendirmesi gerekir. Uygunsuz siklonik akışta bu yöntem doğrudan kullanılamaz; yer değiştirme, akış düzenleme veya yetkili onaylı alternatif gerekir.",
+            "Pitot kimliği ve katsayısı kayıtlı olmalı. §10.1’in geometri şartlarını sağlayan izole S-tip için 0,84 atanabilmesi, her prob/nozül/termokupl birleşiminin katsayısının 0,84 olduğu anlamına gelmez; aerodinamik etkileşim kalibrasyon gerektirebilir.",
+            "1,27 mmH₂O yaklaşık 12,45 Pa’dır. Ortalama ΔP bunun altındaysa; ≥12 noktalı traversin >%10 noktası veya <12 noktalı traversin birden fazla noktası bunun altındaysa daha duyarlı gösterge gerekir. §6.2.1 alternatif T oranı >1,05 ise de veri kabul edilmez."
+          ]
+        },
+        {
+          "title": "Kaçak kontrolü",
+          "items": [
+            "Ön test önerilir; son test zorunludur. İmpakt tarafında ≥7,6 cmH₂O basınç, statik tarafta aynı büyüklükte emiş uygula ve kapat; ≥15 s boyunca ±2,5 mmH₂O içinde kararlılık gerekir (§8.1–8.3).",
+            "Birim karşılıkları yaklaşık 745 Pa test basıncı ve ±24,5 Pa kararlılık bandıdır. Bu basınç devresi kontrolü, DGM treninin 0,57 L/dk kaçağıyla aynı test değildir."
+          ]
+        },
+        {
+          "title": "Örnekleme",
+          "items": [
+            "Manometreyi sıfırla ve seviyesini ayarla. Her noktada ΔP ve T, bacada statik basınç ve ortam barometrik basıncı ölç. Daha hassas manometreye geçilirse bütün noktaların ΔP/T okumaları yeniden alınır.",
+            "Kuru gaz molekül kütlesi uygun Method 3 gaz bileşiminden; nem Method 4 referans/eşdeğer veya Method 5’ten belirlenir. Esas olarak hava veren proseste kuru mol kütlesi 29,0 kullanılabilir; her yanma gazı için aynı kabul edilmez.",
+            "Standart Pitot kullanılmışsa tıkanmayı geri üfleme öncesi/sonrası aynı okunabilir noktada ΔP farkının %5 içinde olmasıyla doğrula; değilse traversi reddet ve tekrarla (§6.1.2)."
+          ]
+        },
+        {
+          "title": "Geri kazanım",
+          "items": [
+            "Kimyasal fraksiyon yoktur; nokta okumaları, kesit, Cp, T/P, nem ve bileşim kayıtları saklanır. Formüldeki basınç, sıcaklık ve mol kütlesiyle uyumlu birim katsayısı seç; Amerikan birimli katsayıyı SI girdilerine takma."
+          ]
+        },
+        {
+          "title": "Saklama ve taşıma",
+          "items": [
+            "Veri ve cihaz kimliği korunur; Pitot uçlarını darbe/tıkanmadan koru. Kimyasal numune saklama sıcaklığı veya analiz süresi atanmaz."
+          ]
+        },
+        {
+          "title": "Laboratuvara teslim",
+          "items": [
+            "Tesis, baca/nokta, tarih, başlangıç–bitiş, metot/sürüm, numuneci ve fraksiyon kimliklerini etiketle.",
+            "Numune kabı, kapak, miktar, blank, mühür, taşıma koşulu, teslim saati ve teslim alanı izlenebilir teslim formuna kaydet.",
+            "Nokta tablosu, gerçek iç çap/alan, Cp sertifikası/geometri, hassasiyet/kaçak/tıkanma kontrolleri ve ham T/P/ΔP/nem/bileşim rapor birimine aktarılır."
+          ]
+        }
+      ],
+      "gaps": [
+        "Bu kart saha seçimi ve §6–8 kontrollerini kapsar. Tam Pitot kalibrasyon laboratuvarı prosedürü §10, katsayı/hesap §12 ve Method 1’in uygulamaya özgü onayları ayrıca izlenir."
+      ],
+      "evidence": [
+        {
+          "field": "Kapsam / cihaz / hassasiyet",
+          "references": [
+            "W09:1-4"
+          ],
+          "clause": "§1, §6"
+        },
+        {
+          "field": "Saha / kaçak / katsayı",
+          "references": [
+            "W09:4-6"
+          ],
+          "clause": "§8, §10.1–10.1.1"
+        }
+      ],
+      "sourceDetails": [
+        {
+          "reference": "W09:1-6",
+          "title": "US EPA Method 2 — S-type Pitot velocity",
+          "edition": "02.08.2017",
+          "url": "https://www.epa.gov/sites/default/files/2017-08/documents/method_2.pdf"
+        }
+      ]
+    },
+    {
+      "id": "toc_en12619",
+      "scope": "Emisyon",
+      "parameter": "TOC — toplam organik karbon",
+      "method": "EN 12619",
+      "sourceVersion": "2013 / TSE Haziran 2013",
+      "variant": "Isıtılmış hat — sürekli FID ölçümü",
+      "sources": [
+        "D24:8-15"
+      ],
+      "reviewState": "sections_checked",
+      "train": [
+        {
+          "id": "probe",
+          "kind": "probe",
+          "label": "Numune probu",
+          "content": "Isıtılmış, uygun inert malzeme",
+          "amount": "",
+          "optional": false
+        },
+        {
+          "id": "filter",
+          "kind": "filter",
+          "label": "Partikül filtresi",
+          "content": "Örnekleme hattı önünde ısıtılmış filtre",
+          "amount": "",
+          "optional": false
+        },
+        {
+          "id": "line",
+          "kind": "probe",
+          "label": "Isıtılmış numune hattı",
+          "content": "Yoğuşma ve adsorpsiyon kaybı önlenir",
+          "amount": "",
+          "optional": false
+        },
+        {
+          "id": "analyzer",
+          "kind": "meter",
+          "label": "FID ve kayıt sistemi",
+          "content": "Uygun çekiş / yakıt / yanma havası; sıfır-span gazları",
+          "amount": "",
+          "optional": false
+        }
+      ],
+      "limits": [
+        {
+          "label": "Çekiş debisi",
+          "value": "Cihazın doğrulanmış debisi; sabit evrensel L/dk yok. Yan akış/haricî pompa varsa analizör gereksinimini karşılamalı."
+        },
+        {
+          "label": "Toplam çekiş hacmi",
+          "value": "Şişede/tüpte toplanan gaz hacmi yoktur; sonuç eşzamanlı analizle üretilir. Seyreltme varsa doğrulanmış oranla değerlendirilir."
+        },
+        {
+          "label": "Sıcaklık",
+          "value": "Örnekleme sistemi boyunca ≥180 °C; PTFE hattın üst sıcaklığı 200 °C. Hat/filtrede soğuk nokta ve yoğuşma olmamalı."
+        },
+        {
+          "label": "Ölçüm süresi",
+          "value": "Süre ve temsil EN 15259/ölçüm planından gelir. Hat gaz kalış süresi <60 s; seri başına sistem T90≤200 s. T90 toplam ölçüm süresi değildir."
+        }
+      ],
+      "phases": [
+        {
+          "title": "Hazırlık",
+          "items": [
+            "Toplam organik yanıt ölçülür; tekil VOC türünü ayırmaz. Kalibrasyon gazı ve sonuç bazını (propan eşdeğeri / karbon) açık yaz. CO ve CO₂ toplam organik karbon diye raporlanmaz.",
+            "Sıfır ve sertifikalı span gazı, gaz matrisi/O₂ etkisi, FID yakıtı ve aralık cihazın/yöntemin koşullarıyla seçilir. Propan kalibrasyonu diğer bileşiklerin farklı yanıt faktörlerini ortadan kaldırmaz.",
+            "Span propan, yaklaşık yarım saatlik ELV veya ölçüm aralığının %50–90’ı; sertifikalı derişim belirsizliği ≤%2. Yakıt/yanma havası ve sıfır gazı için kaynak saflık koşulları uygulanır."
+          ]
+        },
+        {
+          "title": "Kaçak kontrolü",
+          "items": [
+            "Önce doğrudan analizör sıfır/span ayarı; sonra filtre önündeki prob girişine yakın noktadan aynı gazlarla bütün sistem kontrolü. Doğrudan ve hat üzerinden yanıt farkı spanın <%2’si olmalı (§6.2.1–2).",
+            "Hat/filtre/bağlantıların tümünü kontrol et; yalnız analizöre gaz vermek hattın sızdırmazlığını ve bellek etkisini göstermez."
+          ]
+        },
+        {
+          "title": "Örnekleme",
+          "items": [
+            "Sistem T90 ve hat kalış süresini ayrı değerlendir. Seri başına tepki/sampling kontrolü; yıllık ve onarım sonrası doğrusallık/girişim kontrolleri Tablo 1’e göre. O₂ sinerjisi yaklaşık %10 O₂ civarında önemlidir.",
+            "Başlangıç/son ve en az günlük sıfır-span kontrolü. Drift >%2 span ise sıfır ve span için düzeltme; drift <%5 span olmalı, aksi halde sonuç geçersiz (§6.2.3). Düzeltmeden önce değerleri kaydet."
+          ]
+        },
+        {
+          "title": "Geri kazanım",
+          "items": [
+            "Bu yöntemde kimyasal yıkama fraksiyonu laboratuvara gönderilmez. Ham derişim zaman serisi, kalibrasyon, drift, tepki, nem/O₂ ve proses kayıtları korunur.",
+            "Kaynak 273 K/101,3 kPa’da propan ppmv → mg C/m³ için 3×12/22,4 katsayısını verir. Kuru ve O₂ referans düzeltmeleri ayrı; nem <%2 ise nem izleme/düzeltme istisnasını §6.3.2’ye göre değerlendir."
+          ]
+        },
+        {
+          "title": "Saklama ve taşıma",
+          "items": [
+            "Numune şişesi için kimyasal bekletme sıcaklığı/süresi uygulanmaz; analiz alımla eşzamanlıdır. Ham veri, cihaz/hat ayarı ve kalibrasyon gazı sertifikaları raporla izlenebilir saklanır."
+          ]
+        },
+        {
+          "title": "Laboratuvara teslim",
+          "items": [
+            "Tesis, baca/nokta, tarih, başlangıç–bitiş, metot/sürüm, numuneci ve fraksiyon kimliklerini etiketle.",
+            "Numune kabı, kapak, miktar, blank, mühür, taşıma koşulu, teslim saati ve teslim alanı izlenebilir teslim formuna kaydet.",
+            "Zaman serisi, aralık, kalibrasyon gazı/sertifika/matris, kontrol sonuçları, kullanılan düzeltmeler, referans koşulları ve temsil edilen proses dönemleri rapor birimine verilir."
+          ]
+        }
+      ],
+      "gaps": [
+        "Uygulanacak kaynak ortalama süresi, uygun ölçüm düzlemi/temsil, cihazın hedef bileşiklere yanıtı ve toplam belirsizlik ölçüm planıyla tamamlanır. Yöntemler arası ısıtma, T90/T95 veya drift sınırları birleştirilmez."
+      ],
+      "evidence": [
+        {
+          "field": "Sistem / sıcaklık / gazlar / süre",
+          "references": [
+            "D24:8-11"
+          ],
+          "clause": "§4–5, Tablo 1"
+        },
+        {
+          "field": "Kontrol / hesap / rapor",
+          "references": [
+            "D24:12-15"
+          ],
+          "clause": "§6–7, Ek A"
+        }
+      ],
+      "sourceDetails": [
+        {
+          "reference": "D24:8-15",
+          "title": "TS EN 12619.pdf",
+          "edition": "",
+          "url": ""
+        }
+      ]
+    },
+    {
+      "id": "toc_epa25a",
+      "scope": "Emisyon",
+      "parameter": "TOC — toplam organik karbon",
+      "method": "EPA Method 25A",
+      "sourceVersion": "03.08.2017",
+      "variant": "Isıtılmış hat — sürekli FID ölçümü",
+      "sources": [
+        "W10:1-6"
+      ],
+      "reviewState": "sections_checked",
+      "train": [
+        {
+          "id": "probe",
+          "kind": "probe",
+          "label": "Numune probu",
+          "content": "Isıtılmış, uygun inert malzeme",
+          "amount": "",
+          "optional": false
+        },
+        {
+          "id": "filter",
+          "kind": "filter",
+          "label": "Partikül filtresi",
+          "content": "Önemli toz yükünde önerilir; dış filtre yoğuşmayı önleyecek kadar ısıtılır",
+          "amount": "",
+          "optional": false
+        },
+        {
+          "id": "line",
+          "kind": "probe",
+          "label": "Isıtılmış numune hattı",
+          "content": "Yoğuşma ve adsorpsiyon kaybı önlenir",
+          "amount": "",
+          "optional": false
+        },
+        {
+          "id": "analyzer",
+          "kind": "meter",
+          "label": "FID ve kayıt sistemi",
+          "content": "Uygun çekiş / yakıt / yanma havası; sıfır-span gazları",
+          "amount": "",
+          "optional": false
+        }
+      ],
+      "limits": [
+        {
+          "label": "Çekiş debisi",
+          "value": "Cihazın doğrulanmış debisi; sabit evrensel L/dk yok. Yan akış/haricî pompa varsa analizör gereksinimini karşılamalı."
+        },
+        {
+          "label": "Toplam çekiş hacmi",
+          "value": "Şişede/tüpte toplanan gaz hacmi yoktur; sonuç eşzamanlı analizle üretilir. Seyreltme varsa doğrulanmış oranla değerlendirilir."
+        },
+        {
+          "label": "Sıcaklık",
+          "value": "Analizöre kadar örnekleme bileşenleri ≥110 °C; FID bloğu >120 °C. §5.2 güvenlik istisnası ayrıca değerlendirilir."
+        },
+        {
+          "label": "Ölçüm süresi",
+          "value": "İlgili kaynak mevzuatının ortalama/ölçüm süresi. En az 1 değer/dk kayıt; tepki testi %95 seviyesine göre."
+        }
+      ],
+      "phases": [
+        {
+          "title": "Hazırlık",
+          "items": [
+            "Toplam organik yanıt ölçülür; tekil VOC türünü ayırmaz. Kalibrasyon gazı ve sonuç bazını (propan eşdeğeri / karbon) açık yaz. CO ve CO₂ toplam organik karbon diye raporlanmaz.",
+            "Sıfır ve sertifikalı span gazı, gaz matrisi/O₂ etkisi, FID yakıtı ve aralık cihazın/yöntemin koşullarıyla seçilir. Propan kalibrasyonu diğer bileşiklerin farklı yanıt faktörlerini ortadan kaldırmaz.",
+            "Span yoksa beklenen derişimin 1,5–2,5 katı. Düşük gaz %25–35, orta %45–55, yüksek %80–90 span; ilave elektronik aralık orta gazla kontrol edilir."
+          ]
+        },
+        {
+          "title": "Kaçak kontrolü",
+          "items": [
+            "Seriden önce en çok 2 saat içinde sıfır/yüksek ayarı ve düşük/orta gazlarla kalibrasyon hatası kontrolü yapılır; hata ilgili kalibrasyon gazı değerinin <%5’i. Bu yüzde spanın %5’i değildir.",
+            "Hat/filtre/bağlantıların tümünü kontrol et; yalnız analizöre gaz vermek hattın sızdırmazlığını ve bellek etkisini göstermez."
+          ]
+        },
+        {
+          "title": "Örnekleme",
+          "items": [
+            "Sistem tepki süresi yüksek gaz adımının %95’ine ulaşma süresidir; üç tekrarın ortalaması alınır. En az dakikada bir derişim ve proses duruş/çevrim bilgisi kaydedilir.",
+            "Ölçüm sonu ve her saat sıfır/orta gazla drift kontrolü; iki sonuç görülmeden ayar yapma. Sıfır ve kalibrasyon drifti spanın ±%3’ünden küçük olmalı. Aşımda önceki dönemi reddedip düzelt/tekrarla veya §8.6.2’nin iki kalibrasyonla raporlama alternatifini uygula."
+          ]
+        },
+        {
+          "title": "Geri kazanım",
+          "items": [
+            "Bu yöntemde kimyasal yıkama fraksiyonu laboratuvara gönderilmez. Ham derişim zaman serisi, kalibrasyon, drift, tepki, nem/O₂ ve proses kayıtları korunur.",
+            "ppmv propan eşdeğerinden ppmv karbon eşdeğerine geçişte çarpan 3’tür; farklı kalibrasyon gazında uygun karbon/yanıt faktörü kullanılır. mg/m³ dönüşümü için ayrıca referans T/P gerekir."
+          ]
+        },
+        {
+          "title": "Saklama ve taşıma",
+          "items": [
+            "Numune şişesi için kimyasal bekletme sıcaklığı/süresi uygulanmaz; analiz alımla eşzamanlıdır. Ham veri, cihaz/hat ayarı ve kalibrasyon gazı sertifikaları raporla izlenebilir saklanır."
+          ]
+        },
+        {
+          "title": "Laboratuvara teslim",
+          "items": [
+            "Tesis, baca/nokta, tarih, başlangıç–bitiş, metot/sürüm, numuneci ve fraksiyon kimliklerini etiketle.",
+            "Numune kabı, kapak, miktar, blank, mühür, taşıma koşulu, teslim saati ve teslim alanı izlenebilir teslim formuna kaydet.",
+            "Zaman serisi, aralık, kalibrasyon gazı/sertifika/matris, kontrol sonuçları, kullanılan düzeltmeler, referans koşulları ve temsil edilen proses dönemleri rapor birimine verilir."
+          ]
+        }
+      ],
+      "gaps": [
+        "Uygulanacak kaynak ortalama süresi, uygun ölçüm düzlemi/temsil, cihazın hedef bileşiklere yanıtı ve toplam belirsizlik ölçüm planıyla tamamlanır. Yöntemler arası ısıtma, T90/T95 veya drift sınırları birleştirilmez."
+      ],
+      "evidence": [
+        {
+          "field": "Sistem / sıcaklık / gazlar / süre",
+          "references": [
+            "W10:1-4"
+          ],
+          "clause": "§3, §6–8"
+        },
+        {
+          "field": "Kontrol / hesap / rapor",
+          "references": [
+            "W10:4-6"
+          ],
+          "clause": "§8–13"
+        }
+      ],
+      "sourceDetails": [
+        {
+          "reference": "W10:1-6",
+          "title": "US EPA Method 25A — FID",
+          "edition": "03.08.2017",
+          "url": "https://www.epa.gov/sites/default/files/2017-08/documents/method_25a.pdf"
         }
       ]
     }

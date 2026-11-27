@@ -1,6 +1,14 @@
 # Emisyon İmisyon Ölçüm Standartları
 
-## 0.7.1 — saha rehberi ve açıklamalı bilgi testi
+## 0.8.0 — kaynak karşılaştırmaları ve yöntem ayrımları
+
+41 metot/varyant kartı, 34 çizim ve 190 açıklamalı soru (31 imisyon). Yeni kartlar: aktif karbon VOC, TD VOC, dinamik seyreltme, EN ISO 16911-1 Pitot, EPA2, EPA5, EPA17, EN12619 ve EPA25A. Dinamik seyreltme çiziminde temiz gaz girişi, baca gazı girişi, analiz kolu ve fazla karışım çıkışı ayrı gösterilir.
+
+VOC debi/hacim/sıcaklık ve tüp saklama, Pitot/girdap/yoğunluk ve kuru normal debi, EPA kimyasal kap/blank/geri kazanım, PM10/PM2,5 tartım ve kalite koşulları kaynak maddeleriyle karşılaştırıldı. Kaynak türleri (standart, kurum talimatı, eğitim sunumu, cihaz kılavuzu) uygulamada ayrılır. 0.7.2’de cıvasız metal kartına cıva geri kazanımının karışmasını engelleyen düzeltme korunur.
+
+**Bütün standartların nihai teknik doğrulaması tamamlanmadı.** Uygulamadaki “Kaynaklar ve sürümler → 37 başlığın teknik doğrulama durumu” ekranı ve [teknik doğrulama matrisi](docs/TEKNIK_DOGRULAMA_MATRISI.md) her başlıktaki açık işi gösterir. Katalog kapsamı ve test sayısı nihai yöntem onayı değildir. [0.8.0 değişiklikleri](docs/DOGRULAMA_0_8_0.md).
+
+## Önceki 0.7.1 kapsamı
 
 Ana ekrandaki **Parametre seç · Numune alma ve impinger rehberi** düğmesi yeni bölümü açar. 32 metot/varyant kartının 27’sinde ayrı tren çizimi bulunur. Metot değişince filtre yeri, şişeler ve miktarlar seçime göre değişir. Ana/yan akış kolları ayrı çizilir. Şema tam ekranda yakınlaştırılabilir ve çevrimdışı çalışır. Emisyon / imisyon filtreleri ve PM10, PM2,5, çöken toz, pasif örnekleme kartları vardır.
 

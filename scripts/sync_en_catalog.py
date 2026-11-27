@@ -4,7 +4,13 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 profiles={p['id']:p for p in json.loads((ROOT/'assets/field_guide.json').read_text(encoding='utf-8'))['profiles']}
 mapping={'TS EN 1911':'hcl_en1911_iso','TS EN 14385':'metals_en14385_full','TS EN 13284-1':'dust_en13284_out',
-         'SCAQMD Method 207.1':'ammonia_2071_gs','TS EN 1948-1':'dioxin_en1948_filter'}
+         'SCAQMD Method 207.1':'ammonia_2071_gs','TS EN 1948-1':'dioxin_en1948_filter',
+         'EPA Method 4':'moisture_epa4','EPA Method 5':'dust_epa5','EPA Method 17':'dust_epa17',
+         'EPA Method 29':'metals_epa29_hg','EPA Method 13A':'fluoride_epa13a_rear',
+         'EPA Method 8':'acid_epa8','EPA Method 11':'h2s_epa11','TS EN 13649':'voc_13649_charcoal',
+         'TS EN 12619 / EPA Method 25A':'toc_en12619',
+         'TS EN 12341 / EPA 40 CFR 50-53':'ambient_pm10','TS EN 12341 / EPA 40 CFR Part 50-53':'ambient_pm10',
+         'EPA Method 5 / EPA Method 17':'dust_epa5'}
 for filename in ('standards.json','standards_extra.json','standards_overrides.json'):
     path=ROOT/'assets'/filename;items=json.loads(path.read_text(encoding='utf-8'))
     for item in items:
@@ -32,4 +38,9 @@ for filename in ('standards.json','standards_extra.json','standards_overrides.js
             acceptance=['Kontrol sonucu yalnız seçili yöntem ve kaynak baskısıyla değerlendirilir. Açık kalan kaynak/uygulama ayrıntıları parametre kartında görünür.'],
             reporting=phases['Laboratuvara teslim']+['Kaynak: '+', '.join(p['sources'])],
             mistakes=['Dolum, yüzde türü, blank, süre veya saklama kuralını başka yöntemden aktarmak.','Eski eğitim notunu yeni standart baskısı diye kullanmak.'])
+        if item['code']=='TS EN 13649':item['title']='Tekil VOC — CEN/TS 13649:2014; aktif karbon / TD / seyreltme'
+        if item['code']=='TS EN 12619 / EPA Method 25A':
+            item['purpose']='EN 12619 ve EPA25A ayrı FID yöntemleridir. Isıtma, T90/T95 ve drift sınırları farklıdır. Bu katalog özeti EN 12619 kartını gösterir; parametre rehberinde EPA25A ayrıca seçilir.'
+        if item['code']=='EPA Method 5 / EPA Method 17':
+            item['purpose']='İki ayrı toz yöntemi: Method 5 ısıtılmış dış filtre, Method 17 baca içi filtre. Bu özet Method 5; Method 17’nin uygulanabilirlik, tıkanma ve ön/arka fraksiyon koşulları parametre rehberinde ayrı karttadır.'
     path.write_text(json.dumps(items,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')

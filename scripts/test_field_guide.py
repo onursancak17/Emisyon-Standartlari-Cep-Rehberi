@@ -14,6 +14,24 @@ class FieldGuideTests(unittest.TestCase):
     def test_manifest_is_valid(self):
         self.assertGreaterEqual(validate(DATA,SOURCES),17)
 
+    def test_dilution_has_two_distinct_outputs_and_an_independent_gas_input(self):
+        d=P['voc_13649_dynamic']['diagram']
+        self.assertEqual(d['type'],'dilution')
+        self.assertEqual(d['dilution']['id'],'diluent')
+        self.assertEqual([b['id'] for b in d['branches']],['excess','sample'])
+        self.assertEqual(d['branches'][0]['nodes'][-1]['id'],'exhaust')
+        self.assertEqual(d['branches'][1]['nodes'][-1]['kind'],'meter')
+
+    def test_audit_preserves_unresolved_sources_without_method_number_collisions(self):
+        audit=SOURCES['auditMatrix']
+        self.assertFalse(audit['allStandardsFinallyVerified'])
+        self.assertEqual(len(audit['rows']),37)
+        r={r['code']:r for r in audit['rows']}
+        self.assertEqual(r['ISO 12141']['state'],'source_missing')
+        self.assertNotIn('velocity_epa2',r['EPA Method 29']['profileIds'])
+        self.assertNotIn('moisture_epa4',r['CARB Method 425']['profileIds'])
+        self.assertEqual(next(s['sourceKind'] for s in SOURCES['documents'] if s['id']=='D26'),'Eğitim sunumu')
+
     def test_fluoride_filter_really_moves(self):
         rear = [x['id'] for x in P['fluoride_epa13a_rear']['train']]
         front = [x['id'] for x in P['fluoride_epa13a_front']['train']]

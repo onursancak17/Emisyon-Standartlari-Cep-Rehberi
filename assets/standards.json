@@ -148,69 +148,45 @@
       "silika jel",
       "DGM"
     ],
-    "purpose": "Sabit kaynak bacalarında partikül madde emisyonunun izokinetik numune alma, ısıtılmış filtre ve numune geri alma yıkamalarıyla gravimetrik olarak belirlenmesi için ayrıntılı saha rehberidir.",
-    "duration": "Her traverse noktasında süre eşit dağıtılır ve nokta başı süre en az 2 dakika olacak şekilde planlanır. Toplam süre; beklenen toz seviyesi, yeterli kütle toplanması, filtre yüklenmesi, mevzuat şartı ve laboratuvar tayin limiti dikkate alınarak seçilir.",
-    "flowRate": "Çekiş debisi sabit değildir; her noktada baca hızına göre izokinetik ayarlanır. İzokinetik oran normalde %90–110 aralığında hedeflenir. DGM hacmi, sayaç sıcaklığı, sayaç vakumu, orifis ΔH ve süre her noktada kayıt edilir.",
+    "purpose": "EPA Method 5 — 07.12.2020. Method 1 yer/nokta, Method 2 hız/yoğunluk ve uygun nem tayiniyle nozül seç. Koşu içinde nozül çapını değiştirme. Nozül üç eksende 0,025 mm çözünürlükle ölçülür; en büyük-küçük fark ≤0,1 mm (§10.1).",
+    "duration": "Eşit süreli noktalar, en az 2 dk/nokta; kaynak mevzuatının toplam süresi/hacmi ayrıca. Daha kısa örnekleme özel yetkili onayı gerektirir.",
+    "flowRate": "İzokinetik %90–110; anlık hedef baca hızı/nozül/nem/T/P ile belirlenir. Sabit L/dk yok.",
     "equipment": [
-      "Keskin kenarlı ve kalibre edilmiş nozül seti.",
-      "Isıtmalı prob ve uygun prob liner.",
-      "S-tip Pitot, diferansiyel basınç ölçer ve sıcaklık probu.",
-      "Isıtılmış filtre tutucu ve cam fiber filtre.",
-      "4 impingerli nem tutma grubu ve buz banyosu.",
-      "Kuru gaz sayacı/DGM, orifis, vakum pompası ve sıcaklık sensörleri.",
-      "Aseton yıkama şişesi, fırça, numune kapları, petri kabı, pens, etiket ve saha formu."
+      "Bu yöntemin şema/numune fraksiyonları ana ekrandaki parametre rehberinde ayrı varyantlarla bulunur."
     ],
     "reagents": [
-      "1. impinger: 100 mL saf/deiyonize su.",
-      "2. impinger: 100 mL saf/deiyonize su.",
-      "3. impinger: boş bırakılır.",
-      "4. impinger: 200–300 g ön tartımı yapılmış silika jel.",
-      "Nozül, prob liner, bağlantılar ve filtre tutucu ön yarısı numune geri almada asetonda yıkanır.",
-      "Kullanılan asetondan yaklaşık 200 mL asetone blank alınır."
+      "Bağlayıcısız cam elyaf filtre: ≥%99,95 yakalama @0,3 µm; SO₂/SO₃’e reaksiyon vermemeli. Aseton reaktif saflığında, kalıntı ≤%0,001; saha öncesi blankı kontrol et.",
+      "Ön filtre şartlandırma: 20±5,6 °C’de ≥24 saat desikatör; ≥6 saat aralıklı tartımlarda fark ≤0,5 mg, kayıt 0,1 mg. Her tartımda laboratuvar havasına maruz kalma <2 dk; izin verilen fırın alternatifi ayrı prosedürdür.",
+      "Saha terazisi günlük ±0,5 g kontrolü; analitik terazi kullanım öncesi ve altı aylık çok noktalı kalibrasyon, günlük sertifikalı kütle kontrolü (§10.7–10.8)."
     ],
     "fieldSteps": [
-      "Ölçüm yeri ve traverse noktalarını Method 1 veya ilgili standarda göre belirle.",
-      "Baca hız ön ölçümünü yap ve uygun nozül çapını seç.",
-      "Filtreleri ışığa tutarak yırtık, delik ve kusur açısından kontrol et; filtre numarasını yaz.",
-      "Silika jel ön tartımını ve impinger başlangıç hacimlerini kayıt et.",
-      "Filtre ve prob ısıtmasını hedef sıcaklığa getir; filtre sıcaklığını 120 ±14 °C civarında tut.",
-      "Ölçüm öncesi kaçak testini yap; ölçüm sonu kaçak testinin zorunlu olduğunu unutma.",
-      "Nozülü ilk noktaya gaz akışına bakacak şekilde yerleştir; pompayı çalıştır ve izokinetik debiyi ayarla.",
-      "Her noktada DGM, orifis ΔH, baca ΔP, vakum, sıcaklıklar ve süreyi yaz.",
-      "İmpinger buz banyosunu ve silika jel çıkış sıcaklığını takip et; çıkış 20 °C altında tutulmalıdır.",
-      "Ölçüm sonunda DGM son değerlerini al, pompayı durdur, probu çıkar ve son kaçak testini yap.",
-      "Numune geri almada filtreyi Container 1'e, ön hat asetone wash fraksiyonunu Container 2'ye, silika jeli Container 3'e al.",
-      "İlk üç impingerdeki suyu nem hesabı için tart veya hacimsel kayıt et."
+      "Ön kaçak testi önerilir; parça değişiminden hemen önce ve ölçüm sonunda test zorunludur. Sonda/ara testte koşuda görülen en yüksek vakum veya üstü kullanılır.",
+      "Method 5 §8.4: kabul edilen kaçak ≤min(ortalama Q ×0,04; 0,57 L/dk). 380 mmHg yaklaşık 50,66 kPa vakumdur; düşük ön test vakumu ancak ölçüm sırasında aşılmıyorsa kullanılabilir. Aşımda yalnız §12.3 hacim düzeltmesi veya ölçümün reddi uygulanır.",
+      "Filtre/prob koşulunu kararlı hale getir. Her nokta-zaman aralığında sayaç, sıcaklık, vakum, hız basıncı ve gerekli gaz verilerini kaydet; hız basıncında %20 değişimde ek debi ayarı/kayıt gerekir.",
+      "Nozül akışa bakar; porta/duvara çarpıp birikinti toplama. Port boşluğunu çevre hava ile seyrelmeyi önleyecek şekilde kapat. Pompa/vanaları geri sıvı yürümeyecek sırayla yönet.",
+      "Filtre değişecekse önce kaçak testi; bütün filtrelerin PM kütlesi numuneye dahildir. Seri sonu DGM kontrolünde Y farkı >%5 ise tam kalibrasyon; ret veya düşük toplam hacmi veren katsayı (§10.3.2–3).",
+      "Filtreyi etiketli petriye, tortu içe bakacak şekilde al. Nozül ve filtre önündeki numuneye temas eden yüzeyleri asetonla nicel geri kazan; cam kapta ayrı topla, seviye işaretle. Dış yüzey tozunu numuneye karıştırma.",
+      "Temizlikte kullanılan her aseton deposundan 200 mL blank ayır. Method 5 ön yıkamasına Method 29’daki sabit 100 mL zorunluluğunu aktarma; kullanılan gerçek yıkama hacmini kaydet.",
+      "İlk üç impingerin nem kütlesini ≥0,5 g doğrulukla belirle. Silika jeli sıvı eklemeden ayrı kaba al veya yerinde tart. İmpinger çözeltisi ayrıca istenmiyorsa filtre edilebilir PM sonucuna otomatik eklenmez."
     ],
     "criticalControls": [
-      "Toplam 4 impinger düzeni ve 100 mL + 100 mL + boş + 200–300 g silika jel sırası karıştırılmamalıdır.",
-      "Filtre sıcaklığı düşük kalırsa nem ve yarı uçucu bileşen davranışı sonucu etkileyebilir.",
-      "Kaçak sınırı ortalama örnekleme debisinin %4'ü veya 0,00057 m3/dk değerinden küçük olanıdır.",
-      "Nozül gaz akışına tam bakmalıdır; açılı duruş izokinetikliği bozar.",
-      "Port çevresinden dış hava emişi olursa hem hacim hem konsantrasyon hatalı çıkar.",
-      "Aseton yıkama kalıntısı toplam partikül kütlesinin parçasıdır; atlanamaz.",
-      "Asetone blank düzeltmesi olmadan yıkama kalıntısı güvenilir değerlendirilemez."
+      "Uygulanacak kaynak mevzuatının asgari kuru standart hacmi. Sayaç hacmi/Y/T/P ve kaçak düzeltmeleri birlikte; standart 20 °C bazını 0 °C Nm³ ile karıştırma.",
+      "Prob ve filtre çıkış gazı 120±14 °C; özel alt düzenleme/onay farklı koşul getirebilir. Son nem tutucu çıkış gazı <20 °C.",
+      "Filtre kimlikli kapalı petride; aseton fraksiyonu sızdırmaz cam kapta; seviye çizgisi, kap kimliği ve dik taşıma korunur. Bu metotta bütün numunelere uygulanacak genel sayısal azami taşıma/analiz süresi verilmez; laboratuvar planı bunu tamamlar.",
+      "Son filtre tartımı: ≥24 saat desikatör; ≥6 saat aralıklı iki tartımda fark ≤max(0,5 mg; net kütlenin %1’i). Bu son tartım kriteri ön tartımdaki sabit ≤0,5 mg ile karıştırılmaz."
     ],
     "acceptance": [
-      "Son kaçak testi kabul sınırında olmalıdır.",
-      "İzokinetik oran kabul aralığında olmalıdır.",
-      "Filtre yırtık, ıslak, kontamine veya by-pass olmuş olmamalıdır.",
-      "Nozül, prob yıkaması, filtre ve silika jel fraksiyonları eksiksiz teslim edilmelidir.",
-      "Pitot hatları kaçak testinden geçmelidir; aksi halde hız ve izokinetik hesaplar tartışmalı olur."
+      "Kontrol sonucu yalnız seçili yöntem ve kaynak baskısıyla değerlendirilir. Açık kalan kaynak/uygulama ayrıntıları parametre kartında görünür."
     ],
     "reporting": [
-      "Nozül çapı, nokta sayısı, nokta süreleri, DGM ilk/son hacimleri, sıcaklıklar, vakum, orifis ΔH ve baca ΔP yazılır.",
-      "Filtre kütlesi, asetone wash kalıntısı, blank düzeltmesi ve toplam partikül kütlesi ayrı gösterilir.",
-      "Standart kuru hacim, nem, izokinetiklik ve konsantrasyon hesapları rapora aktarılır.",
-      "Uygunsuzluk, filtre sıcaklığı sapması, yüksek vakum, filtre yüklenmesi veya proses dalgalanması varsa açıklanır."
+      "Tesis, baca/nokta, tarih, başlangıç–bitiş, metot/sürüm, numuneci ve fraksiyon kimliklerini etiketle.",
+      "Numune kabı, kapak, miktar, blank, mühür, taşıma koşulu, teslim saati ve teslim alanı izlenebilir teslim formuna kaydet.",
+      "Filtre(ler), ön aseton yıkaması, aseton blankı, varsa ayrı impinger analizi, nem/Y/T/P/kaçak/izokinetik ve süreç kayıtları birlikte teslim edilir. Numune kütlesi filtre+ön yıkama−izin verilen aseton blankıdır.",
+      "Kaynak: D09:1-18,21-23"
     ],
     "mistakes": [
-      "Sabit debiyle izokinetik ölçüm yapmaya çalışmak.",
-      "Asetone wash almamak veya yıkama kabını yanlış etiketlemek.",
-      "Silika jel ön/son tartımını karıştırmak.",
-      "Nozül çapını ön hız ölçümüne göre seçmemek.",
-      "Ölçüm sonunda kaçak testi yapmadan sistemi sökmek.",
-      "Filtreyi çıkarırken partikül kekini dökmek veya filtreyi açıkta bekletmek."
+      "Dolum, yüzde türü, blank, süre veya saklama kuralını başka yöntemden aktarmak.",
+      "Eski eğitim notunu yeni standart baskısı diye kullanmak."
     ]
   },
   {
@@ -337,47 +313,48 @@
       "izokinetik",
       "baca içi filtre"
     ],
-    "purpose": "Partikül maddenin baca içinde yer alan filtrede tutulduğu in-stack filtreli izokinetik örnekleme yöntemine yönelik saha rehberidir. Özellikle filtre sıcaklığı ve baca şartlarının dışarıdaki ısıtmalı filtre sisteminden farklı ele alındığı uygulamalarda kullanılır.",
-    "duration": "Süre her traverse noktasına eşit dağıtılır ve yeterli kütle toplanacak şekilde planlanır. Filtre baca içinde olduğu için filtre yüklenmesi ve prob yerleşimi dikkatle takip edilir.",
-    "flowRate": "Numune debisi izokinetik şartı sağlayacak şekilde ayarlanır. Baca hızı ve sıcaklığı her noktada dikkate alınır.",
+    "purpose": "EPA Method 17 — 03.08.2017. Method 1 yer/nokta, Method 2 hız/yoğunluk ve uygun nem tayiniyle nozül seç. Koşu içinde nozül çapını değiştirme. Nozül üç eksende 0,025 mm çözünürlükle ölçülür; en büyük-küçük fark ≤0,1 mm (§10.1).",
+    "duration": "Eşit süreli noktalar, en az 2 dk/nokta; kaynak mevzuatının toplam süresi/hacmi ayrıca. Daha kısa örnekleme özel yetkili onayı gerektirir.",
+    "flowRate": "İzokinetik %90–110; anlık hedef baca hızı/nozül/nem/T/P ile belirlenir. Sabit L/dk yok.",
     "equipment": [
-      "Baca içine yerleştirilen filtre tutucu.",
-      "Uygun nozül ve prob.",
-      "S-tip Pitot ve sıcaklık probu.",
-      "DGM, pompa, orifis ve basınç ölçüm düzeni.",
-      "Filtre taşıma kabı, pens ve temiz geri alma alanı."
+      "Bu yöntemin şema/numune fraksiyonları ana ekrandaki parametre rehberinde ayrı varyantlarla bulunur."
     ],
     "reagents": [
-      "Temel numune baca içi filtrede toplanır.",
-      "Geri alma yıkaması veya ek fraksiyon laboratuvar talimatına göre uygulanır."
+      "Bağlayıcısız cam elyaf filtre: ≥%99,95 yakalama @0,3 µm; SO₂/SO₃’e reaksiyon vermemeli. Aseton reaktif saflığında, kalıntı ≤%0,001; saha öncesi blankı kontrol et.",
+      "Ön filtre şartlandırma: 20±5,6 °C’de ≥24 saat desikatör; ≥6 saat aralıklı tartımlarda fark ≤0,5 mg, kayıt 0,1 mg. Her tartımda laboratuvar havasına maruz kalma <2 dk; izin verilen fırın alternatifi ayrı prosedürdür.",
+      "Saha terazisi günlük ±0,5 g kontrolü; analitik terazi kullanım öncesi ve altı aylık çok noktalı kalibrasyon, günlük sertifikalı kütle kontrolü (§10.7–10.8).",
+      "PM’nin normal kaynak sıcaklık aralığında sıcaklıktan bağımsız olduğu ve Method 17 kullanımına izin verildiği doğrulanır. Prob uzatma/filtre tutucu izdüşüm alanı baca kesitinin >%5’i ise standart düzen olduğu gibi kullanılamaz; dış filtre veya onaylı ayrı hız/örnekleme düzeni gerekir (§1.2, §8.1.2)."
     ],
     "fieldSteps": [
-      "Baca şartlarının in-stack filtre uygulamasına uygun olduğunu kontrol et.",
-      "Filtre tutucunun baca içinde sağlam durduğunu ve gaz by-pass yapmadığını kontrol et.",
-      "Nozülü akışa doğru hizala ve izokinetik çekişi başlat.",
-      "Her noktada DGM, sıcaklık, ΔP, vakum ve süre kayıtlarını al.",
-      "Filtre tutucuyu bacadan çıkarırken partikül kaybı olmamasına dikkat et.",
-      "Filtreyi temiz alanda kapat ve etiketle."
+      "Ön kaçak testi önerilir; parça değişiminden hemen önce ve ölçüm sonunda test zorunludur. Sonda/ara testte koşuda görülen en yüksek vakum veya üstü kullanılır.",
+      "Method 5 §8.4: kabul edilen kaçak ≤min(ortalama Q ×0,04; 0,57 L/dk). 380 mmHg yaklaşık 50,66 kPa vakumdur; düşük ön test vakumu ancak ölçüm sırasında aşılmıyorsa kullanılabilir. Aşımda yalnız §12.3 hacim düzeltmesi veya ölçümün reddi uygulanır.",
+      "Filtre tutucusu nozül sıcaklığa dayanıklı tıkaçla kapalıyken bacaya yerleştirilir; yaklaşık 5 dk veya kararlı hale gelene kadar beklenip kaçak testi yapılır (§8.1.4).",
+      "Filtre/prob koşulunu kararlı hale getir. Her nokta-zaman aralığında sayaç, sıcaklık, vakum, hız basıncı ve gerekli gaz verilerini kaydet; hız basıncında %20 değişimde ek debi ayarı/kayıt gerekir.",
+      "Nozül akışa bakar; porta/duvara çarpıp birikinti toplama. Port boşluğunu çevre hava ile seyrelmeyi önleyecek şekilde kapat. Pompa/vanaları geri sıvı yürümeyecek sırayla yönet.",
+      "Filtre değişecekse önce kaçak testi; bütün filtrelerin PM kütlesi numuneye dahildir. Seri sonu DGM kontrolünde Y farkı >%5 ise tam kalibrasyon; ret veya düşük toplam hacmi veren katsayı (§10.3.2–3).",
+      "Filtreyi etiketli petriye, tortu içe bakacak şekilde al. Nozül ve filtre önündeki numuneye temas eden yüzeyleri asetonla nicel geri kazan; cam kapta ayrı topla, seviye işaretle. Dış yüzey tozunu numuneye karıştırma.",
+      "Temizlikte kullanılan her aseton deposundan 200 mL blank ayır. Method 5 ön yıkamasına Method 29’daki sabit 100 mL zorunluluğunu aktarma; kullanılan gerçek yıkama hacmini kaydet.",
+      "İlk üç impingerin nem kütlesini ≥0,5 g doğrulukla belirle. Silika jeli sıvı eklemeden ayrı kaba al veya yerinde tart. İmpinger çözeltisi ayrıca istenmiyorsa filtre edilebilir PM sonucuna otomatik eklenmez.",
+      "Method 17 ön yarısı nozül/filtre tutucudur; filtre SONRASI uzatma borusunu ön PM yıkamasına katma. Kaynağın eski Method 5 madde numaraları, güncel Method 5’in ilgili başlığıyla eşleştirilir."
     ],
     "criticalControls": [
-      "Filtre baca içinde olduğu için fiziksel hasar, yüksek sıcaklık ve partikül dökülmesi riski vardır.",
-      "By-pass akış veya filtre kenar kaçağı sonucu düşük sonuç verir.",
-      "Baca içinden çıkarma sırasında filtredeki partikül kaybedilmemelidir.",
-      "Uygun olmayan baca sıcaklığı veya nem şartı metot seçimini etkileyebilir."
+      "Uygulanacak kaynak mevzuatının asgari kuru standart hacmi. Sayaç hacmi/Y/T/P ve kaçak düzeltmeleri birlikte; standart 20 °C bazını 0 °C Nm³ ile karıştırma.",
+      "Baca içi filtrasyon baca sıcaklığında; doymuş/damlacıklı gazda uygulanmaz. Son nem tutucu çıkış gazı <20 °C.",
+      "Filtre kimlikli kapalı petride; aseton fraksiyonu sızdırmaz cam kapta; seviye çizgisi, kap kimliği ve dik taşıma korunur. Bu metotta bütün numunelere uygulanacak genel sayısal azami taşıma/analiz süresi verilmez; laboratuvar planı bunu tamamlar.",
+      "Son filtre tartımı: ≥24 saat desikatör; ≥6 saat aralıklı iki tartımda fark ≤max(0,5 mg; net kütlenin %1’i). Bu son tartım kriteri ön tartımdaki sabit ≤0,5 mg ile karıştırılmaz."
     ],
     "acceptance": [
-      "Filtre bütünlüğü korunmalıdır.",
-      "İzokinetik oran uygun olmalıdır.",
-      "Kaçak testi ve DGM kayıtları eksiksiz olmalıdır."
+      "Kontrol sonucu yalnız seçili yöntem ve kaynak baskısıyla değerlendirilir. Açık kalan kaynak/uygulama ayrıntıları parametre kartında görünür."
     ],
     "reporting": [
-      "In-stack filtre kullanıldığı açık yazılır.",
-      "Filtre konumu, baca sıcaklığı, süre, hacim ve izokinetiklik rapora aktarılır."
+      "Tesis, baca/nokta, tarih, başlangıç–bitiş, metot/sürüm, numuneci ve fraksiyon kimliklerini etiketle.",
+      "Numune kabı, kapak, miktar, blank, mühür, taşıma koşulu, teslim saati ve teslim alanı izlenebilir teslim formuna kaydet.",
+      "Filtre(ler), ön aseton yıkaması, aseton blankı, varsa ayrı impinger analizi, nem/Y/T/P/kaçak/izokinetik ve süreç kayıtları birlikte teslim edilir. Numune kütlesi filtre+ön yıkama−izin verilen aseton blankıdır.",
+      "Kaynak: W08:1-7, D09:6-18,21-23"
     ],
     "mistakes": [
-      "Filtreyi bacadan çıkarırken partikül dökmek.",
-      "Filtre tutucuyu tam oturtmamak.",
-      "EPA 5 ile EPA 17 geri alma farklarını karıştırmak."
+      "Dolum, yüzde türü, blank, süre veya saklama kuralını başka yöntemden aktarmak.",
+      "Eski eğitim notunu yeni standart baskısı diye kullanmak."
     ]
   },
   {
@@ -395,62 +372,43 @@
       "kuru hacim",
       "ıslak baz"
     ],
-    "purpose": "Baca gazındaki su buharı hacim oranını belirlemek, ölçüm hacmini kuru baza çevirmek ve izokinetik hesaplarda kullanılacak nem değerini üretmek için ayrıntılı saha rehberidir.",
-    "duration": "Referans nem tayininde yeterli gaz hacmi çekilmelidir. Pratik hedef olarak en az yaklaşık 0,60 scm / 21 scf hacim yaklaşımı kullanılır. Yaklaşık nem uygulamalarında daha düşük hacim kullanılabilir; ölçüm planı ve raporda uygulama tipi açık belirtilmelidir.",
-    "flowRate": "Tipik çekiş hızı 0,75 cfm / yaklaşık 0,021 m3/dk değerini aşmayacak şekilde kontrollü tutulur. Yaklaşık nem uygulamasında 2 L/dk civarı çekiş ve yaklaşık 30 L toplam hacim pratikte kullanılabilir. Kesin uygulama laboratuvar talimatı ve ölçüm planına göre yapılır.",
+    "purpose": "EPA Method 4 — EMC 30.05.2023 etiketli nüsha. Dört GS impinger: 1/3/4 modifiye düz uçlu, 2 standart uçlu; ilk ikide 100’er mL su, üçüncü boş, sonuncuda yaklaşık 200–300 g silika jel. Başlangıç ve son tartımları en az 0,5 g hassasiyetle kaydet.",
+    "duration": "Hedef standart hacim ve eşit nokta süreleriyle planla. Kirletici ölçümüyle eşzamanlı tayinde aynı toplam süre ve eşzamanlı örnekleme gerekir; 16–20 dk gibi otomatik sabit süre atanmaz.",
+    "flowRate": "En fazla 21 L/dk; sabit debiden ±%10. İzokinetik metotla eşzamanlıysa izokinetik koşullar esas.",
     "equipment": [
-      "Prob ve gerekirse ısıtmalı hat.",
-      "İmpinger seti ve buz banyosu.",
-      "Silika jel impingeri veya kurutucu bölümü.",
-      "DGM/kuru gaz sayacı, pompa, vakum ve sıcaklık ölçer.",
-      "Barometre ve saha tartım/kayıt formu.",
-      "İmpinger ve silika jel ilk-son tartımı için uygun kaplar."
+      "Bu yöntemin şema/numune fraksiyonları ana ekrandaki parametre rehberinde ayrı varyantlarla bulunur."
     ],
     "reagents": [
-      "1. impinger: 100 mL saf/deiyonize su.",
-      "2. impinger: 100 mL saf/deiyonize su.",
-      "3. impinger: boş bırakılır.",
-      "4. impinger: 200–300 g silika jel.",
-      "Yaklaşık nem uygulamasında iki midget impingere 5'er mL su ve ardından silika jel kullanılabilir; bu uygulama raporda açık yazılır."
+      "Bağımsız nem referansında: dairesel D<0,61 m için en az 8; dikdörtgen eşdeğer çap<0,61 m için en az 9; diğerlerinde en az 12 travers noktası. Konumlar Method 1; daha az nokta özel yetkili onayı gerektirir (§8.1.1.1).",
+      "Günlük saha terazisi kontrolü: en az 500 g veya dolu impinger kütlesine ±50 g yakın, ASTM E617 Class 6 veya iyi ağırlık; sertifikalı değere ±0,5 g içinde. Uygunsuzsa düzeltip kontrolü tekrar et (§10.3)."
     ],
     "fieldSteps": [
-      "İmpingerlere başlangıç su miktarlarını koy ve her kabın ilk ağırlık/hacim kaydını al.",
-      "Silika jel kütlesini ölçüm öncesi tart ve kabını etiketle.",
-      "İmpingerleri doğru sırayla bağla ve buz banyosuna yerleştir.",
-      "DGM ilk değeri, sayaç sıcaklığı, atmosfer basıncı, baca basıncı ve baca sıcaklığını yaz.",
-      "Kaçak testini yap; bağlantı açılırsa ara kaçak testi gerektiğini unutma.",
-      "Pompayı çalıştır ve hedef debiye ayarla.",
-      "Ölçüm boyunca debi, vakum, DGM, sıcaklık, buz banyosu ve impinger taşma riskini takip et.",
-      "Ölçüm sonunda DGM son değerini, ortalama sıcaklıkları, vakumu ve süreyi yaz.",
-      "İmpingerlerdeki su artışını ve silika jel kütle artışını belirle.",
-      "Bws hesabı için tüm verileri forma işle."
+      "Sayaç kutusunun pompa sonrası bölümü ilk kullanım ve her sevkten sonra denetlenir; 13–18 cm su sütunu basınçta 1 dk basınç kaybı kontrol edilir.",
+      "Ön kaçak testi önerilir; parça değişiminden hemen önce ve ölçüm sonunda test zorunludur. Sonda/ara testte koşuda görülen en yüksek vakum veya üstü kullanılır.",
+      "Method 5 §8.4: kabul edilen kaçak ≤min(ortalama Q ×0,04; 0,57 L/dk). 380 mmHg yaklaşık 50,66 kPa vakumdur; düşük ön test vakumu ancak ölçüm sırasında aşılmıyorsa kullanılabilir. Aşımda yalnız §12.3 hacim düzeltmesi veya ölçümün reddi uygulanır.",
+      "Prob/ısıtılan filtreyi yaklaşık 120 °C’ye getirip kararlı hale gelmesini bekle; ön yoğuşmayı önle. Silika jel çıkış gazı <20 °C tutulur; banyo sıcaklığı ile çıkış gazı sıcaklığı aynı büyüklük değildir.",
+      "Bağımsız ölçümde debi ≤21 L/dk ve sabit değerin ±%10’u içinde; eşzamanlı izokinetik yöntemde sabit debi yerine izokinetik koşul izlenir. Başlangıç/son ve her nokta-zaman aralığı sayaç/T/P okumaları korunur.",
+      "Gaz doymuşsa veya damlacık şüphesi varsa eşzamanlı sıcaklık ve doygunluk buhar basıncı/psikrometriyle ikinci nem tayini yap. İki nemden düşük olanı kullan; damlacıkları su buharı diye sayma (§4.1, §12.1.6).",
+      "İmpinger ve silika jel son kütlelerini yıkama yapmadan belirle; her ikisinin net kütle artışı nem hesabına dahildir. Silika jeli aktarırken su/çözelti ekleme.",
+      "Kaynakta su buharı dönüşümü 0,001335 m³/g (20 °C referansı); Vw,std toplam su kütle artışından, Vm,std DGM/Y/T/P’den hesaplanır. Bws=Vw,std/(Vm,std+Vw,std). Ham DGM hacmi bu kesrin paydasında düzeltilmiş hacmin yerine kullanılmaz."
     ],
     "criticalControls": [
-      "İmpinger çıkış ve silika jel çıkış sıcaklığı düşük tutulmalıdır; 20 °C altında hedeflenir.",
-      "Silika jel doygunluğa ulaşırsa nem tutma kapasitesi düşer.",
-      "İmpinger taşması veya hatta geri kaçma ölçümü geçersiz hale getirebilir.",
-      "DGM sıcaklık ve basınç düzeltmeleri yapılmadan nem yüzdesi güvenilir hesaplanmaz.",
-      "İlk-son tartım kaplarının karışması doğrudan yanlış Bws verir.",
-      "Baca sıcaklığı 180 °C ve üzerindeyse kuru baz dönüşümleri için nem değeri özellikle kritik hale gelir."
+      "En az 0,60 standart m³; kaynak standardı 20 °C / 101,325 kPa. Ham DGM ile kuru standart hacim ayrı; 0 °C Nm³ değildir.",
+      "Prob ve gerekiyorsa filtre yaklaşık 120 °C; silika jel çıkışı <20 °C; buz + su banyosu.",
+      "Bu ölçümde laboratuvara kimyasal analiz için bekletilen bir kirletici çözeltisi yoktur; nem kütlesi/tartım verileri saha prosedüründe belirlenir. Tartım gecikecekse nem alımı/kaybı önlenecek kapama ve izlenebilirlik gerekir. Kimyasal numunelerin bekletme sürelerini nem verisine aktarma."
     ],
     "acceptance": [
-      "Kaçak testi uygun olmalıdır.",
-      "İmpingerlerde sıvı kaybı veya taşma olmamalıdır.",
-      "Silika jel tamamen doygun hale gelmemelidir.",
-      "DGM, sıcaklık, basınç ve vakum kayıtları eksiksiz olmalıdır.",
-      "Ağırlık/hacim kayıtları tutarlı ve izlenebilir olmalıdır."
+      "Kontrol sonucu yalnız seçili yöntem ve kaynak baskısıyla değerlendirilir. Açık kalan kaynak/uygulama ayrıntıları parametre kartında görünür."
     ],
     "reporting": [
-      "İmpinger su artışı, silika jel artışı, DGM hacmi, sayaç sıcaklığı, basınçlar ve Bws değeri yazılır.",
-      "Kuru/ıslak baz dönüşümünde kullanılan nem değeri açık gösterilir.",
-      "Yaklaşık nem mi, referans nem mi uygulandığı raporda belirtilir."
+      "Tesis, baca/nokta, tarih, başlangıç–bitiş, metot/sürüm, numuneci ve fraksiyon kimliklerini etiketle.",
+      "Numune kabı, kapak, miktar, blank, mühür, taşıma koşulu, teslim saati ve teslim alanı izlenebilir teslim formuna kaydet.",
+      "Başlangıç/son impinger ve silika kütleleri, terazi günlük kontrolü, sayaç/Y/T/P, kaçaklar, nokta/süreler ve doygunluk karşılaştırması rapor birimine verilir.",
+      "Kaynak: W07:1-10, D09:3,8"
     ],
     "mistakes": [
-      "Buz banyosunu ölçüm boyunca takip etmemek.",
-      "Silika jel ön tartımını unutmak.",
-      "İmpinger sırasını karıştırmak.",
-      "DGM vakum/sıcaklık düzeltmesini atlamak.",
-      "Toplanan kondenzatı hesaba dahil edip etmeyeceğini kayıt altına almamak."
+      "Dolum, yüzde türü, blank, süre veya saklama kuralını başka yöntemden aktarmak.",
+      "Eski eğitim notunu yeni standart baskısı diye kullanmak."
     ]
   },
   {
@@ -653,57 +611,56 @@
       "filtre",
       "impinger"
     ],
-    "purpose": "Baca gazında partikül faz ve gaz fazı metallerin izokinetik numune alma, filtre, prob yıkamaları ve reaktif impinger fraksiyonları ile belirlenmesi için ayrıntılı saha rehberidir.",
-    "duration": "Süre hedef metaller, beklenen konsantrasyon, tayin limiti ve absorban kapasitesine göre belirlenir. Metal ölçümlerinde yeterli hacim almak önemlidir; ancak reaktif kapasitesi ve numune bütünlüğü korunmalıdır.",
-    "flowRate": "Partikül faz için izokinetik çekiş esastır. Debi baca hızına göre ayarlanır. Gaz fazı metaller ve cıva fraksiyonu için impinger tutma verimi korunacak şekilde sıcaklık ve debi kontrol edilir.",
+    "purpose": "EPA Method 29 — 02.08.2017. Cam ekipmanın temizlik / asit yıkama işlemini Method 29 §8.1.1’e göre tamamla; filtre ve bağlantılarda metal bulaşmasını önle.",
+    "duration": "Method 5: noktalarda eşit süre ve en az 2 dk/nokta; mevzuatın toplam süre/hacmi ayrıca sağlanır. Her bacaya evrensel 30 dk/3 tekrar atanmaz.",
+    "flowRate": "Method 5 bağlantılı izokinetik: genel kabul %90–110. Sabit L/dk atanmaz; EN toz standardının %95–115 bandı buraya taşınmaz.",
     "equipment": [
-      "İzokinetik prob, nozül ve filtre tutucu.",
-      "Asit yıkamaya uygun cam malzeme ve metal kontaminasyonunu azaltan ekipman.",
-      "Çoklu impinger seti ve buz banyosu.",
-      "DGM, orifis, vakum pompası ve sıcaklık/basınç sensörleri.",
-      "Temiz numune kapları, asit dayanımlı etiketler, saha blank kapları.",
-      "Prob yıkama şişeleri ve laboratuvarın istediği asit yıkama düzeni."
+      "Bu yöntemin şema/numune fraksiyonları ana ekrandaki parametre rehberinde ayrı varyantlarla bulunur."
     ],
     "reagents": [
-      "Metot uygulamasına göre nitrik asit/hidrojen peroksit çözeltileri metal fraksiyonları için kullanılır.",
-      "Cıva tutulumu için potasyum permanganatlı asidik absorban düzeni kullanılabilir.",
-      "Prob/nozül yıkamaları ve filtre fraksiyonları numunenin parçasıdır.",
-      "Kesin reaktif derişimi ve hacimler laboratuvarın onaylı talimatından alınmalıdır."
+      "İlk boş şişe, beklenen nem toplaması yaklaşık 100 mL altında ise metot koşullarıyla çıkarılabilir.",
+      "§8.2.12–17 blank planı: 0,1 N HNO₃ 300 mL; su 100 mL; asitli peroksit 200 mL; aynı partiden 3 boş filtre. Cıva varsa asitli permanganat 100 mL ve 200 mL su + 25 mL 8 N HCl blankı da ayrı hazırlanır. Partikül/aseton kullanılıyorsa 100 mL aseton blankı.",
+      "Camlar: sıcak su/sabun, musluk ve uygun saf suyla üçer durulama, ≥4 saat %10 hacim/hacim HNO₃ içinde bekletme, su ve son aseton durulaması, hava kurutması (§8.1.1).",
+      "Filtre hedef metal başına <1,3 µg/in² =yaklaşık 0,2015 µg/cm²; üretici verisi yoksa lot blank analizi. Su hedef metal başına <1 µg/L; absorpsiyon çözeltisi <2 µg/L hedef metal saflığında (§7.2–7.3).",
+      "Asitli peroksit tarifi: yaklaşık 500 mL suya 50 mL derişik HNO₃, sonra 333 mL %30 H₂O₂ stok çözeltisi; son hacim 1 L. Stok yüzde tanımı kaynağın hacim/hacim tarifidir; EN 14385 kütle/kütle reçetesiyle değiştirme.",
+      "Asitli permanganat taze günlük hazırlanır: %4 kütle/hacim KMnO₄, %10 hacim/hacim H₂SO₄ ortamında. Camda hazırlanıp saklanır; §7.3.2 filtreleme ve basınç önlemleri uygulanır."
     ],
     "fieldSteps": [
-      "Hedef metal listesini ve raporlama limitlerini ölçüm öncesi netleştir.",
-      "Tüm cam malzeme ve kapların metal kontaminasyonuna karşı temiz olduğunu kontrol et.",
-      "Filtreyi ve impinger reaktiflerini doğru sırayla kur.",
-      "Kaçak testini yap ve izokinetik ölçümü başlat.",
-      "Her noktada DGM, sıcaklık, basınç, ΔP, vakum ve süre kayıtlarını al.",
-      "İmpingerlerin renk değişimi, taşma, reaktif kaybı ve buz banyosu durumunu izle.",
-      "Ölçüm sonunda filtre, prob yıkaması, ön/arka yarı yıkamaları ve impinger fraksiyonlarını doğru kaplara al.",
-      "Saha blanklarını ve reaktif blanklarını numunelerle birlikte etiketle."
+      "Ön kaçak testi önerilir; parça değişiminden hemen önce ve ölçüm sonunda test zorunludur. Sonda/ara testte koşuda görülen en yüksek vakum veya üstü kullanılır.",
+      "Method 5 §8.4: kabul edilen kaçak ≤min(ortalama Q ×0,04; 0,57 L/dk). 380 mmHg yaklaşık 50,66 kPa vakumdur; düşük ön test vakumu ancak ölçüm sırasında aşılmıyorsa kullanılabilir. Aşımda yalnız §12.3 hacim düzeltmesi veya ölçümün reddi uygulanır.",
+      "İzokinetik örnekle; debi, toplam hacim, sıcaklık, vakum ve noktaları kaydet.",
+      "Cıva varsa permanganat yakalama durumunu izle. Asitli peroksit ile asitli permanganatı karıştırma.",
+      "Filtre, prob yıkaması, ilk üç impinger fraksiyonu ve cıva fraksiyonlarını metot numaralarıyla ayır.",
+      "Prob / ön yüzey yıkamasında toplam 100 mL 0,1 N HNO₃; ilk üç şişe ve bağlantı yıkamasında ayrı toplam 100 mL 0,1 N HNO₃ kullanımı §8.2.7–8.2.8’dendir.",
+      "Kap 1: filtreyi asitle temizlenmiş metal içermeyen aletle petriye al; tortuyu koru. Yalnız eşzamanlı partikül tayininde kap 2’ye ön yüzeylerden tam 100 mL aseton yıkaması yapılır.",
+      "Kap 3: ön yüzeylerin tam 100 mL 0,1 N HNO₃ yıkaması. Son temizlikteki su/aseton yıkamasını numuneye ekleme. Kap 4: ilk üç şişe sıvısı + filtre arkası/bağlantıların ayrı tam 100 mL 0,1 N HNO₃ yıkaması.",
+      "Kap 5A: 4. boş şişede biriken sıvı + tam 100 mL 0,1 N HNO₃ yıkaması.",
+      "Kap 5B: iki permanganat şişesi sıvısı + her iki şişe/bağlantı için toplam tam 100 mL yeni asitli permanganatla ≥3 yıkama + toplam 100 mL suyla ≥3 yıkama.",
+      "Kap 5C: önce kaba 200 mL su koy. İki permanganat şişesini toplam yalnız 25 mL 8 N HCl ile sırayla yıka; aynı yıkamayı ikinci şişeden geçirip su bulunan kaba dikkatle aktar. 5A, 5B ve 5C birleştirilmez.",
+      "Silika jel ayrı kaba, sıvı kullanmadan aktarılır veya sahada 0,5 g hassasiyetle tartılır. Bütün sıvı düzeylerini, hacimleri ve fraksiyon kimliklerini kaydet."
     ],
     "criticalControls": [
-      "Metal ölçümünde kontaminasyon en büyük saha riskidir.",
-      "Prob ve nozül yıkamaları atılırsa toplam metal sonucu eksik çıkar.",
-      "Cıva fraksiyonu reaktifleri ışık, renk değişimi ve stabilite açısından izlenmelidir.",
-      "Numune kaplarının malzemesi ve asit dayanımı uygunsuzsa sonuç etkilenebilir.",
-      "İzokinetiklik sadece partikül madde için değil, partikül faz metal için de kritiktir."
+      "Tayin sınırı ve örnekleme planı; evrensel sabit hacim tanımlanmadı.",
+      "Method 5 bağlantılı prob/filtre 120±14 °C; farklı uygulama sıcaklığı özel hüküm/onay gerektirir. Son impinger çıkış gazı <20 °C.",
+      "Cıva/permanganat numune ve blankları oksitleyiciye dayanıklı PTFE astarlı kapaklı 500/1000 mL camda; diğer fraksiyonlarda cam veya PE kap kullanılabilir (§6.2.2).",
+      "Kaplar etiketli ve dik; sıvı seviyeleri işaretli. Method 29 saha bölümü sayısal genel saklama sıcaklığı/azami bekletme süresi vermez. Analitik yöntem ve numune matrisiyle uyumlu laboratuvar kabul/koruma planı ayrıca gerekir. EN 14385’in dört haftasını buraya otomatik aktarma.",
+      "Permanganat kaplarında basınç oluşabilir; ağzına kadar doldurma, bulaşmaya izin vermeyen basınç tahliyesini §5.3/§8.2.9.2 ve laboratuvar taşıma planıyla uygula."
     ],
     "acceptance": [
-      "Kaçak testi uygun olmalıdır.",
-      "Filtre, prob yıkaması, impinger fraksiyonları ve blank numuneler eksiksiz olmalıdır.",
-      "Reaktif kaybı, taşma veya yanlış fraksiyon karışması olmamalıdır.",
-      "İzokinetik oran kabul aralığında olmalıdır."
+      "Kontrol sonucu yalnız seçili yöntem ve kaynak baskısıyla değerlendirilir. Açık kalan kaynak/uygulama ayrıntıları parametre kartında görünür."
     ],
     "reporting": [
-      "Filtre, prob yıkaması, impinger fraksiyonları ve blanklar ayrı ayrı listelenir.",
-      "Toplam örnekleme hacmi, izokinetiklik, reaktifler, saklama koşulları ve hedef metal listesi rapora yazılır.",
-      "Cıva ve diğer metaller için fraksiyon toplamı ve birim dönüşümleri açık gösterilir."
+      "Tesis, baca/nokta, tarih, başlangıç–bitiş, metot/sürüm, numuneci ve fraksiyon kimliklerini etiketle.",
+      "Numune kabı, kapak, miktar, blank, mühür, taşıma koşulu, teslim saati ve teslim alanı izlenebilir teslim formuna kaydet.",
+      "Hedef metal listesi, cıvanın dahil olup olmadığı, filtre ve her yıkama fraksiyonunu açıkça belirt.",
+      "Blank düzeltmesi EN 14385 ile aynı değildir. Method 29 §12.6–12.7, fraksiyon ve hedefe göre sınırlı düzeltmeler verir; ölçülen blankı sınırsız çıkarma. Ön/arka fraksiyonları ayrı analize ve hesaba izlenebilir teslim et.",
+      "Cıva dışı metalde: ön yarı eşiği A=1,4 µg/in² × toplam filtre alanı(in²), arka yarı A=1 µg. Blank B≤A ise B çıkarılır; B>A ise çıkarılacak miktar max(A; min(B; numune kütlesinin %5’i)). Filtre kabulündeki 1,3 µg/in² ile bu 1,4 düzeltme eşiğini karıştırma.",
+      "Cıvada bütün fraksiyonlar için toplam blank eşiği 0,6 µg: blank bunun altındaysa tamamı, üstündeyse max(0,6 µg; min(toplam blank; toplam numune Hg kütlesinin %5’i)) çıkarılır (§12.7).",
+      "Kaynak: D07:3-7,10-15,24-26, D09:1-3,7-10,15-18,22-23"
     ],
     "mistakes": [
-      "Prob yıkamasını unutmak veya yanlış kaba almak.",
-      "Metal numunesini uygunsuz plastik/metal temaslı kapta saklamak.",
-      "Cıva reaktifinin renk değişimini dikkate almamak.",
-      "Blank numuneyi hazırlamamak.",
-      "Ağır metal ölçümünü normal toz ölçümü gibi sadece filtreyle bitirmek."
+      "Dolum, yüzde türü, blank, süre veya saklama kuralını başka yöntemden aktarmak.",
+      "Eski eğitim notunu yeni standart baskısı diye kullanmak."
     ]
   },
   {
@@ -951,59 +908,48 @@
       "Qamb",
       "filtre"
     ],
-    "purpose": "Ortam havasında PM10 veya PM2.5 kütle konsantrasyonunun filtre üzerinde gravimetrik yöntemle belirlenmesi için saha rehberidir. Cihaz kurulumu, filtre yönetimi, debi/hacim kayıtları ve 24 saatlik örnekleme disiplini bu bölümün temelidir.",
-    "duration": "Günlük imisyon ölçümlerinde tipik ve temel yaklaşım 24 saatlik numune almadır. Özel çalışma planında farklı süre varsa başlangıç-bitiş saatleri ve gerekçesi raporda açık belirtilmelidir.",
-    "flowRate": "Cihaz ve başlık tipine göre referans debi veya ortam şartı debisi kullanılır. Qref/Qamb ayrımı, ortam sıcaklığı, ortam basıncı ve cihaz iç basınç modeli doğru değerlendirilmelidir.",
+    "purpose": "EN 12341 — EN 12341:2023 — arşivde BS EN baskısı. Doğru boyut ayırıcı başlığı ve temiz giriş sistemini kullan. Filtreyi benzersiz kimlikle, temiz ortamda kasete yerleştir.",
+    "duration": "Anma süresi 24 saat; geçerlilik ve veri kaybı kuralları ayrıca kontrol edilir.",
+    "flowRate": "Anma debisi 2,3 m³/saat = yaklaşık 38,33 L/dk; giriş yakınındaki ortam koşullarında.",
     "equipment": [
-      "PM10 veya PM2.5 seçici giriş başlığı.",
-      "Sabit/kontrollü akışlı ortam havası örnekleyici.",
-      "Ön tartımı yapılmış ve şartlandırılmış filtre.",
-      "Filtre kaseti, pens ve taşıma kabı.",
-      "Debi kalibrasyon/ doğrulama ekipmanı.",
-      "Ortam sıcaklık, basınç ve gerekirse nem sensörleri.",
-      "Elektrik beslemesi, güvenlik kilidi ve saha konum kayıt ekipmanı."
+      "Bu yöntemin şema/numune fraksiyonları ana ekrandaki parametre rehberinde ayrı varyantlarla bulunur."
     ],
     "reagents": [
-      "Çözelti veya absorban kullanılmaz.",
-      "Kritik malzeme filtre, filtre kaseti ve saha blank filtresidir.",
-      "Filtreler laboratuvarda şartlandırılır, ön tartımı yapılır ve etiketlenir."
+      "Arşiv §6.3: ≥48 saat koşullandırma sonrası ilk tartım; ≥12 saat ek koşullandırma sonrası ikinci tartım. İlgili kabul ve belirsizlik istisnalarını standarttan kontrol et.",
+      "Örnekleme başlığına uygun 2,3 m³/saat = 38,333… L/dk nominal ORTAM debisi. Dikey bağlantı borusu kıvrımsız, ≤3 m; filtre açık örnekleme çapı 34–44 mm. Filtre en az %99,5 verim @0,3 µm ve uygulamaya uygun malzemede olmalı.",
+      "Ön tartım: 19–21 °C / %45–50 RH’de ≥48 saat şartlandır, tart; ≥12 saat sonra tekrar tart. Fark ≤40 µg. Başarısızsa ≥24 saat ek şartlandırma/son kontrol; yine başarısızsa filtreyi reddet. Son iki tartım ortalaması ön kütledir.",
+      "En az iki tartım odası blankı tutulur; her tartım oturumunda kütle değişimi ≤40 µg. Terazi çözünürlüğü ≤10 µg, 0–200 mg aralığında kalibrasyon belirsizliği ≤25 µg; her oturumda referans kütle kontrolü yapılır."
     ],
     "fieldSteps": [
-      "Ölçüm noktasını lokal toz kaynakları, duvar, ağaç, egzoz, klima çıkışı ve engellerden etkilenmeyecek şekilde seç.",
-      "Cihazı devrilmeyecek, su almayacak ve güvenli çalışacak şekilde yerleştir.",
-      "PM10/PM2.5 başlığını temiz ve doğru yönde tak.",
-      "Filtreyi pensle yerleştir; filtre yüzeyine elle dokunma.",
-      "Başlangıç tarih-saat, filtre no, cihaz no, debi, sıcaklık ve basınç bilgilerini yaz.",
-      "Cihazı çalıştır ve ilk dakikalarda debi/hata durumunu kontrol et.",
-      "Ölçüm süresince elektrik kesintisi, yağış, cihaz alarmı, debi sapması ve çevresel olayları kaydet.",
-      "Bitişte toplam hacim, ortalama debi, bitiş zamanı ve hata kayıtlarını al.",
-      "Filtreyi taşıma kabına al, kapat ve laboratuvara şartlarına uygun teslim et."
+      "Tüm örnekleme hattı yılda bir ve her yeni kurulum/yer değişiminde kaçak kontrolünden geçer. Kaçak >%1 ise bakım ve yeniden test gerekir (§7.9).",
+      "§5.1.10 düşük basınç yönteminde sistem ölü hacmi ve basınçtan hesaplanan süre (en çok 2 dk) kullanılır; test üç kez, en yüksek kaçakla değerlendirilir. Hacimsel yöntem yalnız düşük basınç ölçümü teknik olarak yapılamıyorsa kullanılır. Evrensel EPA 0,57 L/dk sınırı atanmaz.",
+      "Gerçek debi, başlangıç/bitiş zamanı, kesintiler ve cihaz bayraklarını kaydet. Örneklenen hacim ortam koşullarındadır.",
+      "Kasette en az bir filtre gaz çekilmeden saha blankı olarak bırakılır (§6.4.2).",
+      "Anlık ortam debisi nominalin ±%5’i, örnekleme ortalaması ±%2’si içinde. En az saatlik debi, süre/hacim, filtre hava T’si, ortam T/P ve filtre depolama T’si kayıtları bulunmalı; filtreler cihazda beklerken de kayıt sürer.",
+      "Hedef 24 saat; filtre değişim kaybı, enerji kesintisi, erken tıkanma ve gerçek çalışma süresi kaydedilir. Tıkanmayla erken biten günlük numunede >18 saat kaynakta öneridir; her uygulamada otomatik geçerlilik onayı değildir.",
+      "Üretici aralığı yoksa impaksiyon yüzeyi/nozül bakımı PM10’da en az her 30., PM2,5’te her 15. numunede; yüksek yükte daha sık olabilir. Debi kontrolü 3 ayda bir, kalibrasyonu yılda bir; sensor/clock kontrolleri Tablo 5’teki ayrı sıklıklarla.",
+      "Örneklenen filtreyi yüzeyine temas etmeden koruyucu tutucusuna / temiz kaba al; filtre ile kaset konumunu eşleştir."
     ],
     "criticalControls": [
-      "PM başlığı kirli veya yanlış takılıysa kesme çapı ve sonuç etkilenir.",
-      "Filtre kenar kaçağı sonucu düşük değer verir.",
-      "Qref ve Qamb karıştırılırsa hacim hesabı hatalı olur.",
-      "Filtre ıslanması, yırtılması veya böcek/iri partikül girişi sonucu bozabilir.",
-      "Cihaz iç basınç modeli cihaz markasına göre değişebilir; Techora/MEFE ayrımı yapılmalıdır.",
-      "Saha blank filtresi taşıma ve işlem kontaminasyonunu kontrol eder."
+      "Anma debisi × 24 saat = 55,2 m³; gerçek geçerli hacim ölçülen debi ve süreden gelir, otomatik sabit kabul edilmez.",
+      "Ön tartım koşullandırması: 19–21 °C, %45–50 bağıl nem.",
+      "Filtre ve saha blankını temiz kapalı tutucu/petri, örtülü ve yalıtımlı taşıma kabında koru. Uçucu kaybını ve filtre üzerinde yoğuşmayı önle; sıcaklık kaydını koru. ≤23 °C depolama kaynakta bir seçenektir, bütün numunelere zorunlu evrensel +4 °C kuralı değildir.",
+      "Gravimetrik analiz için alımdan itibaren 1 ay içinde tartım odasına al. Tablo 4: örneklenmemiş tartılmış filtre için 2 ay (blank uygun kalırsa daha uzun), cihazdaki örneklenmiş filtre/saha blankı için 1 ay, tartım odasında tartım öncesi 1 ay. Bu farklı adımlar birleştirilerek keyfi toplam analiz süresi oluşturulmaz.",
+      "Son tartım: ≥48 saat şartlandırma, ilk tartım; 24–72 saat ek şartlandırma, ikinci tartım. Fark ≤60 µg. Aşımda ≥24 saat ek şartlandır/yeniden tart veya sonucu geçersiz say; tekrar aşım geçersizdir. Son iki tartım ortalaması son kütledir."
     ],
     "acceptance": [
-      "Örnekleme süresi ve debi sapması kabul aralığında olmalıdır.",
-      "Filtre bütünlüğü korunmalıdır.",
-      "Cihaz hata kaydı veya enerji kesintisi sonucu ölçümü temsil dışı bırakmamalıdır.",
-      "Konum ve çevre koşulları ölçüm amacına uygun olmalıdır."
+      "Kontrol sonucu yalnız seçili yöntem ve kaynak baskısıyla değerlendirilir. Açık kalan kaynak/uygulama ayrıntıları parametre kartında görünür."
     ],
     "reporting": [
-      "Başlangıç-bitiş tarih/saat, cihaz no, filtre no, toplam hacim, debi, sıcaklık, basınç ve filtre tartım farkı yazılır.",
-      "Qref/Qamb ve normal/ortam şart hacim dönüşümü cihaz tipine göre açık belirtilir.",
-      "Saha olayları, kesinti, alarm ve meteorolojik notlar rapora eklenir."
+      "Tesis, baca/nokta, tarih, başlangıç–bitiş, metot/sürüm, numuneci ve fraksiyon kimliklerini etiketle.",
+      "Numune kabı, kapak, miktar, blank, mühür, taşıma koşulu, teslim saati ve teslim alanı izlenebilir teslim formuna kaydet.",
+      "Filtre, saha blankı, ortam hacmi, gerçek süre, debi/arıza kayıtları ve meteorolojiyi teslim et.",
+      "Saha blankı her noktada ve filtre kasetinde en az bir çekiş yapılmamış filtreyle yürütülür. |Son−ilk blank kütlesi|≤60 µg; bireysel saha blankı PM kütlesinden çıkarılmaz (§6.7.3).",
+      "Kaynak: D23:8,18-25,28-37"
     ],
     "mistakes": [
-      "Qref ile Qamb değerlerini karıştırmak.",
-      "Filtreyi ters/yanlış yerleştirmek.",
-      "Başlangıç ve bitiş saatlerini yuvarlamak veya yazmamak.",
-      "Cihaz hata kaydını kontrol etmeden sonuç kabul etmek.",
-      "PM10 başlığını temizlemeden kullanmak."
+      "Dolum, yüzde türü, blank, süre veya saklama kuralını başka yöntemden aktarmak.",
+      "Eski eğitim notunu yeni standart baskısı diye kullanmak."
     ]
   },
   {
