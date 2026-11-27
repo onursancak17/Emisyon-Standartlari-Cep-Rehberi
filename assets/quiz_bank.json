@@ -4217,6 +4217,224 @@
       "correctIndex": 0,
       "explanation": "Kaçak >%1 ise bakım ve yeniden kontrol gerekir. Yıllık kontrol yeni kurulumdaki kontrolü ortadan kaldırmaz.",
       "source": "D23:36 — §7.9"
+    },
+    {
+      "id": "q191",
+      "topic": "ISO saha uygulaması — yöntem ayrımları",
+      "scope": "Emisyon",
+      "parameters": [
+        "Partikül madde"
+      ],
+      "standards": [
+        "TS ISO 9096",
+        "TS EN 13284-1 / TS ISO 9096 / ISO 12141"
+      ],
+      "prompt": "ISO9096 ana metin ve Tablo 3 izokinetik bantları farklıysa ne yapılmalıdır?",
+      "choices": [
+        "Fark kaydedilir; tek otomatik kabul bandına çevrilmeden uygulama planında çözülür.",
+        "Tablo görülmemiş gibi silinir.",
+        "Daha kolay geçen bant her koşuda seçilir.",
+        "Ölçülen değerler aralığa uydurulur."
+      ],
+      "correctIndex": 0,
+      "explanation": "§7.3.5/7.4.3/9.1 ±%10, Tablo 3 −%5/+%15 verir. Kaynak içi bu farkı gizleyerek kesin yöntem onayı üretmek izlenebilir değildir.",
+      "source": "D33:29,31-34"
+    },
+    {
+      "id": "q192",
+      "topic": "ISO saha uygulaması — yöntem ayrımları",
+      "scope": "Emisyon",
+      "parameters": [
+        "Partikül madde"
+      ],
+      "standards": [
+        "TS ISO 9096",
+        "TS EN 13284-1 / TS ISO 9096 / ISO 12141"
+      ],
+      "prompt": "ISO9096 örnek sonrası prob birikintisi fırçayla alınır mı?",
+      "choices": [
+        "Hayır; §7.3.6 örnek sonrası mekanik temizlemeyi yasaklar.",
+        "Evet, bütün toz yöntemleri aynı fırçayı şart koşar.",
+        "Evet, yalnız filtre önüne metal talaşı eklenir.",
+        "Ön birikinti hiçbir zaman numuneye katılmaz."
+      ],
+      "correctIndex": 0,
+      "explanation": "Su ve asetonla belirtilen yıkama yapılır. Örnekleme öncesi mekanik ekipman temizliği gereklidir; ön hazırlık ile örnek sonrası geri kazanım farklı işlemlerdir.",
+      "source": "D33:27,30 — §7.3.1/7.3.6"
+    },
+    {
+      "id": "q193",
+      "topic": "ISO saha uygulaması — yöntem ayrımları",
+      "scope": "Emisyon",
+      "parameters": [
+        "Partikül madde"
+      ],
+      "standards": [
+        "TS ISO 9096",
+        "TS EN 13284-1 / TS ISO 9096 / ISO 12141"
+      ],
+      "prompt": "ISO9096’da seri sonunda toplanan ön yıkama kütlesi koşulara neyle paylaştırılır?",
+      "choices": [
+        "Filtrelerde toplanan kütle oranıyla",
+        "Yalnız başlangıç saatine göre",
+        "Her koşuya daima eşit miktarla",
+        "Her durumda gaz hacmi oranıyla"
+      ],
+      "correctIndex": 0,
+      "explanation": "§8.2 bu özel uygulamada filtre kütleleri oranını belirtir. Başka standardın hacim oranına göre paylaştırması buraya aktarılmaz.",
+      "source": "D33:33 — §8.2"
+    },
+    {
+      "id": "q194",
+      "topic": "ISO saha uygulaması — yöntem ayrımları",
+      "scope": "Emisyon",
+      "parameters": [
+        "Partikül madde"
+      ],
+      "standards": [
+        "TS ISO 9096",
+        "TS EN 13284-1 / TS ISO 9096 / ISO 12141"
+      ],
+      "prompt": "ISO9096 overall blank özel prosedürü hangisidir?",
+      "choices": [
+        "Pompa kapalı, nozül bacada akışa ters yönde 15 dk",
+        "Prob her zaman bacaya sokulmaz.",
+        "Pompa açık, 30 dakika asit çekilir.",
+        "Yalnız laboratuvarda boş petri tartılır."
+      ],
+      "correctIndex": 0,
+      "explanation": "§7.3.4’teki 180° yön ve 15 dk, bu metoda özgü blank işlemidir. EN1911/EN1948 gibi başka yöntemlerin blank prosedürleri aynı sayılmaz.",
+      "source": "D33:29 — §7.3.4"
+    },
+    {
+      "id": "q195",
+      "topic": "ISO saha uygulaması — yöntem ayrımları",
+      "scope": "Emisyon",
+      "parameters": [
+        "Partikül madde"
+      ],
+      "standards": [
+        "TS ISO 9096",
+        "TS EN 13284-1 / TS ISO 9096 / ISO 12141"
+      ],
+      "prompt": "ISO9096’da numune kütlesi 8 mg, ilgili overall blank 2 mg ise beş kat koşulu sağlanır mı?",
+      "choices": [
+        "Hayır; oran 4’tür.",
+        "Evet; yalnız numune blanktan büyükse yeterlidir.",
+        "Evet; 8+2=10 olması yeterlidir.",
+        "Blank numuneden çıkarılınca koşul kalkar."
+      ],
+      "correctIndex": 0,
+      "explanation": "8/2=4<5. §7.4.5 en az beş kat ister; Tablo 3’ün derişim/ELV bazlı blank kontrolü de ayrıca değerlendirilir.",
+      "source": "D33:31-32 — §7.4.5/Tablo 3"
+    },
+    {
+      "id": "q196",
+      "topic": "ISO saha uygulaması — yöntem ayrımları",
+      "scope": "Emisyon",
+      "parameters": [
+        "Hız / debi"
+      ],
+      "standards": [
+        "EPA Method 2 / TS EN ISO 16911 / TS ISO 10780"
+      ],
+      "prompt": "TS ISO10780’de cidara yaklaşma mesafesi başka standardın 5 cm kuralıyla otomatik değiştirilir mi?",
+      "choices": [
+        "Hayır; bu nüsha en az 2 cm verir, seçili metot korunur.",
+        "Evet; bütün standartlar 5 cm’dir.",
+        "Evet; hiçbir noktanın yeri önemli değildir.",
+        "Hayır; bütün noktalar cidarın üstünde olmalıdır."
+      ],
+      "correctIndex": 0,
+      "explanation": "§7.1.4’teki 2 cm, ISO9096/EN gridinin ayrı cidar kurallarıyla karıştırılmaz. Birleşik kirletici çalışmasında daha seçici grid gereksinimi ayrıca incelenir.",
+      "source": "D29:11,14 — §7.1.4/7.1.4.4"
+    },
+    {
+      "id": "q197",
+      "topic": "ISO saha uygulaması — yöntem ayrımları",
+      "scope": "Emisyon",
+      "parameters": [
+        "Hız / debi"
+      ],
+      "standards": [
+        "EPA Method 2 / TS EN ISO 16911 / TS ISO 10780"
+      ],
+      "prompt": "TS ISO10780 eşdeğer ΔP hesabında hangi işlem vardır?",
+      "choices": [
+        "Kareköklerin ortalamasının karesi",
+        "Doğrudan ΔP aritmetik ortalaması",
+        "En büyük ΔP’nin iki katı",
+        "Bütün basınçların karelerinin toplamı"
+      ],
+      "correctIndex": 0,
+      "explanation": "§8.2.3 (ortalama √ΔPi)² verir. Karekök doğrusal değildir; basınç ortalamasıyla hız ortalamasını bağlamsız eşitlemek sistematik fark oluşturur.",
+      "source": "D29:16 — §8.2.3"
+    },
+    {
+      "id": "q198",
+      "topic": "ISO saha uygulaması — yöntem ayrımları",
+      "scope": "Emisyon",
+      "parameters": [
+        "Yanma gazları"
+      ],
+      "standards": [
+        "TS ISO 12039 / TS EN 14789 / TS EN 14792 / TS EN 15058",
+        "TS ISO 12039 / TS ISO 7935 / EPA CTM-022"
+      ],
+      "prompt": "ISO12039 O₂ drift sınırı 0,2 hacim% ne anlama gelir?",
+      "choices": [
+        "O₂ hacim yüzdesinde 0,2 yüzde puanlık mutlak fark",
+        "Okunan O₂’nin bağıl %0,2’si",
+        "Ölçüm süresinin %0,2’si",
+        "0,2 mg/m³ karbon"
+      ],
+      "correctIndex": 0,
+      "explanation": "Tablo 1 dipnotu O₂ ölçütünü hacim kesri olarak tanımlar; CO/CO₂ içinse en düşük kullanılan aralığın üst değerine göre yüzde uygulanır. Paydaları farklıdır.",
+      "source": "D30:12-13 — Tablo 1"
+    },
+    {
+      "id": "q199",
+      "topic": "ISO saha uygulaması — yöntem ayrımları",
+      "scope": "Emisyon",
+      "parameters": [
+        "Yanma gazları"
+      ],
+      "standards": [
+        "TS ISO 12039 / TS EN 14789 / TS EN 14792 / TS EN 15058",
+        "TS ISO 12039 / TS ISO 7935 / EPA CTM-022"
+      ],
+      "prompt": "ISO12039 Tablo 2’nin yıllık sıklıkları hangi sistem için başlıklandırılmıştır?",
+      "choices": [
+        "Kalıcı kurulu AMS",
+        "Bütün tek seferlik numune şişeleri",
+        "Sadece pasif tüpler",
+        "Yalnız çöken toz kavanozları"
+      ],
+      "correctIndex": 0,
+      "explanation": "Kalıcı AMS kontrol sıklıkları periyodik cihazların seri başlangıcı kontrollerini ortadan kaldırmaz. Ek E.9 periyodik cihazlar için seri başlangıcını ayrıca belirtir.",
+      "source": "D30:16,41 — Tablo 2/E.9"
+    },
+    {
+      "id": "q200",
+      "topic": "ISO saha uygulaması — yöntem ayrımları",
+      "scope": "Emisyon",
+      "parameters": [
+        "Yanma gazları"
+      ],
+      "standards": [
+        "TS ISO 12039 / TS EN 14789 / TS EN 14792 / TS EN 15058",
+        "TS ISO 12039 / TS ISO 7935 / EPA CTM-022"
+      ],
+      "prompt": "ISO12039 performansını karşılayan her O₂ cihazı otomatik EN14789 SRM midir?",
+      "choices": [
+        "Hayır; EN14789 referans tekniği/eşdeğerlik koşulları ayrı değerlendirilir.",
+        "Evet; bütün O₂ sensörleri aynı yöntemdir.",
+        "Evet; yalnız ekrandaki % işareti yeterlidir.",
+        "Hayır; hiçbir cihaz O₂ ölçemez."
+      ],
+      "correctIndex": 0,
+      "explanation": "ISO12039 genel AMS performans standardıdır ve birden fazla O₂ ilkesini anlatır. EN14789 paramanyetik SRM’dir; alternatif tekniğin uygunluğuna ayrıca kanıt gerekir.",
+      "source": "D30:11-13,25; EN14789 resmî kapsam"
     }
   ]
 }

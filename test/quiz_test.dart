@@ -45,7 +45,8 @@ void main(){
     await tester.pumpAndSettle();
     await tester.tap(find.text('İmisyon').last);
     await tester.pumpAndSettle();
-    expect(find.textContaining('Bu seçimde 25 soru var.'),findsOneWidget);
+    final immissionCount=bank.questions.where((q)=>q.scope=='İmisyon').length;
+    expect(find.textContaining('Bu seçimde $immissionCount soru var.'),findsOneWidget);
     expect(tester.takeException(),isNull);
   });
 }

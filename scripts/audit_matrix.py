@@ -10,6 +10,7 @@ def attach(index,data):
     for name in ('standards.json','standards_extra.json','standards_overrides.json'):
         for item in json.loads((ROOT/'assets'/name).read_text(encoding='utf-8')):catalog[item['code']]=item
     rules=[('Method 2',['velocity_epa2']),('16911',['velocity_iso16911_pitot']),('Method 5',['dust_epa5']),('Method 17',['dust_epa17']),
+        ('10780',['velocity_iso10780']),('9096',['dust_iso9096_out','dust_iso9096_in']),('12039',['gases_iso12039']),
         ('Method 4',['moisture_epa4']),('13284',['dust_en13284_in','dust_en13284_out']),('1911',['hcl_en1911_noniso','hcl_en1911_iso','hcl_en1911_split']),
         ('26A',['halogen_epa26a']),('Method 29',['metals_epa29_hg','metals_epa29_no_hg']),('14385',['metals_en14385_full','metals_en14385_split']),
         ('12619',['toc_en12619']),('25A',['toc_epa25a']),('13649',['voc_13649_charcoal','voc_13649_td','voc_13649_dynamic']),
@@ -26,7 +27,7 @@ def attach(index,data):
         if '15259' in code:
             state='source_missing';reasons+=['EN 15259:2007 tam metni yok. EPA Method 1 null açı/alternatif yer koşulları ayrı kontrol edildi; EN koşullarının yerine geçirilmez.']
         if '14789' in code or '14792' in code or '15058' in code:
-            state='source_missing';reasons+=['EN 14789:2017 / EN 14792:2017 / EN 15058:2017 tam metinleri yok. Resmî kapsam ve yetkili ön izlemeler bulundu; sayısal saha kabul hükümlerinin tamamı bunlardan doğrulanamaz. ISO 12039:2019 tam metni mevcut, ayrıntılı karşılaştırması açık.']
+            state='source_missing';reasons+=['EN 14789:2017 / EN 14792:2017 / EN 15058:2017 tam metinleri yok. Resmî kapsam ve yetkili ön izlemeler bulundu; sayısal saha kabul hükümlerinin tamamı bunlardan doğrulanamaz. ISO12039 seçili AMS/QA koşulları ayrı karttadır; bunlar eksik EN metinlerinin yerine geçmez.']
         if '12141' in code:
             state='source_missing';reasons+=['D31 ve yeni gönderilen aynı PDF, TS ISO 12141:2004 / ISO 12141:2002 esaslıdır. Güncel ISO 12141:2024 tam metni yok; eski sayılar yeni sürüm diye sunulmaz.']
         if '1911' in code:
@@ -35,7 +36,7 @@ def attach(index,data):
             state='comparison_open';reasons+=['Çözelti, kap, verim, yıkama ve <25 °C saha / <6 °C laboratuvar / 4 hafta karşılaştırıldı. §8.1’de 180 °C yazımının yüksek baca sıcaklığına uygulanışı ve ulusal TS baskısı eşleşmesi açık.']
         if '9096' in code:
             if state!='source_missing':state='comparison_open'
-            reasons+=['ISO 9096:2017 tam D33 mevcut; bütün saha sayısal koşullarının yeni parametre kartına madde madde aktarımı henüz tamamlanmadı.']
+            reasons+=['ISO 9096:2017 D33 saha/tartım/blank/yıkama bölümleri ve iki filtre varyantı karşılaştırıldı. Ana metin ±%10 iken Tablo 3 −%5/+%15 izokinetik bant veriyor; bu metin içi fark çözülmeden tek otomatik kabul eşiği uygulanmaz.']
         if '11338' in code:
             state='comparison_open';reasons+=['ISO 11338-1:2003 katalogda 2026’da teyitli. B varyantı ve -7 °C saklama görüntüden kontrol edildi; A/C varyantları ve Part 2 analitik bağlantılarının tamamı henüz kartlaştırılmadı.']
         if '1948' in code:
@@ -45,10 +46,12 @@ def attach(index,data):
         if '2341' in code or 'Pasif' in code or '9503' in code or 'ISDL' in code:
             state='source_missing';reasons+=['İlgili tam birincil yöntem/mevzuat nüshası yeterli değil. Eğitim notu, kurum içi talimat ve yaklaşım özeti birincil standart yerine geçmez.']
         if '10780' in code:
-            reasons+=['ISO 10780:1994 tam D29 mevcut ve ISO’da 2022 teyitli; EN ISO Pitot ve EPA2 kartları bu ayrı standardın nihai karşılaştırması sayılmaz.']
+            reasons+=['ISO 10780:1994 / TS 1999 D29 cihaz, saha, kalibrasyon, açı, hesap ve bakım bölümleri ayrı kartta karşılaştırıldı. TS metnindeki kesit değişimi/yer seçimi ifadeleri birlikte yazılı değerlendirilir; diğer iki hız yöntemiyle birleştirilmez.']
             if state!='source_missing':state='comparison_open'
         if '12039' in code and '14789' not in code:
-            state='comparison_open';reasons+=['ISO 7935 seçili SO₂ koşulları kontrol edildi; ISO 12039 ve CTM-022’nin tüm saha yeterlilik hükümleri henüz kapanmadı.']
+            state='comparison_open';reasons+=['ISO 7935 seçili SO₂ koşulları ve ISO12039 dışarı çekişli AMS/QA bölümleri kontrol edildi. ISO10396 tam şartlandırma bağlantısı ve CTM-022’nin tüm saha yeterlilik hükümleri henüz kapanmadı.']
+        if '12341' in code and 'EPA' in code:
+            state='comparison_open';reasons+=['EN12341:2023 saha/tartım/kalite karşılaştırması tamamlanan bölümleriyle gösterilir. Bu birleşik başlıktaki EPA 40 CFR 50–53’ün tüm eklerinin ve eşdeğer cihaz koşullarının nihai karşılaştırması tamamlanmadı.']
         if not reasons:
             reasons=['Belirtilen yöntem kartlarının kaynak izli saha bölümleri karşılaştırıldı. Bu durum bütün standardın, tüm analitik işlemlerin veya güncel ulusal uygulamanın nihai onayı değildir.']
         rows.append(dict(code=code,title=item['title'],state=state,profileIds=ids,

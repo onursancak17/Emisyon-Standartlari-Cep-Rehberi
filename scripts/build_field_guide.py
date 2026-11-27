@@ -10,6 +10,7 @@ from advanced_profiles import extend as extend_advanced, EXTRA_SOURCES
 from epa_field_review import extend as extend_epa_review, SOURCES as EPA_REVIEW_SOURCES
 from voc_velocity_review import extend as extend_voc_velocity, SOURCES as NEW_LOCAL_SOURCES
 from instrument_review import extend as extend_instruments
+from iso_field_review import extend as extend_iso_review
 from audit_matrix import attach as attach_audit, write_report as write_audit_report
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -233,6 +234,7 @@ extend_advanced(data,profile,node,imp,meter,common_delivery)
 extend_epa_review(data,profile,node,imp,meter,common_delivery)
 extend_voc_velocity(data,profile,node,imp,meter,common_delivery)
 extend_instruments(data,profile,node,imp,meter,common_delivery)
+extend_iso_review(data,profile,node,imp,meter,common_delivery)
 
 source_index = json.loads((ROOT/'docs/SOURCE_INDEX.json').read_text(encoding='utf-8'))
 source_index['reviewedAt']='2026-11-27'
@@ -269,6 +271,9 @@ for s in source_index['documents']:
         s['title']='EN ISO 16911 hakkında eğitim sunumu — standart tam metni değildir'
     if s['id']=='D23':s.update(title='BS EN 12341:2023 — ortam PM10 / PM2,5',edition='EN 12341:2023; arşiv dosya adında TS yazmasına rağmen BS baskısı')
     if s['id']=='D31':s.update(edition='TS ISO 12141:2004, esas ISO 12141:2002; ISO 2024 sürümü değildir')
+    if s['id']=='D29':s.update(edition='ISO 10780:1994 / TS Nisan 1999')
+    if s['id']=='D30':s.update(edition='ISO 12039:2019 / TS Kasım 2020')
+    if s['id']=='D33':s.update(edition='ISO 9096:2017 / TS Kasım 2020')
 for p in data:
     lookup = {s['id']:s for s in source_index['documents']}
     p['sourceDetails'] = [dict(reference=r, **{k:lookup[r.split(':')[0]].get(k,'') for k in ('title','edition','url')}) for r in p['sources']]

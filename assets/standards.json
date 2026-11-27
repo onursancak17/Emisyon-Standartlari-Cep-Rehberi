@@ -253,51 +253,47 @@
       "filtre yüklenmesi",
       "izokinetik"
     ],
-    "purpose": "Yüksek toz yüküne sahip bacalarda partikül madde konsantrasyonunun izokinetik numune alma ve gravimetrik yöntemle belirlenmesi için saha rehberidir.",
-    "duration": "Süre filtre aşırı yüklenmeyecek ama yeterli numune alınacak şekilde seçilir. Yüksek konsantrasyonda uzun çekiş filtre tıkanması ve vakum artışına neden olabilir. Ölçüm planında filtre kapasitesi ve beklenen toz seviyesi dikkate alınmalıdır.",
-    "flowRate": "Debi baca hızına göre izokinetik ayarlanır. Yüksek toz yükünde vakum hızlı artabileceği için debi kararlılığı ve filtre yüklenmesi sürekli takip edilir.",
+    "purpose": "ISO 9096 — 2017 / TS Kasım 2020. Düzlemde eksene açı <15°, ters akış yok, Pitot ΔP>5 Pa, en yüksek/en düşük yerel hız oranı <3:1. Akış öncesi 5D, sonrası 2D; açık çıkış öncesi 5D düz hat önerileri gerçek akış kontrolünün yerine geçmez (§5.3).",
+    "duration": "Toplam ≥30 dk, her noktada eşit süre. Debi/ΔP en az her 5 dk kontrol/kayıt; hedef blank ve toz kütlesi daha uzun süre gerektirebilir.",
+    "flowRate": "İzokinetik. Ana §7.3.5/7.4.3/9.1 ±%10; Tablo 3 −%5/+%15 yazıyor. Bu metin içi fark yazılı çözülmeden uygulama tek bir otomatik kabul bandı vermez.",
     "equipment": [
-      "Yüksek toz yüküne uygun nozül ve prob.",
-      "Filtre tutucu ve uygun filtre malzemesi.",
-      "S-tip Pitot, sıcaklık probu ve diferansiyel basınç ölçer.",
-      "DGM, vakum pompası ve debi ayar düzeni.",
-      "Numune geri alma için temiz kaplar ve fırçalama ekipmanı."
+      "Bu yöntemin şema/numune fraksiyonları ana ekrandaki parametre rehberinde ayrı varyantlarla bulunur."
     ],
     "reagents": [
-      "Temel partikül filtrededir.",
-      "Ön hat yıkaması gerekiyorsa laboratuvar talimatındaki çözücü kullanılır.",
-      "Nem veya ek kirletici birlikte alınacaksa ilgili metodun impinger düzeni ayrıca uygulanır."
+      "Dairesel merkez hariç grid: 0,35–0,70 m → 4; 0,70–1,00 m → 8; 1,00–2,00 m → 12; >2 m →16 nokta, en az 2 çap. Merkez dahil plan ayrı sayılar kullanır. Dikdörtgende alan 0,09–0,38 m² →4; 0,38–1,50 →9; >1,50 →16. Sınır boyutlarında kaynak tablosunun aralık yazımı uygulama planında çözülür.",
+      "Küçük kesitte <0,35 m çap veya <0,09 m² için tablodaki tek nokta dipnotu belirtilen hatanın aşılabileceğini söyler; kendiliğinden her küçük bacaya onay değildir. Noktalar eş alan merkezinde ve cidar yaklaşımı §5.4/Ek B’ye göre.",
+      "Filtre §6.2.6’da >%99,0 @0,3 µm; Tablo 3’te >%99,5 yazılıdır. Bu farklı yazımlar görünür tutulur; seçilen filtre belgesi ve çalışma planı tabloyu da karşılamalıdır. Sonradan metal analizi varsa paslanmaz numune yüzeylerinden bulaşma değerlendirilir. Yıkamada filtre edilmiş deiyonize su ve kalıntısı <10 mg/L yüksek saflıkta aseton gerekir (§6.3).",
+      "Genel §7.2 ön/son kurutma 160 °C’de ≥1 saat, desikatörde ≥8 saat; büyük parçada 12 saat gerekebilir. §8.1’in ısıl kararlılık yaklaşımında ön şartlandırma, örnekleme/son işlemdeki en yüksek sıcaklıktan en az 20 °C daha yüksektir; geleneksel 180/≤160/160 °C dizisi bu bağlamdadır. Filtre malzemesi/analit/özel hükümle seç ve raporla."
     ],
     "fieldSteps": [
-      "Prosesin yüksek tozlu çalıştığını ve ölçüm sırasında kararlı olduğunu teyit et.",
-      "Baca hız ön ölçümünü yap ve nozül çapını seç.",
-      "Filtreyi beklenen toz yüküne göre hazırla.",
-      "Her noktada izokinetik debiyi ayarla.",
-      "Vakum artışı, filtre tıkanması ve debi düşüşünü sürekli izle.",
-      "Aşırı tıkanma varsa ölçümü güvenli şekilde durdurup kayıt altına al.",
-      "Ölçüm sonunda filtre ve ön hat fraksiyonlarını dikkatli geri al."
+      "Nozülü kapatarak tüm treni ölçümün en yüksek vakumunda sına. §7.3.5/Tablo 3 <%2; §7.4.2 en çok %2 yazar. Kart daha sıkı <%2 sınırını korur. Ön ve son kontrol gerekir; ölçüm boyunca izleme alternatifini ilgili maddeyle değerlendir.",
+      "O₂/CO₂’nin bacada ve tren sonunda sürekli karşılaştırılması kaçak gösterebilir; saptanan fark araştırılıp düzeltilir. Sayısal izokinetik/hacim düzeltmesiyle kaçağı izinsiz kabul edilebilir hale getirme.",
+      "Ön ölçümde gerçek iç ölçüleri, hız/T/yoğunluk/nemi belirle, nozülü seç. Giriş akışa dönük olur; aynı hat içinde sonraki noktaya geçerken çekiş kesilmez ve debi hemen ayarlanır. Hat/port değişimi öncesi vana ve pompa kapatılır.",
+      "DGM/T/P, nokta süre/hacimleri, hız basıncı ve süreç değişimleri kaydedilir. Filtre kırılması, nem izi ve anormal dağılım kontrol edilir; filtre hasarı/yoğuşma izi varsa sonuç geçersizdir.",
+      "§7.3.4 overall blank: her seri sonrası veya en az günlük, pompa çalıştırılmadan nozül bacada akışa 180° ters yönde 15 dk tutulur. §7.1’deki genel <1 dk ifadesini blank için varsayılan çekiş talimatına dönüştürme; ayrıntılı §7.3.4 prosedürü izlenir.",
+      "Tartılmayan bütün filtre ÖNÜ iç yüzeyleri: nozül/dirsek/filtre ön kapağı önce saf su, ardından aynı kaba aseton. Prob içini yaklaşık 1/3–1/2 hacmi suyla doldurup kapatarak döndür/eğ; ikinci su yıkaması ve sonra aseton yıkaması yap (§7.3.6).",
+      "Örnekleme SONRASI ön birikintiyi almak için mekanik temizleme yapılmaz. Örnekleme ÖNCESİ ekipman fırça ve yıkamayla temizlenir. Başka metodun örnek sonrası fırçalama kuralını buraya taşıma.",
+      "Ön yıkama her koşu yerine seri sonunda/en az günlük toplanırsa kütle, filtrelerde toplanan kütle oranıyla koşulara paylaştırılır (§8.2); EN 14385’in hacim oranı farklı kuraldır. Yıkama blankı aynı hacimlerle hazırlanır."
     ],
     "criticalControls": [
-      "Filtre aşırı yüklenirse debi düşer, izokinetiklik bozulur ve numune kaybı riski artar.",
-      "Nozül ağzında biriken toz geri alma sırasında numunenin parçası olarak değerlendirilmelidir.",
-      "Port içindeki birikintiler kazara numuneye karıştırılmamalıdır.",
-      "Yüksek tozlu bacalarda probu bacadan çıkarırken toz dökülmesi ve numune kaybına dikkat edilir."
+      "Plan: hedef toz kütlesi/beklenen derişim; kütle ≥5×ilgili overall blank. Hacim kuru, 273,15 K / 101,325 kPa referansında; gerçek nozül ve sayaç koşulları ayrı.",
+      "Seçili filtrasyon T’si raporlanır; §7.3.5’te baca T veya önerilen 160±5 °C örneği vardır. §8.1 termal davranış ve şartlandırma şartlarıyla birlikte seçilir; her kaynağa tek sıcaklık atanmaz.",
+      "Filtre/tartılacak parçalar kapalı, elektrostatik etkisi olmayan ve bulaşma yapmayan taşıma kabında; yıkamalar etiketli sızdırmaz uygun kapta. İncelenen saha maddelerinde bütün numunelere uygulanacak sayısal soğuk saklama ve azami analiz bekletme süresi verilmez; laboratuvar kabul planı ayrıca gerekir.",
+      "Tartım desikatörden çıkarıldıktan sonra 1 dk içinde; ilk okumadan sonra 5 s arayla iki ek okuma. Terazi/üç eş kontrol parçası ve iklim kayıtlarıyla drift/yüzdürme etkileri değerlendirilir. Reaktif kalıntısı ve filtre reaksiyonları kütleye etki edebilir."
     ],
     "acceptance": [
-      "İzokinetik oran kabul edilebilir aralıkta olmalıdır.",
-      "Filtre tıkanması sonucu numune alma kontrolsüz hale gelmemelidir.",
-      "Numune geri alma eksiksiz yapılmalıdır.",
-      "Kaçak testi ve hız ölçümü geçerli olmalıdır."
+      "Kontrol sonucu yalnız seçili yöntem ve kaynak baskısıyla değerlendirilir. Açık kalan kaynak/uygulama ayrıntıları parametre kartında görünür."
     ],
     "reporting": [
-      "Filtre yüklenmesi, vakum artışı, ölçüm süresi ve varsa erken durdurma gerekçesi yazılır.",
-      "Toplam kütle, toplam kuru hacim ve izokinetiklik değerlendirmesi açık gösterilir."
+      "Tesis, baca/nokta, tarih, başlangıç–bitiş, metot/sürüm, numuneci ve fraksiyon kimliklerini etiketle.",
+      "Numune kabı, kapak, miktar, blank, mühür, taşıma koşulu, teslim saati ve teslim alanı izlenebilir teslim formuna kaydet.",
+      "Filtre/ön yıkama/overall blank/çözücü blankı, gerçek yıkama ve gaz hacimleri, koşu kütleleri ve paylaştırma, T geçmişi, kaçak/izokinetik ve proses kayıtlarını bildir.",
+      "§7.4.5 kütle≥5×blank şartına ek olarak Tablo 3 overall blankı ELV’nin <%10’u veya 2 mg/m³’ten küçük olanla sınırlar. Bu iki kontrol ve sahaya ait kalite hedefi ayrı değerlendirilir.",
+      "Kaynak: D33:13-17,20-36"
     ],
     "mistakes": [
-      "Yüksek tozlu bacada gereğinden uzun süre çekiş yaparak filtreyi tıkamak.",
-      "Vakum artışını kaydetmemek.",
-      "Prob ucundaki tozu kaybetmek.",
-      "Düşük konsantrasyon standardı mantığıyla aynı süreyi uygulamak."
+      "Dolum, yüzde türü, blank, süre veya saklama kuralını başka yöntemden aktarmak.",
+      "Eski eğitim notunu yeni standart baskısı diye kullanmak."
     ]
   },
   {

@@ -235,7 +235,8 @@
       "id": "D29",
       "pages": 21,
       "title": "TS ISO 10780.pdf",
-      "sourceKind": "Birincil standart / yöntem metni"
+      "sourceKind": "Birincil standart / yöntem metni",
+      "edition": "ISO 10780:1994 / TS Nisan 1999"
     },
     {
       "path": "standards_sources/TS_ISO/TS_ISO_12039.pdf",
@@ -243,7 +244,8 @@
       "id": "D30",
       "pages": 58,
       "title": "TS ISO 12039.pdf",
-      "sourceKind": "Birincil standart / yöntem metni"
+      "sourceKind": "Birincil standart / yöntem metni",
+      "edition": "ISO 12039:2019 / TS Kasım 2020"
     },
     {
       "path": "standards_sources/TS_ISO/TS_ISO_12141.pdf",
@@ -268,7 +270,8 @@
       "id": "D33",
       "pages": 53,
       "title": "TS ISO 9096.pdf",
-      "sourceKind": "Birincil standart / yöntem metni"
+      "sourceKind": "Birincil standart / yöntem metni",
+      "edition": "ISO 9096:2017 / TS Kasım 2020"
     },
     {
       "path": "standards_sources/Ölçüm Talimatları/TL07-REV.10-BACADA STANDART YANMA GAZLARI ÖLÇÜM TALİMATI.pdf",
@@ -646,14 +649,16 @@
         "state": "comparison_open",
         "profileIds": [
           "velocity_epa2",
-          "velocity_iso16911_pitot"
+          "velocity_iso16911_pitot",
+          "velocity_iso10780"
         ],
         "sourceReferences": [
           "W09:1-6",
-          "L04:21-31,33-44"
+          "L04:21-31,33-44",
+          "D29:3-6,8-11,13-21"
         ],
         "remaining": [
-          "ISO 10780:1994 tam D29 mevcut ve ISO’da 2022 teyitli; EN ISO Pitot ve EPA2 kartları bu ayrı standardın nihai karşılaştırması sayılmaz."
+          "ISO 10780:1994 / TS 1999 D29 cihaz, saha, kalibrasyon, açı, hesap ve bakım bölümleri ayrı kartta karşılaştırıldı. TS metnindeki kesit değişimi/yer seçimi ifadeleri birlikte yazılı değerlendirilir; diğer iki hız yöntemiyle birleştirilmez."
         ]
       },
       {
@@ -689,10 +694,15 @@
         "code": "TS ISO 9096",
         "title": "TS ISO 9096 Yüksek Konsantrasyon Partikül Madde Ölçümü",
         "state": "comparison_open",
-        "profileIds": [],
-        "sourceReferences": [],
+        "profileIds": [
+          "dust_iso9096_out",
+          "dust_iso9096_in"
+        ],
+        "sourceReferences": [
+          "D33:13-17,20-36"
+        ],
         "remaining": [
-          "ISO 9096:2017 tam D33 mevcut; bütün saha sayısal koşullarının yeni parametre kartına madde madde aktarımı henüz tamamlanmadı."
+          "ISO 9096:2017 D33 saha/tartım/blank/yıkama bölümleri ve iki filtre varyantı karşılaştırıldı. Ana metin ±%10 iken Tablo 3 −%5/+%15 izokinetik bant veriyor; bu metin içi fark çözülmeden tek otomatik kabul eşiği uygulanmaz."
         ]
       },
       {
@@ -729,10 +739,14 @@
         "code": "TS ISO 12039 / TS EN 14789 / TS EN 14792 / TS EN 15058",
         "title": "TS ISO 12039 ve Yanma Gazı Ölçümleri",
         "state": "source_missing",
-        "profileIds": [],
-        "sourceReferences": [],
+        "profileIds": [
+          "gases_iso12039"
+        ],
+        "sourceReferences": [
+          "D30:11-17,21-23,25,36-44"
+        ],
         "remaining": [
-          "EN 14789:2017 / EN 14792:2017 / EN 15058:2017 tam metinleri yok. Resmî kapsam ve yetkili ön izlemeler bulundu; sayısal saha kabul hükümlerinin tamamı bunlardan doğrulanamaz. ISO 12039:2019 tam metni mevcut, ayrıntılı karşılaştırması açık."
+          "EN 14789:2017 / EN 14792:2017 / EN 15058:2017 tam metinleri yok. Resmî kapsam ve yetkili ön izlemeler bulundu; sayısal saha kabul hükümlerinin tamamı bunlardan doğrulanamaz. ISO12039 seçili AMS/QA koşulları ayrı karttadır; bunlar eksik EN metinlerinin yerine geçmez."
         ]
       },
       {
@@ -852,7 +866,7 @@
       {
         "code": "TS EN 12341 / EPA 40 CFR 50-53",
         "title": "PM10 / PM2.5 Ortam Havası Ölçümü",
-        "state": "source_missing",
+        "state": "comparison_open",
         "profileIds": [
           "ambient_pm10",
           "ambient_pm2_5",
@@ -863,7 +877,8 @@
           "D44:4-6"
         ],
         "remaining": [
-          "İlgili tam birincil yöntem/mevzuat nüshası yeterli değil. Eğitim notu, kurum içi talimat ve yaklaşım özeti birincil standart yerine geçmez."
+          "İlgili tam birincil yöntem/mevzuat nüshası yeterli değil. Eğitim notu, kurum içi talimat ve yaklaşım özeti birincil standart yerine geçmez.",
+          "EN12341:2023 saha/tartım/kalite karşılaştırması tamamlanan bölümleriyle gösterilir. Bu birleşik başlıktaki EPA 40 CFR 50–53’ün tüm eklerinin ve eşdeğer cihaz koşullarının nihai karşılaştırması tamamlanmadı."
         ]
       },
       {
@@ -1028,13 +1043,15 @@
         "title": "Yanma Gazı Ölçümleri",
         "state": "comparison_open",
         "profileIds": [
+          "gases_iso12039",
           "so2_iso7935"
         ],
         "sourceReferences": [
+          "D30:11-17,21-23,25,36-44",
           "D32:1,11-15"
         ],
         "remaining": [
-          "ISO 7935 seçili SO₂ koşulları kontrol edildi; ISO 12039 ve CTM-022’nin tüm saha yeterlilik hükümleri henüz kapanmadı."
+          "ISO 7935 seçili SO₂ koşulları ve ISO12039 dışarı çekişli AMS/QA bölümleri kontrol edildi. ISO10396 tam şartlandırma bağlantısı ve CTM-022’nin tüm saha yeterlilik hükümleri henüz kapanmadı."
         ]
       },
       {
@@ -1059,15 +1076,18 @@
         "title": "TS EN 13284-1 / TS ISO 9096 / ISO 12141 Toz Ölçümü",
         "state": "source_missing",
         "profileIds": [
+          "dust_iso9096_out",
+          "dust_iso9096_in",
           "dust_en13284_in",
           "dust_en13284_out"
         ],
         "sourceReferences": [
+          "D33:13-17,20-36",
           "L03:8,14,16-30,43-45,63"
         ],
         "remaining": [
           "D31 ve yeni gönderilen aynı PDF, TS ISO 12141:2004 / ISO 12141:2002 esaslıdır. Güncel ISO 12141:2024 tam metni yok; eski sayılar yeni sürüm diye sunulmaz.",
-          "ISO 9096:2017 tam D33 mevcut; bütün saha sayısal koşullarının yeni parametre kartına madde madde aktarımı henüz tamamlanmadı."
+          "ISO 9096:2017 D33 saha/tartım/blank/yıkama bölümleri ve iki filtre varyantı karşılaştırıldı. Ana metin ±%10 iken Tablo 3 −%5/+%15 izokinetik bant veriyor; bu metin içi fark çözülmeden tek otomatik kabul eşiği uygulanmaz."
         ]
       },
       {
@@ -1120,7 +1140,7 @@
       {
         "code": "TS EN 12341 / EPA 40 CFR Part 50-53",
         "title": "TS EN 12341 / EPA 40 CFR Part 50 PM10 İmisyon Ölçümü",
-        "state": "source_missing",
+        "state": "comparison_open",
         "profileIds": [
           "ambient_pm10",
           "ambient_pm2_5",
@@ -1131,7 +1151,8 @@
           "D44:4-6"
         ],
         "remaining": [
-          "İlgili tam birincil yöntem/mevzuat nüshası yeterli değil. Eğitim notu, kurum içi talimat ve yaklaşım özeti birincil standart yerine geçmez."
+          "İlgili tam birincil yöntem/mevzuat nüshası yeterli değil. Eğitim notu, kurum içi talimat ve yaklaşım özeti birincil standart yerine geçmez.",
+          "EN12341:2023 saha/tartım/kalite karşılaştırması tamamlanan bölümleriyle gösterilir. Bu birleşik başlıktaki EPA 40 CFR 50–53’ün tüm eklerinin ve eşdeğer cihaz koşullarının nihai karşılaştırması tamamlanmadı."
         ]
       },
       {
